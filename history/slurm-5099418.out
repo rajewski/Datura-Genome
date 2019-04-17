@@ -1,0 +1,10 @@
+
+# $((SLURM_MEM_PER_NODE/1000))'G'
+# $SLURM_NTASKS
+
+#echo $SLURM_NTASKS is the number of cores I have
+#echo $SLURM_MEM_PER_NODE is the amount of memory I've got.
+
+pigz -p $SLURM_NTASKS Alex-1_S9_R1_001.fastq
+piqz -p $SLURM_NTASKS Alex-2_S10_R1_001.fastq
+/var/spool/slurmd/job5099418/slurm_script: line 19: piqz: command not found
