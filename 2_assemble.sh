@@ -16,4 +16,6 @@ set -euv
 echo $(date): Loading Velvet Optimizer
 velvetoptimiser/2.2.5(default)
 
-Velvetoptimiser.pl
+#the command have been adapted from https://github.com/tseemann/VelvetOptimiser
+VelvetOptimiser.pl -s 19 -e 57 -f '-shortPaired -fastq.gz -separate s_1_sequence.txt' -g 4.5 -t 8
+
