@@ -1,0 +1,5 @@
+The directory Results_Trial_Seq is the output files from my first attempt at using kmers to estimate heterzygosity and genome size. I used as input data, the small trial run of sequencing for Datura that we got as part of our library prep. This gave very inconsistent results and I hypothesized that it could be an artifact of low coverage. To test this, I downloaded some resequencing data from an Arabidopsis ecotype and reran the scripts on this data, and then subsampled this data to lower coverage and repeated to confirm that the wonky results are due to low coverage. The script subsample.sh is used to randomly subsample the *.fq file
+
+The script kmer.sh is a single script that makes a kmer plot at several values of K for a given *.fq file. This script should really only be used if you have to. The script mer_array.sh does the same thing except it runs as an array job, with the array number being the k to test. So this can be submitted as an array job with array_id=11-19, for instance.
+
+The R script, SizeEstimates.R is used to make the plots of the jellyfish output and to actually caluclate the genome size from these plots.

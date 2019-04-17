@@ -1,0 +1,8 @@
+
+# $((SLURM_MEM_PER_NODE/1000))'G'
+# $SLURM_NTASKS
+
+#echo $SLURM_NTASKS is the number of cores I have
+#echo $SLURM_MEM_PER_NODE is the amount of memory I've got.
+
+pigz -p $SLURM_NTASKS Alex_S85_L002_R1_001.fastq

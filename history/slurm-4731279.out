@@ -1,0 +1,10 @@
+FQ=../DNA-seq/Alex_S85_L002_R1_001.fastq
+ShortFQ='Dstr_S85_R1'
+
+module load jellyfish/2.2.9
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/jellyfish/2.2.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/7.4.1952/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.5.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/puppetlabs/bin ;export PATH;
+jellyfish count -m $SLURM_ARRAY_TASK_ID -s 2014M --min-qual-char=30 -t $SLURM_NTASKS -C -o $ShortFQ'_'$SLURM_ARRAY_TASK_ID'mer_counts.jf' $FQ
+Error: [-Q, --min-qual-char] must be one character.
+Usage: jellyfish count [options] file:path+
+Use --help for more information

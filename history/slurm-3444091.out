@@ -1,0 +1,2 @@
+
+cat chi2_r1.fq | awk '{ printf("%s",$0); n++; if(n%4==0) { printf("\n");} else { printf("\t");} }' | awk -v k=100000000 'BEGIN{srand(systime() + PROCINFO["pid"]);}{s=x++<k?x1:int(rand()*x);if(s<k)R[s]=$0}END{for(i in R)print R[i]}' | awk -F"\t" '{print $1"\n"$2"\n"$3"\n"$4 > "chi2_r1_sub10m.fq"}'
