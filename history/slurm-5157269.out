@@ -1,0 +1,49 @@
+
+# $((SLURM_MEM_PER_NODE/1000))'G'
+# $SLURM_NTASKS
+
+#Use fastqc to get a quality report of the input
+
+if [ ! -d "QualityControl" ]; then
+    echo $(date) ": Running fastqc."
+    module load fastqc/0.11.7
+    fastqc -t $SLURM_NTASKS -noextract -o QualityControl DNA-seq/*.fastq.gz
+    echo $(date) ": Done."
+else
+    echo $(date) ": fastqc has already been run. Let's trim and filter these reads."
+fi
+Wed May 8 11:52:58 PDT 2019 : fastqc has already been run. Let's trim and filter these reads.
+
+#use trimmomatic to trim out low quality bases and adaptor sequences
+#I cannot automate this with a loop because the file names are inconsistent. I could rename, but I want to preserve the original names for troubleshooting later
+module load trimmomatic/0.36
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36:/opt/linux/centos/7.x/x86_64/pkgs/vim/7.4.1952/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/puppetlabs/bin ;export PATH;
+
+#I'll add in an if statement once I know exactly how the outputs are structured so that I can check for them accurately.
+#make the output directory if necessary
+if [ ! -d "DNA-seqTrimmed" ]; then
+    mkdir DNA-seqTrimmed
+fi
+
+trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex-1_S9_R1_001.fastq.gz DNA-seq/Alex-2_S10_R1_001.fastq.gz -baseout DNA-seqTrimmed/Dstr1Trim.fq.gz ILLUMINACLIP:TruSeq3-PE-2:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -threads 8 DNA-seq/Alex-1_S9_R1_001.fastq.gz DNA-seq/Alex-2_S10_R1_001.fastq.gz -baseout DNA-seqTrimmed/Dstr1Trim.fq.gz ILLUMINACLIP:TruSeq3-PE-2:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using templated Output files: DNA-seqTrimmed/Dstr1Trim_1P.fq.gz DNA-seqTrimmed/Dstr1Trim_1U.fq.gz DNA-seqTrimmed/Dstr1Trim_2P.fq.gz DNA-seqTrimmed/Dstr1Trim_2U.fq.gz
+java.io.FileNotFoundException: /bigdata/littlab/arajewski/Datura/TruSeq3-PE-2 (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fasta.FastaParser.parse(FastaParser.java:54)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.loadSequences(IlluminaClippingTrimmer.java:110)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.makeIlluminaClippingTrimmer(IlluminaClippingTrimmer.java:71)
+	at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:32)
+	at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:59)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:536)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+Quality encoding detected as phred33
+Input Read Pairs: 43892899 Both Surviving: 38232508 (87.10%) Forward Only Surviving: 2369051 (5.40%) Reverse Only Surviving: 3099746 (7.06%) Dropped: 191594 (0.44%)
+TrimmomaticPE: Completed successfully
+#trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex_S230_L002_R1_001.fastq.gz DNA-seq/Alex_S230_L002_R2_001.fastq.gz -baseout DNA-seqTrimmed/Dstr2Trim.fq.gz
+#trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex_S85_L002_R1_001.fastq.gz DNA-seq/Alex_S85_L002_R2_001.fastq.gz -baseout DNA-seqTrimmed/Dstr3Trim.fq.gz
+
