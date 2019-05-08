@@ -1,0 +1,135 @@
+
+# $((SLURM_MEM_PER_NODE/1000))'G'
+# $SLURM_NTASKS
+
+module load fastqc/0.11.7
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/16.05.4:openmpi/2.0.1-slurm-16.05.4:ggobi/2.1.11:texlive/2017:pandoc/2.0:R/3.5.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/7.4.1952:fastqc/0.11.7 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/fastqc/0.11.7:/opt/linux/centos/7.x/x86_64/pkgs/vim/7.4.1952/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.5.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/puppetlabs/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/16.05.4:/opt/linux/centos/7.x/x86_64/modules/openmpi/2.0.1-slurm-16.05.4:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/R/3.5.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/7.4.1952:/opt/linux/centos/7.x/x86_64/modules/fastqc/0.11.7 ;export _LMFILES_;
+
+fastqc -t $SLURM_NTASKS -noextract -o QualityControl DNA-seq/*.fastq.gz
+Started analysis of Alex-1_S9_R1_001.fastq.gz
+Started analysis of Alex-2_S10_R1_001.fastq.gz
+Started analysis of Alex_S230_L002_R1_001.fastq.gz
+Started analysis of Alex_S230_L002_R2_001.fastq.gz
+Started analysis of Alex_S85_L002_R1_001.fastq.gz
+Started analysis of Alex_S85_L002_R2_001.fastq.gz
+Approx 5% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 5% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 10% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 10% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 15% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 15% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 20% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 20% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 25% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 25% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 30% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 30% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 35% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 35% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 5% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 5% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 40% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 40% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 45% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 45% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 50% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 50% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 55% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 55% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 60% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 60% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 65% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 65% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 5% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 70% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 70% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 10% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 5% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 75% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 75% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 80% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 10% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 80% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 85% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 85% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 90% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 90% complete for Alex-1_S9_R1_001.fastq.gz
+Approx 95% complete for Alex-2_S10_R1_001.fastq.gz
+Approx 95% complete for Alex-1_S9_R1_001.fastq.gz
+Analysis complete for Alex-2_S10_R1_001.fastq.gz
+Analysis complete for Alex-1_S9_R1_001.fastq.gz
+Approx 15% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 15% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 10% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 20% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 10% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 20% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 25% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 25% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 15% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 30% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 15% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 30% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 35% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 35% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 20% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 40% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 20% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 40% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 45% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 25% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 45% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 50% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 25% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 55% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 50% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 30% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 60% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 55% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 30% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 65% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 60% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 35% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 70% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 35% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 65% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 75% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 70% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 40% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 80% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 40% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 75% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 85% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 45% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 80% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 90% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 45% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 85% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 95% complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 50% complete for Alex_S230_L002_R1_001.fastq.gz
+Analysis complete for Alex_S85_L002_R1_001.fastq.gz
+Approx 90% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 50% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 95% complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 55% complete for Alex_S230_L002_R1_001.fastq.gz
+Analysis complete for Alex_S85_L002_R2_001.fastq.gz
+Approx 55% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 60% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 60% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 65% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 65% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 70% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 70% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 75% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 75% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 80% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 80% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 85% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 85% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 90% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 90% complete for Alex_S230_L002_R2_001.fastq.gz
+Approx 95% complete for Alex_S230_L002_R1_001.fastq.gz
+Approx 95% complete for Alex_S230_L002_R2_001.fastq.gz
+Analysis complete for Alex_S230_L002_R1_001.fastq.gz
+Analysis complete for Alex_S230_L002_R2_001.fastq.gz
