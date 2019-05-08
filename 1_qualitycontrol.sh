@@ -28,7 +28,12 @@ fi
 module load trimmomatic/0.36
 
 #I'll add in an if statement once I know exactly how the outputs are structured so that I can check for them accurately.
-trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex-1_S9_R1_001.fastq.gz DNA-seq/Alex-2_S10_R1_001.fastq.gz -baseout DNA-seqTrimmed/Dstr1Trim.fq.gz ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+#make the output directory if necessary
+if [ ! -d "DNA-seqTrimmed" ]; then
+    mkdir DNA-seqTrimmed
+fi
+
+trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex-1_S9_R1_001.fastq.gz DNA-seq/Alex-2_S10_R1_001.fastq.gz -baseout DNA-seqTrimmed/Dstr1Trim.fq.gz ILLUMINACLIP:TruSeq3-PE-2:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 #trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex_S230_L002_R1_001.fastq.gz DNA-seq/Alex_S230_L002_R2_001.fastq.gz -baseout DNA-seqTrimmed/Dstr2Trim.fq.gz
 #trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex_S85_L002_R1_001.fastq.gz DNA-seq/Alex_S85_L002_R2_001.fastq.gz -baseout DNA-seqTrimmed/Dstr3Trim.fq.gz
 
