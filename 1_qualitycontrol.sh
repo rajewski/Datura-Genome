@@ -14,7 +14,7 @@ set -euv
 
 #Use fastqc to get a quality report of the input
 
-if [ ! -d "QualityControl" ]; then
+if [ ! -d "1_QCQA" ]; then
     echo $(date) ": Running fastqc."
     module load fastqc/0.11.7
     fastqc -t $SLURM_NTASKS -noextract -o 1_QCQA DNA-seq/*.fastq.gz
