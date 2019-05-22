@@ -105,27 +105,27 @@ plot(test20[1:20,], type="l")
 SizeTest <- sum(as.numeric(test20[2:6761,1]*test20[2:6761,2]))/9
 
 # Datura ------------------------------------------------------------------
-setwd("~/bigdata/Datura/GenomeSize/Results_Nova1")
-Dstr13 <- read.table("Dstr_S85_13mer_out.histo", col.names = c("Cov", "mer13"))
-Dstr15 <- read.table("Dstr_S85_15mer_out.histo", col.names = c("Cov", "mer15"))
-Dstr17 <- read.table("Dstr_S85_17mer_out.histo", col.names = c("Cov", "mer17"))
-Dstr19 <- read.table("Dstr_S85_19mer_out.histo", col.names = c("Cov", "mer19"))
-Dstr21 <- read.table("Dstr_S85_21mer_out.histo", col.names = c("Cov", "mer21"))
-Dstr23 <- read.table("Dstr_S85_23mer_out.histo", col.names = c("Cov", "mer23"))
-Dstr25 <- read.table("Dstr_S85_25mer_out.histo", col.names = c("Cov", "mer25"))
-Dstr27 <- read.table("Dstr_S85_27mer_out.histo", col.names = c("Cov", "mer27"))
-Dstr29 <- read.table("Dstr_S85_29mer_out.histo", col.names = c("Cov", "mer29"))
-Dstr31 <- read.table("Dstr_S85_31mer_out.histo", col.names = c("Cov", "mer31"))
+setwd("~/bigdata/Datura/GenomeSize/Results_AllTrim/")
+DstrAll11 <- read.table("DstrTrim_11mer_out.histo", col.names = c("Cov", "mer11"))
+DstrAll13 <- read.table("DstrTrim_13mer_out.histo", col.names = c("Cov", "mer13"))
+
+
 #merge into 1 DF
-Dstr <- Reduce(function(...) merge(..., by="Cov", all=TRUE), list(Dstr13, Dstr15, Dstr17, Dstr19, Dstr21, Dstr23, Dstr25, Dstr27, Dstr29, Dstr31))
+Dstr <- Reduce(function(...) merge(..., by="Cov", all=TRUE), list(DstrAll11, DstrAll13))
 #Plot all spectra
 pdf(file="KmerFreqAll.pdf")
-plot.ts(Dstr[2:100,2:11])
+  plot.ts(Dstr[2:100,2:3])
 dev.off()
 #plot your fave
 pdf(file="KmerFreq.pdf")
-plot(Dstr[1:100,4], type="l",ylab="No. Kmer Classes", xlab="Coverage", main="17-mer Plot", log="y")
-abline(v=11.5, lty=2)
-text(x=25, y=3.0e+07,labels="Local max at 12x\n~2.1Gb Genome")
+  plot(Dstr[1:100,3], type="l",ylab="No. Kmer Classes", xlab="Coverage", main="13-mer Plot", log="y")
+  abline(v=53, lty=2) #v line at peak
+  text(x=25, y=3.0e+07,labels="Local max at 12x\n~2.1Gb Genome")
 dev.off()
-sum(as.numeric(Dstr[1:10001,"Cov"]*Dstr[1:10001,"mer17"]))/11.5 #get the genome size
+
+#get the genome size
+sum(as.numeric(Dstr[1:10000,"Cov"]*Dstr[1:10000,"mer13"]))/53 
+
+
+
+

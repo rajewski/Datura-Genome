@@ -1,0 +1,52 @@
+
+# $((SLURM_MEM_PER_NODE/1000))'G'
+# $SLURM_NTASKS
+
+#Use fastqc to get a quality report of the input
+#Im basing this if on the number of input files I started with
+if [ $(ls 1_QCQA/Alex*.zip |wc -l) != 6 ]; then
+    echo "$(date): Running fastqc."
+    module load fastqc/0.11.7
+    fastqc -t $SLURM_NTASKS -noextract -o 1_QCQA DNA-seq/*.fastq.gz
+    echo "$(date): Done."
+else
+    echo "$(date): fastQC of raw data has already been run. Let's trim and filter these reads."
+fi
+Thu May  9 16:04:17 PDT 2019: fastQC of raw data has already been run. Let's trim and filter these reads.
+
+#Use trimmomatic to trim out low quality bases and adaptor sequences
+#I cannot automate this with a loop because the file names are inconsistent. I could rename, but I want to preserve the original names for troubleshooting later
+#Trim small library
+if [ ! -e "1_QCQA/Dstr1Trim_1P.fq.gz" ]; then
+    echo "$(date): Trimming small library."
+    module load trimmomatic/0.36
+    trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex-1_S9_R1_001.fastq.gz DNA-seq/Alex-2_S10_R1_001.fastq.gz -baseout 1_QCQA/Dstr1Trim.fq.gz ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+    echo "$(date): Done."
+else
+    echo "$(date): Small library already trimmed."
+fi
+Thu May  9 16:04:17 PDT 2019: Small library already trimmed.
+
+#Trim the first novaseq library
+if [ ! -e "1_QCQA/Dstr2TrimKeepBoth_1P.fq.gz" ]; then
+    echo "$(date): Trimming first NovaSeq library, and keeping both reads."
+    module load trimmomatic/0.36
+    trimmomatic PE -threads $SLURM_NTASKS DNA-seq/Alex_S85_L002_R1_001.fastq.gz DNA-seq/Alex_S85_L002_R2_001.fastq.gz -baseout 1_QCQA/Dstr2TrimKeepBoth.fq.gz ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+    echo "$(date): Done."
+else
+    echo "$(date): First NovaSeq Library is already trimmed."
+fi
+Thu May  9 16:04:17 PDT 2019: Trimming first NovaSeq library, and keeping both reads.
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/16.05.4:openmpi/2.0.1-slurm-16.05.4:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/7.4.1952:trimmomatic/0.36 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36:/opt/linux/centos/7.x/x86_64/pkgs/vim/7.4.1952/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/puppetlabs/bin ;export PATH;TRIMMOMATIC=/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/trimmomatic.jar ;export TRIMMOMATIC;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/16.05.4:/opt/linux/centos/7.x/x86_64/modules/openmpi/2.0.1-slurm-16.05.4:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/7.4.1952:/opt/linux/centos/7.x/x86_64/modules/trimmomatic/0.36 ;export _LMFILES_;
+TrimmomaticPE: Started with arguments:
+ -threads 8 DNA-seq/Alex_S85_L002_R1_001.fastq.gz DNA-seq/Alex_S85_L002_R2_001.fastq.gz -baseout 1_QCQA/Dstr2TrimKeepBoth.fq.gz ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using templated Output files: 1_QCQA/Dstr2TrimKeepBoth_1P.fq.gz 1_QCQA/Dstr2TrimKeepBoth_1U.fq.gz 1_QCQA/Dstr2TrimKeepBoth_2P.fq.gz 1_QCQA/Dstr2TrimKeepBoth_2U.fq.gz
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+slurmstepd-h06: error: *** JOB 5206086 ON h06 CANCELLED AT 2019-05-09T16:04:50 ***
