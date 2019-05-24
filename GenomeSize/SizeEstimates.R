@@ -108,23 +108,26 @@ SizeTest <- sum(as.numeric(test20[2:6761,1]*test20[2:6761,2]))/9
 setwd("~/bigdata/Datura/GenomeSize/Results_AllTrim/")
 DstrAll11 <- read.table("DstrTrim_11mer_out.histo", col.names = c("Cov", "mer11"))
 DstrAll13 <- read.table("DstrTrim_13mer_out.histo", col.names = c("Cov", "mer13"))
+DstrAll15 <- read.table("DstrTrim_15mer_out.histo", col.names = c("Cov", "mer15"))
+DstrAll17 <- read.table("DstrTrim_17mer_out.histo", col.names = c("Cov", "mer17"))
+DstrAll19 <- read.table("DstrTrim_19mer_out.histo", col.names = c("Cov", "mer19"))
+DstrAll21 <- read.table("DstrTrim_21mer_out.histo", col.names = c("Cov", "mer21"))
+DstrAll25 <- read.table("DstrTrim_25mer_out.histo", col.names = c("Cov", "mer25"))
+DstrAll27 <- read.table("DstrTrim_27mer_out.histo", col.names = c("Cov", "mer27"))
+DstrAll29 <- read.table("DstrTrim_29mer_out.histo", col.names = c("Cov", "mer29"))
+DstrAll31 <- read.table("DstrTrim_31mer_out.histo", col.names = c("Cov", "mer31"))
 
 
 #merge into 1 DF
-Dstr <- Reduce(function(...) merge(..., by="Cov", all=TRUE), list(DstrAll11, DstrAll13))
-#Plot all spectra
-pdf(file="KmerFreqAll.pdf")
-  plot.ts(Dstr[2:100,2:3])
-dev.off()
 #plot your fave
 pdf(file="KmerFreq.pdf")
-  plot(Dstr[1:100,3], type="l",ylab="No. Kmer Classes", xlab="Coverage", main="13-mer Plot", log="y")
-  abline(v=53, lty=2) #v line at peak
-  text(x=25, y=3.0e+07,labels="Local max at 12x\n~2.1Gb Genome")
+  plot(na.omit(DstrAll31[1:200,]), type="l",ylab="No. Kmer Classes", xlab="Coverage", main="31-mer Plot", log="y")
+  abline(v=36, lty=2) #v line at peak, NOTE peak location on graph is != to coverage number
+  text(x=200, y=3.0e+08,labels="Local max at 36x\n~2.0Gb Genome")
 dev.off()
 
 #get the genome size
-sum(as.numeric(Dstr[1:10000,"Cov"]*Dstr[1:10000,"mer13"]))/53 
+sum(DstrAll31[1:5000,"Cov"]*DstrAll31[1:5000,"mer31"])/36 #truncated to reduce overflow and trim errors
 
 
 
