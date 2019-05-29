@@ -6,7 +6,7 @@
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -p highmem
-#SBATCH -o ../history/slurm-%A.out
+#SBATCH -o history/slurm-%A.out
 set -euv
 
 # $((SLURM_MEM_PER_NODE/1000))'G'
@@ -20,11 +20,16 @@ set -euv
 
 #load velvet
 module load velvet/1.2.10
+echo $(date): Running velveth on a small subset
+velveth 2_assemble/ 19 -fastq.gz -shortPaired -separate  1_QCQA/Dstr1Trim_1P.fq.gz 1_QCQA/Dstr1Trim_2P.fq.gz -short 1_QCQA/Dstr1Trim1U.fq.gz 1_QCQA/Dstr1Trim2U.fq.gz
+echo $(done): Done.
+
 #Load velvet optimizer to test the assembly parameters
-echo $(date): Loading Velvet Optimizer
-velvetoptimiser/2.2.5
+#echo $(date): Loading Velvet Optimizer
+#velvetoptimiser/2.2.5
 
 #the command have been adapted from https://github.com/tseemann/VelvetOptimiser
-echo $(date): Running optimization
-VelvetOptimiser.pl -s 19 -e 57 -f '-fastq.gz -shortPaired -separate Dstr1Trim_1P.fq.gz Dstr1Trim_2P.fq.gz -short DstrTrim_1U.fq.gz DstrTrim_2U.fq.gz' -g 2000 -t $SLURM_NTASKS
-echo $(date): Done
+# I can't seem to get the optimizer to run because of some problem wit hthe fastq files. I am going to try to run Velvet and see if the problem crops of there too
+#echo $(date): Running optimization
+#VelvetOptimiser.pl -s 19 -e 31 -f '-fastq.gz -shortPaired -separate  1_QCQA/Dstr1Trim_1P.fq.gz 1_QCQA/Dstr1Trim_2P.fq.gz' -g 2000 -t $SLURM_NTASKS
+#echo $(date): Done
