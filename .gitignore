@@ -6,3 +6,4 @@
 DNA-seq/
 RNA-seq/
 software/
+*.tmp
