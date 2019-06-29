@@ -1,0 +1,5 @@
+[Fri Jun 28 17:33:22 PDT 2019] Processing pe library reads
+[Fri Jun 28 17:33:23 PDT 2019] Average PE read length 124
+[Fri Jun 28 17:33:23 PDT 2019] Using kmer size of 51 for the graph
+[Fri Jun 28 17:33:23 PDT 2019] MIN_Q_CHAR: 33
+[Fri Jun 28 17:33:23 PDT 2019] Creating mer database for Quorum

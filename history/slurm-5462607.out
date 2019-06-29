@@ -1,0 +1,13 @@
+[Fri Jun 28 08:38:37 PDT 2019] Processing pe library reads
+grep: write error
+awk: cmd. line:1: fatal: division by zero attempted
+[Fri Jun 28 10:03:57 PDT 2019] Average PE read length
+[Fri Jun 28 10:03:57 PDT 2019] Using kmer size of 51 for the graph
+[Fri Jun 28 10:03:58 PDT 2019] MIN_Q_CHAR: 33
+[Fri Jun 28 10:03:58 PDT 2019] Creating mer database for Quorum
+/var/spool/slurmd/job5462607/slurm_script: line 97: 62524 Broken pipe             awk '{print substr($0,1,200)}' t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq
+     62525 Killed                  | quorum_create_database -t 32 -s $JF_SIZE -b 7 -m 24 -q $((MIN_Q_CHAR + 5)) -o quorum_mer_db.jf.tmp /dev/stdin
+[Fri Jun 28 10:03:59 PDT 2019] Error correct PE
+/var/spool/slurmd/job5462607/slurm_script: line 104: 62532 Aborted                 quorum_error_correct_reads -q $(($MIN_Q_CHAR + 40)) --contaminant=/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../share/adapter.jf -m 1 -s 1 -g 1 -a 3 -t 32 -w 10 -e 3 -M quorum_mer_db.jf t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq --no-discard -o pe.cor.tmp --verbose > quorum.err 2>&1
+[Fri Jun 28 10:03:59 PDT 2019] Error correction of PE reads failed. Check pe.cor.log.
+slurmstepd-i02: error: Exceeded step memory limit at some point.

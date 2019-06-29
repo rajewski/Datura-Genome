@@ -1,7 +1,7 @@
 #!/bin/bash -l
-#SBATCH --ntasks=16
+#SBATCH --ntasks=4
 #SBATCH --nodes=1
-#SBATCH --mem=200G
+#SBATCH --mem=300G
 #SBATCH --time=20:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
@@ -20,8 +20,10 @@ set -euv
 
 #load velvet
 module load velvet/1.2.10
+export OMP_NUM_THREADS=$SLURM_NTASKS #set number of threads to use to prevent seg fault?
+echo $OMP_NUM_THREADS
 echo $(date): Running velveth on a small subset
-velveth 2_assemble/ 19 -fastq.gz -shortPaired -separate  1_QCQA/Dstr1Trim_1P.fq.gz 1_QCQA/Dstr1Trim_2P.fq.gz -short 1_QCQA/Dstr1Trim1U.fq.gz 1_QCQA/Dstr1Trim2U.fq.gz
+velveth 2_Assemble/ 19 -fastq.gz -shortPaired -separate  1_QCQA/DstrTrim_1P.fq.gz 1_QCQA/DstrTrim_2P.fq.gz -short 1_QCQA/DstrTrim_1U.fq.gz 1_QCQA/DstrTrim_2U.fq.gz
 echo $(done): Done.
 
 #Load velvet optimizer to test the assembly parameters
