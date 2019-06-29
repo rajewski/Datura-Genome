@@ -1,0 +1,18 @@
+
+# $((SLURM_MEM_PER_NODE/1000))'G'
+
+#Although I think velvet can handle many files of the same library type, I want to simplify the command line options to reduce my chances for error. 
+#I have used the following commands to combine all of my surviving paired end files into two files
+#cat Dstr1Trim_1P.fq.gz Dstr2Trim_1P.fq.gz Dstr3Trim_1P.fq.gz > DstrTrim_1P.fq.gz
+#cat Dstr1Trim_2P.fq.gz Dstr2Trim_2P.fq.gz Dstr3Trim_2P.fq.gz > DstrTrim_2P.fq.gz
+#cat Dstr1Trim_1U.fq.gz Dstr2Trim_1U.fq.gz Dstr3Trim_1U.fq.gz > DstrTrim_1U.fq.gz
+#cat Dstr1Trim_2U.fq.gz Dstr2Trim_2U.fq.gz Dstr3Trim_2U.fq.gz > DstrTrim_2U.fq.gz
+
+#load velvet
+module load velvet/1.2.10
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/velvet/1.2.10:/opt/linux/centos/7.x/x86_64/pkgs/vim/7.4.1952/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/16.05.4/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/puppetlabs/bin ;export PATH;
+echo $(date): Running velveth on a small subset
+Thu May 30 09:44:07 PDT 2019: Running velveth on a small subset
+velveth 2_assemble/ 19 -fastq.gz -shortPaired -separate  1_QCQA/DstrTrim_1P.fq.gz 1_QCQA/DstrTrim_2P.fq.gz -short 1_QCQA/DstrTrim_1U.fq.gz 1_QCQA/DstrTrim_2U.fq.gz
+/var/spool/slurmd/job5355943/slurm_script: line 24:  5195 Segmentation fault      velveth 2_assemble/ 19 -fastq.gz -shortPaired -separate 1_QCQA/DstrTrim_1P.fq.gz 1_QCQA/DstrTrim_2P.fq.gz -short 1_QCQA/DstrTrim_1U.fq.gz 1_QCQA/DstrTrim_2U.fq.gz
