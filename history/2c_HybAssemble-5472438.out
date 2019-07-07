@@ -1,0 +1,22 @@
+[Fri Jul  5 16:40:05 PDT 2019] Processing pe library reads
+[Fri Jul  5 16:40:06 PDT 2019] Average PE read length 124
+[Fri Jul  5 16:40:07 PDT 2019] Using kmer size of 51 for the graph
+[Fri Jul  5 16:40:07 PDT 2019] MIN_Q_CHAR: 33
+[Fri Jul  5 16:40:07 PDT 2019] Estimated genome size: 1743399272
+[Fri Jul  5 16:40:07 PDT 2019] Computing super reads from PE 
+[Fri Jul  5 16:44:12 PDT 2019] Using CABOG from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../CA8/Linux-amd64/bin
+stat: cannot stat ‘work1/superReadSequences.fasta’: No such file or directory
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 150: /1743399272/2: syntax error: operand expected (error token is "/1743399272/2")
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 151: [: -lt: unary operator expected
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 152: [: -gt: unary operator expected
+[Fri Jul  5 16:44:12 PDT 2019] Running mega-reads correction/assembly
+[Fri Jul  5 16:44:12 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Fri Jul  5 16:44:12 PDT 2019] Estimated Genome Size 1743399272
+[Fri Jul  5 16:44:12 PDT 2019] Estimated Ploidy 
+[Fri Jul  5 16:44:12 PDT 2019] Using 32 threads
+[Fri Jul  5 16:44:12 PDT 2019] Output prefix mr.41.15.15.0.02
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 184: 6115776650/1743399272/: syntax error: operand expected (error token is "/")
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 186: [: -gt: unary operator expected
+[Fri Jul  5 16:44:12 PDT 2019] Using 25x of the longest ONT reads
+[Fri Jul  5 16:46:30 PDT 2019] failed to extract the best long reads
+[Fri Jul  5 16:46:30 PDT 2019] mega-reads exited before assembly

@@ -92,40 +92,22 @@ log MIN_Q_CHAR: $MIN_Q_CHAR
 JF_SIZE=`ls -l *.fastq | awk '{n+=$5}END{s=int(n/50); if(s>40000000000)printf "%.0f",s;else print "40000000000";}'`
 save JF_SIZE
 perl -e '{if(int('$JF_SIZE')>40000000000){print "WARNING: JF_SIZE set too low, increasing JF_SIZE to at least '$JF_SIZE', this automatic increase may be not enough!\n"}}'
-log Creating mer database for Quorum
-awk '{print substr($0,1,200)}' t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq | quorum_create_database -t 32 -s $JF_SIZE -b 7 -m 24 -q $((MIN_Q_CHAR + 5)) -o quorum_mer_db.jf.tmp /dev/stdin && mv quorum_mer_db.jf.tmp quorum_mer_db.jf
-if [ 0 != 0 ]; then
-  fail Increase JF_SIZE in config file, the recommendation is to set this to genome_size*coverage/2
-fi
 
-log Error correct PE
-
-quorum_error_correct_reads  -q $(($MIN_Q_CHAR + 40)) --contaminant=/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../share/adapter.jf -m 1 -s 1 -g 1 -a 3 -t 32 -w 10 -e 3 -M  quorum_mer_db.jf t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq --no-discard -o pe.cor.tmp --verbose 1>quorum.err 2>&1 && mv pe.cor.tmp.fa pe.cor.fa || fail Error correction of PE reads failed. Check pe.cor.log.
 
 
 if [ -s ESTIMATED_GENOME_SIZE.txt ];then
 ESTIMATED_GENOME_SIZE=`head -n 1 ESTIMATED_GENOME_SIZE.txt`
 else
 log Estimating genome size
-jellyfish count -m 31 -t 32 -C -s $JF_SIZE -o k_u_hash_0 pe.cor.fa
 export ESTIMATED_GENOME_SIZE=`jellyfish histo -t 32 -h 1 k_u_hash_0 | tail -n 1 |awk '{print $2}'`
 echo $ESTIMATED_GENOME_SIZE > ESTIMATED_GENOME_SIZE.txt
 fi
 save ESTIMATED_GENOME_SIZE
 log "Estimated genome size: $ESTIMATED_GENOME_SIZE"
 
-log Creating k-unitigs with k=$KMER
-create_k_unitigs_large_k -c $(($KMER-1)) -t 32 -m $KMER -n $(($ESTIMATED_GENOME_SIZE*2)) -l $KMER -f `perl -e 'print 1/'$KMER'/1e5'` pe.cor.fa  | grep --text -v '^>' | perl -ane '{$seq=$F[0]; $F[0]=~tr/ACTGactg/TGACtgac/;$revseq=reverse($F[0]); $h{($seq ge $revseq)?$seq:$revseq}=1;}END{$n=0;foreach $k(keys %h){print ">",$n++," length:",length($k),"\n$k\n"}}' > guillaumeKUnitigsAtLeast32bases_all.fasta.tmp && mv guillaumeKUnitigsAtLeast32bases_all.fasta.tmp guillaumeKUnitigsAtLeast32bases_all.fasta
-if [[ $KMER -eq $KMER_J ]];then
-ln -s guillaumeKUnitigsAtLeast32bases_all.fasta guillaumeKUnitigsAtLeast32bases_all.jump.fasta
-else
-log Creating k-unitigs with k=$KMER_J
-create_k_unitigs_large_k -c $(($KMER_J-1)) -t 32 -m $KMER_J -n $(($ESTIMATED_GENOME_SIZE*2)) -l $KMER_J -f `perl -e 'print 1/'$KMER_J'/1e5'` pe.cor.fa  | grep --text -v '^>' | perl -ane '{$seq=$F[0]; $F[0]=~tr/ACTGactg/TGACtgac/;$revseq=reverse($F[0]); $h{($seq ge $revseq)?$seq:$revseq}=1;}END{$n=0;foreach $k(keys %h){print ">",$n++," length:",length($k),"\n$k\n"}}' > guillaumeKUnitigsAtLeast32bases_all.jump.fasta.tmp && mv guillaumeKUnitigsAtLeast32bases_all.jump.fasta.tmp guillaumeKUnitigsAtLeast32bases_all.jump.fasta 
-fi
 
 
 log 'Computing super reads from PE '
-rm -rf work1
 CA_DIR="CA";
 createSuperReadsForDirectory.perl -doSimpleMerge -l $KMER -mean-and-stdev-by-prefix-file meanAndStdevByPrefix.pe.txt -kunitigsfile guillaumeKUnitigsAtLeast32bases_all.fasta -t 32 -mikedebug work1 pe.cor.fa 1> super1.err 2>&1
 /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh -E SLURM  -Pb 500000000 -q batch -G 1 -C 25 -t 32 -e $ESTIMATED_GENOME_SIZE -m work1 -n /bigdata/littlab/arajewski/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz -a /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../CA8/Linux-amd64/bin -o "   cgwErrorRate=0.15" -B 15 -D 0.02
