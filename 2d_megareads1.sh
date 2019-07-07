@@ -2,10 +2,10 @@
 
 sbatch -D /rhome/arajewski/bigdata/Datura/mr_pass1 \
     -J create_mega_reads \
-    -a 1-12 \
+    -a 3-12 \
     -n 32 \
-    -p highmem \
-    --mem 512gb \
+    -p batch \
+    --mem 40gb \
     -N 1 \
     --mail-user=araje002@ucr.edu \
     --mail-type=ALL \
