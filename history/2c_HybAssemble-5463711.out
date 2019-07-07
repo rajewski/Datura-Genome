@@ -1,0 +1,17 @@
+[Sat Jun 29 09:15:46 PDT 2019] Processing pe library reads
+[Sat Jun 29 09:53:17 PDT 2019] Average PE read length 124
+[Sat Jun 29 09:53:18 PDT 2019] Using kmer size of 51 for the graph
+[Sat Jun 29 09:53:18 PDT 2019] MIN_Q_CHAR: 33
+[Sat Jun 29 09:53:18 PDT 2019] Creating mer database for Quorum
+[Sat Jun 29 11:07:36 PDT 2019] Error correct PE
+[Sat Jun 29 15:05:46 PDT 2019] Estimating genome size
+/var/spool/slurmd/job5463711/slurm_script: line 114: 114596 Killed                  jellyfish count -m 31 -t 32 -C -s $JF_SIZE -o k_u_hash_0 pe.cor.fa
+Failed to open input file 'k_u_hash_0'
+[Sat Jun 29 15:07:42 PDT 2019] Estimated genome size: 
+[Sat Jun 29 15:07:42 PDT 2019] Creating k-unitigs with k=51
+/var/spool/slurmd/job5463711/slurm_script: line 119: *2: syntax error: operand expected (error token is "*2")
+[Sat Jun 29 15:07:42 PDT 2019] Computing super reads from PE 
+Unknown option work1
+cat: CA_dir.txt: No such file or directory
+[Sat Jun 29 15:07:43 PDT 2019] Assembly stopped or failed, see .log
+slurmstepd-i19: error: Exceeded step memory limit at some point.

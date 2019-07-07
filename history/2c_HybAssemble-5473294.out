@@ -1,0 +1,21 @@
+[Sat Jul  6 07:27:07 PDT 2019] Processing pe library reads
+[Sat Jul  6 07:27:07 PDT 2019] Average PE read length 124
+[Sat Jul  6 07:27:08 PDT 2019] Using kmer size of 51 for the graph
+[Sat Jul  6 07:27:08 PDT 2019] MIN_Q_CHAR: 33
+[Sat Jul  6 07:27:08 PDT 2019] Estimated genome size: 1743399272
+[Sat Jul  6 07:27:08 PDT 2019] Computing super reads from PE 
+[Sat Jul  6 07:31:04 PDT 2019] Using CABOG from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../CA8/Linux-amd64/bin
+stat: cannot stat ‘work1/superReadSequences.fasta’: No such file or directory
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 152: [: -lt: unary operator expected
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 153: [: -gt: unary operator expected
+[Sat Jul  6 07:31:04 PDT 2019] Running mega-reads correction/assembly
+[Sat Jul  6 07:31:04 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Sat Jul  6 07:31:04 PDT 2019] Estimated Genome Size 1743399272
+[Sat Jul  6 07:31:04 PDT 2019] Estimated Ploidy 
+[Sat Jul  6 07:31:04 PDT 2019] Using 32 threads
+[Sat Jul  6 07:31:04 PDT 2019] Output prefix mr.41.15.15.0.02
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 185: 6115776650/1743399272/: syntax error: operand expected (error token is "/")
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/mega_reads_assemble_cluster.sh: line 187: [: -gt: unary operator expected
+[Sat Jul  6 07:31:04 PDT 2019] Using 25x of the longest ONT reads
+[Sat Jul  6 07:33:26 PDT 2019] failed to extract the best long reads
+[Sat Jul  6 07:33:26 PDT 2019] mega-reads exited before assembly

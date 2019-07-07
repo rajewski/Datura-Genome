@@ -1,0 +1,26 @@
+[Sat Jul  6 07:55:32 PDT 2019] Processing pe library reads
+[Sat Jul  6 07:55:33 PDT 2019] Average PE read length 124
+[Sat Jul  6 07:55:33 PDT 2019] Using kmer size of 51 for the graph
+[Sat Jul  6 07:55:33 PDT 2019] MIN_Q_CHAR: 33
+[Sat Jul  6 07:55:33 PDT 2019] Estimated genome size: 1743399272
+[Sat Jul  6 07:55:33 PDT 2019] Computing super reads from PE 
+[Sat Jul  6 13:30:23 PDT 2019] Using CABOG from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../CA8/Linux-amd64/bin
+[Sat Jul  6 13:30:23 PDT 2019] Running mega-reads correction/assembly
+[Sat Jul  6 13:30:23 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Sat Jul  6 13:30:23 PDT 2019] Estimated Genome Size 1743399272
+[Sat Jul  6 13:30:23 PDT 2019] Estimated Ploidy 2
+[Sat Jul  6 13:30:23 PDT 2019] Using 32 threads
+[Sat Jul  6 13:30:23 PDT 2019] Output prefix mr.41.15.15.0.02
+[Sat Jul  6 13:30:23 PDT 2019] Using 25x of the longest ONT reads
+[Sat Jul  6 13:35:02 PDT 2019] Reducing super-read k-mer size
+[Sat Jul  6 16:27:43 PDT 2019] Mega-reads pass 1
+[Sat Jul  6 16:27:43 PDT 2019] Running on the grid in 12 batches
+ 
+To submit SLURM jobs, please run
+ 
+sbatch -D /rhome/arajewski/bigdata/Datura/mr_pass1 -J create_mega_reads -a 1-12 -n 32 -p batch -N 1 mr_pass1/create_mega_reads.sh
+ 
+Please re-run assemble.sh when all jobs finish. If you get this message again, it means that some jobs failed, simply re-submit again using the above command.
+ 
+[Sat Jul  6 16:28:02 PDT 2019] mega-reads pass 1 on the grid exited, please re-run assemble.sh
+[Sat Jul  6 16:28:02 PDT 2019] mega-reads exited before assembly
