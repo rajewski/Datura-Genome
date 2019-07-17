@@ -1,0 +1,3 @@
+compute_psa 73145321 14002744903
+/var/spool/slurmd/job5477603/slurm_script: line 6: 10879 Killed                  /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/create_mega_reads -s 13958153329 -m 15 --psa-min 12 --stretch-cap 10000 -k 41 -u ../guillaumeKUnitigsAtLeast32bases_all.41.fasta -t 32 -B 15 --max-count 5000 -d 0.02 -r ../superReadSequences.named.fasta -p lr.batch$SLURM_ARRAY_TASK_ID -o mr.batch$SLURM_ARRAY_TASK_ID.tmp
+slurmstepd-h03: error: Exceeded step memory limit at some point.

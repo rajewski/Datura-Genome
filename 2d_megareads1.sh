@@ -2,12 +2,13 @@
 
 sbatch -D /rhome/arajewski/bigdata/Datura/mr_pass1 \
     -J create_mega_reads \
-    -a 3-12 \
-    -n 32 \
-    -p batch \
-    --mem 40gb \
+    -a 12,11,10 \
+    --ntasks 32 \
+    -p intel,batch \
+    --mem 450gb \
     -N 1 \
+    --time=1-19:00:00 \
     --mail-user=araje002@ucr.edu \
     --mail-type=ALL \
-    --out /rhome/arajewski/bigdata/Datura/history/2d_megareads1-%A.out \
+    --out /rhome/arajewski/bigdata/Datura/history/2d_megareads1_%A-%a.out \
     mr_pass1/create_mega_reads.sh
