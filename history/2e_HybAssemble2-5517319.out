@@ -1,0 +1,18 @@
+[Fri Jul 19 22:11:48 PDT 2019] Processing pe library reads
+[Fri Jul 19 22:11:48 PDT 2019] Average PE read length 124
+[Fri Jul 19 22:11:49 PDT 2019] Using kmer size of 51 for the graph
+[Fri Jul 19 22:11:49 PDT 2019] MIN_Q_CHAR: 33
+[Fri Jul 19 22:11:49 PDT 2019] Estimated genome size: 1743399272
+[Fri Jul 19 22:11:49 PDT 2019] Computing super reads from PE 
+[Fri Jul 19 22:13:42 PDT 2019] Using CABOG from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../CA8/Linux-amd64/bin
+[Fri Jul 19 22:13:42 PDT 2019] Running mega-reads correction/assembly
+[Fri Jul 19 22:13:42 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Fri Jul 19 22:13:42 PDT 2019] Estimated Genome Size 1743399272
+[Fri Jul 19 22:13:42 PDT 2019] Estimated Ploidy 2
+[Fri Jul 19 22:13:42 PDT 2019] Using 32 threads
+[Fri Jul 19 22:13:42 PDT 2019] Output prefix mr.41.15.15.0.02
+[Fri Jul 19 22:13:42 PDT 2019] Coverage of the mega-reads less than 5 -- using the super reads as well
+[Fri Jul 19 22:13:44 PDT 2019] Coverage threshold for splitting unitigs is 15 minimum ovl 250
+[Fri Jul 19 22:13:44 PDT 2019] Running assembly
+[Fri Jul 19 22:33:56 PDT 2019] Assembly stopped or failed, see CA.mr.41.15.15.0.02.log
+[Fri Jul 19 22:33:56 PDT 2019] Assembly stopped or failed, see CA.mr.41.15.15.0.02.log
