@@ -1,0 +1,46 @@
+miniconda2/4.4.10(23):ERROR:150: Module 'miniconda2/4.4.10' conflicts with the currently loaded module(s) 'python/3.6.0'
+miniconda2/4.4.10(23):ERROR:102: Tcl command execution failed: conflict    python
+
+
+
+#the point of this script is to assess the assembly with the BUSCO database
+
+module load busco/3.0.2
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/scripts:/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/bin:/opt/linux/centos/7.x/x86_64/pkgs/ncbi-blast/2.7.1+/bin:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+ASSEM=Dstr_v1.0
+ASSEMPATH=~/bigdata/Datura/flye_assembly/assembly.fasta
+
+#BUSCO also needs augustus, and because of the cluster environment I have to install it separately
+export PATH="/rhome/arajewski/bigdata/Datura/augustus/bin:$PATH"
+export PATH="/rhome/arajewski/bigdata/Datura/augustus/scripts:$PATH"
+export AUGUSTUS_CONFIG_PATH="/rhome/arajewski/bigdata/Datura/augustus/config/"
+
+run_BUSCO.py \
+    -m genome \
+    -c $SLURM_NTASKS \
+    -i $ASSEMPATH \
+    -o $ASSEM \
+    -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 09/24/2019 14:16:13 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/flye_assembly/assembly.fasta -o Dstr_v1.0 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 1 -sp arabidopsis
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 1/3, current time: 09/24/2019 14:16:50 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 09/24/2019 14:16:50
+INFO	[makeblastdb]	New DB name:   /bigdata/littlab/arajewski/Datura/tmp/Dstr_v1.0_3980904634
+INFO	[makeblastdb]	New DB title:  /rhome/arajewski/bigdata/Datura/flye_assembly/assembly.fasta
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 13587 sequences in 13.8 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 09/24/2019 14:17:12
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/run_Dstr_v1.0/blast_output/tblastn_Dstr_v1.0.tsv...
+slurmstepd-c04: error: *** JOB 228137 ON c04 CANCELLED AT 2019-09-24T14:18:13 ***

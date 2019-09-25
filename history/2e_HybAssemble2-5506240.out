@@ -1,0 +1,32 @@
+[Wed Jul 17 08:24:28 PDT 2019] Processing pe library reads
+[Wed Jul 17 08:24:29 PDT 2019] Average PE read length 124
+[Wed Jul 17 08:24:30 PDT 2019] Using kmer size of 51 for the graph
+[Wed Jul 17 08:24:30 PDT 2019] MIN_Q_CHAR: 33
+[Wed Jul 17 08:24:30 PDT 2019] Estimated genome size: 1743399272
+[Wed Jul 17 08:24:30 PDT 2019] Computing super reads from PE 
+[Wed Jul 17 08:26:32 PDT 2019] Using CABOG from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/masurca/bin/../CA8/Linux-amd64/bin
+[Wed Jul 17 08:26:32 PDT 2019] Running mega-reads correction/assembly
+[Wed Jul 17 08:26:32 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Wed Jul 17 08:26:32 PDT 2019] Estimated Genome Size 1743399272
+[Wed Jul 17 08:26:32 PDT 2019] Estimated Ploidy 2
+[Wed Jul 17 08:26:32 PDT 2019] Using 32 threads
+[Wed Jul 17 08:26:32 PDT 2019] Output prefix mr.41.15.15.0.02
+[Wed Jul 17 08:26:32 PDT 2019] Mega-reads pass 1
+[Wed Jul 17 08:26:32 PDT 2019] Running on the grid in 12 batches
+Processed 500000 super reads, irreducible 409927, processing 1022 super reads per second
+Processed 1000000 super reads, irreducible 786107, processing 2538 super reads per second
+Processed 1500000 super reads, irreducible 1175662, processing 5952 super reads per second
+Processed 2000000 super reads, irreducible 1591046, processing 14705 super reads per second
+Processed 2500000 super reads, irreducible 1994475, processing 15151 super reads per second
+Processed 3000000 super reads, irreducible 2376405, processing 14705 super reads per second
+[Wed Jul 17 08:58:00 PDT 2019] Mega-reads pass 2
+[Wed Jul 17 08:58:00 PDT 2019] Running locally in 1 batch
+[Wed Jul 17 21:03:46 PDT 2019] Refining alignments
+[Wed Jul 17 21:15:32 PDT 2019] Joining
+[Wed Jul 17 21:37:53 PDT 2019] Gap consensus
+[Wed Jul 17 21:54:25 PDT 2019] Generating assembly input files
+[Wed Jul 17 23:10:29 PDT 2019] Coverage of the mega-reads less than 5 -- using the super reads as well
+[Wed Jul 17 23:14:28 PDT 2019] Coverage threshold for splitting unitigs is 15 minimum ovl 250
+[Wed Jul 17 23:14:28 PDT 2019] Running assembly
+[Wed Jul 17 23:34:34 PDT 2019] Assembly stopped or failed, see CA.mr.41.15.15.0.02.log
+[Wed Jul 17 23:34:34 PDT 2019] Assembly stopped or failed, see CA.mr.41.15.15.0.02.log

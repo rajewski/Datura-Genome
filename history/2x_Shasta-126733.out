@@ -1,0 +1,197 @@
+
+echo $(date): running shasta
+Thu Sep 19 16:30:08 PDT 2019: running shasta
+module load shasta/0.2.0
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/shasta/0.2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+shasta --input mr.41.15.15.0.02.1.fa
+Shasta Release 0.2.0
+2019-Sep-19 16:30:09.133977 
+This is the static executable for the Shasta assembler. It provides limited Shasta functionality, at reduced performance when using the default options, but has no dependencies and requires no installation.
+
+Default values of assembly parameters are optimized for an assembly at coverage 60x. If your data have significantly different coverage, some changes in assembly parameters may be necessary to get good results.
+
+For more information about the Shasta assembler, see
+https://github.com/chanzuckerberg/shasta
+
+Complete documentation for the latest version of Shasta is available here:
+https://chanzuckerberg.github.io/shasta
+
+Options in use:
+Input FASTA files: mr.41.15.15.0.02.1.fa 
+assemblyDirectory = ShastaRun
+memoryMode = anonymous
+memoryBacking = 4K
+threadCount = 0
+
+[Reads]
+minReadLength = 10000
+palindromicReads.maxSkip = 100
+palindromicReads.maxMarkerFrequency = 10
+palindromicReads.alignedFractionThreshold = 0.1
+palindromicReads.nearDiagonalFractionThreshold = 0.1
+palindromicReads.deltaThreshold = 100
+
+[Kmers]
+k = 10
+probability = 0.1
+
+[MinHash]
+m = 4
+hashFraction = 0.01
+minHashIterationCount = 10
+maxBucketSize = 10
+minFrequency = 2
+
+[Align]
+maxSkip = 30
+maxTrim = 30
+maxMarkerFrequency = 10
+minAlignedMarkerCount = 100
+
+[ReadGraph]
+maxAlignmentCount = 6
+minComponentSize = 100
+maxChimericReadDistance = 2
+
+[MarkerGraph]
+minCoverage = 10
+maxCoverage = 100
+lowCoverageThreshold = 0
+highCoverageThreshold = 256
+maxDistance = 30
+edgeMarkerSkipThreshold = 100
+pruneIterationCount = 6
+simplifyMaxLength = 10,100,1000
+
+[Assembly]
+strategy = 0
+crossEdgeCoverageThreshold = 3
+markerGraphEdgeLengthThresholdForConsensus = 1000
+consensusCaller = Bayesian:guppy-2.3.5-a
+useMarginPhase = False
+storeCoverageData = False
+
+This run uses options "--memoryBacking 4K --memoryMode anonymous".
+This could result in performance degradation.
+For full performance, use "--memoryBacking 2M --memoryMode filesystem"
+(root privilege via sudo required).
+Therefore the results of this run should not be used
+for benchmarking purposes.
+Created a new assembly with page size 4096
+This assembly will use 32 threads.
+Setting up consensus caller Bayesian:guppy-2.3.5-a
+Using predefined Bayesian consensus caller guppy-2.3.5-a
+Bayesian consensus caller configuration name is Human guppy 2.3.5 chr1,chr2,chr3 GM24385 with hg38 priors and 1 pseudocounts 7-23-2019
+2019-Sep-19 16:30:09.168666 Loading reads from /bigdata/littlab/arajewski/Datura/mr.41.15.15.0.02.1.fa.
+Input file block size: 2147483648 bytes.
+Using 1 threads for reading and 32 threads for processing.
+Input file size is 5707451080 bytes.
+2019-Sep-19 16:30:09.170876 Reading /bigdata/littlab/arajewski/Datura/mr.41.15.15.0.02.1.fa block 0 2147483648, 2147483648 bytes.
+Block read in 4.17414 s at 5.14473e+08 bytes/s.
+Processing 2147467022 input characters.
+An error occurred processing read 15ed3602-eeb7-40f8-af97-84d9eb170ad9.8817_10752:F:1149:20770_9388:F:1080:30818_21061:F
+The error occurred at buffer index 1390999while processing file block at offset 0 to 2147483648
+File offset at error location is 1390999
+File dump around this offset:
+1390949 67 C
+1390950 84 T
+1390951 84 T
+1390952 67 C
+1390953 65 A
+1390954 71 G
+1390955 71 G
+1390956 65 A
+1390957 84 T
+1390958 67 C
+1390959 71 G
+1390960 65 A
+1390961 67 C
+1390962 84 T
+1390963 71 G
+1390964 71 G
+1390965 71 G
+1390966 67 C
+1390967 84 T
+1390968 65 A
+1390969 65 A
+1390970 84 T
+1390971 71 G
+1390972 71 G
+1390973 71 G
+1390974 67 C
+1390975 84 T
+1390976 65 A
+1390977 67 C
+1390978 65 A
+1390979 84 T
+1390980 65 A
+1390981 65 A
+1390982 71 G
+1390983 71 G
+1390984 84 T
+1390985 71 G
+1390986 84 T
+1390987 67 C
+1390988 84 T
+1390989 67 C
+1390990 65 A
+1390991 67 C
+1390992 65 A
+1390993 65 A
+1390994 71 G
+1390995 65 A
+1390996 67 C
+1390997 65 A
+1390998 78 N
+1390999 78 N Error occurred at this position.
+1391000 78 N
+1391001 78 N
+1391002 78 N
+1391003 78 N
+1391004 78 N
+1391005 78 N
+1391006 78 N
+1391007 78 N
+1391008 78 N
+1391009 78 N
+1391010 78 N
+1391011 78 N
+1391012 78 N
+1391013 78 N
+1391014 78 N
+1391015 78 N
+1391016 78 N
+1391017 78 N
+1391018 78 N
+1391019 78 N
+1391020 78 N
+1391021 78 N
+1391022 78 N
+1391023 78 N
+1391024 78 N
+1391025 78 N
+1391026 78 N
+1391027 78 N
+1391028 78 N
+1391029 78 N
+1391030 78 N
+1391031 78 N
+1391032 78 N
+1391033 78 N
+1391034 78 N
+1391035 78 N
+1391036 78 N
+1391037 78 N
+1391038 78 N
+1391039 78 N
+1391040 78 N
+1391041 78 N
+1391042 78 N
+1391043 78 N
+1391044 78 N
+1391045 78 N
+1391046 78 N
+1391047 78 N
+1391048 78 N
+2019-Sep-19 16:30:13.627552 A runtime error occurred in thread 0: Invalid base character: 78 N
