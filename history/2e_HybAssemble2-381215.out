@@ -1,0 +1,9 @@
+[Tue Oct 22 13:17:51 PDT 2019] Processing pe library reads
+[Tue Oct 22 13:17:51 PDT 2019] Average PE read length 124
+[Tue Oct 22 13:17:52 PDT 2019] Using kmer size of 51 for the graph
+[Tue Oct 22 13:17:52 PDT 2019] MIN_Q_CHAR: 33
+[Tue Oct 22 13:17:52 PDT 2019] Estimated genome size: 1743399272
+[Tue Oct 22 13:17:52 PDT 2019] Computing super reads from PE 
+[Tue Oct 22 13:17:52 PDT 2019] Using Flye from /rhome/arajewski/.conda/envs/Datura/bin/../Flye/bin
+[Tue Oct 22 13:17:52 PDT 2019] flye not found at /rhome/arajewski/.conda/envs/Datura/bin/../Flye/bin!
+[Tue Oct 22 13:17:52 PDT 2019] Assembly with flye failed, see files under flye/

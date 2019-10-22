@@ -1,0 +1,19 @@
+[Mon Oct 21 15:10:20 PDT 2019] Processing pe library reads
+[Mon Oct 21 15:10:20 PDT 2019] Average PE read length 124
+[Mon Oct 21 15:10:21 PDT 2019] Using kmer size of 51 for the graph
+[Mon Oct 21 15:10:21 PDT 2019] MIN_Q_CHAR: 33
+[Mon Oct 21 15:10:21 PDT 2019] Estimated genome size: 1743399272
+[Mon Oct 21 15:10:21 PDT 2019] Computing super reads from PE 
+[Mon Oct 21 15:10:21 PDT 2019] Using Flye from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.3/bin/../Flye/bin
+[Mon Oct 21 15:10:22 PDT 2019] Running mega-reads correction/assembly
+[Mon Oct 21 15:10:22 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Mon Oct 21 15:10:22 PDT 2019] Estimated Genome Size 1743399272
+[Mon Oct 21 15:10:22 PDT 2019] Estimated Ploidy 2
+[Mon Oct 21 15:10:22 PDT 2019] Using 32 threads
+[Mon Oct 21 15:10:22 PDT 2019] Output prefix mr.41.15.15.0.02
+[Mon Oct 21 15:10:22 PDT 2019] Refining alignments
+[Mon Oct 21 15:24:18 PDT 2019] Computing allowed merges
+[Mon Oct 21 15:25:39 PDT 2019] Joining
+[Mon Oct 21 15:28:35 PDT 2019] Gap consensus
+[Mon Oct 21 15:48:47 PDT 2019] Running assembly with Flye
+[Mon Oct 21 15:48:53 PDT 2019] Assembly with flye failed, see files under flye/
