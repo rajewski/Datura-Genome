@@ -1,0 +1,15 @@
+[Tue Oct 22 13:18:51 PDT 2019] Processing pe library reads
+[Tue Oct 22 13:18:51 PDT 2019] Average PE read length 124
+[Tue Oct 22 13:18:52 PDT 2019] Using kmer size of 51 for the graph
+[Tue Oct 22 13:18:52 PDT 2019] MIN_Q_CHAR: 33
+[Tue Oct 22 13:18:52 PDT 2019] Estimated genome size: 1743399272
+[Tue Oct 22 13:18:52 PDT 2019] Computing super reads from PE 
+[Tue Oct 22 13:18:52 PDT 2019] Using Flye from /rhome/arajewski/.conda/envs/Datura/bin/
+[Tue Oct 22 13:18:52 PDT 2019] Running mega-reads correction/assembly
+[Tue Oct 22 13:18:52 PDT 2019] Using mer size 15 for mapping, B=15, d=0.02
+[Tue Oct 22 13:18:52 PDT 2019] Estimated Genome Size 1743399272
+[Tue Oct 22 13:18:52 PDT 2019] Estimated Ploidy 2
+[Tue Oct 22 13:18:52 PDT 2019] Using 32 threads
+[Tue Oct 22 13:18:52 PDT 2019] Output prefix mr.41.15.15.0.02
+[Tue Oct 22 13:18:53 PDT 2019] Running assembly with Flye
+slurmstepd-h01: error: *** JOB 381218 ON h01 CANCELLED AT 2019-10-22T13:19:47 ***

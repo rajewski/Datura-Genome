@@ -1,0 +1,122 @@
+
+
+#the point of this script is to assess the assembly with the BUSCO database
+
+module load busco/3.0.2
+/usr/bin/modulecmd bash $*
+AUGUSTUS_CONFIG_PATH=/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/config ;export AUGUSTUS_CONFIG_PATH;BAMTOOLS_PATH=/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/bin ;export BAMTOOLS_PATH;BUSCO_CONFIG_FILE=/opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini ;export BUSCO_CONFIG_FILE;BUSCO_LINEAGES=/srv/projects/db/BUSCO/v9/ ;export BUSCO_LINEAGES;CPATH=/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/include:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/include:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/include:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/include:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/include/ggobi:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/include:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/include ;export CPATH;LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/lp_solve/5.5/lib:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/lib:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/lib:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib/openmpi:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/lib ;export LD_LIBRARY_PATH;LD_RUN_PATH=/opt/linux/centos/7.x/x86_64/pkgs/lp_solve/5.5/lib ;export LD_RUN_PATH;LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib ;export LIBRARY_PATH;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:python/3.6.0:ncbi-blast/2.7.1+:hmmer/3.1b2:lp_solve/5.5:bamtools/2.4.0:augustus/3.3:busco/3.0.2 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/share/man:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/scripts:/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/bin:/opt/linux/centos/7.x/x86_64/pkgs/ncbi-blast/2.7.1+/bin:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;PYTHONPATH=/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/lib/python3.6/site-packages:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/lib64/python3.6/site-packages ;export PYTHONPATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/python/3.6.0:/opt/linux/centos/7.x/x86_64/modules/ncbi-blast/2.7.1+:/opt/linux/centos/7.x/x86_64/modules/hmmer/3.1b2:/opt/linux/centos/7.x/x86_64/modules/lp_solve/5.5:/opt/linux/centos/7.x/x86_64/modules/bamtools/2.4.0:/opt/linux/centos/7.x/x86_64/modules/augustus/3.3:/opt/linux/centos/7.x/x86_64/modules/busco/3.0.2 ;export _LMFILES_;
+#We need to downgrade our blast version to make it work
+module unload ncbi-blast
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:python/3.6.0:hmmer/3.1b2:lp_solve/5.5:bamtools/2.4.0:augustus/3.3:busco/3.0.2 ;export LOADEDMODULES;MODULEPATH=/usr/share/modules/versions:/usr/Modules/\$MODULE_VERSION/modulefiles:/usr/share/Modules/modulefiles:/opt/linux/centos/7.x/x86_64/modules:/opt/linux/centos/7.x/x86_64/profiles ;export MODULEPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/scripts:/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/bin:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/python/3.6.0:/opt/linux/centos/7.x/x86_64/modules/hmmer/3.1b2:/opt/linux/centos/7.x/x86_64/modules/lp_solve/5.5:/opt/linux/centos/7.x/x86_64/modules/bamtools/2.4.0:/opt/linux/centos/7.x/x86_64/modules/augustus/3.3:/opt/linux/centos/7.x/x86_64/modules/busco/3.0.2 ;export _LMFILES_;
+module load ncbi-blast/2.2.30+
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:python/3.6.0:hmmer/3.1b2:lp_solve/5.5:bamtools/2.4.0:augustus/3.3:busco/3.0.2:ncbi-blast/2.2.30+ ;export LOADEDMODULES;MODULEPATH=/usr/share/Modules:/usr/share/modules/versions:/usr/Modules/\$MODULE_VERSION/modulefiles:/usr/share/Modules/modulefiles:/opt/linux/centos/7.x/x86_64/modules:/opt/linux/centos/7.x/x86_64/profiles ;export MODULEPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/ncbi-blast/2.2.30+/bin:/opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/augustus/3.3/scripts:/opt/linux/centos/7.x/x86_64/pkgs/bamtools/2.4.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/hmmer/3.1b2/bin:/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/python/3.6.0:/opt/linux/centos/7.x/x86_64/modules/hmmer/3.1b2:/opt/linux/centos/7.x/x86_64/modules/lp_solve/5.5:/opt/linux/centos/7.x/x86_64/modules/bamtools/2.4.0:/opt/linux/centos/7.x/x86_64/modules/augustus/3.3:/opt/linux/centos/7.x/x86_64/modules/busco/3.0.2:/opt/linux/centos/7.x/x86_64/modules/ncbi-blast/2.2.30+ ;export _LMFILES_;
+ASSEM=Dstr_v1.0
+ASSEMPATH=/rhome/arajewski/bigdata/Datura/3_Flye/assembly.fasta
+
+#BUSCO also needs augustus, and because of the cluster environment I have to install it separately
+export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/bin:$PATH"
+export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/scripts:$PATH"
+export AUGUSTUS_CONFIG_PATH="/rhome/arajewski/bigdata/Datura/software/augustus/config/"
+
+#I really don't like this sincle core blast, but i can't get it to run correctly otherwise.
+#also remove the -r flag if you're starting fresh
+run_BUSCO.py \
+    -m genome \
+    -c $SLURM_NTASKS \
+    -i $ASSEMPATH \
+    -o $ASSEM \
+    -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ \
+    -r \
+    --blast_single_core
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 09/24/2019 18:23:20 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/3_Flye/assembly.fasta -o Dstr_v1.0 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 16 -sp arabidopsis
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+WARNING	Restarting an uncompleted run
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	Phase 1 was already completed.
+INFO	Results:
+INFO	C:83.0%[S:80.4%,D:2.6%],F:1.4%,M:15.6%,n:1440
+INFO	1195 Complete BUSCOs (C)
+INFO	1158 Complete and single-copy BUSCOs (S)
+INFO	37 Complete and duplicated BUSCOs (D)
+INFO	20 Fragmented BUSCOs (F)
+INFO	225 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	****** Phase 2 of 2, predictions using species specific training ******
+INFO	****** Step 2/3, current time: 09/24/2019 18:23:54 ******
+INFO	Training Augustus using Single-Copy Complete BUSCOs:
+INFO	Converting predicted genes to short genbank files at 09/24/2019 18:23:54...
+INFO	All files converted to short genbank files, now running the training scripts at 09/24/2019 18:44:36...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Re-running Augustus with the new metaparameters, number of target BUSCOs: 245
+INFO	[augustus]	34 of 336 task(s) completed at 09/24/2019 18:45:38
+INFO	[augustus]	68 of 336 task(s) completed at 09/24/2019 18:46:02
+INFO	[augustus]	101 of 336 task(s) completed at 09/24/2019 18:46:30
+INFO	[augustus]	135 of 336 task(s) completed at 09/24/2019 18:46:58
+INFO	[augustus]	169 of 336 task(s) completed at 09/24/2019 18:47:34
+INFO	[augustus]	202 of 336 task(s) completed at 09/24/2019 18:48:05
+INFO	[augustus]	236 of 336 task(s) completed at 09/24/2019 18:48:39
+INFO	[augustus]	269 of 336 task(s) completed at 09/24/2019 18:49:06
+INFO	[augustus]	303 of 336 task(s) completed at 09/24/2019 18:49:46
+INFO	[augustus]	336 of 336 task(s) completed at 09/24/2019 18:50:41
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 09/24/2019 18:50:54 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	34 of 336 task(s) completed at 09/24/2019 18:50:54
+INFO	[hmmsearch]	68 of 336 task(s) completed at 09/24/2019 18:50:55
+INFO	[hmmsearch]	101 of 336 task(s) completed at 09/24/2019 18:50:56
+INFO	[hmmsearch]	135 of 336 task(s) completed at 09/24/2019 18:50:57
+INFO	[hmmsearch]	169 of 336 task(s) completed at 09/24/2019 18:50:57
+INFO	[hmmsearch]	202 of 336 task(s) completed at 09/24/2019 18:50:57
+INFO	[hmmsearch]	236 of 336 task(s) completed at 09/24/2019 18:50:58
+INFO	[hmmsearch]	269 of 336 task(s) completed at 09/24/2019 18:50:58
+INFO	[hmmsearch]	303 of 336 task(s) completed at 09/24/2019 18:50:59
+INFO	[hmmsearch]	336 of 336 task(s) completed at 09/24/2019 18:50:59
+INFO	Results:
+INFO	C:84.7%[S:82.1%,D:2.6%],F:1.0%,M:14.3%,n:1440
+INFO	1220 Complete BUSCOs (C)
+INFO	1182 Complete and single-copy BUSCOs (S)
+INFO	38 Complete and duplicated BUSCOs (D)
+INFO	15 Fragmented BUSCOs (F)
+INFO	205 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 1703.6467261314392 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Datura/run_Dstr_v1.0/
+
+
+scontrol show job $SLURM_JOB_ID
+JobId=230519 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100468 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:28:30 TimeLimit=6-00:00:00 TimeMin=N/A
+   SubmitTime=2019-09-24T18:23:12 EligibleTime=2019-09-24T18:23:12
+   AccrueTime=2019-09-24T18:23:12
+   StartTime=2019-09-24T18:23:13 EndTime=2019-09-30T18:23:13 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-09-24T18:23:13
+   Partition=highmem AllocNode:Sid=parrot.ib.hpcc.ucr.edu:1050
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h02
+   BatchHost=h02
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura
+   StdErr=/bigdata/littlab/arajewski/Datura/./history/4a_BUSCO-230519.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/./history/4a_BUSCO-230519.out
+   Power=
+

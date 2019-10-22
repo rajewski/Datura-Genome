@@ -1,0 +1,222 @@
+
+#get my modules right
+module unload miniconda2
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27 ;export LOADEDMODULES;PATH=/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27 ;export _LMFILES_;
+module load miniconda3
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31 ;export _LMFILES_;
+module load SPAdes/3.13.1 # consider 3.10.1?
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31:SPAdes/3.13.1 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31:/opt/linux/centos/7.x/x86_64/modules/SPAdes/3.13.1 ;export _LMFILES_;
+module load pilon
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31:SPAdes/3.13.1:pilon/1.22 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22:/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;PILON=/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22/pilon-1.22.jar ;export PILON;PILONDIR=/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22 ;export PILONDIR;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31:/opt/linux/centos/7.x/x86_64/modules/SPAdes/3.13.1:/opt/linux/centos/7.x/x86_64/modules/pilon/1.22 ;export _LMFILES_;
+module load samtools/1.9
+/usr/bin/modulecmd bash $*
+CPATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/include:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/include:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/include:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/include:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/include/ggobi:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/include:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/include ;export CPATH;LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/lib:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/lib:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/lib64:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/lib:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib/openmpi:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/lib ;export LD_LIBRARY_PATH;LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/lib:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/lib:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/lib64:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib ;export LIBRARY_PATH;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31:SPAdes/3.13.1:pilon/1.22:htslib/1.9:samtools/1.9 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/share/man:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/share/man:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/share/man:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22:/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;SAMTOOLS_PATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin ;export SAMTOOLS_PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31:/opt/linux/centos/7.x/x86_64/modules/SPAdes/3.13.1:/opt/linux/centos/7.x/x86_64/modules/pilon/1.22:/opt/linux/centos/7.x/x86_64/modules/htslib/1.9:/opt/linux/centos/7.x/x86_64/modules/samtools/1.9 ;export _LMFILES_;
+module load ncbi-blast/2.2.30+
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31:SPAdes/3.13.1:pilon/1.22:htslib/1.9:samtools/1.9:ncbi-blast/2.2.30+ ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/ncbi-blast/2.2.30+/bin:/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22:/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31:/opt/linux/centos/7.x/x86_64/modules/SPAdes/3.13.1:/opt/linux/centos/7.x/x86_64/modules/pilon/1.22:/opt/linux/centos/7.x/x86_64/modules/htslib/1.9:/opt/linux/centos/7.x/x86_64/modules/samtools/1.9:/opt/linux/centos/7.x/x86_64/modules/ncbi-blast/2.2.30+ ;export _LMFILES_;
+module load racon/1.3.3
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31:SPAdes/3.13.1:pilon/1.22:htslib/1.9:samtools/1.9:ncbi-blast/2.2.30+:racon/1.3.3 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/racon/1.3.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/ncbi-blast/2.2.30+/bin:/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22:/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31:/opt/linux/centos/7.x/x86_64/modules/SPAdes/3.13.1:/opt/linux/centos/7.x/x86_64/modules/pilon/1.22:/opt/linux/centos/7.x/x86_64/modules/htslib/1.9:/opt/linux/centos/7.x/x86_64/modules/samtools/1.9:/opt/linux/centos/7.x/x86_64/modules/ncbi-blast/2.2.30+:/opt/linux/centos/7.x/x86_64/modules/racon/1.3.3 ;export _LMFILES_;
+module load bowtie2/2.3.4.1
+/usr/bin/modulecmd bash $*
+source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/bin/compilervars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/bin/iccvars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/bin/ifortvars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.sh intel64; INTEL_LICENSE_FILE=28519@intel-lic ;export INTEL_LICENSE_FILE;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:extra/1:GCCcore/6.3.0:binutils/2.27-GCCcore-6.3.0:GCC/6.3.0-2.27:miniconda3/4.3.31:SPAdes/3.13.1:pilon/1.22:htslib/1.9:samtools/1.9:ncbi-blast/2.2.30+:racon/1.3.3:intel/2018:bowtie2/2.3.4.1 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/bowtie2/2.3.4.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/bowtie2/2.3.4.1/scripts:/opt/linux/centos/7.x/x86_64/pkgs/racon/1.3.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/ncbi-blast/2.2.30+/bin:/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/pilon/1.22:/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/bigdata/Datura/software/Unicycler/:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/binutils/2.27-GCCcore-6.3.0/bin:/opt/linux/centos/7.x/x86_64/easybuild/pkgs/GCCcore/6.3.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/extra/1:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCCcore/6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/binutils/2.27-GCCcore-6.3.0:/opt/linux/centos/7.x/x86_64/pkgs/../easybuild/modules/all/GCC/6.3.0-2.27:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31:/opt/linux/centos/7.x/x86_64/modules/SPAdes/3.13.1:/opt/linux/centos/7.x/x86_64/modules/pilon/1.22:/opt/linux/centos/7.x/x86_64/modules/htslib/1.9:/opt/linux/centos/7.x/x86_64/modules/samtools/1.9:/opt/linux/centos/7.x/x86_64/modules/ncbi-blast/2.2.30+:/opt/linux/centos/7.x/x86_64/modules/racon/1.3.3:/opt/linux/centos/7.x/x86_64/modules/intel/2018:/opt/linux/centos/7.x/x86_64/modules/bowtie2/2.3.4.1 ;export _LMFILES_;
+#!/bin/sh
+#===============================================================================
+# Copyright 1985-2017 Intel Corporation All Rights Reserved.
+#
+# The source code,  information  and material  ("Material") contained  herein is
+# owned by Intel Corporation or its  suppliers or licensors,  and  title to such
+# Material remains with Intel  Corporation or its  suppliers or  licensors.  The
+# Material  contains  proprietary  information  of  Intel or  its suppliers  and
+# licensors.  The Material is protected by  worldwide copyright  laws and treaty
+# provisions.  No part  of  the  Material   may  be  used,  copied,  reproduced,
+# modified, published,  uploaded, posted, transmitted,  distributed or disclosed
+# in any way without Intel's prior express written permission.  No license under
+# any patent,  copyright or other  intellectual property rights  in the Material
+# is granted to  or  conferred  upon  you,  either   expressly,  by implication,
+# inducement,  estoppel  or  otherwise.  Any  license   under such  intellectual
+# property rights must be express and approved by Intel in writing.
+#
+# Unless otherwise agreed by Intel in writing,  you may not remove or alter this
+# notice or  any  other  notice   embedded  in  Materials  by  Intel  or Intel's
+# suppliers or licensors in any way.
+#===============================================================================
+
+PROD_DIR="/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018/linux"
+
+INTEL_TARGET_ARCH=
+INTEL_TARGET_PLATFORM=linux
+
+COMPILERVARS_ARGV=$#
+if [ $# -eq 0 ]; then
+  if [ "$COMPILERVARS_ARCHITECTURE" != '' ]; then
+    INTEL_TARGET_ARCH=$COMPILERVARS_ARCHITECTURE
+  fi
+  if [ "$COMPILERVARS_PLATFORM" != '' ]; then
+    INTEL_TARGET_PLATFORM=$COMPILERVARS_PLATFORM
+  fi
+fi
+
+while [ $# -gt 0 ]
+do
+opt="$1"
+case $opt in 
+  -arch)
+  shift
+  INTEL_TARGET_ARCH="$1"
+  shift
+  ;;
+  -platform)
+  shift
+  INTEL_TARGET_PLATFORM="$1"
+  shift
+  ;; 
+  *)
+  INTEL_TARGET_ARCH="$1"
+  shift
+  ;;
+esac
+done
+
+if [ "$INTEL_TARGET_ARCH" != "ia32" -a "$INTEL_TARGET_ARCH" != "intel64" -o \
+     "$INTEL_TARGET_PLATFORM" != "android" -a "$INTEL_TARGET_PLATFORM" != "linux" -a "$INTEL_TARGET_PLATFORM" != "mac" ]; then
+
+  echo "compilervars.sh [-arch] <arch> [-platform <platform>]"
+  echo ""
+  echo "  <arch> must be one of the following:"
+  echo "      ia32           : Set up for IA-32 target."
+  echo "      intel64        : Set up for Intel(R)64 target."
+  echo "  <platform> must be of the following:"
+  if [ "`uname`" = "Darwin" ]; then
+    echo "      linux          : Set to Linux* target."
+    echo "      mac            : Set to macOS* target.(default)"
+  else
+    echo "      android        : Set to Android* target."
+    echo "      linux          : Set to Linux* target.(default)"
+  fi
+  echo ""
+  echo "If the arguments to the sourced script are ignored (consult docs"
+  echo "for your shell) the alternative way to specify target is environment"
+  echo "variables COMPILERVARS_ARCHITECTURE to pass <arch> to the script"
+  echo "and COMPILERVARS_PLATFORM to pass <platform>"
+
+  return 1
+fi
+
+if [ "$INTEL_TARGET_PLATFORM" = "mac" ]; then
+  INTEL_TARGET_PLATFORM="linux"
+fi
+
+if [ $COMPILERVARS_ARGV -eq 0 ] ; then
+  #pass default values via COMPILERVARS_*
+  if [ "$COMPILERVARS_ARCHITECTURE" = '' ]; then
+    COMPILERVARS_ARCHITECTURE=$INTEL_TARGET_ARCH
+  fi
+  if [ "$COMPILERVARS_PLATFORM" = '' ]; then
+    COMPILERVARS_PLATFORM=$INTEL_TARGET_PLATFORM
+  fi
+  INTEL_TARGET_ARCH=
+  INTEL_TARGET_PLATFORM=
+fi
+
+if [ -e "$PROD_DIR/daal/bin/daalvars.sh" ]; then
+   . "$PROD_DIR/daal/bin/daalvars.sh" $INTEL_TARGET_ARCH 
+fi
+#!/bin/bash
+#===============================================================================
+# Copyright 2014-2017 Intel Corporation
+# All Rights Reserved.
+#
+# If this  software was obtained  under the  Intel Simplified  Software License,
+# the following terms apply:
+#
+# The source code,  information  and material  ("Material") contained  herein is
+# owned by Intel Corporation or its  suppliers or licensors,  and  title to such
+# Material remains with Intel  Corporation or its  suppliers or  licensors.  The
+# Material  contains  proprietary  information  of  Intel or  its suppliers  and
+# licensors.  The Material is protected by  worldwide copyright  laws and treaty
+# provisions.  No part  of  the  Material   may  be  used,  copied,  reproduced,
+# modified, published,  uploaded, posted, transmitted,  distributed or disclosed
+# in any way without Intel's prior express written permission.  No license under
+# any patent,  copyright or other  intellectual property rights  in the Material
+# is granted to  or  conferred  upon  you,  either   expressly,  by implication,
+# inducement,  estoppel  or  otherwise.  Any  license   under such  intellectual
+# property rights must be express and approved by Intel in writing.
+#
+# Unless otherwise agreed by Intel in writing,  you may not remove or alter this
+# notice or  any  other  notice   embedded  in  Materials  by  Intel  or Intel's
+# suppliers or licensors in any way.
+#
+#
+# If this  software  was obtained  under the  Apache License,  Version  2.0 (the
+# "License"), the following terms apply:
+#
+# You may  not use this  file except  in compliance  with  the License.  You may
+# obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+#
+#
+# Unless  required  by   applicable  law  or  agreed  to  in  writing,  software
+# distributed under the License  is distributed  on an  "AS IS"  BASIS,  WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#
+# See the   License  for the   specific  language   governing   permissions  and
+# limitations under the License.
+#===============================================================================
+
+daal_help() {
+    echo "Syntax: source $__daal_tmp_script_name <arch>"
+    echo "Where <arch> is one of:"
+    echo "  ia32      - setup environment for IA-32 architecture"
+    echo "  intel64   - setup environment for Intel(R) 64 architecture"
+    echo ""
+    echo "If the arguments to the sourced script are ignored (consult docs for"
+    echo "your shell) the alternative way to specify target is environment"
+    echo "variables COMPILERVARS_ARCHITECTURE or DAALVARS_ARCHITECTURE to pass"
+    echo "<arch> to the script."
+    echo ""
+}
+
+set_daal_env() {
+    __daal_tmp_dir="/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux"
+    __daal_tmp_dir=$__daal_tmp_dir/daal
+    if [ ! -d $__daal_tmp_dir ]; then
+        __daal_tmp_dir=$(command -p cd $(dirname -- "${BASH_SOURCE}")/..; pwd)
+    fi
+
+    __daal_tmp_script_name="daalvars.sh"
+    __daal_tmp_target_arch=""
+
+    if [ -z "$1" ] ; then
+        if [ -n "$DAALVARS_ARCHITECTURE" ] ; then
+            __daal_tmp_target_arch="$DAALVARS_ARCHITECTURE"
+        elif [ -n "$COMPILERVARS_ARCHITECTURE" ] ; then
+            __daal_tmp_target_arch="$COMPILERVARS_ARCHITECTURE"
+        fi
+    else
+        __daal_tmp_target_arch=$1
+    fi
+
+    case $__daal_tmp_target_arch in
+        ia32|intel64)
+            export DAALROOT=$__daal_tmp_dir
+            export CPATH=$__daal_tmp_dir/include${CPATH+:${CPATH}}
+            if [ -z "$TBBROOT" ]; then
+                export LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin:$__daal_tmp_dir/../tbb/lib/${__daal_tmp_target_arch}_lin/gcc4.4${LIBRARY_PATH+:${LIBRARY_PATH}}
+                export LD_LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin:$__daal_tmp_dir/../tbb/lib/${__daal_tmp_target_arch}_lin/gcc4.4${LD_LIBRARY_PATH+:${LD_LIBRARY_PATH}}
+            else
+                export LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin${LIBRARY_PATH+:${LIBRARY_PATH}}
+                export LD_LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin${LD_LIBRARY_PATH+:${LD_LIBRARY_PATH}}
+            fi
+            export CLASSPATH=$__daal_tmp_dir/lib/daal.jar${CLASSPATH+:${CLASSPATH}}
+            ;;
+        *) daal_help
+            ;;
+    esac
+}
+
+set_daal_env "$@"
+/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018/linux/daal/bin/daalvars.sh: line 79: TBBROOT: unbound variable

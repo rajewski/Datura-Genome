@@ -1,0 +1,230 @@
+
+module load trimmomatic/0.36
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+module load bowtie/1.2.2
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/bowtie/1.2.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+module load bowtie2/2.3.4.1
+/usr/bin/modulecmd bash $*
+source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/bin/compilervars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/bin/iccvars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/bin/ifortvars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mkl/bin/mklvars.sh intel64; source /opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux/mpi/intel64/bin/mpivars.sh intel64; PATH=/opt/linux/centos/7.x/x86_64/pkgs/bowtie2/2.3.4.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/bowtie2/2.3.4.1/scripts:/opt/linux/centos/7.x/x86_64/pkgs/bowtie/1.2.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+#!/bin/sh
+#===============================================================================
+# Copyright 1985-2017 Intel Corporation All Rights Reserved.
+#
+# The source code,  information  and material  ("Material") contained  herein is
+# owned by Intel Corporation or its  suppliers or licensors,  and  title to such
+# Material remains with Intel  Corporation or its  suppliers or  licensors.  The
+# Material  contains  proprietary  information  of  Intel or  its suppliers  and
+# licensors.  The Material is protected by  worldwide copyright  laws and treaty
+# provisions.  No part  of  the  Material   may  be  used,  copied,  reproduced,
+# modified, published,  uploaded, posted, transmitted,  distributed or disclosed
+# in any way without Intel's prior express written permission.  No license under
+# any patent,  copyright or other  intellectual property rights  in the Material
+# is granted to  or  conferred  upon  you,  either   expressly,  by implication,
+# inducement,  estoppel  or  otherwise.  Any  license   under such  intellectual
+# property rights must be express and approved by Intel in writing.
+#
+# Unless otherwise agreed by Intel in writing,  you may not remove or alter this
+# notice or  any  other  notice   embedded  in  Materials  by  Intel  or Intel's
+# suppliers or licensors in any way.
+#===============================================================================
+
+PROD_DIR="/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018/linux"
+
+INTEL_TARGET_ARCH=
+INTEL_TARGET_PLATFORM=linux
+
+COMPILERVARS_ARGV=$#
+if [ $# -eq 0 ]; then
+  if [ "$COMPILERVARS_ARCHITECTURE" != '' ]; then
+    INTEL_TARGET_ARCH=$COMPILERVARS_ARCHITECTURE
+  fi
+  if [ "$COMPILERVARS_PLATFORM" != '' ]; then
+    INTEL_TARGET_PLATFORM=$COMPILERVARS_PLATFORM
+  fi
+fi
+
+while [ $# -gt 0 ]
+do
+opt="$1"
+case $opt in 
+  -arch)
+  shift
+  INTEL_TARGET_ARCH="$1"
+  shift
+  ;;
+  -platform)
+  shift
+  INTEL_TARGET_PLATFORM="$1"
+  shift
+  ;; 
+  *)
+  INTEL_TARGET_ARCH="$1"
+  shift
+  ;;
+esac
+done
+
+if [ "$INTEL_TARGET_ARCH" != "ia32" -a "$INTEL_TARGET_ARCH" != "intel64" -o \
+     "$INTEL_TARGET_PLATFORM" != "android" -a "$INTEL_TARGET_PLATFORM" != "linux" -a "$INTEL_TARGET_PLATFORM" != "mac" ]; then
+
+  echo "compilervars.sh [-arch] <arch> [-platform <platform>]"
+  echo ""
+  echo "  <arch> must be one of the following:"
+  echo "      ia32           : Set up for IA-32 target."
+  echo "      intel64        : Set up for Intel(R)64 target."
+  echo "  <platform> must be of the following:"
+  if [ "`uname`" = "Darwin" ]; then
+    echo "      linux          : Set to Linux* target."
+    echo "      mac            : Set to macOS* target.(default)"
+  else
+    echo "      android        : Set to Android* target."
+    echo "      linux          : Set to Linux* target.(default)"
+  fi
+  echo ""
+  echo "If the arguments to the sourced script are ignored (consult docs"
+  echo "for your shell) the alternative way to specify target is environment"
+  echo "variables COMPILERVARS_ARCHITECTURE to pass <arch> to the script"
+  echo "and COMPILERVARS_PLATFORM to pass <platform>"
+
+  return 1
+fi
+
+if [ "$INTEL_TARGET_PLATFORM" = "mac" ]; then
+  INTEL_TARGET_PLATFORM="linux"
+fi
+
+if [ $COMPILERVARS_ARGV -eq 0 ] ; then
+  #pass default values via COMPILERVARS_*
+  if [ "$COMPILERVARS_ARCHITECTURE" = '' ]; then
+    COMPILERVARS_ARCHITECTURE=$INTEL_TARGET_ARCH
+  fi
+  if [ "$COMPILERVARS_PLATFORM" = '' ]; then
+    COMPILERVARS_PLATFORM=$INTEL_TARGET_PLATFORM
+  fi
+  INTEL_TARGET_ARCH=
+  INTEL_TARGET_PLATFORM=
+fi
+
+if [ -e "$PROD_DIR/daal/bin/daalvars.sh" ]; then
+   . "$PROD_DIR/daal/bin/daalvars.sh" $INTEL_TARGET_ARCH 
+fi
+#!/bin/bash
+#===============================================================================
+# Copyright 2014-2017 Intel Corporation
+# All Rights Reserved.
+#
+# If this  software was obtained  under the  Intel Simplified  Software License,
+# the following terms apply:
+#
+# The source code,  information  and material  ("Material") contained  herein is
+# owned by Intel Corporation or its  suppliers or licensors,  and  title to such
+# Material remains with Intel  Corporation or its  suppliers or  licensors.  The
+# Material  contains  proprietary  information  of  Intel or  its suppliers  and
+# licensors.  The Material is protected by  worldwide copyright  laws and treaty
+# provisions.  No part  of  the  Material   may  be  used,  copied,  reproduced,
+# modified, published,  uploaded, posted, transmitted,  distributed or disclosed
+# in any way without Intel's prior express written permission.  No license under
+# any patent,  copyright or other  intellectual property rights  in the Material
+# is granted to  or  conferred  upon  you,  either   expressly,  by implication,
+# inducement,  estoppel  or  otherwise.  Any  license   under such  intellectual
+# property rights must be express and approved by Intel in writing.
+#
+# Unless otherwise agreed by Intel in writing,  you may not remove or alter this
+# notice or  any  other  notice   embedded  in  Materials  by  Intel  or Intel's
+# suppliers or licensors in any way.
+#
+#
+# If this  software  was obtained  under the  Apache License,  Version  2.0 (the
+# "License"), the following terms apply:
+#
+# You may  not use this  file except  in compliance  with  the License.  You may
+# obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+#
+#
+# Unless  required  by   applicable  law  or  agreed  to  in  writing,  software
+# distributed under the License  is distributed  on an  "AS IS"  BASIS,  WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#
+# See the   License  for the   specific  language   governing   permissions  and
+# limitations under the License.
+#===============================================================================
+
+daal_help() {
+    echo "Syntax: source $__daal_tmp_script_name <arch>"
+    echo "Where <arch> is one of:"
+    echo "  ia32      - setup environment for IA-32 architecture"
+    echo "  intel64   - setup environment for Intel(R) 64 architecture"
+    echo ""
+    echo "If the arguments to the sourced script are ignored (consult docs for"
+    echo "your shell) the alternative way to specify target is environment"
+    echo "variables COMPILERVARS_ARCHITECTURE or DAALVARS_ARCHITECTURE to pass"
+    echo "<arch> to the script."
+    echo ""
+}
+
+set_daal_env() {
+    __daal_tmp_dir="/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018.0.128/linux"
+    __daal_tmp_dir=$__daal_tmp_dir/daal
+    if [ ! -d $__daal_tmp_dir ]; then
+        __daal_tmp_dir=$(command -p cd $(dirname -- "${BASH_SOURCE}")/..; pwd)
+    fi
+
+    __daal_tmp_script_name="daalvars.sh"
+    __daal_tmp_target_arch=""
+
+    if [ -z "$1" ] ; then
+        if [ -n "$DAALVARS_ARCHITECTURE" ] ; then
+            __daal_tmp_target_arch="$DAALVARS_ARCHITECTURE"
+        elif [ -n "$COMPILERVARS_ARCHITECTURE" ] ; then
+            __daal_tmp_target_arch="$COMPILERVARS_ARCHITECTURE"
+        fi
+    else
+        __daal_tmp_target_arch=$1
+    fi
+
+    case $__daal_tmp_target_arch in
+        ia32|intel64)
+            export DAALROOT=$__daal_tmp_dir
+            export CPATH=$__daal_tmp_dir/include${CPATH+:${CPATH}}
+            if [ -z "$TBBROOT" ]; then
+                export LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin:$__daal_tmp_dir/../tbb/lib/${__daal_tmp_target_arch}_lin/gcc4.4${LIBRARY_PATH+:${LIBRARY_PATH}}
+                export LD_LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin:$__daal_tmp_dir/../tbb/lib/${__daal_tmp_target_arch}_lin/gcc4.4${LD_LIBRARY_PATH+:${LD_LIBRARY_PATH}}
+            else
+                export LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin${LIBRARY_PATH+:${LIBRARY_PATH}}
+                export LD_LIBRARY_PATH=$__daal_tmp_dir/lib/${__daal_tmp_target_arch}_lin${LD_LIBRARY_PATH+:${LD_LIBRARY_PATH}}
+            fi
+            export CLASSPATH=$__daal_tmp_dir/lib/daal.jar${CLASSPATH+:${CLASSPATH}}
+            ;;
+        *) daal_help
+            ;;
+    esac
+}
+
+set_daal_env "$@"
+if [ -e "$PROD_DIR/../../debugger_2018/bin/debuggervars.sh" ]; then
+  . "$PROD_DIR/../../debugger_2018/bin/debuggervars.sh" $INTEL_TARGET_ARCH 
+fi
+#!/bin/bash
+#
+# Copyright (C) 2013-2017 Intel Corporation. All rights reserved.
+#
+# The information and source code contained herein is the exclusive property
+# of Intel Corporation and may not be disclosed, examined, or reproduced in
+# whole or in part without explicit written authorization from the Company.
+#
+
+INST="/opt/linux/centos/7.x/x86_64/pkgs/intel/2018"
+
+DEBUGGERDIR="${INST}/debugger_2018"
+
+if [ "$LC_CTYPE" ]
+    then
+        LANGUAGE_TERRITORY=`echo $LC_CTYPE | sed s/\\\\..\\*//`
+    else  if [ "$LANG" ]
+    then
+        LANGUAGE_TERRITORY=`echo $LANG | sed s/\\\\..\\*//`
+    fi
+fi
+/opt/linux/centos/7.x/x86_64/pkgs/intel/2018/compilers_and_libraries_2018/linux/../../debugger_2018/bin/debuggervars.sh: line 14: LC_CTYPE: unbound variable

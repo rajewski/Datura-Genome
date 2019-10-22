@@ -1,0 +1,93 @@
+
+if [ ! -e 'kmer_counts.kmc_suf' ]; then
+    echo $(date): Running KMC first.
+    #Lets run KMC first because it produces a sorted kmer histogram that should be 
+    #easier and more memory effective for smudgeplot to use
+    module load KMC/3.1.1
+    mkdir -p tmp
+    ls ../1_QCQA/*.fq.gz > FILES
+    #counting kmer coverages between 1 and 10000x
+    kmc -k31 -t$SLURM_NTASKS -m$((SLURM_MEM_PER_NODE/1024)) -ci1 -cs10000 @FILES kmer_counts tmp
+    kmc_tools transform kmer_counts histogram kmer_k31.hist -cx10000
+    echo $(date): Done with KMC.
+else
+    echo $(date): KMC has already been run, proceeding to smudgplot
+fi
+Thu Sep 26 13:56:01 PDT 2019: KMC has already been run, proceeding to smudgplot
+
+#You must have smudgeplot installed. I am using v 0.2.1
+export PATH="/rhome/arajewski/software:$PATH"
+
+module load miniconda3
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:miniconda3/4.3.31 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/software:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/miniconda3/4.3.31 ;export _LMFILES_;
+if [ ! -e 'kmer_k31.dump' ]; then
+    echo $(date): Creating kmer dump file.
+    L=$(smudgeplot.py cutoff kmer_k31.hist L)
+    U=$(smudgeplot.py cutoff kmer_k31.hist U)
+    echo $L $U # these need to be sane values
+    # L should be like 20 - 200
+    # U should be like 500 - 3000
+    module load KMC/3.1.1
+    kmc_tools transform kmer_counts -ci$L -cx$U dump -s kmer_k31.dump
+    echo $(date): Done.
+else
+    echo $(date): Kmer dump file already created.
+fi
+Thu Sep 26 13:56:01 PDT 2019: Kmer dump file already created.
+
+if [ ! -e 'kmer_pairs_coverages.tsv' ]; then
+    echo $(date): Running Smudgeplot
+    smudgeplot.py hetkmers --middle -o kmer_pairs kmer_k31.dump
+    echo $(dte): Done.
+else
+    echo $(date): Smudgeplt hetkmers already completed.
+fi
+Thu Sep 26 13:56:01 PDT 2019: Smudgeplt hetkmers already completed.
+
+#if []; then
+    echo $(date): Making smudgeplot itself.
+Thu Sep 26 13:56:01 PDT 2019: Making smudgeplot itself.
+    smudgeplot.py plot -k 31 kmer_pairs_coverages.tsv
+Error in library("argparse") : there is no package called 'argparse'
+Calls: suppressPackageStartupMessages -> withCallingHandlers -> library
+Execution halted
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "kmer_pairs_coverages.tsv" -o "smudgeplot" -k 31
+
+Done!
+    echo $(date): Done
+Thu Sep 26 13:56:16 PDT 2019: Done
+#else
+#    echo $(date): Smudgeplot already made.
+#fi
+
+scontrol show job $SLURM_JOB_ID
+JobId=257316 JobName=smudgeplot.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100001 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:16 TimeLimit=3-00:00:00 TimeMin=N/A
+   SubmitTime=2019-09-26T13:55:59 EligibleTime=2019-09-26T13:55:59
+   AccrueTime=2019-09-26T13:55:59
+   StartTime=2019-09-26T13:56:00 EndTime=2019-09-29T13:56:00 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-09-26T13:56:00
+   Partition=highmem AllocNode:Sid=parrot.ib.hpcc.ucr.edu:30871
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h01
+   BatchHost=h01
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/GenomeSize/smudgeplot.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/GenomeSize
+   StdErr=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-257316.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-257316.out
+   Power=
+

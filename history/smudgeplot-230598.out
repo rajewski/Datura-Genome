@@ -1,0 +1,6 @@
+
+#You must have smudgeplot installed. I am using v 0.2.1
+export PATH="/rhome/arajewski/software:$PATH"
+
+smudgeplot.py hetkmers -o /rhome/arajewski/bigdata/Datura/GenomeSize/smudgeplot_kmer_pairs /rhome/arajewski/bigdata/Datura/GenomeSize/Results_AllTrim/Tmp31merDump.fasta
+/usr/bin/env: python3: No such file or directory

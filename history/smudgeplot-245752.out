@@ -1,0 +1,57 @@
+
+if [ ! -e 'kmer_counts.kmc_suf' ]; then
+    echo $(date): Running KMC first.
+    #Lets run KMC first because it produces a sorted kmer histogram that should be 
+    #easier and more memory effective for smudgeplot to use
+    module load KMC/3.1.1
+    mkdir -p tmp
+    ls ../1_QCQA/*.fq.gz > FILES
+    #counting kmer coverages between 1 and 10000x
+    kmc -k31 -t$SLURM_NTASKS -m$((SLURM_MEM_PER_NODE/1024)) -ci1 -cs10000 @FILES kmer_counts tmp
+    kmc_tools transform kmer_counts histogram kmer_k31.hist -cx10000
+    echo $(date): Done with KMC.
+else
+    echo $(date): KMC has already been run, proceeding to smudgplot
+fi
+Wed Sep 25 22:51:23 PDT 2019: KMC has already been run, proceeding to smudgplot
+
+echo $(date): Running smudgeplot
+Wed Sep 25 22:51:23 PDT 2019: Running smudgeplot
+
+#You must have smudgeplot installed. I am using v 0.2.1
+export PATH="/rhome/arajewski/software:$PATH"
+
+module load miniconda3
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/software:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+L=$(smudgeplot.py cutoff kmer_k31.hist L)
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+U=$(smudgeplot.py cutoff kmer_k31.hist U)
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+echo $L $U # these need to be sane values
+10 890
+# L should be like 20 - 200
+# U should be like 500 - 3000
+module load KMC/3.1.1
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/KMC/3.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/rhome/arajewski/software:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+kmc_tools transform kmer_counts -ci$L -cx$U dump -s kmer_k31.dump
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 100% 
+smudgeplot.py hetkmers --middle -o kmer_pairs < kmer_k31.dump
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Traceback (most recent call last):
+  File "/rhome/arajewski/software/smudgeplot.py", line 309, in <module>
+    main()
+  File "/rhome/arajewski/software/smudgeplot.py", line 282, in main
+    middle_one_away(args)
+  File "/rhome/arajewski/software/smudgeplot.py", line 176, in middle_one_away
+    with open(args.infile.name) as dump_file:
+FileNotFoundError: [Errno 2] No such file or directory: '<stdin>'
