@@ -11,7 +11,6 @@ software/
 **.fa
 .rerun
 1_QCQA/Nanopore_Logs/
-2_Assemble/
 CA_dir.txt
 ESTIMATED_GENOME_SIZE.txt
 PLOIDY.txt
@@ -21,7 +20,7 @@ guillaumeKUnitigsAtLeast32bases_all.fasta
 guillaumeKUnitigsAtLeast32bases_all.jump.fasta
 k_u_hash_0
 meanAndStdevByPrefix.pe.txt
-mr.41.15.15.0.02.txt
+mr.*
 ont_25xlongest.fa
 pe.cor.fa
 pe.cor.tmp.log
@@ -31,3 +30,8 @@ super1.err
 superReadSequences.named.fasta
 work1/
 work1_mr/
+*.jf
+*.err
+*.spec
+.Rproj.user
+3_Flye/
