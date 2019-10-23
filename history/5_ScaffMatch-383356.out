@@ -1,0 +1,4 @@
+
+CommandNotFoundError: No command 'conda actiate'.
+Did you mean 'conda activate'?
+

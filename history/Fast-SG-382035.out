@@ -1,0 +1,6 @@
+Tue Oct 22 22:36:01 PDT 2019: Found index of /rhome/arajewski/bigdata/Datura/2_MaSuRCA333/flye/assembly.fasta.
+Tue Oct 22 22:36:01 PDT 2019: Large contigs already extracted to /rhome/arajewski/bigdata/Datura/2_MaSuRCA333/flye/assembly.fasta.2kb.fa
+Tue Oct 22 22:36:01 PDT 2019: ONT reads already renamed.
+make: *** [Dstr_v1.1.kmc.K22.txt] Error 1
+make: *** Deleting file `Dstr_v1.1.kmc.K22.txt'
+make failed 512 at /rhome/arajewski/bigdata/Datura/software/fastsg/FAST-SG.pl line 226.

@@ -1,0 +1,21 @@
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin/mpirun -np 4 ABYSS-P -k50 -q3    --coverage-hist=coverage.hist -s Dstr_v1.3_k50-bubbles.fa  -o Dstr_v1.3_k50-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+ABySS 2.0.2
+ABYSS-P -k50 -q3 --coverage-hist=coverage.hist -s Dstr_v1.3_k50-bubbles.fa -o Dstr_v1.3_k50-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+Running on 4 processors
+2: Running on host i39
+0: Running on host i39
+1: Running on host i39
+3: Running on host i39
+0: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq'...
+3: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq'...
+2: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq'...
+1: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq'...
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 33327 on node i39 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+make: *** [Dstr_v1.3_k50-1.fa] Error 137
+slurmstepd-i39: error: Detected 1 oom-kill event(s) in step 385105.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

@@ -1,0 +1,43 @@
+Running ScaffMatch
+2019-10-23 13:18:22,355 - INFO - **--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**
+2019-10-23 13:18:22,355 - INFO - Settings used for this run of ScaffMatch are:
+2019-10-23 13:18:22,355 - INFO -     scaff_dir  -- Dstr-K22
+2019-10-23 13:18:22,355 - INFO -     ctg_fasta  -- /rhome/arajewski/bigdata/Datura/2_MaSuRCA333/flye/assembly.fasta.2kb.fa
+2019-10-23 13:18:22,355 - INFO -     libraries  -- {1: {'std': 194, 'sam2': 'ultra_ont_raw.I2000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I2000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 1943}, 2: {'std': 397, 'sam2': 'ultra_ont_raw.I4000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I4000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 3970}, 3: {'std': 600, 'sam2': 'ultra_ont_raw.I6000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I6000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 5998}, 4: {'std': 803, 'sam2': 'ultra_ont_raw.I8000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I8000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 8025}, 5: {'std': 1005, 'sam2': 'ultra_ont_raw.I10000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I10000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 10053}, 6: {'std': 1208, 'sam2': 'ultra_ont_raw.I12000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I12000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 12082}, 7: {'std': 1411, 'sam2': 'ultra_ont_raw.I14000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I14000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 14111}, 8: {'std': 1614, 'sam2': 'ultra_ont_raw.I16000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I16000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 16141}, 9: {'std': 1817, 'sam2': 'ultra_ont_raw.I18000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I18000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 18172}, 10: {'std': 2020, 'sam2': 'ultra_ont_raw.I20000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I20000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 20202}, 11: {'std': 3036, 'sam2': 'ultra_ont_raw.I30000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I30000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 30359}, 12: {'std': 4050, 'sam2': 'ultra_ont_raw.I40000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I40000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 40497}, 13: {'std': 5068, 'sam2': 'ultra_ont_raw.I50000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I50000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 50681}, 14: {'std': 6092, 'sam2': 'ultra_ont_raw.I60000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I60000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 60923}}
+2019-10-23 13:18:22,355 - INFO -     bundle_threshold  -- 5
+2019-10-23 13:18:22,356 - INFO -     log_file  -- NONE
+2019-10-23 13:18:22,356 - INFO - Stage I: Construct scaffolding graph
+2019-10-23 13:43:20,507 - INFO - Scaffolding graph constructed: 1498.15095901
+2019-10-23 13:43:20,510 - INFO - Stage II: Performing matching heuristics (max_weight)
+2019-10-23 13:49:38,671 - INFO - Scaffolding done: 378.160712957
+2019-10-23 13:50:00,374 - INFO - Results written to the disk: 21.7021999359
+2019-10-23 13:50:00,374 - INFO - Overall time: 1898.01838207
+2019-10-23 13:50:00,374 - INFO - --**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--
+2019-10-23 13:50:00,460 - INFO - Done!
+JobId=384325 JobName=5_ScaffMatch.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:31:41 TimeLimit=20:00:00 TimeMin=N/A
+   SubmitTime=2019-10-23T13:18:18 EligibleTime=2019-10-23T13:18:18
+   AccrueTime=2019-10-23T13:18:18
+   StartTime=2019-10-23T13:18:19 EndTime=2019-10-24T09:18:19 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-23T13:18:19
+   Partition=highmem AllocNode:Sid=parrot.ib.hpcc.ucr.edu:39499
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h03
+   BatchHost=h03
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=101G,node=1,billing=26
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=101G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_Fast-SG/5_ScaffMatch.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_Fast-SG
+   StdErr=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-384325.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-384325.out
+   Power=
+
