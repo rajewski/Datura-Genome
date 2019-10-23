@@ -1,0 +1,7 @@
+Tue Oct 22 21:53:20 PDT 2019: indexing /rhome/arajewski/bigdata/Datura/2_MaSuRCA333/flye/assembly.fasta
+Tue Oct 22 21:53:26 PDT 2019: Finished.
+Tue Oct 22 21:53:26 PDT 2019: Extracting contigs larger than 2kb.
+Tue Oct 22 21:53:40 PDT 2019: Finished.
+Tue Oct 22 21:53:40 PDT 2019: Renaming ONT reads.
+Tue Oct 22 22:31:04 PDT 2019: Finished.
+/var/spool/slurmd/job381984/slurm_script: line 45: /rhome/bigdata/Datura/software/fastsg/FAST-SG.pl: No such file or directory

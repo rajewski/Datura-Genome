@@ -1,0 +1,19 @@
+make: Entering directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_58'
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin/mpirun -np 10 ABYSS-P -k58 -q3    --coverage-hist=coverage.hist -s Dstr_v1.3_k58-bubbles.fa  -o Dstr_v1.3_k58-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+ABySS 2.0.2
+ABYSS-P -k58 -q3 --coverage-hist=coverage.hist -s Dstr_v1.3_k58-bubbles.fa -o Dstr_v1.3_k58-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+Running on 10 processors
+1: Running on host h06
+3: Running on host h06
+5: Running on host h06
+7: Running on host h06
+9: Running on host h06
+0: Running on host h06
+2: Running on host h06
+4: Running on host h06
+8: Running on host h06
+6: Running on host h06
+0: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq'...
+2: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq'...
+3: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq'...
+1: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq'...

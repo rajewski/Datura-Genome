@@ -1,0 +1,29 @@
+Error: File ultra_ont_raw.I2000.FastSG_K22.fwd.sam does not exist!
+Run command 'scaffmatch -h' for detailed help.
+JobId=383282 JobName=5_ScaffMatch.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:01 TimeLimit=20:00:00 TimeMin=N/A
+   SubmitTime=2019-10-23T11:58:08 EligibleTime=2019-10-23T11:58:08
+   AccrueTime=2019-10-23T11:58:08
+   StartTime=2019-10-23T11:58:08 EndTime=2019-10-24T07:58:08 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-23T11:58:08
+   Partition=highmem AllocNode:Sid=parrot.ib.hpcc.ucr.edu:39499
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h03
+   BatchHost=h03
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=101G,node=1,billing=26
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=101G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_Fast-SG/5_ScaffMatch.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_Fast-SG
+   StdErr=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-383282.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-383282.out
+   Power=
+
