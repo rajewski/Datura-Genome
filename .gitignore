@@ -2,6 +2,9 @@
 **.fastq.gz
 **.fq.gz
 **.fq
+**.sam
+**.kmc_suf
+**.kmc_pre
 **~
 DNA-seq/
 RNA-seq/
@@ -35,3 +38,4 @@ work1_mr/
 *.spec
 .Rproj.user
 3_Flye/
+history/LINKS*.out

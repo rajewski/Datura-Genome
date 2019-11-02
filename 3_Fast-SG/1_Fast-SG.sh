@@ -8,9 +8,9 @@
 #SBATCH -o ../history/Fast-SG-%A.out
 set -eu
 
-#This will take as input the masruca/3.3.3 assembly with Flye, create aritficial large insert libraries from the nanopore data with Fast-SG and then scaffold
+#This will take as input the assembly, create aritficial large insert libraries from the nanopore data with Fast-SG
 module load KMC/3.1.1
-ASSEMBLY=/rhome/arajewski/bigdata/Datura/2_MaSuRCA333/flye/assembly.fasta
+ASSEMBLY=/rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa
 
 #Index assembly if necessary
 if [ ! -e $ASSEMBLY.fai ]; then
@@ -22,6 +22,7 @@ else
     echo $(date): Found index of $ASSEMBLY.
 fi
 
+#should really try without this step or with a lower threshold
 #Extracting only reads longer than 2kb
 if [ ! -e $ASSEMBLY.2kb.fa ]; then
     echo $(date): Extracting contigs larger than 2kb.
@@ -41,13 +42,13 @@ else
     echo $(date): ONT reads already renamed.
 fi
 
-#need to make tmp directory manually "Dstr_v1.1.kmctmp.K22"
-
+#need to make tmp directory manually "Dstr_v1.3_k101.kmctmp.K22"
+#consider with a different value for K
 /rhome/arajewski/bigdata/Datura/software/fastsg/FAST-SG.pl \
     -k 22 \
     -l ultra-long-conf.txt \
     -r $ASSEMBLY.2kb.fa \
-    -p Dstr_v1.1 \
+    -p Dstr_v1.3_k101 \
     -t $SLURM_NTASKS > Dstr_v1.1.fastsg.log
 
 scontrol show job $SLURM_JOB_ID
