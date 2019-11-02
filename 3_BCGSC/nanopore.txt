@@ -1,0 +1,1 @@
+Dstr.filt_q10_l500_crop50.fastq

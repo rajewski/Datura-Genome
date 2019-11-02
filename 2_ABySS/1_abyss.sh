@@ -1,11 +1,10 @@
 #!/bin/bash -l
-#SBATCH --ntasks=10
+#SBATCH --ntasks=32
 #SBATCH --nodes=1
-#SBATCH --mem=400G
-#SBATCH --time=20:00:00
+#SBATCH --mem=300G
+#SBATCH --time=3-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
-#SBATCH -p highmem
 #SBATCH -o ../history/1_abyss-%A_%a.out
 set -eu
 
@@ -13,6 +12,7 @@ set -eu
 #pass a kmer size with the array task id variable
 module load ABYSS/2.0.2
 
+mkdir -p k_$SLURM_ARRAY_TASK_ID
 abyss-pe \
     np=$SLURM_NTASKS \
     name=Dstr_v1.3_k$SLURM_ARRAY_TASK_ID \
