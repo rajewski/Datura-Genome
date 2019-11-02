@@ -17,3 +17,186 @@ Running on 10 processors
 2: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq'...
 3: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq'...
 1: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq'...
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq': discarded 472167 reads shorter than 58 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq': discarded 424 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq': discarded 21057421 reads shorter than 58 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq': discarded 3440 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq': discarded 3399665 reads shorter than 58 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq': discarded 5692 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq': discarded 4576771 reads shorter than 58 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq': discarded 7329 reads containing non-ACGT characters
+3: Loaded 633692923 k-mer.
+1: Loaded 633580354 k-mer.
+0: Loaded 635233114 k-mer.
+2: Loaded 635343024 k-mer.
+8: Loaded 635270583 k-mer.
+5: Loaded 633667978 k-mer.
+4: Loaded 635354202 k-mer.
+7: Loaded 633768506 k-mer.
+9: Loaded 633631935 k-mer.
+6: Loaded 635201573 k-mer.
+Loaded 6344744192 k-mer. At least 254 GB of RAM is required.
+Minimum k-mer coverage is 9
+Using a coverage threshold of 5...
+The median k-mer coverage is 25
+The reconstruction is 1606300510
+The k-mer coverage threshold is 5
+Setting parameter e (erode) to 5
+Setting parameter E (erodeStrand) to 1
+Setting parameter c (coverage) to 5
+Finding adjacenct k-mer...
+7: Added 1278605939 edges.
+9: Added 1278317651 edges.
+3: Added 1278444404 edges.
+1: Added 1278187476 edges.
+6: Added 1281630987 edges.
+2: Added 1281904121 edges.
+8: Added 1281762134 edges.
+5: Added 1278403489 edges.
+4: Added 1281955426 edges.
+0: Added 1281681224 edges.
+Added 12800892851 edges.
+Eroding tips...
+0: Eroded 204520590 tips.
+6: Eroded 226013456 tips.
+4: Eroded 261533603 tips.
+1: Eroded 262237165 tips.
+3: Eroded 286637175 tips.
+9: Eroded 287069154 tips.
+7: Eroded 287576715 tips.
+2: Eroded 288461992 tips.
+5: Eroded 289818401 tips.
+8: Eroded 290726125 tips.
+6: Eroded 64687260 tips.
+9: Eroded 2952355 tips.
+3: Eroded 3428213 tips.
+1: Eroded 27795720 tips.
+4: Eroded 29232303 tips.
+0: Eroded 86198439 tips.
+7: Eroded 2478611 tips.
+5: Eroded 194286 tips.
+2: Eroded 2274890 tips.
+8: Eroded 10286 tips.
+Eroded 2903846739 tips.
+Pruning tips shorter than 1 bp...
+0: Pruned 10352 tips.
+6: Pruned 10175 tips.
+1: Pruned 10217 tips.
+4: Pruned 10070 tips.
+5: Pruned 10076 tips.
+8: Pruned 10102 tips.
+7: Pruned 10124 tips.
+2: Pruned 10137 tips.
+9: Pruned 10134 tips.
+3: Pruned 10058 tips.
+Pruned 101445 k-mer in 101445 tips.
+Pruning tips shorter than 2 bp...
+0: Pruned 3998 tips.
+6: Pruned 3962 tips.
+1: Pruned 4028 tips.
+4: Pruned 4124 tips.
+8: Pruned 3983 tips.
+5: Pruned 3979 tips.
+7: Pruned 3997 tips.
+9: Pruned 3943 tips.
+3: Pruned 3889 tips.
+2: Pruned 3995 tips.
+Pruned 78420 k-mer in 39898 tips.
+Pruning tips shorter than 4 bp...
+0: Pruned 4042 tips.
+6: Pruned 4100 tips.
+1: Pruned 4066 tips.
+4: Pruned 4109 tips.
+8: Pruned 4155 tips.
+5: Pruned 3934 tips.
+3: Pruned 4142 tips.
+9: Pruned 4058 tips.
+7: Pruned 3997 tips.
+2: Pruned 3977 tips.
+Pruned 135341 k-mer in 40580 tips.
+Pruning tips shorter than 8 bp...
+0: Pruned 5364 tips.
+6: Pruned 5406 tips.
+1: Pruned 5322 tips.
+4: Pruned 5376 tips.
+5: Pruned 5418 tips.
+8: Pruned 5406 tips.
+7: Pruned 5395 tips.
+2: Pruned 5392 tips.
+9: Pruned 5387 tips.
+3: Pruned 5279 tips.
+Pruned 331777 k-mer in 53745 tips.
+Pruning tips shorter than 16 bp...
+0: Pruned 8956 tips.
+6: Pruned 8813 tips.
+1: Pruned 8942 tips.
+8: Pruned 8889 tips.
+4: Pruned 8908 tips.
+5: Pruned 8842 tips.
+7: Pruned 8934 tips.
+3: Pruned 8962 tips.
+9: Pruned 8821 tips.
+2: Pruned 8897 tips.
+Pruned 1061971 k-mer in 88964 tips.
+Pruning tips shorter than 32 bp...
+0: Pruned 14499 tips.
+6: Pruned 14615 tips.
+1: Pruned 14528 tips.
+8: Pruned 14659 tips.
+5: Pruned 14677 tips.
+7: Pruned 14647 tips.
+3: Pruned 14567 tips.
+2: Pruned 14626 tips.
+9: Pruned 14604 tips.
+4: Pruned 14689 tips.
+Pruned 3449514 k-mer in 146111 tips.
+Pruning tips shorter than 58 bp...
+0: Pruned 18976 tips.
+6: Pruned 18729 tips.
+1: Pruned 18990 tips.
+4: Pruned 18617 tips.
+5: Pruned 18689 tips.
+8: Pruned 18992 tips.
+2: Pruned 18776 tips.
+3: Pruned 18380 tips.
+7: Pruned 18857 tips.
+9: Pruned 18676 tips.
+Pruned 7882914 k-mer in 187682 tips.
+Pruning tips shorter than 58 bp...
+0: Pruned 13 tips.
+6: Pruned 8 tips.
+8: Pruned 9 tips.
+1: Pruned 11 tips.
+4: Pruned 13 tips.
+5: Pruned 12 tips.
+7: Pruned 11 tips.
+3: Pruned 11 tips.
+2: Pruned 11 tips.
+9: Pruned 7 tips.
+Pruned 3048 k-mer in 106 tips.
+Pruning tips shorter than 58 bp...
+0: Pruned 0 tips.
+6: Pruned 0 tips.
+8: Pruned 0 tips.
+1: Pruned 0 tips.
+4: Pruned 0 tips.
+5: Pruned 0 tips.
+3: Pruned 0 tips.
+7: Pruned 0 tips.
+2: Pruned 0 tips.
+9: Pruned 0 tips.
+Pruned 658531 tips in 8 rounds.
+Marking ambiguous branches...
+0: Marked 21577205 edges of 10047416 ambiguous vertices.
+6: Marked 21597288 edges of 10055436 ambiguous vertices.
+4: Marked 21607320 edges of 10059359 ambiguous vertices.
+1: Marked 21350870 edges of 9943655 ambiguous vertices.
+5: Marked 21411191 edges of 9970685 ambiguous vertices.
+9: Marked 21384912 edges of 9958615 ambiguous vertices.
+3: Marked 21385910 edges of 9959246 ambiguous vertices.
+7: Marked 21417222 edges of 9973353 ambiguous vertices.
+2: Marked 21587079 edges of 10051364 ambiguous vertices.
+8: Marked 21582750 edges of 10048531 ambiguous vertices.
+Marked 100067660 ambiguous branches.
+Removing low-coverage contigs (mean k-mer coverage < 5)...
+slurmstepd-h06: error: *** JOB 385121 ON h06 CANCELLED AT 2019-10-24T12:36:37 DUE TO TIME LIMIT ***

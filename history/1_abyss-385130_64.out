@@ -1,0 +1,1292 @@
+make: Entering directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_64'
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin/mpirun -np 32 ABYSS-P -k64 -q3    --coverage-hist=coverage.hist -s Dstr_v1.3_k64-bubbles.fa  -o Dstr_v1.3_k64-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+ABySS 2.0.2
+ABYSS-P -k64 -q3 --coverage-hist=coverage.hist -s Dstr_v1.3_k64-bubbles.fa -o Dstr_v1.3_k64-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+Running on 32 processors
+1: Running on host h02
+2: Running on host h02
+9: Running on host h02
+10: Running on host h02
+17: Running on host h02
+21: Running on host h02
+22: Running on host h02
+25: Running on host h02
+30: Running on host h02
+3: Running on host h02
+27: Running on host h02
+19: Running on host h02
+20: Running on host h02
+23: Running on host h02
+14: Running on host h02
+4: Running on host h02
+16: Running on host h02
+8: Running on host h02
+28: Running on host h02
+11: Running on host h02
+12: Running on host h02
+24: Running on host h02
+5: Running on host h02
+26: Running on host h02
+6: Running on host h02
+18: Running on host h02
+29: Running on host h02
+0: Running on host h02
+31: Running on host h02
+7: Running on host h02
+15: Running on host h02
+13: Running on host h02
+0: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq'...
+1: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq'...
+2: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq'...
+3: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq'...
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq': discarded 579825 reads shorter than 64 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq': discarded 440 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq': discarded 30246643 reads shorter than 64 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq': discarded 4777 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq': discarded 6179021 reads shorter than 64 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq': discarded 7745 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq': discarded 4712418 reads shorter than 64 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq': discarded 6233 reads containing non-ACGT characters
+0: Loaded 203408815 k-mer.
+3: Loaded 202917276 k-mer.
+1: Loaded 203102862 k-mer.
+2: Loaded 203400466 k-mer.
+11: Loaded 203178829 k-mer.
+27: Loaded 203162416 k-mer.
+14: Loaded 203403213 k-mer.
+26: Loaded 203367334 k-mer.
+31: Loaded 202662290 k-mer.
+16: Loaded 203111293 k-mer.
+28: Loaded 203545720 k-mer.
+15: Loaded 202725134 k-mer.
+23: Loaded 202886943 k-mer.
+7: Loaded 202887372 k-mer.
+4: Loaded 203401354 k-mer.
+17: Loaded 202858377 k-mer.
+21: Loaded 202939433 k-mer.
+20: Loaded 203381863 k-mer.
+12: Loaded 203098990 k-mer.
+22: Loaded 203567226 k-mer.
+5: Loaded 203073654 k-mer.
+18: Loaded 203402846 k-mer.
+25: Loaded 202410289 k-mer.
+13: Loaded 202986612 k-mer.
+29: Loaded 203011197 k-mer.
+30: Loaded 203576998 k-mer.
+9: Loaded 202431091 k-mer.
+10: Loaded 203403815 k-mer.
+6: Loaded 203492840 k-mer.
+19: Loaded 202763437 k-mer.
+8: Loaded 203276980 k-mer.
+24: Loaded 203424858 k-mer.
+Loaded 6500261823 k-mer. At least 260 GB of RAM is required.
+Minimum k-mer coverage is 9
+Using a coverage threshold of 5...
+The median k-mer coverage is 23
+The reconstruction is 1637069808
+The k-mer coverage threshold is 4.79583
+Setting parameter e (erode) to 5
+Setting parameter E (erodeStrand) to 1
+Setting parameter c (coverage) to 4.79583
+Finding adjacenct k-mer...
+13: Added 408288340 edges.
+29: Added 408341313 edges.
+24: Added 409187749 edges.
+27: Added 408632857 edges.
+8: Added 408831970 edges.
+14: Added 409143735 edges.
+26: Added 409045936 edges.
+31: Added 407579510 edges.
+3: Added 408131074 edges.
+30: Added 409502272 edges.
+16: Added 408533621 edges.
+2: Added 409106792 edges.
+28: Added 409441820 edges.
+15: Added 407742507 edges.
+23: Added 408065674 edges.
+7: Added 408069440 edges.
+9: Added 407091879 edges.
+10: Added 409114090 edges.
+11: Added 408682739 edges.
+6: Added 409322808 edges.
+4: Added 409130124 edges.
+17: Added 408023560 edges.
+21: Added 408179249 edges.
+20: Added 409089669 edges.
+12: Added 408485361 edges.
+22: Added 409472337 edges.
+1: Added 408565664 edges.
+19: Added 407793271 edges.
+5: Added 408473921 edges.
+18: Added 409129794 edges.
+25: Added 407061092 edges.
+0: Added 409141370 edges.
+Added 13074401538 edges.
+Eroding tips...
+13: Eroded 96612228 tips.
+3: Eroded 97126197 tips.
+1: Eroded 98778069 tips.
+27: Eroded 99995028 tips.
+31: Eroded 100039523 tips.
+8: Eroded 102499025 tips.
+14: Eroded 102615092 tips.
+25: Eroded 103680894 tips.
+26: Eroded 104149231 tips.
+21: Eroded 104039406 tips.
+12: Eroded 104353940 tips.
+16: Eroded 104403921 tips.
+29: Eroded 104550486 tips.
+19: Eroded 104552591 tips.
+17: Eroded 104667022 tips.
+15: Eroded 104648160 tips.
+22: Eroded 105065434 tips.
+9: Eroded 104554880 tips.
+23: Eroded 104745332 tips.
+5: Eroded 104809616 tips.
+24: Eroded 105060150 tips.
+0: Eroded 105070995 tips.
+10: Eroded 105172423 tips.
+11: Eroded 105054734 tips.
+30: Eroded 105331426 tips.
+18: Eroded 105240590 tips.
+6: Eroded 105307964 tips.
+4: Eroded 105252477 tips.
+7: Eroded 105065418 tips.
+28: Eroded 105343145 tips.
+20: Eroded 105312524 tips.
+2: Eroded 105366799 tips.
+14: Eroded 2796994 tips.
+24: Eroded 350715 tips.
+16: Eroded 881919 tips.
+5: Eroded 371192 tips.
+1: Eroded 6462232 tips.
+31: Eroded 4996217 tips.
+8: Eroded 2857843 tips.
+25: Eroded 1238498 tips.
+27: Eroded 5235268 tips.
+13: Eroded 8546372 tips.
+11: Eroded 194088 tips.
+12: Eroded 900951 tips.
+20: Eroded 58554 tips.
+7: Eroded 86442 tips.
+17: Eroded 466254 tips.
+9: Eroded 397801 tips.
+4: Eroded 148538 tips.
+22: Eroded 408203 tips.
+0: Eroded 322987 tips.
+10: Eroded 258337 tips.
+18: Eroded 158925 tips.
+6: Eroded 150843 tips.
+19: Eroded 502097 tips.
+26: Eroded 1217448 tips.
+28: Eroded 67320 tips.
+21: Eroded 1108111 tips.
+15: Eroded 435630 tips.
+3: Eroded 8000642 tips.
+29: Eroded 628360 tips.
+23: Eroded 397058 tips.
+30: Eroded 181273 tips.
+2: Eroded 34344 tips.
+Eroded 3368326176 tips.
+Pruning tips shorter than 1 bp...
+13: Pruned 4178 tips.
+3: Pruned 4089 tips.
+1: Pruned 4187 tips.
+27: Pruned 4209 tips.
+31: Pruned 4169 tips.
+14: Pruned 4172 tips.
+8: Pruned 4037 tips.
+22: Pruned 4249 tips.
+5: Pruned 4177 tips.
+16: Pruned 4151 tips.
+21: Pruned 4172 tips.
+29: Pruned 4112 tips.
+23: Pruned 4060 tips.
+18: Pruned 4272 tips.
+28: Pruned 4107 tips.
+15: Pruned 4177 tips.
+4: Pruned 4256 tips.
+19: Pruned 4232 tips.
+9: Pruned 4073 tips.
+7: Pruned 4202 tips.
+6: Pruned 4261 tips.
+30: Pruned 4208 tips.
+10: Pruned 4263 tips.
+12: Pruned 4187 tips.
+24: Pruned 4317 tips.
+25: Pruned 3984 tips.
+0: Pruned 4121 tips.
+17: Pruned 4297 tips.
+26: Pruned 4137 tips.
+2: Pruned 4272 tips.
+20: Pruned 4201 tips.
+11: Pruned 4280 tips.
+Pruned 133809 k-mer in 133809 tips.
+Pruning tips shorter than 2 bp...
+13: Pruned 1645 tips.
+3: Pruned 1654 tips.
+1: Pruned 1671 tips.
+27: Pruned 1580 tips.
+14: Pruned 1639 tips.
+31: Pruned 1577 tips.
+8: Pruned 1605 tips.
+28: Pruned 1637 tips.
+23: Pruned 1566 tips.
+15: Pruned 1577 tips.
+2: Pruned 1588 tips.
+4: Pruned 1611 tips.
+22: Pruned 1618 tips.
+5: Pruned 1564 tips.
+19: Pruned 1586 tips.
+10: Pruned 1607 tips.
+9: Pruned 1579 tips.
+17: Pruned 1624 tips.
+7: Pruned 1573 tips.
+30: Pruned 1671 tips.
+6: Pruned 1620 tips.
+16: Pruned 1664 tips.
+29: Pruned 1611 tips.
+24: Pruned 1618 tips.
+21: Pruned 1561 tips.
+0: Pruned 1621 tips.
+25: Pruned 1610 tips.
+18: Pruned 1540 tips.
+20: Pruned 1634 tips.
+12: Pruned 1623 tips.
+26: Pruned 1653 tips.
+11: Pruned 1631 tips.
+Pruned 101361 k-mer in 51558 tips.
+Pruning tips shorter than 4 bp...
+13: Pruned 1488 tips.
+1: Pruned 1481 tips.
+3: Pruned 1596 tips.
+27: Pruned 1559 tips.
+14: Pruned 1503 tips.
+31: Pruned 1445 tips.
+8: Pruned 1522 tips.
+15: Pruned 1546 tips.
+22: Pruned 1437 tips.
+23: Pruned 1508 tips.
+4: Pruned 1548 tips.
+5: Pruned 1524 tips.
+28: Pruned 1467 tips.
+9: Pruned 1517 tips.
+19: Pruned 1479 tips.
+21: Pruned 1588 tips.
+7: Pruned 1516 tips.
+16: Pruned 1572 tips.
+17: Pruned 1571 tips.
+6: Pruned 1591 tips.
+10: Pruned 1610 tips.
+2: Pruned 1463 tips.
+30: Pruned 1559 tips.
+29: Pruned 1541 tips.
+25: Pruned 1559 tips.
+18: Pruned 1524 tips.
+24: Pruned 1535 tips.
+0: Pruned 1493 tips.
+20: Pruned 1501 tips.
+12: Pruned 1519 tips.
+26: Pruned 1476 tips.
+11: Pruned 1599 tips.
+Pruned 162271 k-mer in 48837 tips.
+Pruning tips shorter than 8 bp...
+13: Pruned 1986 tips.
+1: Pruned 1941 tips.
+3: Pruned 2000 tips.
+27: Pruned 2091 tips.
+14: Pruned 1992 tips.
+31: Pruned 2012 tips.
+8: Pruned 2084 tips.
+15: Pruned 2036 tips.
+22: Pruned 2017 tips.
+23: Pruned 2094 tips.
+7: Pruned 1978 tips.
+28: Pruned 1972 tips.
+16: Pruned 1960 tips.
+2: Pruned 2028 tips.
+9: Pruned 1944 tips.
+4: Pruned 2072 tips.
+5: Pruned 1947 tips.
+17: Pruned 1978 tips.
+10: Pruned 2037 tips.
+19: Pruned 2014 tips.
+25: Pruned 2041 tips.
+0: Pruned 1994 tips.
+6: Pruned 2053 tips.
+29: Pruned 2035 tips.
+30: Pruned 2082 tips.
+24: Pruned 1996 tips.
+21: Pruned 2016 tips.
+26: Pruned 1986 tips.
+18: Pruned 2068 tips.
+12: Pruned 2001 tips.
+20: Pruned 2077 tips.
+11: Pruned 2050 tips.
+Pruned 397645 k-mer in 64582 tips.
+Pruning tips shorter than 16 bp...
+13: Pruned 3485 tips.
+1: Pruned 3472 tips.
+3: Pruned 3502 tips.
+27: Pruned 3523 tips.
+14: Pruned 3409 tips.
+31: Pruned 3416 tips.
+8: Pruned 3389 tips.
+5: Pruned 3474 tips.
+15: Pruned 3468 tips.
+23: Pruned 3508 tips.
+28: Pruned 3477 tips.
+22: Pruned 3443 tips.
+7: Pruned 3540 tips.
+4: Pruned 3595 tips.
+25: Pruned 3607 tips.
+2: Pruned 3473 tips.
+9: Pruned 3386 tips.
+0: Pruned 3479 tips.
+19: Pruned 3479 tips.
+17: Pruned 3500 tips.
+18: Pruned 3529 tips.
+10: Pruned 3494 tips.
+21: Pruned 3504 tips.
+6: Pruned 3569 tips.
+29: Pruned 3593 tips.
+30: Pruned 3541 tips.
+16: Pruned 3406 tips.
+24: Pruned 3440 tips.
+20: Pruned 3579 tips.
+26: Pruned 3563 tips.
+12: Pruned 3498 tips.
+11: Pruned 3415 tips.
+Pruned 1334788 k-mer in 111756 tips.
+Pruning tips shorter than 32 bp...
+1: Pruned 6051 tips.
+13: Pruned 6005 tips.
+3: Pruned 5975 tips.
+27: Pruned 6092 tips.
+14: Pruned 6146 tips.
+31: Pruned 6246 tips.
+8: Pruned 6184 tips.
+23: Pruned 6082 tips.
+22: Pruned 6000 tips.
+5: Pruned 6003 tips.
+15: Pruned 6146 tips.
+7: Pruned 6229 tips.
+28: Pruned 5981 tips.
+29: Pruned 6203 tips.
+0: Pruned 6103 tips.
+9: Pruned 6103 tips.
+4: Pruned 6172 tips.
+20: Pruned 6040 tips.
+18: Pruned 6202 tips.
+25: Pruned 6093 tips.
+16: Pruned 6076 tips.
+21: Pruned 6123 tips.
+17: Pruned 6077 tips.
+10: Pruned 6187 tips.
+6: Pruned 6328 tips.
+19: Pruned 6281 tips.
+24: Pruned 6092 tips.
+30: Pruned 6164 tips.
+12: Pruned 6180 tips.
+2: Pruned 6172 tips.
+26: Pruned 6038 tips.
+11: Pruned 6091 tips.
+Pruned 4637581 k-mer in 195865 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 9971 tips.
+13: Pruned 10136 tips.
+3: Pruned 10197 tips.
+27: Pruned 10097 tips.
+0: Pruned 9856 tips.
+8: Pruned 10009 tips.
+14: Pruned 10022 tips.
+31: Pruned 10099 tips.
+2: Pruned 9873 tips.
+22: Pruned 9938 tips.
+15: Pruned 10010 tips.
+17: Pruned 9917 tips.
+18: Pruned 9886 tips.
+25: Pruned 9922 tips.
+21: Pruned 9984 tips.
+16: Pruned 9858 tips.
+5: Pruned 10053 tips.
+20: Pruned 9957 tips.
+19: Pruned 9884 tips.
+10: Pruned 10071 tips.
+24: Pruned 10124 tips.
+4: Pruned 10006 tips.
+9: Pruned 10045 tips.
+7: Pruned 10085 tips.
+29: Pruned 10077 tips.
+30: Pruned 10150 tips.
+28: Pruned 10008 tips.
+23: Pruned 10122 tips.
+12: Pruned 10204 tips.
+6: Pruned 10149 tips.
+26: Pruned 10033 tips.
+11: Pruned 10023 tips.
+Pruned 14251279 k-mer in 320766 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 15 tips.
+13: Pruned 14 tips.
+3: Pruned 14 tips.
+27: Pruned 13 tips.
+8: Pruned 8 tips.
+14: Pruned 9 tips.
+31: Pruned 12 tips.
+2: Pruned 13 tips.
+28: Pruned 9 tips.
+5: Pruned 7 tips.
+25: Pruned 12 tips.
+15: Pruned 14 tips.
+9: Pruned 14 tips.
+0: Pruned 10 tips.
+16: Pruned 11 tips.
+24: Pruned 13 tips.
+21: Pruned 7 tips.
+29: Pruned 8 tips.
+10: Pruned 13 tips.
+23: Pruned 5 tips.
+7: Pruned 13 tips.
+6: Pruned 9 tips.
+30: Pruned 10 tips.
+4: Pruned 16 tips.
+22: Pruned 9 tips.
+11: Pruned 4 tips.
+12: Pruned 9 tips.
+18: Pruned 7 tips.
+19: Pruned 13 tips.
+20: Pruned 7 tips.
+17: Pruned 8 tips.
+26: Pruned 7 tips.
+Pruned 10396 k-mer in 333 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 0 tips.
+13: Pruned 0 tips.
+3: Pruned 0 tips.
+27: Pruned 0 tips.
+8: Pruned 0 tips.
+14: Pruned 0 tips.
+31: Pruned 0 tips.
+23: Pruned 0 tips.
+9: Pruned 0 tips.
+5: Pruned 0 tips.
+15: Pruned 0 tips.
+4: Pruned 0 tips.
+21: Pruned 0 tips.
+2: Pruned 0 tips.
+0: Pruned 0 tips.
+28: Pruned 0 tips.
+25: Pruned 0 tips.
+30: Pruned 0 tips.
+10: Pruned 0 tips.
+22: Pruned 0 tips.
+18: Pruned 0 tips.
+19: Pruned 0 tips.
+24: Pruned 0 tips.
+6: Pruned 0 tips.
+7: Pruned 0 tips.
+29: Pruned 0 tips.
+12: Pruned 0 tips.
+17: Pruned 0 tips.
+11: Pruned 0 tips.
+26: Pruned 0 tips.
+16: Pruned 0 tips.
+20: Pruned 0 tips.
+Pruned 927506 tips in 8 rounds.
+Marking ambiguous branches...
+13: Marked 5055936 edges of 2365637 ambiguous vertices.
+3: Marked 5026144 edges of 2352677 ambiguous vertices.
+1: Marked 5094832 edges of 2380492 ambiguous vertices.
+31: Marked 4981541 edges of 2334076 ambiguous vertices.
+27: Marked 5042072 edges of 2359963 ambiguous vertices.
+8: Marked 4997517 edges of 2343116 ambiguous vertices.
+25: Marked 4963443 edges of 2325651 ambiguous vertices.
+12: Marked 5025866 edges of 2354067 ambiguous vertices.
+26: Marked 5040232 edges of 2360857 ambiguous vertices.
+21: Marked 5037065 edges of 2358150 ambiguous vertices.
+16: Marked 5035258 edges of 2357076 ambiguous vertices.
+29: Marked 5050881 edges of 2363225 ambiguous vertices.
+18: Marked 5053303 edges of 2365089 ambiguous vertices.
+9: Marked 4957993 edges of 2323903 ambiguous vertices.
+19: Marked 4999124 edges of 2341065 ambiguous vertices.
+15: Marked 5027797 edges of 2352706 ambiguous vertices.
+30: Marked 5089937 edges of 2380424 ambiguous vertices.
+10: Marked 5039380 edges of 2359358 ambiguous vertices.
+14: Marked 5070752 edges of 2371139 ambiguous vertices.
+0: Marked 5069226 edges of 2372099 ambiguous vertices.
+5: Marked 5063356 edges of 2368789 ambiguous vertices.
+23: Marked 5020321 edges of 2350431 ambiguous vertices.
+6: Marked 5076854 edges of 2374937 ambiguous vertices.
+22: Marked 5076770 edges of 2375893 ambiguous vertices.
+20: Marked 5057390 edges of 2367754 ambiguous vertices.
+4: Marked 5054548 edges of 2366854 ambiguous vertices.
+17: Marked 5037714 edges of 2357506 ambiguous vertices.
+24: Marked 5069856 edges of 2373004 ambiguous vertices.
+7: Marked 5027887 edges of 2354027 ambiguous vertices.
+11: Marked 5051420 edges of 2364252 ambiguous vertices.
+28: Marked 5082726 edges of 2378664 ambiguous vertices.
+2: Marked 5038751 edges of 2358931 ambiguous vertices.
+Marked 75511812 ambiguous branches.
+Removing low-coverage contigs (mean k-mer coverage < 4.79583)...
+1: Found 97359711 k-mer in 3054996 contigs before removing low-coverage contigs.
+Removed 47816118 k-mer in 951714 low-coverage contigs.
+3: Found 96896542 k-mer in 3017514 contigs before removing low-coverage contigs.
+Removed 47459423 k-mer in 939962 low-coverage contigs.
+13: Found 97111542 k-mer in 3036551 contigs before removing low-coverage contigs.
+Removed 47513105 k-mer in 942092 low-coverage contigs.
+27: Found 97303213 k-mer in 3041697 contigs before removing low-coverage contigs.
+Removed 47663358 k-mer in 946531 low-coverage contigs.
+31: Found 96521323 k-mer in 3000544 contigs before removing low-coverage contigs.
+Removed 47247363 k-mer in 933864 low-coverage contigs.
+14: Found 97392022 k-mer in 3048001 contigs before removing low-coverage contigs.
+Removed 47694675 k-mer in 947852 low-coverage contigs.
+18: Found 97281966 k-mer in 3038540 contigs before removing low-coverage contigs.
+Removed 47678758 k-mer in 944806 low-coverage contigs.
+8: Found 97222110 k-mer in 3024448 contigs before removing low-coverage contigs.
+Removed 47655454 k-mer in 942565 low-coverage contigs.
+23: Found 96963158 k-mer in 3016228 contigs before removing low-coverage contigs.
+Removed 47495954 k-mer in 939183 low-coverage contigs.
+9: Found 96476134 k-mer in 2992625 contigs before removing low-coverage contigs.
+Removed 47233393 k-mer in 932421 low-coverage contigs.
+15: Found 96764437 k-mer in 3018168 contigs before removing low-coverage contigs.
+Removed 47407013 k-mer in 938054 low-coverage contigs.
+25: Found 96537671 k-mer in 2992584 contigs before removing low-coverage contigs.
+Removed 47219144 k-mer in 932246 low-coverage contigs.
+5: Found 97410596 k-mer in 3045896 contigs before removing low-coverage contigs.
+Removed 47712239 k-mer in 946979 low-coverage contigs.
+7: Found 97023588 k-mer in 3024618 contigs before removing low-coverage contigs.
+Removed 47539799 k-mer in 940953 low-coverage contigs.
+11: Found 97284121 k-mer in 3043643 contigs before removing low-coverage contigs.
+Removed 47703516 k-mer in 947253 low-coverage contigs.
+12: Found 96982352 k-mer in 3025150 contigs before removing low-coverage contigs.
+Removed 47489274 k-mer in 939843 low-coverage contigs.
+0: Found 97666483 k-mer in 3051418 contigs before removing low-coverage contigs.
+Removed 47870713 k-mer in 949298 low-coverage contigs.
+29: Found 97254962 k-mer in 3033797 contigs before removing low-coverage contigs.
+Removed 47590912 k-mer in 944376 low-coverage contigs.
+24: Found 97464009 k-mer in 3043018 contigs before removing low-coverage contigs.
+Removed 47696396 k-mer in 944443 low-coverage contigs.
+10: Found 97317607 k-mer in 3037412 contigs before removing low-coverage contigs.
+Removed 47666189 k-mer in 944401 low-coverage contigs.
+17: Found 97222293 k-mer in 3040244 contigs before removing low-coverage contigs.
+Removed 47686388 k-mer in 947871 low-coverage contigs.
+22: Found 97551201 k-mer in 3045995 contigs before removing low-coverage contigs.
+Removed 47807446 k-mer in 947940 low-coverage contigs.
+28: Found 97435915 k-mer in 3056321 contigs before removing low-coverage contigs.
+Removed 47682736 k-mer in 946868 low-coverage contigs.
+4: Found 97449189 k-mer in 3037440 contigs before removing low-coverage contigs.
+Removed 47700396 k-mer in 943501 low-coverage contigs.
+21: Found 97172395 k-mer in 3029287 contigs before removing low-coverage contigs.
+Removed 47546890 k-mer in 942099 low-coverage contigs.
+16: Found 97123552 k-mer in 3026094 contigs before removing low-coverage contigs.
+Removed 47660510 k-mer in 943477 low-coverage contigs.
+20: Found 97677036 k-mer in 3046484 contigs before removing low-coverage contigs.
+Removed 47786777 k-mer in 944466 low-coverage contigs.
+30: Found 97564192 k-mer in 3059422 contigs before removing low-coverage contigs.
+Removed 47825956 k-mer in 952376 low-coverage contigs.
+6: Found 97421872 k-mer in 3047752 contigs before removing low-coverage contigs.
+Removed 47672260 k-mer in 947559 low-coverage contigs.
+19: Found 97024986 k-mer in 3021124 contigs before removing low-coverage contigs.
+Removed 47574281 k-mer in 943689 low-coverage contigs.
+26: Found 97565189 k-mer in 3045066 contigs before removing low-coverage contigs.
+Removed 47795003 k-mer in 949310 low-coverage contigs.
+2: Found 97452340 k-mer in 3044071 contigs before removing low-coverage contigs.
+Removed 47750094 k-mer in 949008 low-coverage contigs.
+Found 3110893707 k-mer in 97086148 contigs before removing low-coverage contigs.
+Removed 1523841533 k-mer in 30207000 low-coverage contigs.
+Splitting ambiguous branches...
+13: Split 1885267 ambigiuous branches.
+1: Split 1894712 ambigiuous branches.
+3: Split 1881829 ambigiuous branches.
+31: Split 1874720 ambigiuous branches.
+27: Split 1895327 ambigiuous branches.
+8: Split 1882571 ambigiuous branches.
+26: Split 1893483 ambigiuous branches.
+18: Split 1890984 ambigiuous branches.
+12: Split 1877873 ambigiuous branches.
+25: Split 1862993 ambigiuous branches.
+14: Split 1893866 ambigiuous branches.
+19: Split 1880407 ambigiuous branches.
+21: Split 1880954 ambigiuous branches.
+22: Split 1899030 ambigiuous branches.
+16: Split 1885396 ambigiuous branches.
+10: Split 1888397 ambigiuous branches.
+15: Split 1878934 ambigiuous branches.
+24: Split 1889821 ambigiuous branches.
+17: Split 1886778 ambigiuous branches.
+30: Split 1901209 ambigiuous branches.
+0: Split 1898220 ambigiuous branches.
+9: Split 1863735 ambigiuous branches.
+29: Split 1887761 ambigiuous branches.
+23: Split 1877028 ambigiuous branches.
+4: Split 1892754 ambigiuous branches.
+5: Split 1892102 ambigiuous branches.
+6: Split 1898181 ambigiuous branches.
+7: Split 1882806 ambigiuous branches.
+20: Split 1889261 ambigiuous branches.
+11: Split 1892253 ambigiuous branches.
+28: Split 1893759 ambigiuous branches.
+2: Split 1897136 ambigiuous branches.
+Split 60389547 ambiguous branches.
+Removed 1523841533 marked k-mer.
+Eroding tips...
+1: Eroded 67992 tips.
+3: Eroded 69015 tips.
+13: Eroded 68793 tips.
+31: Eroded 69453 tips.
+25: Eroded 69109 tips.
+26: Eroded 70488 tips.
+12: Eroded 70203 tips.
+21: Eroded 70442 tips.
+16: Eroded 71597 tips.
+27: Eroded 71620 tips.
+29: Eroded 70134 tips.
+18: Eroded 71762 tips.
+17: Eroded 71217 tips.
+8: Eroded 71242 tips.
+24: Eroded 72146 tips.
+9: Eroded 70584 tips.
+10: Eroded 72712 tips.
+15: Eroded 72746 tips.
+22: Eroded 72937 tips.
+6: Eroded 72564 tips.
+19: Eroded 71527 tips.
+30: Eroded 73674 tips.
+23: Eroded 72212 tips.
+0: Eroded 74036 tips.
+5: Eroded 73005 tips.
+11: Eroded 73490 tips.
+20: Eroded 74944 tips.
+7: Eroded 73318 tips.
+14: Eroded 73345 tips.
+28: Eroded 73987 tips.
+4: Eroded 77333 tips.
+2: Eroded 73531 tips.
+24: Eroded 20122 tips.
+29: Eroded 21048 tips.
+14: Eroded 19143 tips.
+23: Eroded 19097 tips.
+17: Eroded 20604 tips.
+21: Eroded 21384 tips.
+25: Eroded 21956 tips.
+1: Eroded 23918 tips.
+18: Eroded 20877 tips.
+9: Eroded 20258 tips.
+22: Eroded 20124 tips.
+16: Eroded 21508 tips.
+30: Eroded 19463 tips.
+3: Eroded 23803 tips.
+15: Eroded 19895 tips.
+31: Eroded 22486 tips.
+4: Eroded 18988 tips.
+10: Eroded 20529 tips.
+26: Eroded 21437 tips.
+19: Eroded 19512 tips.
+6: Eroded 19739 tips.
+0: Eroded 19352 tips.
+20: Eroded 19188 tips.
+5: Eroded 19039 tips.
+7: Eroded 18890 tips.
+27: Eroded 20901 tips.
+13: Eroded 23184 tips.
+12: Eroded 21496 tips.
+8: Eroded 20552 tips.
+11: Eroded 19252 tips.
+28: Eroded 18845 tips.
+2: Eroded 18671 tips.
+Eroded 2956419 tips.
+Pruning tips shorter than 1 bp...
+1: Pruned 12096 tips.
+3: Pruned 11795 tips.
+13: Pruned 11714 tips.
+27: Pruned 11863 tips.
+14: Pruned 11691 tips.
+18: Pruned 12065 tips.
+8: Pruned 11866 tips.
+31: Pruned 11691 tips.
+23: Pruned 11455 tips.
+9: Pruned 11566 tips.
+22: Pruned 11785 tips.
+25: Pruned 11723 tips.
+19: Pruned 11640 tips.
+21: Pruned 11702 tips.
+0: Pruned 11696 tips.
+16: Pruned 11776 tips.
+7: Pruned 11508 tips.
+26: Pruned 11795 tips.
+5: Pruned 11555 tips.
+30: Pruned 11809 tips.
+24: Pruned 11678 tips.
+17: Pruned 11861 tips.
+6: Pruned 11842 tips.
+11: Pruned 11852 tips.
+15: Pruned 12031 tips.
+12: Pruned 11770 tips.
+29: Pruned 11756 tips.
+28: Pruned 11759 tips.
+10: Pruned 11865 tips.
+4: Pruned 11870 tips.
+20: Pruned 11879 tips.
+2: Pruned 11755 tips.
+Pruned 376709 k-mer in 376709 tips.
+Pruning tips shorter than 2 bp...
+1: Pruned 4449 tips.
+13: Pruned 4439 tips.
+3: Pruned 4494 tips.
+27: Pruned 4430 tips.
+14: Pruned 4419 tips.
+31: Pruned 4521 tips.
+8: Pruned 4393 tips.
+18: Pruned 4625 tips.
+15: Pruned 4540 tips.
+22: Pruned 4553 tips.
+5: Pruned 4354 tips.
+16: Pruned 4502 tips.
+29: Pruned 4491 tips.
+23: Pruned 4478 tips.
+21: Pruned 4453 tips.
+4: Pruned 4602 tips.
+9: Pruned 4430 tips.
+25: Pruned 4396 tips.
+30: Pruned 4700 tips.
+12: Pruned 4516 tips.
+20: Pruned 4562 tips.
+0: Pruned 4526 tips.
+24: Pruned 4580 tips.
+17: Pruned 4502 tips.
+26: Pruned 4565 tips.
+10: Pruned 4541 tips.
+19: Pruned 4412 tips.
+6: Pruned 4627 tips.
+2: Pruned 4591 tips.
+7: Pruned 4537 tips.
+11: Pruned 4462 tips.
+28: Pruned 4538 tips.
+Pruned 267046 k-mer in 144228 tips.
+Pruning tips shorter than 4 bp...
+1: Pruned 2450 tips.
+13: Pruned 2257 tips.
+3: Pruned 2314 tips.
+27: Pruned 2348 tips.
+31: Pruned 2362 tips.
+14: Pruned 2355 tips.
+18: Pruned 2288 tips.
+8: Pruned 2296 tips.
+23: Pruned 2250 tips.
+15: Pruned 2349 tips.
+9: Pruned 2326 tips.
+7: Pruned 2367 tips.
+22: Pruned 2333 tips.
+19: Pruned 2289 tips.
+0: Pruned 2237 tips.
+10: Pruned 2258 tips.
+28: Pruned 2311 tips.
+17: Pruned 2342 tips.
+5: Pruned 2309 tips.
+11: Pruned 2430 tips.
+16: Pruned 2346 tips.
+21: Pruned 2338 tips.
+24: Pruned 2322 tips.
+2: Pruned 2273 tips.
+30: Pruned 2277 tips.
+6: Pruned 2337 tips.
+26: Pruned 2356 tips.
+29: Pruned 2297 tips.
+4: Pruned 2423 tips.
+12: Pruned 2341 tips.
+25: Pruned 2219 tips.
+20: Pruned 2335 tips.
+Pruned 215516 k-mer in 74335 tips.
+Pruning tips shorter than 8 bp...
+1: Pruned 1593 tips.
+13: Pruned 1481 tips.
+3: Pruned 1496 tips.
+27: Pruned 1550 tips.
+14: Pruned 1517 tips.
+31: Pruned 1435 tips.
+8: Pruned 1467 tips.
+18: Pruned 1501 tips.
+22: Pruned 1541 tips.
+15: Pruned 1434 tips.
+5: Pruned 1548 tips.
+4: Pruned 1539 tips.
+21: Pruned 1497 tips.
+29: Pruned 1578 tips.
+23: Pruned 1453 tips.
+25: Pruned 1448 tips.
+12: Pruned 1465 tips.
+9: Pruned 1398 tips.
+20: Pruned 1468 tips.
+16: Pruned 1463 tips.
+7: Pruned 1489 tips.
+0: Pruned 1582 tips.
+24: Pruned 1513 tips.
+30: Pruned 1505 tips.
+10: Pruned 1556 tips.
+17: Pruned 1518 tips.
+26: Pruned 1547 tips.
+28: Pruned 1460 tips.
+2: Pruned 1517 tips.
+6: Pruned 1507 tips.
+19: Pruned 1506 tips.
+11: Pruned 1529 tips.
+Pruned 233452 k-mer in 48101 tips.
+Pruning tips shorter than 16 bp...
+1: Pruned 1888 tips.
+13: Pruned 1849 tips.
+3: Pruned 1767 tips.
+27: Pruned 1785 tips.
+31: Pruned 1717 tips.
+14: Pruned 1812 tips.
+18: Pruned 1813 tips.
+8: Pruned 1765 tips.
+7: Pruned 1811 tips.
+15: Pruned 1777 tips.
+5: Pruned 1749 tips.
+22: Pruned 1799 tips.
+19: Pruned 1707 tips.
+23: Pruned 1718 tips.
+11: Pruned 1742 tips.
+10: Pruned 1747 tips.
+0: Pruned 1797 tips.
+9: Pruned 1796 tips.
+17: Pruned 1766 tips.
+28: Pruned 1781 tips.
+29: Pruned 1739 tips.
+21: Pruned 1766 tips.
+30: Pruned 1870 tips.
+24: Pruned 1843 tips.
+16: Pruned 1858 tips.
+6: Pruned 1738 tips.
+20: Pruned 1715 tips.
+4: Pruned 1769 tips.
+2: Pruned 1719 tips.
+12: Pruned 1807 tips.
+25: Pruned 1849 tips.
+26: Pruned 1760 tips.
+Pruned 554816 k-mer in 57019 tips.
+Pruning tips shorter than 32 bp...
+1: Pruned 2142 tips.
+13: Pruned 2021 tips.
+3: Pruned 2017 tips.
+27: Pruned 2094 tips.
+14: Pruned 2085 tips.
+31: Pruned 2090 tips.
+8: Pruned 2096 tips.
+18: Pruned 2051 tips.
+5: Pruned 2035 tips.
+15: Pruned 2020 tips.
+22: Pruned 2081 tips.
+23: Pruned 2020 tips.
+9: Pruned 2038 tips.
+29: Pruned 2146 tips.
+12: Pruned 2150 tips.
+4: Pruned 2106 tips.
+21: Pruned 2044 tips.
+25: Pruned 2107 tips.
+0: Pruned 2147 tips.
+30: Pruned 2104 tips.
+20: Pruned 2076 tips.
+16: Pruned 2114 tips.
+7: Pruned 2018 tips.
+24: Pruned 2098 tips.
+10: Pruned 2080 tips.
+17: Pruned 2063 tips.
+11: Pruned 2103 tips.
+6: Pruned 2047 tips.
+28: Pruned 2104 tips.
+19: Pruned 2058 tips.
+2: Pruned 2013 tips.
+26: Pruned 2124 tips.
+Pruned 1375567 k-mer in 66492 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 2723 tips.
+13: Pruned 2580 tips.
+3: Pruned 2649 tips.
+27: Pruned 2513 tips.
+31: Pruned 2671 tips.
+18: Pruned 2610 tips.
+14: Pruned 2652 tips.
+8: Pruned 2601 tips.
+23: Pruned 2575 tips.
+15: Pruned 2680 tips.
+11: Pruned 2558 tips.
+0: Pruned 2631 tips.
+7: Pruned 2625 tips.
+9: Pruned 2610 tips.
+5: Pruned 2590 tips.
+22: Pruned 2756 tips.
+28: Pruned 2545 tips.
+10: Pruned 2602 tips.
+30: Pruned 2551 tips.
+17: Pruned 2717 tips.
+24: Pruned 2659 tips.
+21: Pruned 2640 tips.
+29: Pruned 2657 tips.
+16: Pruned 2674 tips.
+6: Pruned 2540 tips.
+4: Pruned 2649 tips.
+12: Pruned 2634 tips.
+19: Pruned 2691 tips.
+25: Pruned 2592 tips.
+20: Pruned 2644 tips.
+2: Pruned 2588 tips.
+26: Pruned 2529 tips.
+Pruned 3666638 k-mer in 83936 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 5 tips.
+13: Pruned 5 tips.
+3: Pruned 5 tips.
+27: Pruned 3 tips.
+14: Pruned 4 tips.
+31: Pruned 6 tips.
+18: Pruned 3 tips.
+8: Pruned 9 tips.
+15: Pruned 4 tips.
+5: Pruned 2 tips.
+22: Pruned 5 tips.
+23: Pruned 6 tips.
+29: Pruned 2 tips.
+4: Pruned 2 tips.
+9: Pruned 1 tips.
+21: Pruned 4 tips.
+12: Pruned 4 tips.
+25: Pruned 4 tips.
+16: Pruned 4 tips.
+0: Pruned 4 tips.
+30: Pruned 2 tips.
+24: Pruned 1 tips.
+20: Pruned 6 tips.
+7: Pruned 3 tips.
+11: Pruned 2 tips.
+17: Pruned 2 tips.
+6: Pruned 1 tips.
+10: Pruned 2 tips.
+28: Pruned 5 tips.
+19: Pruned 6 tips.
+26: Pruned 5 tips.
+2: Pruned 4 tips.
+Pruned 2718 k-mer in 121 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 0 tips.
+3: Pruned 0 tips.
+13: Pruned 0 tips.
+27: Pruned 0 tips.
+18: Pruned 0 tips.
+14: Pruned 0 tips.
+31: Pruned 0 tips.
+8: Pruned 0 tips.
+23: Pruned 1 tips.
+15: Pruned 0 tips.
+11: Pruned 0 tips.
+9: Pruned 0 tips.
+22: Pruned 0 tips.
+7: Pruned 0 tips.
+0: Pruned 0 tips.
+5: Pruned 0 tips.
+28: Pruned 0 tips.
+10: Pruned 0 tips.
+17: Pruned 0 tips.
+19: Pruned 0 tips.
+24: Pruned 0 tips.
+30: Pruned 0 tips.
+21: Pruned 0 tips.
+29: Pruned 0 tips.
+16: Pruned 0 tips.
+12: Pruned 0 tips.
+25: Pruned 0 tips.
+6: Pruned 0 tips.
+4: Pruned 0 tips.
+20: Pruned 0 tips.
+2: Pruned 0 tips.
+26: Pruned 0 tips.
+Pruned 18 k-mer in 1 tips.
+Pruning tips shorter than 64 bp...
+1: Pruned 0 tips.
+13: Pruned 0 tips.
+3: Pruned 0 tips.
+27: Pruned 0 tips.
+14: Pruned 0 tips.
+31: Pruned 0 tips.
+18: Pruned 0 tips.
+8: Pruned 0 tips.
+15: Pruned 0 tips.
+5: Pruned 0 tips.
+22: Pruned 0 tips.
+23: Pruned 0 tips.
+4: Pruned 0 tips.
+29: Pruned 0 tips.
+9: Pruned 0 tips.
+12: Pruned 0 tips.
+30: Pruned 0 tips.
+24: Pruned 0 tips.
+21: Pruned 0 tips.
+25: Pruned 0 tips.
+0: Pruned 0 tips.
+16: Pruned 0 tips.
+20: Pruned 0 tips.
+11: Pruned 0 tips.
+17: Pruned 0 tips.
+7: Pruned 0 tips.
+6: Pruned 0 tips.
+28: Pruned 0 tips.
+10: Pruned 0 tips.
+26: Pruned 0 tips.
+19: Pruned 0 tips.
+2: Pruned 0 tips.
+Pruned 850942 tips in 9 rounds.
+Popping bubbles...
+0: Removed 3181 bubbles.
+1: Removed 3146 bubbles.
+2: Removed 2992 bubbles.
+3: Removed 2916 bubbles.
+4: Removed 2747 bubbles.
+5: Removed 2682 bubbles.
+6: Removed 2663 bubbles.
+7: Removed 2464 bubbles.
+8: Removed 2338 bubbles.
+9: Removed 2217 bubbles.
+10: Removed 2198 bubbles.
+11: Removed 2063 bubbles.
+12: Removed 1992 bubbles.
+13: Removed 1861 bubbles.
+14: Removed 1755 bubbles.
+15: Removed 1694 bubbles.
+16: Removed 1566 bubbles.
+17: Removed 1435 bubbles.
+18: Removed 1401 bubbles.
+19: Removed 1294 bubbles.
+20: Removed 1161 bubbles.
+21: Removed 1023 bubbles.
+22: Removed 971 bubbles.
+23: Removed 892 bubbles.
+24: Removed 693 bubbles.
+25: Removed 692 bubbles.
+26: Removed 576 bubbles.
+27: Removed 440 bubbles.
+28: Removed 351 bubbles.
+29: Removed 270 bubbles.
+30: Removed 169 bubbles.
+31: Removed 63 bubbles.
+Removed 51906 bubbles.
+Removed 51906 bubbles.
+Marking ambiguous branches...
+13: Marked 1260103 edges of 577073 ambiguous vertices.
+3: Marked 1247698 edges of 570883 ambiguous vertices.
+1: Marked 1275859 edges of 582780 ambiguous vertices.
+12: Marked 1247898 edges of 571879 ambiguous vertices.
+25: Marked 1222255 edges of 560399 ambiguous vertices.
+31: Marked 1229253 edges of 563930 ambiguous vertices.
+26: Marked 1242467 edges of 569537 ambiguous vertices.
+27: Marked 1252328 edges of 573275 ambiguous vertices.
+16: Marked 1243492 edges of 569345 ambiguous vertices.
+21: Marked 1251766 edges of 573580 ambiguous vertices.
+8: Marked 1225593 edges of 563096 ambiguous vertices.
+18: Marked 1251350 edges of 573096 ambiguous vertices.
+29: Marked 1254421 edges of 574589 ambiguous vertices.
+19: Marked 1240011 edges of 568473 ambiguous vertices.
+9: Marked 1221123 edges of 560939 ambiguous vertices.
+15: Marked 1253410 edges of 573830 ambiguous vertices.
+23: Marked 1250064 edges of 572580 ambiguous vertices.
+0: Marked 1260592 edges of 577030 ambiguous vertices.
+30: Marked 1265892 edges of 579066 ambiguous vertices.
+5: Marked 1265140 edges of 579033 ambiguous vertices.
+4: Marked 1251151 edges of 573515 ambiguous vertices.
+10: Marked 1244826 edges of 570075 ambiguous vertices.
+24: Marked 1257080 edges of 575324 ambiguous vertices.
+17: Marked 1253484 edges of 573853 ambiguous vertices.
+20: Marked 1255395 edges of 574856 ambiguous vertices.
+6: Marked 1258175 edges of 576016 ambiguous vertices.
+7: Marked 1253325 edges of 574304 ambiguous vertices.
+22: Marked 1265025 edges of 579872 ambiguous vertices.
+11: Marked 1251671 edges of 573280 ambiguous vertices.
+28: Marked 1265223 edges of 579269 ambiguous vertices.
+14: Marked 1262048 edges of 577053 ambiguous vertices.
+2: Marked 1237823 edges of 566833 ambiguous vertices.
+Marked 18328663 ambiguous branches.
+Assembling...
+1: Assembled 48991096 k-mer in 675849 contigs.
+3: Assembled 48927544 k-mer in 661326 contigs.
+13: Assembled 49286441 k-mer in 673637 contigs.
+27: Assembled 49294754 k-mer in 670011 contigs.
+18: Assembled 48830328 k-mer in 668834 contigs.
+31: Assembled 48983864 k-mer in 656688 contigs.
+14: Assembled 49166243 k-mer in 674306 contigs.
+8: Assembled 49134246 k-mer in 662058 contigs.
+9: Assembled 48313440 k-mer in 654996 contigs.
+15: Assembled 49039773 k-mer in 664068 contigs.
+23: Assembled 49439200 k-mer in 663772 contigs.
+7: Assembled 49067110 k-mer in 667752 contigs.
+25: Assembled 48625180 k-mer in 654870 contigs.
+12: Assembled 49419586 k-mer in 666445 contigs.
+29: Assembled 49262955 k-mer in 665767 contigs.
+5: Assembled 49410116 k-mer in 674581 contigs.
+0: Assembled 49722776 k-mer in 672994 contigs.
+11: Assembled 49151061 k-mer in 672390 contigs.
+17: Assembled 48814722 k-mer in 670913 contigs.
+24: Assembled 49508513 k-mer in 669971 contigs.
+10: Assembled 49125984 k-mer in 668095 contigs.
+22: Assembled 49275741 k-mer in 672241 contigs.
+4: Assembled 49038855 k-mer in 667860 contigs.
+21: Assembled 49236276 k-mer in 666660 contigs.
+16: Assembled 49206152 k-mer in 659943 contigs.
+20: Assembled 49296686 k-mer in 671090 contigs.
+6: Assembled 49391134 k-mer in 672870 contigs.
+28: Assembled 49512474 k-mer in 680433 contigs.
+30: Assembled 49377202 k-mer in 675877 contigs.
+19: Assembled 48896826 k-mer in 662956 contigs.
+26: Assembled 49204251 k-mer in 669584 contigs.
+2: Assembled 49521380 k-mer in 668292 contigs.
+Assembled 1573471909 k-mer in 21377129 contigs.
+Concatenating fasta files to Dstr_v1.3_k64-1.fa
+Concatenating fasta files to Dstr_v1.3_k64-bubbles.fa
+Done.
+AdjList    -k64 -m50 --dot Dstr_v1.3_k64-1.fa >Dstr_v1.3_k64-1.dot
+abyss-filtergraph  --dot   -k64 -g Dstr_v1.3_k64-2.dot1 Dstr_v1.3_k64-1.dot Dstr_v1.3_k64-1.fa >Dstr_v1.3_k64-1.path
+MergeContigs   -k64 -g Dstr_v1.3_k64-2.dot -o Dstr_v1.3_k64-2.fa Dstr_v1.3_k64-1.fa Dstr_v1.3_k64-2.dot1 Dstr_v1.3_k64-1.path
+PopBubbles  --dot -j32 -k64  -p0.9  -g Dstr_v1.3_k64-3.dot Dstr_v1.3_k64-2.fa Dstr_v1.3_k64-2.dot >Dstr_v1.3_k64-2.path
+MergeContigs   -k64 -o Dstr_v1.3_k64-3.fa Dstr_v1.3_k64-2.fa Dstr_v1.3_k64-2.dot Dstr_v1.3_k64-2.path
+The minimum coverage of single-end contigs is 3.27551.
+The minimum coverage of merged contigs is 4.79661.
+Consider increasing the coverage threshold parameter, c, to 4.79661.
+awk '!/^>/ {x[">" $1]=1; next} {getline s} $1 in x {print $0 "\n" s}' \
+	Dstr_v1.3_k64-2.path Dstr_v1.3_k64-1.fa >Dstr_v1.3_k64-indel.fa
+ln -sf Dstr_v1.3_k64-3.fa Dstr_v1.3_k64-unitigs.fa
+abyss-map   -j32 -l40    /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq Dstr_v1.3_k64-3.fa \
+	|abyss-fixmate   -l40  -h petrim-3.hist \
+	|sort -snk3 -k4 \
+	|DistanceEst   -j32 -k64 -l40 -s1000 -n10   -o petrim-3.dist petrim-3.hist
+Building the suffix array...
+Building the Burrows-Wheeler transform...
+Building the character occurrence table...
+Mateless    76389914  21.9%
+Unaligned    1233716  0.354%
+Singleton    2148558  0.617%
+FR         125506174  36%
+RF               298  8.55e-05%
+FF               195  5.6e-05%
+Different  143071922  41.1%
+Total      348350777
+abyss-todot  --dist -e Dstr_v1.3_k64-3.fa petrim-3.dist >Dstr_v1.3_k64-3.dist
+Overlap  --dot   -k64 -g Dstr_v1.3_k64-4.dot -o Dstr_v1.3_k64-4.fa Dstr_v1.3_k64-3.fa Dstr_v1.3_k64-3.dot Dstr_v1.3_k64-3.dist
+Overlap: 55
+Scaffold: 27
+No overlap: 19
+Insignificant (<5bp): 4
+Homopolymer: 45
+Motif: 0
+Ambiguous: 0
+SimpleGraph    -j32 -k64 -o Dstr_v1.3_k64-4.path1 Dstr_v1.3_k64-4.dot Dstr_v1.3_k64-3.dist
+Total paths attempted: 7536
+Unique path: 7456
+No possible paths: 39
+No valid paths: 7
+Repetitive: 0
+Multiple valid paths: 32
+Too many solutions: 1
+Too complex: 1
+
+The minimum number of pairs in a distance estimate is 10.
+The minimum number of pairs used in a path is 10.
+abyss-index  --fai Dstr_v1.3_k64-3.fa
+Reading `Dstr_v1.3_k64-3.fa'...
+Writing `Dstr_v1.3_k64-3.fa.fai'...
+abyss-index  --fai Dstr_v1.3_k64-4.fa
+Reading `Dstr_v1.3_k64-4.fa'...
+Writing `Dstr_v1.3_k64-4.fa.fai'...
+cat Dstr_v1.3_k64-3.fa.fai Dstr_v1.3_k64-4.fa.fai \
+	|MergePaths   -j32 -k64  -o Dstr_v1.3_k64-4.path2 - Dstr_v1.3_k64-4.path1
+PathOverlap --assemble   -k64  Dstr_v1.3_k64-4.dot Dstr_v1.3_k64-4.path2 >Dstr_v1.3_k64-4.path3
+cat Dstr_v1.3_k64-3.fa Dstr_v1.3_k64-4.fa \
+	|PathConsensus  --dot -k64  -p0.9  -o Dstr_v1.3_k64-5.path -s Dstr_v1.3_k64-5.fa -g Dstr_v1.3_k64-5.dot - Dstr_v1.3_k64-4.dot Dstr_v1.3_k64-4.path3
+Ambiguous paths: 29
+Merged:          3
+No paths:        0
+Too many paths:  4
+Too complex:     0
+Dissimilar:      22
+cat Dstr_v1.3_k64-3.fa Dstr_v1.3_k64-4.fa Dstr_v1.3_k64-5.fa |MergeContigs   -k64 -o Dstr_v1.3_k64-6.fa - Dstr_v1.3_k64-5.dot Dstr_v1.3_k64-5.path
+The minimum coverage of single-end contigs is 1.66667.
+The minimum coverage of merged contigs is 8.79258.
+Consider increasing the coverage threshold parameter, c, to 8.79258.
+ln -sf Dstr_v1.3_k64-6.fa Dstr_v1.3_k64-contigs.fa
+PathOverlap --overlap   -k64 --dot Dstr_v1.3_k64-5.dot Dstr_v1.3_k64-5.path >Dstr_v1.3_k64-6.dot
+ln -sf Dstr_v1.3_k64-6.dot Dstr_v1.3_k64-contigs.dot
+abyss-map   -j32 -l40    /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq Dstr_v1.3_k64-6.fa \
+	|abyss-fixmate   -l40  -h petrim-6.hist \
+	|sort -snk3 -k4 \
+	|DistanceEst --dot --mean   -j32 -k64 -l40 -s1000 -n10   -o petrim-6.dist.dot petrim-6.hist
+Building the suffix array...
+Building the Burrows-Wheeler transform...
+Building the character occurrence table...
+Mateless    76389914  21.9%
+Unaligned    1233712  0.354%
+Singleton    2148535  0.617%
+FR         125635856  36.1%
+RF               299  8.58e-05%
+FF               196  5.63e-05%
+Different  142942265  41%
+Total      348350777
+abyss-scaffold    -k64 -s1000-10000 -n10 -g Dstr_v1.3_k64-6.path.dot  Dstr_v1.3_k64-6.dot petrim-6.dist.dot >Dstr_v1.3_k64-6.path
+warning: Removed 174 invalid edges.
+n	n:1000	L50	min	N80	N50	N20	E-size	max	sum	name
+11.95e6	252995	94535	1000	1159	1489	2112	1693	15917	381.3e6	s=1000
+11.95e6	253005	94533	1000	1159	1489	2112	1693	15917	381.3e6	s=2000
+11.95e6	253005	94533	1000	1159	1489	2112	1693	15917	381.3e6	s=5000
+11.95e6	253005	94533	1000	1159	1489	2112	1693	15917	381.3e6	s=10000
+n	n:1000	L50	min	N80	N50	N20	E-size	max	sum	name
+11.95e6	252995	94535	1000	1159	1489	2112	1693	15917	381.3e6	s=1000
+Best scaffold N50 is 1489 at s=1000.
+PathConsensus  --dot -k64  -p0.9  -s Dstr_v1.3_k64-7.fa -g Dstr_v1.3_k64-7.dot -o Dstr_v1.3_k64-7.path Dstr_v1.3_k64-6.fa Dstr_v1.3_k64-6.dot Dstr_v1.3_k64-6.path
+Ambiguous paths: 2
+Merged:          1
+No paths:        0
+Too many paths:  0
+Too complex:     1
+Dissimilar:      0
+cat Dstr_v1.3_k64-6.fa Dstr_v1.3_k64-7.fa \
+	|MergeContigs   -k64 -o Dstr_v1.3_k64-8.fa - Dstr_v1.3_k64-7.dot Dstr_v1.3_k64-7.path
+The minimum coverage of single-end contigs is 1.66667.
+The minimum coverage of merged contigs is 16.6404.
+Consider increasing the coverage threshold parameter, c, to 16.6404.
+ln -sf Dstr_v1.3_k64-8.fa Dstr_v1.3_k64-scaffolds.fa
+PathOverlap --overlap   -k64 --dot Dstr_v1.3_k64-7.dot Dstr_v1.3_k64-7.path >Dstr_v1.3_k64-8.dot
+ln -sf Dstr_v1.3_k64-8.dot Dstr_v1.3_k64-scaffolds.dot
+abyss-fac   Dstr_v1.3_k64-unitigs.fa Dstr_v1.3_k64-contigs.fa Dstr_v1.3_k64-scaffolds.fa |tee Dstr_v1.3_k64-stats.tab
+n	n:500	L50	min	N80	N50	N20	E-size	max	sum	name
+11.96e6	836499	266742	500	653	977	1599	1180	15917	782e6	Dstr_v1.3_k64-unitigs.fa
+11.95e6	833187	263567	500	654	981	1626	1194	15917	782.7e6	Dstr_v1.3_k64-contigs.fa
+11.95e6	833177	263557	500	654	981	1626	1194	15917	782.7e6	Dstr_v1.3_k64-scaffolds.fa
+ln -sf Dstr_v1.3_k64-stats.tab Dstr_v1.3_k64-stats
+tr '\t' , <Dstr_v1.3_k64-stats.tab >Dstr_v1.3_k64-stats.csv
+abyss-tabtomd Dstr_v1.3_k64-stats.tab >Dstr_v1.3_k64-stats.md
+pandoc Dstr_v1.3_k64-stats.md >Dstr_v1.3_k64-stats.html
+make: Leaving directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_64'
+JobId=385759 ArrayJobId=385130 ArrayTaskId=64 JobName=1_abyss.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=101173 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=15:40:17 TimeLimit=2-00:00:00 TimeMin=N/A
+   SubmitTime=2019-10-23T16:51:04 EligibleTime=2019-10-23T16:51:05
+   AccrueTime=2019-10-23T16:51:05
+   StartTime=2019-10-24T12:36:43 EndTime=2019-10-26T12:36:43 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-24T12:36:43
+   Partition=highmem AllocNode:Sid=parrot.ib.hpcc.ucr.edu:3302
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h02
+   BatchHost=h02
+   NumNodes=1 NumCPUs=32 NumTasks=32 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=400G,node=1,billing=132
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=400G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/2_ABySS/1_abyss.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/2_ABySS
+   StdErr=/bigdata/littlab/arajewski/Datura/2_ABySS/../history/1_abyss-385130_64.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/2_ABySS/../history/1_abyss-385130_64.out
+   Power=
+

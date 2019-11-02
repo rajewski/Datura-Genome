@@ -1,0 +1,370 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 10/30/2019 08:10:45 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/2_ABySS/k_127/Dstr_v1.3_k127-scaffolds.fa -o Dstr_v1.3_k127 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 16 -z -sp tomato
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 1/3, current time: 10/30/2019 08:11:29 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 10/30/2019 08:11:29
+INFO	[makeblastdb]	New DB name:   /bigdata/littlab/arajewski/Datura/4_BUSCO/tmp/Dstr_v1.3_k127_415102935
+INFO	[makeblastdb]	New DB title:  /rhome/arajewski/bigdata/Datura/2_ABySS/k_127/Dstr_v1.3_k127-scaffolds.fa
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 3929825 sequences in 118.327 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 10/30/2019 08:13:28
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/blast_output/tblastn_Dstr_v1.3_k127.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 10/30/2019 08:30:12
+INFO	****** Step 2/3, current time: 10/30/2019 08:30:12 ******
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Running Augustus prediction using tomato as species:
+INFO	[augustus]	Please find all logs related to Augustus errors here: /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/augustus.log
+INFO	[augustus]	249 of 2485 task(s) completed at 10/30/2019 08:36:38
+INFO	[augustus]	497 of 2485 task(s) completed at 10/30/2019 08:37:03
+INFO	[augustus]	746 of 2485 task(s) completed at 10/30/2019 08:37:23
+INFO	[augustus]	994 of 2485 task(s) completed at 10/30/2019 08:37:42
+INFO	[augustus]	1243 of 2485 task(s) completed at 10/30/2019 08:37:58
+INFO	[augustus]	1491 of 2485 task(s) completed at 10/30/2019 08:38:12
+INFO	[augustus]	1740 of 2485 task(s) completed at 10/30/2019 08:38:25
+INFO	[augustus]	1988 of 2485 task(s) completed at 10/30/2019 08:38:35
+INFO	[augustus]	2237 of 2485 task(s) completed at 10/30/2019 08:38:44
+INFO	[augustus]	2485 of 2485 task(s) completed at 10/30/2019 08:38:50
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 10/30/2019 08:39:17 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	197 of 1967 task(s) completed at 10/30/2019 08:39:18
+INFO	[hmmsearch]	394 of 1967 task(s) completed at 10/30/2019 08:39:19
+INFO	[hmmsearch]	787 of 1967 task(s) completed at 10/30/2019 08:39:20
+INFO	[hmmsearch]	984 of 1967 task(s) completed at 10/30/2019 08:39:21
+INFO	[hmmsearch]	1377 of 1967 task(s) completed at 10/30/2019 08:39:22
+INFO	[hmmsearch]	1574 of 1967 task(s) completed at 10/30/2019 08:39:23
+INFO	[hmmsearch]	1967 of 1967 task(s) completed at 10/30/2019 08:39:24
+INFO	Results:
+INFO	C:9.9%[S:9.3%,D:0.6%],F:21.0%,M:69.1%,n:1440
+INFO	142 Complete BUSCOs (C)
+INFO	134 Complete and single-copy BUSCOs (S)
+INFO	8 Complete and duplicated BUSCOs (D)
+INFO	303 Fragmented BUSCOs (F)
+INFO	995 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	****** Phase 2 of 2, predictions using species specific training ******
+INFO	****** Step 1/3, current time: 10/30/2019 08:39:24 ******
+INFO	Extracting missing and fragmented buscos from the ancestral_variants file...
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/blast_output/tblastn_Dstr_v1.3_k127_missing_and_frag_rerun.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 10/30/2019 11:07:50
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	****** Step 2/3, current time: 10/30/2019 11:08:14 ******
+INFO	Training Augustus using Single-Copy Complete BUSCOs:
+INFO	Converting predicted genes to short genbank files at 10/30/2019 11:08:14...
+INFO	All files converted to short genbank files, now running the training scripts at 10/30/2019 11:17:40...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Re-running Augustus with the new metaparameters, number of target BUSCOs: 1298
+INFO	[augustus]	238 of 2371 task(s) completed at 10/30/2019 11:23:16
+INFO	[augustus]	475 of 2371 task(s) completed at 10/30/2019 11:23:27
+INFO	[augustus]	712 of 2371 task(s) completed at 10/30/2019 11:23:38
+INFO	[augustus]	949 of 2371 task(s) completed at 10/30/2019 11:23:50
+INFO	[augustus]	1186 of 2371 task(s) completed at 10/30/2019 11:24:01
+INFO	[augustus]	1423 of 2371 task(s) completed at 10/30/2019 11:24:12
+INFO	[augustus]	1660 of 2371 task(s) completed at 10/30/2019 11:24:25
+INFO	[augustus]	1897 of 2371 task(s) completed at 10/30/2019 11:24:36
+INFO	[augustus]	2134 of 2371 task(s) completed at 10/30/2019 11:24:51
+INFO	[augustus]	2371 of 2371 task(s) completed at 10/30/2019 11:24:58
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 10/30/2019 11:25:24 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607GQ.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360SLX.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360MJR.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360C0Z.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360OTB.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360JMJ.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360WJ9.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609I7.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936082K.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936082K.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EYO.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EYO.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607RU.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605M5.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360XE7.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360XE7.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360F1R.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360G30.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ICO.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360PG1.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360BN6.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936011U.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DBZ.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360JSH.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360N0I.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HR3.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093608R5.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360OBH.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093606NA.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936086V.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605DG.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605T0.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605T0.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093603M5.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360748.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LIN.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093608CS.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360P82.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LFY.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360QWS.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360G42.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093602HL.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GHT.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KLO.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093606O8.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360NB8.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360595.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600W2.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600W2.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360TUC.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360TUC.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HTY.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360T1O.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360T1O.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360MNW.faa.2 for reading
+INFO	[hmmsearch]	334 of 1666 task(s) completed at 10/30/2019 11:25:25
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360FOF.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607I5.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ILO.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360NFA.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093606L0.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GN9.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360AQ0.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936011P.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936037Y.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360OT3.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936037Y.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093603PO.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DKG.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360H7R.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360T01.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360M1L.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DW4.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360O92.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360CMF.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360NK5.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605TN.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360D8B.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360AKZ.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LMM.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360W85.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360FCX.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KZ9.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KZ9.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360MCO.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607D0.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360O09.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093608B1.faa.2 for reading
+INFO	[hmmsearch]	500 of 1666 task(s) completed at 10/30/2019 11:25:25
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LL8.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360IBH.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DP5.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360XZ1.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LLC.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360829.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360D36.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360829.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KOY.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093606VV.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360BR4.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360IGN.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093601Y2.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360F8I.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KOT.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093602LT.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HLN.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KJA.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360TXX.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609YH.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EB9.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360BQM.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LX9.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360J2V.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093604WU.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360J2V.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360P5M.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360XWE.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GU6.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KES.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936038M.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607NG.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360PMV.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DWB.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EUJ.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600CL.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ZQE.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360TJE.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360BAH.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360TLB.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HBC.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360AXR.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360QIM.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ROA.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093606T7.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093608BO.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609YB.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DFK.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607UJ.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093607UJ.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360NC2.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360AAI.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360QQP.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093602K0.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360K0E.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360CXD.faa.1 for reading
+INFO	[hmmsearch]	833 of 1666 task(s) completed at 10/30/2019 11:25:26
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HUX.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360BNI.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600TZ.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360D9L.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360B3J.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093604XX.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360J7A.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GS5.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360J7A.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HOV.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360OD6.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360OD6.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ISN.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DRR.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ALP.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360JI8.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KLG.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360IGG.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EUK.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GUO.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360FVD.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936026R.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KG8.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360R94.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360M2U.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360M1I.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360DI3.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EMJ.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360K2H.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600P5.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600P5.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600SL.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360CCO.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360JVX.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936066Y.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ALT.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GU0.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GU0.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609TC.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360ITN.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GRH.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360C6T.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360F4O.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609ZU.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360C3K.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360C3E.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LK3.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LK3.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360QEX.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360N12.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360K8L.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360MF2.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936036V.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360OS5.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360H4K.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605XW.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360J3N.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360MUD.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GQJ.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360XXS.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EIH.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360L1R.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360L1R.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360Y81.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360K2J.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360R4S.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LG2.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360S1U.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360PQE.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609DP.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093603OL.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360MO9.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093605TV.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360GF5.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360VIC.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360F56.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360F56.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093603LQ.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360E00.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360HPQ.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093604D9.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600H1.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093600H1.faa.3 for reading
+INFO	[hmmsearch]	1333 of 1666 task(s) completed at 10/30/2019 11:25:28
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936066R.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936070D.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG0936098U.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609HF.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG093609WJ.faa.1 for reading
+INFO	[hmmsearch]	1500 of 1666 task(s) completed at 10/30/2019 11:25:29
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360CNL.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360EV2.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360JAG.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360JWS.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360K4S.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360KRQ.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360L09.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360LJ0.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360NM4.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360P6I.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360PA0.faa.3 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/augustus_output/extracted_proteins/EOG09360QMO.faa.2 for reading
+INFO	[hmmsearch]	1666 of 1666 task(s) completed at 10/30/2019 11:25:29
+INFO	Results:
+INFO	C:10.3%[S:9.7%,D:0.6%],F:19.0%,M:70.7%,n:1440
+INFO	147 Complete BUSCOs (C)
+INFO	139 Complete and single-copy BUSCOs (S)
+INFO	8 Complete and duplicated BUSCOs (D)
+INFO	273 Fragmented BUSCOs (F)
+INFO	1020 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 11687.813656568527 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k127/
+
+JobId=401668 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=03:14:49 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2019-10-30T08:10:31 EligibleTime=2019-10-30T08:10:31
+   AccrueTime=2019-10-30T08:10:31
+   StartTime=2019-10-30T08:10:43 EndTime=2019-10-30T17:10:43 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-30T08:10:43
+   Partition=intel AllocNode:Sid=parrot.ib.hpcc.ucr.edu:21822
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i01
+   BatchHost=i01
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-401668.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-401668.out
+   Power=
+

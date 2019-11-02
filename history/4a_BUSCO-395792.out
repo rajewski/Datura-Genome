@@ -1,0 +1,128 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 10/29/2019 11:10:30 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/2_ABySS/k_103/Dstr_v1.3_k103-scaffolds.fa -o Dstr_v1.3_k103 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 16 -z -sp tomato
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 1/3, current time: 10/29/2019 11:11:19 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 10/29/2019 11:11:20
+INFO	[makeblastdb]	New DB name:   /bigdata/littlab/arajewski/Datura/4_BUSCO/tmp/Dstr_v1.3_k103_3328220492
+INFO	[makeblastdb]	New DB title:  /rhome/arajewski/bigdata/Datura/2_ABySS/k_103/Dstr_v1.3_k103-scaffolds.fa
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 3694259 sequences in 102.687 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 10/29/2019 11:13:03
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/blast_output/tblastn_Dstr_v1.3_k103.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 10/29/2019 11:35:36
+INFO	****** Step 2/3, current time: 10/29/2019 11:35:36 ******
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Running Augustus prediction using tomato as species:
+INFO	[augustus]	Please find all logs related to Augustus errors here: /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/augustus_output/augustus.log
+INFO	[augustus]	232 of 2312 task(s) completed at 10/29/2019 11:43:07
+INFO	[augustus]	463 of 2312 task(s) completed at 10/29/2019 11:44:42
+INFO	[augustus]	694 of 2312 task(s) completed at 10/29/2019 11:46:10
+INFO	[augustus]	925 of 2312 task(s) completed at 10/29/2019 11:47:23
+INFO	[augustus]	1156 of 2312 task(s) completed at 10/29/2019 11:48:40
+INFO	[augustus]	1388 of 2312 task(s) completed at 10/29/2019 11:49:48
+INFO	[augustus]	1619 of 2312 task(s) completed at 10/29/2019 11:50:46
+INFO	[augustus]	1850 of 2312 task(s) completed at 10/29/2019 11:51:37
+INFO	[augustus]	2081 of 2312 task(s) completed at 10/29/2019 11:52:21
+INFO	[augustus]	2312 of 2312 task(s) completed at 10/29/2019 11:52:56
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 10/29/2019 11:53:30 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	455 of 2271 task(s) completed at 10/29/2019 11:53:33
+INFO	[hmmsearch]	682 of 2271 task(s) completed at 10/29/2019 11:53:34
+INFO	[hmmsearch]	2044 of 2271 task(s) completed at 10/29/2019 11:53:39
+INFO	[hmmsearch]	2271 of 2271 task(s) completed at 10/29/2019 11:53:39
+INFO	Results:
+INFO	C:65.0%[S:64.0%,D:1.0%],F:16.5%,M:18.5%,n:1440
+INFO	935 Complete BUSCOs (C)
+INFO	921 Complete and single-copy BUSCOs (S)
+INFO	14 Complete and duplicated BUSCOs (D)
+INFO	238 Fragmented BUSCOs (F)
+INFO	267 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	****** Phase 2 of 2, predictions using species specific training ******
+INFO	****** Step 1/3, current time: 10/29/2019 11:53:40 ******
+INFO	Extracting missing and fragmented buscos from the ancestral_variants file...
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/blast_output/tblastn_Dstr_v1.3_k103_missing_and_frag_rerun.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 10/29/2019 13:06:31
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	****** Step 2/3, current time: 10/29/2019 13:06:35 ******
+INFO	Training Augustus using Single-Copy Complete BUSCOs:
+INFO	Converting predicted genes to short genbank files at 10/29/2019 13:06:35...
+INFO	All files converted to short genbank files, now running the training scripts at 10/29/2019 14:12:27...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Re-running Augustus with the new metaparameters, number of target BUSCOs: 505
+INFO	[augustus]	87 of 864 task(s) completed at 10/29/2019 14:15:07
+INFO	[augustus]	173 of 864 task(s) completed at 10/29/2019 14:15:20
+INFO	[augustus]	260 of 864 task(s) completed at 10/29/2019 14:15:38
+INFO	[augustus]	346 of 864 task(s) completed at 10/29/2019 14:15:51
+INFO	[augustus]	433 of 864 task(s) completed at 10/29/2019 14:16:08
+INFO	[augustus]	519 of 864 task(s) completed at 10/29/2019 14:16:35
+INFO	[augustus]	605 of 864 task(s) completed at 10/29/2019 14:17:00
+INFO	[augustus]	692 of 864 task(s) completed at 10/29/2019 14:17:17
+INFO	[augustus]	778 of 864 task(s) completed at 10/29/2019 14:17:30
+INFO	[augustus]	864 of 864 task(s) completed at 10/29/2019 14:17:38
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 10/29/2019 14:17:52 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	83 of 826 task(s) completed at 10/29/2019 14:17:52
+INFO	[hmmsearch]	166 of 826 task(s) completed at 10/29/2019 14:17:53
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/augustus_output/extracted_proteins/EOG09360ZQL.faa.1 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/augustus_output/extracted_proteins/EOG09360M2U.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/augustus_output/extracted_proteins/EOG09360LK3.faa.2 for reading
+INFO	[hmmsearch]	Error: Failed to open sequence file /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/augustus_output/extracted_proteins/EOG09360WK5.faa.2 for reading
+INFO	[hmmsearch]	579 of 826 task(s) completed at 10/29/2019 14:17:54
+INFO	[hmmsearch]	661 of 826 task(s) completed at 10/29/2019 14:17:55
+INFO	[hmmsearch]	744 of 826 task(s) completed at 10/29/2019 14:17:55
+INFO	[hmmsearch]	826 of 826 task(s) completed at 10/29/2019 14:17:55
+INFO	Results:
+INFO	C:66.7%[S:65.7%,D:1.0%],F:15.3%,M:18.0%,n:1440
+INFO	960 Complete BUSCOs (C)
+INFO	946 Complete and single-copy BUSCOs (S)
+INFO	14 Complete and duplicated BUSCOs (D)
+INFO	221 Fragmented BUSCOs (F)
+INFO	259 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 11265.403752803802 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.3_k103/
+
+JobId=395792 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100057 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=03:07:50 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2019-10-29T10:11:29 EligibleTime=2019-10-29T10:11:29
+   AccrueTime=2019-10-29T10:11:29
+   StartTime=2019-10-29T11:10:25 EndTime=2019-10-29T20:10:25 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-29T11:10:25
+   Partition=intel AllocNode:Sid=pelican.ib.hpcc.ucr.edu:64572
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i33
+   BatchHost=i33
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-395792.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-395792.out
+   Power=
+

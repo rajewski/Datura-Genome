@@ -1,0 +1,11 @@
+Running ScaffMatch
+2019-10-31 13:33:25,912 - INFO - **--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**
+2019-10-31 13:33:25,912 - INFO - Settings used for this run of ScaffMatch are:
+2019-10-31 13:33:25,912 - INFO -     scaff_dir  -- Dstr_v1.3_k101-K22
+2019-10-31 13:33:25,913 - INFO -     ctg_fasta  -- /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa.2kb.fa
+2019-10-31 13:33:25,913 - INFO -     libraries  -- {1: {'std': 193, 'sam2': 'ultra_ont_raw.I2000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I2000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 1931}, 2: {'std': 396, 'sam2': 'ultra_ont_raw.I4000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I4000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 3955}, 3: {'std': 598, 'sam2': 'ultra_ont_raw.I6000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I6000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 5983}, 4: {'std': 801, 'sam2': 'ultra_ont_raw.I8000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I8000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 8009}, 5: {'std': 1003, 'sam2': 'ultra_ont_raw.I10000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I10000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 10032}, 6: {'std': 1205, 'sam2': 'ultra_ont_raw.I12000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I12000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 12053}, 7: {'std': 1400, 'sam2': 'ultra_ont_raw.I14000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I14000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 14111}, 8: {'std': 1600, 'sam2': 'ultra_ont_raw.I16000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I16000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 16141}, 9: {'std': 1800, 'sam2': 'ultra_ont_raw.I18000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I18000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 18172}, 10: {'std': 2000, 'sam2': 'ultra_ont_raw.I20000.FastSG_K22.sam.rev.sam', 'sam1': 'ultra_ont_raw.I20000.FastSG_K22.sam.fwd.sam', 'pm': 'fr', 'ins': 20000}}
+2019-10-31 13:33:25,913 - INFO -     bundle_threshold  -- 5
+2019-10-31 13:33:25,913 - INFO -     log_file  -- NONE
+2019-10-31 13:33:25,913 - INFO - Stage I: Construct scaffolding graph
+2019-10-31 14:06:03,399 - INFO - Scaffolding graph constructed: 1957.48613405
+2019-10-31 14:06:04,043 - INFO - Stage II: Performing matching heuristics (max_weight)

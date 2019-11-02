@@ -1,0 +1,462 @@
+make: Entering directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_149'
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin/mpirun -np 32 ABYSS-P -k149 -q3    --coverage-hist=coverage.hist -s Dstr_v1.3_k149-bubbles.fa  -o Dstr_v1.3_k149-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+ABySS 2.0.2
+ABYSS-P -k149 -q3 --coverage-hist=coverage.hist -s Dstr_v1.3_k149-bubbles.fa -o Dstr_v1.3_k149-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2U.fq
+Running on 32 processors
+7: Running on host h02
+3: Running on host h02
+9: Running on host h02
+17: Running on host h02
+31: Running on host h02
+1: Running on host h02
+2: Running on host h02
+4: Running on host h02
+5: Running on host h02
+6: Running on host h02
+0: Running on host h02
+8: Running on host h02
+10: Running on host h02
+11: Running on host h02
+12: Running on host h02
+13: Running on host h02
+14: Running on host h02
+15: Running on host h02
+16: Running on host h02
+18: Running on host h02
+19: Running on host h02
+20: Running on host h02
+21: Running on host h02
+22: Running on host h02
+23: Running on host h02
+24: Running on host h02
+25: Running on host h02
+27: Running on host h02
+28: Running on host h02
+29: Running on host h02
+30: Running on host h02
+26: Running on host h02
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17437] *** Process received signal ***
+[h02:17437] Signal: Aborted (6)
+[h02:17437] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17404] *** Process received signal ***
+[h02:17404] Signal: Aborted (6)
+[h02:17404] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17405] *** Process received signal ***
+[h02:17405] Signal: Aborted (6)
+[h02:17405] Signal code:  (-6)
+[h02:17423] *** Process received signal ***
+[h02:17423] Signal: Aborted (6)
+[h02:17423] Signal code:  (-6)
+[h02:17406] *** Process received signal ***
+[h02:17406] Signal: Aborted (6)
+[h02:17406] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17408] *** Process received signal ***
+[h02:17408] Signal: Aborted (6)
+[h02:17408] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17409] *** Process received signal ***
+[h02:17409] Signal: Aborted (6)
+[h02:17409] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17410] *** Process received signal ***
+[h02:17410] Signal: Aborted (6)
+[h02:17410] Signal code:  (-6)
+[h02:17407] *** Process received signal ***
+[h02:17407] Signal: Aborted (6)
+[h02:17407] Signal code:  (-6)
+[h02:17411] *** Process received signal ***
+[h02:17411] Signal: Aborted (6)
+[h02:17411] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17413] *** Process received signal ***
+[h02:17413] Signal: Aborted (6)
+[h02:17413] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17414] *** Process received signal ***
+[h02:17414] Signal: Aborted (6)
+[h02:17414] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17416] *** Process received signal ***
+[h02:17416] Signal: Aborted (6)
+[h02:17416] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17417] *** Process received signal ***
+[h02:17417] Signal: Aborted (6)
+[h02:17417] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17418] *** Process received signal ***
+[h02:17418] Signal: Aborted (6)
+[h02:17418] Signal code:  (-6)
+[h02:17415] *** Process received signal ***
+[h02:17415] Signal: Aborted (6)
+[h02:17415] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17422] *** Process received signal ***
+[h02:17422] Signal: Aborted (6)
+[h02:17422] Signal code:  (-6)
+[h02:17419] *** Process received signal ***
+[h02:17419] Signal: Aborted (6)
+[h02:17419] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17424] *** Process received signal ***
+[h02:17424] Signal: Aborted (6)
+[h02:17424] Signal code:  (-6)
+[h02:17421] *** Process received signal ***
+[h02:17421] Signal: Aborted (6)
+[h02:17421] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17426] *** Process received signal ***
+[h02:17426] Signal: Aborted (6)
+[h02:17426] Signal code:  (-6)
+[h02:17425] *** Process received signal ***
+[h02:17425] Signal: Aborted (6)
+[h02:17425] Signal code:  (-6)
+[h02:17427] *** Process received signal ***
+[h02:17427] Signal: Aborted (6)
+[h02:17427] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17429] *** Process received signal ***
+[h02:17429] Signal: Aborted (6)
+[h02:17429] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17431] *** Process received signal ***
+[h02:17431] Signal: Aborted (6)
+[h02:17431] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17432] *** Process received signal ***
+[h02:17432] Signal: Aborted (6)
+[h02:17432] Signal code:  (-6)
+[h02:17428] *** Process received signal ***
+[h02:17428] Signal: Aborted (6)
+[h02:17428] Signal code:  (-6)
+ABYSS-P: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+[h02:17434] *** Process received signal ***
+[h02:17434] Signal: Aborted (6)
+[h02:17434] Signal code:  (-6)
+[h02:17433] *** Process received signal ***
+[h02:17433] Signal: Aborted (6)
+[h02:17433] Signal code:  (-6)
+[h02:17412] *** Process received signal ***
+[h02:17412] Signal: Aborted (6)
+[h02:17412] Signal code:  (-6)
+[h02:17420] *** Process received signal ***
+[h02:17420] Signal: Aborted (6)
+[h02:17420] Signal code:  (-6)
+[h02:17434] [ 0] /lib64/libc.so.6(+0x36280)[0x2aaecb3d2280]
+[h02:17434] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2aaecb3d2207]
+[h02:17434] [ 2] /lib64/libc.so.6(abort+0x148)[0x2aaecb3d38f8]
+[h02:17434] [ 3] /lib64/libc.so.6(+0x2f026)[0x2aaecb3cb026]
+[h02:17434] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2aaecb3cb0d2]
+[h02:17434] [ 5] ABYSS-P[0x405502]
+[h02:17434] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaecb3be3d5]
+[h02:17434] [ 7] ABYSS-P[0x405b6f]
+[h02:17434] *** End of error message ***
+[h02:17437] [ 0] /lib64/libc.so.6(+0x36280)[0x2b0b54c7c280]
+[h02:17437] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b0b54c7c207]
+[h02:17437] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b0b54c7d8f8]
+[h02:17437] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b0b54c75026]
+[h02:17437] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b0b54c750d2]
+[h02:17437] [ 5] ABYSS-P[0x405502]
+[h02:17437] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b0b54c683d5]
+[h02:17437] [ 7] ABYSS-P[0x405b6f]
+[h02:17437] *** End of error message ***
+[h02:17404] [ 0] /lib64/libc.so.6(+0x36280)[0x2ac0ab220280]
+[h02:17404] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ac0ab220207]
+[h02:17404] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ac0ab2218f8]
+[h02:17404] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ac0ab219026]
+[h02:17404] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ac0ab2190d2]
+[h02:17404] [ 5] ABYSS-P[0x405502]
+[h02:17404] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ac0ab20c3d5]
+[h02:17404] [ 7] ABYSS-P[0x405b6f]
+[h02:17404] *** End of error message ***
+[h02:17406] [ 0] /lib64/libc.so.6(+0x36280)[0x2b422b500280]
+[h02:17406] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b422b500207]
+[h02:17406] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b422b5018f8]
+[h02:17406] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b422b4f9026]
+[h02:17406] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b422b4f90d2]
+[h02:17406] [ 5] ABYSS-P[0x405502]
+[h02:17406] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b422b4ec3d5]
+[h02:17406] [ 7] ABYSS-P[0x405b6f]
+[h02:17406] *** End of error message ***
+[h02:17409] [ 0] /lib64/libc.so.6(+0x36280)[0x2abc32ec2280]
+[h02:17409] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2abc32ec2207]
+[h02:17409] [ 2] /lib64/libc.so.6(abort+0x148)[0x2abc32ec38f8]
+[h02:17409] [ 3] /lib64/libc.so.6(+0x2f026)[0x2abc32ebb026]
+[h02:17409] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2abc32ebb0d2]
+[h02:17409] [ 5] ABYSS-P[0x405502]
+[h02:17409] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2abc32eae3d5]
+[h02:17409] [ 7] ABYSS-P[0x405b6f]
+[h02:17409] *** End of error message ***
+[h02:17410] [ 0] /lib64/libc.so.6(+0x36280)[0x2b397a1bf280]
+[h02:17410] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b397a1bf207]
+[h02:17410] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b397a1c08f8]
+[h02:17410] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b397a1b8026]
+[h02:17410] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b397a1b80d2]
+[h02:17410] [ 5] ABYSS-P[0x405502]
+[h02:17410] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b397a1ab3d5]
+[h02:17410] [ 7] ABYSS-P[0x405b6f]
+[h02:17410] *** End of error message ***
+[h02:17407] [ 0] /lib64/libc.so.6(+0x36280)[0x2ab280229280]
+[h02:17407] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ab280229207]
+[h02:17407] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ab28022a8f8]
+[h02:17407] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ab280222026]
+[h02:17407] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ab2802220d2]
+[h02:17407] [ 5] ABYSS-P[0x405502]
+[h02:17407] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ab2802153d5]
+[h02:17407] [ 7] ABYSS-P[0x405b6f]
+[h02:17407] *** End of error message ***
+[h02:17413] [ 0] /lib64/libc.so.6(+0x36280)[0x2b83d0e8c280]
+[h02:17413] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b83d0e8c207]
+[h02:17413] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b83d0e8d8f8]
+[h02:17413] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b83d0e85026]
+[h02:17413] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b83d0e850d2]
+[h02:17413] [ 5] ABYSS-P[0x405502]
+[h02:17413] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b83d0e783d5]
+[h02:17413] [ 7] ABYSS-P[0x405b6f]
+[h02:17413] *** End of error message ***
+[h02:17414] [ 0] /lib64/libc.so.6(+0x36280)[0x2b8e32ea3280]
+[h02:17414] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b8e32ea3207]
+[h02:17414] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b8e32ea48f8]
+[h02:17414] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b8e32e9c026]
+[h02:17414] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b8e32e9c0d2]
+[h02:17414] [ 5] ABYSS-P[0x405502]
+[h02:17414] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b8e32e8f3d5]
+[h02:17414] [ 7] ABYSS-P[0x405b6f]
+[h02:17414] *** End of error message ***
+[h02:17416] [ 0] /lib64/libc.so.6(+0x36280)[0x2b3324855280]
+[h02:17416] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b3324855207]
+[h02:17416] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b33248568f8]
+[h02:17416] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b332484e026]
+[h02:17416] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b332484e0d2]
+[h02:17416] [ 5] ABYSS-P[0x405502]
+[h02:17416] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b33248413d5]
+[h02:17416] [ 7] ABYSS-P[0x405b6f]
+[h02:17416] *** End of error message ***
+[h02:17433] [ 0] /lib64/libc.so.6(+0x36280)[0x2b05db91d280]
+[h02:17433] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b05db91d207]
+[h02:17433] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b05db91e8f8]
+[h02:17433] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b05db916026]
+[h02:17433] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b05db9160d2]
+[h02:17433] [ 5] ABYSS-P[0x405502]
+[h02:17433] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b05db9093d5]
+[h02:17433] [ 7] ABYSS-P[0x405b6f]
+[h02:17433] *** End of error message ***
+[h02:17412] [ 0] /lib64/libc.so.6(+0x36280)[0x2ae8421c9280]
+[h02:17412] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ae8421c9207]
+[h02:17412] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ae8421ca8f8]
+[h02:17412] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ae8421c2026]
+[h02:17412] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ae8421c20d2]
+[h02:17412] [ 5] ABYSS-P[0x405502]
+[h02:17412] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ae8421b53d5]
+[h02:17412] [ 7] ABYSS-P[0x405b6f]
+[h02:17412] *** End of error message ***
+[h02:17415] [ 0] /lib64/libc.so.6(+0x36280)[0x2ace7c3d8280]
+[h02:17415] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ace7c3d8207]
+[h02:17415] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ace7c3d98f8]
+[h02:17415] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ace7c3d1026]
+[h02:17415] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ace7c3d10d2]
+[h02:17415] [ 5] ABYSS-P[0x405502]
+[h02:17415] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ace7c3c43d5]
+[h02:17415] [ 7] ABYSS-P[0x405b6f]
+[h02:17415] *** End of error message ***
+[h02:17422] [ 0] /lib64/libc.so.6(+0x36280)[0x2aae4cd8a280]
+[h02:17422] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2aae4cd8a207]
+[h02:17422] [ 2] /lib64/libc.so.6(abort+0x148)[0x2aae4cd8b8f8]
+[h02:17422] [ 3] /lib64/libc.so.6(+0x2f026)[0x2aae4cd83026]
+[h02:17422] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2aae4cd830d2]
+[h02:17422] [ 5] ABYSS-P[0x405502]
+[h02:17422] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2aae4cd763d5]
+[h02:17422] [ 7] ABYSS-P[0x405b6f]
+[h02:17422] *** End of error message ***
+[h02:17421] [ 0] /lib64/libc.so.6(+0x36280)[0x2b994daf1280]
+[h02:17421] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b994daf1207]
+[h02:17421] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b994daf28f8]
+[h02:17421] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b994daea026]
+[h02:17421] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b994daea0d2]
+[h02:17421] [ 5] ABYSS-P[0x405502]
+[h02:17421] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b994dadd3d5]
+[h02:17421] [ 7] ABYSS-P[0x405b6f]
+[h02:17421] *** End of error message ***
+[h02:17425] [ 0] /lib64/libc.so.6(+0x36280)[0x2b4c71362280]
+[h02:17425] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b4c71362207]
+[h02:17425] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b4c713638f8]
+[h02:17425] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b4c7135b026]
+[h02:17425] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b4c7135b0d2]
+[h02:17425] [ 5] ABYSS-P[0x405502]
+[h02:17425] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b4c7134e3d5]
+[h02:17425] [ 7] ABYSS-P[0x405b6f]
+[h02:17425] *** End of error message ***
+[h02:17427] [ 0] /lib64/libc.so.6(+0x36280)[0x2b924192f280]
+[h02:17427] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b924192f207]
+[h02:17427] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b92419308f8]
+[h02:17427] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b9241928026]
+[h02:17427] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b92419280d2]
+[h02:17427] [ 5] ABYSS-P[0x405502]
+[h02:17427] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b924191b3d5]
+[h02:17427] [ 7] ABYSS-P[0x405b6f]
+[h02:17427] *** End of error message ***
+[h02:17429] [ 0] /lib64/libc.so.6(+0x36280)[0x2ae4e4b75280]
+[h02:17429] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ae4e4b75207]
+[h02:17429] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ae4e4b768f8]
+[h02:17429] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ae4e4b6e026]
+[h02:17429] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ae4e4b6e0d2]
+[h02:17429] [ 5] ABYSS-P[0x405502]
+[h02:17429] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ae4e4b613d5]
+[h02:17429] [ 7] ABYSS-P[0x405b6f]
+[h02:17429] *** End of error message ***
+[h02:17430] *** Process received signal ***
+[h02:17430] Signal: Aborted (6)
+[h02:17430] Signal code:  (-6)
+[h02:17431] [ 0] /lib64/libc.so.6(+0x36280)[0x2ba6ef805280]
+[h02:17431] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ba6ef805207]
+[h02:17431] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ba6ef8068f8]
+[h02:17431] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ba6ef7fe026]
+[h02:17431] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ba6ef7fe0d2]
+[h02:17431] [ 5] ABYSS-P[0x405502]
+[h02:17431] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ba6ef7f13d5]
+[h02:17431] [ 7] ABYSS-P[0x405b6f]
+[h02:17431] *** End of error message ***
+[h02:17432] [ 0] /lib64/libc.so.6(+0x36280)[0x2adf4ff3d280]
+[h02:17432] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2adf4ff3d207]
+[h02:17432] [ 2] /lib64/libc.so.6(abort+0x148)[0x2adf4ff3e8f8]
+[h02:17432] [ 3] /lib64/libc.so.6(+0x2f026)[0x2adf4ff36026]
+[h02:17432] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2adf4ff360d2]
+[h02:17432] [ 5] ABYSS-P[0x405502]
+[h02:17432] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2adf4ff293d5]
+[h02:17432] [ 7] ABYSS-P[0x405b6f]
+[h02:17432] *** End of error message ***
+[h02:17428] [ 0] /lib64/libc.so.6(+0x36280)[0x2aad49b91280]
+[h02:17428] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2aad49b91207]
+[h02:17428] [ 2] /lib64/libc.so.6(abort+0x148)[0x2aad49b928f8]
+[h02:17428] [ 3] /lib64/libc.so.6(+0x2f026)[0x2aad49b8a026]
+[h02:17428] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2aad49b8a0d2]
+[h02:17428] [ 5] ABYSS-P[0x405502]
+[h02:17428] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2aad49b7d3d5]
+[h02:17428] [ 7] ABYSS-P[0x405b6f]
+[h02:17428] *** End of error message ***
+[h02:17411] [ 0] /lib64/libc.so.6(+0x36280)[0x2ae01666f280]
+[h02:17411] [ 1] [h02:17418] [ 0] /lib64/libc.so.6(+0x36280)[0x2b6118422280]
+[h02:17418] [ 1] [h02:17417] [ 0] /lib64/libc.so.6(gsignal+0x37)[0x2ae01666f207]
+[h02:17411] [ 2] /lib64/libc.so.6(gsignal+0x37)[0x2b6118422207]
+[h02:17418] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ae0166708f8]
+[h02:17411] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ae016668026]
+[h02:17411] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ae0166680d2]
+[h02:17411] [ 5] ABYSS-P[0x405502]
+[h02:17411] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ae01665b3d5]
+[h02:17411] [ 7] ABYSS-P[0x405b6f]
+[h02:17411] *** End of error message ***
+/lib64/libc.so.6(+0x36280)[0x2b3d460f3280]
+[h02:17417] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b3d460f3207]
+[h02:17417] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b3d460f48f8]
+[h02:17417] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b3d460ec026]
+[h02:17417] [ 4] /lib64/libc.so.6(abort+0x148)[0x2b61184238f8]
+[h02:17418] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b611841b026]
+[h02:17418] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b611841b0d2]
+[h02:17418] [ 5] ABYSS-P[0x405502]
+[h02:17418] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b611840e3d5]
+[h02:17418] [ 7] ABYSS-P[0x405b6f]
+[h02:17418] *** End of error message ***
+/lib64/libc.so.6(+0x2f0d2)[0x2b3d460ec0d2]
+[h02:17417] [ 5] ABYSS-P[0x405502]
+[h02:17417] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b3d460df3d5]
+[h02:17417] [ 7] ABYSS-P[0x405b6f]
+[h02:17417] *** End of error message ***
+[h02:17423] [ 0] /lib64/libc.so.6(+0x36280)[0x2b457b2b6280]
+[h02:17423] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b457b2b6207]
+[h02:17423] [ 2] [h02:17424] [ 0] /lib64/libc.so.6(+0x36280)[0x2b4caca62280]
+[h02:17424] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b4caca62207]
+[h02:17424] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b457b2b78f8]
+[h02:17423] [ 3] /lib64/libc.so.6(abort+0x148)[0x2b4caca638f8]
+[h02:17424] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b457b2af026]
+[h02:17423] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b457b2af0d2]
+[h02:17423] [ 5] ABYSS-P[0x405502]
+[h02:17423] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b457b2a23d5]
+[h02:17423] [ 7] ABYSS-P[0x405b6f]
+[h02:17423] *** End of error message ***
+/lib64/libc.so.6(+0x2f026)[0x2b4caca5b026]
+[h02:17424] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b4caca5b0d2]
+[h02:17424] [ 5] ABYSS-P[0x405502]
+[h02:17424] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b4caca4e3d5]
+[h02:17424] [ 7] ABYSS-P[0x405b6f]
+[h02:17424] *** End of error message ***
+[h02:17420] [ 0] /lib64/libc.so.6(+0x36280)[0x2b789f8df280]
+[h02:17420] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b789f8df207]
+[h02:17420] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b789f8e08f8]
+[h02:17420] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b789f8d8026]
+[h02:17420] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b789f8d80d2]
+[h02:17420] [ 5] ABYSS-P[0x405502]
+[h02:17420] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b789f8cb3d5]
+[h02:17420] [ 7] ABYSS-P[0x405b6f]
+[h02:17420] *** End of error message ***
+[h02:17405] [ 0] /lib64/libc.so.6(+0x36280)[0x2b0660247280]
+[h02:17405] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b0660247207]
+[h02:17405] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b06602488f8]
+[h02:17405] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b0660240026]
+[h02:17405] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b06602400d2]
+[h02:17405] [ 5] ABYSS-P[0x405502]
+[h02:17405] [ 6] [h02:17408] [ 0] /lib64/libc.so.6(+0x36280)[0x2b640b20b280]
+[h02:17408] [ 1] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b06602333d5]
+[h02:17405] [ 7] ABYSS-P[0x405b6f]
+[h02:17405] *** End of error message ***
+/lib64/libc.so.6(gsignal+0x37)[0x2b640b20b207]
+[h02:17408] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b640b20c8f8]
+[h02:17408] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b640b204026]
+[h02:17408] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b640b2040d2]
+[h02:17408] [ 5] ABYSS-P[0x405502]
+[h02:17408] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b640b1f73d5]
+[h02:17408] [ 7] ABYSS-P[0x405b6f]
+[h02:17408] *** End of error message ***
+[h02:17430] [ 0] /lib64/libc.so.6(+0x36280)[0x2b6d45771280]
+[h02:17430] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b6d45771207]
+[h02:17430] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b6d457728f8]
+[h02:17430] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b6d4576a026]
+[h02:17430] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b6d4576a0d2]
+[h02:17430] [ 5] ABYSS-P[0x405502]
+[h02:17430] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b6d4575d3d5]
+[h02:17430] [ 7] ABYSS-P[0x405b6f]
+[h02:17430] *** End of error message ***
+[h02:17419] [ 0] /lib64/libc.so.6(+0x36280)[0x2ad7a086e280]
+[h02:17419] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ad7a086e207]
+[h02:17419] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ad7a086f8f8]
+[h02:17419] [ 3] /lib64/libc.so.6(+0x2f026)[0x2ad7a0867026]
+[h02:17419] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2ad7a08670d2]
+[h02:17419] [ 5] ABYSS-P[0x405502]
+[h02:17419] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ad7a085a3d5]
+[h02:17419] [ 7] ABYSS-P[0x405b6f]
+[h02:17419] *** End of error message ***
+[h02:17426] [ 0] /lib64/libc.so.6(+0x36280)[0x2b8270f96280]
+[h02:17426] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b8270f96207]
+[h02:17426] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b8270f978f8]
+[h02:17426] [ 3] /lib64/libc.so.6(+0x2f026)[0x2b8270f8f026]
+[h02:17426] [ 4] /lib64/libc.so.6(+0x2f0d2)[0x2b8270f8f0d2]
+[h02:17426] [ 5] ABYSS-P[0x405502]
+[h02:17426] [ 6] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b8270f823d5]
+[h02:17426] [ 7] ABYSS-P[0x405b6f]
+[h02:17426] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 17404 on node h02 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+make: *** [Dstr_v1.3_k149-1.fa] Error 134
+make: Leaving directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_149'
