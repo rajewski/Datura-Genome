@@ -1,0 +1,120 @@
+
+module load SPAdes/3.13.1
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+
+spades.py \
+    -1 /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq \
+    -2 /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+    -s /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq \
+    --nanopore /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz \
+    -t $SLURM_NTASKS \
+    -m $((SLURM_MEM_PER_NODE/1024)) \
+    -o /rhome/arajewski/bigdata/Datura/2_SPAdes
+Command line: /opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin/spades.py	-1	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq	-2	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq	-s	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq	--nanopore	/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz	-t	16	-m	300	-o	/rhome/arajewski/bigdata/Datura/2_SPAdes	
+
+System information:
+  SPAdes version: 3.13.1
+  Python version: 3.6.7
+  OS: Linux-3.10.0-957.el7.x86_64-x86_64-with-centos-7.6.1810-Core
+
+Output dir: /rhome/arajewski/bigdata/Datura/2_SPAdes
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq']
+      right reads: ['/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq']
+      interlaced reads: not specified
+      single reads: ['/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq']
+      merged reads: not specified
+    Library number: 2, library type: nanopore
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz']
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /rhome/arajewski/bigdata/Datura/2_SPAdes/tmp
+  Threads: 16
+  Memory limit (in Gb): 300
+
+
+
+== Warning ==  It is recommended to specify single reads with --pe<#>-s, --mp<#>-s, --hqmp<#>-s, or --s<#> option instead of -s!
+
+
+
+======= SPAdes pipeline started. Log can be found here: /rhome/arajewski/bigdata/Datura/2_SPAdes/spades.log
+
+
+===== Read error correction started. 
+
+
+== Running read error correction tool: /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin/spades-hammer /rhome/arajewski/bigdata/Datura/2_SPAdes/corrected/configs/config.info
+
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  75)   Starting BayesHammer, built from refs/heads/spades_3.13.1, git revision 9a9d54db2ff9abaac718155bf74c12ec9464e8ca
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  76)   Loading config from /rhome/arajewski/bigdata/Datura/2_SPAdes/corrected/configs/config.info
+  0:00:00.002     4M / 4M    INFO    General                 (main.cpp                  :  78)   Maximum # of threads to use (adjusted due to OMP capabilities): 16
+  0:00:00.002     4M / 4M    INFO    General                 (memory_limit.cpp          :  49)   Memory limit set to 300 Gb
+  0:00:00.002     4M / 4M    INFO    General                 (main.cpp                  :  86)   Trying to determine PHRED offset
+  0:00:00.064     4M / 4M    INFO    General                 (main.cpp                  :  92)   Determined value is 33
+  0:00:00.064     4M / 4M    INFO    General                 (hammer_tools.cpp          :  36)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
+  0:00:00.064     4M / 4M    INFO    General                 (main.cpp                  : 113)   Size of aux. kmer data 24 bytes
+     === ITERATION 0 begins ===
+  0:00:00.065     4M / 4M    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 301)   Building kmer index
+  0:00:00.065     4M / 4M    INFO    General                 (kmer_index_builder.hpp    : 117)   Splitting kmer instances into 256 files using 16 threads. This might take a while.
+  0:00:00.066     4M / 4M    INFO    General                 (file_limit.hpp            :  32)   Open file limit set to 4096
+  0:00:00.066     4M / 4M    INFO    General                 (kmer_splitters.hpp        :  89)   Memory available for splitting buffers: 6.24992 Gb
+  0:00:00.066     4M / 4M    INFO    General                 (kmer_splitters.hpp        :  97)   Using cell size of 262144
+  0:00:01.945     8G / 8G    INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq
+  0:00:30.975     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 7928208 reads
+  0:01:17.782     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 16332710 reads
+  0:01:59.575     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 24553033 reads
+  0:02:39.178     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 32655273 reads
+  0:03:10.084     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 39468055 reads
+  0:03:43.064     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 43185775 reads
+  0:04:22.216     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 46883628 reads
+  0:04:59.835     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 50578079 reads
+  0:05:28.781     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 54301838 reads
+  0:06:04.944     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 58035290 reads
+  0:06:42.505     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 61751179 reads
+  0:07:47.652     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 69148240 reads
+  0:18:41.419     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 135897181 reads
+  0:40:08.123     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 269045694 reads
+  0:47:07.126     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
+  1:24:20.075     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 537566276 reads
+  1:38:18.606     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq
+  2:01:28.311     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 112)   Total 827509878 reads processed
+  2:01:29.157    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 120)   Starting k-mer counting.
+  2:36:35.110    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 127)   K-mer counting done. There are 6121625836 kmers in total.
+  2:36:35.111    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 133)   Merging temporary buckets.
+  2:40:14.297    64M / 9G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 314)   Building perfect hash indices
+  2:46:17.232     2G / 9G    INFO    General                 (kmer_index_builder.hpp    : 150)   Merging final buckets.
+  2:46:56.904     2G / 9G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 336)   Index built. Total 2838623566 bytes occupied (3.70963 bits per kmer).
+  2:46:56.906     2G / 9G    INFO   K-mer Counting           (kmer_data.cpp             : 356)   Arranging kmers in hash map order
+  9:59:37.375    94G / 94G   INFO    General                 (main.cpp                  : 148)   Clustering Hamming graph.
+ 13:10:40.930    94G / 94G   INFO    General                 (main.cpp                  : 155)   Extracting clusters
+ 13:50:30.416    94G / 247G  INFO    General                 (main.cpp                  : 167)   Clustering done. Total clusters: 2809442126
+ 13:50:30.587    48G / 247G  INFO   K-mer Counting           (kmer_data.cpp             : 376)   Collecting K-mer information, this takes a while.
+ 13:51:23.846   185G / 247G  INFO   K-mer Counting           (kmer_data.cpp             : 382)   Processing /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq
+ 15:16:03.421   185G / 247G  INFO   K-mer Counting           (kmer_data.cpp             : 382)   Processing /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
+ 16:40:23.157   185G / 247G  INFO   K-mer Counting           (kmer_data.cpp             : 382)   Processing /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq
+ 17:17:16.578   185G / 247G  INFO   K-mer Counting           (kmer_data.cpp             : 389)   Collection done, postprocessing.
+ 17:17:41.145   185G / 247G  INFO   K-mer Counting           (kmer_data.cpp             : 403)   There are 6121625836 kmers in total. Among them 2895424962 (47.2983%) are singletons.
+ 17:17:41.145   185G / 247G  INFO    General                 (main.cpp                  : 173)   Subclustering Hamming graph
+slurmstepd-i32: error: *** JOB 393697 ON i32 CANCELLED AT 2019-10-29T11:21:42 DUE TO TIME LIMIT ***

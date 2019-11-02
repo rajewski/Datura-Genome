@@ -1,0 +1,32 @@
+Wed Oct 30 08:25:59 PDT 2019: indexing /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa
+Wed Oct 30 08:26:10 PDT 2019: Finished.
+Wed Oct 30 08:26:10 PDT 2019: Extracting contigs larger than 2kb.
+Wed Oct 30 08:27:58 PDT 2019: Finished.
+Wed Oct 30 08:27:58 PDT 2019: ONT reads already renamed.
+JobId=401753 JobName=1_Fast-SG.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=02:19:17 TimeLimit=20:00:00 TimeMin=N/A
+   SubmitTime=2019-10-30T08:25:30 EligibleTime=2019-10-30T08:25:30
+   AccrueTime=2019-10-30T08:25:30
+   StartTime=2019-10-30T08:25:54 EndTime=2019-10-31T04:25:54 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-30T08:25:54
+   Partition=intel AllocNode:Sid=parrot.ib.hpcc.ucr.edu:21822
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i33
+   BatchHost=i33
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=40G,node=1,billing=26
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=40G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_Fast-SG/1_Fast-SG.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_Fast-SG
+   StdErr=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/Fast-SG-401753.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/Fast-SG-401753.out
+   Power=
+
