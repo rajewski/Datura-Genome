@@ -18,14 +18,15 @@ window=(10 10 10 10)
 #kmer size is specified by the array job number
 
 #First Round
-if [ ! -e Dstr_v1.3_links1_k$SLURM_ARRAY_TASK_ID.scaffolds.fa ]; then
+if [ ! -e Dstr_v1.3_z100_links1_k$SLURM_ARRAY_TASK_ID.scaffolds.fa ]; then
     LINKS \
 	-f Dstr_v1.3_k101-scaffolds.fa \
 	-s nanopore.txt \
-	-b Dstr_v1.3_links1_k$SLURM_ARRAY_TASK_ID \
+	-b Dstr_v1.3_z100_links1_k$SLURM_ARRAY_TASK_ID \
 	-v 1 \
 	-t 20 \
 	-d 5000 \
+	-z 100 \
 	-k $SLURM_ARRAY_TASK_ID
 else
     echo $(date): Round 1 of links already complete
@@ -35,12 +36,13 @@ fi
 for (( i=0 ; i<${#dist[@]}; i++ ))
 do
     LINKS \
-	-f Dstr_v1.3_links$((i+1))_k$SLURM_ARRAY_TASK_ID.scaffolds.fa \
+	-f Dstr_v1.3_z100_links$((i+1))_k$SLURM_ARRAY_TASK_ID.scaffolds.fa \
 	-s nanopore.txt \
-	-b Dstr_v1.3_links$((i+2))_k$SLURM_ARRAY_TASK_ID \
+	-b Dstr_v1.3_z100_links$((i+2))_k$SLURM_ARRAY_TASK_ID \
 	-v 1 \
 	-t ${window[i]} \
 	-d ${dist[i]} \
+	-z 100 \
 	-k $SLURM_ARRAY_TASK_ID
 done
 
