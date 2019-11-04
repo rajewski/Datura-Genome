@@ -47,8 +47,8 @@ fi
 /rhome/arajewski/bigdata/Datura/software/fastsg/FAST-SG.pl \
     -k 22 \
     -l ultra-long-conf.txt \
-    -r $ASSEMBLY.2kb.fa \
-    -p Dstr_v1.3_k101 \
-    -t $SLURM_NTASKS > Dstr_v1.1.fastsg.log
+    -r $ASSEMBLY \
+    -p Dstr_v1.3_k101_z100 \
+    -t $SLURM_NTASKS > Dstr_v1.3.fastsg.log
 
 scontrol show job $SLURM_JOB_ID
