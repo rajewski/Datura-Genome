@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --ntasks=16
 #SBATCH --nodes=1
-#SBATCH --mem=80G
-#SBATCH --time=2-00:00:00
+#SBATCH --mem=120G
+#SBATCH --time=8-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/loredec-%A.out

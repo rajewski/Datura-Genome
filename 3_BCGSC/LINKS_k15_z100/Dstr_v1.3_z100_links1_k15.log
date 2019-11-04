@@ -1,0 +1,103 @@
+
+Running: /opt/linux/centos/7.x/x86_64/pkgs/LINKS/1.8.4/LINKS [v1.8.4]
+-f Dstr_v1.3_k101-scaffolds.fa
+-s nanopore.txt
+-m 
+-d 5000
+-k 15
+-e 0.1
+-l 5
+-a 0.3
+-t 20
+-o 0
+-z 100
+-b Dstr_v1.3_z100_links1_k15
+-r 
+-p 0.001
+-x 0
+
+----------------- Verifying files -----------------
+
+Checking Dstr.filt_q10_l500_crop50.fastq...ok
+Checking sequence target file Dstr_v1.3_k101-scaffolds.fa...ok
+
+
+=>Reading contig/sequence assembly file: Sat Nov  2 08:35:57 PDT 2019
+Building a Bloom filter using 15-mers derived from sequences in -f Dstr_v1.3_k101-scaffolds.fa...
+*****
+Bloom filter specs
+elements=1975540536
+FPR=0.001
+size (bits)=28403507072
+hash functions=9
+*****
+Contigs (>= 100 bp) processed k=15:
+3841869
+
+
+
+=>Writing Bloom filter to disk (Dstr_v1.3_z100_links1_k15.bloom): Sat Nov  2 09:59:47 PDT 2019
+
+
+=>Reading long reads, building hash table: Sat Nov  2 09:59:50 PDT 2019
+Reads processed k=15, dist=5000, offset=0 nt, sliding step=20 nt:
+
+Reads processed from file 1/1, Dstr.filt_q10_l500_crop50.fastq:
+436203
+
+
+Extracted 165044492 15-mer pairs, from all 436203 sequences provided in nanopore.txt
+
+
+Extracted 165044492 15-mer pairs overall. This is the set that will be used for scaffolding
+
+
+=>Reading sequence contigs (to scaffold), tracking k-mer positions: Sat Nov  2 10:45:14 PDT 2019
+Contigs (>= 100 bp) processed k=15:
+3841869
+
+
+
+=>Scaffolding initiated: Sat Nov  2 16:31:52 PDT 2019
+
+===========PAIRED K-MER STATS===========
+Total number of pairs extracted from -s nanopore.txt: 165044492
+At least one sequence/pair missing from contigs: 0
+Assembled pairs: 2841936 (5683872 sequences)
+	Satisfied in distance/logic within contigs (i.e. -> <-, distance on target: 66841
+	Unsatisfied in distance within contigs (i.e. distance out-of-bounds): 114
+	Unsatisfied pairing logic within contigs (i.e. illogical pairing ->->, <-<- or <-->): 133
+	---
+	Satisfied in distance/logic within a given contig pair (pre-scaffold): 1852084
+	Unsatisfied in distance within a given contig pair (i.e. calculated distances out-of-bounds): 922764
+	---
+Total satisfied: 1918925	unsatisfied: 923011
+
+Breakdown by distances (-d):
+--------k-mers separated by 5000 bp (outer distance)--------
+MIN:4500 MAX:5500 as defined by 5000 * 0.1
+At least one sequence/pair missing: 
+Assembled pairs: 2841936
+	Satisfied in distance/logic within contigs (i.e. -> <-, distance on target: 66841
+	Unsatisfied in distance within contigs (i.e. distance out-of-bounds): 114
+	Unsatisfied pairing logic within contigs (i.e. illogical pairing ->->, <-<- or <-->): 133
+	---
+	Satisfied in distance/logic within a given contig pair (pre-scaffold): 1852084
+	Unsatisfied in distance within a given contig pair (i.e. calculated distances out-of-bounds): 922764
+============================================
+
+Building .gv graph: Sat Nov  2 17:54:28 PDT 2019
+
+
+=>Scaffolding ended: Sat Nov  2 17:55:12 PDT 2019
+Scaffolds layout in: Dstr_v1.3_z100_links1_k15.scaffolds
+Scaffold graph in: Dstr_v1.3_z100_links1_k15.gv
+
+
+=>Making FASTA file: Sat Nov  2 17:55:18 PDT 2019
+Scaffolds FASTA in: Dstr_v1.3_z100_links1_k15.scaffolds.fa
+
+
+=>Wrote correspondence file tracking LINKScontigID <=> OriginalContigNames: Dstr_v1.3_z100_links1_k15.assembly_correspondence.tsv
+
+Scaffolding executed normally Sat Nov  2 17:58:09 PDT 2019

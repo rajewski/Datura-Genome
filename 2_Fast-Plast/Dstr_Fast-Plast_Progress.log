@@ -1,0 +1,39 @@
+Tue Oct  8 22:38:08 2019	Starting Fast-Plast v.1.2.8.
+				Assemblying plastome with 0 single end libraries and 1 paired end libraries.
+Tue Oct  8 22:38:08 2019	Determining best kmer sizes.
+				K-mer sizes for SPAdes set at 31,37,43.
+Tue Oct  8 22:38:08 2019	Starting read trimming with Trimmomatic.
+				Using /opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/trimmomatic-0.36.jar.
+Tue Oct  8 22:42:04 2019	Starting read mapping with bowtie2.
+				Using bowtie2.
+				Samples for Solanales used to make bowtie2 indices.
+Tue Oct  8 23:00:45 2019	Starting initial assembly with SPAdes.
+				Using spades.py.
+Tue Oct  8 23:01:34 2019	Starting improved assembly with afin.
+				Using command /rhome/arajewski/bigdata/Datura/software/Fast-Plast/afin/afin -c filtered_spades_contigs.fsa -r ../1_Trimmed_Reads/Dstr.trimmed* -l 150,50,50 -f .1 -d 100 -x 57 -p 20,15,10 -i 2,1,1 -o Dstr_afin.
+				After afin, there are 1 contigs with a maximum size of 144265 and a minimum size of 144265.
+Wed Oct  9 00:04:14 2019	Removing nested contigs.
+Wed Oct  9 00:04:14 2019	Checking chloroplast gene recovery in contigs.
+				Checking coverage of afin output with 1 contigs after contamination removal.
+				87.6543209876543% of known angiosperm chloroplast genes were recovered in Dstr_afin_iter2.fa.
+Wed Oct  9 00:04:19 2019	Starting plastome finishing.
+				Using /bigdata/littlab/arajewski/Datura/software/Fast-Plast/bin/Angiosperm_Chloroplast_Genes.fsa for LSC, SSC, and IR identification.
+Wed Oct  9 00:07:30 2019	Checking chloroplast gene recovery in contigs.
+Wed Oct  9 00:07:38 2019	Checking chloroplast gene recovery in contigs.
+				87.6543209876543% of known angiosperm chloroplast genes were recovered in Dstr_FULLCP.fsa.
+Wed Oct  9 00:07:43 2019	Assembly finished. Check Final_Assembly directory for chloroplast assembly and accessory files.
+Wed Oct  9 00:07:43 2019	Starting coverage analyses.
+Wed Oct  9 00:23:11 2019	Minimum coverage of 3.36663908399884 for verifying assembly.
+Wed Oct  9 00:23:11 2019	Coverage analysis finished.
+				Problem areas identified for assembly coverage. Attempting to repair assembly.
+********************STARTING REASSEMBLY********************
+				Using command /rhome/arajewski/bigdata/Datura/software/Fast-Plast/afin/afin -c Dstr_removed_lowcoverage_contigs.fsa -r ../1_Trimmed_Reads/Dstr.trimmed* -l 50 -f .1 -d 100 -x 57 -p 15 -i 2 -o Dstr_afin.
+				After afin, there are 3 contigs with a maximum size of 93947 and a minimum size of 6555.
+Wed Oct  9 00:58:32 2019	Removing nested contigs.
+Wed Oct  9 00:58:32 2019	Checking chloroplast gene recovery in contigs.
+Wed Oct  9 00:58:37 2019	Checking chloroplast gene recovery in contigs.
+Wed Oct  9 00:58:42 2019	Checking chloroplast gene recovery in contigs.
+				87.6543209876543% of known angiosperm chloroplast genes were recovered in Dstr_afin_iter0.fa.
+Wed Oct  9 00:58:47 2019	Starting scaffolding with SSPACE.
+Wed Oct  9 00:58:52 2019	Minimum coverage of  for verifying assembly.
+				Problem areas identified for assembly coverage.  Check Dstr_problem_regions_plastid_assembly.txt in the 4.5_Reassemble_Low_Coverage directory.
