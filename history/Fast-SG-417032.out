@@ -1,0 +1,30 @@
+Mon Nov 4 10:56:00 PST 2019: Found index of /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa.
+Mon Nov 4 10:56:00 PST 2019: Large contigs already extracted to /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa.2kb.fa
+Mon Nov 4 10:56:00 PST 2019: ONT reads already renamed.
+JobId=417032 JobName=1_Fast-SG.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=03:13:21 TimeLimit=20:00:00 TimeMin=N/A
+   SubmitTime=2019-11-04T10:56:00 EligibleTime=2019-11-04T10:56:00
+   AccrueTime=2019-11-04T10:56:00
+   StartTime=2019-11-04T10:56:00 EndTime=2019-11-05T06:56:00 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-11-04T10:56:00
+   Partition=intel AllocNode:Sid=pelican.ib.hpcc.ucr.edu:9299
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i33
+   BatchHost=i33
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=40G,node=1,billing=26
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=40G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_Fast-SG/1_Fast-SG.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_Fast-SG
+   StdErr=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/Fast-SG-417032.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/Fast-SG-417032.out
+   Power=
+

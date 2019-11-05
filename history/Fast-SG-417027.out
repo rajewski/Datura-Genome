@@ -1,0 +1,4 @@
+Mon Nov 4 10:50:36 PST 2019: Found index of /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa.
+Mon Nov 4 10:50:36 PST 2019: Large contigs already extracted to /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa.2kb.fa
+Mon Nov 4 10:50:36 PST 2019: ONT reads already renamed.
+slurmstepd-i33: error: *** JOB 417027 ON i33 CANCELLED AT 2019-11-04T10:54:43 ***

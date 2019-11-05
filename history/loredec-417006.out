@@ -1,0 +1,77 @@
+
+module load loredec/0.9
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:BBMap/38.60:loredec/0.9 ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/loredec/0.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/BBMap/38.60:/opt/linux/centos/7.x/x86_64/modules/loredec/0.9 ;export _LMFILES_;
+lordec-correct \
+    -i /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+    -2 /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq,/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+    -k 19 \
+    -s 3 \
+    -t $SLURM_NTASKS \
+    -o Dstr.filt_q10_l500_crop50_loredec.fasta
+-i
+/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq
+-2
+/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq,/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
+-k
+19
+-s
+3
+-t
+16
+-o
+Dstr.filt_q10_l500_crop50_loredec.fasta
+illumina: /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq,/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq_multi_k19_s3.h5 pacbioFile: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq
+kmer_len: 19 solid_kmer_thr: 3
+max_trials: 16 max_error_rate: 0.4 max_branch: 200
+abundance_max: 2147483647
+bRefGraph: 1
+bRefSeq: 0
+loading the graph: /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq_multi_k19_s3.h5
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Fint.c line 1087 in H5F_open(): unable to read superblock
+    major: File accessibilty
+    minor: Read failed
+  #002: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Fsuper.c line 277 in H5F_super_read(): file signature not found
+    major: File accessibilty
+    minor: Not an HDF5 file
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 1640 in H5Aexists(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 1640 in H5Aexists(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 1640 in H5Aexists(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+k-mer length of DBG (0) and -k option (19) do not match
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5F.c line 774 in H5Fclose(): not a file ID
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type

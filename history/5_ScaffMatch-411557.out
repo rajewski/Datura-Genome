@@ -9,3 +9,35 @@ Running ScaffMatch
 2019-10-31 13:33:25,913 - INFO - Stage I: Construct scaffolding graph
 2019-10-31 14:06:03,399 - INFO - Scaffolding graph constructed: 1957.48613405
 2019-10-31 14:06:04,043 - INFO - Stage II: Performing matching heuristics (max_weight)
+2019-11-02 12:01:11,495 - INFO - Scaffolding done: 165307.452485
+2019-11-02 12:02:13,158 - INFO - Results written to the disk: 61.6570301056
+2019-11-02 12:02:13,160 - INFO - Overall time: 167327.246607
+2019-11-02 12:02:13,162 - INFO - --**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--
+2019-11-02 12:02:14,341 - INFO - Done!
+JobId=411557 JobName=5_ScaffMatch.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=1-22:28:52 TimeLimit=2-00:00:00 TimeMin=N/A
+   SubmitTime=2019-10-31T13:33:24 EligibleTime=2019-10-31T13:33:24
+   AccrueTime=2019-10-31T13:33:24
+   StartTime=2019-10-31T13:33:24 EndTime=2019-11-02T13:33:24 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2019-10-31T13:33:24
+   Partition=highmem AllocNode:Sid=parrot.ib.hpcc.ucr.edu:30794
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h01
+   BatchHost=h01
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=101G,node=1,billing=26
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=101G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_Fast-SG/5_ScaffMatch.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_Fast-SG
+   StdErr=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-411557.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-411557.out
+   Power=
+
