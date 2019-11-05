@@ -183,3 +183,4 @@ graph
         system                                  
             cpu                                      : 1273.1
 
+slurmstepd-i01: error: *** JOB 412874 ON i01 CANCELLED AT 2019-11-03T15:03:34 DUE TO TIME LIMIT ***
