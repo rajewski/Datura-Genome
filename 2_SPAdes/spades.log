@@ -2575,3 +2575,48 @@ Default k-mer sizes were set to [21, 33, 55, 77] because estimated read length (
   0:07:48.302     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 289)   Processed 398951081 reads
   0:08:20.514     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 289)   Processed 569711440 reads
   0:43:44.974     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 289)   Processed 1075596266 reads
+  1:24:14.650     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 295)   Adding contigs from previous K
+  1:31:15.028    64M / 9G    INFO    General                 (kmer_splitters.hpp        : 308)   Used 1654391618 reads
+  1:31:15.028    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 120)   Starting k-mer counting.
+  2:03:32.077    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 127)   K-mer counting done. There are 5988858765 kmers in total.
+  2:03:32.078    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 133)   Merging temporary buckets.
+  2:14:13.608    64M / 9G    INFO    General                 (stage.cpp                 : 101)   PROCEDURE == Extension index construction
+  2:14:13.652    64M / 9G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 301)   Building kmer index
+  2:14:13.652    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 117)   Splitting kmer instances into 256 files using 16 threads. This might take a while.
+  2:14:13.653    64M / 9G    INFO    General                 (file_limit.hpp            :  32)   Open file limit set to 4096
+  2:14:13.653    64M / 9G    INFO    General                 (kmer_splitters.hpp        :  89)   Memory available for splitting buffers: 6.2487 Gb
+  2:14:13.653    64M / 9G    INFO    General                 (kmer_splitters.hpp        :  97)   Using cell size of 87381
+  2:14:17.557     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 3894446 kmers
+  2:14:19.578     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 7972246 kmers
+  2:14:21.612     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 12082174 kmers
+  2:14:23.680     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 16139407 kmers
+  2:14:25.700     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 20372254 kmers
+  2:14:27.651     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 24511488 kmers
+  2:14:29.803     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 28768387 kmers
+  2:14:31.704     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 32792223 kmers
+  2:14:33.287     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 36764772 kmers
+  2:14:35.061     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 40750888 kmers
+  2:14:36.666     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 44925381 kmers
+  2:14:38.250     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 49327568 kmers
+  2:14:40.175     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 53722850 kmers
+  2:14:41.642     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 57965170 kmers
+  2:14:42.908     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 62255319 kmers
+  2:14:44.250     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 66344395 kmers
+  2:14:45.515     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 70546832 kmers
+  2:15:13.387     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 138164084 kmers
+  2:16:07.117     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 272415213 kmers
+  2:18:17.351     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 538552275 kmers
+  2:22:05.546     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 1077294091 kmers
+  2:29:42.582     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 2147892269 kmers
+  2:45:16.757     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 380)   Processed 4298967047 kmers
+  2:57:38.402     8G / 9G    INFO    General                 (kmer_splitters.hpp        : 385)   Used 5988881037 kmers.
+  2:57:39.445    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 120)   Starting k-mer counting.
+  3:10:06.351    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 127)   K-mer counting done. There are 5985677832 kmers in total.
+  3:10:06.351    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 133)   Merging temporary buckets.
+  3:20:39.025    64M / 9G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 314)   Building perfect hash indices
+  3:29:38.481     2G / 9G    INFO    General                 (kmer_index_builder.hpp    : 150)   Merging final buckets.
+  3:32:09.719     2G / 9G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 336)   Index built. Total 2775624092 bytes occupied (3.70969 bits per kmer).
+  3:32:16.287     8G / 9G    INFO   DeBruijnExtensionIndexBu (kmer_extension_index_build:  99)   Building k-mer extensions from k+1-mers
+  3:41:19.979     8G / 9G    INFO   DeBruijnExtensionIndexBu (kmer_extension_index_build: 103)   Building k-mer extensions from k+1-mers finished.
+  3:41:19.982     8G / 9G    INFO    General                 (stage.cpp                 : 101)   PROCEDURE == Condensing graph
+  3:41:20.009     8G / 9G    INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 355)   Extracting unbranching paths

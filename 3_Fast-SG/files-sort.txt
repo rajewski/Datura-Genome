@@ -1,3 +1,5 @@
+ultra_ont_raw.I500.FastSG_K22.sam.insert.txt
+ultra_ont_raw.I1000.FastSG_K22.sam.insert.txt
 ultra_ont_raw.I2000.FastSG_K22.sam.insert.txt
 ultra_ont_raw.I4000.FastSG_K22.sam.insert.txt
 ultra_ont_raw.I6000.FastSG_K22.sam.insert.txt

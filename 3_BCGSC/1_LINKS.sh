@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
-#SBATCH --mem=200G
+#SBATCH --mem=350G
 #SBATCH --time=4-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
@@ -34,14 +34,16 @@ fi
 #Second through nth round
 for (( i=0 ; i<${#dist[@]}; i++ ))
 do
-    LINKS \
-	-f Dstr_v1.3_links$((i+1))_k$SLURM_ARRAY_TASK_ID.scaffolds.fa \
-	-s nanopore.txt \
-	-b Dstr_v1.3_links$((i+2))_k$SLURM_ARRAY_TASK_ID \
-	-v 1 \
-	-t ${window[i]} \
-	-d ${dist[i]} \
-	-k $SLURM_ARRAY_TASK_ID
+    if [ ! -e Dstr_v1.3_links$((i+2))_k$SLURM_ARRAY_TASK_ID.scaffolds.fa ]; then
+	LINKS \
+	    -f Dstr_v1.3_links$((i+1))_k$SLURM_ARRAY_TASK_ID.scaffolds.fa \
+	    -s nanopore.txt \
+	    -b Dstr_v1.3_links$((i+2))_k$SLURM_ARRAY_TASK_ID \
+	    -v 1 \
+	    -t ${window[i]} \
+	    -d ${dist[i]} \
+	    -k $SLURM_ARRAY_TASK_ID
+    fi
 done
 
 scontrol show job $SLURM_JOB_ID

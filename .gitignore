@@ -39,3 +39,8 @@ work1_mr/
 .Rproj.user
 3_Flye/
 history/LINKS*.out
+4_BUSCO/**/blast_output/
+4_BUSCO/**/*.tsv
+4_BUSCO/**/*.tar.gz
+4_BUSCO/**/augustus_output/
+4_BUSCO/**/hmmer_output/
