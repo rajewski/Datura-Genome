@@ -1,0 +1,14 @@
+Sample:	Dstr
+Fast-Plast Version:	Fast-Plast v.1.2.8
+Total Cleaned Pair-End Reads:	34986132
+Total Cleaned Single End Reads:	2423593
+Total Concordantly Mapped Reads:	46
+Total Non-concordantly Mapped Reads:	59994
+Total Chloroplast Genome Length:	155895
+Large Single Copy Size:	86509
+Inverted Repeat Size:	25510
+Small Single Copy Size:	18366
+Minimum Coverage Used for Verification: 3.36663908399884
+
+VALUES BELOW FROM REASSEMBLED PLASTOME
+Minimum Coverage Used for Verification: 

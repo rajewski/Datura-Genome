@@ -52,3 +52,9 @@ Wed Nov 6 13:45:29 PST 2019: running minimap2
 [M::worker_pipeline::2423.047*24.67] mapped 3339862 sequences
 [M::worker_pipeline::2523.257*24.88] mapped 3339607 sequences
 [M::worker_pipeline::2621.403*25.12] mapped 3339583 sequences
+[M::worker_pipeline::2723.356*25.35] mapped 3340569 sequences
+[M::worker_pipeline::2822.982*25.54] mapped 3339035 sequences
+[M::worker_pipeline::2927.170*25.72] mapped 3338633 sequences
+[M::worker_pipeline::3028.051*25.84] mapped 3339473 sequences
+[M::worker_pipeline::3133.538*26.02] mapped 3338569 sequences
+[M::worker_pipeline::3234.120*26.15] mapped 3339114 sequences

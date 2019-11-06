@@ -150,3 +150,23 @@ Default k-mer sizes were set to [21, 33, 55, 77] because estimated read length (
   9:09:39.314   132M / 18G   INFO    General                 (kmer_index_builder.hpp    : 120)   Starting k-mer counting.
   9:38:11.912   132M / 18G   INFO    General                 (kmer_index_builder.hpp    : 127)   K-mer counting done. There are 5988858765 kmers in total.
   9:38:11.912   132M / 18G   INFO    General                 (kmer_index_builder.hpp    : 133)   Merging temporary buckets.
+  9:50:04.015   128M / 18G   INFO    General                 (stage.cpp                 : 101)   PROCEDURE == Extension index construction
+  9:50:04.079   128M / 18G   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 301)   Building kmer index
+  9:50:04.080   128M / 18G   INFO    General                 (kmer_index_builder.hpp    : 117)   Splitting kmer instances into 512 files using 32 threads. This might take a while.
+  9:50:04.080   128M / 18G   INFO    General                 (file_limit.hpp            :  32)   Open file limit set to 4096
+  9:50:04.080   128M / 18G   INFO    General                 (kmer_splitters.hpp        :  89)   Memory available for splitting buffers: 3.1237 Gb
+  9:50:04.080   128M / 18G   INFO    General                 (kmer_splitters.hpp        :  97)   Using cell size of 43690
+  9:50:07.848    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 4019358 kmers
+  9:50:10.188    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 8147435 kmers
+  9:50:10.805    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 12363269 kmers
+  9:50:13.579    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 16544865 kmers
+  9:50:18.196    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 20563309 kmers
+  9:50:19.339    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 24919255 kmers
+  9:50:24.694    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 29274902 kmers
+  9:50:30.508    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 33516918 kmers
+  9:50:41.360    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 37804757 kmers
+  9:50:57.392    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 42102792 kmers
+  9:51:02.612    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 46261833 kmers
+  9:51:28.368    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 50551315 kmers
+  9:51:50.382    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 54772175 kmers
+  9:51:54.010    17G / 18G   INFO    General                 (kmer_splitters.hpp        : 380)   Processed 59030223 kmers
