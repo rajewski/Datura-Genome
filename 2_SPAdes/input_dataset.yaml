@@ -1,0 +1,11 @@
+- "left reads":
+  - "/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq"
+  "orientation": "fr"
+  "right reads":
+  - "/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq"
+  "single reads":
+  - "/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq"
+  "type": "paired-end"
+- "single reads":
+  - "/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz"
+  "type": "nanopore"

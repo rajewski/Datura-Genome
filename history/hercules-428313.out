@@ -1,0 +1,54 @@
+ 
+module load hercules/2017-Nov
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+#hercules -1 \
+#    -li /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+#    -si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq \
+#    -si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+#    -o preprocessing/
+
+#map illumina to nanopore
+if [ ! -e alignment.sam ]; then
+    module load minimap2
+    echo $(date): running minimap2
+    minimap2 \
+	-a /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+	-t $SLURM_NTASKS \
+	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq > alignment.sam
+    echo $(date) Done with minimap2
+else
+    echo $(date): minimap2 output SAM found.
+fi
+/usr/bin/modulecmd bash $*
+PATH=/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/bin:/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;
+Wed Nov 6 13:45:29 PST 2019: running minimap2
+[M::mm_idx_gen::176.294*1.69] collected minimizers
+[M::mm_idx_gen::196.969*2.79] sorted minimizers
+[WARNING][1;31m For a multi-part index, no @SQ lines will be outputted. Please use --split-prefix.[0m
+[M::main::196.969*2.79] loaded/built the index for 252627 target sequence(s)
+[M::mm_mapopt_update::206.622*2.70] mid_occ = 1094
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 252627
+[M::mm_idx_stat::211.447*2.66] distinct minimizers: 123333623 (38.26% are singletons); average occurrences: 6.074; average spacing: 5.342
+[M::worker_pipeline::519.673*9.81] mapped 6849257 sequences
+[M::worker_pipeline::583.756*11.62] mapped 6850876 sequences
+[M::worker_pipeline::659.469*13.55] mapped 6854454 sequences
+[M::worker_pipeline::734.257*15.00] mapped 6857514 sequences
+[M::worker_pipeline::803.735*15.98] mapped 6857058 sequences
+[M::worker_pipeline::959.937*17.15] mapped 5354681 sequences
+[M::worker_pipeline::1036.620*17.96] mapped 3340505 sequences
+[M::worker_pipeline::1183.114*18.68] mapped 3340008 sequences
+[M::worker_pipeline::1291.190*19.78] mapped 3340906 sequences
+[M::worker_pipeline::1384.712*20.50] mapped 3340090 sequences
+[M::worker_pipeline::1491.695*21.31] mapped 3340593 sequences
+[M::worker_pipeline::1595.211*21.91] mapped 3340988 sequences
+[M::worker_pipeline::1691.234*22.36] mapped 3341202 sequences
+[M::worker_pipeline::1795.657*22.90] mapped 3340304 sequences
+[M::worker_pipeline::1895.713*23.28] mapped 3340431 sequences
+[M::worker_pipeline::2000.683*23.58] mapped 3340386 sequences
+[M::worker_pipeline::2112.882*23.90] mapped 3339970 sequences
+[M::worker_pipeline::2214.134*24.14] mapped 3340063 sequences
+[M::worker_pipeline::2320.832*24.44] mapped 3340307 sequences
+[M::worker_pipeline::2423.047*24.67] mapped 3339862 sequences
+[M::worker_pipeline::2523.257*24.88] mapped 3339607 sequences
+[M::worker_pipeline::2621.403*25.12] mapped 3339583 sequences
