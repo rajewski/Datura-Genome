@@ -1,0 +1,33 @@
+---
+max read length: 76
+nomerge max read length: 76
+average read length: 73.2496
+average coverage: 11.5763
+libraries:       
+    - type:            paired-end
+      orientation:     fr
+      left reads:      
+        - /bigdata/littlab/arajewski/Datura/2_Fast-Plast/Dstr/2_Bowtie_Mapping/map_pair_hits.1.fq
+      right reads:     
+        - /bigdata/littlab/arajewski/Datura/2_Fast-Plast/Dstr/2_Bowtie_Mapping/map_pair_hits.2.fq
+      single reads:    
+        - /bigdata/littlab/arajewski/Datura/2_Fast-Plast/Dstr/2_Bowtie_Mapping/map_hits.fq
+      data:            
+        unmerged read length: 76
+        merged read length: 0
+        insert size mean: 281.357
+        insert size deviation: 137.491
+        insert size left quantile: 76
+        insert size right quantile: 448
+        insert size median: 325
+        insert size mad: 73
+        insert size distribution: { 66: 1, 76: 1, 99: 1, 128: 1, 202: 1, 
+                                    276: 1, 325: 1, 327: 1, 334: 1, 380: 1, 
+                                    391: 1, 398: 1, 448: 1, 489: 1 }
+        pi threshold:    0
+        binary converted: true
+        single reads mapped: false
+        library index:   0
+        number of reads: 60040
+        total nucleotides: 4397908
+...
