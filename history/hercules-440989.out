@@ -1,0 +1,42 @@
+ 
+module load hercules/2017-Nov
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:hercules/2017-Nov ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/hercules/2017-Nov ;export _LMFILES_;
+#hercules -1 \
+#    -li /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+#    -si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq \
+#    -si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+#    -o preprocessing/
+
+#map illumina to nanopore
+if [ ! -e alignment.sam ]; then
+    module load minimap2
+    echo $(date): running minimap2
+    minimap2 \
+	-a /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+	-t $SLURM_NTASKS \
+	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq > alignment.sam
+    echo $(date) Done with minimap2
+else
+    echo $(date): minimap2 output SAM found.
+fi
+Fri Nov 8 05:14:01 PST 2019: minimap2 output SAM found.
+
+#Massage output SAM file
+if [ ! -e alignment.bam ]; then
+    echo $(date): Converting, sorting, and deduplicating minimap2 output
+    module load samtools/1.9
+    MEM=$((SLURM_MEM_PER_NODE/1024))G
+    samtools view -S -u -b alignment.sam | samtools sort -l 0 -@ $SLURM_NTASKS -m $MEM | samtools rmdup -S - alignment.bam
+    echo $(date): Done
+else
+    echo $(date): Output SAM already converted.
+fi
+Fri Nov 8 05:14:01 PST 2019: Converting, sorting, and deduplicating minimap2 output
+/usr/bin/modulecmd bash $*
+CPATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/include:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/include:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/include/ggobi:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/include:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/include ;export CPATH;LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/lib:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/lib:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib/openmpi:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/lib ;export LD_LIBRARY_PATH;LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib ;export LIBRARY_PATH;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:hercules/2017-Nov:htslib/1.9:samtools/1.9 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/share/man:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;SAMTOOLS_PATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin ;export SAMTOOLS_PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/hercules/2017-Nov:/opt/linux/centos/7.x/x86_64/modules/htslib/1.9:/opt/linux/centos/7.x/x86_64/modules/samtools/1.9 ;export _LMFILES_;
+[E::sam_parse1] missing SAM header
+[W::sam_read1] Parse error at line 5
+[main_samview] truncated file.
+samtools sort: couldn't allocate memory for bam_mem
+[bam_rmdup] input SAM does not have header. Abort!

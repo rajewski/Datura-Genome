@@ -1,4 +1,4 @@
-Command line: /opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin/spades.py	-1	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq	-2	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq	-s	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq	--nanopore	/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz	-t	32	-m	300	-o	/rhome/arajewski/bigdata/Datura/2_SPAdes
+Command line: /opt/linux/centos/7.x/x86_64/pkgs/SPAdes/3.13.1/bin/spades.py	-1	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq	-2	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq	-s	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq	--nanopore	/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz	-t	30	-m	700	-o	/rhome/arajewski/bigdata/Datura/2_SPAdes
 
 System information:
   SPAdes version: 3.13.1
@@ -37,6 +37,6 @@ Assembly parameters:
   Coverage cutoff is turned OFF
 Other parameters:
   Dir for temp files: /rhome/arajewski/bigdata/Datura/2_SPAdes/tmp
-  Threads: 32
-  Memory limit (in Gb): 300
+  Threads: 30
+  Memory limit (in Gb): 700
 
