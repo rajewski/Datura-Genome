@@ -2,7 +2,7 @@
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --mem=101G
-#SBATCH --time=5-00:00:00
+#SBATCH --time=20:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -p highmem
@@ -10,19 +10,51 @@
 set -e
 
 module load bowtie2/2.3.4.1
-module swap miniconda3 miniconda2
+module unload miniconda3 
+module load miniconda2
 conda activate DaturaPy2
+export PATH=/rhome/arajewski/bigdata/Datura/software/ScaffMatch:$PATH
 
-/rhome/arajewski/bigdata/Datura/software/ScaffMatch/scaffmatch \
-  -m \
-  -w Dstr_v1.3_k101-K22_z100 \
-  -c /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa \
-  -s 41,92,193,396,599,802,1000,1208,1400,1600,1800,2000,3000,4000,5000,6000,7000,8000,10000,12000,15000,18000 \
-  -i 414,921,1934,3961,5990,8019,10042,12067,14000,16000,18000,20000,30000,40000,50000,60000,70000,80000,100000,120000,150000,180000 \
-  -p fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr,fr \
-  -1 ultra_ont_raw.I500.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I1000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I2000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I4000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I6000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I8000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I10000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I12000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I14000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I16000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I18000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I20000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I30000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I40000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I50000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I60000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I70000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I80000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I100000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I120000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I150000.FastSG_K22.sam.fwd.sam,ultra_ont_raw.I180000.FastSG_K22.sam.fwd.sam \
-  -2 ultra_ont_raw.I500.FastSG_K22.sam.rev.sam,ultra_ont_raw.I1000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I2000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I4000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I6000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I8000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I10000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I12000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I14000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I16000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I18000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I20000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I30000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I40000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I50000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I60000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I70000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I80000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I100000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I120000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I150000.FastSG_K22.sam.rev.sam,ultra_ont_raw.I180000.FastSG_K22.sam.rev.sam
+#define insert size for file names
+insert=(500 1000 2000 4000 6000 8000 10000 12000 14000 16000 18000 20000 30000 40000 50000 60000 70000 80000 100000 120000 150000 180000)
+obsinsert=(414 921 1934 3961 5990 8019 10042 12067 14000 16000 18000 20000 30000 40000 50000 60000 70000 80000 100000 120000 150000 180000)
+#set sd to 10% of insert size
+a=0
+for i in ${obsinsert[@]}
+do 
+    sdinsert[${a}]=$((i*10/100))
+    ((a++))
+done
 
-
+for i in $(seq 0 $((${#insert[@]}-1)))
+do
+    echo $(date): $i
+    if [ $i -lt 1 ]; then
+	echo $(date): Running iteration $((i+1)) of Scaffmatch.
+	mkdir -p Dstr_v1.3_k101-i${insert[i]}
+	scaffmatch \
+	    -m \
+	    -w Dstr_v1.3_k101-i${insert[i]} \
+	    -c /rhome/arajewski/bigdata/Datura/2_ABySS/k_101/Dstr_v1.3_k101-scaffolds.fa \
+	    -s ${sdinsert[i]} \
+	    -i ${obsinsert[i]} \
+	    -p fr \
+	    -1 ultra_ont_raw.I${insert[i]}.FastSG_K22.sam.fwd.sam \
+	    -2 ultra_ont_raw.I${insert[i]}.FastSG_K22.sam.rev.sam 
+    fi
+    if [ $i -gt 0 ]; then
+	#second through nth iteration
+	mkdir -p Dstr_v1.3_k101-i${insert[i]}
+	scaffmatch \
+	    -m \
+	    -w Dstr_v1.3_k101-i${insert[i]} \
+	    -c Dstr_v1.3_k101-i${insert[i-1]}/scaffolds.da \
+	    -s ${sdinsert[i]} \
+	    -i ${obsinsert[i]} \
+	    -p fr \
+	    -1 ultra_ont_raw.I${insert[i]}.FastSG_K22.sam.fwd.sam \
+	    -2 ultra_ont_raw.I${insert[i]}.FastSG_K22.sam.rev.sam
+   fi
+done
 
 scontrol show job $SLURM_JOB_ID

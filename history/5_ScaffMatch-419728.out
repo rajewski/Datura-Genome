@@ -10,3 +10,4 @@ Running ScaffMatch
 2019-11-04 20:43:53,199 - INFO - Stage I: Construct scaffolding graph
 2019-11-04 22:22:38,930 - INFO - Scaffolding graph constructed: 5925.73053312
 2019-11-04 22:22:42,109 - INFO - Stage II: Performing matching heuristics (max_weight)
+slurmstepd-h02: error: *** JOB 419728 ON h02 CANCELLED AT 2019-11-09T20:44:10 DUE TO TIME LIMIT ***

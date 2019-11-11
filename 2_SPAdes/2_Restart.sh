@@ -1,9 +1,10 @@
 #!/bin/bash -l
-#SBATCH --ntasks=32
-#SBATCH --nodes=1
-#SBATCH --mem=300G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=700G
 #SBATCH --time=8-0:00:00
 #SBATCH --mail-user=araje002@ucr.edu
+#SBATCH -p highmem
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/spades-%A.out
 set -euv

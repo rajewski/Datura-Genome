@@ -1,0 +1,7 @@
+Fri Nov 8 08:18:51 PST 2019: minimap2 output SAM found.
+Fri Nov 8 08:18:51 PST 2019: Converting, sorting, and deduplicating minimap2 output
+[E::sam_parse1] missing SAM header
+[W::sam_read1] Parse error at line 5
+[main_samview] truncated file.
+samtools sort: couldn't allocate memory for bam_mem
+[bam_rmdup] input SAM does not have header. Abort!

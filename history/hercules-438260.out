@@ -1,0 +1,417 @@
+ 
+module load hercules/2017-Nov
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:BBMap/38.60:hercules/2017-Nov ;export LOADEDMODULES;PATH=/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/BBMap/38.60:/opt/linux/centos/7.x/x86_64/modules/hercules/2017-Nov ;export _LMFILES_;
+#hercules -1 \
+#    -li /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+#    -si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq \
+#    -si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+#    -o preprocessing/
+
+#map illumina to nanopore
+if [ ! -e alignment.sam ]; then
+    module load minimap2
+    echo $(date): running minimap2
+    minimap2 \
+	-a /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq \
+	-t $SLURM_NTASKS \
+	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq > alignment.sam
+    echo $(date) Done with minimap2
+else
+    echo $(date): minimap2 output SAM found.
+fi
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:BBMap/38.60:hercules/2017-Nov:minimap2/2.17 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/bin:/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/BBMap/38.60:/opt/linux/centos/7.x/x86_64/modules/hercules/2017-Nov:/opt/linux/centos/7.x/x86_64/modules/minimap2/2.17 ;export _LMFILES_;
+Thu Nov 7 13:24:19 PST 2019: running minimap2
+[M::mm_idx_gen::97.567*1.89] collected minimizers
+[M::mm_idx_gen::106.357*2.81] sorted minimizers
+[WARNING][1;31m For a multi-part index, no @SQ lines will be outputted. Please use --split-prefix.[0m
+[M::main::106.357*2.81] loaded/built the index for 252627 target sequence(s)
+[M::mm_mapopt_update::113.209*2.70] mid_occ = 1094
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 252627
+[M::mm_idx_stat::115.619*2.66] distinct minimizers: 123333623 (38.26% are singletons); average occurrences: 6.074; average spacing: 5.342
+[M::worker_pipeline::348.058*7.14] mapped 6849257 sequences
+[M::worker_pipeline::421.982*8.79] mapped 6850876 sequences
+[M::worker_pipeline::489.647*9.93] mapped 6854454 sequences
+[M::worker_pipeline::546.604*10.86] mapped 6857514 sequences
+[M::worker_pipeline::610.367*11.63] mapped 6857058 sequences
+[M::worker_pipeline::700.060*12.24] mapped 5354681 sequences
+[M::worker_pipeline::815.132*12.65] mapped 3340505 sequences
+[M::worker_pipeline::918.352*13.16] mapped 3340008 sequences
+[M::worker_pipeline::1013.709*13.44] mapped 3340906 sequences
+[M::worker_pipeline::1113.821*13.81] mapped 3340090 sequences
+[M::worker_pipeline::1198.420*14.16] mapped 3340593 sequences
+[M::worker_pipeline::1286.191*14.52] mapped 3340988 sequences
+[M::worker_pipeline::1373.802*14.82] mapped 3341202 sequences
+[M::worker_pipeline::1451.056*15.03] mapped 3340304 sequences
+[M::worker_pipeline::1541.216*15.20] mapped 3340431 sequences
+[M::worker_pipeline::1634.548*15.40] mapped 3340386 sequences
+[M::worker_pipeline::1713.075*15.58] mapped 3339970 sequences
+[M::worker_pipeline::1807.961*15.72] mapped 3340063 sequences
+[M::worker_pipeline::1892.488*15.87] mapped 3340307 sequences
+[M::worker_pipeline::1975.632*16.02] mapped 3339862 sequences
+[M::worker_pipeline::2059.812*16.16] mapped 3339607 sequences
+[M::worker_pipeline::2149.810*16.23] mapped 3339583 sequences
+[M::worker_pipeline::2232.805*16.32] mapped 3340569 sequences
+[M::worker_pipeline::2319.975*16.43] mapped 3339035 sequences
+[M::worker_pipeline::2406.843*16.51] mapped 3338633 sequences
+[M::worker_pipeline::2492.602*16.61] mapped 3339473 sequences
+[M::worker_pipeline::2577.761*16.67] mapped 3338569 sequences
+[M::worker_pipeline::2666.751*16.70] mapped 3339114 sequences
+[M::worker_pipeline::2761.662*16.73] mapped 3338434 sequences
+[M::worker_pipeline::2855.973*16.77] mapped 3338546 sequences
+[M::worker_pipeline::2940.666*16.82] mapped 3338013 sequences
+[M::worker_pipeline::3031.962*16.88] mapped 3338007 sequences
+[M::worker_pipeline::3129.951*16.84] mapped 3338834 sequences
+[M::worker_pipeline::3223.396*16.84] mapped 3337975 sequences
+[M::worker_pipeline::3314.342*16.88] mapped 3338980 sequences
+[M::worker_pipeline::3403.323*16.94] mapped 3339428 sequences
+[M::worker_pipeline::3489.559*16.98] mapped 3338092 sequences
+[M::worker_pipeline::3582.408*17.00] mapped 3338030 sequences
+[M::worker_pipeline::3679.503*16.99] mapped 3339347 sequences
+[M::worker_pipeline::3765.093*17.03] mapped 3340650 sequences
+[M::worker_pipeline::3856.831*17.07] mapped 3338841 sequences
+[M::worker_pipeline::3944.285*17.12] mapped 3338436 sequences
+[M::worker_pipeline::4026.524*17.16] mapped 3337701 sequences
+[M::worker_pipeline::4117.546*17.20] mapped 3340935 sequences
+[M::worker_pipeline::4205.414*17.24] mapped 3339906 sequences
+[M::worker_pipeline::4289.430*17.26] mapped 3338972 sequences
+[M::worker_pipeline::4376.834*17.29] mapped 3338295 sequences
+[M::worker_pipeline::4465.480*17.33] mapped 3340078 sequences
+[M::worker_pipeline::4551.481*17.35] mapped 3340603 sequences
+[M::worker_pipeline::4638.340*17.38] mapped 3338609 sequences
+[M::worker_pipeline::4723.164*17.41] mapped 3338354 sequences
+[M::worker_pipeline::4798.614*17.45] mapped 3338647 sequences
+[M::worker_pipeline::4879.855*17.49] mapped 3340682 sequences
+[M::worker_pipeline::4967.759*17.53] mapped 3338987 sequences
+[M::worker_pipeline::5045.074*17.57] mapped 3338456 sequences
+[M::worker_pipeline::5127.481*17.60] mapped 3337923 sequences
+[M::worker_pipeline::5203.642*17.64] mapped 3340347 sequences
+[M::worker_pipeline::5290.348*17.68] mapped 3339559 sequences
+[M::worker_pipeline::5369.280*17.70] mapped 3338733 sequences
+[M::worker_pipeline::5455.769*17.74] mapped 3337996 sequences
+[M::worker_pipeline::5531.794*17.77] mapped 3340280 sequences
+[M::worker_pipeline::5614.419*17.80] mapped 3342886 sequences
+[M::worker_pipeline::5693.366*17.83] mapped 3340944 sequences
+[M::worker_pipeline::5779.727*17.85] mapped 3340087 sequences
+[M::worker_pipeline::5874.915*17.88] mapped 3339353 sequences
+[M::worker_pipeline::5960.305*17.89] mapped 3343496 sequences
+[M::worker_pipeline::6043.994*17.91] mapped 3341483 sequences
+[M::worker_pipeline::6126.085*17.92] mapped 3340157 sequences
+[M::worker_pipeline::6213.125*17.94] mapped 3339393 sequences
+[M::worker_pipeline::6302.216*17.96] mapped 3342278 sequences
+[M::worker_pipeline::6382.982*17.97] mapped 3342367 sequences
+[M::worker_pipeline::6464.987*17.98] mapped 3340704 sequences
+[M::worker_pipeline::6561.133*17.98] mapped 3339865 sequences
+[M::worker_pipeline::6643.104*17.99] mapped 3340067 sequences
+[M::worker_pipeline::6727.417*18.00] mapped 3343379 sequences
+[M::worker_pipeline::6818.259*18.02] mapped 3340874 sequences
+[M::worker_pipeline::6902.634*18.04] mapped 3340449 sequences
+[M::worker_pipeline::6991.511*18.05] mapped 3339177 sequences
+[M::worker_pipeline::7066.675*18.06] mapped 3343855 sequences
+[M::worker_pipeline::7165.220*18.08] mapped 3342617 sequences
+[M::worker_pipeline::7243.596*18.07] mapped 3341080 sequences
+[M::worker_pipeline::7337.335*18.09] mapped 3340197 sequences
+[M::worker_pipeline::7418.369*18.10] mapped 3341771 sequences
+[M::worker_pipeline::7502.688*18.12] mapped 3344039 sequences
+[M::worker_pipeline::7594.473*18.12] mapped 3342301 sequences
+[M::worker_pipeline::7672.740*18.13] mapped 3341173 sequences
+[M::worker_pipeline::7732.431*18.03] mapped 3331114 sequences
+[M::worker_pipeline::7930.584*17.84] mapped 6871484 sequences
+[M::worker_pipeline::7997.499*17.83] mapped 6873489 sequences
+[M::worker_pipeline::8064.995*17.83] mapped 6876877 sequences
+[M::worker_pipeline::8130.275*17.83] mapped 6880202 sequences
+[M::worker_pipeline::8214.171*17.80] mapped 6880499 sequences
+[M::worker_pipeline::8312.104*17.77] mapped 5305964 sequences
+[M::worker_pipeline::8407.397*17.79] mapped 3346520 sequences
+[M::worker_pipeline::8508.835*17.79] mapped 3346740 sequences
+[M::worker_pipeline::8625.868*17.77] mapped 3346548 sequences
+[M::worker_pipeline::8728.264*17.79] mapped 3346064 sequences
+[M::worker_pipeline::8828.460*17.80] mapped 3346874 sequences
+[M::worker_pipeline::8931.760*17.81] mapped 3347206 sequences
+[M::worker_pipeline::9031.198*17.82] mapped 3348024 sequences
+[M::worker_pipeline::9139.405*17.82] mapped 3346679 sequences
+[M::worker_pipeline::9230.054*17.84] mapped 3346951 sequences
+[M::worker_pipeline::9326.734*17.85] mapped 3346421 sequences
+[M::worker_pipeline::9412.928*17.87] mapped 3346266 sequences
+[M::worker_pipeline::9510.471*17.88] mapped 3347235 sequences
+[M::worker_pipeline::9603.466*17.90] mapped 3347161 sequences
+[M::worker_pipeline::9701.981*17.91] mapped 3346953 sequences
+[M::worker_pipeline::9793.701*17.93] mapped 3353140 sequences
+[M::worker_pipeline::9883.338*17.95] mapped 3355376 sequences
+[M::worker_pipeline::9974.773*17.96] mapped 3352203 sequences
+[M::worker_pipeline::10068.217*17.98] mapped 3348648 sequences
+[M::worker_pipeline::10155.660*17.99] mapped 3351114 sequences
+[M::worker_pipeline::10240.027*18.01] mapped 3347753 sequences
+[M::worker_pipeline::10344.176*18.02] mapped 3349887 sequences
+[M::worker_pipeline::10432.610*18.03] mapped 3348638 sequences
+[M::worker_pipeline::10522.267*18.05] mapped 3348319 sequences
+[M::worker_pipeline::10612.954*18.06] mapped 3349264 sequences
+[M::worker_pipeline::10701.292*18.07] mapped 3347425 sequences
+[M::worker_pipeline::10788.731*18.09] mapped 3350255 sequences
+[M::worker_pipeline::10880.614*18.10] mapped 3350439 sequences
+[M::worker_pipeline::10981.262*18.11] mapped 3349537 sequences
+[M::worker_pipeline::11081.376*18.12] mapped 3355845 sequences
+[M::worker_pipeline::11163.426*18.13] mapped 3356083 sequences
+[M::worker_pipeline::11258.613*18.14] mapped 3354783 sequences
+[M::worker_pipeline::11351.464*18.15] mapped 3355599 sequences
+[M::worker_pipeline::11442.082*18.16] mapped 3359533 sequences
+[M::worker_pipeline::11525.775*18.17] mapped 3356314 sequences
+[M::worker_pipeline::11626.460*18.19] mapped 3354048 sequences
+[M::worker_pipeline::11715.001*18.20] mapped 3355096 sequences
+[M::worker_pipeline::11820.309*18.21] mapped 3358230 sequences
+[M::worker_pipeline::11908.434*18.22] mapped 3357448 sequences
+[M::worker_pipeline::11997.116*18.23] mapped 3355357 sequences
+[M::worker_pipeline::12092.951*18.24] mapped 3353897 sequences
+[M::worker_pipeline::12182.938*18.26] mapped 3356690 sequences
+[M::worker_pipeline::12271.714*18.27] mapped 3359388 sequences
+[M::worker_pipeline::12361.300*18.28] mapped 3356010 sequences
+[M::worker_pipeline::12452.374*18.29] mapped 3353745 sequences
+[M::worker_pipeline::12579.733*18.24] mapped 3354819 sequences
+[M::worker_pipeline::12677.741*18.25] mapped 3359872 sequences
+[M::worker_pipeline::12765.767*18.26] mapped 3358327 sequences
+[M::worker_pipeline::12862.375*18.27] mapped 3355818 sequences
+[M::worker_pipeline::12953.402*18.28] mapped 3356410 sequences
+[M::worker_pipeline::13048.380*18.29] mapped 3358953 sequences
+[M::worker_pipeline::13134.901*18.29] mapped 3359833 sequences
+[M::worker_pipeline::13229.331*18.30] mapped 3355380 sequences
+[M::worker_pipeline::13317.986*18.31] mapped 3354462 sequences
+[M::worker_pipeline::13413.081*18.31] mapped 3355693 sequences
+[M::worker_pipeline::13511.498*18.31] mapped 3371925 sequences
+[M::worker_pipeline::13604.015*18.32] mapped 3369432 sequences
+[M::worker_pipeline::13694.385*18.32] mapped 3365684 sequences
+[M::worker_pipeline::13784.485*18.33] mapped 3362676 sequences
+[M::worker_pipeline::13876.861*18.34] mapped 3365272 sequences
+[M::worker_pipeline::13967.567*18.35] mapped 3369105 sequences
+[M::worker_pipeline::14061.260*18.35] mapped 3361349 sequences
+[M::worker_pipeline::14157.629*18.36] mapped 3360235 sequences
+[M::worker_pipeline::14260.307*18.35] mapped 3361582 sequences
+[M::worker_pipeline::14344.555*18.35] mapped 3370671 sequences
+[M::worker_pipeline::14432.321*18.36] mapped 3363234 sequences
+[M::worker_pipeline::14526.764*18.37] mapped 3359537 sequences
+[M::worker_pipeline::14619.357*18.38] mapped 3359767 sequences
+[M::worker_pipeline::14699.614*18.38] mapped 3367117 sequences
+[M::worker_pipeline::14797.762*18.39] mapped 3366835 sequences
+[M::worker_pipeline::14885.696*18.40] mapped 3361226 sequences
+[M::worker_pipeline::14971.914*18.41] mapped 3360031 sequences
+[M::worker_pipeline::15064.791*18.41] mapped 3363713 sequences
+[M::worker_pipeline::15147.538*18.42] mapped 3378445 sequences
+[M::worker_pipeline::15240.652*18.43] mapped 3367927 sequences
+[M::worker_pipeline::15328.327*18.43] mapped 3365692 sequences
+[M::worker_pipeline::15425.928*18.44] mapped 3361788 sequences
+[M::worker_pipeline::15516.823*18.44] mapped 3379979 sequences
+[M::worker_pipeline::15611.894*18.45] mapped 3376537 sequences
+[M::worker_pipeline::15694.647*18.45] mapped 3369797 sequences
+[M::worker_pipeline::15787.284*18.45] mapped 3364690 sequences
+[M::worker_pipeline::15813.921*18.42] mapped 1917786 sequences
+[M::mm_idx_gen::15874.972*18.36] collected minimizers
+[M::mm_idx_gen::15878.658*18.35] sorted minimizers
+[M::main::15878.658*18.35] loaded/built the index for 183576 target sequence(s)
+[M::mm_mapopt_update::15878.658*18.35] mid_occ = 1094
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 183576
+[M::mm_idx_stat::15879.849*18.35] distinct minimizers: 90608569 (47.80% are singletons); average occurrences: 4.132; average spacing: 5.345
+[M::worker_pipeline::16046.047*18.29] mapped 6849257 sequences
+[M::worker_pipeline::16086.675*18.28] mapped 6850876 sequences
+[M::worker_pipeline::16159.536*18.28] mapped 6854454 sequences
+[M::worker_pipeline::16207.359*18.28] mapped 6857514 sequences
+[M::worker_pipeline::16267.115*18.28] mapped 6857058 sequences
+[M::worker_pipeline::16359.517*18.28] mapped 5354681 sequences
+[M::worker_pipeline::16435.226*18.28] mapped 3340505 sequences
+[M::worker_pipeline::16520.007*18.29] mapped 3340008 sequences
+[M::worker_pipeline::16599.038*18.29] mapped 3340906 sequences
+[M::worker_pipeline::16684.092*18.29] mapped 3340090 sequences
+[M::worker_pipeline::16761.946*18.29] mapped 3340593 sequences
+[M::worker_pipeline::16841.786*18.30] mapped 3340988 sequences
+[M::worker_pipeline::16910.190*18.30] mapped 3341202 sequences
+[M::worker_pipeline::16999.448*18.31] mapped 3340304 sequences
+[M::worker_pipeline::17080.486*18.31] mapped 3340431 sequences
+[M::worker_pipeline::17153.708*18.31] mapped 3340386 sequences
+[M::worker_pipeline::17297.492*18.26] mapped 3339970 sequences
+[M::worker_pipeline::17374.571*18.26] mapped 3340063 sequences
+[M::worker_pipeline::17462.712*18.26] mapped 3340307 sequences
+[M::worker_pipeline::17548.670*18.25] mapped 3339862 sequences
+[M::worker_pipeline::17631.466*18.25] mapped 3339607 sequences
+[M::worker_pipeline::17718.958*18.26] mapped 3339583 sequences
+[M::worker_pipeline::17793.932*18.25] mapped 3340569 sequences
+[M::worker_pipeline::17886.043*18.25] mapped 3339035 sequences
+[M::worker_pipeline::17960.034*18.25] mapped 3338633 sequences
+[M::worker_pipeline::18048.347*18.25] mapped 3339473 sequences
+[M::worker_pipeline::18131.693*18.25] mapped 3338569 sequences
+[M::worker_pipeline::18212.211*18.25] mapped 3339114 sequences
+[M::worker_pipeline::18301.313*18.24] mapped 3338434 sequences
+[M::worker_pipeline::18390.191*18.24] mapped 3338546 sequences
+[M::worker_pipeline::18480.656*18.23] mapped 3338013 sequences
+[M::worker_pipeline::18570.090*18.23] mapped 3338007 sequences
+[M::worker_pipeline::18642.337*18.23] mapped 3338834 sequences
+[M::worker_pipeline::18723.522*18.24] mapped 3337975 sequences
+[M::worker_pipeline::18798.549*18.24] mapped 3338980 sequences
+[M::worker_pipeline::18882.177*18.24] mapped 3339428 sequences
+[M::worker_pipeline::18963.542*18.25] mapped 3338092 sequences
+[M::worker_pipeline::19044.632*18.25] mapped 3338030 sequences
+[M::worker_pipeline::19119.039*18.26] mapped 3339347 sequences
+[M::worker_pipeline::19198.066*18.26] mapped 3340650 sequences
+[M::worker_pipeline::19277.807*18.26] mapped 3338841 sequences
+[M::worker_pipeline::19356.124*18.27] mapped 3338436 sequences
+[M::worker_pipeline::19434.667*18.27] mapped 3337701 sequences
+[M::worker_pipeline::19515.026*18.28] mapped 3340935 sequences
+[M::worker_pipeline::19595.759*18.28] mapped 3339906 sequences
+[M::worker_pipeline::19674.033*18.28] mapped 3338972 sequences
+[M::worker_pipeline::19760.788*18.28] mapped 3338295 sequences
+[M::worker_pipeline::19835.589*18.29] mapped 3340078 sequences
+[M::worker_pipeline::19918.168*18.29] mapped 3340603 sequences
+[M::worker_pipeline::20000.045*18.29] mapped 3338609 sequences
+[M::worker_pipeline::20075.150*18.30] mapped 3338354 sequences
+[M::worker_pipeline::20155.733*18.30] mapped 3338647 sequences
+[M::worker_pipeline::20233.157*18.31] mapped 3340682 sequences
+[M::worker_pipeline::20304.836*18.31] mapped 3338987 sequences
+[M::worker_pipeline::20387.788*18.31] mapped 3338456 sequences
+[M::worker_pipeline::20472.594*18.32] mapped 3337923 sequences
+[M::worker_pipeline::20551.832*18.32] mapped 3340347 sequences
+[M::worker_pipeline::20625.061*18.32] mapped 3339559 sequences
+[M::worker_pipeline::20703.026*18.32] mapped 3338733 sequences
+[M::worker_pipeline::20784.929*18.33] mapped 3337996 sequences
+[M::worker_pipeline::20860.248*18.33] mapped 3340280 sequences
+[M::worker_pipeline::20943.226*18.33] mapped 3342886 sequences
+[M::worker_pipeline::21015.294*18.34] mapped 3340944 sequences
+[M::worker_pipeline::21097.426*18.34] mapped 3340087 sequences
+[M::worker_pipeline::21179.373*18.34] mapped 3339353 sequences
+[M::worker_pipeline::21267.422*18.35] mapped 3343496 sequences
+[M::worker_pipeline::21341.929*18.34] mapped 3341483 sequences
+[M::worker_pipeline::21421.481*18.35] mapped 3340157 sequences
+[M::worker_pipeline::21497.677*18.35] mapped 3339393 sequences
+[M::worker_pipeline::21585.687*18.35] mapped 3342278 sequences
+[M::worker_pipeline::21657.052*18.35] mapped 3342367 sequences
+[M::worker_pipeline::21740.015*18.35] mapped 3340704 sequences
+[M::worker_pipeline::21809.628*18.36] mapped 3339865 sequences
+[M::worker_pipeline::21890.192*18.36] mapped 3340067 sequences
+[M::worker_pipeline::21971.453*18.36] mapped 3343379 sequences
+[M::worker_pipeline::22053.256*18.37] mapped 3340874 sequences
+[M::worker_pipeline::22130.716*18.37] mapped 3340449 sequences
+[M::worker_pipeline::22206.679*18.37] mapped 3339177 sequences
+[M::worker_pipeline::22282.356*18.37] mapped 3343855 sequences
+[M::worker_pipeline::22367.130*18.38] mapped 3342617 sequences
+[M::worker_pipeline::22433.983*18.38] mapped 3341080 sequences
+[M::worker_pipeline::22516.319*18.39] mapped 3340197 sequences
+[M::worker_pipeline::22597.037*18.38] mapped 3341771 sequences
+[M::worker_pipeline::22684.621*18.39] mapped 3344039 sequences
+[M::worker_pipeline::22758.639*18.39] mapped 3342301 sequences
+[M::worker_pipeline::22833.506*18.39] mapped 3341173 sequences
+[M::worker_pipeline::22895.495*18.36] mapped 3331114 sequences
+[M::worker_pipeline::23055.765*18.31] mapped 6871484 sequences
+[M::worker_pipeline::23111.340*18.31] mapped 6873489 sequences
+[M::worker_pipeline::23161.616*18.31] mapped 6876877 sequences
+[M::worker_pipeline::23216.076*18.31] mapped 6880202 sequences
+[M::worker_pipeline::23263.361*18.31] mapped 6880499 sequences
+[M::worker_pipeline::23366.572*18.30] mapped 5305964 sequences
+[M::worker_pipeline::23435.779*18.30] mapped 3346520 sequences
+[M::worker_pipeline::23521.303*18.30] mapped 3346740 sequences
+[M::worker_pipeline::23603.931*18.30] mapped 3346548 sequences
+[M::worker_pipeline::23681.427*18.30] mapped 3346064 sequences
+[M::worker_pipeline::23758.537*18.30] mapped 3346874 sequences
+[M::worker_pipeline::23829.216*18.30] mapped 3347206 sequences
+[M::worker_pipeline::23905.601*18.31] mapped 3348024 sequences
+[M::worker_pipeline::23981.311*18.31] mapped 3346679 sequences
+[M::worker_pipeline::24061.548*18.32] mapped 3346951 sequences
+[M::worker_pipeline::24131.047*18.32] mapped 3346421 sequences
+[M::worker_pipeline::24200.388*18.33] mapped 3346266 sequences
+[M::worker_pipeline::24276.214*18.33] mapped 3347235 sequences
+[M::worker_pipeline::24346.793*18.34] mapped 3347161 sequences
+[M::worker_pipeline::24427.695*18.34] mapped 3346953 sequences
+[M::worker_pipeline::24500.734*18.35] mapped 3353140 sequences
+[M::worker_pipeline::24570.926*18.35] mapped 3355376 sequences
+[M::worker_pipeline::24643.125*18.36] mapped 3352203 sequences
+[M::worker_pipeline::24716.783*18.36] mapped 3348648 sequences
+[M::worker_pipeline::24788.734*18.37] mapped 3351114 sequences
+[M::worker_pipeline::24864.563*18.37] mapped 3347753 sequences
+[M::worker_pipeline::24938.532*18.37] mapped 3349887 sequences
+[M::worker_pipeline::25007.965*18.38] mapped 3348638 sequences
+[M::worker_pipeline::25081.663*18.38] mapped 3348319 sequences
+[M::worker_pipeline::25152.807*18.39] mapped 3349264 sequences
+[M::worker_pipeline::25231.304*18.39] mapped 3347425 sequences
+[M::worker_pipeline::25308.815*18.40] mapped 3350255 sequences
+[M::worker_pipeline::25380.150*18.40] mapped 3350439 sequences
+[M::worker_pipeline::25456.259*18.40] mapped 3349537 sequences
+[M::worker_pipeline::25526.226*18.41] mapped 3355845 sequences
+[M::worker_pipeline::25602.701*18.41] mapped 3356083 sequences
+[M::worker_pipeline::25678.609*18.42] mapped 3354783 sequences
+[M::worker_pipeline::25755.447*18.42] mapped 3355599 sequences
+[M::worker_pipeline::25822.611*18.42] mapped 3359533 sequences
+[M::worker_pipeline::25898.679*18.43] mapped 3356314 sequences
+[M::worker_pipeline::25976.101*18.43] mapped 3354048 sequences
+[M::worker_pipeline::26049.640*18.44] mapped 3355096 sequences
+[M::worker_pipeline::26132.118*18.44] mapped 3358230 sequences
+[M::worker_pipeline::26211.283*18.44] mapped 3357448 sequences
+[M::worker_pipeline::26280.318*18.45] mapped 3355357 sequences
+[M::worker_pipeline::26353.542*18.45] mapped 3353897 sequences
+[M::worker_pipeline::26427.009*18.45] mapped 3356690 sequences
+[M::worker_pipeline::26500.003*18.46] mapped 3359388 sequences
+[M::worker_pipeline::26574.655*18.46] mapped 3356010 sequences
+[M::worker_pipeline::26650.608*18.47] mapped 3353745 sequences
+[M::worker_pipeline::26736.438*18.47] mapped 3354819 sequences
+[M::worker_pipeline::26813.326*18.47] mapped 3359872 sequences
+[M::worker_pipeline::26878.705*18.47] mapped 3358327 sequences
+[M::worker_pipeline::26954.673*18.48] mapped 3355818 sequences
+[M::worker_pipeline::27034.128*18.48] mapped 3356410 sequences
+[M::worker_pipeline::27100.191*18.48] mapped 3358953 sequences
+[M::worker_pipeline::27182.193*18.49] mapped 3359833 sequences
+[M::worker_pipeline::27254.833*18.49] mapped 3355380 sequences
+[M::worker_pipeline::27340.778*18.49] mapped 3354462 sequences
+[M::worker_pipeline::27405.427*18.50] mapped 3355693 sequences
+[M::worker_pipeline::27486.100*18.50] mapped 3371925 sequences
+[M::worker_pipeline::27559.489*18.50] mapped 3369432 sequences
+[M::worker_pipeline::27634.664*18.51] mapped 3365684 sequences
+[M::worker_pipeline::27701.602*18.51] mapped 3362676 sequences
+[M::worker_pipeline::27785.014*18.52] mapped 3365272 sequences
+[M::worker_pipeline::27847.273*18.52] mapped 3369105 sequences
+[M::worker_pipeline::27927.299*18.52] mapped 3361349 sequences
+[M::worker_pipeline::27999.430*18.53] mapped 3360235 sequences
+[M::worker_pipeline::28075.843*18.53] mapped 3361582 sequences
+[M::worker_pipeline::28145.771*18.53] mapped 3370671 sequences
+[M::worker_pipeline::28225.996*18.54] mapped 3363234 sequences
+[M::worker_pipeline::28294.936*18.54] mapped 3359537 sequences
+[M::worker_pipeline::28371.827*18.54] mapped 3359767 sequences
+[M::worker_pipeline::28446.663*18.55] mapped 3367117 sequences
+[M::worker_pipeline::28519.471*18.55] mapped 3366835 sequences
+[M::worker_pipeline::28594.431*18.56] mapped 3361226 sequences
+[M::worker_pipeline::28668.476*18.56] mapped 3360031 sequences
+[M::worker_pipeline::28739.810*18.56] mapped 3363713 sequences
+[M::worker_pipeline::28813.423*18.57] mapped 3378445 sequences
+[M::worker_pipeline::28884.746*18.57] mapped 3367927 sequences
+[M::worker_pipeline::28966.627*18.57] mapped 3365692 sequences
+[M::worker_pipeline::29040.420*18.57] mapped 3361788 sequences
+[M::worker_pipeline::29113.719*18.58] mapped 3379979 sequences
+[M::worker_pipeline::29187.979*18.58] mapped 3376537 sequences
+[M::worker_pipeline::29265.467*18.58] mapped 3369797 sequences
+[M::worker_pipeline::29331.441*18.58] mapped 3364690 sequences
+[M::worker_pipeline::29367.392*18.56] mapped 1917786 sequences
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -a -t 20 /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
+[M::main] Real time: 29370.611 sec; CPU: 545062.574 sec; Peak RSS: 43.115 GB
+Thu Nov 7 21:33:51 PST 2019 Done with minimap2
+
+#Massage output SAM file
+if [ ! -e alignment.bam ]; then
+    echo $(date): Converting, sorting, and deduplicating minimap2 output
+    module load samtools/1.9
+    MEM=$((SLURM_MEM_PER_NODE/1024))
+    samtools view -S -u -b alignment.sam | samtools sort -l 0 -@ $SLURM_NTASKS -m $MEM | samtools rmdup -S - alignment.bam
+    echo $(date): Done
+else
+    echo $(date): Output SAM already converted.
+fi
+Thu Nov 7 21:33:51 PST 2019: Converting, sorting, and deduplicating minimap2 output
+/usr/bin/modulecmd bash $*
+CPATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/include:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/include:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/include/ggobi:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/include:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/include ;export CPATH;LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/lib:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/lib:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib/openmpi:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/lib ;export LD_LIBRARY_PATH;LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib ;export LIBRARY_PATH;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:perl/5.20.2:less-highlight/1.0:iigb_utilities/1:vim/8.1:BBMap/38.60:hercules/2017-Nov:minimap2/2.17:htslib/1.9:samtools/1.9 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/share/man:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/share/man:/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/htslib/1.9/bin:/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/bin:/opt/linux/centos/7.x/x86_64/pkgs/hercules/2017-Nov/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;SAMTOOLS_PATH=/opt/linux/centos/7.x/x86_64/pkgs/samtools/1.9/bin ;export SAMTOOLS_PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/BBMap/38.60:/opt/linux/centos/7.x/x86_64/modules/hercules/2017-Nov:/opt/linux/centos/7.x/x86_64/modules/minimap2/2.17:/opt/linux/centos/7.x/x86_64/modules/htslib/1.9:/opt/linux/centos/7.x/x86_64/modules/samtools/1.9 ;export _LMFILES_;
+[bam_sort] -m setting (200 bytes) is less than the minimum required (1M).
+
+Trying to run with -m too small can lead to the creation of a very large number
+of temporary files.  This may make sort fail due to it exceeding limits on the
+number of files it can have open at the same time.
+
+Please check your -m parameter.  It should be an integer followed by one of the
+letters K (for kilobytes), M (megabytes) or G (gigabytes).  You should ensure it
+is at least the minimum above, and much higher if you are sorting a large file.
+[bam_rmdup] input SAM does not have header. Abort!
+[E::sam_parse1] missing SAM header
+[W::sam_read1] Parse error at line 5
+[main_samview] truncated file.

@@ -18,7 +18,7 @@ dataset /rhome/arajewski/bigdata/Datura/2_SPAdes/dataset.info
 log_filename    log.properties
 
 output_base /rhome/arajewski/bigdata/Datura/2_SPAdes
-tmp_dir /rhome/arajewski/bigdata/Datura/2_SPAdes/tmp/spades_LSQrpM
+tmp_dir /rhome/arajewski/bigdata/Datura/2_SPAdes/tmp/spades_KvWHmP
 
 main_iteration true
 ; iterative mode switcher, activates additional contigs usage
@@ -28,8 +28,8 @@ load_from /rhome/arajewski/bigdata/Datura/2_SPAdes/K77/saves
 
 ; Multithreading options
 temp_bin_reads_dir	.bin_reads/
-max_threads 32
-max_memory 300
+max_threads 30
+max_memory 700
 buffer_size     512; in Megabytes
 
 entry_point construction
