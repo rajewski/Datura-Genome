@@ -1,0 +1,5 @@
+Tue Nov 12 08:32:55 PST 2019: Minimap2 index already present.
+Tue Nov 12 08:32:55 PST 2019: minimap2 output SAM found.
+Tue Nov 12 08:32:55 PST 2019: Converting, sorting, and deduplicating minimap2 output
+samtools sort: couldn't allocate memory for bam_mem
+[bam_rmdup] input SAM does not have header. Abort!

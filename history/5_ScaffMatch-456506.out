@@ -1,0 +1,4 @@
+miniconda2/4.4.10(23):ERROR:150: Module 'miniconda2/4.4.10' conflicts with the currently loaded module(s) 'python/2.7.14'
+miniconda2/4.4.10(23):ERROR:102: Tcl command execution failed: conflict    python
+
+/usr/share/Modules/init/bash: line 2: deactivate: No such file or directory
