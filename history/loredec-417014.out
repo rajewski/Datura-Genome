@@ -183,3 +183,4 @@ graph
         system                                  
             cpu                                      : 1106.9
 
+slurmstepd-i22: error: *** JOB 417014 ON i22 CANCELLED AT 2019-11-12T10:31:22 DUE TO TIME LIMIT ***

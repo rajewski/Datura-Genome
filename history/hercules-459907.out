@@ -1,0 +1,7 @@
+Tue Nov 12 11:36:52 PST 2019: Minimap2 index already present.
+Tue Nov 12 11:36:52 PST 2019: minimap2 output SAM found.
+Tue Nov 12 11:36:52 PST 2019: Converting, sorting, and deduplicating minimap2 output
+[bam_sort_core] merging from 0 files and 20 in-memory blocks...
+[bam_rmdupse_core] 199110831 / 352809120 = 0.5644 in library '	'
+Tue Nov 12 12:38:31 PST 2019: Done
+/var/spool/slurmd/job459907/slurm_script: line 60: exit: o: numeric argument required

@@ -1,0 +1,12 @@
+Tue Nov 12 11:34:01 PST 2019: Minimap2 index already present.
+Tue Nov 12 11:34:01 PST 2019: minimap2 output SAM found.
+Tue Nov 12 11:34:01 PST 2019: Converting, sorting, and deduplicating minimap2 output
+[bam_sort] -m setting (10K bytes) is less than the minimum required (1M).
+
+Trying to run with -m too small can lead to the creation of a very large number
+of temporary files.  This may make sort fail due to it exceeding limits on the
+number of files it can have open at the same time.
+
+Please check your -m parameter.  It should be an integer followed by one of the
+letters K (for kilobytes), M (megabytes) or G (gigabytes).  You should ensure it
+is at least the minimum above, and much higher if you are sorting a large file.

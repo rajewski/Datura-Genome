@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
-#SBATCH --mem=101G
-#SBATCH --time=20:00:00
+#SBATCH --mem=150G
+#SBATCH --time=3-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -p highmem
@@ -10,9 +10,11 @@
 set -e
 
 module load bowtie2/2.3.4.1
-module unload miniconda3 
+module unload miniconda3 python anaconda2 anaconda3
+module load python/2.7.14
 module load miniconda2
 conda activate DaturaPy2
+
 export PATH=/rhome/arajewski/bigdata/Datura/software/ScaffMatch:$PATH
 
 #define insert size for file names
