@@ -1,0 +1,6 @@
+Wed Nov 13 20:42:32 PST 2019: Minimap2 index already present.
+Wed Nov 13 20:42:32 PST 2019: Minimap2 output SAM found.
+Wed Nov 13 20:42:32 PST 2019: Converting and sorting minimap2 output...
+/var/spool/slurmd/job467272/slurm_script: line 63: 23550 Broken pipe             samtools view -S -u -b -T $COMPNANOPORE DstrCompAlignment.sam
+     23551 Killed                  | samtools sort -l 0 -@ $SLURM_CPUS_PER_TASK -m $((SLURM_MEM_PER_CPU/1024))G -o DstrCompAlignment.bam
+slurmstepd-h05: error: Detected 1 oom-kill event(s) in step 467272.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

@@ -1,1 +1,1 @@
-mr.41.15.15.0.02.1.fa
+/rhome/arajewski/bigdata/Datura/2_MaSuRCA333/mr.41.15.15.0.02.1.fa

@@ -2,11 +2,12 @@
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --mem=900G
-#SBATCH --time=1-06:00:00
+#SBATCH --time=1-12:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
-#SBATCH -o ../history/LINKS-%A.out
+#SBATCH -o /rhome/arajewski/bigdata/Datura/history/LINKS-%A.out
 set -e
+
 #Initially the mem was set to 200GB, increased to 350GB and then down to 270Gb
 #using either nanopore.txt for uncorrected reads or megareads.txt for the masurca corrected reads
 #changing window size and lower limit (-l) to better scaffold small contigs
@@ -15,7 +16,7 @@ set -e
 module load LINKS/1.8.4
 #specify distance parameters
 dist=(250 500 750 1000 5000 10000 15000 20000 30000 40000 60000 70000 80000 90000 100000)
-window=(6 5 5 5 2 2 2 2 2 2 2 2 2 2 2)
+window=(6 5 5 5 4 3 3 2 2 2 2 2 2 2 2)
 kmer=19
 
 #First Round
@@ -50,7 +51,7 @@ do
 	    -d ${dist[i]} \
 	    -l 4 \
 	    -z 100 \
-	    -k $kmer
+	    -k $kmer 
 	echo $(date): Done.
 	i=$[$i+1]
     else

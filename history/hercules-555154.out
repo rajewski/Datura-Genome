@@ -1,0 +1,8 @@
+java -ea -Xms300m -cp /opt/linux/centos/7.x/x86_64/pkgs/BBMap/38.60/current/ jgi.ReformatReads in1=/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq in2=/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq out1=DstrTrim_1P_subsample.fq out2=DstrTrim_2P_subsample.fq samplereadstarget=500000000
+Executing jgi.ReformatReads [in1=/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq, in2=/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq, out1=DstrTrim_1P_subsample.fq, out2=DstrTrim_2P_subsample.fq, samplereadstarget=500000000]
+
+Set INTERLEAVED to false
+Exception in thread "main" java.lang.AssertionError: File DstrTrim_1P_subsample.fq exists and overwrite=false
+	at shared.Tools.testOutputFiles(Tools.java:1069)
+	at jgi.ReformatReads.<init>(ReformatReads.java:373)
+	at jgi.ReformatReads.main(ReformatReads.java:50)

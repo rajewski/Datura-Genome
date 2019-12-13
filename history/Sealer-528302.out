@@ -1,0 +1,5 @@
+abyss-sealer: option requires an argument -- 's'
+abyss-sealer: missing mandatory option `-S'
+abyss-sealer: missing mandatory option `-k'
+abyss-sealer: missing mandatory option `-o'
+Try `abyss-sealer --help' for more information.

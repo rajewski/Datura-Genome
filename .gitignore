@@ -9,6 +9,9 @@ augustus_output/
 blast_output/
 DNA-seq/
 history/LINKS*.out
+history/ntEdit*.out
+history/RAILS*.out
+history/Cobbler*.out
 hmmer_output/
 k_u_hash_0
 meanAndStdevByPrefix.pe.txt

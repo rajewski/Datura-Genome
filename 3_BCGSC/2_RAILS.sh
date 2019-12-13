@@ -1,11 +1,10 @@
 #!/bin/bash -l
-#SBATCH --ntasks=32
+#SBATCH --cpus-per-task=32
 #SBATCH --nodes=1
-#SBATCH --mem=900G
-#SBATCH --time=9-00:00:00
+#SBATCH --mem-per-cpu=10G
+#SBATCH --time=5-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
-#SBATCH -p highmem
 #SBATCH -o ../history/RAILS-%A.out
 set -e
 
@@ -21,11 +20,11 @@ runRAILSminimapMod.sh \
     $ASSEMBLY \
     $LONGREADS \
     250 \
-    0.95 \
+    0.9 \
     250 \
-    2 \
+    1 \
     ont \
-    ./
+    /opt/linux/centos/7.x/x86_64/pkgs/samtools/1.8/bin/samtools
 
 
 scontrol show job $SLURM_JOB_ID

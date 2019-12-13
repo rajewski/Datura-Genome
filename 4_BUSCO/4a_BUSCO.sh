@@ -16,8 +16,8 @@ module load busco/3.0.2
 #We need to downgrade our blast version to make it work
 module unload ncbi-blast
 module load ncbi-blast/2.2.30+
-ASSEM=Dstr_v1.3_k95
-ASSEMPATH=/rhome/arajewski/bigdata/Datura/2_ABySS/k_95/Dstr_v1.3_k95-scaffolds.fa
+ASSEM=Dstr_v1.3_ntEdit_edited.fa
+ASSEMPATH=/rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.3_ntEdit_edited.fa 
 
 #BUSCO also needs augustus, and because of the cluster environment I have to install it separately
 export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/bin:$PATH"
