@@ -1,9 +1,9 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=8
 #SBATCH --nodes=1
-#SBATCH --mem-per-cpu=10G
-#SBATCH --time=6-00:00:00
+#SBATCH --mem-per-cpu=15G
+#SBATCH --time=20-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/hercules-%A.out
@@ -11,20 +11,41 @@ set -eu
  
 module load hercules/2017-Nov
 module load samtools/1.9
-NANOPORE=/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq
+#trying this with fasta long reads instead of fastq
+NANOPORE=/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
 
+#subsample the illumina reads to speed things up
+if [ ! -e DstrTrim_1P_subsample.fq ]; then
+    module load BBMap
+    echo $(date): Subsampling short reads to 50%...
+    reformat.sh \
+	in1=/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq \
+	in2=/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+	out1=DstrTrim_1P_subsample.fq \
+	out2=DstrTrim_2P_subsample.fq \
+	samplerate=0.5
+    echo $(date): Done.
+else
+    echo $(date): Subsampling already complete.
+fi
+
+#Preprocess step of hercules
 if [ ! -e preprocessing/compressed_short.fasta ]; then
     echo $(date): Preprocessing with hercules...
     hercules -1 \
 	-li $NANOPORE \
-	-si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq \
-	-si /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq \
+	-si DstrTrim_1P_subsample.fq \
+	-si DstrTrim_2P_subsample.fq \
 	-o preprocessing/
     echo $(date): Done.
 fi
 
 #map illumina to nanopore
-COMPNANOPORE=preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq
+COMPNANOPORE=preprocessing/compressed_Dstr.filt_q10_l500_crop50.fasta
+#try mapping with bowtie2, long but maybe it'll actually work
+#module load bowtie2/2.3.4.1
+#runBowtieRmDup.sh $COMPNANOPORE preprocessing/compressed_short.fasta bowtie $SLURM_CPUS_PER_TASK
+
 if [ ! -e Dstr.CompNanopore.mmi ]; then
     module load minimap2
     echo $(date): Generating minimap2 index...
@@ -56,7 +77,7 @@ fi
 if [ ! -e DstrCompAlignment.bam ]; then
     echo $(date): Converting and sorting minimap2 output...
     module load samtools/1.9
-    samtools view -S -u -b -T $COMPNANOPORE DstrCompAlignment.sam | samtools sort -l 0 -@ $SLURM_CPUS_PER_TASK -m $((SLURM_MEM_PER_CPU/1024))G -o DstrCompAlignment.bam
+    samtools view -S -b -T $COMPNANOPORE DstrCompAlignment.sam | samtools sort -l 0 -@ $SLURM_CPUS_PER_TASK -m $((SLURM_MEM_PER_CPU/1024))G -o DstrCompAlignment.bam
     echo $(date): Done.
 else
     echo $(date): BAM file already present.
@@ -70,6 +91,9 @@ if [ ! -e DstrCompAlignmentNoDup.bam ]; then
 else
     echo $(date): Deduplication already complete.
 fi
+
+echo $(date): rerun this script but alter each cpu to have more memory, I think
+exit 0
 
 #Actually run hercules
 if [ ! -e Dstr_Nanopore_Hercules_Corrected.fasta ]; then
