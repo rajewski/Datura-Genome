@@ -1,0 +1,12 @@
+Fri Dec 13 13:00:27 PST 2019: Subsampling already complete.
+Reference file does not seem to be a FASTA file
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/bowtie2/2.3.4.1/bin/bowtie2-build-l --wrapper basic-0 --threads 30 -q preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq 
+Deleting "preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq.3.bt2l" file written during aborted indexing attempt.
+Deleting "preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq.4.bt2l" file written during aborted indexing attempt.
+Deleting "preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq.1.bt2l" file written during aborted indexing attempt.
+Deleting "preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq.2.bt2l" file written during aborted indexing attempt.
+(ERR): "preprocessing/compressed_Dstr.filt_q10_l500_crop50.fastq" does not exist or is not a Bowtie 2 index
+Exiting now ...
+samtools sort: failed to read header from "-"
+[bam_rmdup] input SAM does not have header. Abort!

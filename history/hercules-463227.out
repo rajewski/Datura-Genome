@@ -1,0 +1,10 @@
+Preprocessing has begun...
+Preprocessing is done. Now you have two external work before running correction phase:
+(1)Align compressed short reads to compressed long reads using any aligner. Note that multiple alignment option of the aligner should be enabled to benefit from compression.
+Compressed short reads file is at: preprocessing//compressed_short.fasta
+Compressed long reads file is at: preprocessing//compressed_Dstr.filt_q10_l500_crop50.fastq
+(2)Use "samtools sort -m 8G -l 0 | samtools rmdup -S" commands to remove the duplicates in your alignment file (e.g. see utils/afteralignment.sh or utils/runBowtieRmDup.sh)
+(3)Run correction phase of Hercules using: 
+-The alignment file that you removed its duplicates in (2)
+-Original long reads file at /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq
+-Short reads file at: preprocessing//short.fasta

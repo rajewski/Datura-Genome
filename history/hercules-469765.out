@@ -1,0 +1,30 @@
+Thu Nov 14 11:22:18 PST 2019: Minimap2 index already present.
+Thu Nov 14 11:22:18 PST 2019: Minimap2 output SAM found.
+Thu Nov 14 11:22:18 PST 2019: Converting and sorting minimap2 output...
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...
+Thu Nov 14 15:51:57 PST 2019: Done.
+Thu Nov 14 15:51:57 PST 2019: Deduplicating BAM file...
+[bam_rmdupse_core] 404694946 / 643111518 = 0.6293 in library '	'
+Thu Nov 14 17:07:40 PST 2019: Done.
+Thu Nov 14 17:07:40 PST 2019: Beginning long read correction with hercules
+Long Read: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq
+Short read: preprocessing/short.fasta
+Alignment File: DstrCompAlignmentNoDup.bam
+Output file: Dstr_Nanopore_Hercules_Corrected.fasta
+Will output coverage?: No
+Min mapping quality: 0
+Max Coverage: 1
+Filter size: 100
+Maximum insertion: 3
+Maximum deletion: 10
+Match transition probability: 0.7
+Insertion transition probability: 0.25
+Deletion transition probability: 0.05
+Deletion transition factor: 2.5
+Match emission probability: 0.97
+Mismatch emission probability: 0.01
+Insertion emission probability: 0.333333
+Max thread: 2
+terminate called after throwing an instance of 'seqan::ParseError'
+  what():  FastaIndex: Record has inconsistent line lengths or line endings
+/var/spool/slurmd/job469765/slurm_script: line 86: 33677 Aborted                 hercules -2 -li $NANOPORE -ai DstrCompAlignmentNoDup.bam -si preprocessing/short.fasta -t $SLURM_CPUS_PER_TASK -o Dstr_Nanopore_Hercules_Corrected.fasta

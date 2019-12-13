@@ -1,0 +1,4 @@
+Thu Nov 14 09:38:15 PST 2019: Minimap2 index already present.
+Thu Nov 14 09:38:15 PST 2019: Minimap2 output SAM found.
+Thu Nov 14 09:38:15 PST 2019: Converting and sorting minimap2 output...
+slurmstepd-h03: error: *** JOB 469482 ON h03 CANCELLED AT 2019-11-14T10:22:02 ***

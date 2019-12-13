@@ -15,19 +15,26 @@ export PATH=/rhome/arajewski/bigdata/Datura/software/bin:$PATH
 export PATH=/rhome/arajewski/bigdata/Datura/software/ntEdit:$PATH
 
 #Make bloom filter for desired kmer size
-nthits \
-    -t $SLURM_CPUS_PER_TASK \
-    -k $kmer \
-    -p Dstr_$kmer \
-    --outbloom \
-    --solid \
-    /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
+if [ ! -e Dstr_k$kmer.bf ]; then
+    echo $(date): Generating bloom filter with nthits.
+    nthits \
+	-t $SLURM_CPUS_PER_TASK \
+	-k $kmer \
+	-p Dstr_ \
+	--outbloom \
+	--solid \
+	/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
+    echo $(date): Done.
+    #This took 1:11:00 with 16 cpus and 7G per cpu on highmem
+else
+    echo $(date): Bloom filter already present
+fi
 
 ntedit \
     -f $ASSEM \
     -k $kmer \
-#    -r Dstr_$kmer.bf \
+    -r Dstr_k$kmer.bf \
     -b Dstr_v1.3_ntEdit \
-    -v
+    -v 1
 
 scontrol show job $SLURM_JOB_ID
