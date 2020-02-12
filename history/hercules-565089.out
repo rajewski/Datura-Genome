@@ -1,0 +1,34 @@
+Sun Dec 15 12:43:38 PST 2019: Subsampling already complete.
+Sun Dec 15 12:43:38 PST 2019: Minimap2 index already present.
+Sun Dec 15 12:43:38 PST 2019: Minimap2 output SAM found.
+Sun Dec 15 12:43:38 PST 2019: BAM file already present.
+Sun Dec 15 12:43:38 PST 2019: Deduplication already complete.
+Sun Dec 15 12:43:38 PST 2019: Beginning long read correction with hercules
+Long Read: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+Short read: preprocessing/short.fasta
+Alignment File: DstrCompAlignmentNoDup.bam
+Output file: Dstr_Nanopore_Hercules_Corrected.fasta
+Will output coverage?: No
+Min mapping quality: 0
+Max Coverage: 1
+Filter size: 100
+Maximum insertion: 3
+Maximum deletion: 10
+Match transition probability: 0.7
+Insertion transition probability: 0.25
+Deletion transition probability: 0.05
+Deletion transition factor: 2.5
+Match emission probability: 0.97
+Mismatch emission probability: 0.01
+Insertion emission probability: 0.333333
+Max thread: 32
+Correction has begun...
+0.229251% 
+0.458502% 
+0.687753% 
+0.917004% 
+1.14626% 
+1.37551% 
+1.60476% 
+1.83401% 
+slurmstepd-i38: error: *** JOB 565089 ON i38 CANCELLED AT 2019-12-17T18:53:37 ***

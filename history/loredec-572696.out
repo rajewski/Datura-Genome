@@ -1,0 +1,18 @@
+[]
+Fri Dec 20 11:10:11 PST 2019: Building Lordec de Bruijn graph...
+lordec-build-SR-graph: invalid option -- 't'
+DEBUG printing
+-2
+/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq,/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_2P_subsample.fq
+-k
+19
+-s
+3
+-t
+-g
+DstrTrim_k19_s3
+28
+illumina: /rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq,/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_2P_subsample.fq
+kmer_len: 19 solid_kmer_thr: 3
+abundance_max: 2147483647
+[DSK: counting kmers                     ]  0    %   elapsed:   0 min 0  sec   remaining:   0 min 0  sec   cpu:  -1.0 %   mem: [  22,   22,  130] MB [DSK: Pass 1/1, Step 1: partitioning     ]  0    %   elapsed:   0 min 0  sec   remaining:   0 min 0  sec   cpu:  -1.0 %   mem: [  86,   86,  130] MB slurmstepd-h06: error: *** JOB 572696 ON h06 CANCELLED AT 2019-12-20T11:10:28 ***

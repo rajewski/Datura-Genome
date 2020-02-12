@@ -1,0 +1,17 @@
+Tue Jan 28 12:34:52 PST 2020: Sorting Dstr_v1.4.fa...
+3,439,839 contigs records loaded
+Sorting and renaming contig headers
+3,439,839 contigs saved to file
+Tue Jan 28 12:40:57 PST 2020: Done.
+Tue Jan 28 12:40:57 PST 2020: Masking Dstr_v1.4.sorted.fa...
+[12:40 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:40 PM]: Running funannotate v1.6.0-98d4d3f
+[12:41 PM]: Soft-masking: running RepeatMasker using arabidopsis species
+[04:37 AM]: Repeatmasking finished: 
+Masked genome: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.4.masked.fa
+num scaffolds: 3,439,839
+assembly size: 2,474,560,790 bp
+masked repeats: 220,549,037 bp (8.91%)
+-------------------------------------------------------
+-------------------------------------------------------
+Thu Jan 30 04:37:54 PST 2020: Done.

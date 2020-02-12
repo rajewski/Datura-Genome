@@ -1,0 +1,14 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+[08:41 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[08:41 PM]: Running funannotate v1.6.0-98d4d3f
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-train.py", line 821, in <module>
+    lib.CheckFASTQandFix(trim_reads[0], trim_reads[1]) #if needed to fix they will be fixed in place  
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 650, in CheckFASTQandFix
+    for read1, read2 in izip(file1, file2):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/Bio/SeqIO/QualityIO.py", line 917, in FastqGeneralIterator
+    raise ValueError("Sequence and quality captions differ.")
+ValueError: Sequence and quality captions differ.

@@ -1,0 +1,6 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+usage: funannotate-train.py [options] -i genome.fasta
+funannotate-train.py: error: unrecognized arguments:  #for the MADS box genes I know have huge introns
+/var/spool/slurmd/job731460/slurm_script: line 62: --species: command not found

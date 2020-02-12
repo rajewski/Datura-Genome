@@ -1,0 +1,43 @@
+[]
+Fri Dec 20 11:14:15 PST 2019: Lordec de Bruijn graph already present.
+Fri Dec 20 11:14:15 PST 2019: Running correction of nanopore reads...
+-i
+/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+-2
+DstrTrim_k19_s3
+-k
+19
+-s
+3
+-t
+28
+-o
+Dstr_Lordec.fasta
+illumina: DstrTrim_k19_s3 DstrTrim_k19_s3_k19_s3.h5 pacbioFile: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+kmer_len: 19 solid_kmer_thr: 3
+max_trials: 28 max_error_rate: 0.4 max_branch: 200
+abundance_max: 2147483647
+Cannot access the graph file for reference reads: DstrTrim_k19_s3_k19_s3.h5
+bRefGraph: 0
+bRefSeq: 1
+creating the graph from file(s): DstrTrim_k19_s3
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 407 in H5Aopen(): unable to load attribute info from object header for attribute: 'version'
+    major: Attribute
+    minor: Unable to initialize object
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Oattribute.c line 537 in H5O_attr_open_by_name(): can't locate attribute: 'version'
+    major: Attribute
+    minor: Object not found
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 677 in H5Aget_space(): not an attribute
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5S.c line 883 in H5Sget_simple_extent_dims(): not a dataspace
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 634 in H5Aread(): not an attribute
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+EXCEPTION: Unable to open bank 'DstrTrim_k19_s3' (if it is a list of files, perhaps some of the files inside don't exist)

@@ -1,0 +1,18 @@
+Tue Jan 28 12:03:56 PST 2020: Sorting Dstr_v1.4.fa...
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-sort_rename.py", line 44, in <module>
+    Count = lib.countfasta(args.input)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 1087, in countfasta
+    with open(input, 'rU') as f:
+IOError: [Errno 2] No such file or directory: 'Dstr_v1.4.fa'
+Tue Jan 28 12:04:42 PST 2020: Done.
+Tue Jan 28 12:04:42 PST 2020: Masking Dstr_v1.4.sorted.fa...
+[12:04 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:04 PM]: Running funannotate v1.6.0-98d4d3f
+[12:05 PM]: Soft-masking: running RepeatMasker using arabidopsis species
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-mask.py", line 76, in <module>
+    with open(args.out, 'rU') as input:
+IOError: [Errno 2] No such file or directory: 'Dstr_v1.4.masked.fa'
+Tue Jan 28 12:06:12 PST 2020: Done.

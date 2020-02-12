@@ -1,0 +1,25 @@
+ERR2040631 data from SRA already present.
+Downloading SRR9888534 data from SRA...
+
+2020-02-08T02:29:11 prefetch.2.10.0: 1) Downloading 'SRR9888534'...
+2020-02-08T02:29:11 prefetch.2.10.0:  Downloading via https...
+2020-02-08T02:37:35 prefetch.2.10.0:  https download succeed
+2020-02-08T02:37:35 prefetch.2.10.0: 1) 'SRR9888534' was downloaded successfully
+2020-02-08T02:37:35 prefetch.2.10.0: 'SRR9888534' has 0 unresolved dependencies
+Read 38331901 spots for SRR9888534
+Written 38331901 spots for SRR9888534
+Done.
+MedPlantsRNAseq data already present.
+[08:03 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[08:03 PM]: Running funannotate v1.6.0-98d4d3f
+[08:04 PM]: Multiple inputs for --left and --right detected, concatenating PE reads
+[08:04 PM]: Adapter and Quality trimming PE reads with Trimmomatic
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-train.py", line 821, in <module>
+    lib.CheckFASTQandFix(trim_reads[0], trim_reads[1]) #if needed to fix they will be fixed in place  
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 650, in CheckFASTQandFix
+    for read1, read2 in izip(file1, file2):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/Bio/SeqIO/QualityIO.py", line 917, in FastqGeneralIterator
+    raise ValueError("Sequence and quality captions differ.")
+ValueError: Sequence and quality captions differ.

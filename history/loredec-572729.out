@@ -1,0 +1,124 @@
+[]
+Fri Dec 20 11:17:42 PST 2019: Lordec de Bruijn graph already present.
+Fri Dec 20 11:17:42 PST 2019: Running correction of nanopore reads...
+-i
+/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+-2
+DstrTrim_k19_s3.h5
+-k
+19
+-s
+3
+-t
+28
+-o
+Dstr_Lordec.fasta
+illumina: DstrTrim_k19_s3.h5 DstrTrim_k19_s3.h5_k19_s3.h5 pacbioFile: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+kmer_len: 19 solid_kmer_thr: 3
+max_trials: 28 max_error_rate: 0.4 max_branch: 200
+abundance_max: 2147483647
+Cannot access the graph file for reference reads: DstrTrim_k19_s3.h5_k19_s3.h5
+bRefGraph: 0
+bRefSeq: 1
+creating the graph from file(s): DstrTrim_k19_s3.h5
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5G.c line 314 in H5Gcreate2(): unable to create group
+    major: Symbol table
+    minor: Unable to initialize object
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gint.c line 194 in H5G__create_named(): unable to create and link to group
+    major: Symbol table
+    minor: Unable to initialize object
+  #002: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 1638 in H5L_link_object(): unable to create new link to object
+    major: Links
+    minor: Unable to initialize object
+  #003: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 1882 in H5L_create_real(): can't insert link
+    major: Symbol table
+    minor: Unable to insert object
+  #004: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gtraverse.c line 861 in H5G_traverse(): internal path traversal failed
+    major: Symbol table
+    minor: Object not found
+  #005: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gtraverse.c line 641 in H5G_traverse_real(): traversal operator failed
+    major: Symbol table
+    minor: Callback failed
+  #006: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 1685 in H5L_link_cb(): unable to create object
+    major: Object header
+    minor: Unable to initialize object
+  #007: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5O.c line 3016 in H5O_obj_create(): unable to open object
+    major: Object header
+    minor: Can't open object
+  #008: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Goh.c line 268 in H5O_group_create(): unable to create group
+    major: Symbol table
+    minor: Unable to initialize object
+  #009: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gint.c line 245 in H5G__create(): unable to create group object header
+    major: Symbol table
+    minor: Unable to initialize object
+  #010: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gobj.c line 163 in H5G__obj_create(): unable to create group
+    major: Symbol table
+    minor: Unable to create file
+  #011: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gobj.c line 206 in H5G__obj_create_real(): no write intent on file
+    major: Object cache
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 824 in H5Lexists(): unable to get link info
+    major: Symbol table
+    minor: Object not found
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 2765 in H5L_exists(): path doesn't exist
+    major: Symbol table
+    minor: Object already exists
+  #002: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gtraverse.c line 861 in H5G_traverse(): internal path traversal failed
+    major: Symbol table
+    minor: Object not found
+  #003: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gtraverse.c line 755 in H5G_traverse_real(): component not found
+    major: Symbol table
+    minor: Object not found
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5D.c line 194 in H5Dcreate2(): unable to create dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Dint.c line 455 in H5D__create_named(): unable to create and link to dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #002: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 1638 in H5L_link_object(): unable to create new link to object
+    major: Links
+    minor: Unable to initialize object
+  #003: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5L.c line 1882 in H5L_create_real(): can't insert link
+    major: Symbol table
+    minor: Unable to insert object
+  #004: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gtraverse.c line 861 in H5G_traverse(): internal path traversal failed
+    major: Symbol table
+    minor: Object not found
+  #005: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gtraverse.c line 755 in H5G_traverse_real(): component not found
+    major: Symbol table
+    minor: Object not found
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5D.c line 460 in H5Dget_space(): not a dataset
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5S.c line 883 in H5Sget_simple_extent_dims(): not a dataspace
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5S.c line 392 in H5Sclose(): not a dataspace
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 401 in H5Aopen(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 677 in H5Aget_space(): not an attribute
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5S.c line 883 in H5Sget_simple_extent_dims(): not a dataspace
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 634 in H5Aread(): not an attribute
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+EXCEPTION: Unable to open bank 'DstrTrim_k19_s3.h5' (if it is a list of files, perhaps some of the files inside don't exist)

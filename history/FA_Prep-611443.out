@@ -1,0 +1,22 @@
+Wed Jan 15 18:30:38 PST 2020: Running funannotate clean on Dstr_v1.4_ntEdit_edited.fa...
+-----------------------------------------------
+3,439,839 input contigs, 209,631 larger than 500 bp, N50 is 117,430 bp
+Checking duplication of 205,537 contigs shorter than N50
+-----------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-contig_cleaner.py", line 221, in <module>
+    mp_output = multithread_aligning(scaffolds)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-contig_cleaner.py", line 182, in multithread_aligning
+    result = out.get(999999999)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/multiprocessing/pool.py", line 572, in get
+    raise self._value
+OSError: [Errno 2] No such file or directory: 'query_0.fa'
+Thu Jan 16 02:52:53 PST 2020: Done.
+Thu Jan 16 02:52:53 PST 2020: Sorting Dstr_v1.4.cleaned.fa...
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-sort_rename.py", line 44, in <module>
+    Count = lib.countfasta(args.input)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 1087, in countfasta
+    with open(input, 'rU') as f:
+IOError: [Errno 2] No such file or directory: 'Dstr_v1.4.cleaned.fa'
+Thu Jan 16 02:52:55 PST 2020: Dome.

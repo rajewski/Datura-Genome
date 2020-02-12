@@ -1,0 +1,74 @@
+Finding flanks
+395317 gaps found
+393079 flanks extracted
+
+Building bloom filter
+Bloom filter FPR: 1.22%
+Starting K run with k = 30
+Flanks inserted into k run = 393079
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1100 gaps closed so far
+1200 gaps closed so far
+1300 gaps closed so far
+1400 gaps closed so far
+1500 gaps closed so far
+1600 gaps closed so far
+1700 gaps closed so far
+1800 gaps closed so far
+1900 gaps closed so far
+2000 gaps closed so far
+2100 gaps closed so far
+2200 gaps closed so far
+2300 gaps closed so far
+2400 gaps closed so far
+2500 gaps closed so far
+2600 gaps closed so far
+2700 gaps closed so far
+2800 gaps closed so far
+2900 gaps closed so far
+3000 gaps closed so far
+3100 gaps closed so far
+3200 gaps closed so far
+3300 gaps closed so far
+3400 gaps closed so far
+3500 gaps closed so far
+3600 gaps closed so far
+3700 gaps closed so far
+3800 gaps closed so far
+3900 gaps closed so far
+4000 gaps closed so far
+4100 gaps closed so far
+4200 gaps closed so far
+4300 gaps closed so far
+4400 gaps closed so far
+4500 gaps closed so far
+4600 gaps closed so far
+4700 gaps closed so far
+4800 gaps closed so far
+4900 gaps closed so far
+5000 gaps closed so far
+5100 gaps closed so far
+5200 gaps closed so far
+5300 gaps closed so far
+5400 gaps closed so far
+5500 gaps closed so far
+5600 gaps closed so far
+5700 gaps closed so far
+5800 gaps closed so far
+5900 gaps closed so far
+6000 gaps closed so far
+6100 gaps closed so far
+6200 gaps closed so far
+6300 gaps closed so far
+6400 gaps closed so far
+6500 gaps closed so far
+slurmstepd-h01: error: *** JOB 596654 ON h01 CANCELLED AT 2020-01-08T19:07:59 ***
