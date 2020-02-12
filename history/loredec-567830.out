@@ -1,0 +1,67 @@
+[]
+-i
+/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+-2
+/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq,/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_2P_subsample.fq
+-k
+19
+-s
+3
+-t
+32
+-o
+Dstr.filt_q10_l500_crop50_loredec.fasta
+illumina: /rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq,/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_2P_subsample.fq /rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq_multi_k19_s3.h5 pacbioFile: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+kmer_len: 19 solid_kmer_thr: 3
+max_trials: 32 max_error_rate: 0.4 max_branch: 200
+abundance_max: 2147483647
+bRefGraph: 1
+bRefSeq: 0
+loading the graph: /rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq_multi_k19_s3.h5
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Fint.c line 1087 in H5F_open(): unable to read superblock
+    major: File accessibilty
+    minor: Read failed
+  #002: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Fsuper.c line 277 in H5F_super_read(): file signature not found
+    major: File accessibilty
+    minor: Not an HDF5 file
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 1640 in H5Aexists(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 1640 in H5Aexists(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5A.c line 1640 in H5Aexists(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+k-mer length of DBG (0) and -k option (19) do not match
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5F.c line 774 in H5Fclose(): not a file ID
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+HDF5-DIAG: Error detected in HDF5 (1.8.18) thread 0:
+  #000: /opt/linux/centos/7.x/x86_64/src/lordec-src_0.9/gatb-core-1.4.1/gatb-core/thirdparty/hdf5/src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type

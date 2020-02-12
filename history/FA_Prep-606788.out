@@ -1,0 +1,6 @@
+Sun Jan 12 15:29:08 PST 2020: Running funannotate clean on Dstr_v1.4_ntEdit_edited.fa...
+-----------------------------------------------
+3,439,839 input contigs, 209,631 larger than 500 bp, N50 is 117,430 bp
+Checking duplication of 205,537 contigs shorter than N50
+-----------------------------------------------
+slurmstepd-i21: error: *** JOB 606788 ON i21 CANCELLED AT 2020-01-13T14:18:52 ***

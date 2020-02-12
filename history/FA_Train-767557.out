@@ -1,0 +1,6 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+[08:19 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[08:19 PM]: Running funannotate v1.6.0-98d4d3f
+[08:20 PM]: Multiple inputs for --left and --right detected, concatenating PE reads

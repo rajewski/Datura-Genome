@@ -1,0 +1,9 @@
+Downloading ERR2040631 data from SRA...
+
+2020-02-01T05:20:37 prefetch.2.10.0: 1) Downloading 'ERR2040631'...
+2020-02-01T05:20:37 prefetch.2.10.0:  Downloading via https...
+2020-02-01T05:25:46 prefetch.2.10.0:  https download succeed
+2020-02-01T05:25:46 prefetch.2.10.0: 1) 'ERR2040631' was downloaded successfully
+Read 15339750 spots for ERR2040631
+Written 15339750 spots for ERR2040631
+/var/spool/slurmd/job731994/slurm_script: line 23: cd: cd: No such file or directory

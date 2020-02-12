@@ -1,0 +1,135 @@
+[]
+Fri Dec 20 08:44:31 PST 2019: Lordec de Bruijn graph already present.
+Fri Dec 20 08:44:31 PST 2019: Running correction of nanopore reads...
+-i
+/rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+-2
+DstrTrim
+-k
+19
+-s
+3
+-t
+28
+-o
+Dstr_Lordec.fasta
+illumina: DstrTrim DstrTrim_k19_s3.h5 pacbioFile: /rhome/arajewski/bigdata/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fasta
+kmer_len: 19 solid_kmer_thr: 3
+max_trials: 28 max_error_rate: 0.4 max_branch: 200
+abundance_max: 2147483647
+bRefGraph: 1
+bRefSeq: 0
+loading the graph: DstrTrim_k19_s3.h5
+graph                                   
+graph                                   
+    gatb-core-library                        :     
+        version                                  : 1.4.1
+        git_sha1                                 : notset
+        build_date                               : 2019-09-03/12:25:12
+        build_system                             : Linux-3.10.0-957.el7.x86_64
+        build_compiler                           : /usr/bin/cc  (4.8.5)
+        build_kmer_size                          : 32 64 96 128
+    configuration                            :     
+        config                                   :        
+            kmer_size                                : 19
+            mini_size                                : 10
+            solidity_kind                            : sum
+            abundance_min                            : 3
+            abundance_max                            : 2147483647
+            available_space                          : 6206720
+            sequence_number                          : 490972822
+            sequence_volume                          : 34247
+            kmers_number                             : 27003505210
+            kmers_volume                             : 206020
+            max_disk_space                           : 6204720
+            max_memory                               : 5000
+            nb_passes                                : 1
+            nb_partitions                            : 1600
+            nb_bits_per_kmer                         : 64
+            nb_cores                                 : 64
+            minimizer_type                           : lexicographic (kmc2 heuristic)
+            repartition_type                         : unordered
+            nb_cores_per_partition                   : 1
+            nb_partitions_in_parallel                : 64
+            nb_cached_items_per_core_per_part        : 1024
+            nb_banks                                 : 2
+    dsk                                      :     
+        bank                                     :        
+            bank_uri                                 : /rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_1P_subsample.fq,/rhome/arajewski/bigdata/Datura/1_hercules/DstrTrim_2P_subsample.fq
+            bank_size                                : 108110524811
+            bank_total_nt                            : 43386603844
+            sequences                                :           
+                seq_number                               : 310119534
+                seq_size_min                             : 36
+                seq_size_max                             : 151
+                seq_size_mean                            : 139.9
+                seq_size_deviation                       : 27.4
+            kmers                                    :           
+                kmers_nb_valid                           : 37803907075
+                kmers_nb_invalid                         : 545157
+        stats                                    :        
+            temp_files                               :           
+                nb_superkmers                            : 7371320350
+                avg_superk_length                        : 5.13
+                minimizer_density                        : 2.14
+                total_size_(MB)                          : 49336
+                tmp_file_biggest_(MB)                    : 2049
+                tmp_file_smallest_(MB)                   : 17
+                tmp_file_mean_(MB)                       : 30.8
+            histogram                                :           
+                cutoff                                   : 7
+                nb_ge_cutoff                             : 699365792
+                ratio_weak_volume                        : 0.06
+                first_peak                               : 16
+            kmers                                    :           
+                solidity_kind                            : sum
+                thresholds                               : 3 3 
+                kmers_nb_distinct                        : 1749194957
+                kmers_nb_solid                           : 830245635
+                kmers_nb_weak                            : 918949322
+                kmers_percent_weak                       : 52.5
+            partitions                               :           
+                nb_partitions                            : 1600
+                nb_items                                 : 830245635
+                part_biggest                             : 33036695
+                part_smallest                            : 26451
+                part_mean                                : 518903.5
+                kind                                     :              
+                    hash                                     : 1
+                    vector                                   : 1599
+            fillsolid_time                           : 424.065          
+                1.read                                   : 56.960
+                2.sort                                   : 33.677
+                3.dump                                   : 333.428
+        time                                     : 5870.475       
+            fill_partitions                          : 4937.048
+            fill_solid_kmers                         : 933.427
+    bloom                                    :     
+        stats                                    :        
+            kind                                     : cache
+            bitsize                                  : 8612591616
+            nb_hash                                  : 7
+            nbits_per_kmer                           : 10.373547
+        time                                     : 534.024       
+            build_from_kmers                         : 534.024
+    debloom                                  :     
+        stats                                    :        
+            kind                                     : original
+            impl                                     : DebloomAlgorithm
+            bitsize                                  : 77391124864
+            nbits_per_kmer                           : 93.214737          
+                size                                     : 68778533248
+                nb                                       : 1074664582
+        time                                     : 17200.036       
+            cascading                                : 15454.426
+            fill_debloom_file                        : 619.154
+            finalize_debloom_file                    : 1126.456
+    branching                                :     
+        stats                                    :        
+            nb_branching                             : 623933494
+            percentage                               : 75.2
+            checksum_branching                       : a96167cde589ea03
+        time                                     :        
+            build                                    : 720.954
+
+slurmstepd-i03: error: *** JOB 571960 ON i03 CANCELLED AT 2019-12-20T10:44:22 DUE TO TIME LIMIT ***

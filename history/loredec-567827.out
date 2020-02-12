@@ -1,0 +1,2 @@
+echo "${SLURM_ARRAY_JOB_ID}[${SLURM_ARRAY_TASK_ID}]"
+/var/spool/slurmd/job567827/slurm_script: line 10: SLURM_ARRAY_JOB_ID: unbound variable

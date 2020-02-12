@@ -1,0 +1,2 @@
+abyss-sealer: input FASTA/FASTQ args should be omitted when using pre-built Bloom filters (-i) for all k-mer sizes
+Try `abyss-sealer --help' for more information.

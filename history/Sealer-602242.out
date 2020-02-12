@@ -1,0 +1,2026 @@
+Finding flanks
+395317 gaps found
+393079 flanks extracted
+
+Loading bloom filter from `k30.bloom'...
+Bloom filter FPR: 1.22%
+Starting K run with k = 30
+Flanks inserted into k run = 393079
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1100 gaps closed so far
+1200 gaps closed so far
+1300 gaps closed so far
+1400 gaps closed so far
+1500 gaps closed so far
+1600 gaps closed so far
+1700 gaps closed so far
+1800 gaps closed so far
+1900 gaps closed so far
+2000 gaps closed so far
+2100 gaps closed so far
+2200 gaps closed so far
+2300 gaps closed so far
+2400 gaps closed so far
+2500 gaps closed so far
+2600 gaps closed so far
+2700 gaps closed so far
+2800 gaps closed so far
+2900 gaps closed so far
+3000 gaps closed so far
+3100 gaps closed so far
+3200 gaps closed so far
+3300 gaps closed so far
+3400 gaps closed so far
+3500 gaps closed so far
+3600 gaps closed so far
+3700 gaps closed so far
+3800 gaps closed so far
+3900 gaps closed so far
+4000 gaps closed so far
+4100 gaps closed so far
+4200 gaps closed so far
+4300 gaps closed so far
+4400 gaps closed so far
+4500 gaps closed so far
+4600 gaps closed so far
+4700 gaps closed so far
+4800 gaps closed so far
+4900 gaps closed so far
+5000 gaps closed so far
+5100 gaps closed so far
+5200 gaps closed so far
+5300 gaps closed so far
+5400 gaps closed so far
+5500 gaps closed so far
+5600 gaps closed so far
+5700 gaps closed so far
+5800 gaps closed so far
+5900 gaps closed so far
+6000 gaps closed so far
+6100 gaps closed so far
+6200 gaps closed so far
+6300 gaps closed so far
+6400 gaps closed so far
+6500 gaps closed so far
+6600 gaps closed so far
+6700 gaps closed so far
+6800 gaps closed so far
+6900 gaps closed so far
+7000 gaps closed so far
+7100 gaps closed so far
+7200 gaps closed so far
+7300 gaps closed so far
+7400 gaps closed so far
+7500 gaps closed so far
+7600 gaps closed so far
+7700 gaps closed so far
+7800 gaps closed so far
+7900 gaps closed so far
+8000 gaps closed so far
+8100 gaps closed so far
+8200 gaps closed so far
+8300 gaps closed so far
+8400 gaps closed so far
+8500 gaps closed so far
+8600 gaps closed so far
+8700 gaps closed so far
+8800 gaps closed so far
+8900 gaps closed so far
+9000 gaps closed so far
+9100 gaps closed so far
+9200 gaps closed so far
+9300 gaps closed so far
+9400 gaps closed so far
+9500 gaps closed so far
+9600 gaps closed so far
+9700 gaps closed so far
+9800 gaps closed so far
+9900 gaps closed so far
+10000 gaps closed so far
+10100 gaps closed so far
+10200 gaps closed so far
+10300 gaps closed so far
+10400 gaps closed so far
+10500 gaps closed so far
+10600 gaps closed so far
+10700 gaps closed so far
+10800 gaps closed so far
+10900 gaps closed so far
+11000 gaps closed so far
+11100 gaps closed so far
+11200 gaps closed so far
+11300 gaps closed so far
+11400 gaps closed so far
+11500 gaps closed so far
+11600 gaps closed so far
+11700 gaps closed so far
+11800 gaps closed so far
+11900 gaps closed so far
+12000 gaps closed so far
+12100 gaps closed so far
+12200 gaps closed so far
+12300 gaps closed so far
+12400 gaps closed so far
+12500 gaps closed so far
+12600 gaps closed so far
+12700 gaps closed so far
+12800 gaps closed so far
+12900 gaps closed so far
+13000 gaps closed so far
+13100 gaps closed so far
+13200 gaps closed so far
+13300 gaps closed so far
+13400 gaps closed so far
+13500 gaps closed so far
+13600 gaps closed so far
+13700 gaps closed so far
+13800 gaps closed so far
+13900 gaps closed so far
+14000 gaps closed so far
+14100 gaps closed so far
+14200 gaps closed so far
+14300 gaps closed so far
+14400 gaps closed so far
+14500 gaps closed so far
+14600 gaps closed so far
+14700 gaps closed so far
+14800 gaps closed so far
+14900 gaps closed so far
+15000 gaps closed so far
+15100 gaps closed so far
+15200 gaps closed so far
+15300 gaps closed so far
+15400 gaps closed so far
+15500 gaps closed so far
+15600 gaps closed so far
+15700 gaps closed so far
+15800 gaps closed so far
+15900 gaps closed so far
+16000 gaps closed so far
+16100 gaps closed so far
+16200 gaps closed so far
+16300 gaps closed so far
+16400 gaps closed so far
+16500 gaps closed so far
+16600 gaps closed so far
+16700 gaps closed so far
+16800 gaps closed so far
+16900 gaps closed so far
+17000 gaps closed so far
+17100 gaps closed so far
+17200 gaps closed so far
+17300 gaps closed so far
+17400 gaps closed so far
+17500 gaps closed so far
+17600 gaps closed so far
+17700 gaps closed so far
+17800 gaps closed so far
+17900 gaps closed so far
+18000 gaps closed so far
+18100 gaps closed so far
+18200 gaps closed so far
+18300 gaps closed so far
+18400 gaps closed so far
+18500 gaps closed so far
+18600 gaps closed so far
+18700 gaps closed so far
+18800 gaps closed so far
+18900 gaps closed so far
+19000 gaps closed so far
+19100 gaps closed so far
+19200 gaps closed so far
+19300 gaps closed so far
+19400 gaps closed so far
+19500 gaps closed so far
+19600 gaps closed so far
+19700 gaps closed so far
+19800 gaps closed so far
+19900 gaps closed so far
+20000 gaps closed so far
+20100 gaps closed so far
+20200 gaps closed so far
+20300 gaps closed so far
+20400 gaps closed so far
+20500 gaps closed so far
+20600 gaps closed so far
+20700 gaps closed so far
+20800 gaps closed so far
+20900 gaps closed so far
+21000 gaps closed so far
+21100 gaps closed so far
+21200 gaps closed so far
+21300 gaps closed so far
+21400 gaps closed so far
+21500 gaps closed so far
+21600 gaps closed so far
+21700 gaps closed so far
+21800 gaps closed so far
+21900 gaps closed so far
+22000 gaps closed so far
+22100 gaps closed so far
+22200 gaps closed so far
+22300 gaps closed so far
+22400 gaps closed so far
+22500 gaps closed so far
+22600 gaps closed so far
+22700 gaps closed so far
+22800 gaps closed so far
+22900 gaps closed so far
+23000 gaps closed so far
+23100 gaps closed so far
+23200 gaps closed so far
+23300 gaps closed so far
+23400 gaps closed so far
+23500 gaps closed so far
+23600 gaps closed so far
+23700 gaps closed so far
+23800 gaps closed so far
+23900 gaps closed so far
+24000 gaps closed so far
+24100 gaps closed so far
+24200 gaps closed so far
+24300 gaps closed so far
+24400 gaps closed so far
+24500 gaps closed so far
+24600 gaps closed so far
+24700 gaps closed so far
+24800 gaps closed so far
+24900 gaps closed so far
+25000 gaps closed so far
+25100 gaps closed so far
+25200 gaps closed so far
+25300 gaps closed so far
+25400 gaps closed so far
+25500 gaps closed so far
+25600 gaps closed so far
+25700 gaps closed so far
+25800 gaps closed so far
+25900 gaps closed so far
+26000 gaps closed so far
+26100 gaps closed so far
+26200 gaps closed so far
+26300 gaps closed so far
+26400 gaps closed so far
+26500 gaps closed so far
+26600 gaps closed so far
+26700 gaps closed so far
+26800 gaps closed so far
+26900 gaps closed so far
+27000 gaps closed so far
+27100 gaps closed so far
+27200 gaps closed so far
+27300 gaps closed so far
+27400 gaps closed so far
+27500 gaps closed so far
+27600 gaps closed so far
+27700 gaps closed so far
+27800 gaps closed so far
+27900 gaps closed so far
+28000 gaps closed so far
+28100 gaps closed so far
+28200 gaps closed so far
+28300 gaps closed so far
+28400 gaps closed so far
+28500 gaps closed so far
+28600 gaps closed so far
+28700 gaps closed so far
+28800 gaps closed so far
+28900 gaps closed so far
+29000 gaps closed so far
+29100 gaps closed so far
+29200 gaps closed so far
+29300 gaps closed so far
+29400 gaps closed so far
+29500 gaps closed so far
+29600 gaps closed so far
+29700 gaps closed so far
+29800 gaps closed so far
+29900 gaps closed so far
+30000 gaps closed so far
+30100 gaps closed so far
+30123 unique gaps closed for k30
+No start/goal kmer: 0
+No path: 12214
+Unique path: 29495
+Multiple paths: 628
+Too many paths: 9458
+Too many branches: 342606
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+362957 flanks left
+k30 run complete
+Total gaps closed so far = 30123
+
+Loading bloom filter from `k35.bloom'...
+Bloom filter FPR: 1.35%
+Starting K run with k = 35
+Flanks inserted into k run = 362957
+30200 gaps closed so far
+30300 gaps closed so far
+30400 gaps closed so far
+30500 gaps closed so far
+30600 gaps closed so far
+30700 gaps closed so far
+30800 gaps closed so far
+30900 gaps closed so far
+31000 gaps closed so far
+31100 gaps closed so far
+31200 gaps closed so far
+31300 gaps closed so far
+31400 gaps closed so far
+31500 gaps closed so far
+31600 gaps closed so far
+31700 gaps closed so far
+31800 gaps closed so far
+31900 gaps closed so far
+32000 gaps closed so far
+32100 gaps closed so far
+32200 gaps closed so far
+32300 gaps closed so far
+32400 gaps closed so far
+32500 gaps closed so far
+32600 gaps closed so far
+32700 gaps closed so far
+32800 gaps closed so far
+32900 gaps closed so far
+33000 gaps closed so far
+33100 gaps closed so far
+33200 gaps closed so far
+33300 gaps closed so far
+33400 gaps closed so far
+33500 gaps closed so far
+33600 gaps closed so far
+33700 gaps closed so far
+33800 gaps closed so far
+33900 gaps closed so far
+34000 gaps closed so far
+34100 gaps closed so far
+34200 gaps closed so far
+34300 gaps closed so far
+34400 gaps closed so far
+34500 gaps closed so far
+34600 gaps closed so far
+34700 gaps closed so far
+34800 gaps closed so far
+34900 gaps closed so far
+35000 gaps closed so far
+35100 gaps closed so far
+35200 gaps closed so far
+35300 gaps closed so far
+35400 gaps closed so far
+35500 gaps closed so far
+35600 gaps closed so far
+35700 gaps closed so far
+35800 gaps closed so far
+35900 gaps closed so far
+36000 gaps closed so far
+36100 gaps closed so far
+36200 gaps closed so far
+36300 gaps closed so far
+36400 gaps closed so far
+36500 gaps closed so far
+36600 gaps closed so far
+36700 gaps closed so far
+36800 gaps closed so far
+36900 gaps closed so far
+37000 gaps closed so far
+37100 gaps closed so far
+37200 gaps closed so far
+37300 gaps closed so far
+37400 gaps closed so far
+37500 gaps closed so far
+37600 gaps closed so far
+37700 gaps closed so far
+37800 gaps closed so far
+37900 gaps closed so far
+38000 gaps closed so far
+38100 gaps closed so far
+38200 gaps closed so far
+38300 gaps closed so far
+38400 gaps closed so far
+38500 gaps closed so far
+38600 gaps closed so far
+38700 gaps closed so far
+38800 gaps closed so far
+38900 gaps closed so far
+39000 gaps closed so far
+39100 gaps closed so far
+39200 gaps closed so far
+39300 gaps closed so far
+39400 gaps closed so far
+39500 gaps closed so far
+39600 gaps closed so far
+39700 gaps closed so far
+39800 gaps closed so far
+39900 gaps closed so far
+40000 gaps closed so far
+40100 gaps closed so far
+40200 gaps closed so far
+40300 gaps closed so far
+40400 gaps closed so far
+40500 gaps closed so far
+40600 gaps closed so far
+40700 gaps closed so far
+40800 gaps closed so far
+40900 gaps closed so far
+41000 gaps closed so far
+41100 gaps closed so far
+41200 gaps closed so far
+41300 gaps closed so far
+41400 gaps closed so far
+41500 gaps closed so far
+41600 gaps closed so far
+41700 gaps closed so far
+41800 gaps closed so far
+41900 gaps closed so far
+42000 gaps closed so far
+42100 gaps closed so far
+42200 gaps closed so far
+42300 gaps closed so far
+42400 gaps closed so far
+42500 gaps closed so far
+42600 gaps closed so far
+42700 gaps closed so far
+42800 gaps closed so far
+42900 gaps closed so far
+43000 gaps closed so far
+43100 gaps closed so far
+43200 gaps closed so far
+43300 gaps closed so far
+43400 gaps closed so far
+43500 gaps closed so far
+43600 gaps closed so far
+43700 gaps closed so far
+43800 gaps closed so far
+43900 gaps closed so far
+44000 gaps closed so far
+44100 gaps closed so far
+44200 gaps closed so far
+14136 unique gaps closed for k35
+No start/goal kmer: 0
+No path: 17742
+Unique path: 13823
+Multiple paths: 313
+Too many paths: 8159
+Too many branches: 324230
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+348821 flanks left
+k35 run complete
+Total gaps closed so far = 44259
+
+Loading bloom filter from `k40.bloom'...
+Bloom filter FPR: 1.47%
+Starting K run with k = 40
+Flanks inserted into k run = 348821
+44300 gaps closed so far
+44400 gaps closed so far
+44500 gaps closed so far
+44600 gaps closed so far
+44700 gaps closed so far
+44800 gaps closed so far
+44900 gaps closed so far
+45000 gaps closed so far
+45100 gaps closed so far
+45200 gaps closed so far
+45300 gaps closed so far
+45400 gaps closed so far
+45500 gaps closed so far
+45600 gaps closed so far
+45700 gaps closed so far
+45800 gaps closed so far
+45900 gaps closed so far
+46000 gaps closed so far
+46100 gaps closed so far
+46200 gaps closed so far
+46300 gaps closed so far
+46400 gaps closed so far
+46500 gaps closed so far
+46600 gaps closed so far
+46700 gaps closed so far
+46800 gaps closed so far
+46900 gaps closed so far
+47000 gaps closed so far
+47100 gaps closed so far
+47200 gaps closed so far
+47300 gaps closed so far
+47400 gaps closed so far
+47500 gaps closed so far
+47600 gaps closed so far
+47700 gaps closed so far
+47800 gaps closed so far
+47900 gaps closed so far
+48000 gaps closed so far
+48100 gaps closed so far
+48200 gaps closed so far
+48300 gaps closed so far
+48400 gaps closed so far
+48500 gaps closed so far
+48600 gaps closed so far
+48700 gaps closed so far
+48800 gaps closed so far
+48900 gaps closed so far
+49000 gaps closed so far
+49100 gaps closed so far
+49200 gaps closed so far
+49300 gaps closed so far
+49400 gaps closed so far
+49500 gaps closed so far
+49600 gaps closed so far
+49700 gaps closed so far
+49800 gaps closed so far
+49900 gaps closed so far
+50000 gaps closed so far
+50100 gaps closed so far
+50200 gaps closed so far
+50300 gaps closed so far
+50400 gaps closed so far
+50500 gaps closed so far
+50600 gaps closed so far
+50700 gaps closed so far
+50800 gaps closed so far
+50900 gaps closed so far
+51000 gaps closed so far
+51100 gaps closed so far
+51200 gaps closed so far
+51300 gaps closed so far
+51400 gaps closed so far
+51500 gaps closed so far
+51600 gaps closed so far
+51700 gaps closed so far
+51800 gaps closed so far
+51900 gaps closed so far
+52000 gaps closed so far
+52100 gaps closed so far
+52200 gaps closed so far
+52300 gaps closed so far
+52400 gaps closed so far
+52500 gaps closed so far
+52600 gaps closed so far
+52700 gaps closed so far
+52800 gaps closed so far
+52900 gaps closed so far
+53000 gaps closed so far
+53100 gaps closed so far
+53200 gaps closed so far
+53300 gaps closed so far
+53400 gaps closed so far
+53500 gaps closed so far
+53600 gaps closed so far
+53700 gaps closed so far
+53800 gaps closed so far
+53900 gaps closed so far
+54000 gaps closed so far
+54100 gaps closed so far
+54200 gaps closed so far
+54300 gaps closed so far
+54400 gaps closed so far
+54500 gaps closed so far
+54600 gaps closed so far
+54700 gaps closed so far
+54800 gaps closed so far
+54900 gaps closed so far
+55000 gaps closed so far
+55100 gaps closed so far
+55200 gaps closed so far
+55300 gaps closed so far
+55400 gaps closed so far
+55500 gaps closed so far
+55600 gaps closed so far
+55700 gaps closed so far
+55800 gaps closed so far
+55900 gaps closed so far
+56000 gaps closed so far
+56100 gaps closed so far
+56200 gaps closed so far
+56300 gaps closed so far
+56400 gaps closed so far
+56500 gaps closed so far
+56600 gaps closed so far
+56700 gaps closed so far
+56800 gaps closed so far
+56900 gaps closed so far
+57000 gaps closed so far
+57100 gaps closed so far
+57200 gaps closed so far
+57300 gaps closed so far
+57400 gaps closed so far
+57500 gaps closed so far
+57600 gaps closed so far
+57700 gaps closed so far
+57800 gaps closed so far
+57900 gaps closed so far
+58000 gaps closed so far
+58100 gaps closed so far
+58200 gaps closed so far
+58300 gaps closed so far
+58400 gaps closed so far
+58500 gaps closed so far
+58600 gaps closed so far
+58700 gaps closed so far
+58800 gaps closed so far
+58900 gaps closed so far
+59000 gaps closed so far
+59100 gaps closed so far
+59200 gaps closed so far
+59300 gaps closed so far
+59400 gaps closed so far
+59500 gaps closed so far
+59600 gaps closed so far
+59700 gaps closed so far
+59800 gaps closed so far
+59900 gaps closed so far
+60000 gaps closed so far
+60100 gaps closed so far
+60200 gaps closed so far
+60300 gaps closed so far
+16089 unique gaps closed for k40
+No start/goal kmer: 0
+No path: 24042
+Unique path: 15819
+Multiple paths: 270
+Too many paths: 7318
+Too many branches: 302669
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+332732 flanks left
+k40 run complete
+Total gaps closed so far = 60348
+
+Loading bloom filter from `k45.bloom'...
+Bloom filter FPR: 1.56%
+Starting K run with k = 45
+Flanks inserted into k run = 332732
+60400 gaps closed so far
+60500 gaps closed so far
+60600 gaps closed so far
+60700 gaps closed so far
+60800 gaps closed so far
+60900 gaps closed so far
+61000 gaps closed so far
+61100 gaps closed so far
+61200 gaps closed so far
+61300 gaps closed so far
+61400 gaps closed so far
+61500 gaps closed so far
+61600 gaps closed so far
+61700 gaps closed so far
+61800 gaps closed so far
+61900 gaps closed so far
+62000 gaps closed so far
+62100 gaps closed so far
+62200 gaps closed so far
+62300 gaps closed so far
+62400 gaps closed so far
+62500 gaps closed so far
+62600 gaps closed so far
+62700 gaps closed so far
+62800 gaps closed so far
+62900 gaps closed so far
+63000 gaps closed so far
+63100 gaps closed so far
+63200 gaps closed so far
+63300 gaps closed so far
+63400 gaps closed so far
+63500 gaps closed so far
+63600 gaps closed so far
+63700 gaps closed so far
+63800 gaps closed so far
+63900 gaps closed so far
+64000 gaps closed so far
+64100 gaps closed so far
+64200 gaps closed so far
+64300 gaps closed so far
+64400 gaps closed so far
+64500 gaps closed so far
+64600 gaps closed so far
+64700 gaps closed so far
+64800 gaps closed so far
+64900 gaps closed so far
+65000 gaps closed so far
+65100 gaps closed so far
+65200 gaps closed so far
+65300 gaps closed so far
+65400 gaps closed so far
+65500 gaps closed so far
+65600 gaps closed so far
+65700 gaps closed so far
+65800 gaps closed so far
+65900 gaps closed so far
+66000 gaps closed so far
+66100 gaps closed so far
+66200 gaps closed so far
+66300 gaps closed so far
+66400 gaps closed so far
+66500 gaps closed so far
+66600 gaps closed so far
+66700 gaps closed so far
+66800 gaps closed so far
+66900 gaps closed so far
+67000 gaps closed so far
+67100 gaps closed so far
+67200 gaps closed so far
+67300 gaps closed so far
+67400 gaps closed so far
+67500 gaps closed so far
+67600 gaps closed so far
+67700 gaps closed so far
+67800 gaps closed so far
+67900 gaps closed so far
+68000 gaps closed so far
+68100 gaps closed so far
+68200 gaps closed so far
+68300 gaps closed so far
+68400 gaps closed so far
+68500 gaps closed so far
+68600 gaps closed so far
+68700 gaps closed so far
+68800 gaps closed so far
+68900 gaps closed so far
+69000 gaps closed so far
+69100 gaps closed so far
+69200 gaps closed so far
+69300 gaps closed so far
+69400 gaps closed so far
+69500 gaps closed so far
+69600 gaps closed so far
+69700 gaps closed so far
+69800 gaps closed so far
+69900 gaps closed so far
+70000 gaps closed so far
+70100 gaps closed so far
+70200 gaps closed so far
+70300 gaps closed so far
+70400 gaps closed so far
+70500 gaps closed so far
+70600 gaps closed so far
+70700 gaps closed so far
+70800 gaps closed so far
+70900 gaps closed so far
+71000 gaps closed so far
+71100 gaps closed so far
+71200 gaps closed so far
+71300 gaps closed so far
+71400 gaps closed so far
+71500 gaps closed so far
+71600 gaps closed so far
+71700 gaps closed so far
+71800 gaps closed so far
+71900 gaps closed so far
+72000 gaps closed so far
+72100 gaps closed so far
+72200 gaps closed so far
+72300 gaps closed so far
+72400 gaps closed so far
+72500 gaps closed so far
+72600 gaps closed so far
+72700 gaps closed so far
+72800 gaps closed so far
+72900 gaps closed so far
+73000 gaps closed so far
+73100 gaps closed so far
+73200 gaps closed so far
+73300 gaps closed so far
+73400 gaps closed so far
+73500 gaps closed so far
+73600 gaps closed so far
+73700 gaps closed so far
+73800 gaps closed so far
+73900 gaps closed so far
+74000 gaps closed so far
+74100 gaps closed so far
+74200 gaps closed so far
+74300 gaps closed so far
+74400 gaps closed so far
+74500 gaps closed so far
+74600 gaps closed so far
+74700 gaps closed so far
+74800 gaps closed so far
+74900 gaps closed so far
+75000 gaps closed so far
+75100 gaps closed so far
+75200 gaps closed so far
+75300 gaps closed so far
+75400 gaps closed so far
+75500 gaps closed so far
+75600 gaps closed so far
+75700 gaps closed so far
+75800 gaps closed so far
+75900 gaps closed so far
+76000 gaps closed so far
+76100 gaps closed so far
+76200 gaps closed so far
+76300 gaps closed so far
+76400 gaps closed so far
+76500 gaps closed so far
+76600 gaps closed so far
+76700 gaps closed so far
+76800 gaps closed so far
+76900 gaps closed so far
+77000 gaps closed so far
+77100 gaps closed so far
+77200 gaps closed so far
+77300 gaps closed so far
+77400 gaps closed so far
+77500 gaps closed so far
+77600 gaps closed so far
+77700 gaps closed so far
+77800 gaps closed so far
+77900 gaps closed so far
+78000 gaps closed so far
+78100 gaps closed so far
+78200 gaps closed so far
+78300 gaps closed so far
+78400 gaps closed so far
+78500 gaps closed so far
+78600 gaps closed so far
+78700 gaps closed so far
+78800 gaps closed so far
+18542 unique gaps closed for k45
+No start/goal kmer: 2
+No path: 31785
+Unique path: 18271
+Multiple paths: 271
+Too many paths: 6832
+Too many branches: 276855
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+314191 flanks left
+k45 run complete
+Total gaps closed so far = 78890
+
+Loading bloom filter from `k50.bloom'...
+Bloom filter FPR: 1.63%
+Starting K run with k = 50
+Flanks inserted into k run = 314191
+78900 gaps closed so far
+79000 gaps closed so far
+79100 gaps closed so far
+79200 gaps closed so far
+79300 gaps closed so far
+79400 gaps closed so far
+79500 gaps closed so far
+79600 gaps closed so far
+79700 gaps closed so far
+79800 gaps closed so far
+79900 gaps closed so far
+80000 gaps closed so far
+80100 gaps closed so far
+80200 gaps closed so far
+80300 gaps closed so far
+80400 gaps closed so far
+80500 gaps closed so far
+80600 gaps closed so far
+80700 gaps closed so far
+80800 gaps closed so far
+80900 gaps closed so far
+81000 gaps closed so far
+81100 gaps closed so far
+81200 gaps closed so far
+81300 gaps closed so far
+81400 gaps closed so far
+81500 gaps closed so far
+81600 gaps closed so far
+81700 gaps closed so far
+81800 gaps closed so far
+81900 gaps closed so far
+82000 gaps closed so far
+82100 gaps closed so far
+82200 gaps closed so far
+82300 gaps closed so far
+82400 gaps closed so far
+82500 gaps closed so far
+82600 gaps closed so far
+82700 gaps closed so far
+82800 gaps closed so far
+82900 gaps closed so far
+83000 gaps closed so far
+83100 gaps closed so far
+83200 gaps closed so far
+83300 gaps closed so far
+83400 gaps closed so far
+83500 gaps closed so far
+83600 gaps closed so far
+83700 gaps closed so far
+83800 gaps closed so far
+83900 gaps closed so far
+84000 gaps closed so far
+84100 gaps closed so far
+84200 gaps closed so far
+84300 gaps closed so far
+84400 gaps closed so far
+84500 gaps closed so far
+84600 gaps closed so far
+84700 gaps closed so far
+84800 gaps closed so far
+84900 gaps closed so far
+85000 gaps closed so far
+85100 gaps closed so far
+85200 gaps closed so far
+85300 gaps closed so far
+85400 gaps closed so far
+85500 gaps closed so far
+85600 gaps closed so far
+85700 gaps closed so far
+85800 gaps closed so far
+85900 gaps closed so far
+86000 gaps closed so far
+86100 gaps closed so far
+86200 gaps closed so far
+86300 gaps closed so far
+86400 gaps closed so far
+86500 gaps closed so far
+86600 gaps closed so far
+86700 gaps closed so far
+86800 gaps closed so far
+86900 gaps closed so far
+87000 gaps closed so far
+87100 gaps closed so far
+87200 gaps closed so far
+87300 gaps closed so far
+87400 gaps closed so far
+87500 gaps closed so far
+87600 gaps closed so far
+87700 gaps closed so far
+87800 gaps closed so far
+87900 gaps closed so far
+88000 gaps closed so far
+88100 gaps closed so far
+88200 gaps closed so far
+88300 gaps closed so far
+88400 gaps closed so far
+88500 gaps closed so far
+88600 gaps closed so far
+88700 gaps closed so far
+88800 gaps closed so far
+88900 gaps closed so far
+89000 gaps closed so far
+89100 gaps closed so far
+89200 gaps closed so far
+89300 gaps closed so far
+89400 gaps closed so far
+89500 gaps closed so far
+89600 gaps closed so far
+89700 gaps closed so far
+89800 gaps closed so far
+89900 gaps closed so far
+90000 gaps closed so far
+90100 gaps closed so far
+90200 gaps closed so far
+90300 gaps closed so far
+90400 gaps closed so far
+90500 gaps closed so far
+90600 gaps closed so far
+90700 gaps closed so far
+11820 unique gaps closed for k50
+No start/goal kmer: 5
+No path: 38114
+Unique path: 11545
+Multiple paths: 275
+Too many paths: 6769
+Too many branches: 258748
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+302371 flanks left
+k50 run complete
+Total gaps closed so far = 90710
+
+Loading bloom filter from `k55.bloom'...
+Bloom filter FPR: 1.69%
+Starting K run with k = 55
+Flanks inserted into k run = 302371
+90800 gaps closed so far
+90900 gaps closed so far
+91000 gaps closed so far
+91100 gaps closed so far
+91200 gaps closed so far
+91300 gaps closed so far
+91400 gaps closed so far
+91500 gaps closed so far
+91600 gaps closed so far
+91700 gaps closed so far
+91800 gaps closed so far
+91900 gaps closed so far
+92000 gaps closed so far
+92100 gaps closed so far
+92200 gaps closed so far
+92300 gaps closed so far
+92400 gaps closed so far
+92500 gaps closed so far
+92600 gaps closed so far
+92700 gaps closed so far
+92800 gaps closed so far
+92900 gaps closed so far
+93000 gaps closed so far
+93100 gaps closed so far
+93200 gaps closed so far
+93300 gaps closed so far
+93400 gaps closed so far
+93500 gaps closed so far
+93600 gaps closed so far
+93700 gaps closed so far
+93800 gaps closed so far
+93900 gaps closed so far
+94000 gaps closed so far
+94100 gaps closed so far
+94200 gaps closed so far
+94300 gaps closed so far
+94400 gaps closed so far
+94500 gaps closed so far
+94600 gaps closed so far
+94700 gaps closed so far
+94800 gaps closed so far
+94900 gaps closed so far
+95000 gaps closed so far
+95100 gaps closed so far
+95200 gaps closed so far
+95300 gaps closed so far
+95400 gaps closed so far
+95500 gaps closed so far
+95600 gaps closed so far
+95700 gaps closed so far
+95800 gaps closed so far
+95900 gaps closed so far
+96000 gaps closed so far
+96100 gaps closed so far
+96200 gaps closed so far
+96300 gaps closed so far
+96400 gaps closed so far
+96500 gaps closed so far
+96600 gaps closed so far
+96700 gaps closed so far
+96800 gaps closed so far
+96900 gaps closed so far
+97000 gaps closed so far
+6295 unique gaps closed for k55
+No start/goal kmer: 12
+No path: 50194
+Unique path: 5994
+Multiple paths: 301
+Too many paths: 6698
+Too many branches: 240408
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+296076 flanks left
+k55 run complete
+Total gaps closed so far = 97005
+
+Loading bloom filter from `k60.bloom'...
+Bloom filter FPR: 1.74%
+Starting K run with k = 60
+Flanks inserted into k run = 296076
+97100 gaps closed so far
+97200 gaps closed so far
+97300 gaps closed so far
+97400 gaps closed so far
+97500 gaps closed so far
+97600 gaps closed so far
+97700 gaps closed so far
+97800 gaps closed so far
+97900 gaps closed so far
+98000 gaps closed so far
+98100 gaps closed so far
+98200 gaps closed so far
+98300 gaps closed so far
+98400 gaps closed so far
+98500 gaps closed so far
+98600 gaps closed so far
+98700 gaps closed so far
+98800 gaps closed so far
+98900 gaps closed so far
+99000 gaps closed so far
+99100 gaps closed so far
+99200 gaps closed so far
+99300 gaps closed so far
+99400 gaps closed so far
+99500 gaps closed so far
+99600 gaps closed so far
+99700 gaps closed so far
+99800 gaps closed so far
+99900 gaps closed so far
+100000 gaps closed so far
+100100 gaps closed so far
+100200 gaps closed so far
+100300 gaps closed so far
+100400 gaps closed so far
+100500 gaps closed so far
+100600 gaps closed so far
+100700 gaps closed so far
+100800 gaps closed so far
+100900 gaps closed so far
+101000 gaps closed so far
+101100 gaps closed so far
+101200 gaps closed so far
+101300 gaps closed so far
+101400 gaps closed so far
+101500 gaps closed so far
+101600 gaps closed so far
+101700 gaps closed so far
+101800 gaps closed so far
+101900 gaps closed so far
+102000 gaps closed so far
+102100 gaps closed so far
+102200 gaps closed so far
+102300 gaps closed so far
+102400 gaps closed so far
+102500 gaps closed so far
+102600 gaps closed so far
+102700 gaps closed so far
+102800 gaps closed so far
+102900 gaps closed so far
+103000 gaps closed so far
+103100 gaps closed so far
+6187 unique gaps closed for k60
+No start/goal kmer: 35
+No path: 65231
+Unique path: 5837
+Multiple paths: 350
+Too many paths: 6824
+Too many branches: 219013
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+289889 flanks left
+k60 run complete
+Total gaps closed so far = 103192
+
+Loading bloom filter from `k65.bloom'...
+Bloom filter FPR: 1.78%
+Starting K run with k = 65
+Flanks inserted into k run = 289889
+103200 gaps closed so far
+103300 gaps closed so far
+103400 gaps closed so far
+103500 gaps closed so far
+103600 gaps closed so far
+103700 gaps closed so far
+103800 gaps closed so far
+103900 gaps closed so far
+104000 gaps closed so far
+104100 gaps closed so far
+104200 gaps closed so far
+104300 gaps closed so far
+104400 gaps closed so far
+104500 gaps closed so far
+104600 gaps closed so far
+104700 gaps closed so far
+104800 gaps closed so far
+104900 gaps closed so far
+105000 gaps closed so far
+105100 gaps closed so far
+105200 gaps closed so far
+105300 gaps closed so far
+105400 gaps closed so far
+105500 gaps closed so far
+105600 gaps closed so far
+105700 gaps closed so far
+105800 gaps closed so far
+105900 gaps closed so far
+106000 gaps closed so far
+106100 gaps closed so far
+106200 gaps closed so far
+106300 gaps closed so far
+106400 gaps closed so far
+106500 gaps closed so far
+106600 gaps closed so far
+106700 gaps closed so far
+106800 gaps closed so far
+106900 gaps closed so far
+107000 gaps closed so far
+107100 gaps closed so far
+107200 gaps closed so far
+107300 gaps closed so far
+107400 gaps closed so far
+107500 gaps closed so far
+107600 gaps closed so far
+107700 gaps closed so far
+107800 gaps closed so far
+107900 gaps closed so far
+108000 gaps closed so far
+108100 gaps closed so far
+108200 gaps closed so far
+108300 gaps closed so far
+108400 gaps closed so far
+108500 gaps closed so far
+108600 gaps closed so far
+108700 gaps closed so far
+108800 gaps closed so far
+108900 gaps closed so far
+109000 gaps closed so far
+109100 gaps closed so far
+5932 unique gaps closed for k65
+No start/goal kmer: 95
+No path: 82059
+Unique path: 5539
+Multiple paths: 393
+Too many paths: 7221
+Too many branches: 195744
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+283959 flanks left
+k65 run complete
+Total gaps closed so far = 109124
+
+Loading bloom filter from `k70.bloom'...
+Bloom filter FPR: 1.8%
+Starting K run with k = 70
+Flanks inserted into k run = 283959
+109200 gaps closed so far
+109300 gaps closed so far
+109400 gaps closed so far
+109500 gaps closed so far
+109600 gaps closed so far
+109700 gaps closed so far
+109800 gaps closed so far
+109900 gaps closed so far
+110000 gaps closed so far
+110100 gaps closed so far
+110200 gaps closed so far
+110300 gaps closed so far
+110400 gaps closed so far
+110500 gaps closed so far
+110600 gaps closed so far
+110700 gaps closed so far
+110800 gaps closed so far
+110900 gaps closed so far
+111000 gaps closed so far
+111100 gaps closed so far
+111200 gaps closed so far
+111300 gaps closed so far
+111400 gaps closed so far
+111500 gaps closed so far
+111600 gaps closed so far
+111700 gaps closed so far
+111800 gaps closed so far
+111900 gaps closed so far
+112000 gaps closed so far
+112100 gaps closed so far
+112200 gaps closed so far
+112300 gaps closed so far
+112400 gaps closed so far
+112500 gaps closed so far
+112600 gaps closed so far
+112700 gaps closed so far
+112800 gaps closed so far
+112900 gaps closed so far
+113000 gaps closed so far
+113100 gaps closed so far
+113200 gaps closed so far
+113300 gaps closed so far
+113400 gaps closed so far
+113500 gaps closed so far
+113600 gaps closed so far
+113700 gaps closed so far
+113800 gaps closed so far
+113900 gaps closed so far
+114000 gaps closed so far
+114100 gaps closed so far
+114200 gaps closed so far
+114300 gaps closed so far
+114400 gaps closed so far
+114500 gaps closed so far
+114600 gaps closed so far
+114700 gaps closed so far
+5582 unique gaps closed for k70
+No start/goal kmer: 220
+No path: 100349
+Unique path: 5014
+Multiple paths: 568
+Too many paths: 7776
+Too many branches: 171134
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+278378 flanks left
+k70 run complete
+Total gaps closed so far = 114706
+
+Loading bloom filter from `k75.bloom'...
+Bloom filter FPR: 1.81%
+Starting K run with k = 75
+Flanks inserted into k run = 278378
+114800 gaps closed so far
+114900 gaps closed so far
+115000 gaps closed so far
+115100 gaps closed so far
+115200 gaps closed so far
+115300 gaps closed so far
+115400 gaps closed so far
+115500 gaps closed so far
+115600 gaps closed so far
+115700 gaps closed so far
+115800 gaps closed so far
+115900 gaps closed so far
+116000 gaps closed so far
+116100 gaps closed so far
+116200 gaps closed so far
+116300 gaps closed so far
+116400 gaps closed so far
+116500 gaps closed so far
+116600 gaps closed so far
+116700 gaps closed so far
+116800 gaps closed so far
+116900 gaps closed so far
+117000 gaps closed so far
+117100 gaps closed so far
+117200 gaps closed so far
+117300 gaps closed so far
+117400 gaps closed so far
+117500 gaps closed so far
+117600 gaps closed so far
+117700 gaps closed so far
+117800 gaps closed so far
+117900 gaps closed so far
+118000 gaps closed so far
+118100 gaps closed so far
+118200 gaps closed so far
+118300 gaps closed so far
+118400 gaps closed so far
+118500 gaps closed so far
+118600 gaps closed so far
+118700 gaps closed so far
+118800 gaps closed so far
+118900 gaps closed so far
+119000 gaps closed so far
+119100 gaps closed so far
+119200 gaps closed so far
+119300 gaps closed so far
+119400 gaps closed so far
+119500 gaps closed so far
+119600 gaps closed so far
+119700 gaps closed so far
+119800 gaps closed so far
+119900 gaps closed so far
+120000 gaps closed so far
+120100 gaps closed so far
+120200 gaps closed so far
+5565 unique gaps closed for k75
+No start/goal kmer: 528
+No path: 119141
+Unique path: 4777
+Multiple paths: 788
+Too many paths: 8505
+Too many branches: 145658
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+272817 flanks left
+k75 run complete
+Total gaps closed so far = 120271
+
+Loading bloom filter from `k80.bloom'...
+Bloom filter FPR: 1.81%
+Starting K run with k = 80
+Flanks inserted into k run = 272817
+120300 gaps closed so far
+120400 gaps closed so far
+120500 gaps closed so far
+120600 gaps closed so far
+120700 gaps closed so far
+120800 gaps closed so far
+120900 gaps closed so far
+121000 gaps closed so far
+121100 gaps closed so far
+121200 gaps closed so far
+121300 gaps closed so far
+121400 gaps closed so far
+121500 gaps closed so far
+121600 gaps closed so far
+121700 gaps closed so far
+121800 gaps closed so far
+121900 gaps closed so far
+122000 gaps closed so far
+122100 gaps closed so far
+122200 gaps closed so far
+122300 gaps closed so far
+122400 gaps closed so far
+122500 gaps closed so far
+122600 gaps closed so far
+122700 gaps closed so far
+122800 gaps closed so far
+122900 gaps closed so far
+123000 gaps closed so far
+123100 gaps closed so far
+123200 gaps closed so far
+123300 gaps closed so far
+123400 gaps closed so far
+123500 gaps closed so far
+123600 gaps closed so far
+123700 gaps closed so far
+123800 gaps closed so far
+123900 gaps closed so far
+124000 gaps closed so far
+124100 gaps closed so far
+124200 gaps closed so far
+124300 gaps closed so far
+124400 gaps closed so far
+124500 gaps closed so far
+124600 gaps closed so far
+124700 gaps closed so far
+124800 gaps closed so far
+124900 gaps closed so far
+125000 gaps closed so far
+125100 gaps closed so far
+125200 gaps closed so far
+125300 gaps closed so far
+125400 gaps closed so far
+125500 gaps closed so far
+125600 gaps closed so far
+5385 unique gaps closed for k80
+No start/goal kmer: 1277
+No path: 135470
+Unique path: 4525
+Multiple paths: 860
+Too many paths: 8881
+Too many branches: 122717
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+267442 flanks left
+k80 run complete
+Total gaps closed so far = 125656
+
+Loading bloom filter from `k85.bloom'...
+Bloom filter FPR: 1.8%
+Starting K run with k = 85
+Flanks inserted into k run = 267442
+125700 gaps closed so far
+125800 gaps closed so far
+125900 gaps closed so far
+126000 gaps closed so far
+126100 gaps closed so far
+126200 gaps closed so far
+126300 gaps closed so far
+126400 gaps closed so far
+126500 gaps closed so far
+126600 gaps closed so far
+126700 gaps closed so far
+126800 gaps closed so far
+126900 gaps closed so far
+127000 gaps closed so far
+127100 gaps closed so far
+127200 gaps closed so far
+127300 gaps closed so far
+127400 gaps closed so far
+127500 gaps closed so far
+127600 gaps closed so far
+127700 gaps closed so far
+127800 gaps closed so far
+127900 gaps closed so far
+128000 gaps closed so far
+128100 gaps closed so far
+128200 gaps closed so far
+128300 gaps closed so far
+128400 gaps closed so far
+128500 gaps closed so far
+128600 gaps closed so far
+128700 gaps closed so far
+128800 gaps closed so far
+128900 gaps closed so far
+129000 gaps closed so far
+129100 gaps closed so far
+129200 gaps closed so far
+129300 gaps closed so far
+129400 gaps closed so far
+129500 gaps closed so far
+129600 gaps closed so far
+129700 gaps closed so far
+129800 gaps closed so far
+129900 gaps closed so far
+130000 gaps closed so far
+130100 gaps closed so far
+130200 gaps closed so far
+130300 gaps closed so far
+130400 gaps closed so far
+130500 gaps closed so far
+130600 gaps closed so far
+130700 gaps closed so far
+130800 gaps closed so far
+130900 gaps closed so far
+131000 gaps closed so far
+5366 unique gaps closed for k85
+No start/goal kmer: 2658
+No path: 146777
+Unique path: 4618
+Multiple paths: 748
+Too many paths: 8685
+Too many branches: 104744
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 3
+Exceeded mem limit: 0
+Skipped: 0
+262083 flanks left
+k85 run complete
+Total gaps closed so far = 131022
+
+Loading bloom filter from `k90.bloom'...
+Bloom filter FPR: 1.77%
+Starting K run with k = 90
+Flanks inserted into k run = 262083
+131100 gaps closed so far
+131200 gaps closed so far
+131300 gaps closed so far
+131400 gaps closed so far
+131500 gaps closed so far
+131600 gaps closed so far
+131700 gaps closed so far
+131800 gaps closed so far
+131900 gaps closed so far
+132000 gaps closed so far
+132100 gaps closed so far
+132200 gaps closed so far
+132300 gaps closed so far
+132400 gaps closed so far
+132500 gaps closed so far
+132600 gaps closed so far
+132700 gaps closed so far
+132800 gaps closed so far
+132900 gaps closed so far
+133000 gaps closed so far
+133100 gaps closed so far
+133200 gaps closed so far
+133300 gaps closed so far
+133400 gaps closed so far
+133500 gaps closed so far
+133600 gaps closed so far
+133700 gaps closed so far
+133800 gaps closed so far
+133900 gaps closed so far
+134000 gaps closed so far
+134100 gaps closed so far
+134200 gaps closed so far
+134300 gaps closed so far
+134400 gaps closed so far
+134500 gaps closed so far
+134600 gaps closed so far
+134700 gaps closed so far
+134800 gaps closed so far
+134900 gaps closed so far
+135000 gaps closed so far
+135100 gaps closed so far
+135200 gaps closed so far
+135300 gaps closed so far
+135400 gaps closed so far
+135500 gaps closed so far
+135600 gaps closed so far
+135700 gaps closed so far
+135800 gaps closed so far
+135900 gaps closed so far
+136000 gaps closed so far
+136100 gaps closed so far
+136200 gaps closed so far
+136300 gaps closed so far
+136400 gaps closed so far
+136500 gaps closed so far
+136600 gaps closed so far
+136700 gaps closed so far
+136800 gaps closed so far
+136900 gaps closed so far
+137000 gaps closed so far
+137100 gaps closed so far
+137200 gaps closed so far
+137300 gaps closed so far
+137400 gaps closed so far
+6432 unique gaps closed for k90
+No start/goal kmer: 5181
+No path: 155129
+Unique path: 5655
+Multiple paths: 777
+Too many paths: 8274
+Too many branches: 87767
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 2
+Exceeded mem limit: 0
+Skipped: 0
+255657 flanks left
+k90 run complete
+Total gaps closed so far = 137454
+
+Loading bloom filter from `k95.bloom'...
+Bloom filter FPR: 1.74%
+Starting K run with k = 95
+Flanks inserted into k run = 255657
+137500 gaps closed so far
+137600 gaps closed so far
+137700 gaps closed so far
+137800 gaps closed so far
+137900 gaps closed so far
+138000 gaps closed so far
+138100 gaps closed so far
+138200 gaps closed so far
+138300 gaps closed so far
+138400 gaps closed so far
+138500 gaps closed so far
+138600 gaps closed so far
+138700 gaps closed so far
+138800 gaps closed so far
+138900 gaps closed so far
+139000 gaps closed so far
+139100 gaps closed so far
+139200 gaps closed so far
+139300 gaps closed so far
+139400 gaps closed so far
+139500 gaps closed so far
+139600 gaps closed so far
+139700 gaps closed so far
+139800 gaps closed so far
+139900 gaps closed so far
+140000 gaps closed so far
+140100 gaps closed so far
+140200 gaps closed so far
+140300 gaps closed so far
+140400 gaps closed so far
+140500 gaps closed so far
+140600 gaps closed so far
+140700 gaps closed so far
+140800 gaps closed so far
+140900 gaps closed so far
+141000 gaps closed so far
+141100 gaps closed so far
+141200 gaps closed so far
+141300 gaps closed so far
+141400 gaps closed so far
+141500 gaps closed so far
+141600 gaps closed so far
+141700 gaps closed so far
+141800 gaps closed so far
+141900 gaps closed so far
+142000 gaps closed so far
+142100 gaps closed so far
+142200 gaps closed so far
+142300 gaps closed so far
+142400 gaps closed so far
+142500 gaps closed so far
+142600 gaps closed so far
+142700 gaps closed so far
+142800 gaps closed so far
+142900 gaps closed so far
+143000 gaps closed so far
+143100 gaps closed so far
+143200 gaps closed so far
+143300 gaps closed so far
+143400 gaps closed so far
+143500 gaps closed so far
+143600 gaps closed so far
+143700 gaps closed so far
+143800 gaps closed so far
+143900 gaps closed so far
+144000 gaps closed so far
+144100 gaps closed so far
+144200 gaps closed so far
+144300 gaps closed so far
+144400 gaps closed so far
+144500 gaps closed so far
+144600 gaps closed so far
+144700 gaps closed so far
+144800 gaps closed so far
+144900 gaps closed so far
+145000 gaps closed so far
+145100 gaps closed so far
+145200 gaps closed so far
+145300 gaps closed so far
+7925 unique gaps closed for k95
+No start/goal kmer: 10137
+No path: 157747
+Unique path: 7110
+Multiple paths: 815
+Too many paths: 7470
+Too many branches: 72975
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 2
+Exceeded mem limit: 0
+Skipped: 0
+247736 flanks left
+k95 run complete
+Total gaps closed so far = 145379
+
+Loading bloom filter from `k100.bloom'...
+Bloom filter FPR: 1.7%
+Starting K run with k = 100
+Flanks inserted into k run = 247736
+145400 gaps closed so far
+145500 gaps closed so far
+145600 gaps closed so far
+145700 gaps closed so far
+145800 gaps closed so far
+145900 gaps closed so far
+146000 gaps closed so far
+146100 gaps closed so far
+146200 gaps closed so far
+146300 gaps closed so far
+146400 gaps closed so far
+146500 gaps closed so far
+146600 gaps closed so far
+146700 gaps closed so far
+146800 gaps closed so far
+146900 gaps closed so far
+147000 gaps closed so far
+147100 gaps closed so far
+147200 gaps closed so far
+147300 gaps closed so far
+147400 gaps closed so far
+147500 gaps closed so far
+147600 gaps closed so far
+147700 gaps closed so far
+147800 gaps closed so far
+147900 gaps closed so far
+148000 gaps closed so far
+148100 gaps closed so far
+148200 gaps closed so far
+148300 gaps closed so far
+148400 gaps closed so far
+148500 gaps closed so far
+148600 gaps closed so far
+148700 gaps closed so far
+148800 gaps closed so far
+148900 gaps closed so far
+149000 gaps closed so far
+149100 gaps closed so far
+149200 gaps closed so far
+149300 gaps closed so far
+149400 gaps closed so far
+149500 gaps closed so far
+149600 gaps closed so far
+149700 gaps closed so far
+149800 gaps closed so far
+149900 gaps closed so far
+150000 gaps closed so far
+150100 gaps closed so far
+150200 gaps closed so far
+150300 gaps closed so far
+150400 gaps closed so far
+150500 gaps closed so far
+150600 gaps closed so far
+150700 gaps closed so far
+150800 gaps closed so far
+150900 gaps closed so far
+151000 gaps closed so far
+151100 gaps closed so far
+151200 gaps closed so far
+151300 gaps closed so far
+151400 gaps closed so far
+151500 gaps closed so far
+151600 gaps closed so far
+151700 gaps closed so far
+151800 gaps closed so far
+151900 gaps closed so far
+152000 gaps closed so far
+152100 gaps closed so far
+152200 gaps closed so far
+152300 gaps closed so far
+152400 gaps closed so far
+152500 gaps closed so far
+152600 gaps closed so far
+152700 gaps closed so far
+152800 gaps closed so far
+152900 gaps closed so far
+153000 gaps closed so far
+153100 gaps closed so far
+153200 gaps closed so far
+153300 gaps closed so far
+153400 gaps closed so far
+153500 gaps closed so far
+153600 gaps closed so far
+153700 gaps closed so far
+153800 gaps closed so far
+153900 gaps closed so far
+154000 gaps closed so far
+154100 gaps closed so far
+154200 gaps closed so far
+154300 gaps closed so far
+154400 gaps closed so far
+154500 gaps closed so far
+154600 gaps closed so far
+154700 gaps closed so far
+154800 gaps closed so far
+154900 gaps closed so far
+155000 gaps closed so far
+155100 gaps closed so far
+155200 gaps closed so far
+155300 gaps closed so far
+155400 gaps closed so far
+155500 gaps closed so far
+155600 gaps closed so far
+155700 gaps closed so far
+155800 gaps closed so far
+155900 gaps closed so far
+156000 gaps closed so far
+156100 gaps closed so far
+156200 gaps closed so far
+156300 gaps closed so far
+156400 gaps closed so far
+156500 gaps closed so far
+156600 gaps closed so far
+156700 gaps closed so far
+156800 gaps closed so far
+156900 gaps closed so far
+157000 gaps closed so far
+157100 gaps closed so far
+157200 gaps closed so far
+157300 gaps closed so far
+157400 gaps closed so far
+157500 gaps closed so far
+157600 gaps closed so far
+157700 gaps closed so far
+157800 gaps closed so far
+157900 gaps closed so far
+158000 gaps closed so far
+158100 gaps closed so far
+158200 gaps closed so far
+158300 gaps closed so far
+158400 gaps closed so far
+158500 gaps closed so far
+158600 gaps closed so far
+158700 gaps closed so far
+158800 gaps closed so far
+158900 gaps closed so far
+13575 unique gaps closed for k100
+No start/goal kmer: 18786
+No path: 148493
+Unique path: 12857
+Multiple paths: 718
+Too many paths: 6428
+Too many branches: 60946
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 4
+Exceeded mem limit: 0
+Skipped: 0
+234170 flanks left
+k100 run complete
+Total gaps closed so far = 158954
+
+Loading bloom filter from `k105.bloom'...
+Bloom filter FPR: 1.64%
+Starting K run with k = 105
+Flanks inserted into k run = 234170
+0 unique gaps closed for k105
+No start/goal kmer: 234421
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+234170 flanks left
+k105 run complete
+Total gaps closed so far = 158954
+
+Loading bloom filter from `k110.bloom'...
+Bloom filter FPR: 1.57%
+Starting K run with k = 110
+Flanks inserted into k run = 234170
+0 unique gaps closed for k110
+No start/goal kmer: 234421
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+234170 flanks left
+k110 run complete
+Total gaps closed so far = 158954
+
+Loading bloom filter from `k115.bloom'...
+Bloom filter FPR: 1.49%
+Starting K run with k = 115
+Flanks inserted into k run = 234170
+0 unique gaps closed for k115
+No start/goal kmer: 234421
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+234170 flanks left
+k115 run complete
+Total gaps closed so far = 158954
+
+Loading bloom filter from `k120.bloom'...
+Bloom filter FPR: 1.39%
+Starting K run with k = 120
+Flanks inserted into k run = 234170
+0 unique gaps closed for k120
+No start/goal kmer: 234421
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+234170 flanks left
+k120 run complete
+Total gaps closed so far = 158954
+
+Loading bloom filter from `k125.bloom'...
+Bloom filter FPR: 1.27%
+Starting K run with k = 125
+Flanks inserted into k run = 234170
+0 unique gaps closed for k125
+No start/goal kmer: 234421
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+234170 flanks left
+k125 run complete
+Total gaps closed so far = 158954
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 158954
+40.2%
+
+JobId=602242 JobName=3_Sealer.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=highmem
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=1-15:13:45 TimeLimit=7-00:00:00 TimeMin=N/A
+   SubmitTime=2020-01-09T09:04:50 EligibleTime=2020-01-09T09:04:50
+   AccrueTime=2020-01-09T09:04:50
+   StartTime=2020-01-09T09:04:50 EndTime=2020-01-16T09:04:50 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-01-09T09:04:50
+   Partition=highmem AllocNode:Sid=pelican.ib.hpcc.ucr.edu:52134
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=h01
+   BatchHost=h01
+   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=112G,node=1,billing=44
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=16 MinMemoryCPU=7G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_BCGSC/3_Sealer.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_BCGSC
+   StdErr=/bigdata/littlab/arajewski/Datura/3_BCGSC/../history/Sealer-602242.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_BCGSC/../history/Sealer-602242.out
+   Power=
+
