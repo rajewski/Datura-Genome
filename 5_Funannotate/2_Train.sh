@@ -9,22 +9,22 @@
 #SBATCH -o ../history/FA_Train-%A.out
 set -e
 
-#I cant get this working and I suspect it has something to do with formatting issues with reads from SRA
-
-
 ASSEMPATH=/rhome/arajewski/bigdata/Datura/3_BCGSC
 RNAPATH=/rhome/arajewski/bigdata/Datura/RNA-seq
 BASE=Dstr_v1.4
 
-
 #actually train the predictor
 module load funannotate/1.6.0
+#change PASA directory becuase the flag below doesnt work
+PASAHOME=/opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/
 funannotate train \
     -i $BASE.masked.fa \
     -o train \
-    -l $RNAPATH/SRR9888534_1.fastq.gz $RNAPATH/ERR2040631_1.fastq.gz \
-    -r $RNAPATH/SRR9888534_2.fastq.gz $RNAPATH/ERR2040631_2.fastq.gz \
+    -l $RNAPATH/ERR2040631_Trimmed_1P.fastq.gz $RNAPATH/SRR9888534_Trimmed_1P.fastq.gz $RNAPATH/MedPlantTrimmed_1P.fastq.gz \
+    -r $RNAPATH/ERR2040631_Trimmed_2P.fastq.gz $RNAPATH/SRR9888534_Trimmed_2P.fastq.gz $RNAPATH/MedPlantTrimmed_2P.fastq.gz\
+    -s $RNAPATH/ERR2040631_Trimmed_1U.fastq.gz $RNAPATH/MedPlantTrimmed_1U.fastq.gz $RNAPATH/MedPlantTrimmed_2U.fastq.gz \
+    --no_trimmomatic \
+    --no_normalize_reads \
     --max_intronlen 6000 \
     --species "Datura stramonium" \
-    --cpus $SLURM_CPUS_PER_TASK \
-    --PASAHOME /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/
+    --cpus $SLURM_CPUS_PER_TASK 
