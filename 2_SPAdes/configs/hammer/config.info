@@ -10,7 +10,7 @@ output_dir                              ./test_dataset/input/corrected
 ; general options
 general_do_everything_after_first_iteration	1
 general_hard_memory_limit	150
-general_max_nthreads		30
+general_max_nthreads		16
 general_tau			1
 general_max_iterations		1
 general_debug			0
@@ -18,7 +18,7 @@ general_debug			0
 ; count k-mers
 count_do				1
 count_numfiles				16
-count_merge_nthreads			30
+count_merge_nthreads			16
 count_split_buffer			0
 count_filter_singletons                 0
 
@@ -28,7 +28,7 @@ hamming_blocksize_quadratic_threshold	50
 
 ; bayesian subclustering
 bayes_do				1
-bayes_nthreads				30
+bayes_nthreads				16
 bayes_singleton_threshold		0.995
 bayes_nonsingleton_threshold		0.9
 bayes_use_hamming_dist			0

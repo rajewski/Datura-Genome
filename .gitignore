@@ -2,6 +2,13 @@
 1_QCQA/Nanopore_Logs/
 3_BCGSC/LINKS_k15_z100
 3_BCGSC/LINKS_k15/
+3_BCGSC/*links*.assembly_correspondence.tsv
+3_BCGSC/*links*.log
+3_BCGSC/*links*.pairing_distribution.csv
+3_BCGSC/*links*.pairing_issues
+3_BCGSC/*links*.scaffolds
+3_BCGSC/*links*.simplepair_checkpoint.tsv
+3_BCGSC/*links*.tigpair_checkpoint.tsv
 3_Fast-SG/Dstr_v1.1.K22/Dstr_v1.1.kmc.K22.txt
 3_Fast-SG/Dstr_v1.3_k101-K22/Dstr_v1.3_k101.kmc.K22.txt
 3_Flye/flye.log

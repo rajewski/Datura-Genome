@@ -2,8 +2,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem-per-cpu=7G
-#SBATCH --nodes=1
-#SBATCH --time=9-00:00:00
+#SBATCH --time=4-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Predict-%A.out
@@ -14,6 +13,9 @@ BASE=Dstr_v1.4
 RNAPATH=/rhome/arajewski/bigdata/Datura/RNA-seq
 
 module load funannotate/1.6.0
+#unload coding quarry to stop it from taking forever on this step
+module unload CodingQuarry
+
 #confirm that augustus config path is present and writeable
 if [ ! -w $AUGUSTUS_CONFIG_PATH ]; then
     echo Augustus config path not writeable. Checking if a local directory exists...

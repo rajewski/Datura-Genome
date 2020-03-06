@@ -12,8 +12,8 @@ set -e
 module load samtools/1.8
 module load minimap2/2.17
 export PATH=/rhome/arajewski/bigdata/Datura/software/RAILS_v1.5.1:$PATH
-ASSEMBLY=Dstr_v1.3_links14_k19.scaffolds.fa
-LONGREADS=mr.41.15.15.0.02.1.fa
+ASSEMBLY=Dstr_v1.4_links13_k19.scaffolds.fa
+LONGREADS=lordecreads.fa
 
 
 runRAILSminimapMod.sh \
