@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=32
 #SBATCH --nodes=1
-#SBATCH --mem-per-cpu=15G
+#SBATCH --mem-per-cpu=5G
 #SBATCH --time=20-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
@@ -92,8 +92,8 @@ else
     echo $(date): Deduplication already complete.
 fi
 
-echo $(date): rerun this script but alter each cpu to have more memory, I think
-exit 0
+#echo $(date): rerun this script but alter each cpu to have more memory, I think
+#exit 0
 
 #Actually run hercules
 if [ ! -e Dstr_Nanopore_Hercules_Corrected.fasta ]; then

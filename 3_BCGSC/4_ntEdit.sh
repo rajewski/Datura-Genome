@@ -8,7 +8,7 @@
 #SBATCH -o ../history/ntEdit-%A.out
 set -e
 MEMORY=$((SLURM_MEM_PER_CPU/1024))G
-ASSEM=Dstr_v1.3_LINKS14_RAILS_Sealer_scaffold.fa
+ASSEM=Dstr_v1.4_LINKS13_RAILS_Sealer_scaffold.fa
 kmer=50
 #Get env right
 export PATH=/rhome/arajewski/bigdata/Datura/software/bin:$PATH
@@ -34,7 +34,7 @@ ntedit \
     -f $ASSEM \
     -k $kmer \
     -r Dstr_k$kmer.bf \
-    -b Dstr_v1.3_ntEdit \
+    -b Dstr_v1.4_ntEdit \
     -v 1
 
 scontrol show job $SLURM_JOB_ID

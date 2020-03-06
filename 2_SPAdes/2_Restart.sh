@@ -12,6 +12,9 @@ set -euv
 module load SPAdes/3.13.1
 
 spades.py \
+    -pe1-1 \
+    -pe1-2 \
+    -pe1-s \
     -t $SLURM_CPUS_PER_TASK \
     -m $((SLURM_MEM_PER_NODE/1024)) \
     -o /rhome/arajewski/bigdata/Datura/2_SPAdes \

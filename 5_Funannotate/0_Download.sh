@@ -20,7 +20,13 @@ if [ ! -e $RNAPATH/ERR2040631_1.fastq.gz ]; then
     if [ ! -d ERR2040631 ]; then
 	prefetch ERR2040631
     fi
-    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files -B --gzip ERR2040631/
+    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files -B ERR2040631/
+    echo Done.
+    echo Editing sequence and quality headers to match...
+    sed 's/\(^\+ERR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=90\)/+\2\/1/g' ERR2040631_1.fastq
+    sed 's/\(^\+ERR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=90\)/+\2\/2/g' ERR2040631_2.fastq
+    gzip ERR2040631_1.fastq
+    gzip ERR2040631_2.fastq
     cd $SLURM_SUBMIT_DIR
     echo Done.
 else
@@ -35,6 +41,10 @@ if [ ! -e $RNAPATH/SRR9888534_1.fastq.gz ]; then
 	prefetch SRR9888534
     fi
     fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files -B --gzip SRR9888534/
+    echo Done.
+    echo Editing sequence and quality headers to match...
+    sed 's/\(^\+SRR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=150\)/+\2\/1/g' SRR9888534_1.fastq
+    sed 's/\(^\+SRR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=150\)/+\2\/2/g' SRR9888534_2.fastq
     cd $SLURM_SUBMIT_DIR
     echo Done.
 else
@@ -48,6 +58,14 @@ if [ ! -e $RNAPATH/s_2_1_DATST_plant_1.fastq.gz ]; then
     tar xf Datura_stramonium.tar.gz
     mv Datura_stramonium/s_2_1_DATST_plant_1.txt.gz ./s_2_1_DATST_plant_1.fastq.gz
     mv Datura_stramonium/s_2_2_DATST_plant_1.txt.gz ./s_2_2_DATST_plant_1.fastq.gz
+    echo Done.
+    echo Editing sequence and quality headers to match...
+    gunzip s_2_1_DATST_plant_1.fastq.gz
+    gunzip s_2_2_DATST_plant_1.fastq.gz
+    sed -i 's/\(^@[[:graph:]]*\)\( [[:graph:]]*\)/\1/g' s_2_1_DATST_plant_1.fastq
+    sed -i 's/\(^@[[:graph:]]*\)\( [[:graph:]]*\)/\1/g' s_2_2_DATST_plant_1.fastq
+    pigz s_2_1_DATST_plant_1.fastq
+    pigz s_2_2_DATST_plant_1.fastq
     #I think you may need to load BBMap's reformat.sh to convert the ASCII of the phred scores
     rm -Rf Datura_stramonium
     cd $SLURM_SUBMIT_DIR
@@ -56,6 +74,7 @@ else
     echo MedPlantsRNAseq data already present.
 fi
 
+#Download the assembled contigs for the MEdPlan Data
 if [ ! -e $RNAPATH/20100406_Contigs.fa ]; then
 	echo Downloading MedPlantRNAseq Transcriptome 1...
 	cd $RNAPATH
@@ -65,10 +84,12 @@ if [ ! -e $RNAPATH/20100406_Contigs.fa ]; then
 	rm -Rf datura_stramonium-20100406
 	cd $SLURM_SUBMIT_DIR
 	echo Done.
+else
+    echo MedPlantRNAseq Transcriptome 1 already present.
 fi
 
 if [ ! -e $RNAPATH/20101112_Contigs.fa ]; then
-    echo Downloading MedPlantRNAseqTranscriptome 2...
+    echo Downloading MedPlantRNAseq Transcriptome 2...
     cd $RNAPATH
     wget https://medplantrnaseq.org/assemblies/datura_stramonium-20101112.tgz
     tar xf datura_stramonium-20101112.tgz
@@ -76,4 +97,53 @@ if [ ! -e $RNAPATH/20101112_Contigs.fa ]; then
     rm -Rf datura_stramonium-20101112
     cd $SLURM_SUBMIT_DIR
     echo Done.
+else
+    echo MedPantRNAseq Transcriptome 2 already present.
 fi
+
+#Trim the Downloaded RNA seq data. I think this is necessary because of differing phred scores and some formatting between the various sources
+if [ ! -e $RNAPATH/MedPlantTrimmed_2P.fastq.gz ]; then
+    echo Running Trimmomatic on MedPlantRNAseq and converting phred scores...
+    module load trimmomatic
+    java -jar $TRIMMOMATIC PE \
+	-threads $SLURM_CPUS_PER_TASK \
+	-phred64 \
+	$RNAPATH/s_2_1_DATST_plant_1.fastq.gz $RNAPATH/s_2_2_DATST_plant_1.fastq.gz \
+	-baseout $RNAPATH/MedPlantTrimmed.fastq.gz \
+	ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 TOPHRED33
+    echo Done.
+else
+    echo MedPlant RNA seq already trimmed and converted.
+fi
+
+if [ ! -e $RNAPATH/ERR2040631_Trimmed_2P.fastq.gz ]; then
+    echo Running Trimmomatic on ERR2040631 RNAseq...
+    module load trimmomatic
+    java -jar $TRIMMOMATIC PE \
+        -threads $SLURM_CPUS_PER_TASK \
+        $RNAPATH/ERR2040631_1.fastq.gz $RNAPATH/ERR2040631_2.fastq.gz \
+        -baseout $RNAPATH/ERR2040631_Trimmed.fastq.gz \
+        ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+    echo Done.
+else
+    echo  ERR2040631 RNAseq already trimmed.
+fi
+
+if [ ! -e $RNAPATH/SRR9888534_Trimmed_2P.fastq.gz ]; then
+    echo Running Trimmomatic on SRR9888534 RNAseq...
+    module load trimmomatic
+    java -jar $TRIMMOMATIC PE \
+        -threads $SLURM_CPUS_PER_TASK \
+        $RNAPATH/SRR9888534_1.fastq.gz $RNAPATH/SRR9888534_1.fastq.gz \
+        -baseout $RNAPATH/SRR9888534_Trimmed.fastq.gz \
+        ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+    echo Done.
+else
+    echo SRR9888534 RNAseq already trimmed.
+fi
+
+#Set up in silico read normalization of all libraries
+#module load trinity-rnaseq/2.8.5
+
+
+#Consider adding Fastqc here
