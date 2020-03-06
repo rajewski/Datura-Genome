@@ -1,0 +1,7 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+TrimmomaticPE: Started with arguments:
+ /rhome/arajewski/bigdata/Datura/RNA-seq/s_2_1_DATST_plant_1.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/s_2_2_DATST_plant_1.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:30 TOPHRED33
+Quality encoding detected as phred64
+slurmstepd-c01: error: *** JOB 831935 ON c01 CANCELLED AT 2020-02-27T07:35:38 ***

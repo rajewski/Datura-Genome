@@ -1,0 +1,14 @@
+-------------------------------------------------------
+[05:06 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[05:06 PM]: Running funannotate v1.6.0-98d4d3f
+[05:06 PM]: AUGUSTUS (3.3.3) detected, version seems to be compatible with BRAKER and BUSCO
+[05:07 PM]: Loading genome assembly and parsing soft-masked repetitive sequences
+[05:38 PM]: Genome loaded: 209,631 scaffolds; 1,877,073,832 bp; 8.80% repeats masked
+[05:38 PM]: Existing transcript alignments found: predict/predict_misc/transcript_alignments.gff3
+[05:39 PM]: Existing protein alignments found: predict/predict_misc/protein_alignments.gff3
+[05:39 PM]: Running GeneMark-ES on assembly
+slurmstepd-c38: error: _is_a_lwp: 1 read() attempts on /proc/3335/status failed: No such process
+[06:48 AM]: Converting GeneMark GTF file to GFF3
+[06:51 AM]: Found 150,957 gene models
+[06:51 AM]: Running BUSCO to find conserved gene models for training Augustus
+[06:52 AM]: BUSCO training of Augusus failed, check busco logs, exiting

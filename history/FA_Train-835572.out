@@ -1,0 +1,17 @@
+[12:13 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:13 PM]: Running funannotate v1.6.0-98d4d3f
+[12:13 PM]: Combining PE and SE reads supported, but you will lose stranded information, setting --stranded no
+[12:13 PM]: Trimmomatic will be skipped
+[12:13 PM]: Read normalization will be skipped
+[12:13 PM]: Existing Trinity results found: train/training/trinity.fasta
+[12:13 PM]: StringTie installed, running StringTie on Hisat2 coordsorted BAM
+[12:13 PM]: Existing SeqClean output found: train/training/train/training/trinity.fasta.clean
+[12:13 PM]: Existing BAM alignments found: train/training/trinity.alignments.bam, train/training/transcript.alignments.bam
+[12:13 PM]: Running PASA alignment step using 122,029 transcripts
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-train.py", line 972, in <module>
+    runPASAtrain(genome, trinity_transcripts, cleanTranscripts, os.path.abspath(trinityGFF3), stringtieGTF, args.stranded, args.max_intronlen, args.cpus, organism_name, PASA_tmp)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-train.py", line 410, in runPASAtrain
+    with open(os.path.join(folder, pasaDBname+'.pasa_assemblies_described.txt'), 'rU') as description:
+IOError: [Errno 2] No such file or directory: 'train/training/pasa/Datura_stramonium.pasa_assemblies_described.txt'

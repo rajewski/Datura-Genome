@@ -1,0 +1,21 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+Container was created Fri Jan 31 00:07:24 UTC 2020
+[09:15 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[09:15 PM]: Running 1.7.2
+[09:15 PM]: Multiple inputs for --left and --right detected, concatenating PE reads
+[10:46 PM]: Adapter and Quality trimming PE reads with Trimmomatic
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/miniconda2/envs/funannotate/bin/funannotate", line 657, in <module>
+    main()
+  File "/opt/miniconda2/envs/funannotate/bin/funannotate", line 647, in main
+    mod.main(arguments)
+  File "/opt/miniconda2/envs/funannotate/lib/python2.7/site-packages/funannotate/train.py", line 867, in main
+    lib.CheckFASTQandFix(trim_reads[0], trim_reads[1])
+  File "/opt/miniconda2/envs/funannotate/lib/python2.7/site-packages/funannotate/library.py", line 583, in CheckFASTQandFix
+    for read1, read2 in izip(file1, file2):
+  File "/opt/miniconda2/envs/funannotate/lib/python2.7/site-packages/Bio/SeqIO/QualityIO.py", line 943, in FastqGeneralIterator
+    raise ValueError("Sequence and quality captions differ.")
+ValueError: Sequence and quality captions differ.

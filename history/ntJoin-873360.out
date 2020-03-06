@@ -1,0 +1,23 @@
+command time > SL40.fa.k32.w300.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 300 -t 4 SL40.fa > SL40.fa.k32.w300.tsv
+
+real	0m34.800s
+user	0m26.063s
+sys	0m8.668s
+command time > Target2.fa.k32.w300.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 300 -t 4 Target2.fa > Target2.fa.k32.w300.tsv
+
+real	0m23.183s
+user	1m19.177s
+sys	0m7.399s
+command time > out.k32.w300.n1.mx.dot.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py -p out.k32.w300.n1 -n 1 -s Target2.fa.k32.w300.tsv -l 1 \
+-r "2" -k 32 -g 20 -t 1 -m 90 SL40.fa.k32.w300.tsv
+
+real	4m0.122s
+user	3m37.434s
+sys	0m44.990s
+touch Target2.fa.k32.w300.n1.assigned.scaffolds.fa
+touch Target2.fa.k32.w300.n1.unassigned.scaffolds.fa
+command time > Target2.fa.k32.w300.n1.all.scaffolds.fa.time cat Target2.fa.k32.w300.n1.assigned.scaffolds.fa Target2.fa.k32.w300.n1.unassigned.scaffolds.fa > Target2.fa.k32.w300.n1.all.scaffolds.fa
+
+real	0m3.237s
+user	0m0.001s
+sys	0m2.646s

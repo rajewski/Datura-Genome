@@ -1,0 +1,6 @@
+[04:13 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[04:13 PM]: Running funannotate v1.6.0-98d4d3f
+[04:14 PM]: Trimmomatic will be skipped
+[04:14 PM]: Read normalization will be skipped
+[04:14 PM]: Building Hisat2 genome index
+slurmstepd-i18: error: *** JOB 833143 ON i18 CANCELLED AT 2020-02-27T16:19:49 ***

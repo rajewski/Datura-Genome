@@ -1,0 +1,12 @@
+
+#replace in medplant
+sed -i 's/\(^@[[:graph:]]*\)\( [[:graph:]]*\)/\1/g' MedPlantTrimmed_1U.fastq
+sed -i 's/\(^@[[:graph:]]*\)\( [[:graph:]]*\)/\1/g' MedPlantTrimmed_2U.fastq
+pigz MedPlantTrimmed_1U.fastq
+pigz MedPlantTrimmed_2U.fastq
+
+#Replace in SRR file
+sed -i 's/\(^\+SRR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=150\)/+\2\/1/g' SRR9888534_Trimmed_1P.fastq
+sed -i 's/\(^\+SRR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=150\)/+\2\/2/g' SRR9888534_Trimmed_2P.fastq
+pigz SRR9888534_Trimmed_1P.fastq
+pigz SRR9888534_Trimmed_2P.fastq

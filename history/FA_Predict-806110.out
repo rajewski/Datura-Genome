@@ -1,0 +1,12 @@
+-------------------------------------------------------
+[09:05 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[09:05 AM]: Running funannotate v1.6.0-98d4d3f
+[09:05 AM]: AUGUSTUS (3.3.3) detected, version seems to be compatible with BRAKER and BUSCO
+[09:06 AM]: Loading genome assembly and parsing soft-masked repetitive sequences
+[09:37 AM]: Genome loaded: 209,631 scaffolds; 1,877,073,832 bp; 8.80% repeats masked
+[09:37 AM]: Existing transcript alignments found: predict/predict_misc/transcript_alignments.gff3
+[09:37 AM]: Existing protein alignments found: predict/predict_misc/protein_alignments.gff3
+[09:38 AM]: Existing GeneMark annotation found: predict/predict_misc/genemark.gff
+[09:40 AM]: Found 150,957 gene models
+[09:40 AM]: Running BUSCO to find conserved gene models for training Augustus
+[09:40 AM]: BUSCO training of Augusus failed, check busco logs, exiting

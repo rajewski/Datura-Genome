@@ -1,0 +1,13 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+TrimmomaticPE: Started with arguments:
+ s_2_1_DATST_plant_1.fastq.gz s_2_2_DATST_plant_1.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:30 TOPHRED33
+Exception in thread "main" java.io.FileNotFoundException: s_2_1_DATST_plant_1.fastq.gz (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fastq.FastqParser.parse(FastqParser.java:135)
+	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:264)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:539)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
