@@ -1,0 +1,40 @@
+command time > /rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa.k32.w1000.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 1000 -t 16 /rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa > /rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa.k32.w1000.tsv
+indexlr: Using more than 5 threads does not scale, reverting to 5.
+
+real	0m10.206s
+user	0m47.642s
+sys	0m5.477s
+command time > /rhome/arajewski/bigdata/Datura/DNA-seq/S_lycopersicum_chromosomes.4.00.fa.fai.time samtools faidx /rhome/arajewski/bigdata/Datura/DNA-seq/S_lycopersicum_chromosomes.4.00.fa
+
+real	0m4.247s
+user	0m3.635s
+sys	0m0.380s
+command time > /rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa.fai.time samtools faidx /rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa
+
+real	0m14.548s
+user	0m13.106s
+sys	0m1.418s
+command time > out.k32.w1000.n1.mx.dot.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py -p out.k32.w1000.n1 -n 1 -s /rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa.k32.w1000.tsv -l 1 \
+-r "2" -k 32 -g 20 -t 1 -m 90 /rhome/arajewski/bigdata/Datura/DNA-seq/S_lycopersicum_chromosomes.4.00.fa.k32.w1000.tsv
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py", line 708, in <module>
+    main()
+  File "/rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py", line 705, in main
+    Ntjoin().main()
+  File "/rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py", line 695, in main
+    self.print_scaffolds(paths)
+  File "/rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py", line 545, in print_scaffolds
+    missing_bed.saveas(self.args.p + "." + assembly + ".unassigned.bed")
+  File "/rhome/arajewski/.conda/envs/Datura/lib/python3.7/site-packages/pybedtools/bedtool.py", line 917, in decorated
+    result = method(self, *args, **kwargs)
+  File "/rhome/arajewski/.conda/envs/Datura/lib/python3.7/site-packages/pybedtools/bedtool.py", line 3342, in saveas
+    out_compressed=compressed,
+  File "/rhome/arajewski/.conda/envs/Datura/lib/python3.7/site-packages/pybedtools/bedtool.py", line 1405, in _collapse
+    with out_open_func(fn, "wt") as out_:
+FileNotFoundError: [Errno 2] No such file or directory: 'out.k32.w1000.n1./rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa.k32.w1000.tsv.unassigned.bed'
+
+real	1m25.184s
+user	1m8.733s
+sys	0m11.432s
+make: *** [/rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/ntJoin:154: out.k32.w1000.n1.mx.dot] Error 1
+make: *** Deleting file 'out.k32.w1000.n1.mx.dot'

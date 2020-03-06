@@ -1,0 +1,7 @@
+command time > /rhome/arajewski/bigdata/Datura/DNA-seq/S_lycopersicum_chromosomes.4.00.fa.k32.w1000.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 1000 -t 16 /rhome/arajewski/bigdata/Datura/DNA-seq/S_lycopersicum_chromosomes.4.00.fa > /rhome/arajewski/bigdata/Datura/DNA-seq/S_lycopersicum_chromosomes.4.00.fa.k32.w1000.tsv
+indexlr: Using more than 5 threads does not scale, reverting to 5.
+
+real	0m33.912s
+user	0m24.007s
+sys	0m9.610s
+make: *** No rule to make target '3_BCGSC//Dstr_v1.4_ntEdit_edited.fa', needed by '3_BCGSC//Dstr_v1.4_ntEdit_edited.fa.k32.w1000.tsv'.  Stop.

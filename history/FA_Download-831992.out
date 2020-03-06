@@ -1,0 +1,12 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+Running Trimmomatic on MedPlant RNAseq and converting phred scores...
+TrimmomaticPE: Started with arguments:
+ -threads 1 -phred64 /rhome/arajewski/bigdata/Datura/RNA-seq/s_2_1_DATST_plant_1.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/s_2_2_DATST_plant_1.fastq.gz -baseout /rhome/arajewski/bigdata/Datura/RNA-seq/MedPlantTrimmed ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 TOPHRED33
+Using templated Output files: /rhome/arajewski/bigdata/Datura/RNA-seq/MedPlantTrimmed_1P /rhome/arajewski/bigdata/Datura/RNA-seq/MedPlantTrimmed_1U /rhome/arajewski/bigdata/Datura/RNA-seq/MedPlantTrimmed_2P /rhome/arajewski/bigdata/Datura/RNA-seq/MedPlantTrimmed_2U
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 25792961 Both Surviving: 21736241 (84.27%) Forward Only Surviving: 3296657 (12.78%) Reverse Only Surviving: 301040 (1.17%) Dropped: 459023 (1.78%)
+TrimmomaticPE: Completed successfully
+Done.

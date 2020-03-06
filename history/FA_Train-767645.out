@@ -1,0 +1,15 @@
+ERR2040631 data from SRA already present.
+SRR9888534 data from SRA already present.
+MedPlantsRNAseq data already present.
+Container was created Fri Jan 31 00:07:24 UTC 2020
+[09:05 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[09:05 PM]: Running 1.7.2
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/miniconda2/envs/funannotate/bin/funannotate", line 657, in <module>
+    main()
+  File "/opt/miniconda2/envs/funannotate/bin/funannotate", line 647, in main
+    mod.main(arguments)
+  File "/opt/miniconda2/envs/funannotate/lib/python2.7/site-packages/funannotate/train.py", line 702, in main
+    'kallisto', LAUNCHPASA, os.path.join(PASA, 'bin', 'seqclean')]
+NameError: global name 'LAUNCHPASA' is not defined

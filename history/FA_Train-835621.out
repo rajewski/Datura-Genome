@@ -1,0 +1,26 @@
+[12:24 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:24 PM]: Running funannotate v1.6.0-98d4d3f
+[12:25 PM]: Combining PE and SE reads supported, but you will lose stranded information, setting --stranded no
+[12:25 PM]: Trimmomatic will be skipped
+[12:25 PM]: Read normalization will be skipped
+[12:25 PM]: Existing Trinity results found: train/training/trinity.fasta
+[12:25 PM]: StringTie installed, running StringTie on Hisat2 coordsorted BAM
+[12:25 PM]: Existing SeqClean output found: train/training/train/training/trinity.fasta.clean
+[12:25 PM]: Existing BAM alignments found: train/training/trinity.alignments.bam, train/training/transcript.alignments.bam
+[12:25 PM]: Running PASA alignment step using 122,029 transcripts
+[11:30 PM]: PASA assigned 100,545 transcipts to 85,925 loci (genes)
+[11:30 PM]: Getting PASA models for training with TransDecoder
+[11:51 PM]: PASA finished. PASAweb accessible via: localhost:port/cgi-bin/index.cgi?db=/bigdata/littlab/arajewski/Datura/5_Funannotate/train/training/pasa/Datura_stramonium
+[11:51 PM]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[11:51 PM]: Building Kallisto index
+[11:56 PM]: Mapping reads using pseudoalignment in Kallisto
+[12:03 AM]: Parsing expression value results. Keeping best transcript at each locus.
+[12:08 AM]: Wrote 23,063 PASA gene models
+[12:08 AM]: PASA database name: Datura_stramonium
+[12:08 AM]: Trinity/PASA has completed, you are now ready to run funanotate predict, for example:
+
+funannotate predict -i Dstr_v1.4.masked.fa \
+        -o train -s "Datura stramonium" --cpus 32
+
+-------------------------------------------------------
+-------------------------------------------------------
