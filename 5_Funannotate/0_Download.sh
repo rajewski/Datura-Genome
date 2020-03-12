@@ -20,13 +20,7 @@ if [ ! -e $RNAPATH/ERR2040631_1.fastq.gz ]; then
     if [ ! -d ERR2040631 ]; then
 	prefetch ERR2040631
     fi
-    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files -B ERR2040631/
-    echo Done.
-    echo Editing sequence and quality headers to match...
-    sed 's/\(^\+ERR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=90\)/+\2\/1/g' ERR2040631_1.fastq
-    sed 's/\(^\+ERR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=90\)/+\2\/2/g' ERR2040631_2.fastq
-    gzip ERR2040631_1.fastq
-    gzip ERR2040631_2.fastq
+    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --defline-qual '+$sn[_$rn]/$ri' --split-files --gzip -B ERR2040631/
     cd $SLURM_SUBMIT_DIR
     echo Done.
 else
@@ -40,11 +34,7 @@ if [ ! -e $RNAPATH/SRR9888534_1.fastq.gz ]; then
     if [ ! -d SRR9888534 ]; then
 	prefetch SRR9888534
     fi
-    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files -B --gzip SRR9888534/
-    echo Done.
-    echo Editing sequence and quality headers to match...
-    sed 's/\(^\+SRR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=150\)/+\2\/1/g' SRR9888534_1.fastq
-    sed 's/\(^\+SRR[0-9]\+.[0-9]\+ \)\(.\+\)\( length=150\)/+\2\/2/g' SRR9888534_2.fastq
+    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --defline-qual '+$sn[_$rn]/$ri' --split-files -B --gzip SRR9888534/
     cd $SLURM_SUBMIT_DIR
     echo Done.
 else
@@ -141,9 +131,3 @@ if [ ! -e $RNAPATH/SRR9888534_Trimmed_2P.fastq.gz ]; then
 else
     echo SRR9888534 RNAseq already trimmed.
 fi
-
-#Set up in silico read normalization of all libraries
-#module load trinity-rnaseq/2.8.5
-
-
-#Consider adding Fastqc here
