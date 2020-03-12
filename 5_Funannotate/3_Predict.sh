@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=32
+#SBATCH --cpus-per-task=60
 #SBATCH --mem-per-cpu=7G
-#SBATCH --time=4-00:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Predict-%A.out
@@ -41,7 +41,10 @@ funannotate predict \
     -o train \
     --name Dstr \
     --organism other \
-    --busco_seed_species tomato \
+    --weights augustus:1 hiq:1 genemark:1 pasa:10 codingquarry:0 snap:1 glimmerhmm:1 proteins:1 transcripts:1 \
+    --repeats2evm \
+    --optimize_augustus \
+    --genemark_mode ET \
     --busco_db embryophyta_odb9 \
     --max_intronlen 6000 \
     --cpus $SLURM_CPUS_PER_TASK
