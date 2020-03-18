@@ -1,0 +1,15 @@
+[08:32 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[08:32 AM]: Running funannotate v1.6.0-98d4d3f
+[08:32 AM]: Combining PE and SE reads supported, but you will lose stranded information, setting --stranded no
+[08:32 AM]: Multiple inputs for --single detected, concatenating SE reads
+[08:32 AM]: Multiple inputs for --left and --right detected, concatenating PE reads
+[08:32 AM]: Trimmomatic will be skipped
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-train.py", line 821, in <module>
+    lib.CheckFASTQandFix(trim_reads[0], trim_reads[1]) #if needed to fix they will be fixed in place  
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 650, in CheckFASTQandFix
+    for read1, read2 in izip(file1, file2):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/Bio/SeqIO/QualityIO.py", line 917, in FastqGeneralIterator
+    raise ValueError("Sequence and quality captions differ.")
+ValueError: Sequence and quality captions differ.

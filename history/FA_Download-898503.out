@@ -1,0 +1,32 @@
+Downloading ERR2040631 data from SRA...
+Read 15339750 spots for ERR2040631
+Written 15339750 spots for ERR2040631
+Done.
+Downloading SRR9888534 data from SRA...
+Read 38331901 spots for SRR9888534
+Written 38331901 spots for SRR9888534
+Done.
+MedPlantsRNAseq data already present.
+MedPlantRNAseq Transcriptome 1 already present.
+MedPantRNAseq Transcriptome 2 already present.
+MedPlant RNA seq already trimmed and converted.
+Running Trimmomatic on ERR2040631 RNAseq...
+TrimmomaticPE: Started with arguments:
+ -threads 1 /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_1.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_2.fastq.gz -baseout /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_Trimmed.fastq.gz ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using templated Output files: /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_Trimmed_1P.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_Trimmed_1U.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_Trimmed_2P.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/ERR2040631_Trimmed_2U.fastq.gz
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 15339750 Both Surviving: 15298999 (99.73%) Forward Only Surviving: 40751 (0.27%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
+TrimmomaticPE: Completed successfully
+Done.
+Running Trimmomatic on SRR9888534 RNAseq...
+TrimmomaticPE: Started with arguments:
+ -threads 1 /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_1.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_1.fastq.gz -baseout /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_Trimmed.fastq.gz ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using templated Output files: /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_Trimmed_1P.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_Trimmed_1U.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_Trimmed_2P.fastq.gz /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_Trimmed_2U.fastq.gz
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 38331901 Both Surviving: 38331901 (100.00%) Forward Only Surviving: 0 (0.00%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
+TrimmomaticPE: Completed successfully
+Done.

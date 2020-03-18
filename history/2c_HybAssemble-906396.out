@@ -1,0 +1,29 @@
+[Mon Mar 16 21:23:50 PDT 2020] Processing pe library reads
+[Mon Mar 16 21:23:50 PDT 2020] Average PE read length 124
+[Mon Mar 16 21:23:51 PDT 2020] Using kmer size of 51 for the graph
+[Mon Mar 16 21:23:51 PDT 2020] MIN_Q_CHAR: 33
+[Mon Mar 16 21:23:51 PDT 2020] Error correct PE
+[Tue Mar 17 01:50:17 PDT 2020] Estimating genome size
+[Tue Mar 17 02:28:51 PDT 2020] Estimated genome size: 1743399272
+[Tue Mar 17 02:28:51 PDT 2020] Creating k-unitigs with k=51
+[Tue Mar 17 05:15:01 PDT 2020] Computing super reads from PE 
+[Wed Mar 18 00:25:40 PDT 2020] Using Flye from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin
+[Wed Mar 18 00:25:40 PDT 2020] Running mega-reads correction/assembly
+[Wed Mar 18 00:25:40 PDT 2020] Using mer size 15 for mapping, B=15, d=0.02
+[Wed Mar 18 00:25:40 PDT 2020] Estimated Genome Size 1743399272
+[Wed Mar 18 00:25:40 PDT 2020] Estimated Ploidy 2
+[Wed Mar 18 00:25:40 PDT 2020] Using 60 threads
+[Wed Mar 18 00:25:40 PDT 2020] Output prefix mr.41.15.15.0.02
+[Wed Mar 18 00:25:40 PDT 2020] Using 25x of the longest ONT reads
+[Wed Mar 18 00:30:19 PDT 2020] Reducing super-read k-mer size
+[Wed Mar 18 04:07:30 PDT 2020] Mega-reads pass 1
+[Wed Mar 18 04:07:30 PDT 2020] Running on the grid in 12 batches
+ 
+To submit SLURM jobs, please run
+ 
+sbatch -D /rhome/arajewski/bigdata/Datura/2_MaSuRCA338/mr_pass1 -J create_mega_reads -a 1-12 -n 60 -p batch -N 1 mr_pass1/create_mega_reads.sh
+ 
+Please re-run assemble.sh when all jobs finish. If you get this message again, it means that some jobs failed, simply re-submit again using the above command.
+ 
+[Wed Mar 18 04:07:53 PDT 2020] mega-reads pass 1 on the grid exited, please re-run assemble.sh
+[Wed Mar 18 04:07:53 PDT 2020] Assembly with flye failed, see files under flye/

@@ -1,0 +1,12 @@
+Augustus config path not writeable. Checking if a local directory exists...
+Local and writeable augustus directory found.
+Augustus config path changed to local directory.
+-------------------------------------------------------
+[09:29 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[09:29 AM]: Running funannotate v1.6.0-98d4d3f
+[09:29 AM]: Found training files, will re-use these files:
+  --rna_bam trainDstrOnly/training/funannotate_train.coordSorted.bam
+  --pasa_gff trainDstrOnly/training/funannotate_train.pasa.gff3
+  --stringtie trainDstrOnly/training/funannotate_train.stringtie.gtf
+  --transcript_alignments trainDstrOnly/training/funannotate_train.transcripts.gff3
+[09:29 AM]: ERROR: AUGUSTUS (3.3.3) is not installed properly for BRAKER (check bam2hints/filterBam compilation)
