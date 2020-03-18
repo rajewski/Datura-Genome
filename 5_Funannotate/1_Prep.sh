@@ -1,4 +1,4 @@
-#!/bin/bash -l
+B#!/bin/bash -l
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem-per-cpu=7G

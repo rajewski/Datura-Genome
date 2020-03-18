@@ -1,8 +1,0 @@
-- "left reads":
-  - "/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq"
-  "orientation": "fr"
-  "right reads":
-  - "/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq"
-  "single reads":
-  - "/rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1U.fq"
-  "type": "paired-end"
