@@ -1,4 +1,0 @@
-
-=== Pipeline warnings:
- * It is recommended to specify single reads with --pe<#>-s, --mp<#>-s, --hqmp<#>-s, or --s<#> option instead of -s!
-======= Warnings saved to /rhome/arajewski/bigdata/Datura/2_SPAdes/warnings.log
