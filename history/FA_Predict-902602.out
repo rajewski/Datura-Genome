@@ -1,0 +1,14 @@
+Augustus config path not writeable. Checking if a local directory exists...
+Local and writeable augustus directory found.
+Augustus config path changed to local directory.
+-------------------------------------------------------
+[09:36 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[09:36 AM]: Running funannotate v1.6.0-98d4d3f
+[09:36 AM]: Found training files, will re-use these files:
+  --rna_bam train/training/funannotate_train.coordSorted.bam
+  --pasa_gff train/training/funannotate_train.pasa.gff3
+  --stringtie train/training/funannotate_train.stringtie.gtf
+  --transcript_alignments train/training/funannotate_train.transcripts.gff3
+[09:36 AM]: Augustus training set for datura_stramonium already exists. To re-train provide unique --augustus_species argument
+[09:36 AM]: AUGUSTUS (3.3.3) detected, version seems to be compatible with BRAKER and BUSCO
+[09:36 AM]: ERROR: train/training/funannotate_train.pasa.gff3 is not a properly formatted PASA GFF file, please consult EvidenceModeler docs

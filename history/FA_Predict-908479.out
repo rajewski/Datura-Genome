@@ -1,0 +1,17 @@
+Augustus config path not writeable. Checking if a local directory exists...
+No locally writeable directory found. Copying shared directory...
+Localy writeable directory created. You may proceed.
+-------------------------------------------------------
+[09:12 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[09:12 AM]: Running funannotate v1.6.0-98d4d3f
+[09:12 AM]: Found training files, will re-use these files:
+  --rna_bam trainDstrOnly/training/funannotate_train.coordSorted.bam
+  --pasa_gff trainDstrOnly/training/funannotate_train.pasa.gff3
+  --stringtie trainDstrOnly/training/funannotate_train.stringtie.gtf
+  --transcript_alignments trainDstrOnly/training/funannotate_train.transcripts.gff3
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-predict.py", line 307, in <module>
+    augspeciescheck = lib.CheckAugustusSpecies(aug_species)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 4520, in CheckAugustusSpecies
+    for i in os.listdir(os.path.join(os.environ["AUGUSTUS_CONFIG_PATH"], 'species')):
+OSError: [Errno 2] No such file or directory: '/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config/species'

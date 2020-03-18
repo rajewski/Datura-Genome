@@ -1,0 +1,15 @@
+--- alignment.cc	2015-11-23 08:48:25.577936183 +0100
++++ alignment.cc.new	2015-11-23 08:59:34.697917154 +0100
+@@ -321,6 +321,12 @@
+ 	ma->merge(*it, extSig);
+     }
+     delete extSig;
++    for (int i=0; i<k; i++){ // remove alignment rows which are factually empty
++	if (ma->rows[i] && (ma->rows[i]->frags.empty() || ma->rows[i]->getCumFragLen() < 1)){
++	    delete ma->rows[i];
++	    ma->rows[i] = NULL;
++	}
++    }
+     // cout << "merged alignment:" << *ma << endl;
+     return ma;
+ }

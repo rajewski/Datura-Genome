@@ -1,0 +1,8 @@
+[11:38 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[11:38 AM]: Running funannotate v1.6.0-98d4d3f
+[11:38 AM]: Multiple inputs for --left and --right detected, concatenating PE reads
+[11:38 AM]: Trimmomatic will be skipped
+[11:38 AM]: PE reads do not conform to Trinity naming convention (need either /1 /2 or std illumina), fixing...
+[11:59 AM]: Read normalization will be skipped
+[11:59 AM]: Building Hisat2 genome index
+[12:10 PM]: Aligning reads to genome using Hisat2

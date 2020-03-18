@@ -1,0 +1,1 @@
+-Wall -Wno-sign-compare -Wno-strict-overflow -ansi -pedantic -O3 -I/opt/linux/centos/7.x/x86_64/src/bamtools/include -L/opt/linux/centos/7.x/x86_64/src/bamtools/lib  -DZIPINPUT

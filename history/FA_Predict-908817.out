@@ -1,0 +1,21 @@
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+-------------------------------------------------------
+[11:12 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[11:12 AM]: Running funannotate v1.6.0-98d4d3f
+[11:12 AM]: Found training files, will re-use these files:
+  --rna_bam trainDstrOnly/training/funannotate_train.coordSorted.bam
+  --pasa_gff trainDstrOnly/training/funannotate_train.pasa.gff3
+  --stringtie trainDstrOnly/training/funannotate_train.stringtie.gtf
+  --transcript_alignments trainDstrOnly/training/funannotate_train.transcripts.gff3
+[11:12 AM]: AUGUSTUS (3.3.3) detected, version seems to be compatible with BRAKER and BUSCO
+[11:23 AM]: Loading genome assembly and parsing soft-masked repetitive sequences
+[11:51 AM]: Genome loaded: 209,631 scaffolds; 1,877,073,832 bp; 8.80% repeats masked
+[11:51 AM]: Existing transcript alignments found: trainDstrOnly/predict_misc/transcript_alignments.gff3
+[11:51 AM]: Existing RNA-seq BAM hints found: trainDstrOnly/predict_misc/hints.BAM.gff
+[11:51 AM]: Existing protein alignments found: trainDstrOnly/predict_misc/protein_alignments.gff3
+[11:52 AM]: Filtering PASA data for suitable training set
+[11:55 AM]: 5,165 of 25,766 models pass training parameters
+[12:01 PM]: Augustus initial training results:
