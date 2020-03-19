@@ -29,3 +29,7 @@ funannotate train \
     --max_intronlen 6000 \
     --species "Datura stramonium 3" \
     --cpus $SLURM_CPUS_PER_TASK 
+
+#"datura stramonium" is trained with Dstr and Dmete RNA data and on the >500bp genome
+#'datura stramonium 2" is trained with just Dstr RNA data but still on the >500bp genome
+#"datura stramonium 3" is trained with just Dstr RNA data but on the >5kp genome
