@@ -1,0 +1,13 @@
+Downloading SRX6640954 data from SRA...
+Prefetching SRX6640954...
+
+2020-03-19T21:26:28 prefetch.2.10.0: 1) Downloading 'SRR9888536'...
+2020-03-19T21:26:28 prefetch.2.10.0:  Downloading via https...
+2020-03-19T21:37:55 prefetch.2.10.0:  https download succeed
+2020-03-19T21:37:55 prefetch.2.10.0: 1) 'SRR9888536' was downloaded successfully
+2020-03-19T21:37:55 prefetch.2.10.0: 'SRR9888536' has 0 unresolved dependencies
+Done.
+Dumping fastq file for SRX6640954
+Read 23669776 spots for SRR9888536
+Written 23669776 spots for SRR9888536
+Done.
