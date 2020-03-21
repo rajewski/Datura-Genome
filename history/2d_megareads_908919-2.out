@@ -1,0 +1,2 @@
+compute_psa 73140431 14002100756
+/var/spool/slurmd/job909080/slurm_script: line 6: 67321 Bus error               /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/create_mega_reads -s 13957411423 -m 15 --psa-min 12 --stretch-cap 10000 -k 41 -u ../guillaumeKUnitigsAtLeast32bases_all.41.fasta -t 60 -B 15 --max-count 5000 -d 0.02 -r ../superReadSequences.named.fasta -p lr.batch$SLURM_ARRAY_TASK_ID -o mr.batch$SLURM_ARRAY_TASK_ID.tmp
