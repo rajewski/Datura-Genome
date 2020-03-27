@@ -34,7 +34,7 @@ done
 
 #Do SE data
 for SESRA in ${SINGLES[@]}; do
-    if [ ! -e Abel_trinity/${SESRA}_1_val_1.fq.gz ]; then
+    if [ ! -e Abel_trinity/${SESRA}_1_trimmed.fq.gz ]; then
         echo Running Trim Galore on $SESRA. ...
         trim_galore \
             -o Abel_trinity \
