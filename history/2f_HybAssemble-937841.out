@@ -1,0 +1,35 @@
+[Tue Mar 24 14:49:25 PDT 2020] Processing pe library reads
+[Tue Mar 24 14:49:26 PDT 2020] Average PE read length 124
+[Tue Mar 24 14:49:27 PDT 2020] Using kmer size of 51 for the graph
+[Tue Mar 24 14:49:27 PDT 2020] MIN_Q_CHAR: 33
+[Tue Mar 24 14:49:27 PDT 2020] Estimated genome size: 1743399272
+[Tue Mar 24 14:49:27 PDT 2020] Computing super reads from PE 
+[Tue Mar 24 14:49:27 PDT 2020] Using Flye from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin
+[Tue Mar 24 14:49:27 PDT 2020] Running mega-reads correction/assembly
+[Tue Mar 24 14:49:27 PDT 2020] Using mer size 15 for mapping, B=15, d=0.02
+[Tue Mar 24 14:49:27 PDT 2020] Estimated Genome Size 1743399272
+[Tue Mar 24 14:49:27 PDT 2020] Estimated Ploidy 2
+[Tue Mar 24 14:49:27 PDT 2020] Using 60 threads
+[Tue Mar 24 14:49:27 PDT 2020] Output prefix mr.41.15.15.0.02
+[Tue Mar 24 14:49:28 PDT 2020] Mega-reads pass 1
+[Tue Mar 24 14:49:28 PDT 2020] Running on the grid in 12 batches
+Processed 500000 super reads, irreducible 409899, processing 919 super reads per second
+Processed 1000000 super reads, irreducible 786184, processing 1915 super reads per second
+Processed 1500000 super reads, irreducible 1175650, processing 4385 super reads per second
+Processed 2000000 super reads, irreducible 1590852, processing 11904 super reads per second
+Processed 2500000 super reads, irreducible 1994263, processing 8196 super reads per second
+Processed 3000000 super reads, irreducible 2376455, processing 10416 super reads per second
+[Tue Mar 24 15:55:19 PDT 2020] Mega-reads pass 2
+[Tue Mar 24 15:55:19 PDT 2020] Running locally in 1 batch
+[Wed Mar 25 06:59:08 PDT 2020] Refining alignments
+[Wed Mar 25 07:17:56 PDT 2020] Computing allowed merges
+[Wed Mar 25 07:21:26 PDT 2020] Joining
+[Wed Mar 25 07:26:01 PDT 2020] Gap consensus
+[Wed Mar 25 07:52:10 PDT 2020] Running assembly with Flye
+[Wed Mar 25 17:08:41 PDT 2020] All done
+[Wed Mar 25 17:08:41 PDT 2020] Final stats for flye/assembly.fasta
+N50 108796
+Sequence 787552179
+Average 68763.8
+E-size 158331
+Count 11453

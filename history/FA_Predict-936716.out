@@ -1,0 +1,12 @@
+Running Funannotate predict on Dstr_v1.4.masked.l5000.fa
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+-------------------------------------------------------
+[05:14 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[05:14 PM]: Running funannotate v1.6.0-98d4d3f
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-predict.py", line 220, in <module>
+    weight = int(weight)
+ValueError: invalid literal for int() with base 10: '0.3'

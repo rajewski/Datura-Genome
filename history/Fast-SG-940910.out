@@ -1,0 +1,4 @@
+Thu Mar 26 19:09:39 PDT 2020: Found index of /rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye/assembly.fasta.
+Thu Mar 26 19:09:39 PDT 2020: Renaming ONT reads.
+Thu Mar 26 19:34:01 PDT 2020: Finished.
+/var/spool/slurmd/job940910/slurm_script: line 38: SLURM_CPUS_PER_TASK: unbound variable

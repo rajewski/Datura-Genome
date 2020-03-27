@@ -1,0 +1,6 @@
+Thu Mar 26 16:56:55 PDT 2020: indexing /rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye/assembly.fasta
+Thu Mar 26 16:56:59 PDT 2020: Finished.
+Thu Mar 26 16:56:59 PDT 2020: Renaming ONT reads.
+awk: cmd. line:1: fatal: cannot open file `/rhome/arajewski/bigdata/Datura/1_Loredec/Dstr_Loredec.fasta' for reading (No such file or directory)
+Thu Mar 26 16:56:59 PDT 2020: Finished.
+/var/spool/slurmd/job940826/slurm_script: line 38: SLURM_CPUS_PER_TASK: unbound variable

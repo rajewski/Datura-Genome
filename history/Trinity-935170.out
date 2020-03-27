@@ -1,0 +1,15 @@
+
+
+     ______  ____   ____  ____   ____  ______  __ __
+    |      ||    \ |    ||    \ |    ||      ||  |  |
+    |      ||  D  ) |  | |  _  | |  | |      ||  |  |
+    |_|  |_||    /  |  | |  |  | |  | |_|  |_||  ~  |
+      |  |  |    \  |  | |  |  | |  |   |  |  |___, |
+      |  |  |  .  \ |  | |  |  | |  |   |  |  |     |
+      |__|  |__|\_||____||__|__||____|  |__|  |____/
+
+    Trinity-v2.8.5
+
+
+
+Error, cannot mix PE and SE reads by using --left, --right, and --single.  See Trinity FAQ for how to combine SE and PE data at /opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/Trinity line 1007.

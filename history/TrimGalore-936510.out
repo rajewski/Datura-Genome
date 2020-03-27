@@ -1,0 +1,2993 @@
+miniconda2/4.4.10(23):ERROR:150: Module 'miniconda2/4.4.10' conflicts with the currently loaded module(s) 'python/2.7.5'
+miniconda2/4.4.10(23):ERROR:102: Tcl command execution failed: conflict    python
+
+ERR2040625 RNA seq already trimmed.
+Running Trim Galore on SRR118430. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118430_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	20	AGATCGGAAGAGC	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 20). Second best hit was smallRNA (count: 1)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118430_1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118430_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118430_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118430_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 777.84 s (14 us/read; 4.20 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              54,460,391
+Reads with adapters:                16,484,137 (30.3%)
+Reads written (passing filters):    54,460,391 (100.0%)
+
+Total basepairs processed: 2,995,321,505 bp
+Quality-trimmed:             185,073,770 bp (6.2%)
+Total written (filtered):  2,787,918,573 bp (93.1%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 16484137 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 36.7%
+  C: 26.9%
+  G: 18.1%
+  T: 18.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	12290049	13615097.8	0	12290049
+2	3004544	3403774.4	0	3004544
+3	907018	850943.6	0	907018
+4	219611	212735.9	0	219611
+5	48283	53184.0	0	48283
+6	5566	13296.0	0	5566
+7	1278	3324.0	0	1278
+8	409	831.0	0	409
+9	1406	207.7	0	164 1242
+10	1895	51.9	1	109 1786
+11	983	13.0	1	65 918
+12	411	3.2	1	62 349
+13	123	0.8	1	57 66
+14	73	0.8	1	36 37
+15	99	0.8	1	56 43
+16	73	0.8	1	28 45
+17	79	0.8	1	24 55
+18	53	0.8	1	14 39
+19	77	0.8	1	29 48
+20	37	0.8	1	10 27
+21	41	0.8	1	12 29
+22	50	0.8	1	10 40
+23	61	0.8	1	25 36
+24	54	0.8	1	30 24
+25	56	0.8	1	22 34
+26	39	0.8	1	14 25
+27	38	0.8	1	8 30
+28	81	0.8	1	49 32
+29	33	0.8	1	5 28
+30	47	0.8	1	5 42
+31	48	0.8	1	7 41
+32	39	0.8	1	1 38
+33	34	0.8	1	13 21
+34	50	0.8	1	14 36
+35	38	0.8	1	6 32
+36	164	0.8	1	135 29
+37	33	0.8	1	9 24
+38	31	0.8	1	2 29
+39	32	0.8	1	2 30
+40	31	0.8	1	1 30
+41	35	0.8	1	8 27
+42	31	0.8	1	4 27
+43	25	0.8	1	4 21
+44	27	0.8	1	2 25
+45	25	0.8	1	1 24
+46	29	0.8	1	4 25
+47	10	0.8	1	1 9
+48	29	0.8	1	2 27
+49	24	0.8	1	0 24
+50	41	0.8	1	3 38
+51	26	0.8	1	1 25
+52	25	0.8	1	0 25
+53	22	0.8	1	0 22
+54	33	0.8	1	1 32
+55	688	0.8	1	0 688
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118430_1.fastq.gz
+=============================================
+54460391 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118430_2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118430_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118430_2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118430_2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 788.87 s (14 us/read; 4.14 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              54,460,391
+Reads with adapters:                16,001,051 (29.4%)
+Reads written (passing filters):    54,460,391 (100.0%)
+
+Total basepairs processed: 2,995,321,505 bp
+Quality-trimmed:             290,758,855 bp (9.7%)
+Total written (filtered):  2,682,903,320 bp (89.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 16001051 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 37.1%
+  C: 26.6%
+  G: 17.7%
+  T: 18.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	11907989	13615097.8	0	11907989
+2	2924851	3403774.4	0	2924851
+3	899931	850943.6	0	899931
+4	209166	212735.9	0	209166
+5	45968	53184.0	0	45968
+6	5155	13296.0	0	5155
+7	1194	3324.0	0	1194
+8	400	831.0	0	400
+9	1522	207.7	0	163 1359
+10	1858	51.9	1	81 1777
+11	1025	13.0	1	75 950
+12	449	3.2	1	50 399
+13	116	0.8	1	57 59
+14	64	0.8	1	36 28
+15	70	0.8	1	25 45
+16	63	0.8	1	26 37
+17	84	0.8	1	28 56
+18	64	0.8	1	17 47
+19	62	0.8	1	29 33
+20	40	0.8	1	14 26
+21	46	0.8	1	12 34
+22	42	0.8	1	14 28
+23	45	0.8	1	21 24
+24	47	0.8	1	15 32
+25	34	0.8	1	8 26
+26	33	0.8	1	5 28
+27	42	0.8	1	7 35
+28	31	0.8	1	4 27
+29	22	0.8	1	4 18
+30	42	0.8	1	5 37
+31	26	0.8	1	2 24
+32	32	0.8	1	2 30
+33	21	0.8	1	2 19
+34	27	0.8	1	2 25
+35	24	0.8	1	3 21
+36	28	0.8	1	2 26
+37	21	0.8	1	3 18
+38	29	0.8	1	0 29
+39	31	0.8	1	3 28
+40	14	0.8	1	4 10
+41	24	0.8	1	5 19
+42	28	0.8	1	6 22
+43	25	0.8	1	4 21
+44	15	0.8	1	6 9
+45	32	0.8	1	13 19
+46	32	0.8	1	10 22
+47	22	0.8	1	1 21
+48	27	0.8	1	4 23
+49	20	0.8	1	0 20
+50	28	0.8	1	2 26
+51	17	0.8	1	2 15
+52	17	0.8	1	0 17
+53	15	0.8	1	1 14
+54	23	0.8	1	2 21
+55	18	0.8	1	0 18
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118430_2.fastq.gz
+=============================================
+54460391 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR118430_1_trimmed.fq.gz and SRR118430_2_trimmed.fq.gz
+file_1: SRR118430_1_trimmed.fq.gz, file_2: SRR118430_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SRR118430_1_trimmed.fq.gz and SRR118430_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to SRR118430_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to SRR118430_2_val_2.fq.gz
+
+Total number of sequences analysed: 54460391
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 3688735 (6.77%)
+
+Deleting both intermediate output files SRR118430_1_trimmed.fq.gz and SRR118430_2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on SRR192881. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR192881_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	5633	AGATCGGAAGAGC	1000000	0.56
+Nextera	2	CTGTCTCTTATA	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 5633). Second best hit was Nextera (count: 2)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR192881_1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR192881_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR192881_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR192881_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 527.38 s (17 us/read; 3.59 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              31,534,366
+Reads with adapters:                11,137,930 (35.3%)
+Reads written (passing filters):    31,534,366 (100.0%)
+
+Total basepairs processed: 2,365,077,450 bp
+Quality-trimmed:              60,231,578 bp (2.5%)
+Total written (filtered):  2,283,588,270 bp (96.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 11137930 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 33.2%
+  C: 28.3%
+  G: 20.3%
+  T: 18.0%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7929904	7883591.5	0	7929904
+2	2066983	1970897.9	0	2066983
+3	633221	492724.5	0	633221
+4	170497	123181.1	0	170497
+5	48545	30795.3	0	48545
+6	13883	7698.8	0	13883
+7	11381	1924.7	0	11381
+8	9608	481.2	0	9608
+9	10337	120.3	0	9433 904
+10	10845	30.1	1	9461 1384
+11	9629	7.5	1	8793 836
+12	9214	1.9	1	8774 440
+13	8769	0.5	1	8367 402
+14	9133	0.5	1	8711 422
+15	9821	0.5	1	9343 478
+16	8731	0.5	1	8382 349
+17	8857	0.5	1	8439 418
+18	8498	0.5	1	8107 391
+19	8519	0.5	1	8044 475
+20	8564	0.5	1	7920 644
+21	8233	0.5	1	7609 624
+22	7919	0.5	1	7381 538
+23	8022	0.5	1	7293 729
+24	8292	0.5	1	7425 867
+25	7518	0.5	1	6604 914
+26	7753	0.5	1	6896 857
+27	6675	0.5	1	5928 747
+28	6818	0.5	1	6060 758
+29	6842	0.5	1	5872 970
+30	6960	0.5	1	5934 1026
+31	6703	0.5	1	5848 855
+32	5576	0.5	1	4817 759
+33	5459	0.5	1	4700 759
+34	5316	0.5	1	4627 689
+35	5493	0.5	1	4734 759
+36	5655	0.5	1	5038 617
+37	6363	0.5	1	5702 661
+38	4496	0.5	1	4152 344
+39	2882	0.5	1	2634 248
+40	1364	0.5	1	1182 182
+41	1769	0.5	1	1571 198
+42	1956	0.5	1	1752 204
+43	1751	0.5	1	1548 203
+44	1286	0.5	1	1125 161
+45	1456	0.5	1	1314 142
+46	959	0.5	1	839 120
+47	870	0.5	1	741 129
+48	1540	0.5	1	1330 210
+49	541	0.5	1	450 91
+50	466	0.5	1	393 73
+51	305	0.5	1	248 57
+52	216	0.5	1	163 53
+53	242	0.5	1	184 58
+54	274	0.5	1	209 65
+55	252	0.5	1	197 55
+56	1323	0.5	1	1107 216
+57	115	0.5	1	73 42
+58	95	0.5	1	57 38
+59	126	0.5	1	85 41
+60	203	0.5	1	124 79
+61	161	0.5	1	127 34
+62	82	0.5	1	54 28
+63	105	0.5	1	70 35
+64	135	0.5	1	100 35
+65	313	0.5	1	236 77
+66	1165	0.5	1	1002 163
+67	119	0.5	1	70 49
+68	37	0.5	1	15 22
+69	14	0.5	1	2 12
+70	39	0.5	1	0 39
+71	14	0.5	1	0 14
+72	89	0.5	1	0 89
+73	16	0.5	1	1 15
+74	22	0.5	1	0 22
+75	596	0.5	1	0 596
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR192881_1.fastq.gz
+=============================================
+31534366 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR192881_2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR192881_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR192881_2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR192881_2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 531.17 s (17 us/read; 3.56 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              31,534,366
+Reads with adapters:                11,001,313 (34.9%)
+Reads written (passing filters):    31,534,366 (100.0%)
+
+Total basepairs processed: 2,365,077,450 bp
+Quality-trimmed:              36,004,088 bp (1.5%)
+Total written (filtered):  2,307,977,835 bp (97.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 11001313 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 32.3%
+  C: 28.8%
+  G: 20.2%
+  T: 18.5%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7845199	7883591.5	0	7845199
+2	2033488	1970897.9	0	2033488
+3	615023	492724.5	0	615023
+4	167495	123181.1	0	167495
+5	47647	30795.3	0	47647
+6	13777	7698.8	0	13777
+7	10802	1924.7	0	10802
+8	9575	481.2	0	9575
+9	10548	120.3	0	9641 907
+10	10978	30.1	1	9359 1619
+11	9909	7.5	1	8820 1089
+12	9753	1.9	1	9050 703
+13	9002	0.5	1	8418 584
+14	9397	0.5	1	8841 556
+15	8946	0.5	1	8446 500
+16	9177	0.5	1	8468 709
+17	9323	0.5	1	8730 593
+18	8743	0.5	1	8247 496
+19	9186	0.5	1	8614 572
+20	8574	0.5	1	8111 463
+21	8148	0.5	1	7718 430
+22	8482	0.5	1	8018 464
+23	8768	0.5	1	8034 734
+24	9042	0.5	1	8264 778
+25	7348	0.5	1	6772 576
+26	7795	0.5	1	7292 503
+27	7460	0.5	1	6979 481
+28	7554	0.5	1	6945 609
+29	6317	0.5	1	5884 433
+30	6798	0.5	1	6316 482
+31	5702	0.5	1	5331 371
+32	5871	0.5	1	5497 374
+33	5254	0.5	1	4927 327
+34	5175	0.5	1	4830 345
+35	4912	0.5	1	4616 296
+36	4358	0.5	1	4160 198
+37	4112	0.5	1	3947 165
+38	3800	0.5	1	3668 132
+39	3506	0.5	1	3382 124
+40	3317	0.5	1	3211 106
+41	3170	0.5	1	3082 88
+42	2885	0.5	1	2754 131
+43	2383	0.5	1	2293 90
+44	2148	0.5	1	2036 112
+45	1784	0.5	1	1644 140
+46	1163	0.5	1	1100 63
+47	980	0.5	1	924 56
+48	866	0.5	1	783 83
+49	536	0.5	1	491 45
+50	442	0.5	1	381 61
+51	313	0.5	1	284 29
+52	193	0.5	1	165 28
+53	187	0.5	1	154 33
+54	135	0.5	1	105 30
+55	121	0.5	1	95 26
+56	300	0.5	1	261 39
+57	96	0.5	1	71 25
+58	131	0.5	1	108 23
+59	124	0.5	1	99 25
+60	202	0.5	1	138 64
+61	349	0.5	1	306 43
+62	311	0.5	1	261 50
+63	976	0.5	1	858 118
+64	663	0.5	1	579 84
+65	215	0.5	1	179 36
+66	200	0.5	1	138 62
+67	14	0.5	1	0 14
+68	19	0.5	1	0 19
+69	5	0.5	1	0 5
+70	31	0.5	1	0 31
+71	10	0.5	1	0 10
+72	76	0.5	1	2 74
+73	14	0.5	1	1 13
+74	8	0.5	1	0 8
+75	2	0.5	1	0 2
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR192881_2.fastq.gz
+=============================================
+31534366 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR192881_1_trimmed.fq.gz and SRR192881_2_trimmed.fq.gz
+file_1: SRR192881_1_trimmed.fq.gz, file_2: SRR192881_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SRR192881_1_trimmed.fq.gz and SRR192881_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to SRR192881_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to SRR192881_2_val_2.fq.gz
+
+Total number of sequences analysed: 31534366
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 542361 (1.72%)
+
+Deleting both intermediate output files SRR192881_1_trimmed.fq.gz and SRR192881_2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on SRR9888536. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR9888536_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	38543	AGATCGGAAGAGC	1000000	3.85
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 38543). Second best hit was smallRNA (count: 1)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR9888536_1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR9888536_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR9888536_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR9888536_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 461.99 s (20 us/read; 3.07 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              23,669,776
+Reads with adapters:                 7,927,634 (33.5%)
+Reads written (passing filters):    23,669,776 (100.0%)
+
+Total basepairs processed: 3,550,466,400 bp
+Quality-trimmed:              13,770,408 bp (0.4%)
+Total written (filtered):  3,487,101,898 bp (98.2%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 7927634 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 26.9%
+  C: 35.4%
+  G: 19.8%
+  T: 17.7%
+  none/other: 0.2%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	4992333	5917444.0	0	4992333
+2	1219832	1479361.0	0	1219832
+3	360799	369840.2	0	360799
+4	130236	92460.1	0	130236
+5	66077	23115.0	0	66077
+6	36239	5778.8	0	36239
+7	32591	1444.7	0	32591
+8	31408	361.2	0	31408
+9	30977	90.3	0	30626 351
+10	30737	22.6	1	29382 1355
+11	29907	5.6	1	29050 857
+12	29613	1.4	1	28750 863
+13	30088	0.4	1	29062 1026
+14	28858	0.4	1	27986 872
+15	29723	0.4	1	28708 1015
+16	27374	0.4	1	26551 823
+17	28460	0.4	1	27460 1000
+18	28131	0.4	1	27107 1024
+19	25726	0.4	1	24977 749
+20	27585	0.4	1	26605 980
+21	24414	0.4	1	23645 769
+22	24552	0.4	1	23830 722
+23	24255	0.4	1	23526 729
+24	23165	0.4	1	22462 703
+25	23251	0.4	1	22546 705
+26	21733	0.4	1	21062 671
+27	21157	0.4	1	20580 577
+28	20620	0.4	1	19962 658
+29	19127	0.4	1	18561 566
+30	19194	0.4	1	18619 575
+31	17885	0.4	1	17457 428
+32	17277	0.4	1	16786 491
+33	16115	0.4	1	15733 382
+34	16089	0.4	1	15664 425
+35	15276	0.4	1	14877 399
+36	14374	0.4	1	13988 386
+37	13007	0.4	1	12706 301
+38	13140	0.4	1	12800 340
+39	11612	0.4	1	11329 283
+40	11359	0.4	1	11086 273
+41	11391	0.4	1	11086 305
+42	10097	0.4	1	9857 240
+43	9889	0.4	1	9680 209
+44	8482	0.4	1	8327 155
+45	11465	0.4	1	11232 233
+46	4826	0.4	1	4731 95
+47	6412	0.4	1	6259 153
+48	6512	0.4	1	6372 140
+49	6248	0.4	1	6126 122
+50	5916	0.4	1	5775 141
+51	5396	0.4	1	5279 117
+52	5380	0.4	1	5261 119
+53	5144	0.4	1	4997 147
+54	4888	0.4	1	4738 150
+55	4771	0.4	1	4630 141
+56	3783	0.4	1	3682 101
+57	3844	0.4	1	3735 109
+58	3541	0.4	1	3449 92
+59	3067	0.4	1	2944 123
+60	4104	0.4	1	3981 123
+61	2789	0.4	1	2710 79
+62	3082	0.4	1	2980 102
+63	3219	0.4	1	3089 130
+64	3126	0.4	1	3037 89
+65	2714	0.4	1	2606 108
+66	3683	0.4	1	3534 149
+67	2828	0.4	1	2737 91
+68	2893	0.4	1	2763 130
+69	3273	0.4	1	3107 166
+70	4404	0.4	1	4062 342
+71	14594	0.4	1	6148 8446
+72	87560	0.4	1	84053 3507
+73	24216	0.4	1	23111 1105
+74	6689	0.4	1	6194 495
+75	3521	0.4	1	3224 297
+76	1687	0.4	1	1478 209
+77	1331	0.4	1	1221 110
+78	931	0.4	1	841 90
+79	801	0.4	1	673 128
+80	740	0.4	1	650 90
+81	704	0.4	1	623 81
+82	719	0.4	1	653 66
+83	709	0.4	1	630 79
+84	675	0.4	1	606 69
+85	599	0.4	1	545 54
+86	561	0.4	1	504 57
+87	486	0.4	1	434 52
+88	411	0.4	1	374 37
+89	408	0.4	1	382 26
+90	416	0.4	1	377 39
+91	476	0.4	1	419 57
+92	416	0.4	1	377 39
+93	456	0.4	1	419 37
+94	465	0.4	1	422 43
+95	489	0.4	1	450 39
+96	426	0.4	1	384 42
+97	456	0.4	1	419 37
+98	407	0.4	1	372 35
+99	386	0.4	1	338 48
+100	384	0.4	1	344 40
+101	346	0.4	1	311 35
+102	321	0.4	1	288 33
+103	263	0.4	1	237 26
+104	345	0.4	1	301 44
+105	402	0.4	1	375 27
+106	369	0.4	1	344 25
+107	362	0.4	1	324 38
+108	297	0.4	1	263 34
+109	320	0.4	1	295 25
+110	334	0.4	1	295 39
+111	320	0.4	1	296 24
+112	338	0.4	1	305 33
+113	342	0.4	1	311 31
+114	330	0.4	1	292 38
+115	442	0.4	1	409 33
+116	452	0.4	1	420 32
+117	449	0.4	1	418 31
+118	498	0.4	1	466 32
+119	427	0.4	1	398 29
+120	445	0.4	1	422 23
+121	438	0.4	1	394 44
+122	505	0.4	1	476 29
+123	476	0.4	1	440 36
+124	481	0.4	1	451 30
+125	543	0.4	1	515 28
+126	610	0.4	1	586 24
+127	640	0.4	1	601 39
+128	631	0.4	1	598 33
+129	747	0.4	1	709 38
+130	862	0.4	1	825 37
+131	899	0.4	1	868 31
+132	897	0.4	1	855 42
+133	1017	0.4	1	983 34
+134	1356	0.4	1	1305 51
+135	1129	0.4	1	1092 37
+136	1316	0.4	1	1286 30
+137	1457	0.4	1	1421 36
+138	1153	0.4	1	1113 40
+139	1271	0.4	1	1222 49
+140	1087	0.4	1	1042 45
+141	1109	0.4	1	1049 60
+142	863	0.4	1	821 42
+143	839	0.4	1	802 37
+144	522	0.4	1	477 45
+145	810	0.4	1	752 58
+146	598	0.4	1	509 89
+147	989	0.4	1	906 83
+148	382	0.4	1	301 81
+149	389	0.4	1	141 248
+150	2634	0.4	1	263 2371
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR9888536_1.fastq.gz
+=============================================
+23669776 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR9888536_2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR9888536_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR9888536_2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR9888536_2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 495.29 s (21 us/read; 2.87 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              23,669,776
+Reads with adapters:                 8,725,997 (36.9%)
+Reads written (passing filters):    23,669,776 (100.0%)
+
+Total basepairs processed: 3,550,466,400 bp
+Quality-trimmed:              84,362,138 bp (2.4%)
+Total written (filtered):  3,423,268,244 bp (96.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 8725997 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 30.6%
+  C: 26.9%
+  G: 27.0%
+  T: 15.3%
+  none/other: 0.2%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	5197025	5917444.0	0	5197025
+2	1733701	1479361.0	0	1733701
+3	549295	369840.2	0	549295
+4	165848	92460.1	0	165848
+5	53352	23115.0	0	53352
+6	35842	5778.8	0	35842
+7	31674	1444.7	0	31674
+8	28205	361.2	0	28205
+9	27438	90.3	0	26859 579
+10	30439	22.6	1	27137 3302
+11	27480	5.6	1	24917 2563
+12	29197	1.4	1	26495 2702
+13	29751	0.4	1	26919 2832
+14	39902	0.4	1	36084 3818
+15	21647	0.4	1	20062 1585
+16	27106	0.4	1	25079 2027
+17	29114	0.4	1	27008 2106
+18	18431	0.4	1	17317 1114
+19	27401	0.4	1	25425 1976
+20	20867	0.4	1	19557 1310
+21	20477	0.4	1	19241 1236
+22	23034	0.4	1	21436 1598
+23	23872	0.4	1	22131 1741
+24	27365	0.4	1	25261 2104
+25	19581	0.4	1	18437 1144
+26	18913	0.4	1	17823 1090
+27	17963	0.4	1	16991 972
+28	20088	0.4	1	18818 1270
+29	16964	0.4	1	15986 978
+30	21765	0.4	1	20248 1517
+31	13977	0.4	1	13226 751
+32	17104	0.4	1	16007 1097
+33	14724	0.4	1	13898 826
+34	14645	0.4	1	13794 851
+35	14730	0.4	1	13792 938
+36	13568	0.4	1	12786 782
+37	12615	0.4	1	11912 703
+38	12635	0.4	1	11916 719
+39	10585	0.4	1	10004 581
+40	10849	0.4	1	10181 668
+41	11144	0.4	1	10452 692
+42	11191	0.4	1	10532 659
+43	7801	0.4	1	7453 348
+44	9359	0.4	1	8839 520
+45	7926	0.4	1	7498 428
+46	6463	0.4	1	6157 306
+47	6548	0.4	1	6238 310
+48	8041	0.4	1	7576 465
+49	5770	0.4	1	5496 274
+50	5063	0.4	1	4844 219
+51	7717	0.4	1	7322 395
+52	2741	0.4	1	2612 129
+53	4368	0.4	1	4173 195
+54	3275	0.4	1	3125 150
+55	4226	0.4	1	3967 259
+56	3706	0.4	1	3507 199
+57	3666	0.4	1	3453 213
+58	2969	0.4	1	2784 185
+59	2855	0.4	1	2672 183
+60	2860	0.4	1	2647 213
+61	2532	0.4	1	2321 211
+62	3064	0.4	1	2509 555
+63	13327	0.4	1	4490 8837
+64	59259	0.4	1	46767 12492
+65	16777	0.4	1	13198 3579
+66	4973	0.4	1	3831 1142
+67	2562	0.4	1	1938 624
+68	1529	0.4	1	1092 437
+69	1244	0.4	1	926 318
+70	941	0.4	1	656 285
+71	886	0.4	1	606 280
+72	1261	0.4	1	851 410
+73	1184	0.4	1	747 437
+74	1002	0.4	1	709 293
+75	927	0.4	1	660 267
+76	863	0.4	1	600 263
+77	724	0.4	1	501 223
+78	711	0.4	1	491 220
+79	527	0.4	1	371 156
+80	434	0.4	1	315 119
+81	388	0.4	1	261 127
+82	375	0.4	1	233 142
+83	336	0.4	1	235 101
+84	314	0.4	1	217 97
+85	267	0.4	1	155 112
+86	265	0.4	1	184 81
+87	279	0.4	1	187 92
+88	241	0.4	1	146 95
+89	201	0.4	1	125 76
+90	197	0.4	1	130 67
+91	198	0.4	1	125 73
+92	187	0.4	1	102 85
+93	159	0.4	1	102 57
+94	121	0.4	1	78 43
+95	138	0.4	1	81 57
+96	123	0.4	1	67 56
+97	173	0.4	1	91 82
+98	166	0.4	1	100 66
+99	169	0.4	1	92 77
+100	119	0.4	1	77 42
+101	168	0.4	1	99 69
+102	165	0.4	1	93 72
+103	166	0.4	1	103 63
+104	201	0.4	1	102 99
+105	217	0.4	1	114 103
+106	160	0.4	1	109 51
+107	158	0.4	1	110 48
+108	170	0.4	1	111 59
+109	183	0.4	1	112 71
+110	225	0.4	1	128 97
+111	169	0.4	1	107 62
+112	211	0.4	1	125 86
+113	198	0.4	1	130 68
+114	201	0.4	1	117 84
+115	238	0.4	1	144 94
+116	194	0.4	1	143 51
+117	191	0.4	1	134 57
+118	218	0.4	1	168 50
+119	185	0.4	1	142 43
+120	209	0.4	1	168 41
+121	208	0.4	1	171 37
+122	240	0.4	1	192 48
+123	220	0.4	1	177 43
+124	249	0.4	1	193 56
+125	259	0.4	1	227 32
+126	284	0.4	1	234 50
+127	330	0.4	1	279 51
+128	335	0.4	1	292 43
+129	422	0.4	1	334 88
+130	515	0.4	1	382 133
+131	423	0.4	1	371 52
+132	470	0.4	1	403 67
+133	523	0.4	1	451 72
+134	680	0.4	1	591 89
+135	554	0.4	1	454 100
+136	644	0.4	1	544 100
+137	705	0.4	1	535 170
+138	616	0.4	1	491 125
+139	652	0.4	1	488 164
+140	683	0.4	1	516 167
+141	716	0.4	1	510 206
+142	577	0.4	1	382 195
+143	579	0.4	1	311 268
+144	400	0.4	1	162 238
+145	675	0.4	1	324 351
+146	473	0.4	1	228 245
+147	896	0.4	1	379 517
+148	327	0.4	1	85 242
+149	287	0.4	1	27 260
+150	2227	0.4	1	51 2176
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR9888536_2.fastq.gz
+=============================================
+23669776 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR9888536_1_trimmed.fq.gz and SRR9888536_2_trimmed.fq.gz
+file_1: SRR9888536_1_trimmed.fq.gz, file_2: SRR9888536_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SRR9888536_1_trimmed.fq.gz and SRR9888536_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to SRR9888536_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to SRR9888536_2_val_2.fq.gz
+
+Total number of sequences analysed: 23669776
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 180697 (0.76%)
+
+Deleting both intermediate output files SRR9888536_1_trimmed.fq.gz and SRR9888536_2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on SRR192882. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR192882_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	4709	AGATCGGAAGAGC	1000000	0.47
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+smallRNA	2	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 4709). Second best hit was Nextera (count: 3)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR192882_1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR192882_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR192882_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR192882_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 626.39 s (17 us/read; 3.63 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              37,919,370
+Reads with adapters:                13,557,106 (35.8%)
+Reads written (passing filters):    37,919,370 (100.0%)
+
+Total basepairs processed: 2,843,952,750 bp
+Quality-trimmed:              93,985,353 bp (3.3%)
+Total written (filtered):  2,726,149,298 bp (95.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 13557106 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.5%
+  C: 27.6%
+  G: 19.6%
+  T: 18.1%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	9605281	9479842.5	0	9605281
+2	2534531	2369960.6	0	2534531
+3	793415	592490.2	0	793415
+4	214973	148122.5	0	214973
+5	68630	37030.6	0	68630
+6	30068	9257.7	0	30068
+7	26269	2314.4	0	26269
+8	21769	578.6	0	21769
+9	20994	144.7	0	20042 952
+10	20982	36.2	1	19263 1719
+11	17473	9.0	1	16592 881
+12	15970	2.3	1	15591 379
+13	14107	0.6	1	13847 260
+14	14187	0.6	1	13891 296
+15	14275	0.6	1	14018 257
+16	11077	0.6	1	10896 181
+17	11096	0.6	1	10903 193
+18	10045	0.6	1	9834 211
+19	9515	0.6	1	9343 172
+20	8922	0.6	1	8776 146
+21	8120	0.6	1	7942 178
+22	7631	0.6	1	7518 113
+23	7391	0.6	1	7239 152
+24	7166	0.6	1	7004 162
+25	6239	0.6	1	6120 119
+26	6077	0.6	1	5952 125
+27	5017	0.6	1	4920 97
+28	5160	0.6	1	5074 86
+29	4590	0.6	1	4495 95
+30	4650	0.6	1	4543 107
+31	4127	0.6	1	4042 85
+32	3325	0.6	1	3242 83
+33	3197	0.6	1	3123 74
+34	2981	0.6	1	2930 51
+35	2864	0.6	1	2791 73
+36	2769	0.6	1	2704 65
+37	2768	0.6	1	2707 61
+38	1822	0.6	1	1749 73
+39	984	0.6	1	919 65
+40	381	0.6	1	343 38
+41	589	0.6	1	526 63
+42	544	0.6	1	511 33
+43	519	0.6	1	472 47
+44	342	0.6	1	311 31
+45	322	0.6	1	281 41
+46	302	0.6	1	243 59
+47	245	0.6	1	207 38
+48	287	0.6	1	226 61
+49	180	0.6	1	148 32
+50	180	0.6	1	121 59
+51	98	0.6	1	71 27
+52	108	0.6	1	67 41
+53	112	0.6	1	86 26
+54	198	0.6	1	142 56
+55	121	0.6	1	74 47
+56	209	0.6	1	180 29
+57	99	0.6	1	38 61
+58	94	0.6	1	40 54
+59	112	0.6	1	75 37
+60	220	0.6	1	126 94
+61	105	0.6	1	80 25
+62	56	0.6	1	28 28
+63	84	0.6	1	52 32
+64	94	0.6	1	69 25
+65	210	0.6	1	133 77
+66	483	0.6	1	431 52
+67	78	0.6	1	36 42
+68	27	0.6	1	0 27
+69	10	0.6	1	0 10
+70	50	0.6	1	0 50
+71	14	0.6	1	0 14
+72	121	0.6	1	0 121
+73	20	0.6	1	0 20
+74	20	0.6	1	0 20
+75	15	0.6	1	0 15
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR192882_1.fastq.gz
+=============================================
+37919370 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR192882_2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR192882_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR192882_2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR192882_2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 622.10 s (16 us/read; 3.66 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              37,919,370
+Reads with adapters:                13,326,846 (35.1%)
+Reads written (passing filters):    37,919,370 (100.0%)
+
+Total basepairs processed: 2,843,952,750 bp
+Quality-trimmed:              56,284,709 bp (2.0%)
+Total written (filtered):  2,764,080,529 bp (97.2%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 13326846 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 33.5%
+  C: 28.5%
+  G: 19.3%
+  T: 18.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	9480004	9479842.5	0	9480004
+2	2468882	2369960.6	0	2468882
+3	749063	592490.2	0	749063
+4	209271	148122.5	0	209271
+5	68808	37030.6	0	68808
+6	30232	9257.7	0	30232
+7	26205	2314.4	0	26205
+8	22829	578.6	0	22829
+9	22113	144.7	0	21373 740
+10	21982	36.2	1	20054 1928
+11	18006	9.0	1	17096 910
+12	17087	2.3	1	16615 472
+13	14780	0.6	1	14424 356
+14	14993	0.6	1	14640 353
+15	12609	0.6	1	12368 241
+16	12253	0.6	1	11897 356
+17	12232	0.6	1	11947 285
+18	10329	0.6	1	10083 246
+19	10588	0.6	1	10292 296
+20	8775	0.6	1	8546 229
+21	8012	0.6	1	7797 215
+22	8159	0.6	1	7963 196
+23	8101	0.6	1	7814 287
+24	8040	0.6	1	7810 230
+25	6051	0.6	1	5910 141
+26	5956	0.6	1	5817 139
+27	5452	0.6	1	5306 146
+28	5670	0.6	1	5522 148
+29	4165	0.6	1	4068 97
+30	4520	0.6	1	4393 127
+31	3348	0.6	1	3237 111
+32	3618	0.6	1	3525 93
+33	2936	0.6	1	2864 72
+34	2856	0.6	1	2782 74
+35	2596	0.6	1	2526 70
+36	2168	0.6	1	2106 62
+37	1790	0.6	1	1731 59
+38	1647	0.6	1	1577 70
+39	1418	0.6	1	1377 41
+40	1252	0.6	1	1204 48
+41	1207	0.6	1	1149 58
+42	879	0.6	1	826 53
+43	728	0.6	1	684 44
+44	654	0.6	1	622 32
+45	530	0.6	1	487 43
+46	337	0.6	1	286 51
+47	285	0.6	1	235 50
+48	234	0.6	1	175 59
+49	154	0.6	1	119 35
+50	149	0.6	1	87 62
+51	98	0.6	1	76 22
+52	107	0.6	1	55 52
+53	73	0.6	1	47 26
+54	86	0.6	1	52 34
+55	74	0.6	1	45 29
+56	89	0.6	1	51 38
+57	110	0.6	1	56 54
+58	131	0.6	1	85 46
+59	126	0.6	1	94 32
+60	212	0.6	1	137 75
+61	231	0.6	1	207 24
+62	205	0.6	1	167 38
+63	643	0.6	1	621 22
+64	280	0.6	1	261 19
+65	123	0.6	1	68 55
+66	83	0.6	1	35 48
+67	18	0.6	1	1 17
+68	20	0.6	1	0 20
+69	5	0.6	1	0 5
+70	29	0.6	1	0 29
+71	13	0.6	1	0 13
+72	106	0.6	1	0 106
+73	22	0.6	1	0 22
+74	4	0.6	1	0 4
+75	5	0.6	1	0 5
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR192882_2.fastq.gz
+=============================================
+37919370 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR192882_1_trimmed.fq.gz and SRR192882_2_trimmed.fq.gz
+file_1: SRR192882_1_trimmed.fq.gz, file_2: SRR192882_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SRR192882_1_trimmed.fq.gz and SRR192882_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to SRR192882_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to SRR192882_2_val_2.fq.gz
+
+Total number of sequences analysed: 37919370
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 852559 (2.25%)
+
+Deleting both intermediate output files SRR192882_1_trimmed.fq.gz and SRR192882_2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on SRR118431. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118431_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	553	AGATCGGAAGAGC	1000000	0.06
+smallRNA	2	TGGAATTCTCGG	1000000	0.00
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 553). Second best hit was smallRNA (count: 2)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118431_1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118431_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118431_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118431_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 595.73 s (19 us/read; 3.23 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              32,097,291
+Reads with adapters:                11,155,034 (34.8%)
+Reads written (passing filters):    32,097,291 (100.0%)
+
+Total basepairs processed: 3,851,674,920 bp
+Quality-trimmed:             368,400,604 bp (9.6%)
+Total written (filtered):  3,467,687,003 bp (90.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 11155034 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 39.4%
+  C: 26.1%
+  G: 15.8%
+  T: 18.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8413736	8024322.8	0	8413736
+2	2009529	2006080.7	0	2009529
+3	525858	501520.2	0	525858
+4	144036	125380.0	0	144036
+5	33011	31345.0	0	33011
+6	4264	7836.3	0	4264
+7	1300	1959.1	0	1300
+8	566	489.8	0	566
+9	1324	122.4	0	485 839
+10	1637	30.6	1	476 1161
+11	842	7.7	1	340 502
+12	574	1.9	1	355 219
+13	403	0.5	1	331 72
+14	433	0.5	1	376 57
+15	513	0.5	1	446 67
+16	298	0.5	1	243 55
+17	361	0.5	1	328 33
+18	381	0.5	1	323 58
+19	368	0.5	1	310 58
+20	379	0.5	1	326 53
+21	311	0.5	1	266 45
+22	328	0.5	1	280 48
+23	390	0.5	1	334 56
+24	437	0.5	1	357 80
+25	370	0.5	1	297 73
+26	403	0.5	1	352 51
+27	325	0.5	1	257 68
+28	447	0.5	1	331 116
+29	366	0.5	1	295 71
+30	474	0.5	1	374 100
+31	404	0.5	1	347 57
+32	273	0.5	1	226 47
+33	326	0.5	1	280 46
+34	419	0.5	1	322 97
+35	474	0.5	1	423 51
+36	611	0.5	1	536 75
+37	698	0.5	1	645 53
+38	500	0.5	1	408 92
+39	215	0.5	1	166 49
+40	58	0.5	1	24 34
+41	159	0.5	1	89 70
+42	174	0.5	1	144 30
+43	154	0.5	1	129 25
+44	117	0.5	1	94 23
+45	153	0.5	1	119 34
+46	154	0.5	1	132 22
+47	178	0.5	1	155 23
+48	161	0.5	1	130 31
+49	191	0.5	1	164 27
+50	234	0.5	1	208 26
+51	133	0.5	1	121 12
+52	171	0.5	1	157 14
+53	190	0.5	1	174 16
+54	264	0.5	1	239 25
+55	224	0.5	1	192 32
+56	192	0.5	1	171 21
+57	189	0.5	1	156 33
+58	141	0.5	1	113 28
+59	214	0.5	1	205 9
+60	505	0.5	1	477 28
+61	335	0.5	1	310 25
+62	116	0.5	1	89 27
+63	253	0.5	1	188 65
+64	325	0.5	1	286 39
+65	595	0.5	1	554 41
+66	648	0.5	1	605 43
+67	141	0.5	1	122 19
+68	36	0.5	1	17 19
+69	25	0.5	1	3 22
+70	16	0.5	1	2 14
+71	12	0.5	1	0 12
+72	12	0.5	1	0 12
+73	17	0.5	1	4 13
+74	13	0.5	1	0 13
+75	18	0.5	1	0 18
+76	15	0.5	1	0 15
+77	20	0.5	1	0 20
+78	14	0.5	1	0 14
+79	17	0.5	1	0 17
+80	14	0.5	1	0 14
+81	29	0.5	1	0 29
+82	23	0.5	1	0 23
+83	22	0.5	1	0 22
+84	15	0.5	1	0 15
+85	18	0.5	1	0 18
+86	14	0.5	1	0 14
+87	13	0.5	1	0 13
+88	18	0.5	1	0 18
+89	17	0.5	1	0 17
+90	17	0.5	1	0 17
+91	13	0.5	1	0 13
+92	15	0.5	1	0 15
+93	15	0.5	1	0 15
+94	15	0.5	1	0 15
+95	14	0.5	1	0 14
+96	15	0.5	1	0 15
+97	12	0.5	1	0 12
+98	14	0.5	1	0 14
+99	14	0.5	1	0 14
+100	25	0.5	1	0 25
+101	29	0.5	1	3 26
+102	25	0.5	1	0 25
+103	18	0.5	1	0 18
+104	32	0.5	1	0 32
+105	8	0.5	1	0 8
+106	19	0.5	1	0 19
+107	22	0.5	1	0 22
+108	26	0.5	1	0 26
+109	19	0.5	1	0 19
+110	23	0.5	1	0 23
+111	31	0.5	1	0 31
+112	26	0.5	1	0 26
+113	26	0.5	1	0 26
+114	25	0.5	1	0 25
+115	24	0.5	1	0 24
+116	32	0.5	1	0 32
+117	26	0.5	1	0 26
+118	15	0.5	1	0 15
+119	30	0.5	1	0 30
+120	58	0.5	1	0 58
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118431_1.fastq.gz
+=============================================
+32097291 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118431_2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118431_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118431_2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118431_2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 599.65 s (19 us/read; 3.21 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              32,097,291
+Reads with adapters:                10,762,240 (33.5%)
+Reads written (passing filters):    32,097,291 (100.0%)
+
+Total basepairs processed: 3,851,674,920 bp
+Quality-trimmed:             683,654,419 bp (17.7%)
+Total written (filtered):  3,152,972,064 bp (81.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10762240 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 40.9%
+  C: 26.5%
+  G: 14.5%
+  T: 18.0%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8037781	8024322.8	0	8037781
+2	2086333	2006080.7	0	2086333
+3	455975	501520.2	0	455975
+4	122852	125380.0	0	122852
+5	29782	31345.0	0	29782
+6	4722	7836.3	0	4722
+7	1273	1959.1	0	1273
+8	495	489.8	0	495
+9	1388	122.4	0	484 904
+10	1995	30.6	1	494 1501
+11	885	7.7	1	341 544
+12	601	1.9	1	378 223
+13	397	0.5	1	320 77
+14	490	0.5	1	403 87
+15	367	0.5	1	295 72
+16	420	0.5	1	338 82
+17	490	0.5	1	412 78
+18	362	0.5	1	283 79
+19	425	0.5	1	336 89
+20	300	0.5	1	227 73
+21	304	0.5	1	227 77
+22	461	0.5	1	361 100
+23	475	0.5	1	379 96
+24	526	0.5	1	420 106
+25	276	0.5	1	202 74
+26	337	0.5	1	264 73
+27	366	0.5	1	257 109
+28	465	0.5	1	355 110
+29	300	0.5	1	209 91
+30	421	0.5	1	311 110
+31	195	0.5	1	135 60
+32	326	0.5	1	249 77
+33	198	0.5	1	138 60
+34	284	0.5	1	215 69
+35	331	0.5	1	251 80
+36	269	0.5	1	214 55
+37	218	0.5	1	172 46
+38	244	0.5	1	185 59
+39	267	0.5	1	221 46
+40	265	0.5	1	222 43
+41	394	0.5	1	323 71
+42	288	0.5	1	244 44
+43	175	0.5	1	149 26
+44	380	0.5	1	339 41
+45	307	0.5	1	270 37
+46	134	0.5	1	114 20
+47	175	0.5	1	150 25
+48	235	0.5	1	212 23
+49	173	0.5	1	149 24
+50	196	0.5	1	171 25
+51	222	0.5	1	201 21
+52	145	0.5	1	113 32
+53	124	0.5	1	100 24
+54	181	0.5	1	157 24
+55	164	0.5	1	141 23
+56	114	0.5	1	90 24
+57	229	0.5	1	195 34
+58	325	0.5	1	282 43
+59	250	0.5	1	213 37
+60	297	0.5	1	267 30
+61	407	0.5	1	371 36
+62	564	0.5	1	505 59
+63	998	0.5	1	915 83
+64	535	0.5	1	496 39
+65	449	0.5	1	423 26
+66	82	0.5	1	60 22
+67	26	0.5	1	11 15
+68	17	0.5	1	0 17
+69	20	0.5	1	1 19
+70	17	0.5	1	0 17
+71	17	0.5	1	1 16
+72	14	0.5	1	1 13
+73	12	0.5	1	0 12
+74	19	0.5	1	0 19
+75	20	0.5	1	0 20
+76	18	0.5	1	1 17
+77	10	0.5	1	0 10
+78	19	0.5	1	1 18
+79	22	0.5	1	1 21
+80	23	0.5	1	0 23
+81	16	0.5	1	0 16
+82	24	0.5	1	0 24
+83	5	0.5	1	0 5
+84	11	0.5	1	0 11
+85	19	0.5	1	0 19
+86	24	0.5	1	0 24
+87	8	0.5	1	0 8
+88	9	0.5	1	0 9
+89	18	0.5	1	0 18
+90	25	0.5	1	0 25
+91	9	0.5	1	0 9
+92	10	0.5	1	0 10
+93	11	0.5	1	0 11
+94	10	0.5	1	0 10
+95	17	0.5	1	0 17
+96	14	0.5	1	1 13
+97	16	0.5	1	0 16
+98	8	0.5	1	0 8
+99	14	0.5	1	0 14
+100	20	0.5	1	0 20
+101	20	0.5	1	0 20
+102	16	0.5	1	0 16
+103	13	0.5	1	0 13
+104	23	0.5	1	0 23
+105	18	0.5	1	0 18
+106	13	0.5	1	0 13
+107	11	0.5	1	0 11
+108	19	0.5	1	1 18
+109	19	0.5	1	0 19
+110	24	0.5	1	0 24
+111	21	0.5	1	0 21
+112	6	0.5	1	0 6
+113	9	0.5	1	0 9
+114	11	0.5	1	0 11
+115	13	0.5	1	0 13
+116	13	0.5	1	0 13
+117	7	0.5	1	0 7
+118	7	0.5	1	0 7
+119	16	0.5	1	0 16
+120	15	0.5	1	0 15
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118431_2.fastq.gz
+=============================================
+32097291 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR118431_1_trimmed.fq.gz and SRR118431_2_trimmed.fq.gz
+file_1: SRR118431_1_trimmed.fq.gz, file_2: SRR118431_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SRR118431_1_trimmed.fq.gz and SRR118431_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to SRR118431_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to SRR118431_2_val_2.fq.gz
+
+Total number of sequences analysed: 32097291
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 640813 (2.00%)
+
+Deleting both intermediate output files SRR118431_1_trimmed.fq.gz and SRR118431_2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on SRR118439. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118439_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	105	AGATCGGAAGAGC	1000000	0.01
+smallRNA	2	TGGAATTCTCGG	1000000	0.00
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 105). Second best hit was smallRNA (count: 2)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118439_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118439_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118439_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118439_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 343.80 s (14 us/read; 4.36 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              24,971,859
+Reads with adapters:                 8,917,545 (35.7%)
+Reads written (passing filters):    24,971,859 (100.0%)
+
+Total basepairs processed:   874,015,065 bp
+Quality-trimmed:               9,911,510 bp (1.1%)
+Total written (filtered):    851,830,883 bp (97.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 8917545 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 33.7%
+  C: 27.8%
+  G: 19.4%
+  T: 19.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	6565787	6242964.8	0	6565787
+2	1663198	1560741.2	0	1663198
+3	515485	390185.3	0	515485
+4	133345	97546.3	0	133345
+5	28330	24386.6	0	28330
+6	3132	6096.6	0	3132
+7	985	1524.2	0	985
+8	487	381.0	0	487
+9	939	95.3	0	248 691
+10	1110	23.8	1	139 971
+11	535	6.0	1	93 442
+12	260	1.5	1	78 182
+13	105	0.4	1	58 47
+14	105	0.4	1	62 43
+15	76	0.4	1	48 28
+16	194	0.4	1	167 27
+17	101	0.4	1	53 48
+18	79	0.4	1	46 33
+19	78	0.4	1	53 25
+20	115	0.4	1	45 70
+21	66	0.4	1	44 22
+22	68	0.4	1	32 36
+23	66	0.4	1	38 28
+24	57	0.4	1	40 17
+25	162	0.4	1	136 26
+26	1602	0.4	1	1544 58
+27	83	0.4	1	62 21
+28	45	0.4	1	31 14
+29	43	0.4	1	32 11
+30	74	0.4	1	33 41
+31	36	0.4	1	31 5
+32	140	0.4	1	40 100
+33	63	0.4	1	35 28
+34	38	0.4	1	26 12
+35	556	0.4	1	9 547
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118439_1.fastq.gz
+=============================================
+24971859 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	262367 (1.1%)
+
+Done.
+Running Trim Galore on SRR118440. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118440_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	174	AGATCGGAAGAGC	1000000	0.02
+smallRNA	3	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 174). Second best hit was smallRNA (count: 3)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118440_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118440_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118440_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118440_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 349.61 s (14 us/read; 4.23 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              24,620,975
+Reads with adapters:                 8,984,133 (36.5%)
+Reads written (passing filters):    24,620,975 (100.0%)
+
+Total basepairs processed:   861,734,125 bp
+Quality-trimmed:              12,956,384 bp (1.5%)
+Total written (filtered):    836,238,954 bp (97.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 8984133 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.6%
+  C: 27.9%
+  G: 19.1%
+  T: 18.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	6520972	6155243.8	0	6520972
+2	1726555	1538810.9	0	1726555
+3	566085	384702.7	0	566085
+4	124826	96175.7	0	124826
+5	26476	24043.9	0	26476
+6	5058	6011.0	0	5058
+7	2220	1502.7	0	2220
+8	2341	375.7	0	2341
+9	1831	93.9	0	927 904
+10	1405	23.5	1	527 878
+11	713	5.9	1	344 369
+12	341	1.5	1	220 121
+13	285	0.4	1	216 69
+14	195	0.4	1	144 51
+15	129	0.4	1	98 31
+16	706	0.4	1	672 34
+17	143	0.4	1	72 71
+18	68	0.4	1	47 21
+19	91	0.4	1	57 34
+20	107	0.4	1	51 56
+21	88	0.4	1	67 21
+22	78	0.4	1	50 28
+23	74	0.4	1	43 31
+24	95	0.4	1	70 25
+25	218	0.4	1	170 48
+26	1771	0.4	1	1707 64
+27	87	0.4	1	64 23
+28	55	0.4	1	38 17
+29	52	0.4	1	34 18
+30	90	0.4	1	39 51
+31	51	0.4	1	43 8
+32	157	0.4	1	57 100
+33	77	0.4	1	61 16
+34	44	0.4	1	28 16
+35	649	0.4	1	13 636
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118440_1.fastq.gz
+=============================================
+24620975 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	315319 (1.3%)
+
+Done.
+Running Trim Galore on SRR118438. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118438_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	101	AGATCGGAAGAGC	1000000	0.01
+Nextera	4	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 101). Second best hit was Nextera (count: 4)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118438_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118438_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118438_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118438_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 403.50 s (14 us/read; 4.22 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              28,394,272
+Reads with adapters:                10,380,113 (36.6%)
+Reads written (passing filters):    28,394,272 (100.0%)
+
+Total basepairs processed:   993,799,520 bp
+Quality-trimmed:              19,236,719 bp (1.9%)
+Total written (filtered):    960,211,708 bp (96.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10380113 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 35.3%
+  C: 27.2%
+  G: 19.3%
+  T: 18.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7592162	7098568.0	0	7592162
+2	1952330	1774642.0	0	1952330
+3	626500	443660.5	0	626500
+4	155953	110915.1	0	155953
+5	36146	27728.8	0	36146
+6	5963	6932.2	0	5963
+7	1907	1733.0	0	1907
+8	968	433.3	0	968
+9	2247	108.3	0	1405 842
+10	1326	27.1	1	270 1056
+11	655	6.8	1	192 463
+12	221	1.7	1	81 140
+13	98	0.4	1	66 32
+14	110	0.4	1	70 40
+15	114	0.4	1	69 45
+16	140	0.4	1	106 34
+17	2356	0.4	1	2301 55
+18	98	0.4	1	37 61
+19	45	0.4	1	13 32
+20	52	0.4	1	21 31
+21	59	0.4	1	16 43
+22	116	0.4	1	87 29
+23	54	0.4	1	15 39
+24	41	0.4	1	17 24
+25	29	0.4	1	14 15
+26	36	0.4	1	12 24
+27	86	0.4	1	55 31
+28	26	0.4	1	11 15
+29	25	0.4	1	8 17
+30	26	0.4	1	8 18
+31	53	0.4	1	5 48
+32	33	0.4	1	14 19
+33	101	0.4	1	10 91
+34	17	0.4	1	7 10
+35	20	0.4	1	7 13
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118438_1.fastq.gz
+=============================================
+28394272 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	565656 (2.0%)
+
+Done.
+Running Trim Galore on SRR118432. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118432_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	172	AGATCGGAAGAGC	1000000	0.02
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 172). Second best hit was Nextera (count: 1)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118432_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118432_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118432_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118432_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 410.56 s (14 us/read; 4.41 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              30,148,198
+Reads with adapters:                10,589,674 (35.1%)
+Reads written (passing filters):    30,148,198 (100.0%)
+
+Total basepairs processed: 1,055,186,930 bp
+Quality-trimmed:              25,973,226 bp (2.5%)
+Total written (filtered):  1,014,458,937 bp (96.1%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10589674 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 33.8%
+  C: 27.6%
+  G: 19.8%
+  T: 18.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7704464	7537049.5	0	7704464
+2	2041135	1884262.4	0	2041135
+3	621308	471065.6	0	621308
+4	164496	117766.4	0	164496
+5	37287	29441.6	0	37287
+6	5374	7360.4	0	5374
+7	1484	1840.1	0	1484
+8	927	460.0	0	927
+9	3585	115.0	0	2860 725
+10	1361	28.8	1	390 971
+11	677	7.2	1	250 427
+12	331	1.8	1	180 151
+13	154	0.4	1	108 46
+14	123	0.4	1	101 22
+15	147	0.4	1	101 46
+16	187	0.4	1	163 24
+17	3466	0.4	1	3424 42
+18	94	0.4	1	64 30
+19	76	0.4	1	52 24
+20	68	0.4	1	52 16
+21	133	0.4	1	70 63
+22	185	0.4	1	157 28
+23	84	0.4	1	68 16
+24	82	0.4	1	58 24
+25	92	0.4	1	79 13
+26	188	0.4	1	167 21
+27	1400	0.4	1	1338 62
+28	101	0.4	1	78 23
+29	73	0.4	1	59 14
+30	61	0.4	1	56 5
+31	103	0.4	1	63 40
+32	78	0.4	1	66 12
+33	178	0.4	1	73 105
+34	100	0.4	1	85 15
+35	72	0.4	1	42 30
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118432_1.fastq.gz
+=============================================
+30148198 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	777604 (2.6%)
+
+Done.
+Running Trim Galore on SRR118435. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118435_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	408	AGATCGGAAGAGC	1000000	0.04
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 408). Second best hit was Nextera (count: 1)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118435_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118435_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118435_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118435_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 419.13 s (14 us/read; 4.33 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              30,273,847
+Reads with adapters:                11,198,960 (37.0%)
+Reads written (passing filters):    30,273,847 (100.0%)
+
+Total basepairs processed: 1,059,584,645 bp
+Quality-trimmed:              26,240,615 bp (2.5%)
+Total written (filtered):  1,017,163,511 bp (96.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 11198960 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 35.2%
+  C: 26.9%
+  G: 19.6%
+  T: 18.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8098186	7568461.8	0	8098186
+2	2082956	1892115.4	0	2082956
+3	685158	473028.9	0	685158
+4	187806	118257.2	0	187806
+5	57903	29564.3	0	57903
+6	23410	7391.1	0	23410
+7	14193	1847.8	0	14193
+8	10094	461.9	0	10094
+9	12961	115.5	0	12097 864
+10	5616	28.9	1	4485 1131
+11	3141	7.2	1	2636 505
+12	1481	1.8	1	1287 194
+13	914	0.5	1	845 69
+14	988	0.5	1	951 37
+15	719	0.5	1	671 48
+16	571	0.5	1	527 44
+17	11468	0.5	1	11356 112
+18	126	0.5	1	88 38
+19	63	0.5	1	35 28
+20	60	0.5	1	34 26
+21	104	0.5	1	31 73
+22	447	0.5	1	418 29
+23	46	0.5	1	11 35
+24	39	0.5	1	24 15
+25	34	0.5	1	21 13
+26	42	0.5	1	20 22
+27	117	0.5	1	82 35
+28	24	0.5	1	5 19
+29	19	0.5	1	9 10
+30	22	0.5	1	7 15
+31	56	0.5	1	21 35
+32	19	0.5	1	13 6
+33	121	0.5	1	14 107
+34	36	0.5	1	15 21
+35	20	0.5	1	6 14
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118435_1.fastq.gz
+=============================================
+30273847 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	795519 (2.6%)
+
+Done.
+Running Trim Galore on SRR118436. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118436_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	614	AGATCGGAAGAGC	1000000	0.06
+Nextera	2	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 614). Second best hit was Nextera (count: 2)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118436_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118436_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118436_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118436_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 401.80 s (14 us/read; 4.43 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,652,359
+Reads with adapters:                10,902,145 (36.8%)
+Reads written (passing filters):    29,652,359 (100.0%)
+
+Total basepairs processed: 1,037,832,565 bp
+Quality-trimmed:              22,091,728 bp (2.1%)
+Total written (filtered):    999,964,246 bp (96.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10902145 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 35.1%
+  C: 27.2%
+  G: 19.5%
+  T: 18.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7900903	7413089.8	0	7900903
+2	2027781	1853272.4	0	2027781
+3	651598	463318.1	0	651598
+4	176945	115829.5	0	176945
+5	54665	28957.4	0	54665
+6	22222	7239.3	0	22222
+7	13699	1809.8	0	13699
+8	9489	452.5	0	9489
+9	15696	113.1	0	14892 804
+10	4755	28.3	1	3646 1109
+11	2735	7.1	1	2247 488
+12	1535	1.8	1	1341 194
+13	1158	0.4	1	1079 79
+14	1210	0.4	1	1170 40
+15	768	0.4	1	713 55
+16	761	0.4	1	710 51
+17	14725	0.4	1	14556 169
+18	164	0.4	1	130 34
+19	45	0.4	1	31 14
+20	69	0.4	1	44 25
+21	114	0.4	1	31 83
+22	547	0.4	1	525 22
+23	48	0.4	1	12 36
+24	32	0.4	1	14 18
+25	23	0.4	1	13 10
+26	44	0.4	1	25 19
+27	139	0.4	1	105 34
+28	27	0.4	1	4 23
+29	20	0.4	1	7 13
+30	12	0.4	1	5 7
+31	36	0.4	1	7 29
+32	17	0.4	1	7 10
+33	114	0.4	1	6 108
+34	36	0.4	1	7 29
+35	13	0.4	1	4 9
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118436_1.fastq.gz
+=============================================
+29652359 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	666149 (2.2%)
+
+Done.
+Running Trim Galore on SRR118437. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118437_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	161	AGATCGGAAGAGC	1000000	0.02
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 161). Second best hit was smallRNA (count: 0)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118437_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118437_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118437_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118437_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 420.39 s (14 us/read; 4.25 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,806,387
+Reads with adapters:                10,812,887 (36.3%)
+Reads written (passing filters):    29,806,387 (100.0%)
+
+Total basepairs processed: 1,043,223,545 bp
+Quality-trimmed:              23,144,150 bp (2.2%)
+Total written (filtered):  1,005,033,982 bp (96.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10812887 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 35.3%
+  C: 27.9%
+  G: 19.2%
+  T: 17.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7908703	7451596.8	0	7908703
+2	2028769	1862899.2	0	2028769
+3	643818	465724.8	0	643818
+4	158295	116431.2	0	158295
+5	39175	29107.8	0	39175
+6	10481	7276.9	0	10481
+7	5255	1819.2	0	5255
+8	3482	454.8	0	3482
+9	4875	113.7	0	4037 838
+10	2443	28.4	1	1478 965
+11	1274	7.1	1	832 442
+12	593	1.8	1	426 167
+13	361	0.4	1	304 57
+14	334	0.4	1	301 33
+15	225	0.4	1	182 43
+16	218	0.4	1	190 28
+17	3666	0.4	1	3605 61
+18	75	0.4	1	40 35
+19	56	0.4	1	31 25
+20	49	0.4	1	21 28
+21	93	0.4	1	17 76
+22	136	0.4	1	113 23
+23	31	0.4	1	10 21
+24	33	0.4	1	14 19
+25	29	0.4	1	12 17
+26	45	0.4	1	14 31
+27	99	0.4	1	70 29
+28	22	0.4	1	7 15
+29	34	0.4	1	7 27
+30	18	0.4	1	7 11
+31	36	0.4	1	6 30
+32	17	0.4	1	3 14
+33	90	0.4	1	7 83
+34	32	0.4	1	12 20
+35	25	0.4	1	2 23
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118437_1.fastq.gz
+=============================================
+29806387 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	687812 (2.3%)
+
+Done.
+Running Trim Galore on SRR118433. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118433_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	129	AGATCGGAAGAGC	1000000	0.01
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 129). Second best hit was Nextera (count: 1)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118433_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118433_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118433_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118433_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 406.81 s (14 us/read; 4.29 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,065,750
+Reads with adapters:                10,312,677 (35.5%)
+Reads written (passing filters):    29,065,750 (100.0%)
+
+Total basepairs processed: 1,017,301,250 bp
+Quality-trimmed:              27,534,531 bp (2.7%)
+Total written (filtered):    975,438,627 bp (95.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10312677 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.0%
+  C: 27.7%
+  G: 20.1%
+  T: 18.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7499558	7266437.5	0	7499558
+2	1987633	1816609.4	0	1987633
+3	612893	454152.3	0	612893
+4	157106	113538.1	0	157106
+5	37795	28384.5	0	37795
+6	5968	7096.1	0	5968
+7	1519	1774.0	0	1519
+8	924	443.5	0	924
+9	2555	110.9	0	1740 815
+10	1437	27.7	1	428 1009
+11	727	6.9	1	249 478
+12	329	1.7	1	181 148
+13	136	0.4	1	102 34
+14	122	0.4	1	100 22
+15	94	0.4	1	65 29
+16	119	0.4	1	91 28
+17	1407	0.4	1	1382 25
+18	69	0.4	1	42 27
+19	66	0.4	1	44 22
+20	54	0.4	1	34 20
+21	105	0.4	1	41 64
+22	83	0.4	1	63 20
+23	46	0.4	1	34 12
+24	51	0.4	1	37 14
+25	61	0.4	1	35 26
+26	169	0.4	1	131 38
+27	1018	0.4	1	971 47
+28	75	0.4	1	57 18
+29	67	0.4	1	44 23
+30	39	0.4	1	33 6
+31	114	0.4	1	64 50
+32	55	0.4	1	46 9
+33	147	0.4	1	47 100
+34	74	0.4	1	60 14
+35	62	0.4	1	36 26
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118433_1.fastq.gz
+=============================================
+29065750 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	795421 (2.7%)
+
+Done.
+Running Trim Galore on SRR118429. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118429_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	91	AGATCGGAAGAGC	1000000	0.01
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 91). Second best hit was smallRNA (count: 0)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118429_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118429_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118429_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118429_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 386.12 s (14 us/read; 4.32 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              27,791,917
+Reads with adapters:                 9,991,775 (36.0%)
+Reads written (passing filters):    27,791,917 (100.0%)
+
+Total basepairs processed:   972,717,095 bp
+Quality-trimmed:              12,795,303 bp (1.3%)
+Total written (filtered):    946,181,145 bp (97.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 9991775 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.0%
+  C: 28.7%
+  G: 19.1%
+  T: 18.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7328402	6947979.2	0	7328402
+2	1892016	1736994.8	0	1892016
+3	584847	434248.7	0	584847
+4	144167	108562.2	0	144167
+5	31479	27140.5	0	31479
+6	3125	6785.1	0	3125
+7	823	1696.3	0	823
+8	597	424.1	0	597
+9	933	106.0	0	227 706
+10	1168	26.5	1	124 1044
+11	623	6.6	1	87 536
+12	242	1.7	1	77 165
+13	99	0.4	1	66 33
+14	102	0.4	1	66 36
+15	114	0.4	1	82 32
+16	251	0.4	1	231 20
+17	127	0.4	1	69 58
+18	89	0.4	1	52 37
+19	84	0.4	1	63 21
+20	121	0.4	1	57 64
+21	90	0.4	1	68 22
+22	87	0.4	1	60 27
+23	86	0.4	1	66 20
+24	76	0.4	1	61 15
+25	169	0.4	1	106 63
+26	1053	0.4	1	995 58
+27	102	0.4	1	69 33
+28	68	0.4	1	49 19
+29	52	0.4	1	38 14
+30	94	0.4	1	58 36
+31	69	0.4	1	55 14
+32	170	0.4	1	60 110
+33	96	0.4	1	77 19
+34	62	0.4	1	52 10
+35	92	0.4	1	16 76
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118429_1.fastq.gz
+=============================================
+27791917 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	330832 (1.2%)
+
+Done.
+Running Trim Galore on SRR118441. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118441_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	153	AGATCGGAAGAGC	1000000	0.02
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 153). Second best hit was Nextera (count: 1)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118441_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118441_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118441_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118441_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 380.24 s (14 us/read; 4.40 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              27,865,241
+Reads with adapters:                10,040,410 (36.0%)
+Reads written (passing filters):    27,865,241 (100.0%)
+
+Total basepairs processed:   975,283,435 bp
+Quality-trimmed:              12,202,519 bp (1.3%)
+Total written (filtered):    949,254,332 bp (97.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 10040410 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.0%
+  C: 27.1%
+  G: 19.4%
+  T: 19.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7394328	6966310.2	0	7394328
+2	1869269	1741577.6	0	1869269
+3	577460	435394.4	0	577460
+4	152754	108848.6	0	152754
+5	33090	27212.1	0	33090
+6	3514	6803.0	0	3514
+7	1086	1700.8	0	1086
+8	969	425.2	0	969
+9	1024	106.3	0	341 683
+10	1164	26.6	1	163 1001
+11	556	6.6	1	140 416
+12	249	1.7	1	113 136
+13	177	0.4	1	130 47
+14	119	0.4	1	87 32
+15	131	0.4	1	102 29
+16	521	0.4	1	493 28
+17	147	0.4	1	125 22
+18	128	0.4	1	113 15
+19	140	0.4	1	122 18
+20	152	0.4	1	104 48
+21	124	0.4	1	107 17
+22	120	0.4	1	87 33
+23	136	0.4	1	105 31
+24	114	0.4	1	94 20
+25	179	0.4	1	155 24
+26	1656	0.4	1	1597 59
+27	102	0.4	1	92 10
+28	82	0.4	1	66 16
+29	70	0.4	1	60 10
+30	121	0.4	1	78 43
+31	74	0.4	1	69 5
+32	181	0.4	1	112 69
+33	111	0.4	1	93 18
+34	65	0.4	1	47 18
+35	297	0.4	1	28 269
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118441_1.fastq.gz
+=============================================
+27865241 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	285933 (1.0%)
+
+Done.
+Running Trim Galore on SRR118434. ...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ExternalData/Abel/SRR118434_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	195	AGATCGGAAGAGC	1000000	0.02
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 195). Second best hit was smallRNA (count: 0)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ExternalData/Abel/SRR118434_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR118434_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file ExternalData/Abel/SRR118434_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ExternalData/Abel/SRR118434_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 427.77 s (14 us/read; 4.34 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              30,956,140
+Reads with adapters:                11,307,665 (36.5%)
+Reads written (passing filters):    30,956,140 (100.0%)
+
+Total basepairs processed: 1,083,464,900 bp
+Quality-trimmed:              30,607,733 bp (2.8%)
+Total written (filtered):  1,036,740,211 bp (95.7%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 11307665 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.5%
+  C: 27.6%
+  G: 19.7%
+  T: 18.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8169361	7739035.0	0	8169361
+2	2132487	1934758.8	0	2132487
+3	697978	483689.7	0	697978
+4	190351	120922.4	0	190351
+5	55583	30230.6	0	55583
+6	18790	7557.7	0	18790
+7	11375	1889.4	0	11375
+8	7835	472.4	0	7835
+9	7980	118.1	0	6898 1082
+10	4361	29.5	1	3124 1237
+11	2362	7.4	1	1871 491
+12	1266	1.8	1	1085 181
+13	766	0.5	1	724 42
+14	789	0.5	1	751 38
+15	435	0.5	1	395 40
+16	288	0.5	1	259 29
+17	4520	0.5	1	4449 71
+18	83	0.5	1	58 25
+19	70	0.5	1	34 36
+20	49	0.5	1	24 25
+21	91	0.5	1	20 71
+22	211	0.5	1	182 29
+23	37	0.5	1	13 24
+24	37	0.5	1	15 22
+25	35	0.5	1	15 20
+26	47	0.5	1	22 25
+27	130	0.5	1	94 36
+28	32	0.5	1	11 21
+29	39	0.5	1	15 24
+30	18	0.5	1	11 7
+31	61	0.5	1	11 50
+32	34	0.5	1	17 17
+33	107	0.5	1	12 95
+34	33	0.5	1	13 20
+35	24	0.5	1	4 20
+
+
+RUN STATISTICS FOR INPUT FILE: ExternalData/Abel/SRR118434_1.fastq.gz
+=============================================
+30956140 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	926695 (3.0%)
+
+Done.

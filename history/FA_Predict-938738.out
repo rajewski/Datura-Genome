@@ -1,0 +1,17 @@
+Running Funannotate predict on Dstr_v1.4.masked.l5000.fa
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+-------------------------------------------------------
+[07:03 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[07:03 AM]: Running funannotate v1.6.0-98d4d3f
+[07:03 AM]: Found training files, will re-use these files:
+  --rna_bam trainl5000/training/funannotate_train.coordSorted.bam
+  --pasa_gff trainl5000/training/funannotate_train.pasa.gff3
+  --stringtie trainl5000/training/funannotate_train.stringtie.gtf
+  --transcript_alignments trainl5000/training/funannotate_train.transcripts.gff3
+[07:03 AM]: Augustus training set for datura_stramonium_3 already exists. To re-train provide unique --augustus_species argument
+[07:03 AM]: AUGUSTUS (3.3.3) detected, version seems to be compatible with BRAKER and BUSCO
+[07:04 AM]: Loading genome assembly and parsing soft-masked repetitive sequences
+slurmstepd-i21: error: *** JOB 938738 ON i21 CANCELLED AT 2020-03-25T07:06:18 ***

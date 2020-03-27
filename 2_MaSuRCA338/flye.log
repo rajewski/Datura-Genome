@@ -1,0 +1,59 @@
+[2020-03-25 07:52:13] INFO: Starting Flye 2.5-release
+[2020-03-25 07:52:13] INFO: >>>STAGE: configure
+[2020-03-25 07:52:13] INFO: Configuring run
+[2020-03-25 07:52:13] WARNING: Input contain non-ACGT characters - they will be converted to arbitrary ACGTs
+[2020-03-25 07:52:49] INFO: Total read length: 5687073446
+[2020-03-25 07:52:49] INFO: Input genome size: 1743399272
+[2020-03-25 07:52:49] INFO: Estimated coverage: 3
+[2020-03-25 07:52:49] WARNING: Expected read coverage is 3, the assembly is not guaranteed to be optimal in this setting. Are you sure that the genome size was entered correctly?
+[2020-03-25 07:52:49] INFO: Reads N50/N90: 24751 / 6304
+[2020-03-25 07:52:49] INFO: Selected minimum overlap: 2500
+[2020-03-25 07:52:49] INFO: Selected k-mer size: 21
+[2020-03-25 07:52:49] INFO: >>>STAGE: assembly
+[2020-03-25 07:52:49] INFO: Assembling disjointigs
+[2020-03-25 07:52:50] INFO: Reading sequences
+[2020-03-25 07:53:50] INFO: Generating solid k-mer index
+[2020-03-25 08:02:09] INFO: Counting k-mers (1/2):
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 08:02:31] INFO: Counting k-mers (2/2):
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 08:03:56] INFO: Filling index table
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 08:08:40] INFO: Extending reads
+[2020-03-25 08:10:25] INFO: Overlap-based coverage: 3
+[2020-03-25 08:10:25] INFO: Median overlap divergence: 0.000862869
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 08:32:00] INFO: Assembled 9990 disjointigs
+[2020-03-25 08:32:08] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 08:43:48] INFO: >>>STAGE: consensus
+[2020-03-25 08:44:15] INFO: Running Minimap2
+[2020-03-25 09:14:44] INFO: Computing consensus
+[2020-03-25 09:30:38] INFO: Alignment error rate: 0.0908827176576
+[2020-03-25 09:30:52] INFO: >>>STAGE: repeat
+[2020-03-25 09:30:52] INFO: Building and resolving repeat graph
+[2020-03-25 09:30:52] INFO: Reading sequences
+[2020-03-25 09:32:03] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 14:28:08] INFO: Median overlap divergence: 0.0937278
+[2020-03-25 14:40:13] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2020-03-25 16:41:51] INFO: Aligned read sequence: 5018750074 / 5513724317 (0.910229)
+[2020-03-25 16:41:51] INFO: Median overlap divergence: 0.0980818
+[2020-03-25 16:42:01] INFO: Mean edge coverage: 5
+[2020-03-25 16:43:17] INFO: Resolving repeats
+[2020-03-25 17:00:08] INFO: >>>STAGE: contigger
+[2020-03-25 17:00:08] INFO: Generating contigs
+[2020-03-25 17:00:08] INFO: Reading sequences
+[2020-03-25 17:02:00] INFO: Generated 11473 contigs
+[2020-03-25 17:07:58] INFO: >>>STAGE: finalize
+[2020-03-25 17:08:40] INFO: Assembly statistics:
+
+	Total length:	787552179
+	Fragments:	11453
+	Fragments N50:	108796
+	Largest frg:	1514479
+	Scaffolds:	20
+	Mean coverage:	4
+
+[2020-03-25 17:08:40] INFO: Final assembly: /bigdata/littlab/arajewski/Datura/2_MaSuRCA338/flye/assembly.fasta

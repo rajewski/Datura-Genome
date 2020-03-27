@@ -1,0 +1,50 @@
+
+
+     ______  ____   ____  ____   ____  ______  __ __
+    |      ||    \ |    ||    \ |    ||      ||  |  |
+    |      ||  D  ) |  | |  _  | |  | |      ||  |  |
+    |_|  |_||    /  |  | |  |  | |  | |_|  |_||  ~  |
+      |  |  |    \  |  | |  |  | |  |   |  |  |___, |
+      |  |  |  .  \ |  | |  |  | |  |   |  |  |     |
+      |__|  |__|\_||____||__|__||____|  |__|  |____/
+
+    Trinity-v2.8.5
+
+
+
+Left read files: $VAR1 = [
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/ERR2040625_1_val_1.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118430_1_val_1.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR192881_1_val_1.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR9888536_1_val_1.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR192882_1_val_1.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118431_1_val_1.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118439_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118440_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118438_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118432_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118435_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118436_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118437_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118433_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118429_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118441_1_trimmed.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118434_1_trimmed.fq.gz'
+        ];
+Right read files: $VAR1 = [
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/ERR2040625_2_val_2.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118430_2_val_2.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR192881_2_val_2.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR9888536_2_val_2.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR192882_2_val_2.fq.gz',
+          '/rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/SRR118431_2_val_2.fq.gz'
+        ];
+Trinity version: Trinity-v2.8.5
+** NOTE: Latest version of Trinity is v2.10.0, and can be obtained at:
+	https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+Monday, March 23, 2020: 21:07:31	CMD: java -Xmx64m -XX:ParallelGCThreads=2  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/util/support_scripts/ExitTester.jar 0
+Monday, March 23, 2020: 21:07:31	CMD: java -Xmx4g -XX:ParallelGCThreads=2  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/util/support_scripts/ExitTester.jar 1
+Monday, March 23, 2020: 21:07:32	CMD: mkdir -p /rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity
+Error, cannot locate file: /rhome/arajewski/bigdata/Datura/Alakoids/Abel_trinity/ERR2040625_1_val_1.fq.gz at /opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/Trinity line 2714.
+	main::create_full_path(ARRAY(0x2702910), 1) called at /opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/Trinity line 1263

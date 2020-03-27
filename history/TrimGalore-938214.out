@@ -1,0 +1,307 @@
+miniconda2/4.4.10(23):ERROR:150: Module 'miniconda2/4.4.10' conflicts with the currently loaded module(s) 'python/2.7.5'
+miniconda2/4.4.10(23):ERROR:102: Tcl command execution failed: conflict    python
+
+Running Trim Galore on NobtPre1...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> NobtPre1_1.fq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	10	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 10). Second best hit was smallRNA (count: 0)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: NobtPre1_1.fq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to NobtPre1_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file NobtPre1_1.fq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC NobtPre1_1.fq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 1283.16 s (25 us/read; 2.39 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              51,149,720
+Reads with adapters:                 7,171,569 (14.0%)
+Reads written (passing filters):    51,149,720 (100.0%)
+
+Total basepairs processed: 3,854,831,293 bp
+Quality-trimmed:              12,200,081 bp (0.3%)
+Total written (filtered):  3,833,498,269 bp (99.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 7171569 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.7%
+  C: 30.3%
+  G: 16.6%
+  T: 18.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	6077529	12787430.0	0	6077529
+2	491561	3196857.5	0	491561
+3	492270	799214.4	0	492270
+4	74115	199803.6	0	74115
+5	28627	49950.9	0	28627
+6	3098	12487.7	0	3098
+7	123	3121.9	0	123
+8	56	780.5	0	56
+9	63	195.1	0	43 20
+10	210	48.8	1	18 192
+11	332	12.2	1	33 299
+12	69	3.0	1	5 64
+13	56	0.8	1	6 50
+14	69	0.8	1	8 61
+15	107	0.8	1	7 100
+16	76	0.8	1	0 76
+17	121	0.8	1	17 104
+18	77	0.8	1	5 72
+19	77	0.8	1	11 66
+20	93	0.8	1	12 81
+21	123	0.8	1	14 109
+22	60	0.8	1	12 48
+23	50	0.8	1	6 44
+24	93	0.8	1	12 81
+25	118	0.8	1	16 102
+26	80	0.8	1	11 69
+27	103	0.8	1	12 91
+28	127	0.8	1	18 109
+29	42	0.8	1	0 42
+30	78	0.8	1	4 74
+31	72	0.8	1	11 61
+32	80	0.8	1	9 71
+33	65	0.8	1	9 56
+34	89	0.8	1	9 80
+35	38	0.8	1	2 36
+36	94	0.8	1	14 80
+37	125	0.8	1	9 116
+38	52	0.8	1	3 49
+39	80	0.8	1	9 71
+40	59	0.8	1	7 52
+41	46	0.8	1	2 44
+42	56	0.8	1	0 56
+43	44	0.8	1	3 41
+44	39	0.8	1	3 36
+45	53	0.8	1	2 51
+46	31	0.8	1	1 30
+47	34	0.8	1	5 29
+48	68	0.8	1	0 68
+49	20	0.8	1	0 20
+50	39	0.8	1	1 38
+51	48	0.8	1	1 47
+52	15	0.8	1	0 15
+53	33	0.8	1	0 33
+54	19	0.8	1	0 19
+55	58	0.8	1	1 57
+56	21	0.8	1	0 21
+57	68	0.8	1	1 67
+58	23	0.8	1	0 23
+59	34	0.8	1	0 34
+60	19	0.8	1	0 19
+61	29	0.8	1	0 29
+62	26	0.8	1	0 26
+63	31	0.8	1	0 31
+64	18	0.8	1	0 18
+65	39	0.8	1	0 39
+66	18	0.8	1	0 18
+67	23	0.8	1	0 23
+68	44	0.8	1	0 44
+69	14	0.8	1	0 14
+70	33	0.8	1	0 33
+71	21	0.8	1	0 21
+72	41	0.8	1	0 41
+73	41	0.8	1	0 41
+74	18	0.8	1	0 18
+75	14	0.8	1	0 14
+76	34	0.8	1	0 34
+
+
+RUN STATISTICS FOR INPUT FILE: NobtPre1_1.fq.gz
+=============================================
+51149720 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: NobtPre1_2.fq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to NobtPre1_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file NobtPre1_2.fq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC NobtPre1_2.fq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 1270.08 s (25 us/read; 2.42 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              51,149,720
+Reads with adapters:                 7,511,332 (14.7%)
+Reads written (passing filters):    51,149,720 (100.0%)
+
+Total basepairs processed: 3,861,364,856 bp
+Quality-trimmed:              60,509,241 bp (1.6%)
+Total written (filtered):  3,790,706,468 bp (98.2%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 7511332 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 36.6%
+  C: 25.1%
+  G: 22.9%
+  T: 15.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	6047370	12787430.0	0	6047370
+2	632146	3196857.5	0	632146
+3	714137	799214.4	0	714137
+4	81847	199803.6	0	81847
+5	25234	49950.9	0	25234
+6	3120	12487.7	0	3120
+7	120	3121.9	0	120
+8	56	780.5	0	56
+9	208	195.1	0	144 64
+10	358	48.8	1	28 330
+11	629	12.2	1	36 593
+12	223	3.0	1	22 201
+13	110	0.8	1	14 96
+14	206	0.8	1	22 184
+15	159	0.8	1	16 143
+16	200	0.8	1	21 179
+17	146	0.8	1	21 125
+18	189	0.8	1	29 160
+19	202	0.8	1	26 176
+20	118	0.8	1	12 106
+21	196	0.8	1	35 161
+22	134	0.8	1	22 112
+23	104	0.8	1	9 95
+24	180	0.8	1	39 141
+25	127	0.8	1	23 104
+26	209	0.8	1	52 157
+27	222	0.8	1	52 170
+28	93	0.8	1	25 68
+29	105	0.8	1	24 81
+30	86	0.8	1	22 64
+31	141	0.8	1	22 119
+32	125	0.8	1	21 104
+33	213	0.8	1	41 172
+34	185	0.8	1	33 152
+35	70	0.8	1	10 60
+36	102	0.8	1	23 79
+37	109	0.8	1	21 88
+38	94	0.8	1	21 73
+39	149	0.8	1	24 125
+40	83	0.8	1	11 72
+41	72	0.8	1	14 58
+42	91	0.8	1	13 78
+43	52	0.8	1	15 37
+44	82	0.8	1	14 68
+45	120	0.8	1	20 100
+46	89	0.8	1	23 66
+47	85	0.8	1	8 77
+48	54	0.8	1	8 46
+49	66	0.8	1	3 63
+50	34	0.8	1	2 32
+51	33	0.8	1	1 32
+52	27	0.8	1	1 26
+53	30	0.8	1	4 26
+54	43	0.8	1	11 32
+55	36	0.8	1	10 26
+56	82	0.8	1	2 80
+57	26	0.8	1	1 25
+58	26	0.8	1	2 24
+59	13	0.8	1	1 12
+60	35	0.8	1	2 33
+61	70	0.8	1	10 60
+62	35	0.8	1	1 34
+63	41	0.8	1	4 37
+64	23	0.8	1	5 18
+65	46	0.8	1	2 44
+66	38	0.8	1	5 33
+67	38	0.8	1	4 34
+68	38	0.8	1	4 34
+69	18	0.8	1	2 16
+70	23	0.8	1	0 23
+71	80	0.8	1	2 78
+72	95	0.8	1	8 87
+73	67	0.8	1	5 62
+74	63	0.8	1	2 61
+75	41	0.8	1	0 41
+76	15	0.8	1	1 14
+
+
+RUN STATISTICS FOR INPUT FILE: NobtPre1_2.fq.gz
+=============================================
+51149720 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files NobtPre1_1_trimmed.fq.gz and NobtPre1_2_trimmed.fq.gz
+file_1: NobtPre1_1_trimmed.fq.gz, file_2: NobtPre1_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: NobtPre1_1_trimmed.fq.gz and NobtPre1_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to NobtPre1_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to NobtPre1_2_val_2.fq.gz
+
+slurmstepd-i02: error: *** JOB 938214 ON i02 CANCELLED AT 2020-03-24T19:28:50 ***

@@ -1,0 +1,149 @@
+
+
+     ______  ____   ____  ____   ____  ______  __ __
+    |      ||    \ |    ||    \ |    ||      ||  |  |
+    |      ||  D  ) |  | |  _  | |  | |      ||  |  |
+    |_|  |_||    /  |  | |  |  | |  | |_|  |_||  ~  |
+      |  |  |    \  |  | |  |  | |  |   |  |  |___, |
+      |  |  |  .  \ |  | |  |  | |  |   |  |  |     |
+      |__|  |__|\_||____||__|__||____|  |__|  |____/
+
+    Trinity-v2.8.5
+
+
+
+Left read files: $VAR1 = [
+          'ExternalData/Abel/ERR2040625_1.fastq.gz',
+          'ExternalData/Abel/SRR118430_1.fastq.gz',
+          'ExternalData/Abel/SRR192881_1.fastq.gz',
+          'ExternalData/Abel/SRR9888536_1.fastq.gz',
+          'ExternalData/Abel/SRR192882_1.fastq.gz',
+          'ExternalData/Abel/SRR118431_1.fastq.gz',
+          'ExternalData/Abel/SRR118439_1.fastq.gz',
+          'ExternalData/Abel/SRR118440_1.fastq.gz',
+          'ExternalData/Abel/SRR118438_1.fastq.gz',
+          'ExternalData/Abel/SRR118432_1.fastq.gz',
+          'ExternalData/Abel/SRR118435_1.fastq.gz',
+          'ExternalData/Abel/SRR118436_1.fastq.gz',
+          'ExternalData/Abel/SRR118437_1.fastq.gz',
+          'ExternalData/Abel/SRR118433_1.fastq.gz',
+          'ExternalData/Abel/SRR118429_1.fastq.gz',
+          'ExternalData/Abel/SRR118441_1.fastq.gz',
+          'ExternalData/Abel/SRR118434_1.fastq.gz'
+        ];
+Right read files: $VAR1 = [
+          'ExternalData/Abel/ERR2040625_2.fastq.gz',
+          'ExternalData/Abel/SRR118430_2.fastq.gz',
+          'ExternalData/Abel/SRR192881_2.fastq.gz',
+          'ExternalData/Abel/SRR9888536_2.fastq.gz',
+          'ExternalData/Abel/SRR192882_2.fastq.gz',
+          'ExternalData/Abel/SRR118431_2.fastq.gz'
+        ];
+Trinity version: Trinity-v2.8.5
+** NOTE: Latest version of Trinity is v2.10.0, and can be obtained at:
+	https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+Sunday, March 22, 2020: 18:28:38	CMD: java -Xmx64m -XX:ParallelGCThreads=2  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/util/support_scripts/ExitTester.jar 0
+Sunday, March 22, 2020: 18:28:39	CMD: java -Xmx4g -XX:ParallelGCThreads=2  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/util/support_scripts/ExitTester.jar 1
+Sunday, March 22, 2020: 18:28:39	CMD: mkdir -p /bigdata/littlab/arajewski/Datura/Alkaloids/Abel_trinity
+Sunday, March 22, 2020: 18:28:39	CMD: mkdir -p /bigdata/littlab/arajewski/Datura/Alkaloids/Abel_trinity/chrysalis
+
+
+----------------------------------------------------------------------------------
+-------------- Trinity Phase 1: Clustering of RNA-Seq Reads  ---------------------
+----------------------------------------------------------------------------------
+
+---------------------------------------------------------------
+------ Quality Trimming Via Trimmomatic  ---------------------
+<< ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 >>
+---------------------------------------------------------------
+
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/ERR2040625_1.fastq.gz, /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/ERR2040625_2.fastq.gz
+Sunday, March 22, 2020: 18:28:39	CMD: java  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/trimmomatic.jar PE -threads 32  /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/ERR2040625_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/ERR2040625_2.fastq.gz  ERR2040625_1.fastq.gz.P.qtrim ERR2040625_1.fastq.gz.U.qtrim  ERR2040625_2.fastq.gz.P.qtrim ERR2040625_2.fastq.gz.U.qtrim  ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 
+TrimmomaticPE: Started with arguments:
+ -threads 32 /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/ERR2040625_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/ERR2040625_2.fastq.gz ERR2040625_1.fastq.gz.P.qtrim ERR2040625_1.fastq.gz.U.qtrim ERR2040625_2.fastq.gz.P.qtrim ERR2040625_2.fastq.gz.U.qtrim ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 12478877 Both Surviving: 12473269 (99.96%) Forward Only Surviving: 5608 (0.04%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
+TrimmomaticPE: Completed successfully
+Sunday, March 22, 2020: 18:29:29	CMD: cp ERR2040625_1.fastq.gz.P.qtrim ERR2040625_1.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:29:31	CMD: cp ERR2040625_2.fastq.gz.P.qtrim ERR2040625_2.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:29:33	CMD: touch trimmomatic.ok
+Sunday, March 22, 2020: 18:29:33	CMD: gzip ERR2040625_1.fastq.gz.P.qtrim ERR2040625_1.fastq.gz.U.qtrim ERR2040625_2.fastq.gz.P.qtrim ERR2040625_2.fastq.gz.U.qtrim &
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118430_1.fastq.gz, /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118430_2.fastq.gz
+Sunday, March 22, 2020: 18:29:33	CMD: java  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/trimmomatic.jar PE -threads 32  /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118430_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118430_2.fastq.gz  SRR118430_1.fastq.gz.P.qtrim SRR118430_1.fastq.gz.U.qtrim  SRR118430_2.fastq.gz.P.qtrim SRR118430_2.fastq.gz.U.qtrim  ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 
+TrimmomaticPE: Started with arguments:
+ -threads 32 /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118430_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118430_2.fastq.gz SRR118430_1.fastq.gz.P.qtrim SRR118430_1.fastq.gz.U.qtrim SRR118430_2.fastq.gz.P.qtrim SRR118430_2.fastq.gz.U.qtrim ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 54460391 Both Surviving: 49909732 (91.64%) Forward Only Surviving: 3061890 (5.62%) Reverse Only Surviving: 847907 (1.56%) Dropped: 640862 (1.18%)
+TrimmomaticPE: Completed successfully
+Sunday, March 22, 2020: 18:32:13	CMD: cp SRR118430_1.fastq.gz.P.qtrim SRR118430_1.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:32:20	CMD: cp SRR118430_2.fastq.gz.P.qtrim SRR118430_2.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:32:26	CMD: touch trimmomatic.ok
+Sunday, March 22, 2020: 18:32:26	CMD: gzip SRR118430_1.fastq.gz.P.qtrim SRR118430_1.fastq.gz.U.qtrim SRR118430_2.fastq.gz.P.qtrim SRR118430_2.fastq.gz.U.qtrim &
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192881_1.fastq.gz, /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192881_2.fastq.gz
+Sunday, March 22, 2020: 18:32:26	CMD: java  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/trimmomatic.jar PE -threads 32  /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192881_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192881_2.fastq.gz  SRR192881_1.fastq.gz.P.qtrim SRR192881_1.fastq.gz.U.qtrim  SRR192881_2.fastq.gz.P.qtrim SRR192881_2.fastq.gz.U.qtrim  ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 
+TrimmomaticPE: Started with arguments:
+ -threads 32 /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192881_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192881_2.fastq.gz SRR192881_1.fastq.gz.P.qtrim SRR192881_1.fastq.gz.U.qtrim SRR192881_2.fastq.gz.P.qtrim SRR192881_2.fastq.gz.U.qtrim ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 31534366 Both Surviving: 30797229 (97.66%) Forward Only Surviving: 290813 (0.92%) Reverse Only Surviving: 413032 (1.31%) Dropped: 33292 (0.11%)
+TrimmomaticPE: Completed successfully
+Sunday, March 22, 2020: 18:34:06	CMD: cp SRR192881_1.fastq.gz.P.qtrim SRR192881_1.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:34:11	CMD: cp SRR192881_2.fastq.gz.P.qtrim SRR192881_2.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:34:17	CMD: touch trimmomatic.ok
+Sunday, March 22, 2020: 18:34:17	CMD: gzip SRR192881_1.fastq.gz.P.qtrim SRR192881_1.fastq.gz.U.qtrim SRR192881_2.fastq.gz.P.qtrim SRR192881_2.fastq.gz.U.qtrim &
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR9888536_1.fastq.gz, /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR9888536_2.fastq.gz
+Sunday, March 22, 2020: 18:34:17	CMD: java  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/trimmomatic.jar PE -threads 32  /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR9888536_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR9888536_2.fastq.gz  SRR9888536_1.fastq.gz.P.qtrim SRR9888536_1.fastq.gz.U.qtrim  SRR9888536_2.fastq.gz.P.qtrim SRR9888536_2.fastq.gz.U.qtrim  ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 
+TrimmomaticPE: Started with arguments:
+ -threads 32 /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR9888536_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR9888536_2.fastq.gz SRR9888536_1.fastq.gz.P.qtrim SRR9888536_1.fastq.gz.U.qtrim SRR9888536_2.fastq.gz.P.qtrim SRR9888536_2.fastq.gz.U.qtrim ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 23669776 Both Surviving: 22684283 (95.84%) Forward Only Surviving: 910526 (3.85%) Reverse Only Surviving: 0 (0.00%) Dropped: 74967 (0.32%)
+TrimmomaticPE: Completed successfully
+Sunday, March 22, 2020: 18:36:02	CMD: cp SRR9888536_1.fastq.gz.P.qtrim SRR9888536_1.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:36:09	CMD: cp SRR9888536_2.fastq.gz.P.qtrim SRR9888536_2.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:36:16	CMD: touch trimmomatic.ok
+Sunday, March 22, 2020: 18:36:16	CMD: gzip SRR9888536_1.fastq.gz.P.qtrim SRR9888536_1.fastq.gz.U.qtrim SRR9888536_2.fastq.gz.P.qtrim SRR9888536_2.fastq.gz.U.qtrim &
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192882_1.fastq.gz, /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192882_2.fastq.gz
+Sunday, March 22, 2020: 18:36:16	CMD: java  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/trimmomatic.jar PE -threads 32  /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192882_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192882_2.fastq.gz  SRR192882_1.fastq.gz.P.qtrim SRR192882_1.fastq.gz.U.qtrim  SRR192882_2.fastq.gz.P.qtrim SRR192882_2.fastq.gz.U.qtrim  ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 
+TrimmomaticPE: Started with arguments:
+ -threads 32 /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192882_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR192882_2.fastq.gz SRR192882_1.fastq.gz.P.qtrim SRR192882_1.fastq.gz.U.qtrim SRR192882_2.fastq.gz.P.qtrim SRR192882_2.fastq.gz.U.qtrim ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 37919370 Both Surviving: 36718337 (96.83%) Forward Only Surviving: 518338 (1.37%) Reverse Only Surviving: 620072 (1.64%) Dropped: 62623 (0.17%)
+TrimmomaticPE: Completed successfully
+Sunday, March 22, 2020: 18:38:20	CMD: cp SRR192882_1.fastq.gz.P.qtrim SRR192882_1.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:38:28	CMD: cp SRR192882_2.fastq.gz.P.qtrim SRR192882_2.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:38:36	CMD: touch trimmomatic.ok
+Sunday, March 22, 2020: 18:38:36	CMD: gzip SRR192882_1.fastq.gz.P.qtrim SRR192882_1.fastq.gz.U.qtrim SRR192882_2.fastq.gz.P.qtrim SRR192882_2.fastq.gz.U.qtrim &
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118431_1.fastq.gz, /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118431_2.fastq.gz
+Sunday, March 22, 2020: 18:38:36	CMD: java  -jar /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/trimmomatic.jar PE -threads 32  /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118431_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118431_2.fastq.gz  SRR118431_1.fastq.gz.P.qtrim SRR118431_1.fastq.gz.U.qtrim  SRR118431_2.fastq.gz.P.qtrim SRR118431_2.fastq.gz.U.qtrim  ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25 
+TrimmomaticPE: Started with arguments:
+ -threads 32 /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118431_1.fastq.gz /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118431_2.fastq.gz SRR118431_1.fastq.gz.P.qtrim SRR118431_1.fastq.gz.U.qtrim SRR118431_2.fastq.gz.P.qtrim SRR118431_2.fastq.gz.U.qtrim ILLUMINACLIP:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/trinity-plugins/Trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 32097291 Both Surviving: 30284290 (94.35%) Forward Only Surviving: 1220507 (3.80%) Reverse Only Surviving: 531660 (1.66%) Dropped: 60834 (0.19%)
+TrimmomaticPE: Completed successfully
+Sunday, March 22, 2020: 18:41:20	CMD: cp SRR118431_1.fastq.gz.P.qtrim SRR118431_1.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:41:29	CMD: cp SRR118431_2.fastq.gz.P.qtrim SRR118431_2.fastq.gz.PwU.qtrim.fq
+Sunday, March 22, 2020: 18:41:38	CMD: touch trimmomatic.ok
+Sunday, March 22, 2020: 18:41:38	CMD: gzip SRR118431_1.fastq.gz.P.qtrim SRR118431_1.fastq.gz.U.qtrim SRR118431_2.fastq.gz.P.qtrim SRR118431_2.fastq.gz.U.qtrim &
+Use of uninitialized value $right_fq_file in concatenation (.) or string at /opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/Trinity line 3107.
+
+## Running Trimmomatic on read files: /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Abel/SRR118439_1.fastq.gz, 
+Use of uninitialized value $_[0] in substitution (s///) at /opt/linux/centos/7.x/x86_64/pkgs/perl/5.24.0/lib/5.24.0/File/Basename.pm line 341.
+fileparse(): need a valid pathname at /opt/linux/centos/7.x/x86_64/pkgs/trinity-rnaseq/2.8.5/Trinity line 3110.
