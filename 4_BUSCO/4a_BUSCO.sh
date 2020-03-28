@@ -16,8 +16,9 @@ module load busco/3.0.2
 #We need to downgrade our blast version to make it work
 module unload ncbi-blast
 module load ncbi-blast/2.2.30+
-ASSEM=Dstr_v1.4.masked.l5000.fa
-ASSEMPATH=/rhome/arajewski/bigdata/Datura/5_Funannotate/$ASSEM 
+ASSEM=assembly.fasta
+ASSEMPATH=/rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye/$ASSEM 
+BUSCOOUT=Dstr_v1.5
 
 #BUSCO also needs augustus, and because of the cluster environment I have to install it separately
 export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/bin:$PATH"
@@ -32,7 +33,7 @@ run_BUSCO.py \
     -z \
     -c $SLURM_NTASKS \
     -i $ASSEMPATH \
-    -o $ASSEM \
+    -o $BUSCOOUT \
     -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ 
 
 scontrol show job $SLURM_JOB_ID

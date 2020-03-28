@@ -1,0 +1,88 @@
+0
+894 817 934 930 1104 1191 1255 1370 1484 1579 2291 2903 4012 5487 7100 10065 21873
+Fri Mar 27 15:44:36 PDT 2020: 0
+Fri Mar 27 15:44:36 PDT 2020: Running iteration 1 of Scaffmatch.
+Running ScaffMatch
+Traceback (most recent call last):
+  File "/rhome/arajewski/bigdata/Datura/software/ScaffMatch/scaffmatch.py", line 12, in <module>
+    from pipeline.pipeline import Pipeline
+  File "/bigdata/littlab/arajewski/Datura/software/ScaffMatch/pipeline/pipeline.py", line 5, in <module>
+    from fasta.io import write_agp, write_fasta
+  File "/bigdata/littlab/arajewski/Datura/software/ScaffMatch/fasta/io.py", line 4, in <module>
+    import networkx as nx
+ImportError: No module named networkx
+Fri Mar 27 15:44:36 PDT 2020: 1
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 2
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 3
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 4
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 5
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 6
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 7
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 8
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 9
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 10
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 11
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 12
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 13
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 14
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 15
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+Fri Mar 27 15:44:36 PDT 2020: 16
+Error: Contig fasta file does not exist!
+Run command 'scaffmatch -h' for detailed help.
+JobId=942198 JobName=5_ScaffMatch.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:01 TimeLimit=3-00:00:00 TimeMin=N/A
+   SubmitTime=2020-03-27T15:44:26 EligibleTime=2020-03-27T15:44:26
+   AccrueTime=2020-03-27T15:44:26
+   StartTime=2020-03-27T15:44:35 EndTime=2020-03-30T15:44:35 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-03-27T15:44:35
+   Partition=intel AllocNode:Sid=pelican.ib.hpcc.ucr.edu:22028
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i17
+   BatchHost=i17
+   NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=2,mem=150G,node=1,billing=39
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=150G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_Fast-SG/5_ScaffMatch.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_Fast-SG
+   StdErr=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-942198.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_Fast-SG/../history/5_ScaffMatch-942198.out
+   Power=
+

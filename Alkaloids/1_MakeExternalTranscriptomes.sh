@@ -8,14 +8,12 @@
 set -e
 
 #Index Genomes
-module load samtools/1.10
-
 #Make an associateve array to hold genomes and paths
 declare -A GENOMES
 GENOMES=([Cann]=GCA_000512255.2_ASM51225v2_genomic.fna [Natt]=GCF_001879085.1_NIATTr2_genomic.fna [Paxi]=Petunia_axillaris_v1.6.2_genome.fasta [Slyc]=S_lycopersicum_chromosomes.4.00.fa )
-
+module load samtools/1.10
 for GNM in ${!GENOMES[@]}; do
-    if [ ! -e ExternalData/$GNM/*.fai ]; then
+     if [ ! -e ExternalData/$GNM/*.fai ]; then
 	echo Indexing $GNM...
 	if [ -e ExternalData/$GNM/${GENOMES[$GNM]}.gz ]; then
 	    echo Unzipping genome...
@@ -30,11 +28,10 @@ for GNM in ${!GENOMES[@]}; do
 done
 
 #Extract Transcript Fasta files
-module load cufflinks/2.2.1
 #Make another associative array for the GFFs
 declare -A GFFs
 GFFs=([Cann]=GCA_000512255.2_ASM51225v2_genomic.gff [Natt]=GCF_001879085.1_NIATTr2_genomic.gff [Paxi]=Petunia_axillaris_v1.6.2_gene_models.gff [Slyc]=ITAG4.0_gene_models.gff )
-
+module load cufflinks/2.2.1
 for GNOM in ${!GFFs[@]}; do
     if [ ! -e ExternalData/$GNOM/$GNOM.transcripts.fa ]; then
 	echo Extracting $GNOM transcriptomes from the genome...
@@ -50,4 +47,22 @@ for GNOM in ${!GFFs[@]}; do
     fi
 done
 
-#Make BLAST (or DIAMOND? databases
+#Fix duplicate transcripts by hand
+#grep -iPA1 "\>\S+$" ExternalData/Paxi/Paxi.transcripts.fa > Paxi.transcripts.fa1
+#mv ExternalData/Paxi/Paxi.transcripts.fa1 ExternalData/Paxi/Paxi.transcripts.fa
+
+#Make BLAST databases
+module load ncbi-blast/2.2.30+
+for GNOM in ${!GFFs[@]}; do
+    if [ ! -e ExternalData/$GNOM/$GNOM.transcripts.blastdb ]; then
+	echo Making BLAST database for $GNOM...
+	makeblastdb -in ExternalData/$GNOM/$GNOM.transcripts.fa \
+	    -dbtype nucl \
+	    -parse_seqids \
+	    -out ExternalData/$GNOM/$GNOM.transcripts.blastdb \
+	    -title "$GNOM Transcriptome"
+	echo Done.
+    else
+	echo $GNOM BLAST database already present.
+    fi
+done

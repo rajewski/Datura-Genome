@@ -1,9 +1,9 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=10
 #SBATCH --mem-per-cpu=7G
 #SBATCH --nodes=1
-#SBATCH --time=10:00:00
+#SBATCH --time=02:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Download-%A.out
@@ -124,7 +124,7 @@ if [ ! -e $RNAPATH/SRR9888534_Trimmed_2P.fastq.gz ]; then
     module load trimmomatic
     java -jar $TRIMMOMATIC PE \
         -threads $SLURM_CPUS_PER_TASK \
-        $RNAPATH/SRR9888534_1.fastq.gz $RNAPATH/SRR9888534_1.fastq.gz \
+        $RNAPATH/SRR9888534_1.fastq.gz $RNAPATH/SRR9888534_2.fastq.gz \
         -baseout $RNAPATH/SRR9888534_Trimmed.fastq.gz \
         ILLUMINACLIP:/opt/linux/centos/7.x/x86_64/pkgs/trimmomatic/0.36/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:5 LEADING:5 TRAILING:5 MINLEN:25
     echo Done.

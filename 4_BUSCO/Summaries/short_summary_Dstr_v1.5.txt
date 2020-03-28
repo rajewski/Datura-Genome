@@ -1,0 +1,15 @@
+# BUSCO version is: 3.0.2 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye/assembly.fasta -o Dstr_v1.5 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 16 -z -sp tomato
+#
+# Summarized benchmarking in BUSCO notation for file /rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye/assembly.fasta
+# BUSCO was run in mode: genome
+
+	C:84.1%[S:81.3%,D:2.8%],F:1.2%,M:14.7%,n:1440
+
+	1212	Complete BUSCOs (C)
+	1171	Complete and single-copy BUSCOs (S)
+	41	Complete and duplicated BUSCOs (D)
+	17	Fragmented BUSCOs (F)
+	211	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched
