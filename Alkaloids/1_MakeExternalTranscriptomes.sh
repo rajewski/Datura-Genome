@@ -31,7 +31,7 @@ done
 #Make another associative array for the GFFs
 declare -A GFFs
 GFFs=([Cann]=GCA_000512255.2_ASM51225v2_genomic.gff [Natt]=GCF_001879085.1_NIATTr2_genomic.gff [Paxi]=Petunia_axillaris_v1.6.2_gene_models.gff [Slyc]=ITAG4.0_gene_models.gff )
-module load cufflinks/2.2.1
+module load genometools/1.5.9
 for GNOM in ${!GFFs[@]}; do
     if [ ! -e ExternalData/$GNOM/$GNOM.transcripts.fa ]; then
 	echo Extracting $GNOM transcriptomes from the genome...
@@ -40,7 +40,8 @@ for GNOM in ${!GFFs[@]}; do
 	    gunzip ExternalData/$GNOM/${GTFs[$GNOM]}.gz
 	    echo Done.
 	fi
-	gffread -w ExternalData/$GNOM/$GNOM.transcripts.fa -g ExternalData/$GNOM/${GENOMES[$GNOM]} ExternalData/$GNOM/${GFFs[$GNOM]}
+	gt extractfeat -type CDS -join yes -retainids yes -seqfile ExternalData/$GNOM/${GENOMES[$GNOM]} -o ExternalData/$GNOM/$GNOM.transcripts.fa -matchdescstart ExternalData/$GNOM/${GFFs[$GNOM]}
+	gt extractfeat -type CDS -join yes -retainids yes -translate yes -seqfile ExternalData/$GNOM/${GENOMES[$GNOM]} -o ExternalData/$GNOM/$GNOM.proteins.fa -matchdescstart ExternalData/$GNOM/${GFFs[$GNOM]}
 	echo Done.
     else
 	echo $GNOM transciptome already extracted.
@@ -54,7 +55,7 @@ done
 #Make BLAST databases
 module load ncbi-blast/2.2.30+
 for GNOM in ${!GFFs[@]}; do
-    if [ ! -e ExternalData/$GNOM/$GNOM.transcripts.blastdb ]; then
+    if [ ! -e ExternalData/$GNOM/$GNOM.transcripts.blastdb.nhr ]; then
 	echo Making BLAST database for $GNOM...
 	makeblastdb -in ExternalData/$GNOM/$GNOM.transcripts.fa \
 	    -dbtype nucl \

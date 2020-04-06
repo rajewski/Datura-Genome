@@ -1,0 +1,130 @@
+[03/30/20 13:59:54]: /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/updateGBK.py -i predict_20200329/predict_results/Datura_stramonium.gbk -t predict_20200329/predict_results/Datura_stramonium.tbl -o predict_20200329/predict_results -d predict_20200329/predict_results/Datura_stramonium.models-to-delete.txt
+
+[03/30/20 13:59:54]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[03/30/20 13:59:54]: Running funannotate v1.6.0-98d4d3f
+[03/30/20 13:59:56]: Removed 6 out of 6 gene models from annotation
+[03/30/20 14:05:49]: Extracting genome sequence and parsing meta information
+[03/30/20 14:07:37]: 19,150 contigs containing 97,406 protein coding genes and 1,034 tRNA genes
+[03/30/20 14:09:33]: Found pre-existing funannotate files, archiving to predict_20200329/predict_results/archive_155268
+[03/30/20 14:09:33]: Converting to GenBank format
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/7/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/7
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/6/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/6
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/3/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/3
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/11/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/11
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/14/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/14
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/17/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/17
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/5/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/5
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/4/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/4
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/2/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/2
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/1/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/1
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/13/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/13
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/16/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/16
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/9/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/9
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/12/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/12
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/15/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/15
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/10/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/10
+[03/30/20 14:10:09]: tbl2asn -y "Annotated using funannotate v1.6.0-98d4d3f" -N 1 -t /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/test.sbt -M n -j "[organism=Datura stramonium]" -V b -c fx -T -a r10u -l paired-ends -Z predict_20200329/predict_results/tbl2asn/8/discrepency.report.txt -p predict_20200329/predict_results/tbl2asn/8
+[03/30/20 14:34:58]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome14
+
+[tbl2asn] Validating genome14
+
+
+[03/30/20 14:35:08]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome17
+
+[tbl2asn] Validating genome17
+
+
+[03/30/20 14:35:11]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome9
+
+[tbl2asn] Validating genome9
+
+
+[03/30/20 14:35:13]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome12
+
+[tbl2asn] Validating genome12
+
+
+[03/30/20 14:35:20]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome13
+
+[tbl2asn] Validating genome13
+
+
+[03/30/20 14:35:21]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome15
+
+[tbl2asn] Validating genome15
+
+
+[03/30/20 14:35:25]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome16
+
+[tbl2asn] Validating genome16
+
+
+[03/30/20 14:35:31]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome8
+
+[tbl2asn] Validating genome8
+
+
+[03/30/20 14:35:38]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome10
+
+[tbl2asn] Validating genome10
+
+
+[03/30/20 14:35:41]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome7
+
+[tbl2asn] Validating genome7
+
+
+[03/30/20 14:35:50]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome3
+
+[tbl2asn] Validating genome3
+
+
+[03/30/20 14:35:50]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome4
+
+[tbl2asn] Validating genome4
+
+
+[03/30/20 14:35:50]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome11
+
+[tbl2asn] Validating genome11
+
+
+[03/30/20 14:35:53]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome6
+
+[tbl2asn] Validating genome6
+
+
+[03/30/20 14:35:54]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome5
+
+[tbl2asn] Validating genome5
+
+
+[03/30/20 14:35:55]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome2
+
+[tbl2asn] Validating genome2
+
+
+[03/30/20 14:35:56]: [tbl2asn] This copy of tbl2asn is more than a year old.  Please download the current version.
+[tbl2asn] Flatfile genome1
+
+[tbl2asn] Validating genome1
+
+
+[03/30/20 14:36:08]: Generating output files.
+[03/30/20 14:40:02]: Output genome consists of: 19,150 contigs containing 97,406 protein coding genes and 1,028 tRNA genes
