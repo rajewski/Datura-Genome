@@ -1,0 +1,38 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 04/14/2020 12:07:32 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+CRITICAL	Unhandled exception occurred: ['Traceback (most recent call last):\n', '  File "/opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py", line 166, in main\n    analysis = BuscoAnalysis.get_analysis(config)\n', '  File "/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/lib/python3.6/site-packages/busco/BuscoAnalysis.py", line 180, in get_analysis\n    return TranscriptomeAnalysis(config)\n', '  File "/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/lib/python3.6/site-packages/busco/TranscriptomeAnalysis.py", line 39, in __init__\n    super(TranscriptomeAnalysis, self).__init__(params)\n', '  File "/opt/linux/centos/7.x/x86_64/pkgs/python/3.6.0/lib/python3.6/site-packages/busco/BuscoAnalysis.py", line 117, in __init__\n    for line in open(self._sequences):\n', "IsADirectoryError: [Errno 21] Is a directory: '/rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.5_predict/20200414_predict_results'\n"]
+
+ERROR	BUSCO analysis failed !
+ERROR	Check the logs, read the user guide, if you still need technical support, then please contact mailto:support@orthodb.org
+
+JobId=982446 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100001 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:04 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2020-04-14T12:04:37 EligibleTime=2020-04-14T12:04:37
+   AccrueTime=2020-04-14T12:04:37
+   StartTime=2020-04-14T12:07:29 EndTime=2020-04-14T21:07:29 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-04-14T12:07:29
+   Partition=intel AllocNode:Sid=pelican.ib.hpcc.ucr.edu:36903
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i36
+   BatchHost=i36
+   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=112G,node=1,billing=44
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=16 MinMemoryCPU=7G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-982446.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-982446.out
+   Power=
+

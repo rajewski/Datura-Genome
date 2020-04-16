@@ -1,0 +1,77 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 04/14/2020 12:10:45 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.5_predict/20200414_predict_results/Datura_stramonium_4.mrna-transcripts.fa -o Dstr_v1.5_20200414 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m transcriptome -c 1 -z
+INFO	Mode is: transcriptome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+INFO	****** Step 1/2, current time: 04/14/2020 12:10:47 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 04/14/2020 12:10:47
+INFO	[makeblastdb]	New DB name:   /bigdata/littlab/arajewski/Datura/4_BUSCO/tmp/Dstr_v1.5_20200414_3320198733
+INFO	[makeblastdb]	New DB title:  /rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.5_predict/20200414_predict_results/Datura_stramonium_4.mrna-transcripts.fa
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep Linkouts: T
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 74246 sequences in 2.9716 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 04/14/2020 12:10:50
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.5_20200414/blast_output/tblastn_Dstr_v1.5_20200414.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 04/14/2020 13:41:29
+INFO	****** Step 2/2, current time: 04/14/2020 13:41:30 ******
+INFO	Maximum number of candidate transcript per BUSCO limited to: 3
+INFO	Getting coordinates for candidate transcripts...
+INFO	Extracting candidate transcripts...
+INFO	Translating candidate transcripts...
+INFO	Running HMMER to confirm transcript orthology:
+INFO	[hmmsearch]	273 of 2721 task(s) completed at 04/14/2020 13:42:51
+INFO	[hmmsearch]	545 of 2721 task(s) completed at 04/14/2020 13:43:17
+INFO	[hmmsearch]	817 of 2721 task(s) completed at 04/14/2020 13:43:43
+INFO	[hmmsearch]	1089 of 2721 task(s) completed at 04/14/2020 13:44:07
+INFO	[hmmsearch]	1361 of 2721 task(s) completed at 04/14/2020 13:44:29
+INFO	[hmmsearch]	1633 of 2721 task(s) completed at 04/14/2020 13:44:51
+INFO	[hmmsearch]	1905 of 2721 task(s) completed at 04/14/2020 13:45:10
+INFO	[hmmsearch]	2177 of 2721 task(s) completed at 04/14/2020 13:45:29
+INFO	[hmmsearch]	2449 of 2721 task(s) completed at 04/14/2020 13:45:47
+INFO	[hmmsearch]	2721 of 2721 task(s) completed at 04/14/2020 13:46:05
+INFO	Results:
+INFO	C:73.1%[S:70.9%,D:2.2%],F:6.7%,M:20.2%,n:1440
+INFO	1053 Complete BUSCOs (C)
+INFO	1021 Complete and single-copy BUSCOs (S)
+INFO	32 Complete and duplicated BUSCOs (D)
+INFO	96 Fragmented BUSCOs (F)
+INFO	291 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 5724.558003664017 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Dstr_v1.5_20200414/
+
+JobId=982474 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=01:35:27 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2020-04-14T12:10:13 EligibleTime=2020-04-14T12:10:13
+   AccrueTime=2020-04-14T12:10:13
+   StartTime=2020-04-14T12:10:42 EndTime=2020-04-14T21:10:42 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-04-14T12:10:42
+   Partition=intel AllocNode:Sid=pelican.ib.hpcc.ucr.edu:36903
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i35
+   BatchHost=i35
+   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=112G,node=1,billing=44
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=16 MinMemoryCPU=7G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-982474.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-982474.out
+   Power=
+

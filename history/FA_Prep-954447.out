@@ -1,0 +1,37 @@
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+java -ea -Xms300m -cp /opt/linux/centos/7.x/x86_64/pkgs/BBMap/38.60/current/ jgi.ReformatReads in=/rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa out=Dstr_v1.4.l5000.fa minlength=5000
+Executing jgi.ReformatReads [in=/rhome/arajewski/bigdata/Datura/3_BCGSC/Dstr_v1.4_ntEdit_edited.fa, out=Dstr_v1.4.l5000.fa, minlength=5000]
+
+Input is being processed as unpaired
+Input:                  	3439839 reads          	2474560790 bases
+Short Read Discards:    	3420689 reads (99.44%) 	776857225 bases (31.39%)
+Output:                 	19150 reads (0.56%) 	1697703565 bases (68.61%)
+
+Time:                         	19.930 seconds.
+Reads Processed:       3439k 	172.60k reads/sec
+Bases Processed:       2474m 	124.16m bases/sec
+Fri Apr 3 12:00:10 PDT 2020: Running funannotate clean on Dstr_v1.4...
+-----------------------------------------------
+19,150 input contigs, 19,150 larger than 500 bp, N50 is 254,096 bp
+Checking duplication of 17,278 contigs shorter than N50
+-----------------------------------------------
+-----------------------------------------------
+19,150 input contigs; 19,150 larger than 500 bp; 0 duplicated; 19,150 written to file
+Sun Apr 5 04:03:40 PDT 2020: Done.
+Sun Apr 5 04:03:40 PDT 2020: Sorting Dstr_v1.4...
+19,150 contigs records loaded
+Sorting and renaming contig headers
+19,150 contigs saved to file
+Sun Apr 5 04:04:57 PDT 2020: Done.
+Sun Apr 5 04:04:57 PDT 2020: Masking Dstr_v1.4...
+[04:04 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[04:04 AM]: Running funannotate v1.6.0-98d4d3f
+[04:05 AM]: Soft-masking: running RepeatMasker using arabidopsis species
+[07:47 AM]: Repeatmasking finished: 
+Masked genome: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.4.l5000.cleaned.masked.fa
+num scaffolds: 19,150
+assembly size: 1,697,703,565 bp
+masked repeats: 136,483,961 bp (8.04%)
+-------------------------------------------------------
+-------------------------------------------------------
+Sun Apr 5 07:47:50 PDT 2020: Done.

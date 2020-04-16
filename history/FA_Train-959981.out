@@ -1,0 +1,19 @@
+[12:58 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:58 PM]: Running funannotate v1.6.0-98d4d3f
+[12:59 PM]: Trimmomatic will be skipped
+[12:59 PM]: Read normalization will be skipped
+[12:59 PM]: Existing Trinity results found: predict/training/trinity.fasta
+[12:59 PM]: Existing SeqClean output found: predict/training/predict/training/trinity.fasta.clean
+[12:59 PM]: Existing BAM alignments found: predict/training/trinity.alignments.bam, predict/training/transcript.alignments.bam
+[12:59 PM]: Existing PASA output found: predict/training/pasa.step1.gff3
+[12:59 PM]: Existing Kallisto output found: predict/training/kallisto.tsv
+[12:59 PM]: Parsing expression value results. Keeping best transcript at each locus.
+[01:03 PM]: Wrote 21,478 PASA gene models
+[01:03 PM]: PASA database name: Datura_stramonium_3
+[01:03 PM]: Trinity/PASA has completed, you are now ready to run funanotate predict, for example:
+
+funannotate predict -i Dstr_v1.4.l5000.cleaned.masked.fa \
+        -o predict -s "Datura stramonium 3" --cpus 60
+
+-------------------------------------------------------
+-------------------------------------------------------

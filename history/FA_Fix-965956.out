@@ -1,0 +1,10 @@
+Running Funannotate fix on predict/predict_results/Datura_stramonium_3.gbk
+[12:03 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:03 PM]: Running funannotate v1.6.0-98d4d3f
+[12:07 PM]: Extracting genome sequence and parsing meta information
+[12:09 PM]: 19,150 contigs containing 100,007 protein coding genes and 1,140 tRNA genes
+[12:17 PM]: Found pre-existing funannotate files, archiving to predict/predict_results/archive_82703
+[12:17 PM]: Converting to GenBank format
+-------------------------------------------------------
+[12:40 PM]: Generating output files.
+[12:43 PM]: Output genome consists of: 19,150 contigs containing 100,007 protein coding genes and 1,134 tRNA genes

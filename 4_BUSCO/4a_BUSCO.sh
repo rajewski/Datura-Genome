@@ -1,7 +1,8 @@
 #!/bin/bash -l
-#SBATCH --ntasks=16
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
 #SBATCH --nodes=1
-#SBATCH --mem=100G
+#SBATCH --mem-per-cpu=7G
 #SBATCH --time=09:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
@@ -16,9 +17,9 @@ module load busco/3.0.2
 #We need to downgrade our blast version to make it work
 module unload ncbi-blast
 module load ncbi-blast/2.2.30+
-ASSEM=assembly.fasta
-ASSEMPATH=/rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye/$ASSEM 
-BUSCOOUT=Dstr_v1.5
+ASSEM=Datura_stramonium_4.mrna-transcripts.fa
+ASSEMPATH=~/bigdata/Datura/5_Funannotate/Dstr_v1.5_predict/predict_results/$ASSEM
+BUSCOOUT=Dstr_v1.4_20200415
 
 #BUSCO also needs augustus, and because of the cluster environment I have to install it separately
 export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/bin:$PATH"
@@ -28,7 +29,7 @@ export AUGUSTUS_CONFIG_PATH="/rhome/arajewski/bigdata/Datura/software/augustus/c
 #I really don't like this sincle core blast, but i can't get it to run correctly otherwise.
 #also remove the -r flag if you're starting fresh
 run_BUSCO.py \
-    -m genome \
+    -m transcriptome \
     -sp tomato \
     -z \
     -c $SLURM_NTASKS \

@@ -1,0 +1,7 @@
+[02:23 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[02:23 PM]: Running funannotate v1.6.0-98d4d3f
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-update.py", line 1536, in <module>
+    programs = ['fasta', 'minimap2', 'blat', 'tbl2asn', 'hisat2', 'hisat2-build', 'kallisto', 'Trinity', 'bedtools', 'java', LAUNCHPASA, os.path.join(PASA, 'bin', 'seqclean')]
+NameError: name 'LAUNCHPASA' is not defined

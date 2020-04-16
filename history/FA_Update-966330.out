@@ -1,0 +1,68 @@
+[02:26 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[02:26 PM]: Running funannotate v1.6.0-98d4d3f
+[02:26 PM]: No NCBI SBT file given, will use default, for NCBI submissions pass one here '--sbt'
+[02:26 PM]: Found relevent files in predict/training, will re-use them:
+	Forward reads: predict/training/left.fq.gz
+	Reverse reads: predict/training/right.fq.gz
+	Trinity results: predict/training/funannotate_train.trinity-GG.fasta
+	PASA config file: predict/training/pasa/alignAssembly.txt
+	BAM alignments: predict/training/funannotate_train.coordSorted.bam
+	StringTie GTF: predict/training/funannotate_train.stringtie.gtf
+[02:33 PM]: Reannotating Datura stramonium 3, NCBI accession: None
+[02:33 PM]: Previous annotation consists of: 100,007 protein coding gene models and 1,134 non-coding gene models
+[02:33 PM]: Adapter and Quality trimming PE reads with Trimmomatic
+[03:40 PM]: Converting transcript alignments to GFF3 format
+[03:40 PM]: Converting Trinity transcript alignments to GFF3 format
+[03:40 PM]: PASA database is SQLite: /bigdata/littlab/arajewski/Datura/5_Funannotate/predict/training/pasa/Datura_stramonium_3
+[03:40 PM]: Running PASA annotation comparison step 1
+[11:05 PM]: Running PASA annotation comparison step 2
+slurmstepd-i25: error: _is_a_lwp: open() /proc/173308/status failed: No such file or directory
+[09:38 PM]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[09:38 PM]: Building Kallisto index
+[09:45 PM]: Mapping reads using pseudoalignment in Kallisto
+[09:48 PM]: Parsing Kallisto results. Keeping alt-splicing transcipts if expressed at least 10.0% of highest transcript per locus.
+[09:49 PM]: Wrote 102,330 transcripts derived from 100,207 protein coding loci.
+[09:50 PM]: Validating gene models (renaming, checking translations, filtering, etc)
+[09:50 PM]: Writing 101,331 loci to TBL format: dropped 0 overlapping, 0 too short, and 0 frameshift gene models
+[09:50 PM]: Converting to Genbank format
+-------------------------------------------------------
+[09:55 PM]: Collecting final annotation files
+[09:56 PM]: Parsing GenBank files...comparing annotation
+[10:18 PM]: Updated annotation complete:
+-------------------------------------------------------
+Total Gene Models:	101,331
+Total transcripts:	103,455
+New Gene Models:	270
+No Change:		85,213
+Update UTRs:		15,822
+Exons Changed:		20
+Exons/CDS Changed:	6
+Dropped Models:		0
+CDS AED:		0.001
+mRNA AED:		0.023
+-------------------------------------------------------
+[10:18 PM]: Funannotate update is finished, output files are in the predict/update_results folder
+[10:18 PM]: There are 4 gene models that need to be fixed.
+[10:18 PM]: Manually edit the tbl file predict/update_results/Datura_stramonium_3.tbl, then run:
+
+funannotate fix -i predict/update_results/Datura_stramonium_3.gbk -t predict/update_results/Datura_stramonium_3.tbl
+
+[10:18 PM]: After the problematic gene models are fixed, you can proceed with functional annotation.
+[10:18 PM]: Your next step might be functional annotation, suggested commands:
+-------------------------------------------------------
+Run InterProScan (Docker required): 
+funannotate iprscan -i predict -m docker -c 10
+
+Run antiSMASH: 
+funannotate remote -i predict -m antismash -e youremail@server.edu
+
+Annotate Genome: 
+funannotate annotate -i predict --cpus 10 --sbt yourSBTfile.txt
+-------------------------------------------------------
+            
+-------------------------------------------------------
+HAX54_052722	Feature begins or ends in gap starting at 74993
+HAX54_062115	Feature begins or ends in gap starting at 50831
+HAX54_070073	Feature begins or ends in gap starting at 283472
+HAX54_071323	Feature begins or ends in gap starting at 66331
+-------------------------------------------------------

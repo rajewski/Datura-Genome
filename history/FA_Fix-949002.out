@@ -1,0 +1,10 @@
+Running Funannotate fix on predict_20200329/predict_results/Datura_stramonium.gbk
+[01:58 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[01:58 PM]: Running funannotate v1.6.0-98d4d3f
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/updateGBK.py", line 58, in <module>
+    lib.tblfilter(args.tbl, args.drop, os.path.join(basedir, 'tbl2asn', 'genome.tbl'))
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 1733, in tblfilter
+    with open(input, 'rU') as infile:
+IOError: [Errno 2] No such file or directory: 'predict_20200329/predict_results/Datura_stamonium.tbl'

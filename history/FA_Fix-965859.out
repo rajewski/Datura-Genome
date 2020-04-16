@@ -1,0 +1,21 @@
+Running Funannotate fix on predict/predict_results/Datura_stramonium_3.gbk
+[11:16 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[11:16 AM]: Running funannotate v1.6.0-98d4d3f
+[11:20 AM]: Extracting genome sequence and parsing meta information
+[11:21 AM]: 19,150 contigs containing 100,007 protein coding genes and 1,140 tRNA genes
+[11:23 AM]: Found pre-existing funannotate files, archiving to predict/predict_results/archive_21296
+[11:23 AM]: Converting to GenBank format
+-------------------------------------------------------
+[11:46 AM]: Generating output files.
+[11:47 AM]: There are 6 gene models that need to be fixed.
+[11:47 AM]: Manually edit the tbl file predict/predict_results/Datura_stramonium_3.tbl, then run:
+
+funannotate fix -i predict/predict_results/Datura_stramonium_3.gbk -t predict/predict_results/Datura_stramonium_3.tbl
+
+-------------------------------------------------------
+HAX54_038471	Feature begins or ends in gap starting at 530
+HAX54_045126	Feature begins or ends in gap starting at 748648
+HAX54_072100	Feature begins or ends in gap starting at 456900
+HAX54_079768	Feature begins or ends in gap starting at 328598
+HAX54_087947	Feature begins or ends in gap starting at 28816
+HAX54_090824	Feature begins or ends in gap starting at 684352

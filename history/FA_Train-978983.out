@@ -1,0 +1,5 @@
+[08:00 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[08:00 AM]: Running funannotate v1.6.0-98d4d3f
+[08:00 AM]: Trimmomatic will be skipped
+[08:00 AM]: Trimmomatic failed, Dstr_v1.5_predict/training/left.fq.gz does not exist.
+-------------------------------------------------------

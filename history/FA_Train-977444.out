@@ -1,0 +1,5 @@
+[07:21 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[07:21 PM]: Running funannotate v1.6.0-98d4d3f
+[07:21 PM]: Trimmomatic will be skipped
+[07:21 PM]: Trimmomatic failed, /rhome/arajewski/bigdata/Datura/RNA-seq/SRR9888534_Trimmed_1P.fastq.gz,MedPlantTrimmed_1P.fastq.gz does not exist.
+-------------------------------------------------------

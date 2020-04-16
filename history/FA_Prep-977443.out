@@ -1,0 +1,20 @@
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+Sun Apr 12 10:23:14 PDT 2020: Running funannotate clean on Dstr_v1.5...
+Sun Apr 12 10:23:14 PDT 2020: Done.
+Sun Apr 12 10:23:14 PDT 2020: Sorting Dstr_v1.5...
+11,453 contigs records loaded
+Sorting and renaming contig headers
+11,453 contigs saved to file
+Sun Apr 12 10:23:40 PDT 2020: Done.
+Sun Apr 12 10:23:40 PDT 2020: Masking Dstr_v1.5...
+[10:23 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[10:23 AM]: Running funannotate v1.6.0-98d4d3f
+[10:23 AM]: Soft-masking: running RepeatMasker using arabidopsis species
+[01:22 PM]: Repeatmasking finished: 
+Masked genome: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.5.masked.fa
+num scaffolds: 11,453
+assembly size: 787,552,179 bp
+masked repeats: 89,474,488 bp (11.36%)
+-------------------------------------------------------
+-------------------------------------------------------
+Sun Apr 12 13:22:21 PDT 2020: Done.

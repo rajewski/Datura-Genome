@@ -1,0 +1,5 @@
+[07:18 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[07:18 AM]: Running funannotate v1.6.0-98d4d3f
+[07:18 AM]: Adapter and Quality trimming PE reads with Trimmomatic
+[07:18 AM]: Trimmomatic failed, Dstr_v1.5_predict/training/trimmomatic/trimmed_left.fastq.gz does not exist.
+-------------------------------------------------------
