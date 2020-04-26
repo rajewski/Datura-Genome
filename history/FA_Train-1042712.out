@@ -3,3 +3,6 @@
 [10:54 AM]: Trimmomatic will be skipped
 [10:54 AM]: Read normalization will be skipped
 [10:54 AM]: Building Hisat2 genome index
+[11:03 AM]: Aligning reads to genome using Hisat2
+[11:31 AM]: Running genome-guided Trinity, logfile: 20200426_Dstr_v1.5/training/Trinity-gg.log
+[11:31 AM]: Clustering of reads from BAM and preparing assembly commands

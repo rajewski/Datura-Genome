@@ -1,0 +1,15 @@
+# BUSCO version is: 3.0.2 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Slyc/Slyc.transcripts.fa -o Slyc4.0 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m transcriptome -c 1 -z
+#
+# Summarized benchmarking in BUSCO notation for file /bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Slyc/Slyc.transcripts.fa
+# BUSCO was run in mode: transcriptome
+
+	C:93.5%[S:92.1%,D:1.4%],F:3.2%,M:3.3%,n:1440
+
+	1346	Complete BUSCOs (C)
+	1326	Complete and single-copy BUSCOs (S)
+	20	Complete and duplicated BUSCOs (D)
+	46	Fragmented BUSCOs (F)
+	48	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched

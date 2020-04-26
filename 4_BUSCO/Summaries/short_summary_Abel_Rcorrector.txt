@@ -1,0 +1,15 @@
+# BUSCO version is: 3.0.2 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /bigdata/littlab/arajewski/Datura/Alkaloids/Abel_trinity/Rcorrector/Trinity/Trinity.fasta -o Abel_Rcorrector -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m transcriptome -c 1 -z
+#
+# Summarized benchmarking in BUSCO notation for file /bigdata/littlab/arajewski/Datura/Alkaloids/Abel_trinity/Rcorrector/Trinity/Trinity.fasta
+# BUSCO was run in mode: transcriptome
+
+	C:92.6%[S:18.9%,D:73.7%],F:3.5%,M:3.9%,n:1440
+
+	1333	Complete BUSCOs (C)
+	272	Complete and single-copy BUSCOs (S)
+	1061	Complete and duplicated BUSCOs (D)
+	50	Fragmented BUSCOs (F)
+	57	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched
