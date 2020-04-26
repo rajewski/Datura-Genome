@@ -6,6 +6,7 @@
 [11:59 AM]: Read normalization will be skipped
 [11:59 AM]: Building Hisat2 genome index
 [12:10 PM]: Aligning reads to genome using Hisat2
+<<<<<<< HEAD
 [12:53 PM]: Running genome-guided Trinity, logfile: trainl5000/training/Trinity-gg.log
 [12:53 PM]: Clustering of reads from BAM and preparing assembly commands
 [06:23 PM]: Assembling 40,768 Trinity clusters using 59 CPUs
@@ -35,3 +36,5 @@ funannotate predict -i Dstr_v1.4.masked.l5000.fa \
         -o trainl5000 -s "Datura stramonium 3" --cpus 60
 
 -------------------------------------------------------
+=======
+>>>>>>> 9efeed3e9c9b15cbda8836d80196efcbd64ec6f6

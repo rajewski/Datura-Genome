@@ -3,12 +3,13 @@
 #SBATCH --cpus-per-task=60
 #SBATCH --mem-per-cpu=7G
 #SBATCH --nodes=1
-#SBATCH --time=2-00:00:00
+#SBATCH --time=5-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Train-%A.out
 set -e
 
+<<<<<<< HEAD
 RNAPATH=/rhome/arajewski/bigdata/Datura/RNA-seq
 BASE=Dstr_v1.5.masked.fa
 

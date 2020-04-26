@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=30
+#SBATCH --cpus-per-task=60
 #SBATCH --mem-per-cpu=7G
-#SBATCH --time 4-00:00:00
+#SBATCH --time 9-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Predict-%A.out
@@ -23,6 +23,7 @@ echo $AUGUSTUS_SCRIPTS_PATH is the scripts path
 echo $AUGUSTUS_BIN_PATH is the binaries path
 echo $AUGUSTUS_CONFIG_PATH is the config path
 
+<<<<<<< HEAD
 funannotate predict \
     -i $ASSEM \
     -s "Datura stramonium Test 2" \

@@ -8,6 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Prep-%A.out
 set -e
+
 module  load funannotate/1.6.0
 ASSEMPATH=/rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye
 ASSEM=assembly.fasta
@@ -59,4 +60,3 @@ if [ ! -e $BASE.masked.fa ]; then
 else
     echo $(date): $BASE.fa already masked.
 fi
-
