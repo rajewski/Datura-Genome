@@ -1,0 +1,13 @@
+RepeatModeler Version open-1.0.11
+================================
+Search Engine = ncbi
+Random Number Seed: 1587657096
+Database = Dstr_v1.4 ..............................................................................................
+  - Sequences = 936750
+  - Bases = 2124821898
+
+
+Oops...the RM_64717.WedApr221052322020 run did not get passed round-1.
+It makes more sense to restart this run from the beginning.
+Remove the -recoverDir option and rerun the program.
+

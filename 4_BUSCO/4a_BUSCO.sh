@@ -17,9 +17,9 @@ module load busco/3.0.2
 #We need to downgrade our blast version to make it work
 module unload ncbi-blast
 module load ncbi-blast/2.2.30+
-ASSEM=Datura_stramonium_4.mrna-transcripts.fa
-ASSEMPATH=~/bigdata/Datura/5_Funannotate/Dstr_v1.5_predict/predict_results/$ASSEM
-BUSCOOUT=Dstr_v1.4_20200415
+ASSEM=Slyc.transcripts.fa
+ASSEMPATH=/bigdata/littlab/arajewski/Datura/Alkaloids/ExternalData/Slyc/$ASSEM
+BUSCOOUT=Slyc4.0
 
 #BUSCO also needs augustus, and because of the cluster environment I have to install it separately
 export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/bin:$PATH"

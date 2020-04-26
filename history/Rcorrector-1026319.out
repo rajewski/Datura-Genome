@@ -1,0 +1,10 @@
+Put the kmers into bloom filter
+jellyfish bc -m 23 -s 100000000 -C -t 16 -o tmp_bf36c5b4eb7925b29682c5f14bebe5ef.bc MedPlantTrimmed_1U.fastq MedPlantTrimmed_2U.fastq ERR2040631_Trimmed_1U.fastq ERR2040631_Trimmed_2U.fastq SRR9888534_Trimmed_1U.fastq SRR9888534_Trimmed_2U.fastq MedPlantTrimmed_1P.fastq ERR2040631_Trimmed_1P.fastq SRR9888534_Trimmed_1P.fastq MedPlantTrimmed_2P.fastq ERR2040631_Trimmed_2P.fastq SRR9888534_Trimmed_2P.fastq 
+Count the kmers in the bloom filter
+jellyfish count -m 23 -s 100000 -C -t 16 --bc tmp_bf36c5b4eb7925b29682c5f14bebe5ef.bc -o tmp_bf36c5b4eb7925b29682c5f14bebe5ef.mer_counts MedPlantTrimmed_1U.fastq MedPlantTrimmed_2U.fastq ERR2040631_Trimmed_1U.fastq ERR2040631_Trimmed_2U.fastq SRR9888534_Trimmed_1U.fastq SRR9888534_Trimmed_2U.fastq MedPlantTrimmed_1P.fastq ERR2040631_Trimmed_1P.fastq SRR9888534_Trimmed_1P.fastq MedPlantTrimmed_2P.fastq ERR2040631_Trimmed_2P.fastq SRR9888534_Trimmed_2P.fastq 
+Dump the kmers
+jellyfish dump -L 2 tmp_bf36c5b4eb7925b29682c5f14bebe5ef.mer_counts > tmp_bf36c5b4eb7925b29682c5f14bebe5ef.jf_dump
+Error correction
+/bigdata/littlab/arajewski/Datura/software/rcorrector/rcorrector -t 16 -od Rcorrector/  -r MedPlantTrimmed_1U.fastq -r MedPlantTrimmed_2U.fastq -r ERR2040631_Trimmed_1U.fastq -r ERR2040631_Trimmed_2U.fastq -r SRR9888534_Trimmed_1U.fastq -r SRR9888534_Trimmed_2U.fastq -p MedPlantTrimmed_1P.fastq MedPlantTrimmed_2P.fastq -p ERR2040631_Trimmed_1P.fastq ERR2040631_Trimmed_2P.fastq -p SRR9888534_Trimmed_1P.fastq SRR9888534_Trimmed_2P.fastq -c tmp_bf36c5b4eb7925b29682c5f14bebe5ef.jf_dump
+"ERR2040631_Trimmed_2U.fastq"'s format is wrong: Rcorrector//ERR2040631_Trimmed_1U.cor.fq
+Failed at stage 3.

@@ -1,0 +1,15 @@
+# BUSCO version is: 3.0.2 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /rhome/arajewski/bigdata/Datura/5_Funannotate/predict/update_results/Datura_stramonium_3.mrna-transcripts.fa -o Dstr_v1.4_20200408 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m transcriptome -c 1 -z
+#
+# Summarized benchmarking in BUSCO notation for file /rhome/arajewski/bigdata/Datura/5_Funannotate/predict/update_results/Datura_stramonium_3.mrna-transcripts.fa
+# BUSCO was run in mode: transcriptome
+
+	C:82.4%[S:74.9%,D:7.5%],F:8.0%,M:9.6%,n:1440
+
+	1186	Complete BUSCOs (C)
+	1078	Complete and single-copy BUSCOs (S)
+	108	Complete and duplicated BUSCOs (D)
+	115	Fragmented BUSCOs (F)
+	139	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched

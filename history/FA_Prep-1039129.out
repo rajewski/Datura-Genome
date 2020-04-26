@@ -1,0 +1,9 @@
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+Sat Apr 25 12:16:14 PDT 2020: Running funannotate clean on Dstr_v1.5...
+Sat Apr 25 12:16:14 PDT 2020: Done.
+Sat Apr 25 12:16:14 PDT 2020: Dstr_v1.5 already sorted.
+Sat Apr 25 12:16:14 PDT 2020: Masking Dstr_v1.5...
+[12:16 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:16 PM]: Running funannotate v1.6.0-98d4d3f
+[12:16 PM]: Soft-masking: running RepeatMasker with custom library
+slurmstepd-i25: error: *** JOB 1039129 ON i25 CANCELLED AT 2020-04-25T19:01:33 ***

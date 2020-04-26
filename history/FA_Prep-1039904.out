@@ -1,0 +1,16 @@
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+Sat Apr 25 19:01:30 PDT 2020: Running funannotate clean on Dstr_v1.5...
+Sat Apr 25 19:01:30 PDT 2020: Done.
+Sat Apr 25 19:01:30 PDT 2020: Dstr_v1.5 already sorted.
+Sat Apr 25 19:01:30 PDT 2020: Masking Dstr_v1.5...
+[07:01 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[07:01 PM]: Running funannotate v1.6.0-98d4d3f
+[07:01 PM]: Soft-masking: running RepeatMasker with custom library
+[03:21 AM]: Repeatmasking finished: 
+Masked genome: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.5.masked.fa
+num scaffolds: 11,453
+assembly size: 787,552,179 bp
+masked repeats: 515,668,953 bp (65.48%)
+-------------------------------------------------------
+-------------------------------------------------------
+Sun Apr 26 03:21:00 PDT 2020: Done.

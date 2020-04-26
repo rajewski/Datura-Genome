@@ -1,0 +1,10 @@
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+Sat Apr 25 12:07:03 PDT 2020: Running funannotate clean on Dstr_v1.5...
+Sat Apr 25 12:07:03 PDT 2020: Done.
+Sat Apr 25 12:07:03 PDT 2020: Dstr_v1.5 already sorted.
+Sat Apr 25 12:07:03 PDT 2020: Masking Dstr_v1.5...
+usage: funannotate-mask.py [-h] -i INPUT -o OUT [--debug]
+                           [-s REPEATMASKER_SPECIES] [-l REPEATMODELER_LIB]
+                           [--cpus CPUS]
+funannotate-mask.py: error: unrecognized arguments: -m repeatmasker
+Sat Apr 25 12:07:03 PDT 2020: Done.

@@ -4,7 +4,7 @@
 #SBATCH --time=1-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
-#SBATCH -o /rhome/arajewski/bigdata/Datura/history/Trinity-%A.out
+#SBATCH -o /rhome/arajewski/bigdata/Datura/history/GetGenomes-%A.out
 set -e
 
 #Index Genomes
@@ -27,10 +27,16 @@ for GNM in ${!GENOMES[@]}; do
     fi
 done
 
+#Why is petunia the problem child?? 
+sed 's/PredictionNote/prediction_note/' ExternalData/Paxi/Petunia_axillaris_v1.6.2_gene_models.gff > ExternalData/Paxi/Petunia_axillaris_v1.6.2_gene_models.gff1
+sed 's/AltID/alt_id/' ExternalData/Paxi/Petunia_axillaris_v1.6.2_gene_models.gff1 > ExternalData/Paxi/Petunia_axillaris_v1.6.2_gene_models.gff
+
 #Extract Transcript Fasta files
 #Make another associative array for the GFFs
 declare -A GFFs
-GFFs=([Cann]=GCA_000512255.2_ASM51225v2_genomic.gff [Natt]=GCF_001879085.1_NIATTr2_genomic.gff [Paxi]=Petunia_axillaris_v1.6.2_gene_models.gff [Slyc]=ITAG4.0_gene_models.gff )
+#There is a problem with the petunia genome annotation so I'm excluding it for now
+#GFFs=([Cann]=GCA_000512255.2_ASM51225v2_genomic.gff [Natt]=GCF_001879085.1_NIATTr2_genomic.gff [Paxi]=Petunia_axillaris_v1.6.2_gene_models.gff [Slyc]=ITAG4.0_gene_models.gff )
+GFFs=([Cann]=GCA_000512255.2_ASM51225v2_genomic.gff [Natt]=GCF_001879085.1_NIATTr2_genomic.gff [Slyc]=ITAG4.0_gene_models.gff )
 module load genometools/1.5.9
 for GNOM in ${!GFFs[@]}; do
     if [ ! -e ExternalData/$GNOM/$GNOM.transcripts.fa ]; then
@@ -40,6 +46,8 @@ for GNOM in ${!GFFs[@]}; do
 	    gunzip ExternalData/$GNOM/${GTFs[$GNOM]}.gz
 	    echo Done.
 	fi
+	gt gff3 -sortlines -retainids yes -force yes -checkids yes -o ExternalData/$GNOM/${GFFs[$GNOM]}.1 ExternalData/$GNOM/${GFFs[$GNOM]}
+	mv ExternalData/$GNOM/${GFFs[$GNOM]}.1 ExternalData/$GNOM/${GFFs[$GNOM]}
 	gt extractfeat -type CDS -join yes -retainids yes -seqfile ExternalData/$GNOM/${GENOMES[$GNOM]} -o ExternalData/$GNOM/$GNOM.transcripts.fa -matchdescstart ExternalData/$GNOM/${GFFs[$GNOM]}
 	gt extractfeat -type CDS -join yes -retainids yes -translate yes -seqfile ExternalData/$GNOM/${GENOMES[$GNOM]} -o ExternalData/$GNOM/$GNOM.proteins.fa -matchdescstart ExternalData/$GNOM/${GFFs[$GNOM]}
 	echo Done.
@@ -47,6 +55,13 @@ for GNOM in ${!GFFs[@]}; do
 	echo $GNOM transciptome already extracted.
     fi
 done
+
+#Fix Bad Translations
+sed -i 's/\*$//g' ExternalData/Slyc/Slyc.proteins.fa 
+sed -i 's/\*/N/g' ExternalData/Slyc/Slyc.proteins.fa 
+sed -i 's/\*$//g' ExternalData/Nobt/Nobt.proteins.fa
+sed -i 's/\*/N/g' ExternalData/Nobt/Nobt.proteins.fa
+sed -i 's/mRNA\://g' ExternalData/Slyc/Slyc.proteins.fa
 
 #Fix duplicate transcripts by hand
 #grep -iPA1 "\>\S+$" ExternalData/Paxi/Paxi.transcripts.fa > Paxi.transcripts.fa1

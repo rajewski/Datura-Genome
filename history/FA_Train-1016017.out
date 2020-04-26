@@ -1,0 +1,9 @@
+[02:59 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[02:59 PM]: Running funannotate v1.6.0-98d4d3f
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-train.py", line 698, in <module>
+    header_test = lib.checkFastaHeaders(args.input, args.header_length)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 1259, in checkFastaHeaders
+    with open(input, 'rU') as fasta:
+IOError: [Errno 2] No such file or directory: 'subset_test/Dstr_v1.4_longest.fa'

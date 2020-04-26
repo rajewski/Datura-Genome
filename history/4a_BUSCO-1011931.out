@@ -1,0 +1,77 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 04/20/2020 09:11:25 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /bigdata/littlab/arajewski/Datura/Alkaloids/Abel_trinity/Rcorrector/Trinity/Trinity.fasta -o Abel_Rcorrector -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m transcriptome -c 1 -z
+INFO	Mode is: transcriptome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+INFO	****** Step 1/2, current time: 04/20/2020 09:11:29 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 04/20/2020 09:11:29
+INFO	[makeblastdb]	New DB name:   /bigdata/littlab/arajewski/Datura/4_BUSCO/tmp/Abel_Rcorrector_242065109
+INFO	[makeblastdb]	New DB title:  /bigdata/littlab/arajewski/Datura/Alkaloids/Abel_trinity/Rcorrector/Trinity/Trinity.fasta
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep Linkouts: T
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 290629 sequences in 13.035 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 04/20/2020 09:11:42
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Abel_Rcorrector/blast_output/tblastn_Abel_Rcorrector.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 04/20/2020 15:33:51
+INFO	****** Step 2/2, current time: 04/20/2020 15:33:53 ******
+INFO	Maximum number of candidate transcript per BUSCO limited to: 3
+INFO	Getting coordinates for candidate transcripts...
+INFO	Extracting candidate transcripts...
+INFO	Translating candidate transcripts...
+INFO	Running HMMER to confirm transcript orthology:
+INFO	[hmmsearch]	406 of 4055 task(s) completed at 04/20/2020 15:36:53
+INFO	[hmmsearch]	811 of 4055 task(s) completed at 04/20/2020 15:37:17
+INFO	[hmmsearch]	1217 of 4055 task(s) completed at 04/20/2020 15:37:37
+INFO	[hmmsearch]	1622 of 4055 task(s) completed at 04/20/2020 15:37:57
+INFO	[hmmsearch]	2028 of 4055 task(s) completed at 04/20/2020 15:38:20
+INFO	[hmmsearch]	2433 of 4055 task(s) completed at 04/20/2020 15:38:40
+INFO	[hmmsearch]	2839 of 4055 task(s) completed at 04/20/2020 15:39:00
+INFO	[hmmsearch]	3244 of 4055 task(s) completed at 04/20/2020 15:39:21
+INFO	[hmmsearch]	3650 of 4055 task(s) completed at 04/20/2020 15:39:41
+INFO	[hmmsearch]	4055 of 4055 task(s) completed at 04/20/2020 15:40:01
+INFO	Results:
+INFO	C:92.6%[S:18.9%,D:73.7%],F:3.5%,M:3.9%,n:1440
+INFO	1333 Complete BUSCOs (C)
+INFO	272 Complete and single-copy BUSCOs (S)
+INFO	1061 Complete and duplicated BUSCOs (D)
+INFO	50 Fragmented BUSCOs (F)
+INFO	57 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 23321.582663059235 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Datura/4_BUSCO/run_Abel_Rcorrector/
+
+JobId=1011931 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100042 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=06:28:44 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2020-04-20T09:11:02 EligibleTime=2020-04-20T09:11:02
+   AccrueTime=2020-04-20T09:11:02
+   StartTime=2020-04-20T09:11:22 EndTime=2020-04-20T18:11:22 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-04-20T09:11:22
+   Partition=intel AllocNode:Sid=pelican.ib.hpcc.ucr.edu:64076
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i27
+   BatchHost=i27
+   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=112G,node=1,billing=44
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=16 MinMemoryCPU=7G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1011931.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1011931.out
+   Power=
+

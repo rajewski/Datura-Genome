@@ -1,0 +1,9 @@
+anaconda3/4.5.4(25):ERROR:150: Module 'anaconda3/4.5.4' conflicts with the currently loaded module(s) 'miniconda2/4.4.10'
+anaconda3/4.5.4(25):ERROR:102: Tcl command execution failed: conflict    miniconda2
+
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+Sat Apr 25 12:12:19 PDT 2020: Running funannotate clean on Dstr_v1.5...
+Sat Apr 25 12:12:19 PDT 2020: Done.
+Sat Apr 25 12:12:19 PDT 2020: Dstr_v1.5 already sorted.
+Sat Apr 25 12:12:19 PDT 2020: Masking Dstr_v1.5...
+/var/spool/slurmd/job1039125/slurm_script: line 54: funannotate: command not found

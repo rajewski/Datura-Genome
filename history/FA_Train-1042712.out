@@ -1,0 +1,5 @@
+[10:54 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[10:54 AM]: Running funannotate v1.6.0-98d4d3f
+[10:54 AM]: Trimmomatic will be skipped
+[10:54 AM]: Read normalization will be skipped
+[10:54 AM]: Building Hisat2 genome index

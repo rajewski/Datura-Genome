@@ -1,0 +1,10 @@
+Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
+Sat Apr 25 12:06:07 PDT 2020: Running funannotate clean on Dstr_v1.5...
+Sat Apr 25 12:06:07 PDT 2020: Done.
+Sat Apr 25 12:06:07 PDT 2020: Dstr_v1.5 already sorted.
+Sat Apr 25 12:06:07 PDT 2020: Masking Dstr_v1.5...
+[12:06 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[12:06 PM]: Running funannotate v1.6.0-98d4d3f
+[12:06 PM]: ERROR: repeat library is not a valid file: 4_RepeatModeler/FinalRepeats.fa
+-------------------------------------------------------
+/var/spool/slurmd/job1039102/slurm_script: line 58: --cpus: command not found

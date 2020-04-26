@@ -8,7 +8,7 @@
 #SBATCH -o ../history/FA_Predict-%A.out
 set -e
 
-ASSEM=Dstr_v1.5.masked.fa
+ASSEM=subset_test/Dstr_v1.4.subset.fa
 echo Running Funannotate predict on $ASSEM
 
 module load funannotate/1.6.0
@@ -25,13 +25,14 @@ echo $AUGUSTUS_CONFIG_PATH is the config path
 
 funannotate predict \
     -i $ASSEM \
-    -s "Datura stramonium 4" \
-    -o Dstr_v1.5_predict \
-    --weights augustus:1 hiq:6 genemark:0 pasa:10 codingquarry:0 snap:0 glimmerhmm:0 proteins:1 transcripts:1 \
+    -s "Datura stramonium Test 2" \
+    -o subset_test \
     --name HAX54_ \
     --organism other \
     --genemark_mode ES \
     --repeats2evm \
     --optimize_augustus \
+    --augustus_species datura_stramonium_test_1 \
+    --busco_seed_species tomato \
     --busco_db embryophyta_odb9 \
     --cpus $SLURM_CPUS_PER_TASK

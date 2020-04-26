@@ -45,3 +45,4 @@ for SESRA in ${SINGLES[@]}; do
         echo $SESRA RNA seq already trimmed.
     fi
 done
+

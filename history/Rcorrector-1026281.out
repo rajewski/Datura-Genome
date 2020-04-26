@@ -1,0 +1,4 @@
+Error correction
+/bigdata/littlab/arajewski/Datura/software/rcorrector/rcorrector -t 16 -od Rcorrector/  -r MedPlantTrimmed_1U.fastq -r MedPlantTrimmed_2U.fastq -r ERR2040631_Trimmed_1U.fastq -r ERR2040631_Trimmed_2U.fastq -r SRR9888534_Trimmed_1U.fastq -r SRR9888534_Trimmed_2U.fastq -p MedPlantTrimmed_1P.fastq MedPlantTrimmed_2P.fastq -p ERR2040631_Trimmed_1P.fastq ERR2040631_Trimmed_2P.fastq -p SRR9888534_Trimmed_1P.fastq SRR9888534_Trimmed_2P.fastq -c tmp_bf36c5b4eb7925b29682c5f14bebe5ef.jf_dump
+Could not open file tmp_bf36c5b4eb7925b29682c5f14bebe5ef.jf_dump
+Failed at stage 3.

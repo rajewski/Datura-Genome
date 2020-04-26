@@ -1,15 +1,14 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
-#SBATCH --mem-per-cpu=7G
+#SBATCH --cpus-per-task=60
+#SBATCH --mem-per-cpu=4G
 #SBATCH --nodes=1
 #SBATCH --time=3-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Prep-%A.out
 set -e
-
-module load funannotate/1.6.0
+module  load funannotate/1.6.0
 ASSEMPATH=/rhome/arajewski/bigdata/Datura/2_MaSuRCA338/flye
 ASSEM=assembly.fasta
 BASE=Dstr_v1.5
@@ -18,7 +17,7 @@ BASE=Dstr_v1.5
 # for the masurca assembly I am skipping this because it already has large contigs
 if [ ! -e $BASE.l5000.fa ]; then
     echo Removing contigs less than 5kb ot speed annotation and because they do not contribute much to the gene space...
-    module load BBMap
+    #module load BBMap
     #reformat.sh in=$ASSEMPATH/$ASSEM out=$BASE.l5000.fa minlength=5000
 else
     echo Contigs less than 5kb already removed
@@ -54,7 +53,7 @@ if [ ! -e $BASE.masked.fa ]; then
     funannotate mask \
 	-i $BASE.sorted.fa \
 	-o $BASE.masked.fa \
-	-s "arabidopsis" \
+	-l ../4_RepeatModeler/FinalRepeats.fa \
 	--cpus $SLURM_CPUS_PER_TASK
     echo $(date): Done.
 else

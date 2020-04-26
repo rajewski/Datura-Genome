@@ -1,0 +1,6 @@
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+[11:33 AM]: Setting up EVM partitions
+slurmstepd-h03: error: *** JOB 939142 ON h03 CANCELLED AT 2020-03-25T12:25:11 ***

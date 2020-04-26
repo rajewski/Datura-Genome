@@ -1,0 +1,4 @@
+Error correction
+/bigdata/littlab/arajewski/Datura/software/rcorrector/rcorrector -t 16 -od Rcorrector/  -r MedPlantTrimmed_1U.fastq.gz -r MedPlantTrimmed_2U.fastq.gz -r ERR2040631_Trimmed_1U.fastq.gz -r ERR2040631_Trimmed_2U.fastq.gz -r SRR9888534_Trimmed_1U.fastq.gz -r SRR9888534_Trimmed_2U.fastq.gz -p MedPlantTrimmed_1P.fastq.gz MedPlantTrimmed_2P.fastq.gz -p ERR2040631_Trimmed_1P.fastq.gz ERR2040631_Trimmed_2P.fastq.gz -p SRR9888534_Trimmed_1P.fastq.gz SRR9888534_Trimmed_2P.fastq.gz -c tmp_d202a6a51aa36e531641f0df20e18461.jf_dump
+"ERR2040631_Trimmed_2U.fastq.gz"'s format is wrong: Rcorrector//ERR2040631_Trimmed_1U.cor.fq.gz
+Failed at stage 3.

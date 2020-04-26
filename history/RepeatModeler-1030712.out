@@ -1,0 +1,2 @@
+/var/spool/slurmd/job1030712/slurm_script: line 13: -d: command not found
+fatal: destination path 'Custom-Repeat-Library' already exists and is not an empty directory.
