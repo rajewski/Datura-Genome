@@ -1,0 +1,10 @@
+command time > Dstr_v1.5.fa.k32.w300.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 300 -t 4 Dstr_v1.5.fa > Dstr_v1.5.fa.k32.w300.tsv
+
+real	0m9.486s
+user	0m34.039s
+sys	0m1.889s
+command time > Dstr_v1.5.fa.fai.time samtools faidx Dstr_v1.5.fa
+
+real	0m4.005s
+user	0m3.601s
+sys	0m0.319s

@@ -1,0 +1,16 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 04/30/2020 14:32:07 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.3_ntEdit_RAILS/lordecreads.fa_vs_Dstr_v1.3_ntEdit3_edited.fa_250_0.9_rails.scaffolds.fa -o 20200429_Dstr_v1.3 -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 30 -z -sp tomato
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+WARNING	Restarting an uncompleted run
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 2/3, current time: 04/30/2020 14:33:21 ******
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	Pre-Augustus scaffold extraction...
