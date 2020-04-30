@@ -1,15 +1,17 @@
 #!/bin/bash -l
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=60
 #SBATCH --nodes=1
 #SBATCH --mem-per-cpu=7G
-#SBATCH --time=5-00:00:00
+#SBATCH --time=01:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/ntEdit-%A.out
 set -e
 MEMORY=$((SLURM_MEM_PER_CPU/1024))G
-ASSEM=Dstr_v1.4_LINKS13_RAILS_Sealer_scaffold.fa
+ASSEM=Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_ntEdit8_edited.fa
+#ln -s lordecreads.fa_vs_Dstr_v1.5.fa_250_0.9_rails.scaffolds.fa $ASSEM
 kmer=50
+
 #Get env right
 export PATH=/rhome/arajewski/bigdata/Datura/software/bin:$PATH
 export PATH=/rhome/arajewski/bigdata/Datura/software/ntEdit:$PATH
@@ -31,10 +33,12 @@ else
 fi
 
 ntedit \
+    -t $SLURM_CPUS_PER_TASK \
     -f $ASSEM \
     -k $kmer \
     -r Dstr_k$kmer.bf \
-    -b Dstr_v1.4_ntEdit \
-    -v 1
+    -b Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_ntEdit9 \
+    -v 0 \
+    -m 2
 
 scontrol show job $SLURM_JOB_ID
