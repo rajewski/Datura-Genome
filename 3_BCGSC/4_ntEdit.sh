@@ -8,7 +8,7 @@
 #SBATCH -o ../history/ntEdit-%A.out
 set -e
 MEMORY=$((SLURM_MEM_PER_CPU/1024))G
-ASSEM=Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_ntEdit8_edited.fa
+ASSEM=Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_j1_R1_n2_edited.fa
 #ln -s lordecreads.fa_vs_Dstr_v1.5.fa_250_0.9_rails.scaffolds.fa $ASSEM
 kmer=50
 
@@ -37,8 +37,8 @@ ntedit \
     -f $ASSEM \
     -k $kmer \
     -r Dstr_k$kmer.bf \
-    -b Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_ntEdit9 \
+    -b Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_j1_R1_n3 \
     -v 0 \
-    -m 2
+    -m 1
 
 scontrol show job $SLURM_JOB_ID

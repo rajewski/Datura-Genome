@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --cpus-per-task=16
 #SBATCH --nodes=1
-#SBATCH --mem-per-cpu=7G
+#SBATCH --mem-per-cpu=10G
 #SBATCH --time=7-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
@@ -11,7 +11,7 @@ MEMORY=$((SLURM_MEM_PER_CPU/1024))G
 
 #Get env right
 module load ABYSS/2.0.2
-ASSEM=lordecreads.fa_vs_Dstr_v1.4_links13_k19.scaffolds.fa_250_0.9_rails.scaffolds.fa
+ASSEM=Dstr_v1.4_ntEdit_RAILS/lordecreads.fa_vs_Dstr_v1.4_ntEdit3_RAILS_ntEdit2_edited.fa_250_0.9_rails.scaffolds.fa
 
 #with pre-built bloom filters from 3a_BloomBuild.sh
 
@@ -60,7 +60,7 @@ abyss-sealer \
    -i k115.bloom \
    -i k120.bloom \
    -i k125.bloom \
-    -o Dstr_v1.4_LINKS13_RAILS_Sealer \
+    -o Dstr_v1.4_RAILS2_Sealer \
     -S $ASSEM
 #    /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_1P.fq /rhome/arajewski/bigdata/Datura/1_QCQA/DstrTrim_2P.fq
     
