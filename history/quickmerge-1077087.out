@@ -1,0 +1,11 @@
+1: PREPARING DATA
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "out.ntref" of length 792690720
+# construct suffix tree for sequence of length 792690720
+# (maximum reference length is 536870908)
+# (maximum query length is 4294967295)
+# process 7926907 characters per dot
+/opt/linux/centos/7.x/x86_64/pkgs/mummer/3.23/mummer: suffix tree construction failed: textlen=792690720 larger than maximal textlen=536870908
+ERROR: mummer and/or mgaps returned non-zero
+ERROR: Could not parse delta file, out.delta
+error no: 400

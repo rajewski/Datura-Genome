@@ -1,0 +1,7 @@
+make: stat: Target.fa: Too many levels of symbolic links
+command time > Dstr_v1.5.fa.k32.w300.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 300 -t 4 Dstr_v1.5.fa > Dstr_v1.5.fa.k32.w300.tsv
+
+real	0m10.248s
+user	0m36.280s
+sys	0m2.153s
+make: *** No rule to make target 'Target.fa', needed by 'Target.fa.k32.w300.tsv'.  Stop.

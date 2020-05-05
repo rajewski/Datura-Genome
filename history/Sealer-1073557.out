@@ -1,0 +1,171 @@
+Finding flanks
+232506 gaps found
+232214 flanks extracted
+
+Loading bloom filter from `k30.bloom'...
+Bloom filter FPR: 1.22%
+Starting K run with k = 30
+Flanks inserted into k run = 232214
+19 unique gaps closed for k30
+No start/goal kmer: 0
+No path: 10102
+Unique path: 19
+Multiple paths: 0
+Too many paths: 4672
+Too many branches: 217670
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232195 flanks left
+k30 run complete
+Total gaps closed so far = 19
+
+Loading bloom filter from `k35.bloom'...
+Bloom filter FPR: 1.35%
+Starting K run with k = 35
+Flanks inserted into k run = 232195
+11 unique gaps closed for k35
+No start/goal kmer: 0
+No path: 15001
+Unique path: 11
+Multiple paths: 0
+Too many paths: 4258
+Too many branches: 213174
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232184 flanks left
+k35 run complete
+Total gaps closed so far = 30
+
+Loading bloom filter from `k40.bloom'...
+Bloom filter FPR: 1.47%
+Starting K run with k = 40
+Flanks inserted into k run = 232184
+13 unique gaps closed for k40
+No start/goal kmer: 0
+No path: 20628
+Unique path: 13
+Multiple paths: 0
+Too many paths: 3965
+Too many branches: 207827
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232171 flanks left
+k40 run complete
+Total gaps closed so far = 43
+
+Loading bloom filter from `k45.bloom'...
+Bloom filter FPR: 1.56%
+Starting K run with k = 45
+Flanks inserted into k run = 232171
+22 unique gaps closed for k45
+No start/goal kmer: 2
+No path: 27665
+Unique path: 21
+Multiple paths: 1
+Too many paths: 3746
+Too many branches: 200985
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232149 flanks left
+k45 run complete
+Total gaps closed so far = 65
+
+Loading bloom filter from `k50.bloom'...
+Bloom filter FPR: 1.63%
+Starting K run with k = 50
+Flanks inserted into k run = 232149
+26 unique gaps closed for k50
+No start/goal kmer: 5
+No path: 36707
+Unique path: 26
+Multiple paths: 0
+Too many paths: 3677
+Too many branches: 191983
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232123 flanks left
+k50 run complete
+Total gaps closed so far = 91
+
+Loading bloom filter from `k55.bloom'...
+Bloom filter FPR: 1.69%
+Starting K run with k = 55
+Flanks inserted into k run = 232123
+100 gaps closed so far
+48 unique gaps closed for k55
+No start/goal kmer: 12
+No path: 48410
+Unique path: 45
+Multiple paths: 3
+Too many paths: 3644
+Too many branches: 180258
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232075 flanks left
+k55 run complete
+Total gaps closed so far = 139
+
+Loading bloom filter from `k60.bloom'...
+Bloom filter FPR: 1.74%
+Starting K run with k = 60
+Flanks inserted into k run = 232075
+49 unique gaps closed for k60
+No start/goal kmer: 34
+No path: 62932
+Unique path: 43
+Multiple paths: 6
+Too many paths: 3725
+Too many branches: 165584
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232026 flanks left
+k60 run complete
+Total gaps closed so far = 188
+
+Loading bloom filter from `k65.bloom'...
+Bloom filter FPR: 1.78%
+Starting K run with k = 65
+Flanks inserted into k run = 232026
+200 gaps closed so far
+71 unique gaps closed for k65
+No start/goal kmer: 103
+No path: 78794
+Unique path: 58
+Multiple paths: 13
+Too many paths: 3997
+Too many branches: 149310
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+231955 flanks left
+k65 run complete
+Total gaps closed so far = 259
+
+Loading bloom filter from `k70.bloom'...
+Bloom filter FPR: 1.8%
+Starting K run with k = 70
+Flanks inserted into k run = 231955
+slurmstepd-i34: error: *** JOB 1073557 ON i34 CANCELLED AT 2020-05-01T15:53:47 ***

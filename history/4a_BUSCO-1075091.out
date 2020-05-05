@@ -1,0 +1,46 @@
+miniconda2/4.4.10(23):ERROR:150: Module 'miniconda2/4.4.10' conflicts with the currently loaded module(s) 'python/3.6.0'
+miniconda2/4.4.10(23):ERROR:102: Tcl command execution failed: conflict    python
+
+ModuleCmd_Switch.c(172):ERROR:152: Module 'miniconda2' is currently not loaded
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 05/01/2020 01:38:45 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.3_ntEdit_RAILS/Dstr_v1.3_ntEdit_RAILS_2kb.fa -o 20200429_Dstr_v1.3_2kb -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 30 -z -sp tomato
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+WARNING	This is not an uncompleted run that can be restarted
+ERROR	A run with that name already exists...
+	If you are sure you wish to overwrite existing files, please use the -f option
+ERROR	BUSCO analysis failed !
+ERROR	Check the logs, read the user guide, if you still need technical support, then please contact mailto:support@orthodb.org
+
+JobId=1075091 JobName=4a_BUSCO.sh
+   UserId=tosto001(3986) GroupId=stajichlab(1011) MCS_label=N/A
+   Priority=100218 Nice=0 Account=stajichlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:46 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2020-04-30T21:56:08 EligibleTime=2020-04-30T21:56:08
+   AccrueTime=2020-04-30T21:56:08
+   StartTime=2020-05-01T01:38:42 EndTime=2020-05-01T10:38:42 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-05-01T01:38:42
+   Partition=intel AllocNode:Sid=parrot.clust.hpcc.ucr.edu:37734
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i31
+   BatchHost=i31
+   NumNodes=1 NumCPUs=30 NumTasks=1 CPUs/Task=30 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=30,mem=150G,node=1,billing=67
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=30 MinMemoryCPU=5G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1075091.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1075091.out
+   Power=
+

@@ -1,0 +1,6 @@
+usage: merge_wrapper.py [-h] [-pre PREFIX] [-hco HCO] [-c C]
+                        [-l LENGTH_CUTOFF] [--no_nucmer] [--no_delta]
+                        [--stop_after_nucmer] [--stop_after_df]
+                        [-lm LENGTH_MINIMUM] [--clean_only]
+                        hybrid_assembly_fasta self_assembly_fasta
+merge_wrapper.py: error: unrecognized arguments: -v -t masurca.fa
