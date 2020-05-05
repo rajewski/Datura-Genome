@@ -1,1 +1,0 @@
-lib1	../../1_Trimmed_Reads/Dstr.trimmed_P1.fq	../../1_Trimmed_Reads/Dstr.trimmed_P2.fq	300	0.75	FR

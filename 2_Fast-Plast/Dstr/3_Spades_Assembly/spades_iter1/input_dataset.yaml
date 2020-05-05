@@ -1,8 +1,0 @@
-- "left reads":
-  - "/bigdata/littlab/arajewski/Datura/2_Fast-Plast/Dstr/2_Bowtie_Mapping/map_pair_hits.1.fq"
-  "orientation": "fr"
-  "right reads":
-  - "/bigdata/littlab/arajewski/Datura/2_Fast-Plast/Dstr/2_Bowtie_Mapping/map_pair_hits.2.fq"
-  "single reads":
-  - "/bigdata/littlab/arajewski/Datura/2_Fast-Plast/Dstr/2_Bowtie_Mapping/map_hits.fq"
-  "type": "paired-end"
