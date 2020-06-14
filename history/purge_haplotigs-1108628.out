@@ -1,0 +1,823 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 4211494 sequences (300000006 bp)...
+[M::process] read 4220852 sequences (300000077 bp)...
+[M::mem_process_seqs] Processed 4211494 reads in 2085.936 CPU sec, 116.020 real sec
+[M::process] read 4221890 sequences (300000006 bp)...
+[M::mem_process_seqs] Processed 4220852 reads in 2164.349 CPU sec, 76.135 real sec
+[M::process] read 4206436 sequences (300000113 bp)...
+[M::mem_process_seqs] Processed 4221890 reads in 2176.983 CPU sec, 76.277 real sec
+[M::process] read 4213456 sequences (300000085 bp)...
+[M::mem_process_seqs] Processed 4206436 reads in 2187.311 CPU sec, 74.496 real sec
+[M::process] read 4215722 sequences (300000068 bp)...
+[M::mem_process_seqs] Processed 4213456 reads in 2149.739 CPU sec, 73.942 real sec
+[M::process] read 4216844 sequences (300000146 bp)...
+[M::mem_process_seqs] Processed 4215722 reads in 2162.280 CPU sec, 74.597 real sec
+[M::process] read 4222344 sequences (300000126 bp)...
+[M::mem_process_seqs] Processed 4216844 reads in 2161.962 CPU sec, 75.993 real sec
+[M::process] read 4208518 sequences (300000013 bp)...
+[M::mem_process_seqs] Processed 4222344 reads in 2166.865 CPU sec, 75.579 real sec
+[M::process] read 4212484 sequences (300000035 bp)...
+[M::mem_process_seqs] Processed 4208518 reads in 2163.434 CPU sec, 75.668 real sec
+[M::process] read 2845255 sequences (202419724 bp)...
+[M::mem_process_seqs] Processed 4212484 reads in 2194.368 CPU sec, 76.645 real sec
+[M::mem_process_seqs] Processed 2845255 reads in 1492.177 CPU sec, 52.527 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 30 merged_out.fasta /bigdata/littlab/arajewski/Datura/DNA-seq/Alex-1_S9_R1_001.fastq.gz
+[main] Real time: 868.379 sec; CPU: 23123.902 sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 4184530 sequences (300000027 bp)...
+[M::process] read 4193154 sequences (300000027 bp)...
+[M::mem_process_seqs] Processed 4184530 reads in 2149.884 CPU sec, 120.479 real sec
+[M::process] read 4193384 sequences (300000113 bp)...
+[M::mem_process_seqs] Processed 4193154 reads in 2198.134 CPU sec, 77.765 real sec
+[M::process] read 4181742 sequences (300000060 bp)...
+[M::mem_process_seqs] Processed 4193384 reads in 2233.164 CPU sec, 78.593 real sec
+[M::process] read 4189204 sequences (300000071 bp)...
+[M::mem_process_seqs] Processed 4181742 reads in 2235.209 CPU sec, 77.063 real sec
+[M::process] read 4187960 sequences (300000121 bp)...
+[M::mem_process_seqs] Processed 4189204 reads in 2221.908 CPU sec, 76.320 real sec
+[M::process] read 4190260 sequences (300000003 bp)...
+[M::mem_process_seqs] Processed 4187960 reads in 2219.382 CPU sec, 78.749 real sec
+[M::process] read 4192928 sequences (300000029 bp)...
+[M::mem_process_seqs] Processed 4190260 reads in 2223.391 CPU sec, 78.558 real sec
+[M::process] read 4182726 sequences (300000104 bp)...
+[M::mem_process_seqs] Processed 4192928 reads in 2260.037 CPU sec, 78.956 real sec
+[M::process] read 4190242 sequences (300000067 bp)...
+[M::mem_process_seqs] Processed 4182726 reads in 2242.415 CPU sec, 78.696 real sec
+[M::process] read 2006769 sequences (143726323 bp)...
+[M::mem_process_seqs] Processed 4190242 reads in 2263.062 CPU sec, 79.978 real sec
+[M::mem_process_seqs] Processed 2006769 reads in 1108.438 CPU sec, 39.031 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 30 merged_out.fasta /bigdata/littlab/arajewski/Datura/DNA-seq/Alex-2_S10_R1_001.fastq.gz
+[main] Real time: 883.305 sec; CPU: 23372.709 sec
+12:51:51.221 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/picard/2.18.3/lib/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Wed May 06 12:51:51 PDT 2020] MergeSamFiles INPUT=[Alex_S85_L002.sam, Alex_S230_L002.sam, Alex-1_S9.sam, Alex-2_S10.sam] OUTPUT=AllReads.bam SORT_ORDER=coordinate ASSUME_SORTED=false    MERGE_SEQUENCE_DICTIONARIES=false USE_THREADING=false VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Wed May 06 12:51:51 PDT 2020] Executing as arajewski@i18 on Linux 3.10.0-957.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_45-b14; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.3-SNAPSHOT
+INFO	2020-05-06 12:53:30	MergeSamFiles	Sorting input files using temp directory [/tmp/arajewski]
+INFO	2020-05-06 12:53:47	MergeSamFiles	Processed     1,000,000 records.  Elapsed time: 00:00:08s.  Time for last 1,000,000:    8s.  Last read position: scaffold3393188_101_scaffold3393188,101,f3594266Z101:16
+INFO	2020-05-06 12:53:56	MergeSamFiles	Processed     2,000,000 records.  Elapsed time: 00:00:17s.  Time for last 1,000,000:    9s.  Last read position: scaffold687_110687_scaffold687,110687,f632Z110687:67,854
+INFO	2020-05-06 12:54:06	MergeSamFiles	Processed     3,000,000 records.  Elapsed time: 00:00:27s.  Time for last 1,000,000:    9s.  Last read position: scaffold29562_10384_scaffold29562,10384,f29466Z10384:5,417
+INFO	2020-05-06 12:54:18	MergeSamFiles	Processed     4,000,000 records.  Elapsed time: 00:00:39s.  Time for last 1,000,000:   11s.  Last read position: scaffold12529_28662_scaffold12529,28662,f12393Z28662:27,874
+INFO	2020-05-06 12:54:30	MergeSamFiles	Processed     5,000,000 records.  Elapsed time: 00:00:51s.  Time for last 1,000,000:   12s.  Last read position: scaffold1895_116100_scaffold1895,116100,f1869Z116100:30,028
+INFO	2020-05-06 12:54:42	MergeSamFiles	Processed     6,000,000 records.  Elapsed time: 00:01:03s.  Time for last 1,000,000:   11s.  Last read position: scaffold539595_535_scaffold539595,535,f539611Z535:63
+INFO	2020-05-06 12:54:53	MergeSamFiles	Processed     7,000,000 records.  Elapsed time: 00:01:14s.  Time for last 1,000,000:   11s.  Last read position: scaffold11201_32489_scaffold11201,32489,f11166Z32489:2,773
+INFO	2020-05-06 12:55:03	MergeSamFiles	Processed     8,000,000 records.  Elapsed time: 00:01:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold1290260_251_scaffold1290260,251,f1288008Z251:95
+INFO	2020-05-06 12:55:13	MergeSamFiles	Processed     9,000,000 records.  Elapsed time: 00:01:34s.  Time for last 1,000,000:   10s.  Last read position: scaffold1129374_280_scaffold1129374,280,f1128712Z280:67
+INFO	2020-05-06 12:55:26	MergeSamFiles	Processed    10,000,000 records.  Elapsed time: 00:01:47s.  Time for last 1,000,000:   12s.  Last read position: scaffold93359_4069_scaffold93359,4069,f93346Z4069:1,797
+INFO	2020-05-06 12:55:36	MergeSamFiles	Processed    11,000,000 records.  Elapsed time: 00:01:57s.  Time for last 1,000,000:   10s.  Last read position: scaffold4264_61560_scaffold4264,61560,f4225Z61560:5,223
+INFO	2020-05-06 12:55:47	MergeSamFiles	Processed    12,000,000 records.  Elapsed time: 00:02:08s.  Time for last 1,000,000:   10s.  Last read position: scaffold2933407_104_scaffold2933407,104,f2871521Z104:6
+INFO	2020-05-06 12:55:57	MergeSamFiles	Processed    13,000,000 records.  Elapsed time: 00:02:18s.  Time for last 1,000,000:   10s.  Last read position: scaffold1249_143839_scaffold1249,143839,f1182Z143839:75,013
+INFO	2020-05-06 12:56:07	MergeSamFiles	Processed    14,000,000 records.  Elapsed time: 00:02:28s.  Time for last 1,000,000:   10s.  Last read position: scaffold1334253_244_scaffold1334253,244,f1332783Z244:134
+INFO	2020-05-06 12:56:18	MergeSamFiles	Processed    15,000,000 records.  Elapsed time: 00:02:39s.  Time for last 1,000,000:   10s.  Last read position: scaffold4220_61828_scaffold4220,61828,f4165Z61828:59,205
+INFO	2020-05-06 12:56:29	MergeSamFiles	Processed    16,000,000 records.  Elapsed time: 00:02:50s.  Time for last 1,000,000:   11s.  Last read position: scaffold6_1174183_scaffold6,1174183,f5Z1174183:182,540
+INFO	2020-05-06 12:56:41	MergeSamFiles	Processed    17,000,000 records.  Elapsed time: 00:03:02s.  Time for last 1,000,000:   11s.  Last read position: scaffold1103424_285_scaffold1103424,285,f1105801Z285:122
+INFO	2020-05-06 12:56:53	MergeSamFiles	Processed    18,000,000 records.  Elapsed time: 00:03:14s.  Time for last 1,000,000:   11s.  Last read position: scaffold700304_419_scaffold700304,419,f701360Z419:173
+INFO	2020-05-06 12:57:03	MergeSamFiles	Processed    19,000,000 records.  Elapsed time: 00:03:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold267350_1210_scaffold267350,1210,f267286Z1210:45
+INFO	2020-05-06 12:57:11	MergeSamFiles	Processed    20,000,000 records.  Elapsed time: 00:03:32s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2020-05-06 12:57:19	MergeSamFiles	Processed    21,000,000 records.  Elapsed time: 00:03:40s.  Time for last 1,000,000:    8s.  Last read position: scaffold311521_991_scaffold311521,991,f311590Z991:782
+INFO	2020-05-06 12:57:28	MergeSamFiles	Processed    22,000,000 records.  Elapsed time: 00:03:49s.  Time for last 1,000,000:    8s.  Last read position: scaffold4335_66479_scaffold4335,66479,f4317Z66479:63,850
+INFO	2020-05-06 12:57:39	MergeSamFiles	Processed    23,000,000 records.  Elapsed time: 00:04:00s.  Time for last 1,000,000:   10s.  Last read position: scaffold446122_650_scaffold446122,650,f446133Z650:210
+INFO	2020-05-06 12:57:49	MergeSamFiles	Processed    24,000,000 records.  Elapsed time: 00:04:10s.  Time for last 1,000,000:   10s.  Last read position: scaffold3470445_101_scaffold3470445,101,f3620238Z101:46
+INFO	2020-05-06 12:58:00	MergeSamFiles	Processed    25,000,000 records.  Elapsed time: 00:04:21s.  Time for last 1,000,000:   10s.  Last read position: scaffold1475871_225_scaffold1475871,225,f1473495Z225:64
+INFO	2020-05-06 12:58:10	MergeSamFiles	Processed    26,000,000 records.  Elapsed time: 00:04:31s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 12:58:20	MergeSamFiles	Processed    27,000,000 records.  Elapsed time: 00:04:41s.  Time for last 1,000,000:   10s.  Last read position: scaffold42734_7618_scaffold42734,7618,f42685Z7618:4,145
+INFO	2020-05-06 12:58:31	MergeSamFiles	Processed    28,000,000 records.  Elapsed time: 00:04:52s.  Time for last 1,000,000:   10s.  Last read position: scaffold64008_5602_scaffold64008,5602,f63987Z5602:747
+INFO	2020-05-06 12:58:42	MergeSamFiles	Processed    29,000,000 records.  Elapsed time: 00:05:03s.  Time for last 1,000,000:   11s.  Last read position: scaffold199223_1780_scaffold199223,1780,f199170Z1780:866
+INFO	2020-05-06 12:58:54	MergeSamFiles	Processed    30,000,000 records.  Elapsed time: 00:05:15s.  Time for last 1,000,000:   11s.  Last read position: scaffold763259_388_scaffold763259,388,f763244Z388:198
+INFO	2020-05-06 12:59:04	MergeSamFiles	Processed    31,000,000 records.  Elapsed time: 00:05:25s.  Time for last 1,000,000:   10s.  Last read position: scaffold80035_4667_scaffold80035,4667,f79988Z4667:54
+INFO	2020-05-06 12:59:17	MergeSamFiles	Processed    32,000,000 records.  Elapsed time: 00:05:38s.  Time for last 1,000,000:   13s.  Last read position: scaffold2146523_139_scaffold2146523,139,f2148508Z139:1
+INFO	2020-05-06 12:59:28	MergeSamFiles	Processed    33,000,000 records.  Elapsed time: 00:05:49s.  Time for last 1,000,000:   10s.  Last read position: scaffold19486_16357_scaffold19486,16357,f19373Z16357:5,245
+INFO	2020-05-06 12:59:39	MergeSamFiles	Processed    34,000,000 records.  Elapsed time: 00:06:00s.  Time for last 1,000,000:   10s.  Last read position: scaffold631253_461_scaffold631253,461,f630924Z461:137
+INFO	2020-05-06 12:59:50	MergeSamFiles	Processed    35,000,000 records.  Elapsed time: 00:06:11s.  Time for last 1,000,000:   11s.  Last read position: scaffold1100962_286_scaffold1100962,286,f1100236Z286:149
+INFO	2020-05-06 13:00:00	MergeSamFiles	Processed    36,000,000 records.  Elapsed time: 00:06:21s.  Time for last 1,000,000:   10s.  Last read position: scaffold1829112_201_scaffold1829112,201,f1796156Z201:22
+INFO	2020-05-06 13:00:11	MergeSamFiles	Processed    37,000,000 records.  Elapsed time: 00:06:32s.  Time for last 1,000,000:   10s.  Last read position: scaffold375320_789_scaffold375320,789,f375081Z789:207
+INFO	2020-05-06 13:00:21	MergeSamFiles	Processed    38,000,000 records.  Elapsed time: 00:06:42s.  Time for last 1,000,000:   10s.  Last read position: scaffold209516_1667_scaffold209516,1667,f209598Z1667:956
+INFO	2020-05-06 13:00:32	MergeSamFiles	Processed    39,000,000 records.  Elapsed time: 00:06:53s.  Time for last 1,000,000:   11s.  Last read position: scaffold2447_100579_scaffold2447,100579,f2424Z100579:24,658
+INFO	2020-05-06 13:00:42	MergeSamFiles	Processed    40,000,000 records.  Elapsed time: 00:07:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold1096_151712_scaffold1096,151712,f1088Z151712:6,573
+INFO	2020-05-06 13:00:53	MergeSamFiles	Processed    41,000,000 records.  Elapsed time: 00:07:14s.  Time for last 1,000,000:   10s.  Last read position: scaffold85620_4398_scaffold85620,4398,f85598Z4398:3,102
+INFO	2020-05-06 13:01:04	MergeSamFiles	Processed    42,000,000 records.  Elapsed time: 00:07:25s.  Time for last 1,000,000:   11s.  Last read position: scaffold29732_10329_scaffold29732,10329,f29639Z10329:7,423
+INFO	2020-05-06 13:01:14	MergeSamFiles	Processed    43,000,000 records.  Elapsed time: 00:07:35s.  Time for last 1,000,000:   10s.  Last read position: scaffold4009_71266_scaffold4009,71266,f3977Z71266:47,258
+INFO	2020-05-06 13:01:26	MergeSamFiles	Processed    44,000,000 records.  Elapsed time: 00:07:47s.  Time for last 1,000,000:   11s.  Last read position: scaffold1830659_201_scaffold1830659,201,f1808789Z201:5
+INFO	2020-05-06 13:01:36	MergeSamFiles	Processed    45,000,000 records.  Elapsed time: 00:07:57s.  Time for last 1,000,000:   10s.  Last read position: scaffold3207120_102_scaffold3207120,102,f3137037Z102:12
+INFO	2020-05-06 13:01:47	MergeSamFiles	Processed    46,000,000 records.  Elapsed time: 00:08:08s.  Time for last 1,000,000:   11s.  Last read position: scaffold121443_3164_scaffold121443,3164,f121426Z3164:1,182
+INFO	2020-05-06 13:01:58	MergeSamFiles	Processed    47,000,000 records.  Elapsed time: 00:08:19s.  Time for last 1,000,000:   11s.  Last read position: scaffold1344980_243_scaffold1344980,243,f1338718Z243:65
+INFO	2020-05-06 13:02:08	MergeSamFiles	Processed    48,000,000 records.  Elapsed time: 00:08:29s.  Time for last 1,000,000:   10s.  Last read position: scaffold38546_8254_scaffold38546,8254,f38469Z8254:2,050
+INFO	2020-05-06 13:02:19	MergeSamFiles	Processed    49,000,000 records.  Elapsed time: 00:08:40s.  Time for last 1,000,000:   10s.  Last read position: scaffold353376_848_scaffold353376,848,f353450Z848:451
+INFO	2020-05-06 13:02:29	MergeSamFiles	Processed    50,000,000 records.  Elapsed time: 00:08:50s.  Time for last 1,000,000:   10s.  Last read position: scaffold549688_526_scaffold549688,526,f549449Z526:124
+INFO	2020-05-06 13:02:40	MergeSamFiles	Processed    51,000,000 records.  Elapsed time: 00:09:01s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:02:50	MergeSamFiles	Processed    52,000,000 records.  Elapsed time: 00:09:11s.  Time for last 1,000,000:   10s.  Last read position: scaffold1668_125330_scaffold1668,125330,f1749Z125330:120,490
+INFO	2020-05-06 13:03:00	MergeSamFiles	Processed    53,000,000 records.  Elapsed time: 00:09:21s.  Time for last 1,000,000:   10s.  Last read position: scaffold332_263623_scaffold332,263623,f396Z263623:246,154
+INFO	2020-05-06 13:03:08	MergeSamFiles	Processed    54,000,000 records.  Elapsed time: 00:09:29s.  Time for last 1,000,000:    7s.  Last read position: scaffold27396_11137_scaffold27396,11137,f27294Z11137:2,231
+INFO	2020-05-06 13:03:17	MergeSamFiles	Processed    55,000,000 records.  Elapsed time: 00:09:38s.  Time for last 1,000,000:    8s.  Last read position: scaffold3116_86341_scaffold3116,86341,f3096Z86341:25,935
+INFO	2020-05-06 13:03:24	MergeSamFiles	Processed    56,000,000 records.  Elapsed time: 00:09:45s.  Time for last 1,000,000:    7s.  Last read position: scaffold3182_85313_scaffold3182,85313,f3134Z85313:49,858
+INFO	2020-05-06 13:03:33	MergeSamFiles	Processed    57,000,000 records.  Elapsed time: 00:09:54s.  Time for last 1,000,000:    8s.  Last read position: scaffold144375_2622_scaffold144375,2622,f144377Z2622:2,116
+INFO	2020-05-06 13:03:40	MergeSamFiles	Processed    58,000,000 records.  Elapsed time: 00:10:01s.  Time for last 1,000,000:    7s.  Last read position: scaffold385859_764_scaffold385859,764,f385697Z764:556
+INFO	2020-05-06 13:03:49	MergeSamFiles	Processed    59,000,000 records.  Elapsed time: 00:10:10s.  Time for last 1,000,000:    8s.  Last read position: scaffold39_631398_scaffold39,631398,f2Z631398:183,728
+INFO	2020-05-06 13:03:57	MergeSamFiles	Processed    60,000,000 records.  Elapsed time: 00:10:18s.  Time for last 1,000,000:    7s.  Last read position: scaffold2642072_107_scaffold2642072,107,f2672099Z107:11
+INFO	2020-05-06 13:04:04	MergeSamFiles	Processed    61,000,000 records.  Elapsed time: 00:10:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2020-05-06 13:04:15	MergeSamFiles	Processed    62,000,000 records.  Elapsed time: 00:10:36s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:04:23	MergeSamFiles	Processed    63,000,000 records.  Elapsed time: 00:10:44s.  Time for last 1,000,000:    8s.  Last read position: scaffold60791_5835_scaffold60791,5835,f60764Z5835:4,646
+INFO	2020-05-06 13:04:31	MergeSamFiles	Processed    64,000,000 records.  Elapsed time: 00:10:52s.  Time for last 1,000,000:    8s.  Last read position: scaffold2639_96155_scaffold2639,96155,f2588Z96155:12,969
+INFO	2020-05-06 13:04:39	MergeSamFiles	Processed    65,000,000 records.  Elapsed time: 00:11:00s.  Time for last 1,000,000:    7s.  Last read position: scaffold93850_4050_scaffold93850,4050,f93807Z4050:2,486
+INFO	2020-05-06 13:04:47	MergeSamFiles	Processed    66,000,000 records.  Elapsed time: 00:11:08s.  Time for last 1,000,000:    7s.  Last read position: scaffold864_170158_scaffold864,170158,f858Z170158:100,416
+INFO	2020-05-06 13:04:56	MergeSamFiles	Processed    67,000,000 records.  Elapsed time: 00:11:17s.  Time for last 1,000,000:    8s.  Last read position: scaffold1469_132829_scaffold1469,132829,f1453Z132829:16,577
+INFO	2020-05-06 13:05:03	MergeSamFiles	Processed    68,000,000 records.  Elapsed time: 00:11:24s.  Time for last 1,000,000:    7s.  Last read position: scaffold728_185001_scaffold728,185001,f781Z185001:33,422
+INFO	2020-05-06 13:05:12	MergeSamFiles	Processed    69,000,000 records.  Elapsed time: 00:11:33s.  Time for last 1,000,000:    8s.  Last read position: scaffold2671_95440_scaffold2671,95440,f2731Z95440:2,141
+INFO	2020-05-06 13:05:19	MergeSamFiles	Processed    70,000,000 records.  Elapsed time: 00:11:40s.  Time for last 1,000,000:    7s.  Last read position: scaffold1263047_255_scaffold1263047,255,f1265864Z255:134
+INFO	2020-05-06 13:05:28	MergeSamFiles	Processed    71,000,000 records.  Elapsed time: 00:11:49s.  Time for last 1,000,000:    8s.  Last read position: scaffold1010404_306_scaffold1010404,306,f1008419Z306:8
+INFO	2020-05-06 13:05:36	MergeSamFiles	Processed    72,000,000 records.  Elapsed time: 00:11:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2020-05-06 13:05:43	MergeSamFiles	Processed    73,000,000 records.  Elapsed time: 00:12:04s.  Time for last 1,000,000:    7s.  Last read position: scaffold34110_9144_scaffold34110,9144,f34014Z9144:6,349
+INFO	2020-05-06 13:05:52	MergeSamFiles	Processed    74,000,000 records.  Elapsed time: 00:12:13s.  Time for last 1,000,000:    8s.  Last read position: scaffold261_287545_scaffold261,287545,f268Z287545:101,634
+INFO	2020-05-06 13:06:00	MergeSamFiles	Processed    75,000,000 records.  Elapsed time: 00:12:21s.  Time for last 1,000,000:    7s.  Last read position: scaffold1933871_200_scaffold1933871,200,f1935989Z200:12
+INFO	2020-05-06 13:06:08	MergeSamFiles	Processed    76,000,000 records.  Elapsed time: 00:12:29s.  Time for last 1,000,000:    8s.  Last read position: scaffold4117_69675_scaffold4117,69675,f4210Z69675:32,741
+INFO	2020-05-06 13:06:16	MergeSamFiles	Processed    77,000,000 records.  Elapsed time: 00:12:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2020-05-06 13:06:24	MergeSamFiles	Processed    78,000,000 records.  Elapsed time: 00:12:45s.  Time for last 1,000,000:    8s.  Last read position: scaffold247951_1337_scaffold247951,1337,f247887Z1337:971
+INFO	2020-05-06 13:06:32	MergeSamFiles	Processed    79,000,000 records.  Elapsed time: 00:12:53s.  Time for last 1,000,000:    7s.  Last read position: scaffold164068_2264_scaffold164068,2264,f164030Z2264:1,593
+INFO	2020-05-06 13:06:40	MergeSamFiles	Processed    80,000,000 records.  Elapsed time: 00:13:01s.  Time for last 1,000,000:    8s.  Last read position: scaffold149110_2529_scaffold149110,2529,f149115Z2529:852
+INFO	2020-05-06 13:06:49	MergeSamFiles	Processed    81,000,000 records.  Elapsed time: 00:13:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold162_350854_scaffold162,350854,f160Z350854:327,893
+INFO	2020-05-06 13:06:57	MergeSamFiles	Processed    82,000,000 records.  Elapsed time: 00:13:18s.  Time for last 1,000,000:    7s.  Last read position: scaffold83846_4481_scaffold83846,4481,f83835Z4481:3,576
+INFO	2020-05-06 13:07:06	MergeSamFiles	Processed    83,000,000 records.  Elapsed time: 00:13:27s.  Time for last 1,000,000:    8s.  Last read position: scaffold3263_83737_scaffold3263,83737,f3242Z83737:20,364
+INFO	2020-05-06 13:07:14	MergeSamFiles	Processed    84,000,000 records.  Elapsed time: 00:13:35s.  Time for last 1,000,000:    7s.  Last read position: scaffold1631_126795_scaffold1631,126795,f1576Z126795:2,238
+INFO	2020-05-06 13:07:22	MergeSamFiles	Processed    85,000,000 records.  Elapsed time: 00:13:43s.  Time for last 1,000,000:    8s.  Last read position: scaffold111947_3430_scaffold111947,3430,f111961Z3430:4
+INFO	2020-05-06 13:07:30	MergeSamFiles	Processed    86,000,000 records.  Elapsed time: 00:13:51s.  Time for last 1,000,000:    8s.  Last read position: scaffold56662_6166_scaffold56662,6166,f56620Z6166:1,442
+INFO	2020-05-06 13:07:38	MergeSamFiles	Processed    87,000,000 records.  Elapsed time: 00:13:59s.  Time for last 1,000,000:    7s.  Last read position: scaffold2379_102263_scaffold2379,102263,f2350Z102263:36,466
+INFO	2020-05-06 13:07:46	MergeSamFiles	Processed    88,000,000 records.  Elapsed time: 00:14:07s.  Time for last 1,000,000:    8s.  Last read position: scaffold1602052_210_scaffold1602052,210,f1603858Z210:67
+INFO	2020-05-06 13:07:54	MergeSamFiles	Processed    89,000,000 records.  Elapsed time: 00:14:15s.  Time for last 1,000,000:    7s.  Last read position: scaffold3553520_101_scaffold3553520,101,f3749132Z101:14
+INFO	2020-05-06 13:08:03	MergeSamFiles	Processed    90,000,000 records.  Elapsed time: 00:14:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold120053_3199_scaffold120053,3199,f120056Z3199:1,469
+INFO	2020-05-06 13:08:11	MergeSamFiles	Processed    91,000,000 records.  Elapsed time: 00:14:32s.  Time for last 1,000,000:    7s.  Last read position: scaffold1788_120847_scaffold1788,120847,f1783Z120847:17,901
+INFO	2020-05-06 13:08:19	MergeSamFiles	Processed    92,000,000 records.  Elapsed time: 00:14:39s.  Time for last 1,000,000:    7s.  Last read position: scaffold3627_77089_scaffold3627,77089,f3645Z77089:51,758
+INFO	2020-05-06 13:08:28	MergeSamFiles	Processed    93,000,000 records.  Elapsed time: 00:14:49s.  Time for last 1,000,000:    9s.  Last read position: scaffold136855_2781_scaffold136855,2781,f136885Z2781:2,644
+INFO	2020-05-06 13:08:36	MergeSamFiles	Processed    94,000,000 records.  Elapsed time: 00:14:57s.  Time for last 1,000,000:    7s.  Last read position: scaffold1950018_199_scaffold1950018,199,f1941547Z199:67
+INFO	2020-05-06 13:08:44	MergeSamFiles	Processed    95,000,000 records.  Elapsed time: 00:15:05s.  Time for last 1,000,000:    8s.  Last read position: scaffold1507_131548_scaffold1507,131548,f1467Z131548:77,911
+INFO	2020-05-06 13:08:53	MergeSamFiles	Processed    96,000,000 records.  Elapsed time: 00:15:14s.  Time for last 1,000,000:    8s.  Last read position: scaffold45221_7296_scaffold45221,7296,f45174Z7296:2,027
+INFO	2020-05-06 13:09:04	MergeSamFiles	Processed    97,000,000 records.  Elapsed time: 00:15:25s.  Time for last 1,000,000:   11s.  Last read position: scaffold47281_7060_scaffold47281,7060,f47225Z7060:5,514
+INFO	2020-05-06 13:09:13	MergeSamFiles	Processed    98,000,000 records.  Elapsed time: 00:15:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold369_253383_scaffold369,253383,f525Z253383:99,842
+INFO	2020-05-06 13:09:24	MergeSamFiles	Processed    99,000,000 records.  Elapsed time: 00:15:45s.  Time for last 1,000,000:   10s.  Last read position: scaffold435836_666_scaffold435836,666,f435722Z666:327
+INFO	2020-05-06 13:09:33	MergeSamFiles	Processed   100,000,000 records.  Elapsed time: 00:15:54s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:09:45	MergeSamFiles	Processed   101,000,000 records.  Elapsed time: 00:16:06s.  Time for last 1,000,000:   11s.  Last read position: */*
+INFO	2020-05-06 13:09:55	MergeSamFiles	Processed   102,000,000 records.  Elapsed time: 00:16:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold656582_444_scaffold656582,444,f656640Z444:194
+INFO	2020-05-06 13:10:05	MergeSamFiles	Processed   103,000,000 records.  Elapsed time: 00:16:26s.  Time for last 1,000,000:   10s.  Last read position: scaffold859096_351_scaffold859096,351,f859347Z351:164
+INFO	2020-05-06 13:10:17	MergeSamFiles	Processed   104,000,000 records.  Elapsed time: 00:16:38s.  Time for last 1,000,000:   11s.  Last read position: scaffold3978_71630_scaffold3978,71630,f3955Z71630:21,937
+INFO	2020-05-06 13:10:27	MergeSamFiles	Processed   105,000,000 records.  Elapsed time: 00:16:48s.  Time for last 1,000,000:    9s.  Last read position: scaffold406702_719_scaffold406702,719,f406664Z719:364
+INFO	2020-05-06 13:10:37	MergeSamFiles	Processed   106,000,000 records.  Elapsed time: 00:16:58s.  Time for last 1,000,000:   10s.  Last read position: scaffold15629_21853_scaffold15629,21853,f15530Z21853:20,080
+INFO	2020-05-06 13:10:47	MergeSamFiles	Processed   107,000,000 records.  Elapsed time: 00:17:08s.  Time for last 1,000,000:    9s.  Last read position: scaffold55_560278_scaffold55,560278,f28Z560278:456,580
+INFO	2020-05-06 13:10:59	MergeSamFiles	Processed   108,000,000 records.  Elapsed time: 00:17:20s.  Time for last 1,000,000:   11s.  Last read position: scaffold1722922_201_scaffold1722922,201,f1911525Z201:1
+INFO	2020-05-06 13:11:09	MergeSamFiles	Processed   109,000,000 records.  Elapsed time: 00:17:30s.  Time for last 1,000,000:   10s.  Last read position: scaffold2020378_180_scaffold2020378,180,f2019826Z180:75
+INFO	2020-05-06 13:11:19	MergeSamFiles	Processed   110,000,000 records.  Elapsed time: 00:17:40s.  Time for last 1,000,000:   10s.  Last read position: scaffold1614889_209_scaffold1614889,209,f1618260Z209:5
+INFO	2020-05-06 13:11:30	MergeSamFiles	Processed   111,000,000 records.  Elapsed time: 00:17:51s.  Time for last 1,000,000:   10s.  Last read position: scaffold1957_114014_scaffold1957,114014,f1948Z114014:112,288
+INFO	2020-05-06 13:11:40	MergeSamFiles	Processed   112,000,000 records.  Elapsed time: 00:18:01s.  Time for last 1,000,000:    9s.  Last read position: scaffold1236_144500_scaffold1236,144500,f1200Z144500:21,292
+INFO	2020-05-06 13:11:50	MergeSamFiles	Processed   113,000,000 records.  Elapsed time: 00:18:11s.  Time for last 1,000,000:   10s.  Last read position: scaffold310_269828_scaffold310,269828,f379Z269828:139,329
+INFO	2020-05-06 13:12:00	MergeSamFiles	Processed   114,000,000 records.  Elapsed time: 00:18:21s.  Time for last 1,000,000:   10s.  Last read position: scaffold152681_2462_scaffold152681,2462,f152626Z2462:474
+INFO	2020-05-06 13:12:11	MergeSamFiles	Processed   115,000,000 records.  Elapsed time: 00:18:32s.  Time for last 1,000,000:   11s.  Last read position: scaffold50781_6697_scaffold50781,6697,f50745Z6697:867
+INFO	2020-05-06 13:12:21	MergeSamFiles	Processed   116,000,000 records.  Elapsed time: 00:18:42s.  Time for last 1,000,000:    9s.  Last read position: scaffold413472_706_scaffold413472,706,f413145Z706:319
+INFO	2020-05-06 13:12:32	MergeSamFiles	Processed   117,000,000 records.  Elapsed time: 00:18:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold1896_116099_scaffold1896,116099,f1908Z116099:46,877
+INFO	2020-05-06 13:12:43	MergeSamFiles	Processed   118,000,000 records.  Elapsed time: 00:19:04s.  Time for last 1,000,000:   11s.  Last read position: scaffold3312_82737_scaffold3312,82737,f3359Z82737:27,872
+INFO	2020-05-06 13:12:53	MergeSamFiles	Processed   119,000,000 records.  Elapsed time: 00:19:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold1351109_242_scaffold1351109,242,f1347019Z242:112
+INFO	2020-05-06 13:13:03	MergeSamFiles	Processed   120,000,000 records.  Elapsed time: 00:19:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold1063444_294_scaffold1063444,294,f1061692Z294:31
+INFO	2020-05-06 13:13:13	MergeSamFiles	Processed   121,000,000 records.  Elapsed time: 00:19:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold26403_11541_scaffold26403,11541,f26329Z11541:7,890
+INFO	2020-05-06 13:13:22	MergeSamFiles	Processed   122,000,000 records.  Elapsed time: 00:19:43s.  Time for last 1,000,000:    8s.  Last read position: scaffold624_199317_scaffold624,199317,f567Z199317:181,139
+INFO	2020-05-06 13:13:30	MergeSamFiles	Processed   123,000,000 records.  Elapsed time: 00:19:51s.  Time for last 1,000,000:    8s.  Last read position: scaffold1001278_308_scaffold1001278,308,f1000816Z308:35
+INFO	2020-05-06 13:13:40	MergeSamFiles	Processed   124,000,000 records.  Elapsed time: 00:20:01s.  Time for last 1,000,000:   10s.  Last read position: scaffold3745_75290_scaffold3745,75290,f3793Z75290:28,362
+INFO	2020-05-06 13:13:50	MergeSamFiles	Processed   125,000,000 records.  Elapsed time: 00:20:11s.  Time for last 1,000,000:    9s.  Last read position: scaffold627763_463_scaffold627763,463,f628519Z463:22
+INFO	2020-05-06 13:14:01	MergeSamFiles	Processed   126,000,000 records.  Elapsed time: 00:20:22s.  Time for last 1,000,000:   10s.  Last read position: scaffold30089_10224_scaffold30089,10224,f30003Z10224:2,333
+INFO	2020-05-06 13:14:11	MergeSamFiles	Processed   127,000,000 records.  Elapsed time: 00:20:32s.  Time for last 1,000,000:    9s.  Last read position: scaffold3651_76848_scaffold3651,76848,f3607Z76848:38,219
+INFO	2020-05-06 13:14:21	MergeSamFiles	Processed   128,000,000 records.  Elapsed time: 00:20:42s.  Time for last 1,000,000:   10s.  Last read position: scaffold3033420_103_scaffold3033420,103,f3086881Z103:4
+INFO	2020-05-06 13:14:32	MergeSamFiles	Processed   129,000,000 records.  Elapsed time: 00:20:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold28027_10906_scaffold28027,10906,f27930Z10906:8,119
+INFO	2020-05-06 13:14:42	MergeSamFiles	Processed   130,000,000 records.  Elapsed time: 00:21:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold39769_8054_scaffold39769,8054,f39715Z8054:6,276
+INFO	2020-05-06 13:14:54	MergeSamFiles	Processed   131,000,000 records.  Elapsed time: 00:21:15s.  Time for last 1,000,000:   11s.  Last read position: scaffold1262210_256_scaffold1262210,256,f1261164Z256:157
+INFO	2020-05-06 13:15:04	MergeSamFiles	Processed   132,000,000 records.  Elapsed time: 00:21:25s.  Time for last 1,000,000:   10s.  Last read position: scaffold1655_126078_scaffold1655,126078,f1658Z126078:54,749
+INFO	2020-05-06 13:15:15	MergeSamFiles	Processed   133,000,000 records.  Elapsed time: 00:21:36s.  Time for last 1,000,000:   10s.  Last read position: scaffold40696_7899_scaffold40696,7899,f40636Z7899:985
+INFO	2020-05-06 13:15:26	MergeSamFiles	Processed   134,000,000 records.  Elapsed time: 00:21:47s.  Time for last 1,000,000:   11s.  Last read position: scaffold1539_130690_scaffold1539,130690,f1544Z130690:49,471
+INFO	2020-05-06 13:15:36	MergeSamFiles	Processed   135,000,000 records.  Elapsed time: 00:21:57s.  Time for last 1,000,000:    9s.  Last read position: scaffold193225_1851_scaffold193225,1851,f193217Z1851:1,554
+INFO	2020-05-06 13:15:46	MergeSamFiles	Processed   136,000,000 records.  Elapsed time: 00:22:07s.  Time for last 1,000,000:   10s.  Last read position: scaffold155_358069_scaffold155,358069,f145Z358069:325,053
+INFO	2020-05-06 13:15:56	MergeSamFiles	Processed   137,000,000 records.  Elapsed time: 00:22:17s.  Time for last 1,000,000:    9s.  Last read position: scaffold61090_5812_scaffold61090,5812,f61065Z5812:195
+INFO	2020-05-06 13:16:07	MergeSamFiles	Processed   138,000,000 records.  Elapsed time: 00:22:28s.  Time for last 1,000,000:   11s.  Last read position: scaffold385_248794_scaffold385,248794,f358Z248794:95,001
+INFO	2020-05-06 13:16:18	MergeSamFiles	Processed   139,000,000 records.  Elapsed time: 00:22:39s.  Time for last 1,000,000:   10s.  Last read position: scaffold372711_795_scaffold372711,795,f372808Z795:427
+INFO	2020-05-06 13:16:28	MergeSamFiles	Processed   140,000,000 records.  Elapsed time: 00:22:49s.  Time for last 1,000,000:   10s.  Last read position: scaffold258097_1267_scaffold258097,1267,f258116Z1267:287
+INFO	2020-05-06 13:16:39	MergeSamFiles	Processed   141,000,000 records.  Elapsed time: 00:23:00s.  Time for last 1,000,000:   11s.  Last read position: scaffold2517_133694_scaffold2517,126478,f2459Z98829k3a0m6597_r7559z27649:113,644
+INFO	2020-05-06 13:16:49	MergeSamFiles	Processed   142,000,000 records.  Elapsed time: 00:23:10s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:16:59	MergeSamFiles	Processed   143,000,000 records.  Elapsed time: 00:23:20s.  Time for last 1,000,000:   10s.  Last read position: scaffold67620_5356_scaffold67620,5356,f67581Z5356:522
+INFO	2020-05-06 13:17:09	MergeSamFiles	Processed   144,000,000 records.  Elapsed time: 00:23:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold664174_440_scaffold664174,440,f664503Z440:298
+INFO	2020-05-06 13:17:20	MergeSamFiles	Processed   145,000,000 records.  Elapsed time: 00:23:41s.  Time for last 1,000,000:   10s.  Last read position: scaffold510_218714_scaffold510,218714,f545Z218714:204,629
+INFO	2020-05-06 13:17:30	MergeSamFiles	Processed   146,000,000 records.  Elapsed time: 00:23:51s.  Time for last 1,000,000:    9s.  Last read position: scaffold3166_85528_scaffold3166,85528,f3187Z85528:36,093
+INFO	2020-05-06 13:17:40	MergeSamFiles	Processed   147,000,000 records.  Elapsed time: 00:24:01s.  Time for last 1,000,000:   10s.  Last read position: scaffold11115_32756_scaffold11115,32756,f11039Z32756:9,128
+INFO	2020-05-06 13:17:51	MergeSamFiles	Processed   148,000,000 records.  Elapsed time: 00:24:12s.  Time for last 1,000,000:   10s.  Last read position: scaffold1797794_201_scaffold1797794,201,f1781492Z201:60
+INFO	2020-05-06 13:18:01	MergeSamFiles	Processed   149,000,000 records.  Elapsed time: 00:24:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold319_266476_scaffold319,266476,f305Z266476:163,775
+INFO	2020-05-06 13:18:12	MergeSamFiles	Processed   150,000,000 records.  Elapsed time: 00:24:33s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:18:22	MergeSamFiles	Processed   151,000,000 records.  Elapsed time: 00:24:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold2904_90466_scaffold2904,90466,f3024Z90466:43,234
+INFO	2020-05-06 13:18:32	MergeSamFiles	Processed   152,000,000 records.  Elapsed time: 00:24:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold50662_6709_scaffold50662,6709,f50619Z6709:2,267
+INFO	2020-05-06 13:18:42	MergeSamFiles	Processed   153,000,000 records.  Elapsed time: 00:25:03s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:18:52	MergeSamFiles	Processed   154,000,000 records.  Elapsed time: 00:25:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold441036_658_scaffold441036,658,f440605Z658:174
+INFO	2020-05-06 13:19:03	MergeSamFiles	Processed   155,000,000 records.  Elapsed time: 00:25:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold6533_49447_scaffold6533,49447,f6498Z49447:14,208
+INFO	2020-05-06 13:19:13	MergeSamFiles	Processed   156,000,000 records.  Elapsed time: 00:25:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold1528_130959_scaffold1528,130959,f1508Z130959:97,918
+INFO	2020-05-06 13:19:24	MergeSamFiles	Processed   157,000,000 records.  Elapsed time: 00:25:45s.  Time for last 1,000,000:   11s.  Last read position: scaffold138267_2750_scaffold138267,2750,f138240Z2750:1
+INFO	2020-05-06 13:19:34	MergeSamFiles	Processed   158,000,000 records.  Elapsed time: 00:25:55s.  Time for last 1,000,000:    9s.  Last read position: scaffold630855_461_scaffold630855,461,f631291Z461:346
+INFO	2020-05-06 13:19:44	MergeSamFiles	Processed   159,000,000 records.  Elapsed time: 00:26:05s.  Time for last 1,000,000:   10s.  Last read position: scaffold9815_36771_scaffold9815,36771,f9746Z36771:12,035
+INFO	2020-05-06 13:19:52	MergeSamFiles	Processed   160,000,000 records.  Elapsed time: 00:26:13s.  Time for last 1,000,000:    7s.  Last read position: scaffold121369_3165_scaffold121369,3165,f121365Z3165:2,172
+INFO	2020-05-06 13:20:01	MergeSamFiles	Processed   161,000,000 records.  Elapsed time: 00:26:22s.  Time for last 1,000,000:    8s.  Last read position: scaffold1971_113651_scaffold1971,113651,f1941Z113651:31,008
+INFO	2020-05-06 13:20:08	MergeSamFiles	Processed   162,000,000 records.  Elapsed time: 00:26:29s.  Time for last 1,000,000:    7s.  Last read position: scaffold205588_1709_scaffold205588,1709,f205581Z1709:366
+INFO	2020-05-06 13:20:16	MergeSamFiles	Processed   163,000,000 records.  Elapsed time: 00:26:37s.  Time for last 1,000,000:    8s.  Last read position: scaffold162440_2290_scaffold162440,2290,f162449Z2290:2,008
+INFO	2020-05-06 13:20:25	MergeSamFiles	Processed   164,000,000 records.  Elapsed time: 00:26:46s.  Time for last 1,000,000:    8s.  Last read position: scaffold285267_1112_scaffold285267,1112,f285397Z1112:705
+INFO	2020-05-06 13:20:32	MergeSamFiles	Processed   165,000,000 records.  Elapsed time: 00:26:53s.  Time for last 1,000,000:    7s.  Last read position: scaffold218203_1582_scaffold218203,1582,f218387Z1582:665
+INFO	2020-05-06 13:20:41	MergeSamFiles	Processed   166,000,000 records.  Elapsed time: 00:27:02s.  Time for last 1,000,000:    8s.  Last read position: scaffold9676_37221_scaffold9676,37221,f9638Z37221:36,574
+INFO	2020-05-06 13:20:49	MergeSamFiles	Processed   167,000,000 records.  Elapsed time: 00:27:10s.  Time for last 1,000,000:    8s.  Last read position: scaffold156418_2393_scaffold156418,2393,f156417Z2393:156
+INFO	2020-05-06 13:20:58	MergeSamFiles	Processed   168,000,000 records.  Elapsed time: 00:27:19s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:21:06	MergeSamFiles	Processed   169,000,000 records.  Elapsed time: 00:27:27s.  Time for last 1,000,000:    7s.  Last read position: scaffold4288_67060_scaffold4288,67060,f4273Z67060:27,029
+INFO	2020-05-06 13:21:14	MergeSamFiles	Processed   170,000,000 records.  Elapsed time: 00:27:35s.  Time for last 1,000,000:    7s.  Last read position: scaffold824230_363_scaffold824230,363,f826028Z363:296
+INFO	2020-05-06 13:21:23	MergeSamFiles	Processed   171,000,000 records.  Elapsed time: 00:27:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold110_432682_scaffold110,432682,f80Z432682:416,552
+INFO	2020-05-06 13:21:30	MergeSamFiles	Processed   172,000,000 records.  Elapsed time: 00:27:51s.  Time for last 1,000,000:    7s.  Last read position: scaffold13367_26581_scaffold13367,26581,f13277Z26581:12,264
+INFO	2020-05-06 13:21:38	MergeSamFiles	Processed   173,000,000 records.  Elapsed time: 00:27:59s.  Time for last 1,000,000:    8s.  Last read position: scaffold2896_90569_scaffold2896,90569,f2813Z90569:78,870
+INFO	2020-05-06 13:21:46	MergeSamFiles	Processed   174,000,000 records.  Elapsed time: 00:28:07s.  Time for last 1,000,000:    7s.  Last read position: scaffold103_446184_scaffold103,446184,f109Z446184:274,454
+INFO	2020-05-06 13:21:53	MergeSamFiles	Processed   175,000,000 records.  Elapsed time: 00:28:14s.  Time for last 1,000,000:    7s.  Last read position: scaffold693_189592_scaffold693,189592,f616Z189592:91,048
+INFO	2020-05-06 13:22:01	MergeSamFiles	Processed   176,000,000 records.  Elapsed time: 00:28:22s.  Time for last 1,000,000:    7s.  Last read position: scaffold152916_2458_scaffold152916,2458,f152928Z2458:1,045
+INFO	2020-05-06 13:22:09	MergeSamFiles	Processed   177,000,000 records.  Elapsed time: 00:28:30s.  Time for last 1,000,000:    7s.  Last read position: scaffold2498_99413_scaffold2498,99413,f2488Z99413:82,780
+INFO	2020-05-06 13:22:17	MergeSamFiles	Processed   178,000,000 records.  Elapsed time: 00:28:38s.  Time for last 1,000,000:    8s.  Last read position: scaffold261503_1246_scaffold261503,1246,f261335Z1246:554
+INFO	2020-05-06 13:22:25	MergeSamFiles	Processed   179,000,000 records.  Elapsed time: 00:28:46s.  Time for last 1,000,000:    7s.  Last read position: scaffold649_195523_scaffold649,195523,f637Z195523:119,363
+INFO	2020-05-06 13:22:33	MergeSamFiles	Processed   180,000,000 records.  Elapsed time: 00:28:54s.  Time for last 1,000,000:    8s.  Last read position: scaffold1246903_258_scaffold1246903,258,f1249933Z258:182
+INFO	2020-05-06 13:22:41	MergeSamFiles	Processed   181,000,000 records.  Elapsed time: 00:29:02s.  Time for last 1,000,000:    7s.  Last read position: scaffold61_543827_scaffold61,543827,f4Z543827:475,141
+INFO	2020-05-06 13:22:49	MergeSamFiles	Processed   182,000,000 records.  Elapsed time: 00:29:10s.  Time for last 1,000,000:    8s.  Last read position: scaffold61776_5762_scaffold61776,5762,f61744Z5762:1,809
+INFO	2020-05-06 13:22:57	MergeSamFiles	Processed   183,000,000 records.  Elapsed time: 00:29:18s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2020-05-06 13:23:05	MergeSamFiles	Processed   184,000,000 records.  Elapsed time: 00:29:26s.  Time for last 1,000,000:    7s.  Last read position: scaffold407425_718_scaffold407425,718,f407254Z718:516
+INFO	2020-05-06 13:23:12	MergeSamFiles	Processed   185,000,000 records.  Elapsed time: 00:29:33s.  Time for last 1,000,000:    7s.  Last read position: scaffold41359_7807_scaffold41359,7807,f41285Z7807:5,577
+INFO	2020-05-06 13:23:20	MergeSamFiles	Processed   186,000,000 records.  Elapsed time: 00:29:41s.  Time for last 1,000,000:    7s.  Last read position: scaffold491_222152_scaffold491,222152,f491Z222152:203,656
+INFO	2020-05-06 13:23:27	MergeSamFiles	Processed   187,000,000 records.  Elapsed time: 00:29:48s.  Time for last 1,000,000:    7s.  Last read position: scaffold1616083_209_scaffold1616083,209,f1619021Z209:36
+INFO	2020-05-06 13:23:35	MergeSamFiles	Processed   188,000,000 records.  Elapsed time: 00:29:56s.  Time for last 1,000,000:    8s.  Last read position: scaffold200_316886_scaffold200,316886,f158Z316886:56,973
+INFO	2020-05-06 13:23:43	MergeSamFiles	Processed   189,000,000 records.  Elapsed time: 00:30:04s.  Time for last 1,000,000:    7s.  Last read position: scaffold2480244_112_scaffold2480244,112,f2474368Z112:32
+INFO	2020-05-06 13:23:52	MergeSamFiles	Processed   190,000,000 records.  Elapsed time: 00:30:13s.  Time for last 1,000,000:    8s.  Last read position: scaffold11853_30619_scaffold11853,30619,f11775Z30619:28,524
+INFO	2020-05-06 13:23:59	MergeSamFiles	Processed   191,000,000 records.  Elapsed time: 00:30:20s.  Time for last 1,000,000:    7s.  Last read position: scaffold1201705_266_scaffold1201705,266,f1205245Z266:146
+INFO	2020-05-06 13:24:08	MergeSamFiles	Processed   192,000,000 records.  Elapsed time: 00:30:29s.  Time for last 1,000,000:    8s.  Last read position: scaffold657674_444_scaffold657674,444,f656706Z444:226
+INFO	2020-05-06 13:24:15	MergeSamFiles	Processed   193,000,000 records.  Elapsed time: 00:30:36s.  Time for last 1,000,000:    7s.  Last read position: scaffold1428912_231_scaffold1428912,231,f1424512Z231:99
+INFO	2020-05-06 13:24:23	MergeSamFiles	Processed   194,000,000 records.  Elapsed time: 00:30:44s.  Time for last 1,000,000:    7s.  Last read position: scaffold1394602_235_scaffold1394602,235,f1394128Z235:10
+INFO	2020-05-06 13:24:30	MergeSamFiles	Processed   195,000,000 records.  Elapsed time: 00:30:51s.  Time for last 1,000,000:    7s.  Last read position: scaffold26897_11341_scaffold26897,11341,f26800Z11341:3,090
+INFO	2020-05-06 13:24:38	MergeSamFiles	Processed   196,000,000 records.  Elapsed time: 00:30:59s.  Time for last 1,000,000:    7s.  Last read position: scaffold358342_834_scaffold358342,834,f358283Z834:334
+INFO	2020-05-06 13:24:46	MergeSamFiles	Processed   197,000,000 records.  Elapsed time: 00:31:07s.  Time for last 1,000,000:    8s.  Last read position: scaffold132230_2888_scaffold132230,2888,f132197Z2888:294
+INFO	2020-05-06 13:24:55	MergeSamFiles	Processed   198,000,000 records.  Elapsed time: 00:31:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold67783_5345_scaffold67783,5345,f67767Z5345:4,918
+INFO	2020-05-06 13:25:06	MergeSamFiles	Processed   199,000,000 records.  Elapsed time: 00:31:27s.  Time for last 1,000,000:   10s.  Last read position: scaffold1877_117033_scaffold1877,117033,f1871Z117033:43,578
+INFO	2020-05-06 13:25:15	MergeSamFiles	Processed   200,000,000 records.  Elapsed time: 00:31:36s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:25:26	MergeSamFiles	Processed   201,000,000 records.  Elapsed time: 00:31:47s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:25:35	MergeSamFiles	Processed   202,000,000 records.  Elapsed time: 00:31:56s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:25:45	MergeSamFiles	Processed   203,000,000 records.  Elapsed time: 00:32:06s.  Time for last 1,000,000:   10s.  Last read position: scaffold15866_21438_scaffold15866,21438,f15858Z21438:4,440
+INFO	2020-05-06 13:25:56	MergeSamFiles	Processed   204,000,000 records.  Elapsed time: 00:32:17s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:26:05	MergeSamFiles	Processed   205,000,000 records.  Elapsed time: 00:32:26s.  Time for last 1,000,000:    9s.  Last read position: scaffold81248_4604_scaffold81248,4604,f81240Z4604:2,284
+INFO	2020-05-06 13:26:15	MergeSamFiles	Processed   206,000,000 records.  Elapsed time: 00:32:36s.  Time for last 1,000,000:    9s.  Last read position: scaffold369130_804_scaffold369130,804,f369170Z804:54
+INFO	2020-05-06 13:26:25	MergeSamFiles	Processed   207,000,000 records.  Elapsed time: 00:32:46s.  Time for last 1,000,000:    9s.  Last read position: scaffold439_122702_scaffold439,122702,f364Z122702:15,310
+INFO	2020-05-06 13:26:36	MergeSamFiles	Processed   208,000,000 records.  Elapsed time: 00:32:57s.  Time for last 1,000,000:   11s.  Last read position: */*
+INFO	2020-05-06 13:26:46	MergeSamFiles	Processed   209,000,000 records.  Elapsed time: 00:33:07s.  Time for last 1,000,000:    9s.  Last read position: scaffold93599_4060_scaffold93599,4060,f93559Z4060:43
+INFO	2020-05-06 13:26:56	MergeSamFiles	Processed   210,000,000 records.  Elapsed time: 00:33:17s.  Time for last 1,000,000:   10s.  Last read position: scaffold306331_1013_scaffold306331,1013,f306439Z1013:625
+INFO	2020-05-06 13:27:05	MergeSamFiles	Processed   211,000,000 records.  Elapsed time: 00:33:26s.  Time for last 1,000,000:    9s.  Last read position: scaffold935409_326_scaffold935409,326,f936318Z326:183
+INFO	2020-05-06 13:27:15	MergeSamFiles	Processed   212,000,000 records.  Elapsed time: 00:33:36s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:27:26	MergeSamFiles	Processed   213,000,000 records.  Elapsed time: 00:33:47s.  Time for last 1,000,000:   10s.  Last read position: scaffold147_367569_scaffold147,367569,f32Z367569:147,843
+INFO	2020-05-06 13:27:36	MergeSamFiles	Processed   214,000,000 records.  Elapsed time: 00:33:57s.  Time for last 1,000,000:    9s.  Last read position: scaffold1943145_199_scaffold1943145,199,f1942031Z199:110
+INFO	2020-05-06 13:27:46	MergeSamFiles	Processed   215,000,000 records.  Elapsed time: 00:34:07s.  Time for last 1,000,000:    9s.  Last read position: scaffold1839_118811_scaffold1839,118811,f1816Z118811:113,818
+INFO	2020-05-06 13:27:56	MergeSamFiles	Processed   216,000,000 records.  Elapsed time: 00:34:17s.  Time for last 1,000,000:   10s.  Last read position: scaffold1912_115476_scaffold1912,115476,f1892Z115476:37,928
+INFO	2020-05-06 13:28:07	MergeSamFiles	Processed   217,000,000 records.  Elapsed time: 00:34:28s.  Time for last 1,000,000:   10s.  Last read position: scaffold642130_453_scaffold642130,453,f642202Z453:300
+INFO	2020-05-06 13:28:16	MergeSamFiles	Processed   218,000,000 records.  Elapsed time: 00:34:37s.  Time for last 1,000,000:    9s.  Last read position: scaffold16_811240_scaffold16,811240,f59Z811240:634,578
+INFO	2020-05-06 13:28:27	MergeSamFiles	Processed   219,000,000 records.  Elapsed time: 00:34:48s.  Time for last 1,000,000:   10s.  Last read position: scaffold49096_6862_scaffold49096,6862,f49036Z6862:4,584
+INFO	2020-05-06 13:28:37	MergeSamFiles	Processed   220,000,000 records.  Elapsed time: 00:34:58s.  Time for last 1,000,000:   10s.  Last read position: scaffold102298_3741_scaffold102298,3741,f102282Z3741:3,252
+INFO	2020-05-06 13:28:47	MergeSamFiles	Processed   221,000,000 records.  Elapsed time: 00:35:08s.  Time for last 1,000,000:    9s.  Last read position: scaffold52503_6532_scaffold52503,6532,f52471Z6532:3,199
+INFO	2020-05-06 13:28:57	MergeSamFiles	Processed   222,000,000 records.  Elapsed time: 00:35:18s.  Time for last 1,000,000:   10s.  Last read position: scaffold1771_121434_scaffold1771,121434,f1729Z121434:6,288
+INFO	2020-05-06 13:29:07	MergeSamFiles	Processed   223,000,000 records.  Elapsed time: 00:35:28s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:29:19	MergeSamFiles	Processed   224,000,000 records.  Elapsed time: 00:35:40s.  Time for last 1,000,000:   11s.  Last read position: scaffold1157_148567_scaffold1157,148567,f1084Z148567:110,417
+INFO	2020-05-06 13:29:28	MergeSamFiles	Processed   225,000,000 records.  Elapsed time: 00:35:49s.  Time for last 1,000,000:    9s.  Last read position: scaffold112946_3401_scaffold112946,3401,f112916Z3401:2,227
+INFO	2020-05-06 13:29:38	MergeSamFiles	Processed   226,000,000 records.  Elapsed time: 00:35:59s.  Time for last 1,000,000:   10s.  Last read position: scaffold207215_1691_scaffold207215,1691,f207333Z1691:1,434
+INFO	2020-05-06 13:29:49	MergeSamFiles	Processed   227,000,000 records.  Elapsed time: 00:36:10s.  Time for last 1,000,000:   11s.  Last read position: scaffold59086_5967_scaffold59086,5967,f59042Z5967:5,405
+INFO	2020-05-06 13:29:59	MergeSamFiles	Processed   228,000,000 records.  Elapsed time: 00:36:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold1600966_210_scaffold1600966,210,f1604580Z210:43
+INFO	2020-05-06 13:30:09	MergeSamFiles	Processed   229,000,000 records.  Elapsed time: 00:36:30s.  Time for last 1,000,000:   10s.  Last read position: scaffold1622_127016_scaffold1622,127016,f1571Z127016:124,460
+INFO	2020-05-06 13:30:18	MergeSamFiles	Processed   230,000,000 records.  Elapsed time: 00:36:39s.  Time for last 1,000,000:    9s.  Last read position: scaffold263281_1235_scaffold263281,1235,f263339Z1235:628
+INFO	2020-05-06 13:30:29	MergeSamFiles	Processed   231,000,000 records.  Elapsed time: 00:36:50s.  Time for last 1,000,000:   10s.  Last read position: scaffold1613776_209_scaffold1613776,209,f1616272Z209:27
+INFO	2020-05-06 13:30:39	MergeSamFiles	Processed   232,000,000 records.  Elapsed time: 00:37:00s.  Time for last 1,000,000:    9s.  Last read position: scaffold19399_16446_scaffold19399,16446,f19285Z16446:15,707
+INFO	2020-05-06 13:30:49	MergeSamFiles	Processed   233,000,000 records.  Elapsed time: 00:37:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold1290890_251_scaffold1290890,251,f1291487Z251:111
+INFO	2020-05-06 13:31:00	MergeSamFiles	Processed   234,000,000 records.  Elapsed time: 00:37:21s.  Time for last 1,000,000:   11s.  Last read position: scaffold62087_5740_scaffold62087,5740,f62050Z5740:4,408
+INFO	2020-05-06 13:31:10	MergeSamFiles	Processed   235,000,000 records.  Elapsed time: 00:37:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold1550_130103_scaffold1550,130103,f1492Z130103:80,638
+INFO	2020-05-06 13:31:19	MergeSamFiles	Processed   236,000,000 records.  Elapsed time: 00:37:40s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:31:29	MergeSamFiles	Processed   237,000,000 records.  Elapsed time: 00:37:50s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:31:40	MergeSamFiles	Processed   238,000,000 records.  Elapsed time: 00:38:01s.  Time for last 1,000,000:   10s.  Last read position: scaffold334129_908_scaffold334129,908,f334168Z908:760
+INFO	2020-05-06 13:31:49	MergeSamFiles	Processed   239,000,000 records.  Elapsed time: 00:38:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold74212_4966_scaffold74212,4966,f74183Z4966:880
+INFO	2020-05-06 13:31:59	MergeSamFiles	Processed   240,000,000 records.  Elapsed time: 00:38:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold1421_135288_scaffold1421,135288,f1427Z135288:78,938
+INFO	2020-05-06 13:32:10	MergeSamFiles	Processed   241,000,000 records.  Elapsed time: 00:38:31s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:32:20	MergeSamFiles	Processed   242,000,000 records.  Elapsed time: 00:38:41s.  Time for last 1,000,000:    9s.  Last read position: scaffold7659_44500_scaffold7659,44500,f7549Z44500:1,132
+INFO	2020-05-06 13:32:29	MergeSamFiles	Processed   243,000,000 records.  Elapsed time: 00:38:50s.  Time for last 1,000,000:    9s.  Last read position: scaffold1043_155307_scaffold1043,155307,f1068Z155307:75,613
+INFO	2020-05-06 13:32:39	MergeSamFiles	Processed   244,000,000 records.  Elapsed time: 00:39:00s.  Time for last 1,000,000:    9s.  Last read position: scaffold7322_45839_scaffold7322,45839,f7245Z45839:11,754
+INFO	2020-05-06 13:32:50	MergeSamFiles	Processed   245,000,000 records.  Elapsed time: 00:39:11s.  Time for last 1,000,000:   10s.  Last read position: scaffold153_362205_scaffold153,362205,f175Z362205:132,340
+INFO	2020-05-06 13:32:59	MergeSamFiles	Processed   246,000,000 records.  Elapsed time: 00:39:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold18748_17170_scaffold18748,17170,f18660Z17170:11,656
+INFO	2020-05-06 13:33:09	MergeSamFiles	Processed   247,000,000 records.  Elapsed time: 00:39:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold82439_4548_scaffold82439,4548,f82406Z4548:1,773
+INFO	2020-05-06 13:33:19	MergeSamFiles	Processed   248,000,000 records.  Elapsed time: 00:39:40s.  Time for last 1,000,000:   10s.  Last read position: scaffold3666_76623_scaffold3666,76623,f3631Z76623:52,159
+INFO	2020-05-06 13:33:29	MergeSamFiles	Processed   249,000,000 records.  Elapsed time: 00:39:50s.  Time for last 1,000,000:    9s.  Last read position: scaffold1760_121909_scaffold1760,121909,f1716Z121909:46,847
+INFO	2020-05-06 13:33:39	MergeSamFiles	Processed   250,000,000 records.  Elapsed time: 00:40:00s.  Time for last 1,000,000:    9s.  Last read position: scaffold1144_149447_scaffold1144,149447,f4069Z149447:52,906
+INFO	2020-05-06 13:33:49	MergeSamFiles	Processed   251,000,000 records.  Elapsed time: 00:40:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold212638_1635_scaffold212638,1635,f212578Z1635:868
+INFO	2020-05-06 13:33:59	MergeSamFiles	Processed   252,000,000 records.  Elapsed time: 00:40:20s.  Time for last 1,000,000:   10s.  Last read position: scaffold1287543_251_scaffold1287543,251,f1292293Z251:131
+INFO	2020-05-06 13:34:09	MergeSamFiles	Processed   253,000,000 records.  Elapsed time: 00:40:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold84_491488_scaffold84,491488,f87Z491488:327,847
+INFO	2020-05-06 13:34:19	MergeSamFiles	Processed   254,000,000 records.  Elapsed time: 00:40:40s.  Time for last 1,000,000:    9s.  Last read position: scaffold1530716_218_scaffold1530716,218,f1528852Z218:66
+INFO	2020-05-06 13:34:30	MergeSamFiles	Processed   255,000,000 records.  Elapsed time: 00:40:51s.  Time for last 1,000,000:   11s.  Last read position: scaffold43913_7461_scaffold43913,7461,f43873Z7461:4,335
+INFO	2020-05-06 13:34:40	MergeSamFiles	Processed   256,000,000 records.  Elapsed time: 00:41:01s.  Time for last 1,000,000:    9s.  Last read position: scaffold1277_142755_scaffold1277,142755,f1239Z142755:32,323
+INFO	2020-05-06 13:34:50	MergeSamFiles	Processed   257,000,000 records.  Elapsed time: 00:41:11s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:34:59	MergeSamFiles	Processed   258,000,000 records.  Elapsed time: 00:41:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold2431_100867_scaffold2431,100867,f2519Z100867:22,478
+INFO	2020-05-06 13:35:10	MergeSamFiles	Processed   259,000,000 records.  Elapsed time: 00:41:31s.  Time for last 1,000,000:   10s.  Last read position: scaffold78449_4744_scaffold78449,4744,f78421Z4744:3,747
+INFO	2020-05-06 13:35:19	MergeSamFiles	Processed   260,000,000 records.  Elapsed time: 00:41:40s.  Time for last 1,000,000:    9s.  Last read position: scaffold37614_8424_scaffold37614,8424,f37545Z8424:3,312
+INFO	2020-05-06 13:35:29	MergeSamFiles	Processed   261,000,000 records.  Elapsed time: 00:41:50s.  Time for last 1,000,000:   10s.  Last read position: scaffold1987718_194_scaffold1987718,194,f1983488Z194:78
+INFO	2020-05-06 13:35:42	MergeSamFiles	Processed   262,000,000 records.  Elapsed time: 00:42:03s.  Time for last 1,000,000:   12s.  Last read position: scaffold39965_8018_scaffold39965,8018,f39905Z8018:1,044
+INFO	2020-05-06 13:35:51	MergeSamFiles	Processed   263,000,000 records.  Elapsed time: 00:42:12s.  Time for last 1,000,000:    9s.  Last read position: scaffold905006_335_scaffold905006,335,f905397Z335:154
+INFO	2020-05-06 13:36:01	MergeSamFiles	Processed   264,000,000 records.  Elapsed time: 00:42:22s.  Time for last 1,000,000:   10s.  Last read position: scaffold688_190562_scaffold688,190562,f675Z190562:123,550
+INFO	2020-05-06 13:36:11	MergeSamFiles	Processed   265,000,000 records.  Elapsed time: 00:42:32s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:36:23	MergeSamFiles	Processed   266,000,000 records.  Elapsed time: 00:42:44s.  Time for last 1,000,000:   11s.  Last read position: scaffold827_172948_scaffold827,172948,f852Z172948:170,283
+INFO	2020-05-06 13:36:32	MergeSamFiles	Processed   267,000,000 records.  Elapsed time: 00:42:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold60979_5821_scaffold60979,5821,f60952Z5821:1,408
+INFO	2020-05-06 13:36:42	MergeSamFiles	Processed   268,000,000 records.  Elapsed time: 00:43:03s.  Time for last 1,000,000:   10s.  Last read position: scaffold536203_539_scaffold536203,539,f536166Z539:250
+INFO	2020-05-06 13:36:56	MergeSamFiles	Processed   269,000,000 records.  Elapsed time: 00:43:17s.  Time for last 1,000,000:   13s.  Last read position: */*
+INFO	2020-05-06 13:37:05	MergeSamFiles	Processed   270,000,000 records.  Elapsed time: 00:43:26s.  Time for last 1,000,000:    9s.  Last read position: scaffold1055368_295_scaffold1055368,295,f1056571Z295:9
+INFO	2020-05-06 13:37:15	MergeSamFiles	Processed   271,000,000 records.  Elapsed time: 00:43:36s.  Time for last 1,000,000:   10s.  Last read position: scaffold239935_1397_scaffold239935,1397,f239977Z1397:918
+INFO	2020-05-06 13:37:25	MergeSamFiles	Processed   272,000,000 records.  Elapsed time: 00:43:46s.  Time for last 1,000,000:    9s.  Last read position: scaffold2011_112122_scaffold2011,112122,f2056Z112122:90,547
+INFO	2020-05-06 13:37:37	MergeSamFiles	Processed   273,000,000 records.  Elapsed time: 00:43:58s.  Time for last 1,000,000:   12s.  Last read position: */*
+INFO	2020-05-06 13:37:47	MergeSamFiles	Processed   274,000,000 records.  Elapsed time: 00:44:08s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:37:56	MergeSamFiles	Processed   275,000,000 records.  Elapsed time: 00:44:17s.  Time for last 1,000,000:    9s.  Last read position: scaffold129171_2961_scaffold129171,2961,f129127Z2961:540
+INFO	2020-05-06 13:38:09	MergeSamFiles	Processed   276,000,000 records.  Elapsed time: 00:44:30s.  Time for last 1,000,000:   12s.  Last read position: scaffold1849_118272_scaffold1849,118272,f1824Z118272:23,807
+INFO	2020-05-06 13:38:19	MergeSamFiles	Processed   277,000,000 records.  Elapsed time: 00:44:40s.  Time for last 1,000,000:    9s.  Last read position: scaffold21041_14894_scaffold21041,14894,f20928Z14894:9,422
+INFO	2020-05-06 13:38:29	MergeSamFiles	Processed   278,000,000 records.  Elapsed time: 00:44:50s.  Time for last 1,000,000:    9s.  Last read position: scaffold23475_13121_scaffold23475,13121,f23466Z13121:8,822
+INFO	2020-05-06 13:38:38	MergeSamFiles	Processed   279,000,000 records.  Elapsed time: 00:44:59s.  Time for last 1,000,000:    9s.  Last read position: scaffold18782_17123_scaffold18782,17123,f18669Z17123:2,571
+INFO	2020-05-06 13:38:49	MergeSamFiles	Processed   280,000,000 records.  Elapsed time: 00:45:10s.  Time for last 1,000,000:   10s.  Last read position: scaffold628_198549_scaffold628,198549,f605Z198549:94,599
+INFO	2020-05-06 13:38:59	MergeSamFiles	Processed   281,000,000 records.  Elapsed time: 00:45:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold3843_73727_scaffold3843,73727,f3884Z73727:69,177
+INFO	2020-05-06 13:39:09	MergeSamFiles	Processed   282,000,000 records.  Elapsed time: 00:45:30s.  Time for last 1,000,000:   10s.  Last read position: scaffold944_164489_scaffold944,164489,f902Z164489:18,176
+INFO	2020-05-06 13:39:20	MergeSamFiles	Processed   283,000,000 records.  Elapsed time: 00:45:41s.  Time for last 1,000,000:   11s.  Last read position: scaffold1722620_201_scaffold1722620,201,f1764113Z201:31
+INFO	2020-05-06 13:39:30	MergeSamFiles	Processed   284,000,000 records.  Elapsed time: 00:45:51s.  Time for last 1,000,000:    9s.  Last read position: scaffold4359_66138_scaffold4359,66138,f4359Z66138:28,667
+INFO	2020-05-06 13:39:40	MergeSamFiles	Processed   285,000,000 records.  Elapsed time: 00:46:01s.  Time for last 1,000,000:   10s.  Last read position: scaffold136065_2798_scaffold136065,2798,f136062Z2798:1,653
+INFO	2020-05-06 13:39:50	MergeSamFiles	Processed   286,000,000 records.  Elapsed time: 00:46:11s.  Time for last 1,000,000:    9s.  Last read position: scaffold2517_133694_scaffold2517,126478,f2459Z98829k3a0m6597_r7559z27649:64,042
+INFO	2020-05-06 13:40:00	MergeSamFiles	Processed   287,000,000 records.  Elapsed time: 00:46:21s.  Time for last 1,000,000:   10s.  Last read position: scaffold127881_2994_scaffold127881,2994,f127844Z2994:236
+INFO	2020-05-06 13:40:10	MergeSamFiles	Processed   288,000,000 records.  Elapsed time: 00:46:31s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:40:20	MergeSamFiles	Processed   289,000,000 records.  Elapsed time: 00:46:41s.  Time for last 1,000,000:   10s.  Last read position: scaffold1628_126855_scaffold1628,126855,f1642Z126855:20,338
+INFO	2020-05-06 13:40:31	MergeSamFiles	Processed   290,000,000 records.  Elapsed time: 00:46:52s.  Time for last 1,000,000:   11s.  Last read position: scaffold2627_96460_scaffold2627,96460,f2614Z96460:30,964
+INFO	2020-05-06 13:40:41	MergeSamFiles	Processed   291,000,000 records.  Elapsed time: 00:47:02s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:40:51	MergeSamFiles	Processed   292,000,000 records.  Elapsed time: 00:47:12s.  Time for last 1,000,000:    9s.  Last read position: scaffold1980067_195_scaffold1980067,195,f1980862Z195:36
+INFO	2020-05-06 13:41:01	MergeSamFiles	Processed   293,000,000 records.  Elapsed time: 00:47:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold95883_3972_scaffold95883,3972,f95877Z3972:1,288
+INFO	2020-05-06 13:41:11	MergeSamFiles	Processed   294,000,000 records.  Elapsed time: 00:47:32s.  Time for last 1,000,000:   10s.  Last read position: scaffold797149_374_scaffold797149,374,f795953Z374:274
+INFO	2020-05-06 13:41:21	MergeSamFiles	Processed   295,000,000 records.  Elapsed time: 00:47:42s.  Time for last 1,000,000:    9s.  Last read position: scaffold25739_11845_scaffold25739,11845,f25856Z11845:7,758
+INFO	2020-05-06 13:41:31	MergeSamFiles	Processed   296,000,000 records.  Elapsed time: 00:47:52s.  Time for last 1,000,000:   10s.  Last read position: scaffold2878_90838_scaffold2878,90838,f2856Z90838:27,661
+INFO	2020-05-06 13:41:42	MergeSamFiles	Processed   297,000,000 records.  Elapsed time: 00:48:03s.  Time for last 1,000,000:   11s.  Last read position: */*
+INFO	2020-05-06 13:41:52	MergeSamFiles	Processed   298,000,000 records.  Elapsed time: 00:48:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold2680_95203_scaffold2680,95203,f2656Z95203:83,007
+INFO	2020-05-06 13:42:02	MergeSamFiles	Processed   299,000,000 records.  Elapsed time: 00:48:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold137836_2759_scaffold137836,2759,f137836Z2759:2,437
+INFO	2020-05-06 13:42:11	MergeSamFiles	Processed   300,000,000 records.  Elapsed time: 00:48:32s.  Time for last 1,000,000:    9s.  Last read position: scaffold31978_9665_scaffold31978,9665,f31880Z9665:2,334
+INFO	2020-05-06 13:42:23	MergeSamFiles	Processed   301,000,000 records.  Elapsed time: 00:48:44s.  Time for last 1,000,000:   11s.  Last read position: scaffold4281_67128_scaffold4281,67128,f4318Z67128:26,771
+INFO	2020-05-06 13:42:32	MergeSamFiles	Processed   302,000,000 records.  Elapsed time: 00:48:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold811_174610_scaffold811,174610,f765Z174610:155,578
+INFO	2020-05-06 13:42:42	MergeSamFiles	Processed   303,000,000 records.  Elapsed time: 00:49:03s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:42:52	MergeSamFiles	Processed   304,000,000 records.  Elapsed time: 00:49:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold14458_24117_scaffold14458,24117,f14497Z24117:8,899
+INFO	2020-05-06 13:43:03	MergeSamFiles	Processed   305,000,000 records.  Elapsed time: 00:49:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold5849_52838_scaffold5849,52838,f5804Z52838:8,746
+INFO	2020-05-06 13:43:13	MergeSamFiles	Processed   306,000,000 records.  Elapsed time: 00:49:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold4841_59633_scaffold4841,59633,f4842Z59633:32,632
+INFO	2020-05-06 13:43:22	MergeSamFiles	Processed   307,000,000 records.  Elapsed time: 00:49:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold147_367569_scaffold147,367569,f32Z367569:124,734
+INFO	2020-05-06 13:43:33	MergeSamFiles	Processed   308,000,000 records.  Elapsed time: 00:49:54s.  Time for last 1,000,000:   10s.  Last read position: scaffold1837_118875_scaffold1837,118875,f1798Z118875:31,138
+INFO	2020-05-06 13:43:42	MergeSamFiles	Processed   309,000,000 records.  Elapsed time: 00:50:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold543071_532_scaffold543071,532,f543347Z532:110
+INFO	2020-05-06 13:43:52	MergeSamFiles	Processed   310,000,000 records.  Elapsed time: 00:50:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold52233_6561_scaffold52233,6561,f52194Z6561:1,015
+INFO	2020-05-06 13:44:04	MergeSamFiles	Processed   311,000,000 records.  Elapsed time: 00:50:25s.  Time for last 1,000,000:   11s.  Last read position: scaffold369_253383_scaffold369,253383,f525Z253383:214,588
+INFO	2020-05-06 13:44:13	MergeSamFiles	Processed   312,000,000 records.  Elapsed time: 00:50:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold4295_66955_scaffold4295,66955,f4307Z66955:53,289
+INFO	2020-05-06 13:44:23	MergeSamFiles	Processed   313,000,000 records.  Elapsed time: 00:50:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold1375654_238_scaffold1375654,238,f1372636Z238:107
+INFO	2020-05-06 13:44:32	MergeSamFiles	Processed   314,000,000 records.  Elapsed time: 00:50:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold1625213_208_scaffold1625213,208,f1620507Z208:131
+INFO	2020-05-06 13:44:43	MergeSamFiles	Processed   315,000,000 records.  Elapsed time: 00:51:04s.  Time for last 1,000,000:   10s.  Last read position: scaffold7779_43969_scaffold7779,43969,f7764Z43969:13,654
+INFO	2020-05-06 13:44:52	MergeSamFiles	Processed   316,000,000 records.  Elapsed time: 00:51:13s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:45:02	MergeSamFiles	Processed   317,000,000 records.  Elapsed time: 00:51:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold3436817_101_scaffold3436817,101,f3796675Z101:19
+INFO	2020-05-06 13:45:12	MergeSamFiles	Processed   318,000,000 records.  Elapsed time: 00:51:33s.  Time for last 1,000,000:   10s.  Last read position: scaffold463445_624_scaffold463445,624,f463695Z624:31
+INFO	2020-05-06 13:45:22	MergeSamFiles	Processed   319,000,000 records.  Elapsed time: 00:51:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold29088_10544_scaffold29088,10544,f28996Z10544:9,326
+INFO	2020-05-06 13:45:32	MergeSamFiles	Processed   320,000,000 records.  Elapsed time: 00:51:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold42425_7659_scaffold42425,7659,f42361Z7659:450
+INFO	2020-05-06 13:45:41	MergeSamFiles	Processed   321,000,000 records.  Elapsed time: 00:52:02s.  Time for last 1,000,000:    9s.  Last read position: scaffold1818_119480_scaffold1818,119480,f1817Z119480:102,591
+INFO	2020-05-06 13:45:52	MergeSamFiles	Processed   322,000,000 records.  Elapsed time: 00:52:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold531_213464_scaffold531,213464,f481Z213464:158,711
+INFO	2020-05-06 13:46:01	MergeSamFiles	Processed   323,000,000 records.  Elapsed time: 00:52:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold1124364_281_scaffold1124364,281,f1125620Z281:101
+INFO	2020-05-06 13:46:12	MergeSamFiles	Processed   324,000,000 records.  Elapsed time: 00:52:33s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 13:46:24	MergeSamFiles	Processed   325,000,000 records.  Elapsed time: 00:52:45s.  Time for last 1,000,000:   12s.  Last read position: */*
+INFO	2020-05-06 13:46:33	MergeSamFiles	Processed   326,000,000 records.  Elapsed time: 00:52:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold101213_3779_scaffold101213,3779,f101210Z3779:2,389
+INFO	2020-05-06 13:46:43	MergeSamFiles	Processed   327,000,000 records.  Elapsed time: 00:53:04s.  Time for last 1,000,000:    9s.  Last read position: scaffold2013614_185_scaffold2013614,185,f2013044Z185:38
+INFO	2020-05-06 13:46:53	MergeSamFiles	Processed   328,000,000 records.  Elapsed time: 00:53:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold111483_3444_scaffold111483,3444,f111466Z3444:1,520
+INFO	2020-05-06 13:47:03	MergeSamFiles	Processed   329,000,000 records.  Elapsed time: 00:53:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold1049_154507_scaffold1049,154507,f1110Z154507:71,485
+INFO	2020-05-06 13:47:13	MergeSamFiles	Processed   330,000,000 records.  Elapsed time: 00:53:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold62506_5711_scaffold62506,5711,f62447Z5711:5,561
+INFO	2020-05-06 13:47:22	MergeSamFiles	Processed   331,000,000 records.  Elapsed time: 00:53:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold176205_2075_scaffold176205,2075,f176110Z2075:94
+INFO	2020-05-06 13:47:34	MergeSamFiles	Processed   332,000,000 records.  Elapsed time: 00:53:55s.  Time for last 1,000,000:   11s.  Last read position: scaffold1497_132048_scaffold1497,132048,f1517Z132048:31,991
+INFO	2020-05-06 13:47:44	MergeSamFiles	Processed   333,000,000 records.  Elapsed time: 00:54:05s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:47:54	MergeSamFiles	Processed   334,000,000 records.  Elapsed time: 00:54:15s.  Time for last 1,000,000:    9s.  Last read position: scaffold2015389_183_scaffold2015389,183,f2015486Z183:47
+INFO	2020-05-06 13:48:03	MergeSamFiles	Processed   335,000,000 records.  Elapsed time: 00:54:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold329679_923_scaffold329679,923,f329781Z923:541
+INFO	2020-05-06 13:48:14	MergeSamFiles	Processed   336,000,000 records.  Elapsed time: 00:54:35s.  Time for last 1,000,000:   10s.  Last read position: scaffold885507_342_scaffold885507,342,f884980Z342:1
+INFO	2020-05-06 13:48:23	MergeSamFiles	Processed   337,000,000 records.  Elapsed time: 00:54:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold3894_64172_scaffold3894,64172,f3850Z64172:48,672
+INFO	2020-05-06 13:48:33	MergeSamFiles	Processed   338,000,000 records.  Elapsed time: 00:54:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold11103_32804_scaffold11103,32804,f11019Z32804:6,544
+INFO	2020-05-06 13:48:44	MergeSamFiles	Processed   339,000,000 records.  Elapsed time: 00:55:05s.  Time for last 1,000,000:   10s.  Last read position: scaffold15801_21552_scaffold15801,21552,f15671Z21552:8,030
+INFO	2020-05-06 13:48:53	MergeSamFiles	Processed   340,000,000 records.  Elapsed time: 00:55:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold2987095_103_scaffold2987095,103,f3027615Z103:7
+INFO	2020-05-06 13:49:03	MergeSamFiles	Processed   341,000,000 records.  Elapsed time: 00:55:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold3686_76221_scaffold3686,76221,f3642Z76221:67,661
+INFO	2020-05-06 13:49:13	MergeSamFiles	Processed   342,000,000 records.  Elapsed time: 00:55:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold532227_543_scaffold532227,543,f532131Z543:373
+INFO	2020-05-06 13:49:23	MergeSamFiles	Processed   343,000,000 records.  Elapsed time: 00:55:44s.  Time for last 1,000,000:   10s.  Last read position: scaffold915_166189_scaffold915,166189,f912Z166189:105,269
+INFO	2020-05-06 13:49:32	MergeSamFiles	Processed   344,000,000 records.  Elapsed time: 00:55:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold1698_124101_scaffold1698,124101,f1705Z124101:56,254
+INFO	2020-05-06 13:49:42	MergeSamFiles	Processed   345,000,000 records.  Elapsed time: 00:56:03s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:49:53	MergeSamFiles	Processed   346,000,000 records.  Elapsed time: 00:56:14s.  Time for last 1,000,000:   10s.  Last read position: scaffold5341_53519_scaffold5341,53519,f5276Z53519:12,570
+INFO	2020-05-06 13:50:02	MergeSamFiles	Processed   347,000,000 records.  Elapsed time: 00:56:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold291_276291_scaffold291,276291,f250Z276291:192,130
+INFO	2020-05-06 13:50:12	MergeSamFiles	Processed   348,000,000 records.  Elapsed time: 00:56:33s.  Time for last 1,000,000:    9s.  Last read position: scaffold496_221616_scaffold496,221616,f588Z221616:168,387
+INFO	2020-05-06 13:50:22	MergeSamFiles	Processed   349,000,000 records.  Elapsed time: 00:56:43s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:50:33	MergeSamFiles	Processed   350,000,000 records.  Elapsed time: 00:56:54s.  Time for last 1,000,000:   11s.  Last read position: scaffold148706_2537_scaffold148706,2537,f148720Z2537:1,133
+INFO	2020-05-06 13:50:42	MergeSamFiles	Processed   351,000,000 records.  Elapsed time: 00:57:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold132363_2885_scaffold132363,2885,f132336Z2885:1,749
+INFO	2020-05-06 13:50:52	MergeSamFiles	Processed   352,000,000 records.  Elapsed time: 00:57:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold145440_2600_scaffold145440,2600,f145431Z2600:2,516
+INFO	2020-05-06 13:51:03	MergeSamFiles	Processed   353,000,000 records.  Elapsed time: 00:57:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold192296_1863_scaffold192296,1863,f192270Z1863:181
+INFO	2020-05-06 13:51:12	MergeSamFiles	Processed   354,000,000 records.  Elapsed time: 00:57:33s.  Time for last 1,000,000:    9s.  Last read position: scaffold23192_13281_scaffold23192,13281,f23199Z13281:592
+INFO	2020-05-06 13:51:22	MergeSamFiles	Processed   355,000,000 records.  Elapsed time: 00:57:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold652065_447_scaffold652065,447,f653212Z447:287
+INFO	2020-05-06 13:51:32	MergeSamFiles	Processed   356,000,000 records.  Elapsed time: 00:57:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold1102_151530_scaffold1102,151530,f1138Z151530:39,618
+INFO	2020-05-06 13:51:42	MergeSamFiles	Processed   357,000,000 records.  Elapsed time: 00:58:03s.  Time for last 1,000,000:   10s.  Last read position: scaffold275413_1164_scaffold275413,1164,f275463Z1164:872
+INFO	2020-05-06 13:51:52	MergeSamFiles	Processed   358,000,000 records.  Elapsed time: 00:58:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold173634_2113_scaffold173634,2113,f173635Z2113:1,714
+INFO	2020-05-06 13:52:02	MergeSamFiles	Processed   359,000,000 records.  Elapsed time: 00:58:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold97_459992_scaffold97,459992,f43Z459992:182,072
+INFO	2020-05-06 13:52:13	MergeSamFiles	Processed   360,000,000 records.  Elapsed time: 00:58:34s.  Time for last 1,000,000:   11s.  Last read position: scaffold114200_3363_scaffold114200,3363,f114198Z3363:2,300
+INFO	2020-05-06 13:52:23	MergeSamFiles	Processed   361,000,000 records.  Elapsed time: 00:58:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold1365_137767_scaffold1365,137767,f1328Z137767:18,860
+INFO	2020-05-06 13:52:33	MergeSamFiles	Processed   362,000,000 records.  Elapsed time: 00:58:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold272_283276_scaffold272,283276,f251Z283276:74,733
+INFO	2020-05-06 13:52:42	MergeSamFiles	Processed   363,000,000 records.  Elapsed time: 00:59:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold65_528921_scaffold65,528921,f140Z528921:159,960
+INFO	2020-05-06 13:52:53	MergeSamFiles	Processed   364,000,000 records.  Elapsed time: 00:59:14s.  Time for last 1,000,000:   10s.  Last read position: scaffold4520_63975_scaffold4520,63975,f4516Z63975:57,652
+INFO	2020-05-06 13:53:02	MergeSamFiles	Processed   365,000,000 records.  Elapsed time: 00:59:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold12643_28413_scaffold12643,28413,f12609Z28413:23,474
+INFO	2020-05-06 13:53:12	MergeSamFiles	Processed   366,000,000 records.  Elapsed time: 00:59:33s.  Time for last 1,000,000:   10s.  Last read position: scaffold26452_11524_scaffold26452,11524,f26357Z11524:6,737
+INFO	2020-05-06 13:53:23	MergeSamFiles	Processed   367,000,000 records.  Elapsed time: 00:59:44s.  Time for last 1,000,000:   10s.  Last read position: scaffold205154_1713_scaffold205154,1713,f205178Z1713:1
+INFO	2020-05-06 13:53:32	MergeSamFiles	Processed   368,000,000 records.  Elapsed time: 00:59:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold481396_600_scaffold481396,600,f481088Z600:21
+INFO	2020-05-06 13:53:42	MergeSamFiles	Processed   369,000,000 records.  Elapsed time: 01:00:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold2033_111415_scaffold2033,111415,f2179Z111415:14,011
+INFO	2020-05-06 13:53:52	MergeSamFiles	Processed   370,000,000 records.  Elapsed time: 01:00:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold56_559253_scaffold56,559253,f10Z559253:301,567
+INFO	2020-05-06 13:54:03	MergeSamFiles	Processed   371,000,000 records.  Elapsed time: 01:00:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold58552_6009_scaffold58552,6009,f58517Z6009:552
+INFO	2020-05-06 13:54:13	MergeSamFiles	Processed   372,000,000 records.  Elapsed time: 01:00:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold1367892_239_scaffold1367892,239,f1368177Z239:26
+INFO	2020-05-06 13:54:23	MergeSamFiles	Processed   373,000,000 records.  Elapsed time: 01:00:44s.  Time for last 1,000,000:   10s.  Last read position: scaffold532401_542_scaffold532401,542,f533153Z542:370
+INFO	2020-05-06 13:54:33	MergeSamFiles	Processed   374,000,000 records.  Elapsed time: 01:00:54s.  Time for last 1,000,000:   10s.  Last read position: scaffold1144_149447_scaffold1144,149447,f4069Z149447:51,616
+INFO	2020-05-06 13:54:43	MergeSamFiles	Processed   375,000,000 records.  Elapsed time: 01:01:04s.  Time for last 1,000,000:    9s.  Last read position: scaffold543115_532_scaffold543115,532,f542464Z532:91
+INFO	2020-05-06 13:54:53	MergeSamFiles	Processed   376,000,000 records.  Elapsed time: 01:01:14s.  Time for last 1,000,000:   10s.  Last read position: scaffold441811_656_scaffold441811,656,f441865Z656:379
+INFO	2020-05-06 13:55:03	MergeSamFiles	Processed   377,000,000 records.  Elapsed time: 01:01:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold2074_81249_scaffold2074,81249,f2009Z81249:977
+INFO	2020-05-06 13:55:13	MergeSamFiles	Processed   378,000,000 records.  Elapsed time: 01:01:34s.  Time for last 1,000,000:   10s.  Last read position: scaffold259_288744_scaffold259,288744,f258Z288744:70,086
+INFO	2020-05-06 13:55:23	MergeSamFiles	Processed   379,000,000 records.  Elapsed time: 01:01:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold6505_49571_scaffold6505,49571,f6443Z49571:20,624
+INFO	2020-05-06 13:55:33	MergeSamFiles	Processed   380,000,000 records.  Elapsed time: 01:01:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold73287_5018_scaffold73287,5018,f73259Z5018:1,632
+INFO	2020-05-06 13:55:44	MergeSamFiles	Processed   381,000,000 records.  Elapsed time: 01:02:05s.  Time for last 1,000,000:   11s.  Last read position: scaffold11101_32807_scaffold11101,32807,f11088Z32807:31,704
+INFO	2020-05-06 13:55:54	MergeSamFiles	Processed   382,000,000 records.  Elapsed time: 01:02:15s.  Time for last 1,000,000:    9s.  Last read position: scaffold4110_69757_scaffold4110,69757,f4066Z69757:54,423
+INFO	2020-05-06 13:56:04	MergeSamFiles	Processed   383,000,000 records.  Elapsed time: 01:02:25s.  Time for last 1,000,000:    9s.  Last read position: scaffold21224_14747_scaffold21224,14747,f21336Z14747:14,173
+INFO	2020-05-06 13:56:13	MergeSamFiles	Processed   384,000,000 records.  Elapsed time: 01:02:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold680210_430_scaffold680210,430,f680649Z430:13
+INFO	2020-05-06 13:56:24	MergeSamFiles	Processed   385,000,000 records.  Elapsed time: 01:02:45s.  Time for last 1,000,000:   11s.  Last read position: scaffold130324_2933_scaffold130324,2933,f130286Z2933:1,933
+INFO	2020-05-06 13:56:34	MergeSamFiles	Processed   386,000,000 records.  Elapsed time: 01:02:55s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:56:44	MergeSamFiles	Processed   387,000,000 records.  Elapsed time: 01:03:05s.  Time for last 1,000,000:    9s.  Last read position: scaffold263247_1235_scaffold263247,1235,f263549Z1235:725
+INFO	2020-05-06 13:56:54	MergeSamFiles	Processed   388,000,000 records.  Elapsed time: 01:03:15s.  Time for last 1,000,000:   10s.  Last read position: scaffold186528_1934_scaffold186528,1934,f186487Z1934:966
+INFO	2020-05-06 13:57:03	MergeSamFiles	Processed   389,000,000 records.  Elapsed time: 01:03:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold24082_12760_scaffold24082,12760,f23972Z12760:6,349
+INFO	2020-05-06 13:57:14	MergeSamFiles	Processed   390,000,000 records.  Elapsed time: 01:03:35s.  Time for last 1,000,000:   10s.  Last read position: scaffold3988_71559_scaffold3988,71559,f3924Z71559:54,035
+INFO	2020-05-06 13:57:23	MergeSamFiles	Processed   391,000,000 records.  Elapsed time: 01:03:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold146330_2584_scaffold146330,2584,f146591Z2584:2,127
+INFO	2020-05-06 13:57:35	MergeSamFiles	Processed   392,000,000 records.  Elapsed time: 01:03:56s.  Time for last 1,000,000:   11s.  Last read position: scaffold2025_111638_scaffold2025,111638,f2046Z111638:82,373
+INFO	2020-05-06 13:57:45	MergeSamFiles	Processed   393,000,000 records.  Elapsed time: 01:04:06s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:57:55	MergeSamFiles	Processed   394,000,000 records.  Elapsed time: 01:04:16s.  Time for last 1,000,000:   10s.  Last read position: scaffold17609_18626_scaffold17609,18626,f17617Z18626:18,416
+INFO	2020-05-06 13:58:06	MergeSamFiles	Processed   395,000,000 records.  Elapsed time: 01:04:27s.  Time for last 1,000,000:   10s.  Last read position: scaffold77517_4790_scaffold77517,4790,f77485Z4790:2,585
+INFO	2020-05-06 13:58:15	MergeSamFiles	Processed   396,000,000 records.  Elapsed time: 01:04:36s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 13:58:26	MergeSamFiles	Processed   397,000,000 records.  Elapsed time: 01:04:47s.  Time for last 1,000,000:   10s.  Last read position: scaffold4432_65159_scaffold4432,65159,f4496Z65159:72,334
+INFO	2020-05-06 13:58:35	MergeSamFiles	Processed   398,000,000 records.  Elapsed time: 01:04:56s.  Time for last 1,000,000:    9s.  Last read position: scaffold877173_344_scaffold877173,344,f877661Z344:203
+INFO	2020-05-06 13:58:45	MergeSamFiles	Processed   399,000,000 records.  Elapsed time: 01:05:06s.  Time for last 1,000,000:   10s.  Last read position: scaffold93658_4058_scaffold93658,4058,f93621Z4058:2,001
+INFO	2020-05-06 13:58:55	MergeSamFiles	Processed   400,000,000 records.  Elapsed time: 01:05:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold729026_404_scaffold729026,404,f729596Z404:153
+INFO	2020-05-06 13:59:05	MergeSamFiles	Processed   401,000,000 records.  Elapsed time: 01:05:26s.  Time for last 1,000,000:   10s.  Last read position: scaffold376462_786_scaffold376462,786,f376375Z786:199
+INFO	2020-05-06 13:59:16	MergeSamFiles	Processed   402,000,000 records.  Elapsed time: 01:05:37s.  Time for last 1,000,000:   10s.  Last read position: scaffold70892_5159_scaffold70892,5159,f70865Z5159:546
+INFO	2020-05-06 13:59:25	MergeSamFiles	Processed   403,000,000 records.  Elapsed time: 01:05:46s.  Time for last 1,000,000:    9s.  Last read position: scaffold373742_793_scaffold373742,793,f373537Z793:1
+INFO	2020-05-06 13:59:35	MergeSamFiles	Processed   404,000,000 records.  Elapsed time: 01:05:56s.  Time for last 1,000,000:   10s.  Last read position: scaffold4225_68016_scaffold4225,68016,f4242Z68016:23,534
+INFO	2020-05-06 13:59:47	MergeSamFiles	Processed   405,000,000 records.  Elapsed time: 01:06:08s.  Time for last 1,000,000:   11s.  Last read position: scaffold179784_2024_scaffold179784,2024,f179749Z2024:81
+INFO	2020-05-06 14:00:00	MergeSamFiles	Processed   406,000,000 records.  Elapsed time: 01:06:21s.  Time for last 1,000,000:   13s.  Last read position: scaffold1766_121530_scaffold1766,121530,f1734Z121530:17,063
+INFO	2020-05-06 14:00:11	MergeSamFiles	Processed   407,000,000 records.  Elapsed time: 01:06:32s.  Time for last 1,000,000:   10s.  Last read position: scaffold1772_121384_scaffold1772,121384,f1739Z121384:31,524
+INFO	2020-05-06 14:00:21	MergeSamFiles	Processed   408,000,000 records.  Elapsed time: 01:06:42s.  Time for last 1,000,000:   10s.  Last read position: scaffold436192_665_scaffold436192,665,f436422Z665:125
+INFO	2020-05-06 14:00:31	MergeSamFiles	Processed   409,000,000 records.  Elapsed time: 01:06:52s.  Time for last 1,000,000:   10s.  Last read position: scaffold137730_2762_scaffold137730,2762,f137710Z2762:1,669
+INFO	2020-05-06 14:00:41	MergeSamFiles	Processed   410,000,000 records.  Elapsed time: 01:07:02s.  Time for last 1,000,000:    9s.  Last read position: scaffold847927_355_scaffold847927,355,f846890Z355:164
+INFO	2020-05-06 14:00:51	MergeSamFiles	Processed   411,000,000 records.  Elapsed time: 01:07:12s.  Time for last 1,000,000:   10s.  Last read position: scaffold2646_95983_scaffold2646,95983,f2647Z95983:39,381
+INFO	2020-05-06 14:01:01	MergeSamFiles	Processed   412,000,000 records.  Elapsed time: 01:07:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold224_304660_scaffold224,304660,f196Z304660:484,353
+INFO	2020-05-06 14:01:12	MergeSamFiles	Processed   413,000,000 records.  Elapsed time: 01:07:33s.  Time for last 1,000,000:   10s.  Last read position: scaffold219397_1571_scaffold219397,1571,f219981Z1571:1,056
+INFO	2020-05-06 14:01:22	MergeSamFiles	Processed   414,000,000 records.  Elapsed time: 01:07:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold2415_101328_scaffold2415,101328,f2384Z101328:79,870
+INFO	2020-05-06 14:01:32	MergeSamFiles	Processed   415,000,000 records.  Elapsed time: 01:07:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold649_195523_scaffold649,195523,f637Z195523:127,444
+INFO	2020-05-06 14:01:42	MergeSamFiles	Processed   416,000,000 records.  Elapsed time: 01:08:03s.  Time for last 1,000,000:   10s.  Last read position: scaffold24348_12606_scaffold24348,12606,f24237Z12606:7,098
+INFO	2020-05-06 14:01:52	MergeSamFiles	Processed   417,000,000 records.  Elapsed time: 01:08:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold9800_36816_scaffold9800,36816,f9715Z36816:32,334
+INFO	2020-05-06 14:02:02	MergeSamFiles	Processed   418,000,000 records.  Elapsed time: 01:08:23s.  Time for last 1,000,000:   10s.  Last read position: scaffold163686_2270_scaffold163686,2270,f163674Z2270:1
+INFO	2020-05-06 14:02:12	MergeSamFiles	Processed   419,000,000 records.  Elapsed time: 01:08:33s.  Time for last 1,000,000:    9s.  Last read position: scaffold61357_5792_scaffold61357,5792,f61321Z5792:4,229
+INFO	2020-05-06 14:02:24	MergeSamFiles	Processed   420,000,000 records.  Elapsed time: 01:08:45s.  Time for last 1,000,000:   12s.  Last read position: scaffold5673_53789_scaffold5673,53789,f5622Z53789:1,092
+INFO	2020-05-06 14:02:34	MergeSamFiles	Processed   421,000,000 records.  Elapsed time: 01:08:55s.  Time for last 1,000,000:    9s.  Last read position: scaffold3836_73806_scaffold3836,73806,f3830Z73806:41,967
+INFO	2020-05-06 14:02:44	MergeSamFiles	Processed   422,000,000 records.  Elapsed time: 01:09:05s.  Time for last 1,000,000:    9s.  Last read position: scaffold116343_3302_scaffold116343,3302,f116320Z3302:1,159
+INFO	2020-05-06 14:02:54	MergeSamFiles	Processed   423,000,000 records.  Elapsed time: 01:09:15s.  Time for last 1,000,000:   10s.  Last read position: scaffold43596_7502_scaffold43596,7502,f43541Z7502:173
+INFO	2020-05-06 14:03:04	MergeSamFiles	Processed   424,000,000 records.  Elapsed time: 01:09:25s.  Time for last 1,000,000:    9s.  Last read position: scaffold2136335_141_scaffold2136335,141,f2133937Z141:1
+INFO	2020-05-06 14:03:14	MergeSamFiles	Processed   425,000,000 records.  Elapsed time: 01:09:35s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:03:23	MergeSamFiles	Processed   426,000,000 records.  Elapsed time: 01:09:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold2477_99911_scaffold2477,99911,f2428Z99911:75,001
+INFO	2020-05-06 14:03:34	MergeSamFiles	Processed   427,000,000 records.  Elapsed time: 01:09:55s.  Time for last 1,000,000:   10s.  Last read position: scaffold1114_150625_scaffold1114,150625,f1103Z150625:122,513
+INFO	2020-05-06 14:03:44	MergeSamFiles	Processed   428,000,000 records.  Elapsed time: 01:10:05s.  Time for last 1,000,000:   10s.  Last read position: scaffold636_197377_scaffold636,197377,f614Z197377:14,453
+INFO	2020-05-06 14:03:54	MergeSamFiles	Processed   429,000,000 records.  Elapsed time: 01:10:15s.  Time for last 1,000,000:   10s.  Last read position: scaffold69473_5245_scaffold69473,5245,f69442Z5245:3,659
+INFO	2020-05-06 14:04:05	MergeSamFiles	Processed   430,000,000 records.  Elapsed time: 01:10:26s.  Time for last 1,000,000:   11s.  Last read position: scaffold238_295570_scaffold238,295570,f186Z295570:110,537
+INFO	2020-05-06 14:04:15	MergeSamFiles	Processed   431,000,000 records.  Elapsed time: 01:10:36s.  Time for last 1,000,000:    9s.  Last read position: scaffold59783_5913_scaffold59783,5913,f59749Z5913:3,362
+INFO	2020-05-06 14:04:25	MergeSamFiles	Processed   432,000,000 records.  Elapsed time: 01:10:46s.  Time for last 1,000,000:   10s.  Last read position: scaffold1366_137747_scaffold1366,137747,f1377Z137747:108,561
+INFO	2020-05-06 14:04:35	MergeSamFiles	Processed   433,000,000 records.  Elapsed time: 01:10:56s.  Time for last 1,000,000:    9s.  Last read position: scaffold54169_6381_scaffold54169,6381,f54126Z6381:669
+INFO	2020-05-06 14:04:46	MergeSamFiles	Processed   434,000,000 records.  Elapsed time: 01:11:07s.  Time for last 1,000,000:   10s.  Last read position: scaffold2717_94387_scaffold2717,94387,f2651Z94387:40,476
+INFO	2020-05-06 14:04:56	MergeSamFiles	Processed   435,000,000 records.  Elapsed time: 01:11:17s.  Time for last 1,000,000:    9s.  Last read position: scaffold1150357_276_scaffold1150357,276,f1150964Z276:22
+INFO	2020-05-06 14:05:06	MergeSamFiles	Processed   436,000,000 records.  Elapsed time: 01:11:27s.  Time for last 1,000,000:   10s.  Last read position: scaffold15820_21514_scaffold15820,21514,f15690Z21514:1,096
+INFO	2020-05-06 14:05:17	MergeSamFiles	Processed   437,000,000 records.  Elapsed time: 01:11:38s.  Time for last 1,000,000:   10s.  Last read position: scaffold1728042_201_scaffold1728042,201,f1831724Z201:12
+INFO	2020-05-06 14:05:27	MergeSamFiles	Processed   438,000,000 records.  Elapsed time: 01:11:48s.  Time for last 1,000,000:    9s.  Last read position: scaffold73204_5023_scaffold73204,5023,f73175Z5023:3,892
+INFO	2020-05-06 14:05:37	MergeSamFiles	Processed   439,000,000 records.  Elapsed time: 01:11:58s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:05:46	MergeSamFiles	Processed   440,000,000 records.  Elapsed time: 01:12:07s.  Time for last 1,000,000:    9s.  Last read position: scaffold902_167099_scaffold902,167099,f927Z167099:127,129
+INFO	2020-05-06 14:05:57	MergeSamFiles	Processed   441,000,000 records.  Elapsed time: 01:12:18s.  Time for last 1,000,000:   10s.  Last read position: scaffold40962_7861_scaffold40962,7861,f40910Z7861:986
+INFO	2020-05-06 14:06:07	MergeSamFiles	Processed   442,000,000 records.  Elapsed time: 01:12:28s.  Time for last 1,000,000:    9s.  Last read position: scaffold25864_11778_scaffold25864,11778,f25768Z11778:5,941
+INFO	2020-05-06 14:06:17	MergeSamFiles	Processed   443,000,000 records.  Elapsed time: 01:12:38s.  Time for last 1,000,000:   10s.  Last read position: scaffold16441_20499_scaffold16441,20499,f16472Z20499:4,491
+INFO	2020-05-06 14:06:28	MergeSamFiles	Processed   444,000,000 records.  Elapsed time: 01:12:49s.  Time for last 1,000,000:   11s.  Last read position: scaffold921_165847_scaffold921,165847,f885Z165847:833
+INFO	2020-05-06 14:06:38	MergeSamFiles	Processed   445,000,000 records.  Elapsed time: 01:12:59s.  Time for last 1,000,000:    9s.  Last read position: scaffold3100397_102_scaffold3100397,102,f3139748Z102:1
+INFO	2020-05-06 14:06:49	MergeSamFiles	Processed   446,000,000 records.  Elapsed time: 01:13:09s.  Time for last 1,000,000:   10s.  Last read position: scaffold213883_1623_scaffold213883,1623,f213886Z1623:187
+INFO	2020-05-06 14:06:58	MergeSamFiles	Processed   447,000,000 records.  Elapsed time: 01:13:19s.  Time for last 1,000,000:    9s.  Last read position: scaffold104104_3679_scaffold104104,3679,f104121Z3679:365
+INFO	2020-05-06 14:07:09	MergeSamFiles	Processed   448,000,000 records.  Elapsed time: 01:13:30s.  Time for last 1,000,000:   10s.  Last read position: scaffold44476_7388_scaffold44476,7388,f44430Z7388:4,123
+INFO	2020-05-06 14:07:19	MergeSamFiles	Processed   449,000,000 records.  Elapsed time: 01:13:40s.  Time for last 1,000,000:    9s.  Last read position: scaffold604536_480_scaffold604536,480,f604321Z480:380
+INFO	2020-05-06 14:07:29	MergeSamFiles	Processed   450,000,000 records.  Elapsed time: 01:13:50s.  Time for last 1,000,000:    9s.  Last read position: scaffold26_709707_scaffold26,709707,f51Z709707:208,263
+INFO	2020-05-06 14:07:39	MergeSamFiles	Processed   451,000,000 records.  Elapsed time: 01:14:00s.  Time for last 1,000,000:   10s.  Last read position: scaffold458566_631_scaffold458566,631,f458784Z631:305
+INFO	2020-05-06 14:07:49	MergeSamFiles	Processed   452,000,000 records.  Elapsed time: 01:14:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold560_207883_scaffold560,207883,f559Z207883:67,961
+INFO	2020-05-06 14:07:59	MergeSamFiles	Processed   453,000,000 records.  Elapsed time: 01:14:20s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 14:08:09	MergeSamFiles	Processed   454,000,000 records.  Elapsed time: 01:14:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold4270_67313_scaffold4270,67313,f4221Z67313:505
+INFO	2020-05-06 14:08:20	MergeSamFiles	Processed   455,000,000 records.  Elapsed time: 01:14:41s.  Time for last 1,000,000:   10s.  Last read position: scaffold3285_83234_scaffold3285,83234,f3280Z83234:50,157
+INFO	2020-05-06 14:08:30	MergeSamFiles	Processed   456,000,000 records.  Elapsed time: 01:14:51s.  Time for last 1,000,000:    9s.  Last read position: scaffold937114_326_scaffold937114,326,f935751Z326:83
+INFO	2020-05-06 14:08:40	MergeSamFiles	Processed   457,000,000 records.  Elapsed time: 01:15:01s.  Time for last 1,000,000:   10s.  Last read position: scaffold2074_110157_scaffold2074,110157,f2015Z110157:58,207
+INFO	2020-05-06 14:08:51	MergeSamFiles	Processed   458,000,000 records.  Elapsed time: 01:15:12s.  Time for last 1,000,000:   11s.  Last read position: scaffold2450_100546_scaffold2450,100546,f2388Z100546:10,973
+INFO	2020-05-06 14:09:01	MergeSamFiles	Processed   459,000,000 records.  Elapsed time: 01:15:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold70413_5186_scaffold70413,5186,f70392Z5186:2,895
+INFO	2020-05-06 14:09:11	MergeSamFiles	Processed   460,000,000 records.  Elapsed time: 01:15:32s.  Time for last 1,000,000:   10s.  Last read position: scaffold2396_101862_scaffold2396,101862,f2381Z101862:62,093
+INFO	2020-05-06 14:09:21	MergeSamFiles	Processed   461,000,000 records.  Elapsed time: 01:15:42s.  Time for last 1,000,000:    9s.  Last read position: scaffold106671_3594_scaffold106671,3594,f106658Z3594:2,304
+INFO	2020-05-06 14:09:32	MergeSamFiles	Processed   462,000,000 records.  Elapsed time: 01:15:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold977702_314_scaffold977702,314,f977849Z314:119
+INFO	2020-05-06 14:09:41	MergeSamFiles	Processed   463,000,000 records.  Elapsed time: 01:16:02s.  Time for last 1,000,000:    9s.  Last read position: scaffold1918096_201_scaffold1918096,201,f1752275Z201:39
+INFO	2020-05-06 14:09:52	MergeSamFiles	Processed   464,000,000 records.  Elapsed time: 01:16:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold933_165081_scaffold933,165081,f962Z165081:34,615
+INFO	2020-05-06 14:10:02	MergeSamFiles	Processed   465,000,000 records.  Elapsed time: 01:16:23s.  Time for last 1,000,000:   10s.  Last read position: scaffold51281_6648_scaffold51281,6648,f51228Z6648:1,944
+INFO	2020-05-06 14:10:12	MergeSamFiles	Processed   466,000,000 records.  Elapsed time: 01:16:33s.  Time for last 1,000,000:    9s.  Last read position: scaffold164620_2254_scaffold164620,2254,f164656Z2254:994
+INFO	2020-05-06 14:10:22	MergeSamFiles	Processed   467,000,000 records.  Elapsed time: 01:16:43s.  Time for last 1,000,000:   10s.  Last read position: scaffold5017_57544_scaffold5017,57544,f5015Z57544:50,960
+INFO	2020-05-06 14:10:32	MergeSamFiles	Processed   468,000,000 records.  Elapsed time: 01:16:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold100875_3790_scaffold100875,3790,f100874Z3790:870
+INFO	2020-05-06 14:10:43	MergeSamFiles	Processed   469,000,000 records.  Elapsed time: 01:17:04s.  Time for last 1,000,000:   10s.  Last read position: scaffold99104_3855_scaffold99104,3855,f99074Z3855:3,104
+INFO	2020-05-06 14:10:53	MergeSamFiles	Processed   470,000,000 records.  Elapsed time: 01:17:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold708707_415_scaffold708707,415,f708699Z415:14
+INFO	2020-05-06 14:11:03	MergeSamFiles	Processed   471,000,000 records.  Elapsed time: 01:17:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold34291_9100_scaffold34291,9100,f34207Z9100:8,791
+INFO	2020-05-06 14:11:14	MergeSamFiles	Processed   472,000,000 records.  Elapsed time: 01:17:35s.  Time for last 1,000,000:   11s.  Last read position: scaffold1942818_199_scaffold1942818,199,f1944919Z199:99
+INFO	2020-05-06 14:11:24	MergeSamFiles	Processed   473,000,000 records.  Elapsed time: 01:17:45s.  Time for last 1,000,000:    9s.  Last read position: scaffold33101_9383_scaffold33101,9383,f33015Z9383:7,580
+INFO	2020-05-06 14:11:34	MergeSamFiles	Processed   474,000,000 records.  Elapsed time: 01:17:55s.  Time for last 1,000,000:   10s.  Last read position: scaffold321_266334_scaffold321,266334,f337Z266334:119,863
+INFO	2020-05-06 14:11:43	MergeSamFiles	Processed   475,000,000 records.  Elapsed time: 01:18:04s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:11:54	MergeSamFiles	Processed   476,000,000 records.  Elapsed time: 01:18:15s.  Time for last 1,000,000:   10s.  Last read position: scaffold88354_4276_scaffold88354,4276,f88311Z4276:2,568
+INFO	2020-05-06 14:12:04	MergeSamFiles	Processed   477,000,000 records.  Elapsed time: 01:18:25s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:12:14	MergeSamFiles	Processed   478,000,000 records.  Elapsed time: 01:18:35s.  Time for last 1,000,000:    9s.  Last read position: scaffold345_259130_scaffold345,259130,f344Z259130:199,414
+INFO	2020-05-06 14:12:26	MergeSamFiles	Processed   479,000,000 records.  Elapsed time: 01:18:47s.  Time for last 1,000,000:   12s.  Last read position: scaffold27063_11275_scaffold27063,11275,f26958Z11275:6,358
+INFO	2020-05-06 14:12:36	MergeSamFiles	Processed   480,000,000 records.  Elapsed time: 01:18:57s.  Time for last 1,000,000:    9s.  Last read position: scaffold61965_5749_scaffold61965,5749,f61927Z5749:4,307
+INFO	2020-05-06 14:12:46	MergeSamFiles	Processed   481,000,000 records.  Elapsed time: 01:19:07s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 14:12:56	MergeSamFiles	Processed   482,000,000 records.  Elapsed time: 01:19:17s.  Time for last 1,000,000:    9s.  Last read position: scaffold2482_76370_scaffold2482,76370,f2417Z76370:74,834
+INFO	2020-05-06 14:13:07	MergeSamFiles	Processed   483,000,000 records.  Elapsed time: 01:19:28s.  Time for last 1,000,000:   11s.  Last read position: scaffold2124_108901_scaffold2124,108901,f2155Z108901:30,559
+INFO	2020-05-06 14:13:17	MergeSamFiles	Processed   484,000,000 records.  Elapsed time: 01:19:38s.  Time for last 1,000,000:    9s.  Last read position: scaffold1569_129428_scaffold1569,129428,f1601Z129428:74,269
+INFO	2020-05-06 14:13:27	MergeSamFiles	Processed   485,000,000 records.  Elapsed time: 01:19:48s.  Time for last 1,000,000:   10s.  Last read position: scaffold179080_2034_scaffold179080,2034,f179029Z2034:144
+INFO	2020-05-06 14:13:38	MergeSamFiles	Processed   486,000,000 records.  Elapsed time: 01:19:59s.  Time for last 1,000,000:   10s.  Last read position: scaffold777_178541_scaffold777,178541,f771Z178541:112,044
+INFO	2020-05-06 14:13:48	MergeSamFiles	Processed   487,000,000 records.  Elapsed time: 01:20:09s.  Time for last 1,000,000:    9s.  Last read position: scaffold4290_67050_scaffold4290,67050,f4367Z67050:476
+INFO	2020-05-06 14:13:58	MergeSamFiles	Processed   488,000,000 records.  Elapsed time: 01:20:19s.  Time for last 1,000,000:   10s.  Last read position: scaffold223079_1537_scaffold223079,1537,f223179Z1537:924
+INFO	2020-05-06 14:14:08	MergeSamFiles	Processed   489,000,000 records.  Elapsed time: 01:20:29s.  Time for last 1,000,000:    9s.  Last read position: scaffold40595_7913_scaffold40595,7913,f40545Z7913:3,895
+INFO	2020-05-06 14:14:18	MergeSamFiles	Processed   490,000,000 records.  Elapsed time: 01:20:39s.  Time for last 1,000,000:   10s.  Last read position: scaffold175_340488_scaffold175,340488,f187Z340488:136,748
+INFO	2020-05-06 14:14:28	MergeSamFiles	Processed   491,000,000 records.  Elapsed time: 01:20:49s.  Time for last 1,000,000:    9s.  Last read position: scaffold517972_558_scaffold517972,558,f517427Z558:1
+INFO	2020-05-06 14:14:38	MergeSamFiles	Processed   492,000,000 records.  Elapsed time: 01:20:59s.  Time for last 1,000,000:   10s.  Last read position: scaffold87419_4316_scaffold87419,4316,f87381Z4316:1,088
+INFO	2020-05-06 14:14:50	MergeSamFiles	Processed   493,000,000 records.  Elapsed time: 01:21:11s.  Time for last 1,000,000:   11s.  Last read position: scaffold54409_6362_scaffold54409,6362,f54374Z6362:363
+INFO	2020-05-06 14:15:00	MergeSamFiles	Processed   494,000,000 records.  Elapsed time: 01:21:21s.  Time for last 1,000,000:    9s.  Last read position: scaffold986_159969_scaffold986,159969,f1033Z159969:107,402
+INFO	2020-05-06 14:15:10	MergeSamFiles	Processed   495,000,000 records.  Elapsed time: 01:21:31s.  Time for last 1,000,000:   10s.  Last read position: scaffold3806_74285_scaffold3806,74285,f3777Z74285:13,894
+INFO	2020-05-06 14:15:19	MergeSamFiles	Processed   496,000,000 records.  Elapsed time: 01:21:40s.  Time for last 1,000,000:    9s.  Last read position: scaffold5155_55754_scaffold5155,55754,f5192Z55754:2,087
+INFO	2020-05-06 14:15:30	MergeSamFiles	Processed   497,000,000 records.  Elapsed time: 01:21:51s.  Time for last 1,000,000:   10s.  Last read position: scaffold1954782_198_scaffold1954782,198,f1958457Z198:56
+INFO	2020-05-06 14:15:40	MergeSamFiles	Processed   498,000,000 records.  Elapsed time: 01:22:01s.  Time for last 1,000,000:    9s.  Last read position: scaffold19_774757_scaffold19,774757,f56Z774757:534,591
+INFO	2020-05-06 14:15:50	MergeSamFiles	Processed   499,000,000 records.  Elapsed time: 01:22:11s.  Time for last 1,000,000:   10s.  Last read position: scaffold276370_1159_scaffold276370,1159,f276245Z1159:935
+INFO	2020-05-06 14:16:01	MergeSamFiles	Processed   500,000,000 records.  Elapsed time: 01:22:22s.  Time for last 1,000,000:   10s.  Last read position: scaffold4370_66044_scaffold4370,66044,f4392Z66044:27,626
+INFO	2020-05-06 14:16:10	MergeSamFiles	Processed   501,000,000 records.  Elapsed time: 01:22:31s.  Time for last 1,000,000:    9s.  Last read position: scaffold1258_94128_scaffold1258,94128,f1177Z94128:84,411
+INFO	2020-05-06 14:16:20	MergeSamFiles	Processed   502,000,000 records.  Elapsed time: 01:22:41s.  Time for last 1,000,000:    9s.  Last read position: scaffold414161_704_scaffold414161,704,f414144Z704:158
+INFO	2020-05-06 14:16:30	MergeSamFiles	Processed   503,000,000 records.  Elapsed time: 01:22:51s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:16:41	MergeSamFiles	Processed   504,000,000 records.  Elapsed time: 01:23:02s.  Time for last 1,000,000:   10s.  Last read position: scaffold2569_75421_scaffold2569,75421,f2506Z75421:45,922
+INFO	2020-05-06 14:16:50	MergeSamFiles	Processed   505,000,000 records.  Elapsed time: 01:23:11s.  Time for last 1,000,000:    9s.  Last read position: scaffold10733_33929_scaffold10733,33929,f10639Z33929:16,365
+INFO	2020-05-06 14:17:01	MergeSamFiles	Processed   506,000,000 records.  Elapsed time: 01:23:22s.  Time for last 1,000,000:   10s.  Last read position: scaffold266751_1213_scaffold266751,1213,f266921Z1213:868
+INFO	2020-05-06 14:17:12	MergeSamFiles	Processed   507,000,000 records.  Elapsed time: 01:23:33s.  Time for last 1,000,000:   10s.  Last read position: scaffold3351_82040_scaffold3351,82040,f3302Z82040:50,840
+INFO	2020-05-06 14:17:21	MergeSamFiles	Processed   508,000,000 records.  Elapsed time: 01:23:42s.  Time for last 1,000,000:    9s.  Last read position: scaffold12078_29975_scaffold12078,29975,f12059Z29975:26,448
+INFO	2020-05-06 14:17:32	MergeSamFiles	Processed   509,000,000 records.  Elapsed time: 01:23:52s.  Time for last 1,000,000:   10s.  Last read position: scaffold719013_409_scaffold719013,409,f719007Z409:45
+INFO	2020-05-06 14:17:41	MergeSamFiles	Processed   510,000,000 records.  Elapsed time: 01:24:02s.  Time for last 1,000,000:    9s.  Last read position: scaffold183715_1970_scaffold183715,1970,f183735Z1970:986
+INFO	2020-05-06 14:17:52	MergeSamFiles	Processed   511,000,000 records.  Elapsed time: 01:24:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold37909_8370_scaffold37909,8370,f37840Z8370:6,467
+INFO	2020-05-06 14:18:02	MergeSamFiles	Processed   512,000,000 records.  Elapsed time: 01:24:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold284_279271_scaffold284,279271,f263Z279271:170,777
+INFO	2020-05-06 14:18:12	MergeSamFiles	Processed   513,000,000 records.  Elapsed time: 01:24:33s.  Time for last 1,000,000:   10s.  Last read position: scaffold100955_3788_scaffold100955,3788,f100936Z3788:3,478
+INFO	2020-05-06 14:18:23	MergeSamFiles	Processed   514,000,000 records.  Elapsed time: 01:24:44s.  Time for last 1,000,000:   11s.  Last read position: scaffold6146_51315_scaffold6146,51315,f6064Z51315:25,071
+INFO	2020-05-06 14:18:33	MergeSamFiles	Processed   515,000,000 records.  Elapsed time: 01:24:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold635381_458_scaffold635381,458,f635562Z458:84
+INFO	2020-05-06 14:18:43	MergeSamFiles	Processed   516,000,000 records.  Elapsed time: 01:25:04s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:18:52	MergeSamFiles	Processed   517,000,000 records.  Elapsed time: 01:25:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold65029_5532_scaffold65029,5532,f64993Z5532:4,291
+INFO	2020-05-06 14:19:04	MergeSamFiles	Processed   518,000,000 records.  Elapsed time: 01:25:25s.  Time for last 1,000,000:   11s.  Last read position: */*
+INFO	2020-05-06 14:19:14	MergeSamFiles	Processed   519,000,000 records.  Elapsed time: 01:25:35s.  Time for last 1,000,000:    9s.  Last read position: scaffold1845471_201_scaffold1845471,201,f1847418Z201:44
+INFO	2020-05-06 14:19:24	MergeSamFiles	Processed   520,000,000 records.  Elapsed time: 01:25:45s.  Time for last 1,000,000:   10s.  Last read position: scaffold21624_14398_scaffold21624,14398,f21516Z14398:3,176
+INFO	2020-05-06 14:19:35	MergeSamFiles	Processed   521,000,000 records.  Elapsed time: 01:25:56s.  Time for last 1,000,000:   10s.  Last read position: scaffold1820_119438_scaffold1820,119438,f1758Z119438:14,450
+INFO	2020-05-06 14:19:44	MergeSamFiles	Processed   522,000,000 records.  Elapsed time: 01:26:05s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:19:55	MergeSamFiles	Processed   523,000,000 records.  Elapsed time: 01:26:16s.  Time for last 1,000,000:   10s.  Last read position: scaffold1734467_201_scaffold1734467,201,f1866027Z201:44
+INFO	2020-05-06 14:20:04	MergeSamFiles	Processed   524,000,000 records.  Elapsed time: 01:26:25s.  Time for last 1,000,000:    9s.  Last read position: scaffold64770_5550_scaffold64770,5550,f64744Z5550:685
+INFO	2020-05-06 14:20:15	MergeSamFiles	Processed   525,000,000 records.  Elapsed time: 01:26:36s.  Time for last 1,000,000:   10s.  Last read position: scaffold96849_3937_scaffold96849,3937,f96840Z3937:288
+INFO	2020-05-06 14:20:25	MergeSamFiles	Processed   526,000,000 records.  Elapsed time: 01:26:46s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:20:35	MergeSamFiles	Processed   527,000,000 records.  Elapsed time: 01:26:56s.  Time for last 1,000,000:   10s.  Last read position: scaffold1430626_230_scaffold1430626,230,f1437289Z230:84
+INFO	2020-05-06 14:20:45	MergeSamFiles	Processed   528,000,000 records.  Elapsed time: 01:27:06s.  Time for last 1,000,000:   10s.  Last read position: scaffold1032_156399_scaffold1032,156399,f1008Z156399:151,660
+INFO	2020-05-06 14:20:55	MergeSamFiles	Processed   529,000,000 records.  Elapsed time: 01:27:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold571_205754_scaffold571,205754,f599Z205754:125,739
+INFO	2020-05-06 14:21:05	MergeSamFiles	Processed   530,000,000 records.  Elapsed time: 01:27:26s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:21:14	MergeSamFiles	Processed   531,000,000 records.  Elapsed time: 01:27:35s.  Time for last 1,000,000:    9s.  Last read position: scaffold1013_158196_scaffold1013,158196,f981Z158196:58,071
+INFO	2020-05-06 14:21:26	MergeSamFiles	Processed   532,000,000 records.  Elapsed time: 01:27:47s.  Time for last 1,000,000:   11s.  Last read position: scaffold56694_6163_scaffold56694,6163,f56664Z6163:3,292
+INFO	2020-05-06 14:21:35	MergeSamFiles	Processed   533,000,000 records.  Elapsed time: 01:27:56s.  Time for last 1,000,000:    9s.  Last read position: scaffold202_316503_scaffold202,316503,f183Z316503:184,415
+INFO	2020-05-06 14:21:45	MergeSamFiles	Processed   534,000,000 records.  Elapsed time: 01:28:06s.  Time for last 1,000,000:    9s.  Last read position: scaffold464430_623_scaffold464430,623,f464072Z623:97
+INFO	2020-05-06 14:21:56	MergeSamFiles	Processed   535,000,000 records.  Elapsed time: 01:28:17s.  Time for last 1,000,000:   10s.  Last read position: scaffold125_398187_scaffold125,398187,f107Z398187:118,624
+INFO	2020-05-06 14:22:06	MergeSamFiles	Processed   536,000,000 records.  Elapsed time: 01:28:27s.  Time for last 1,000,000:    9s.  Last read position: scaffold2543791_110_scaffold2543791,110,f2519875Z110:1
+INFO	2020-05-06 14:22:16	MergeSamFiles	Processed   537,000,000 records.  Elapsed time: 01:28:37s.  Time for last 1,000,000:   10s.  Last read position: scaffold25124_12157_scaffold25124,12157,f25015Z12157:2,950
+INFO	2020-05-06 14:22:26	MergeSamFiles	Processed   538,000,000 records.  Elapsed time: 01:28:47s.  Time for last 1,000,000:    9s.  Last read position: scaffold502_220110_scaffold502,220110,f485Z220110:122,384
+INFO	2020-05-06 14:22:38	MergeSamFiles	Processed   539,000,000 records.  Elapsed time: 01:28:59s.  Time for last 1,000,000:   12s.  Last read position: scaffold301487_1034_scaffold301487,1034,f301617Z1034:886
+INFO	2020-05-06 14:22:48	MergeSamFiles	Processed   540,000,000 records.  Elapsed time: 01:29:09s.  Time for last 1,000,000:    9s.  Last read position: scaffold611_200755_scaffold611,200755,f617Z200755:172,610
+INFO	2020-05-06 14:22:58	MergeSamFiles	Processed   541,000,000 records.  Elapsed time: 01:29:19s.  Time for last 1,000,000:    9s.  Last read position: scaffold188483_1910_scaffold188483,1910,f188515Z1910:692
+INFO	2020-05-06 14:23:09	MergeSamFiles	Processed   542,000,000 records.  Elapsed time: 01:29:30s.  Time for last 1,000,000:   10s.  Last read position: scaffold410056_712_scaffold410056,712,f410462Z712:187
+INFO	2020-05-06 14:23:18	MergeSamFiles	Processed   543,000,000 records.  Elapsed time: 01:29:39s.  Time for last 1,000,000:    9s.  Last read position: scaffold5558_54293_scaffold5558,54293,f5454Z54293:25,372
+INFO	2020-05-06 14:23:29	MergeSamFiles	Processed   544,000,000 records.  Elapsed time: 01:29:50s.  Time for last 1,000,000:   10s.  Last read position: scaffold155690_2406_scaffold155690,2406,f155687Z2406:1,013
+INFO	2020-05-06 14:23:38	MergeSamFiles	Processed   545,000,000 records.  Elapsed time: 01:29:59s.  Time for last 1,000,000:    9s.  Last read position: scaffold2310_103950_scaffold2310,103950,f2290Z103950:17
+INFO	2020-05-06 14:23:49	MergeSamFiles	Processed   546,000,000 records.  Elapsed time: 01:30:10s.  Time for last 1,000,000:   11s.  Last read position: scaffold100_456315_scaffold100,456315,f89Z456315:206,695
+INFO	2020-05-06 14:23:59	MergeSamFiles	Processed   547,000,000 records.  Elapsed time: 01:30:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold6447_49828_scaffold6447,49828,f6391Z49828:30,588
+INFO	2020-05-06 14:24:09	MergeSamFiles	Processed   548,000,000 records.  Elapsed time: 01:30:30s.  Time for last 1,000,000:   10s.  Last read position: scaffold3256_83855_scaffold3256,83855,f3252Z83855:36,743
+INFO	2020-05-06 14:24:20	MergeSamFiles	Processed   549,000,000 records.  Elapsed time: 01:30:41s.  Time for last 1,000,000:   10s.  Last read position: scaffold106839_3589_scaffold106839,3589,f106829Z3589:724
+INFO	2020-05-06 14:24:30	MergeSamFiles	Processed   550,000,000 records.  Elapsed time: 01:30:51s.  Time for last 1,000,000:    9s.  Last read position: scaffold247220_1342_scaffold247220,1342,f247298Z1342:100
+INFO	2020-05-06 14:24:40	MergeSamFiles	Processed   551,000,000 records.  Elapsed time: 01:31:01s.  Time for last 1,000,000:    9s.  Last read position: scaffold14706_23628_scaffold14706,23628,f14568Z23628:17,012
+INFO	2020-05-06 14:24:49	MergeSamFiles	Processed   552,000,000 records.  Elapsed time: 01:31:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold1638978_207_scaffold1638978,207,f1634873Z207:104
+INFO	2020-05-06 14:25:00	MergeSamFiles	Processed   553,000,000 records.  Elapsed time: 01:31:21s.  Time for last 1,000,000:   10s.  Last read position: scaffold56451_6185_scaffold56451,6185,f56400Z6185:1,410
+INFO	2020-05-06 14:25:10	MergeSamFiles	Processed   554,000,000 records.  Elapsed time: 01:31:31s.  Time for last 1,000,000:    9s.  Last read position: scaffold3877_73169_scaffold3877,73169,f3801Z73169:70,924
+INFO	2020-05-06 14:25:20	MergeSamFiles	Processed   555,000,000 records.  Elapsed time: 01:31:41s.  Time for last 1,000,000:   10s.  Last read position: scaffold1356627_241_scaffold1356627,241,f1354493Z241:12
+INFO	2020-05-06 14:25:33	MergeSamFiles	Processed   556,000,000 records.  Elapsed time: 01:31:54s.  Time for last 1,000,000:   12s.  Last read position: scaffold312678_987_scaffold312678,987,f312560Z987:476
+INFO	2020-05-06 14:25:43	MergeSamFiles	Processed   557,000,000 records.  Elapsed time: 01:32:04s.  Time for last 1,000,000:    9s.  Last read position: scaffold740779_399_scaffold740779,399,f739223Z399:249
+INFO	2020-05-06 14:25:53	MergeSamFiles	Processed   558,000,000 records.  Elapsed time: 01:32:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold27_691504_scaffold27,691504,f30Z691504:63,312
+INFO	2020-05-06 14:26:02	MergeSamFiles	Processed   559,000,000 records.  Elapsed time: 01:32:23s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:26:13	MergeSamFiles	Processed   560,000,000 records.  Elapsed time: 01:32:34s.  Time for last 1,000,000:   10s.  Last read position: scaffold1079591_290_scaffold1079591,290,f1080924Z290:170
+INFO	2020-05-06 14:26:22	MergeSamFiles	Processed   561,000,000 records.  Elapsed time: 01:32:43s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:26:32	MergeSamFiles	Processed   562,000,000 records.  Elapsed time: 01:32:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold2813_92100_scaffold2813,92100,f2819Z92100:52,031
+INFO	2020-05-06 14:26:43	MergeSamFiles	Processed   563,000,000 records.  Elapsed time: 01:33:04s.  Time for last 1,000,000:   10s.  Last read position: scaffold291264_1083_scaffold291264,1083,f291520Z1083:1
+INFO	2020-05-06 14:26:53	MergeSamFiles	Processed   564,000,000 records.  Elapsed time: 01:33:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold976824_315_scaffold976824,315,f976520Z315:96
+INFO	2020-05-06 14:27:03	MergeSamFiles	Processed   565,000,000 records.  Elapsed time: 01:33:24s.  Time for last 1,000,000:   10s.  Last read position: scaffold91125_4158_scaffold91125,4158,f91128Z4158:1,061
+INFO	2020-05-06 14:27:12	MergeSamFiles	Processed   566,000,000 records.  Elapsed time: 01:33:33s.  Time for last 1,000,000:    9s.  Last read position: scaffold647_195710_scaffold647,195710,f697Z195710:144,729
+INFO	2020-05-06 14:27:23	MergeSamFiles	Processed   567,000,000 records.  Elapsed time: 01:33:44s.  Time for last 1,000,000:   10s.  Last read position: scaffold76743_4829_scaffold76743,4829,f76732Z4829:4,261
+INFO	2020-05-06 14:27:33	MergeSamFiles	Processed   568,000,000 records.  Elapsed time: 01:33:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold30081_10226_scaffold30081,10226,f29994Z10226:616
+INFO	2020-05-06 14:27:43	MergeSamFiles	Processed   569,000,000 records.  Elapsed time: 01:34:04s.  Time for last 1,000,000:   10s.  Last read position: scaffold589001_492_scaffold589001,492,f588408Z492:9
+INFO	2020-05-06 14:27:53	MergeSamFiles	Processed   570,000,000 records.  Elapsed time: 01:34:14s.  Time for last 1,000,000:   10s.  Last read position: scaffold4189_68441_scaffold4189,68441,f4179Z68441:23,012
+INFO	2020-05-06 14:28:03	MergeSamFiles	Processed   571,000,000 records.  Elapsed time: 01:34:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold26769_11398_scaffold26769,11398,f26671Z11398:4,668
+INFO	2020-05-06 14:28:13	MergeSamFiles	Processed   572,000,000 records.  Elapsed time: 01:34:34s.  Time for last 1,000,000:   10s.  Last read position: scaffold14144_24782_scaffold14144,24782,f14078Z24782:5,741
+INFO	2020-05-06 14:28:23	MergeSamFiles	Processed   573,000,000 records.  Elapsed time: 01:34:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold4776_60540_scaffold4776,60540,f4817Z60540:58,900
+INFO	2020-05-06 14:28:34	MergeSamFiles	Processed   574,000,000 records.  Elapsed time: 01:34:55s.  Time for last 1,000,000:   10s.  Last read position: scaffold506_219227_scaffold506,219227,f466Z219227:167,914
+INFO	2020-05-06 14:28:43	MergeSamFiles	Processed   575,000,000 records.  Elapsed time: 01:35:04s.  Time for last 1,000,000:    9s.  Last read position: scaffold385_248794_scaffold385,248794,f358Z248794:192,988
+INFO	2020-05-06 14:28:54	MergeSamFiles	Processed   576,000,000 records.  Elapsed time: 01:35:15s.  Time for last 1,000,000:   10s.  Last read position: scaffold25338_12050_scaffold25338,12050,f25223Z12050:4,623
+INFO	2020-05-06 14:29:04	MergeSamFiles	Processed   577,000,000 records.  Elapsed time: 01:35:25s.  Time for last 1,000,000:   10s.  Last read position: scaffold607649_477_scaffold607649,477,f608446Z477:193
+INFO	2020-05-06 14:29:14	MergeSamFiles	Processed   578,000,000 records.  Elapsed time: 01:35:35s.  Time for last 1,000,000:    9s.  Last read position: scaffold25167_12137_scaffold25167,12137,f25057Z12137:4,778
+INFO	2020-05-06 14:29:24	MergeSamFiles	Processed   579,000,000 records.  Elapsed time: 01:35:45s.  Time for last 1,000,000:    9s.  Last read position: scaffold200716_1763_scaffold200716,1763,f200700Z1763:1,570
+INFO	2020-05-06 14:29:34	MergeSamFiles	Processed   580,000,000 records.  Elapsed time: 01:35:55s.  Time for last 1,000,000:    9s.  Last read position: scaffold44230_7419_scaffold44230,7419,f44180Z7419:2,979
+INFO	2020-05-06 14:29:45	MergeSamFiles	Processed   581,000,000 records.  Elapsed time: 01:36:06s.  Time for last 1,000,000:   11s.  Last read position: scaffold2812_92106_scaffold2812,92106,f2834Z92106:56,145
+INFO	2020-05-06 14:29:55	MergeSamFiles	Processed   582,000,000 records.  Elapsed time: 01:36:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold4192_68405_scaffold4192,68405,f4160Z68405:40,007
+INFO	2020-05-06 14:30:05	MergeSamFiles	Processed   583,000,000 records.  Elapsed time: 01:36:26s.  Time for last 1,000,000:   10s.  Last read position: scaffold2347249_117_scaffold2347249,117,f2353449Z117:11
+INFO	2020-05-06 14:30:15	MergeSamFiles	Processed   584,000,000 records.  Elapsed time: 01:36:36s.  Time for last 1,000,000:   10s.  Last read position: scaffold549204_526_scaffold549204,526,f549394Z526:355
+INFO	2020-05-06 14:30:25	MergeSamFiles	Processed   585,000,000 records.  Elapsed time: 01:36:46s.  Time for last 1,000,000:   10s.  Last read position: scaffold231186_1467_scaffold231186,1467,f231168Z1467:411
+INFO	2020-05-06 14:30:36	MergeSamFiles	Processed   586,000,000 records.  Elapsed time: 01:36:57s.  Time for last 1,000,000:   10s.  Last read position: scaffold4002_71337_scaffold4002,71337,f4002Z71337:56,217
+INFO	2020-05-06 14:30:45	MergeSamFiles	Processed   587,000,000 records.  Elapsed time: 01:37:06s.  Time for last 1,000,000:    9s.  Last read position: scaffold209190_1671_scaffold209190,1671,f209251Z1671:1,398
+INFO	2020-05-06 14:30:57	MergeSamFiles	Processed   588,000,000 records.  Elapsed time: 01:37:18s.  Time for last 1,000,000:   11s.  Last read position: scaffold21282_14697_scaffold21282,14697,f21445Z14697:13,997
+INFO	2020-05-06 14:31:07	MergeSamFiles	Processed   589,000,000 records.  Elapsed time: 01:37:28s.  Time for last 1,000,000:    9s.  Last read position: scaffold1144_149447_scaffold1144,149447,f4069Z149447:63,880
+INFO	2020-05-06 14:31:17	MergeSamFiles	Processed   590,000,000 records.  Elapsed time: 01:37:38s.  Time for last 1,000,000:   10s.  Last read position: scaffold1803_120196_scaffold1803,120196,f1911Z120196:11,939
+INFO	2020-05-06 14:31:27	MergeSamFiles	Processed   591,000,000 records.  Elapsed time: 01:37:48s.  Time for last 1,000,000:   10s.  Last read position: scaffold897682_338_scaffold897682,338,f896517Z338:243
+INFO	2020-05-06 14:31:38	MergeSamFiles	Processed   592,000,000 records.  Elapsed time: 01:37:59s.  Time for last 1,000,000:   10s.  Last read position: scaffold2871106_104_scaffold2871106,104,f2876128Z104:19
+INFO	2020-05-06 14:31:48	MergeSamFiles	Processed   593,000,000 records.  Elapsed time: 01:38:09s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 14:31:57	MergeSamFiles	Processed   594,000,000 records.  Elapsed time: 01:38:18s.  Time for last 1,000,000:    9s.  Last read position: scaffold447838_647_scaffold447838,647,f447785Z647:108
+INFO	2020-05-06 14:32:08	MergeSamFiles	Processed   595,000,000 records.  Elapsed time: 01:38:29s.  Time for last 1,000,000:   10s.  Last read position: scaffold102_453051_scaffold102,453051,f139Z453051:366
+INFO	2020-05-06 14:32:18	MergeSamFiles	Processed   596,000,000 records.  Elapsed time: 01:38:39s.  Time for last 1,000,000:    9s.  Last read position: scaffold72667_5055_scaffold72667,5055,f72649Z5055:2,548
+INFO	2020-05-06 14:32:28	MergeSamFiles	Processed   597,000,000 records.  Elapsed time: 01:38:49s.  Time for last 1,000,000:   10s.  Last read position: scaffold467_229351_scaffold467,229351,f445Z229351:49,866
+INFO	2020-05-06 14:32:40	MergeSamFiles	Processed   598,000,000 records.  Elapsed time: 01:39:01s.  Time for last 1,000,000:   11s.  Last read position: scaffold2020378_180_scaffold2020378,180,f2019826Z180:78
+INFO	2020-05-06 14:32:49	MergeSamFiles	Processed   599,000,000 records.  Elapsed time: 01:39:10s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:32:59	MergeSamFiles	Processed   600,000,000 records.  Elapsed time: 01:39:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold5167_55634_scaffold5167,55634,f5137Z55634:5,092
+INFO	2020-05-06 14:33:09	MergeSamFiles	Processed   601,000,000 records.  Elapsed time: 01:39:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold22463_13769_scaffold22463,13769,f22458Z13769:9,927
+INFO	2020-05-06 14:33:19	MergeSamFiles	Processed   602,000,000 records.  Elapsed time: 01:39:40s.  Time for last 1,000,000:   10s.  Last read position: scaffold1994040_192_scaffold1994040,192,f1995838Z192:87
+INFO	2020-05-06 14:33:29	MergeSamFiles	Processed   603,000,000 records.  Elapsed time: 01:39:50s.  Time for last 1,000,000:    9s.  Last read position: scaffold1036_155887_scaffold1036,155887,f930Z155887:47,284
+INFO	2020-05-06 14:33:39	MergeSamFiles	Processed   604,000,000 records.  Elapsed time: 01:40:00s.  Time for last 1,000,000:    9s.  Last read position: scaffold2901_90493_scaffold2901,90493,f2899Z90493:37,168
+INFO	2020-05-06 14:33:49	MergeSamFiles	Processed   605,000,000 records.  Elapsed time: 01:40:10s.  Time for last 1,000,000:   10s.  Last read position: scaffold282880_1124_scaffold282880,1124,f282843Z1124:874
+INFO	2020-05-06 14:33:59	MergeSamFiles	Processed   606,000,000 records.  Elapsed time: 01:40:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold221400_1553_scaffold221400,1553,f221640Z1553:839
+INFO	2020-05-06 14:34:09	MergeSamFiles	Processed   607,000,000 records.  Elapsed time: 01:40:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold4410_65537_scaffold4410,65537,f4467Z65537:29,283
+INFO	2020-05-06 14:34:18	MergeSamFiles	Processed   608,000,000 records.  Elapsed time: 01:40:39s.  Time for last 1,000,000:    9s.  Last read position: scaffold1238_144278_scaffold1238,144278,f1325Z144278:98,596
+INFO	2020-05-06 14:34:29	MergeSamFiles	Processed   609,000,000 records.  Elapsed time: 01:40:50s.  Time for last 1,000,000:   10s.  Last read position: scaffold1410_135679_scaffold1410,135679,f1401Z135679:15,330
+INFO	2020-05-06 14:34:39	MergeSamFiles	Processed   610,000,000 records.  Elapsed time: 01:41:00s.  Time for last 1,000,000:    9s.  Last read position: scaffold1990259_193_scaffold1990259,193,f1991081Z193:82
+INFO	2020-05-06 14:34:49	MergeSamFiles	Processed   611,000,000 records.  Elapsed time: 01:41:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold18394_17574_scaffold18394,17574,f18513Z17574:8,797
+INFO	2020-05-06 14:34:59	MergeSamFiles	Processed   612,000,000 records.  Elapsed time: 01:41:20s.  Time for last 1,000,000:   10s.  Last read position: scaffold570_206112_scaffold570,206112,f522Z206112:45,891
+INFO	2020-05-06 14:35:09	MergeSamFiles	Processed   613,000,000 records.  Elapsed time: 01:41:30s.  Time for last 1,000,000:    9s.  Last read position: scaffold4467_64635_scaffold4467,64635,f4450Z64635:11,838
+INFO	2020-05-06 14:35:19	MergeSamFiles	Processed   614,000,000 records.  Elapsed time: 01:41:40s.  Time for last 1,000,000:   10s.  Last read position: scaffold1485_132473_scaffold1485,132473,f1497Z132473:109,640
+INFO	2020-05-06 14:35:29	MergeSamFiles	Processed   615,000,000 records.  Elapsed time: 01:41:50s.  Time for last 1,000,000:    9s.  Last read position: scaffold320_266388_scaffold320,266388,f511Z266388:7,812
+INFO	2020-05-06 14:35:42	MergeSamFiles	Processed   616,000,000 records.  Elapsed time: 01:42:03s.  Time for last 1,000,000:   12s.  Last read position: scaffold1274252_254_scaffold1274252,254,f1271072Z254:35
+INFO	2020-05-06 14:35:51	MergeSamFiles	Processed   617,000,000 records.  Elapsed time: 01:42:12s.  Time for last 1,000,000:    9s.  Last read position: scaffold579131_500_scaffold579131,500,f578427Z500:145
+INFO	2020-05-06 14:36:01	MergeSamFiles	Processed   618,000,000 records.  Elapsed time: 01:42:22s.  Time for last 1,000,000:   10s.  Last read position: scaffold3049724_103_scaffold3049724,103,f3075193Z103:5
+INFO	2020-05-06 14:36:12	MergeSamFiles	Processed   619,000,000 records.  Elapsed time: 01:42:33s.  Time for last 1,000,000:   11s.  Last read position: scaffold152214_2471_scaffold152214,2471,f152177Z2471:2,029
+INFO	2020-05-06 14:36:22	MergeSamFiles	Processed   620,000,000 records.  Elapsed time: 01:42:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold83538_4496_scaffold83538,4496,f83526Z4496:3,157
+INFO	2020-05-06 14:36:32	MergeSamFiles	Processed   621,000,000 records.  Elapsed time: 01:42:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold2649_95939_scaffold2649,95939,f2582Z95939:64,893
+INFO	2020-05-06 14:36:41	MergeSamFiles	Processed   622,000,000 records.  Elapsed time: 01:43:02s.  Time for last 1,000,000:    9s.  Last read position: scaffold6585_49217_scaffold6585,49217,f6545Z49217:1,261
+INFO	2020-05-06 14:36:52	MergeSamFiles	Processed   623,000,000 records.  Elapsed time: 01:43:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold791134_376_scaffold791134,376,f793035Z376:240
+INFO	2020-05-06 14:37:02	MergeSamFiles	Processed   624,000,000 records.  Elapsed time: 01:43:23s.  Time for last 1,000,000:    9s.  Last read position: scaffold374741_790_scaffold374741,790,f375030Z790:105
+INFO	2020-05-06 14:37:12	MergeSamFiles	Processed   625,000,000 records.  Elapsed time: 01:43:33s.  Time for last 1,000,000:   10s.  Last read position: scaffold29761_10318_scaffold29761,10318,f29664Z10318:1,933
+INFO	2020-05-06 14:37:22	MergeSamFiles	Processed   626,000,000 records.  Elapsed time: 01:43:43s.  Time for last 1,000,000:   10s.  Last read position: scaffold418934_696_scaffold418934,696,f418534Z696:1
+INFO	2020-05-06 14:37:32	MergeSamFiles	Processed   627,000,000 records.  Elapsed time: 01:43:53s.  Time for last 1,000,000:    9s.  Last read position: scaffold797558_374_scaffold797558,374,f796029Z374:305
+INFO	2020-05-06 14:37:42	MergeSamFiles	Processed   628,000,000 records.  Elapsed time: 01:44:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold5088_56695_scaffold5088,56695,f5040Z56695:3,410
+INFO	2020-05-06 14:37:51	MergeSamFiles	Processed   629,000,000 records.  Elapsed time: 01:44:12s.  Time for last 1,000,000:    9s.  Last read position: scaffold125993_3041_scaffold125993,3041,f125984Z3041:1,838
+INFO	2020-05-06 14:38:02	MergeSamFiles	Processed   630,000,000 records.  Elapsed time: 01:44:23s.  Time for last 1,000,000:   10s.  Last read position: scaffold1967906_197_scaffold1967906,197,f1963288Z197:96
+INFO	2020-05-06 14:38:12	MergeSamFiles	Processed   631,000,000 records.  Elapsed time: 01:44:33s.  Time for last 1,000,000:    9s.  Last read position: scaffold1925642_200_scaffold1925642,200,f1936991Z200:1
+INFO	2020-05-06 14:38:22	MergeSamFiles	Processed   632,000,000 records.  Elapsed time: 01:44:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold81385_4598_scaffold81385,4598,f81353Z4598:1,230
+INFO	2020-05-06 14:38:32	MergeSamFiles	Processed   633,000,000 records.  Elapsed time: 01:44:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold26541_11490_scaffold26541,11490,f26440Z11490:5,479
+INFO	2020-05-06 14:38:42	MergeSamFiles	Processed   634,000,000 records.  Elapsed time: 01:45:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold215166_1610_scaffold215166,1610,f215176Z1610:1,507
+INFO	2020-05-06 14:38:52	MergeSamFiles	Processed   635,000,000 records.  Elapsed time: 01:45:13s.  Time for last 1,000,000:   10s.  Last read position: scaffold2237731_126_scaffold2237731,126,f2237497Z126:38
+INFO	2020-05-06 14:39:01	MergeSamFiles	Processed   636,000,000 records.  Elapsed time: 01:45:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold561346_515_scaffold561346,515,f561070Z515:23
+INFO	2020-05-06 14:39:13	MergeSamFiles	Processed   637,000,000 records.  Elapsed time: 01:45:34s.  Time for last 1,000,000:   11s.  Last read position: scaffold227913_1495_scaffold227913,1495,f227872Z1495:854
+INFO	2020-05-06 14:39:23	MergeSamFiles	Processed   638,000,000 records.  Elapsed time: 01:45:44s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:39:33	MergeSamFiles	Processed   639,000,000 records.  Elapsed time: 01:45:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold4192_61990_scaffold4192,61990,f4163Z61990:15
+INFO	2020-05-06 14:39:44	MergeSamFiles	Processed   640,000,000 records.  Elapsed time: 01:46:05s.  Time for last 1,000,000:   11s.  Last read position: scaffold721_185852_scaffold721,185852,f725Z185852:74,433
+INFO	2020-05-06 14:39:53	MergeSamFiles	Processed   641,000,000 records.  Elapsed time: 01:46:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold445670_650_scaffold445670,650,f446081Z650:293
+INFO	2020-05-06 14:40:03	MergeSamFiles	Processed   642,000,000 records.  Elapsed time: 01:46:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold1153341_275_scaffold1153341,275,f1154172Z275:125
+INFO	2020-05-06 14:40:13	MergeSamFiles	Processed   643,000,000 records.  Elapsed time: 01:46:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold66648_5418_scaffold66648,5418,f66617Z5418:4,606
+INFO	2020-05-06 14:40:25	MergeSamFiles	Processed   644,000,000 records.  Elapsed time: 01:46:46s.  Time for last 1,000,000:   12s.  Last read position: scaffold3694_76129_scaffold3694,76129,f3651Z76129:27,004
+INFO	2020-05-06 14:40:35	MergeSamFiles	Processed   645,000,000 records.  Elapsed time: 01:46:56s.  Time for last 1,000,000:   10s.  Last read position: scaffold391451_751_scaffold391451,751,f391403Z751:527
+INFO	2020-05-06 14:40:47	MergeSamFiles	Processed   646,000,000 records.  Elapsed time: 01:47:08s.  Time for last 1,000,000:   12s.  Last read position: scaffold16946_19656_scaffold16946,19656,f16852Z19656:6,360
+INFO	2020-05-06 14:41:01	MergeSamFiles	Processed   647,000,000 records.  Elapsed time: 01:47:22s.  Time for last 1,000,000:   13s.  Last read position: scaffold78761_4728_scaffold78761,4728,f78745Z4728:4,554
+INFO	2020-05-06 14:41:13	MergeSamFiles	Processed   648,000,000 records.  Elapsed time: 01:47:34s.  Time for last 1,000,000:   11s.  Last read position: scaffold1950096_198_scaffold1950096,198,f1957465Z198:96
+INFO	2020-05-06 14:41:23	MergeSamFiles	Processed   649,000,000 records.  Elapsed time: 01:47:44s.  Time for last 1,000,000:   10s.  Last read position: scaffold8762_40341_scaffold8762,40341,f8691Z40341:23,690
+INFO	2020-05-06 14:41:33	MergeSamFiles	Processed   650,000,000 records.  Elapsed time: 01:47:54s.  Time for last 1,000,000:    9s.  Last read position: scaffold226524_1507_scaffold226524,1507,f226534Z1507:787
+INFO	2020-05-06 14:41:43	MergeSamFiles	Processed   651,000,000 records.  Elapsed time: 01:48:04s.  Time for last 1,000,000:   10s.  Last read position: scaffold893_167500_scaffold893,167500,f890Z167500:45,718
+INFO	2020-05-06 14:41:53	MergeSamFiles	Processed   652,000,000 records.  Elapsed time: 01:48:14s.  Time for last 1,000,000:    9s.  Last read position: scaffold576218_502_scaffold576218,502,f576240Z502:383
+INFO	2020-05-06 14:42:03	MergeSamFiles	Processed   653,000,000 records.  Elapsed time: 01:48:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold1264_143133_scaffold1264,143133,f1215Z143133:69,849
+INFO	2020-05-06 14:42:14	MergeSamFiles	Processed   654,000,000 records.  Elapsed time: 01:48:35s.  Time for last 1,000,000:   10s.  Last read position: scaffold1321786_246_scaffold1321786,246,f1323794Z246:9
+INFO	2020-05-06 14:42:23	MergeSamFiles	Processed   655,000,000 records.  Elapsed time: 01:48:44s.  Time for last 1,000,000:    9s.  Last read position: scaffold49895_6781_scaffold49895,6781,f49841Z6781:5,222
+INFO	2020-05-06 14:42:33	MergeSamFiles	Processed   656,000,000 records.  Elapsed time: 01:48:54s.  Time for last 1,000,000:   10s.  Last read position: scaffold2679_95232_scaffold2679,95232,f2646Z95232:28,556
+INFO	2020-05-06 14:42:43	MergeSamFiles	Processed   657,000,000 records.  Elapsed time: 01:49:04s.  Time for last 1,000,000:    9s.  Last read position: scaffold15035_22964_scaffold15035,22964,f15008Z22964:644
+INFO	2020-05-06 14:42:53	MergeSamFiles	Processed   658,000,000 records.  Elapsed time: 01:49:14s.  Time for last 1,000,000:   10s.  Last read position: */*
+INFO	2020-05-06 14:43:03	MergeSamFiles	Processed   659,000,000 records.  Elapsed time: 01:49:24s.  Time for last 1,000,000:    9s.  Last read position: scaffold2031434_173_scaffold2031434,173,f2031455Z173:98
+INFO	2020-05-06 14:43:13	MergeSamFiles	Processed   660,000,000 records.  Elapsed time: 01:49:34s.  Time for last 1,000,000:    9s.  Last read position: scaffold22921_13444_scaffold22921,13444,f22812Z13444:12,302
+INFO	2020-05-06 14:43:24	MergeSamFiles	Processed   661,000,000 records.  Elapsed time: 01:49:45s.  Time for last 1,000,000:   11s.  Last read position: scaffold855_170731_scaffold855,170731,f819Z170731:112,848
+INFO	2020-05-06 14:43:34	MergeSamFiles	Processed   662,000,000 records.  Elapsed time: 01:49:55s.  Time for last 1,000,000:    9s.  Last read position: scaffold1945_114406_scaffold1945,114406,f1935Z114406:86,754
+INFO	2020-05-06 14:43:44	MergeSamFiles	Processed   663,000,000 records.  Elapsed time: 01:50:05s.  Time for last 1,000,000:   10s.  Last read position: scaffold80414_4648_scaffold80414,4648,f80393Z4648:4,085
+INFO	2020-05-06 14:43:54	MergeSamFiles	Processed   664,000,000 records.  Elapsed time: 01:50:15s.  Time for last 1,000,000:    9s.  Last read position: scaffold1960016_197_scaffold1960016,197,f1964558Z197:83
+INFO	2020-05-06 14:44:05	MergeSamFiles	Processed   665,000,000 records.  Elapsed time: 01:50:26s.  Time for last 1,000,000:   11s.  Last read position: scaffold23260_13246_scaffold23260,13246,f23167Z13246:2,278
+INFO	2020-05-06 14:44:15	MergeSamFiles	Processed   666,000,000 records.  Elapsed time: 01:50:36s.  Time for last 1,000,000:    9s.  Last read position: scaffold63136_5664_scaffold63136,5664,f63108Z5664:4,875
+INFO	2020-05-06 14:44:25	MergeSamFiles	Processed   667,000,000 records.  Elapsed time: 01:50:46s.  Time for last 1,000,000:   10s.  Last read position: scaffold160235_2329_scaffold160235,2329,f160176Z2329:50
+INFO	2020-05-06 14:44:35	MergeSamFiles	Processed   668,000,000 records.  Elapsed time: 01:50:56s.  Time for last 1,000,000:   10s.  Last read position: scaffold5055_57040_scaffold5055,57040,f5184Z57040:7,349
+INFO	2020-05-06 14:44:45	MergeSamFiles	Processed   669,000,000 records.  Elapsed time: 01:51:06s.  Time for last 1,000,000:    9s.  Last read position: scaffold318061_965_scaffold318061,965,f318170Z965:637
+INFO	2020-05-06 14:44:55	MergeSamFiles	Processed   670,000,000 records.  Elapsed time: 01:51:16s.  Time for last 1,000,000:   10s.  Last read position: scaffold86369_4364_scaffold86369,4364,f86349Z4364:4,112
+INFO	2020-05-06 14:45:04	MergeSamFiles	Processed   671,000,000 records.  Elapsed time: 01:51:25s.  Time for last 1,000,000:    9s.  Last read position: scaffold1977796_195_scaffold1977796,195,f1979793Z195:83
+INFO	2020-05-06 14:45:15	MergeSamFiles	Processed   672,000,000 records.  Elapsed time: 01:51:36s.  Time for last 1,000,000:   10s.  Last read position: scaffold3849_73641_scaffold3849,73641,f3861Z73641:62,395
+INFO	2020-05-06 14:45:25	MergeSamFiles	Processed   673,000,000 records.  Elapsed time: 01:51:46s.  Time for last 1,000,000:    9s.  Last read position: scaffold184319_1963_scaffold184319,1963,f184284Z1963:531
+INFO	2020-05-06 14:45:35	MergeSamFiles	Processed   674,000,000 records.  Elapsed time: 01:51:56s.  Time for last 1,000,000:    9s.  Last read position: scaffold1178_147486_scaffold1178,147486,f1175Z147486:104,114
+INFO	2020-05-06 14:45:46	MergeSamFiles	Processed   675,000,000 records.  Elapsed time: 01:52:07s.  Time for last 1,000,000:   11s.  Last read position: scaffold1248406_258_scaffold1248406,258,f1249520Z258:11
+INFO	2020-05-06 14:45:55	MergeSamFiles	Processed   676,000,000 records.  Elapsed time: 01:52:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold9_1015789_scaffold9,1015789,f72Z1015789:25,464
+INFO	2020-05-06 14:46:06	MergeSamFiles	Processed   677,000,000 records.  Elapsed time: 01:52:27s.  Time for last 1,000,000:   10s.  Last read position: scaffold914601_332_scaffold914601,332,f914517Z332:182
+INFO	2020-05-06 14:46:15	MergeSamFiles	Processed   678,000,000 records.  Elapsed time: 01:52:36s.  Time for last 1,000,000:    9s.  Last read position: scaffold1836181_201_scaffold1836181,201,f1744183Z201:88
+INFO	2020-05-06 14:46:26	MergeSamFiles	Processed   679,000,000 records.  Elapsed time: 01:52:47s.  Time for last 1,000,000:   10s.  Last read position: scaffold3437_67609_scaffold3437,67609,f3371Z67609:5,947
+INFO	2020-05-06 14:46:35	MergeSamFiles	Processed   680,000,000 records.  Elapsed time: 01:52:56s.  Time for last 1,000,000:    9s.  Last read position: scaffold75130_4915_scaffold75130,4915,f75107Z4915:727
+INFO	2020-05-06 14:46:45	MergeSamFiles	Processed   681,000,000 records.  Elapsed time: 01:53:06s.  Time for last 1,000,000:    9s.  Last read position: scaffold2187713_133_scaffold2187713,133,f2187081Z133:31
+INFO	2020-05-06 14:46:58	MergeSamFiles	Processed   682,000,000 records.  Elapsed time: 01:53:19s.  Time for last 1,000,000:   12s.  Last read position: scaffold2106_109312_scaffold2106,109312,f2136Z109312:43,589
+INFO	2020-05-06 14:47:07	MergeSamFiles	Processed   683,000,000 records.  Elapsed time: 01:53:28s.  Time for last 1,000,000:    9s.  Last read position: scaffold344_259226_scaffold344,259226,f299Z259226:94,110
+INFO	2020-05-06 14:47:17	MergeSamFiles	Processed   684,000,000 records.  Elapsed time: 01:53:38s.  Time for last 1,000,000:   10s.  Last read position: scaffold56726_6161_scaffold56726,6161,f56683Z6161:4,351
+INFO	2020-05-06 14:47:27	MergeSamFiles	Processed   685,000,000 records.  Elapsed time: 01:53:48s.  Time for last 1,000,000:    9s.  Last read position: scaffold56848_6151_scaffold56848,6151,f56802Z6151:4,626
+INFO	2020-05-06 14:47:39	MergeSamFiles	Processed   686,000,000 records.  Elapsed time: 01:54:00s.  Time for last 1,000,000:   12s.  Last read position: scaffold17514_18757_scaffold17514,18757,f17385Z18757:15,706
+INFO	2020-05-06 14:47:49	MergeSamFiles	Processed   687,000,000 records.  Elapsed time: 01:54:10s.  Time for last 1,000,000:    9s.  Last read position: scaffold7_1159728_scaffold7,1159728,f157Z1159728:580,516
+INFO	2020-05-06 14:47:59	MergeSamFiles	Processed   688,000,000 records.  Elapsed time: 01:54:20s.  Time for last 1,000,000:   10s.  Last read position: scaffold1100781_286_scaffold1100781,286,f1101751Z286:4
+INFO	2020-05-06 14:48:10	MergeSamFiles	Processed   689,000,000 records.  Elapsed time: 01:54:31s.  Time for last 1,000,000:   10s.  Last read position: scaffold4672_62080_scaffold4672,62080,f4619Z62080:56,666
+INFO	2020-05-06 14:48:19	MergeSamFiles	Processed   690,000,000 records.  Elapsed time: 01:54:40s.  Time for last 1,000,000:    9s.  Last read position: scaffold708_188054_scaffold708,188054,f752Z188054:82,058
+INFO	2020-05-06 14:48:29	MergeSamFiles	Processed   691,000,000 records.  Elapsed time: 01:54:50s.  Time for last 1,000,000:   10s.  Last read position: scaffold5103_56332_scaffold5103,56332,f5056Z56332:3,600
+INFO	2020-05-06 14:48:39	MergeSamFiles	Processed   692,000,000 records.  Elapsed time: 01:55:00s.  Time for last 1,000,000:    9s.  Last read position: scaffold2083462_151_scaffold2083462,151,f2080901Z151:1
+INFO	2020-05-06 14:48:50	MergeSamFiles	Processed   693,000,000 records.  Elapsed time: 01:55:11s.  Time for last 1,000,000:   10s.  Last read position: scaffold26241_11614_scaffold26241,11614,f26137Z11614:1,847
+INFO	2020-05-06 14:48:59	MergeSamFiles	Processed   694,000,000 records.  Elapsed time: 01:55:20s.  Time for last 1,000,000:    9s.  Last read position: scaffold33633_9252_scaffold33633,9252,f33549Z9252:6,266
+INFO	2020-05-06 14:49:10	MergeSamFiles	Processed   695,000,000 records.  Elapsed time: 01:55:31s.  Time for last 1,000,000:   10s.  Last read position: scaffold339_261634_scaffold339,261634,f397Z261634:249,545
+INFO	2020-05-06 14:49:21	MergeSamFiles	Processed   696,000,000 records.  Elapsed time: 01:55:42s.  Time for last 1,000,000:   11s.  Last read position: scaffold122333_3139_scaffold122333,3139,f122319Z3139:2,804
+INFO	2020-05-06 14:49:31	MergeSamFiles	Processed   697,000,000 records.  Elapsed time: 01:55:52s.  Time for last 1,000,000:    9s.  Last read position: scaffold529_213843_scaffold529,213843,f540Z213843:4,365
+INFO	2020-05-06 14:49:41	MergeSamFiles	Processed   698,000,000 records.  Elapsed time: 01:56:02s.  Time for last 1,000,000:   10s.  Last read position: scaffold1461684_226_scaffold1461684,226,f1464484Z226:25
+INFO	2020-05-06 14:49:50	MergeSamFiles	Processed   699,000,000 records.  Elapsed time: 01:56:11s.  Time for last 1,000,000:    9s.  Last read position: scaffold76364_4851_scaffold76364,4851,f76317Z4851:1,248
+INFO	2020-05-06 14:50:02	MergeSamFiles	Processed   700,000,000 records.  Elapsed time: 01:56:23s.  Time for last 1,000,000:   11s.  Last read position: scaffold1057_154230_scaffold1057,154230,f993Z154230:116,720
+INFO	2020-05-06 14:50:11	MergeSamFiles	Processed   701,000,000 records.  Elapsed time: 01:56:32s.  Time for last 1,000,000:    9s.  Last read position: scaffold162722_2286_scaffold162722,2286,f162689Z2286:1,234
+INFO	2020-05-06 14:50:22	MergeSamFiles	Processed   702,000,000 records.  Elapsed time: 01:56:43s.  Time for last 1,000,000:   10s.  Last read position: scaffold1210906_264_scaffold1210906,264,f1213124Z264:45
+INFO	2020-05-06 14:50:33	MergeSamFiles	Processed   703,000,000 records.  Elapsed time: 01:56:54s.  Time for last 1,000,000:   10s.  Last read position: scaffold114872_3345_scaffold114872,3345,f114845Z3345:1,199
+INFO	2020-05-06 14:50:42	MergeSamFiles	Processed   704,000,000 records.  Elapsed time: 01:57:03s.  Time for last 1,000,000:    9s.  Last read position: scaffold2002426_191_scaffold2002426,191,f2001403Z191:52
+INFO	2020-05-06 14:50:52	MergeSamFiles	Processed   705,000,000 records.  Elapsed time: 01:57:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold1045853_297_scaffold1045853,297,f1049165Z297:150
+INFO	2020-05-06 14:51:02	MergeSamFiles	Processed   706,000,000 records.  Elapsed time: 01:57:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold2210755_129_scaffold2210755,129,f2216520Z129:35
+INFO	2020-05-06 14:51:13	MergeSamFiles	Processed   707,000,000 records.  Elapsed time: 01:57:34s.  Time for last 1,000,000:   11s.  Last read position: scaffold3473_79992_scaffold3473,79992,f3445Z79992:9,393
+INFO	2020-05-06 14:51:22	MergeSamFiles	Processed   708,000,000 records.  Elapsed time: 01:57:43s.  Time for last 1,000,000:    9s.  Last read position: scaffold48931_6879_scaffold48931,6879,f48892Z6879:5,602
+INFO	2020-05-06 14:51:32	MergeSamFiles	Processed   709,000,000 records.  Elapsed time: 01:57:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold657880_444_scaffold657880,444,f656816Z444:120
+INFO	2020-05-06 14:51:45	MergeSamFiles	Processed   710,000,000 records.  Elapsed time: 01:58:06s.  Time for last 1,000,000:   13s.  Last read position: scaffold1144_149447_scaffold1144,149447,f4069Z149447:62,254
+INFO	2020-05-06 14:51:55	MergeSamFiles	Processed   711,000,000 records.  Elapsed time: 01:58:16s.  Time for last 1,000,000:    9s.  Last read position: scaffold2077_110112_scaffold2077,110112,f2026Z110112:56,287
+INFO	2020-05-06 14:52:05	MergeSamFiles	Processed   712,000,000 records.  Elapsed time: 01:58:26s.  Time for last 1,000,000:    9s.  Last read position: scaffold1556_130015_scaffold1556,130015,f1588Z130015:59,408
+INFO	2020-05-06 14:52:15	MergeSamFiles	Processed   713,000,000 records.  Elapsed time: 01:58:36s.  Time for last 1,000,000:    9s.  Last read position: scaffold882_168273_scaffold882,168273,f893Z168273:29,071
+INFO	2020-05-06 14:52:26	MergeSamFiles	Processed   714,000,000 records.  Elapsed time: 01:58:47s.  Time for last 1,000,000:   11s.  Last read position: scaffold13552_26118_scaffold13552,26118,f13520Z26118:19,804
+INFO	2020-05-06 14:52:36	MergeSamFiles	Processed   715,000,000 records.  Elapsed time: 01:58:57s.  Time for last 1,000,000:    9s.  Last read position: scaffold27_691504_scaffold27,691504,f30Z691504:244,459
+INFO	2020-05-06 14:52:46	MergeSamFiles	Processed   716,000,000 records.  Elapsed time: 01:59:07s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2020-05-06 14:52:58	MergeSamFiles	Processed   717,000,000 records.  Elapsed time: 01:59:19s.  Time for last 1,000,000:   12s.  Last read position: scaffold130505_2928_scaffold130505,2928,f130530Z2928:1,712
+INFO	2020-05-06 14:53:07	MergeSamFiles	Processed   718,000,000 records.  Elapsed time: 01:59:28s.  Time for last 1,000,000:    9s.  Last read position: scaffold224647_1523_scaffold224647,1523,f224765Z1523:682
+INFO	2020-05-06 14:53:17	MergeSamFiles	Processed   719,000,000 records.  Elapsed time: 01:59:38s.  Time for last 1,000,000:    9s.  Last read position: scaffold4948_58248_scaffold4948,58248,f4907Z58248:35,378
+INFO	2020-05-06 14:53:27	MergeSamFiles	Processed   720,000,000 records.  Elapsed time: 01:59:48s.  Time for last 1,000,000:    9s.  Last read position: scaffold38491_8265_scaffold38491,8265,f38416Z8265:4,694
+INFO	2020-05-06 14:53:38	MergeSamFiles	Processed   721,000,000 records.  Elapsed time: 01:59:59s.  Time for last 1,000,000:   11s.  Last read position: scaffold69121_5266_scaffold69121,5266,f69083Z5266:1,827
+INFO	2020-05-06 14:53:48	MergeSamFiles	Processed   722,000,000 records.  Elapsed time: 02:00:09s.  Time for last 1,000,000:    9s.  Last read position: scaffold3162_69969_scaffold3162,69969,f3095Z69969:48,218
+INFO	2020-05-06 14:53:58	MergeSamFiles	Processed   723,000,000 records.  Elapsed time: 02:00:19s.  Time for last 1,000,000:    9s.  Last read position: scaffold835208_359_scaffold835208,359,f834675Z359:50
+INFO	2020-05-06 14:54:10	MergeSamFiles	Processed   724,000,000 records.  Elapsed time: 02:00:31s.  Time for last 1,000,000:   12s.  Last read position: scaffold1839_118811_scaffold1839,118811,f1816Z118811:116,771
+INFO	2020-05-06 14:54:20	MergeSamFiles	Processed   725,000,000 records.  Elapsed time: 02:00:41s.  Time for last 1,000,000:    9s.  Last read position: scaffold4802_60172_scaffold4802,60172,f4791Z60172:6,808
+INFO	2020-05-06 14:54:30	MergeSamFiles	Processed   726,000,000 records.  Elapsed time: 02:00:51s.  Time for last 1,000,000:   10s.  Last read position: scaffold3648_76885_scaffold3648,76885,f3613Z76885:34,719
+INFO	2020-05-06 14:54:40	MergeSamFiles	Processed   727,000,000 records.  Elapsed time: 02:01:01s.  Time for last 1,000,000:    9s.  Last read position: scaffold38444_8272_scaffold38444,8272,f38360Z8272:4,275
+INFO	2020-05-06 14:54:51	MergeSamFiles	Processed   728,000,000 records.  Elapsed time: 02:01:12s.  Time for last 1,000,000:   11s.  Last read position: scaffold83417_4502_scaffold83417,4502,f83387Z4502:3,538
+INFO	2020-05-06 14:55:01	MergeSamFiles	Processed   729,000,000 records.  Elapsed time: 02:01:22s.  Time for last 1,000,000:    9s.  Last read position: scaffold3095_86651_scaffold3095,86651,f3031Z86651:151,542
+INFO	2020-05-06 14:55:11	MergeSamFiles	Processed   730,000,000 records.  Elapsed time: 02:01:32s.  Time for last 1,000,000:   10s.  Last read position: scaffold103727_3692_scaffold103727,3692,f103702Z3692:499
+INFO	2020-05-06 14:55:22	MergeSamFiles	Processed   731,000,000 records.  Elapsed time: 02:01:43s.  Time for last 1,000,000:   11s.  Last read position: scaffold23677_12996_scaffold23677,12996,f23561Z12996:10,468
+INFO	2020-05-06 14:55:32	MergeSamFiles	Processed   732,000,000 records.  Elapsed time: 02:01:53s.  Time for last 1,000,000:   10s.  Last read position: scaffold2486_99773_scaffold2486,99773,f2474Z99773:39,282
+INFO	2020-05-06 14:55:42	MergeSamFiles	Processed   733,000,000 records.  Elapsed time: 02:02:03s.  Time for last 1,000,000:   10s.  Last read position: scaffold37772_8397_scaffold37772,8397,f37696Z8397:5,127
+INFO	2020-05-06 14:55:52	MergeSamFiles	Processed   734,000,000 records.  Elapsed time: 02:02:13s.  Time for last 1,000,000:    9s.  Last read position: scaffold51536_6626_scaffold51536,6626,f51475Z6626:1,727
+INFO	2020-05-06 14:56:04	MergeSamFiles	Processed   735,000,000 records.  Elapsed time: 02:02:25s.  Time for last 1,000,000:   11s.  Last read position: scaffold1399_136151_scaffold1399,136151,f1435Z136151:52,935
+INFO	2020-05-06 14:56:15	MergeSamFiles	Processed   736,000,000 records.  Elapsed time: 02:02:36s.  Time for last 1,000,000:   10s.  Last read position: scaffold3362_81870_scaffold3362,81870,f3329Z81870:10,213
+INFO	2020-05-06 14:56:25	MergeSamFiles	Processed   737,000,000 records.  Elapsed time: 02:02:46s.  Time for last 1,000,000:   10s.  Last read position: scaffold1339_139487_scaffold1339,139487,f1361Z139487:96,610
+INFO	2020-05-06 14:56:36	MergeSamFiles	Processed   738,000,000 records.  Elapsed time: 02:02:57s.  Time for last 1,000,000:   11s.  Last read position: scaffold2393886_115_scaffold2393886,115,f2386104Z115:37
+[Wed May 06 14:56:43 PDT 2020] picard.sam.MergeSamFiles done. Elapsed time: 124.88 minutes.
+Runtime.totalMemory()=12430868480
+To get help, see http://broadinstitute.github.io/picard/index.html#GettingHelp
+Exception in thread "main" htsjdk.samtools.util.RuntimeIOException: java.io.IOException: No space left on device
+	at htsjdk.samtools.util.SortingCollection.spillToDisk(SortingCollection.java:247)
+	at htsjdk.samtools.util.SortingCollection.add(SortingCollection.java:167)
+	at htsjdk.samtools.SAMFileWriterImpl.addAlignment(SAMFileWriterImpl.java:203)
+	at picard.sam.MergeSamFiles.doWork(MergeSamFiles.java:224)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:282)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:103)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:113)
+Caused by: java.io.IOException: No space left on device
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.FileDispatcherImpl.write(FileDispatcherImpl.java:60)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:210)
+	at java.nio.channels.Channels.writeFullyImpl(Channels.java:78)
+	at java.nio.channels.Channels.writeFully(Channels.java:101)
+	at java.nio.channels.Channels.access$000(Channels.java:61)
+	at java.nio.channels.Channels$1.write(Channels.java:174)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	at org.xerial.snappy.SnappyOutputStream.dumpOutput(SnappyOutputStream.java:360)
+	at org.xerial.snappy.SnappyOutputStream.compressInput(SnappyOutputStream.java:374)
+	at org.xerial.snappy.SnappyOutputStream.flush(SnappyOutputStream.java:334)
+	at org.xerial.snappy.SnappyOutputStream.close(SnappyOutputStream.java:397)
+	at htsjdk.samtools.util.SortingCollection.spillToDisk(SortingCollection.java:238)
+	... 6 more

@@ -1,0 +1,1035 @@
+
+# Trim with Trim_Galore to remove low quality bases and adaptor sequences
+module unload perl
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:miniconda2/4.4.10:less-highlight/1.0:iigb_utilities/1:vim/8.1 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;MODULEPATH=/usr/share/modules/versions:/usr/Modules/\$MODULE_VERSION/modulefiles:/usr/share/Modules/modulefiles:/opt/linux/centos/7.x/x86_64/modules:/opt/linux/centos/7.x/x86_64/profiles ;export MODULEPATH;PATH=/rhome/arajewski/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/miniconda2/4.4.10/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/miniconda2/4.4.10:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1 ;export _LMFILES_;unset INSTALL_BASE;unset PERL5LIB;
+module unload miniconda2
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:less-highlight/1.0:iigb_utilities/1:vim/8.1 ;export LOADEDMODULES;PATH=/rhome/arajewski/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1 ;export _LMFILES_;
+module load trim_galore/0.4.2
+/usr/bin/modulecmd bash $*
+INSTALL_BASE=/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2 ;export INSTALL_BASE;LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/lib:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/lib:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib/openmpi:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/lib ;export LD_LIBRARY_PATH;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:less-highlight/1.0:iigb_utilities/1:vim/8.1:perl/5.20.2:python/2.7.5:trim_galore/0.4.2 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;MODULEPATH=/usr/share/Modules:/usr/share/modules/versions:/usr/Modules/\$MODULE_VERSION/modulefiles:/usr/share/Modules/modulefiles:/opt/linux/centos/7.x/x86_64/modules:/opt/linux/centos/7.x/x86_64/profiles ;export MODULEPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/trim_galore/0.4.2/:/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/rhome/arajewski/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;PERL5LIB=/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/perl5/x86_64-linux/auto:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/perl5/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/perl5:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/5.20.2 ;export PERL5LIB;PYTHONPATH=/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/lib/python2.7/site-packages:/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/lib64/python2.7/site-packages:/usr/lib/python2.7/site-packages:/usr/lib64/python2.7/site-packages ;export PYTHONPATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/python/2.7.5:/opt/linux/centos/7.x/x86_64/modules/trim_galore/0.4.2 ;export _LMFILES_;
+
+#Pass a list of PE vs SE datasets
+PAIRS=( Alex_S85_L002 Alex_S230_L002 )
+SINGLES=( Alex-1_S9 Alex-2_S10 )
+DNAPATH=/bigdata/littlab/arajewski/Datura/DNA-seq
+#Do PE data
+for i in ${!PAIRS[@]}
+do
+if [ ! -e ${PAIRS[i]}_R1_001_val_2.fastq.gz ]; then
+    echo Running Trim Galore on ${PAIRS[i]}...
+    trim_galore \
+        --paired \
+        -o ./ \
+        --no_report_file \
+        $DNAPATH/${PAIRS[i]}_R1_001.fastq.gz $DNAPATH/${PAIRS[i]}_R2_001.fastq.gz 
+    echo Done.
+else
+    echo ${PAIRS[i]} already trimmed.
+fi
+done
+Running Trim Galore on Alex_S85_L002...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	456093	AGATCGGAAGAGC	1000000	45.61
+Nextera	8	CTGTCTCTTATA	1000000	0.00
+smallRNA	5	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 456093). Second best hit was Nextera (count: 8)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to Alex_S85_L002_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 6334.28 s (33 us/read; 1.82 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             191,783,361
+Reads with adapters:               134,334,223 (70.0%)
+Reads written (passing filters):   191,783,361 (100.0%)
+
+Total basepairs processed: 28,959,287,511 bp
+Quality-trimmed:              16,960,324 bp (0.1%)
+Total written (filtered):  22,192,115,469 bp (76.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 134334223 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 11.2%
+  C: 19.0%
+  G: 34.4%
+  T: 22.8%
+  none/other: 12.6%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	25945049	47945840.2	0	25945049
+2	6582124	11986460.1	0	6582124
+3	2865089	2996615.0	0	2865089
+4	1284982	749153.8	0	1284982
+5	965279	187288.4	0	965279
+6	859427	46822.1	0	859427
+7	824376	11705.5	0	824376
+8	903483	2926.4	0	903483
+9	827987	731.6	0	823140 4847
+10	852436	182.9	1	826242 26194
+11	875586	45.7	1	845119 30467
+12	893177	11.4	1	864332 28845
+13	881564	2.9	1	852448 29116
+14	894079	2.9	1	863979 30100
+15	911326	2.9	1	881114 30212
+16	894620	2.9	1	863536 31084
+17	983274	2.9	1	947960 35314
+18	952810	2.9	1	923071 29739
+19	795440	2.9	1	769379 26061
+20	897753	2.9	1	867951 29802
+21	928877	2.9	1	897346 31531
+22	878000	2.9	1	849441 28559
+23	993784	2.9	1	961389 32395
+24	859799	2.9	1	829326 30473
+25	937514	2.9	1	907178 30336
+26	906354	2.9	1	878314 28040
+27	946731	2.9	1	915028 31703
+28	932169	2.9	1	902297 29872
+29	927461	2.9	1	895404 32057
+30	1007258	2.9	1	976548 30710
+31	812342	2.9	1	786562 25780
+32	928478	2.9	1	898917 29561
+33	906011	2.9	1	876254 29757
+34	954320	2.9	1	924389 29931
+35	913478	2.9	1	881665 31813
+36	1025087	2.9	1	993927 31160
+37	829868	2.9	1	803440 26428
+38	943114	2.9	1	914560 28554
+39	935572	2.9	1	904838 30734
+40	902787	2.9	1	875259 27528
+41	964881	2.9	1	934382 30499
+42	898565	2.9	1	868990 29575
+43	965837	2.9	1	930360 35477
+44	881539	2.9	1	849834 31705
+45	1527324	2.9	1	1487532 39792
+46	331143	2.9	1	315452 15691
+47	926658	2.9	1	898391 28267
+48	924997	2.9	1	896031 28966
+49	959308	2.9	1	930485 28823
+50	832567	2.9	1	804805 27762
+51	912533	2.9	1	882262 30271
+52	860188	2.9	1	833866 26322
+53	873203	2.9	1	845715 27488
+54	890567	2.9	1	860878 29689
+55	1033823	2.9	1	1003217 30606
+56	741183	2.9	1	717014 24169
+57	906360	2.9	1	877200 29160
+58	1132000	2.9	1	1098738 33262
+59	725781	2.9	1	701222 24559
+60	889758	2.9	1	863845 25913
+61	652984	2.9	1	630465 22519
+62	887173	2.9	1	859186 27987
+63	880402	2.9	1	853012 27390
+64	904145	2.9	1	877060 27085
+65	641280	2.9	1	618269 23011
+66	982058	2.9	1	952658 29400
+67	943343	2.9	1	912123 31220
+68	1223776	2.9	1	1186609 37167
+69	1050336	2.9	1	1016472 33864
+70	1133019	2.9	1	1101048 31971
+71	65834	2.9	1	61459 4375
+72	173279	2.9	1	165195 8084
+73	608601	2.9	1	589438 19163
+74	691972	2.9	1	670501 21471
+75	701949	2.9	1	679860 22089
+76	697246	2.9	1	675409 21837
+77	687389	2.9	1	665534 21855
+78	684247	2.9	1	662787 21460
+79	678054	2.9	1	656422 21632
+80	657612	2.9	1	635964 21648
+81	654694	2.9	1	633146 21548
+82	628524	2.9	1	607478 21046
+83	607428	2.9	1	587167 20261
+84	592156	2.9	1	572705 19451
+85	575811	2.9	1	556672 19139
+86	574526	2.9	1	555289 19237
+87	554443	2.9	1	535844 18599
+88	546951	2.9	1	528578 18373
+89	535160	2.9	1	516482 18678
+90	519083	2.9	1	501650 17433
+91	500560	2.9	1	484052 16508
+92	481159	2.9	1	464316 16843
+93	465740	2.9	1	449956 15784
+94	452118	2.9	1	436753 15365
+95	439861	2.9	1	424932 14929
+96	423388	2.9	1	408547 14841
+97	408755	2.9	1	394469 14286
+98	395038	2.9	1	381506 13532
+99	381145	2.9	1	368306 12839
+100	365685	2.9	1	352859 12826
+101	347951	2.9	1	336075 11876
+102	332009	2.9	1	320601 11408
+103	317481	2.9	1	306401 11080
+104	305550	2.9	1	295076 10474
+105	287575	2.9	1	277637 9938
+106	277643	2.9	1	268313 9330
+107	260361	2.9	1	251207 9154
+108	246437	2.9	1	237950 8487
+109	235363	2.9	1	227233 8130
+110	217343	2.9	1	209833 7510
+111	203984	2.9	1	196852 7132
+112	185978	2.9	1	179254 6724
+113	172688	2.9	1	166644 6044
+114	157336	2.9	1	151806 5530
+115	140600	2.9	1	135687 4913
+116	127013	2.9	1	122656 4357
+117	111571	2.9	1	107746 3825
+118	101023	2.9	1	97614 3409
+119	86081	2.9	1	83135 2946
+120	79619	2.9	1	77084 2535
+121	64289	2.9	1	62126 2163
+122	56797	2.9	1	55043 1754
+123	47282	2.9	1	45809 1473
+124	40718	2.9	1	39296 1422
+125	34172	2.9	1	33094 1078
+126	30164	2.9	1	29220 944
+127	25608	2.9	1	24802 806
+128	23480	2.9	1	22788 692
+129	20762	2.9	1	20094 668
+130	18629	2.9	1	18016 613
+131	18196	2.9	1	17540 656
+132	18083	2.9	1	17537 546
+133	18464	2.9	1	17935 529
+134	18214	2.9	1	17690 524
+135	17414	2.9	1	16924 490
+136	16755	2.9	1	16224 531
+137	19146	2.9	1	18689 457
+138	19141	2.9	1	18693 448
+139	15413	2.9	1	15026 387
+140	10517	2.9	1	10181 336
+141	7581	2.9	1	7307 274
+142	3535	2.9	1	3353 182
+143	1307	2.9	1	1182 125
+144	799	2.9	1	714 85
+145	72886	2.9	1	71975 911
+146	4889	2.9	1	2990 1899
+147	1477	2.9	1	1323 154
+148	4320	2.9	1	4053 267
+149	3348	2.9	1	2866 482
+150	16140	2.9	1	14556 1584
+151	16907087	2.9	1	16094260 812827
+
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+=============================================
+191783361 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R2_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to Alex_S85_L002_R2_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R2_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R2_001.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 6296.21 s (33 us/read; 1.83 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             191,783,361
+Reads with adapters:               132,476,368 (69.1%)
+Reads written (passing filters):   191,783,361 (100.0%)
+
+Total basepairs processed: 28,959,287,511 bp
+Quality-trimmed:             226,925,314 bp (0.8%)
+Total written (filtered):  22,251,654,467 bp (76.8%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 132476368 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 10.5%
+  C: 18.2%
+  G: 35.2%
+  T: 23.8%
+  none/other: 12.3%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	26219897	47945840.2	0	26219897
+2	6478123	11986460.1	0	6478123
+3	2890476	2996615.0	0	2890476
+4	1273222	749153.8	0	1273222
+5	979619	187288.4	0	979619
+6	834781	46822.1	0	834781
+7	833607	11705.5	0	833607
+8	994030	2926.4	0	994030
+9	722811	731.6	0	720388 2423
+10	853001	182.9	1	834757 18244
+11	849171	45.7	1	829602 19569
+12	873279	11.4	1	855278 18001
+13	926969	2.9	1	908371 18598
+14	933997	2.9	1	914504 19493
+15	785051	2.9	1	771738 13313
+16	961108	2.9	1	942576 18532
+17	976101	2.9	1	956906 19195
+18	746211	2.9	1	733462 12749
+19	952074	2.9	1	934126 17948
+20	949915	2.9	1	931086 18829
+21	764050	2.9	1	749713 14337
+22	884879	2.9	1	867429 17450
+23	898213	2.9	1	881477 16736
+24	938240	2.9	1	920972 17268
+25	1074667	2.9	1	1055810 18857
+26	861454	2.9	1	845757 15697
+27	805478	2.9	1	789496 15982
+28	938408	2.9	1	921891 16517
+29	891620	2.9	1	875537 16083
+30	915514	2.9	1	900054 15460
+31	889682	2.9	1	875138 14544
+32	881961	2.9	1	867271 14690
+33	986249	2.9	1	967952 18297
+34	860193	2.9	1	842779 17414
+35	909250	2.9	1	892742 16508
+36	1327920	2.9	1	1300506 27414
+37	1472819	2.9	1	1449859 22960
+38	907606	2.9	1	894132 13474
+39	679815	2.9	1	666857 12958
+40	1206767	2.9	1	1190542 16225
+41	591629	2.9	1	578527 13102
+42	1120270	2.9	1	1103474 16796
+43	826037	2.9	1	809776 16261
+44	2993517	2.9	1	2957379 36138
+45	1770589	2.9	1	1747649 22940
+46	395362	2.9	1	386069 9293
+47	1121010	2.9	1	1106148 14862
+48	224641	2.9	1	218575 6066
+49	665341	2.9	1	655726 9615
+50	269939	2.9	1	264856 5083
+51	347292	2.9	1	341191 6101
+52	211873	2.9	1	207084 4789
+53	846754	2.9	1	834371 12383
+54	1364069	2.9	1	1347838 16231
+55	409152	2.9	1	401366 7786
+56	886877	2.9	1	872493 14384
+57	2519949	2.9	1	2492711 27238
+58	582441	2.9	1	572026 10415
+59	507470	2.9	1	497929 9541
+60	2209816	2.9	1	2183940 25876
+61	558785	2.9	1	550465 8320
+62	173511	2.9	1	168517 4994
+63	1411049	2.9	1	1392130 18919
+64	2721514	2.9	1	2691461 30053
+65	962267	2.9	1	949182 13085
+66	668438	2.9	1	658851 9587
+67	496808	2.9	1	490414 6394
+68	225390	2.9	1	221323 4067
+69	364295	2.9	1	358520 5775
+70	473463	2.9	1	467254 6209
+71	219412	2.9	1	215548 3864
+72	161304	2.9	1	158478 2826
+73	202826	2.9	1	199531 3295
+74	239810	2.9	1	235959 3851
+75	317662	2.9	1	312626 5036
+76	510886	2.9	1	503073 7813
+77	552419	2.9	1	544508 7911
+78	588607	2.9	1	580633 7974
+79	591653	2.9	1	583430 8223
+80	581645	2.9	1	573275 8370
+81	584440	2.9	1	576149 8291
+82	565535	2.9	1	557183 8352
+83	571654	2.9	1	562584 9070
+84	550542	2.9	1	541036 9506
+85	548689	2.9	1	539850 8839
+86	535181	2.9	1	526718 8463
+87	512788	2.9	1	504678 8110
+88	510803	2.9	1	502652 8151
+89	506348	2.9	1	497973 8375
+90	500282	2.9	1	493039 7243
+91	474289	2.9	1	467328 6961
+92	460390	2.9	1	453207 7183
+93	450379	2.9	1	443796 6583
+94	429298	2.9	1	422788 6510
+95	420062	2.9	1	413811 6251
+96	407122	2.9	1	401401 5721
+97	392319	2.9	1	386052 6267
+98	388509	2.9	1	382938 5571
+99	380147	2.9	1	375036 5111
+100	366671	2.9	1	361358 5313
+101	332953	2.9	1	328543 4410
+102	313757	2.9	1	309230 4527
+103	299885	2.9	1	295614 4271
+104	288142	2.9	1	283975 4167
+105	276122	2.9	1	272070 4052
+106	269326	2.9	1	265500 3826
+107	253899	2.9	1	250289 3610
+108	241489	2.9	1	237933 3556
+109	225646	2.9	1	222416 3230
+110	206290	2.9	1	203298 2992
+111	192661	2.9	1	190044 2617
+112	178492	2.9	1	175644 2848
+113	168221	2.9	1	165717 2504
+114	152924	2.9	1	150523 2401
+115	137255	2.9	1	135189 2066
+116	121881	2.9	1	120070 1811
+117	105675	2.9	1	104162 1513
+118	96683	2.9	1	95284 1399
+119	83695	2.9	1	82410 1285
+120	77359	2.9	1	76230 1129
+121	63813	2.9	1	62909 904
+122	55806	2.9	1	54998 808
+123	46593	2.9	1	45728 865
+124	39802	2.9	1	39103 699
+125	33813	2.9	1	33250 563
+126	30364	2.9	1	29861 503
+127	28306	2.9	1	27888 418
+128	25536	2.9	1	25171 365
+129	21352	2.9	1	21043 309
+130	19077	2.9	1	18805 272
+131	20347	2.9	1	20024 323
+132	18796	2.9	1	18521 275
+133	19628	2.9	1	19371 257
+134	18352	2.9	1	18109 243
+135	17450	2.9	1	17199 251
+136	17605	2.9	1	17314 291
+137	19473	2.9	1	19193 280
+138	19298	2.9	1	18928 370
+139	15987	2.9	1	15592 395
+140	11329	2.9	1	11019 310
+141	8289	2.9	1	7994 295
+142	4267	2.9	1	4007 260
+143	1840	2.9	1	1683 157
+144	1391	2.9	1	1265 126
+145	72232	2.9	1	71376 856
+146	3663	2.9	1	3448 215
+147	3130	2.9	1	2817 313
+148	9709	2.9	1	8998 711
+149	8315	2.9	1	6526 1789
+150	46103	2.9	1	42501 3602
+151	16182899	2.9	1	15968585 214314
+
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R2_001.fastq.gz
+=============================================
+191783361 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files Alex_S85_L002_R1_001_trimmed.fq.gz and Alex_S85_L002_R2_001_trimmed.fq.gz
+file_1: Alex_S85_L002_R1_001_trimmed.fq.gz, file_2: Alex_S85_L002_R2_001_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Alex_S85_L002_R1_001_trimmed.fq.gz and Alex_S85_L002_R2_001_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to Alex_S85_L002_R1_001_val_1.fq.gz
+Writing validated paired-end read 2 reads to Alex_S85_L002_R2_001_val_2.fq.gz
+
+Total number of sequences analysed: 191783361
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 17614921 (9.18%)
+
+Deleting both intermediate output files Alex_S85_L002_R1_001_trimmed.fq.gz and Alex_S85_L002_R2_001_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on Alex_S230_L002...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	460584	AGATCGGAAGAGC	1000000	46.06
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 460584). Second best hit was Nextera (count: 3)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to Alex_S230_L002_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+200000000 sequences processed
+210000000 sequences processed
+220000000 sequences processed
+230000000 sequences processed
+240000000 sequences processed
+250000000 sequences processed
+260000000 sequences processed
+270000000 sequences processed
+280000000 sequences processed
+290000000 sequences processed
+300000000 sequences processed
+310000000 sequences processed
+320000000 sequences processed
+330000000 sequences processed
+340000000 sequences processed
+350000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 11517.11 s (33 us/read; 1.84 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             353,749,887
+Reads with adapters:               245,291,749 (69.3%)
+Reads written (passing filters):   353,749,887 (100.0%)
+
+Total basepairs processed: 53,416,232,937 bp
+Quality-trimmed:              32,842,559 bp (0.1%)
+Total written (filtered):  38,884,858,820 bp (72.8%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 245291749 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 11.2%
+  C: 17.6%
+  G: 31.3%
+  T: 21.0%
+  none/other: 19.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	48211292	88437471.8	0	48211292
+2	12034462	22109367.9	0	12034462
+3	4845115	5527342.0	0	4845115
+4	1914565	1381835.5	0	1914565
+5	1309709	345458.9	0	1309709
+6	1150277	86364.7	0	1150277
+7	1096952	21591.2	0	1096952
+8	1237724	5397.8	0	1237724
+9	1054027	1349.4	0	1047101 6926
+10	1153420	337.4	1	1116675 36745
+11	1171513	84.3	1	1131048 40465
+12	1193762	21.1	1	1155608 38154
+13	1200337	5.3	1	1162632 37705
+14	1195474	5.3	1	1156371 39103
+15	1241969	5.3	1	1202235 39734
+16	1201842	5.3	1	1162076 39766
+17	1304398	5.3	1	1258032 46366
+18	1383183	5.3	1	1341428 41755
+19	1037915	5.3	1	1004427 33488
+20	1234459	5.3	1	1194895 39564
+21	1282221	5.3	1	1240424 41797
+22	1206922	5.3	1	1167467 39455
+23	1449526	5.3	1	1403289 46237
+24	1118156	5.3	1	1079042 39114
+25	1319520	5.3	1	1277656 41864
+26	1253053	5.3	1	1214793 38260
+27	1335466	5.3	1	1291835 43631
+28	1325196	5.3	1	1283978 41218
+29	1305374	5.3	1	1262146 43228
+30	1466500	5.3	1	1422660 43840
+31	1134405	5.3	1	1098941 35464
+32	1349344	5.3	1	1307293 42051
+33	1292656	5.3	1	1251507 41149
+34	1382423	5.3	1	1339615 42808
+35	1351527	5.3	1	1306181 45346
+36	1515924	5.3	1	1470728 45196
+37	1176179	5.3	1	1138655 37524
+38	1402097	5.3	1	1359192 42905
+39	1381929	5.3	1	1336545 45384
+40	1349482	5.3	1	1307751 41731
+41	1518450	5.3	1	1470177 48273
+42	1307690	5.3	1	1264078 43612
+43	1500564	5.3	1	1447275 53289
+44	1277544	5.3	1	1230201 47343
+45	2427306	5.3	1	2363338 63968
+46	440079	5.3	1	417557 22522
+47	1404923	5.3	1	1361629 43294
+48	1505084	5.3	1	1458497 46587
+49	1423996	5.3	1	1380245 43751
+50	1343175	5.3	1	1298474 44701
+51	1431624	5.3	1	1383532 48092
+52	1376527	5.3	1	1333077 43450
+53	1395586	5.3	1	1351803 43783
+54	1418310	5.3	1	1371289 47021
+55	1785229	5.3	1	1733363 51866
+56	1103314	5.3	1	1066010 37304
+57	1554217	5.3	1	1503414 50803
+58	1999132	5.3	1	1942144 56988
+59	972554	5.3	1	936379 36175
+60	1594531	5.3	1	1549254 45277
+61	996175	5.3	1	960320 35855
+62	1523923	5.3	1	1474896 49027
+63	1596067	5.3	1	1546661 49406
+64	1570340	5.3	1	1524072 46268
+65	908747	5.3	1	874217 34530
+66	1636367	5.3	1	1585409 50958
+67	1766043	5.3	1	1708049 57994
+68	2198048	5.3	1	2131052 66996
+69	1818316	5.3	1	1757764 60552
+70	2019606	5.3	1	1959760 59846
+71	129665	5.3	1	120878 8787
+72	242904	5.3	1	229395 13509
+73	1079580	5.3	1	1044705 34875
+74	1244477	5.3	1	1205210 39267
+75	1272703	5.3	1	1232106 40597
+76	1273851	5.3	1	1233205 40646
+77	1266980	5.3	1	1225904 41076
+78	1265439	5.3	1	1224575 40864
+79	1265360	5.3	1	1224178 41182
+80	1235389	5.3	1	1194372 41017
+81	1236676	5.3	1	1196178 40498
+82	1195909	5.3	1	1155422 40487
+83	1155943	5.3	1	1117076 38867
+84	1136532	5.3	1	1097855 38677
+85	1116025	5.3	1	1078039 37986
+86	1115094	5.3	1	1076996 38098
+87	1089708	5.3	1	1052829 36879
+88	1080314	5.3	1	1043329 36985
+89	1062351	5.3	1	1025871 36480
+90	1034486	5.3	1	998904 35582
+91	1007281	5.3	1	972610 34671
+92	976141	5.3	1	941800 34341
+93	945539	5.3	1	912092 33447
+94	927083	5.3	1	894730 32353
+95	906462	5.3	1	874420 32042
+96	876538	5.3	1	845289 31249
+97	856045	5.3	1	825703 30342
+98	829146	5.3	1	799722 29424
+99	805449	5.3	1	777015 28434
+100	775761	5.3	1	748233 27528
+101	745188	5.3	1	718417 26771
+102	716679	5.3	1	691081 25598
+103	685314	5.3	1	660904 24410
+104	666238	5.3	1	642725 23513
+105	631905	5.3	1	609451 22454
+106	612816	5.3	1	591558 21258
+107	579701	5.3	1	558840 20861
+108	553133	5.3	1	533473 19660
+109	530142	5.3	1	511284 18858
+110	492280	5.3	1	474276 18004
+111	465966	5.3	1	449407 16559
+112	424875	5.3	1	409265 15610
+113	399798	5.3	1	385444 14354
+114	363920	5.3	1	350811 13109
+115	331627	5.3	1	319679 11948
+116	300699	5.3	1	289922 10777
+117	267544	5.3	1	257817 9727
+118	242099	5.3	1	233561 8538
+119	208357	5.3	1	201223 7134
+120	192942	5.3	1	186681 6261
+121	155026	5.3	1	149900 5126
+122	138689	5.3	1	134303 4386
+123	115659	5.3	1	111735 3924
+124	100135	5.3	1	96798 3337
+125	84484	5.3	1	81860 2624
+126	73487	5.3	1	71170 2317
+127	63695	5.3	1	61731 1964
+128	57581	5.3	1	55799 1782
+129	51879	5.3	1	50203 1676
+130	47468	5.3	1	45952 1516
+131	45286	5.3	1	43727 1559
+132	44955	5.3	1	43551 1404
+133	46319	5.3	1	44954 1365
+134	45557	5.3	1	44265 1292
+135	43975	5.3	1	42721 1254
+136	43039	5.3	1	41710 1329
+137	49115	5.3	1	47844 1271
+138	49699	5.3	1	48396 1303
+139	40796	5.3	1	39691 1105
+140	27427	5.3	1	26573 854
+141	19945	5.3	1	19193 752
+142	9908	5.3	1	9365 543
+143	4041	5.3	1	3655 386
+144	2301	5.3	1	2035 266
+145	194230	5.3	1	191624 2606
+146	14453	5.3	1	9090 5363
+147	4742	5.3	1	4206 536
+148	13418	5.3	1	12445 973
+149	11776	5.3	1	10165 1611
+150	60492	5.3	1	54056 6436
+151	46432356	5.3	1	44246435 2185921
+
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz
+=============================================
+353749887 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to Alex_S230_L002_R2_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+200000000 sequences processed
+210000000 sequences processed
+220000000 sequences processed
+230000000 sequences processed
+240000000 sequences processed
+250000000 sequences processed
+260000000 sequences processed
+270000000 sequences processed
+280000000 sequences processed
+290000000 sequences processed
+300000000 sequences processed
+310000000 sequences processed
+320000000 sequences processed
+330000000 sequences processed
+340000000 sequences processed
+350000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 11603.05 s (33 us/read; 1.83 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             353,749,887
+Reads with adapters:               240,833,917 (68.1%)
+Reads written (passing filters):   353,749,887 (100.0%)
+
+Total basepairs processed: 53,416,232,937 bp
+Quality-trimmed:             323,210,479 bp (0.6%)
+Total written (filtered):  39,138,772,507 bp (73.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 240833917 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 10.5%
+  C: 16.9%
+  G: 32.0%
+  T: 22.0%
+  none/other: 18.5%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	48641808	88437471.8	0	48641808
+2	11384874	22109367.9	0	11384874
+3	4841810	5527342.0	0	4841810
+4	1948548	1381835.5	0	1948548
+5	1425156	345458.9	0	1425156
+6	1030004	86364.7	0	1030004
+7	1096635	21591.2	0	1096635
+8	1348401	5397.8	0	1348401
+9	942682	1349.4	0	938620 4062
+10	1126052	337.4	1	1093695 32357
+11	1127917	84.3	1	1096067 31850
+12	1172414	21.1	1	1140659 31755
+13	1298348	5.3	1	1263816 34532
+14	1146374	5.3	1	1113732 32642
+15	1116870	5.3	1	1090165 26705
+16	1380047	5.3	1	1342816 37231
+17	1192529	5.3	1	1159912 32617
+18	1075269	5.3	1	1049030 26239
+19	1275341	5.3	1	1239184 36157
+20	1356829	5.3	1	1323938 32891
+21	1035335	5.3	1	1008276 27059
+22	1208396	5.3	1	1177587 30809
+23	1240720	5.3	1	1208025 32695
+24	1306415	5.3	1	1269587 36828
+25	1550780	5.3	1	1512420 38360
+26	1162262	5.3	1	1128763 33499
+27	1115475	5.3	1	1085486 29989
+28	1326329	5.3	1	1295543 30786
+29	1267631	5.3	1	1235640 31991
+30	1281246	5.3	1	1246674 34572
+31	1290588	5.3	1	1254194 36394
+32	1253317	5.3	1	1221695 31622
+33	1469076	5.3	1	1434372 34704
+34	1242608	5.3	1	1207751 34857
+35	1297181	5.3	1	1265161 32020
+36	1852069	5.3	1	1801944 50125
+37	1755379	5.3	1	1716038 39341
+38	1557110	5.3	1	1524869 32241
+39	959400	5.3	1	933760 25640
+40	1827741	5.3	1	1793523 34218
+41	845764	5.3	1	818844 26920
+42	1488196	5.3	1	1454385 33811
+43	1354087	5.3	1	1321203 32884
+44	3250349	5.3	1	3186018 64331
+45	2592500	5.3	1	2542659 49841
+46	691398	5.3	1	667876 23522
+47	1916769	5.3	1	1878174 38595
+48	553396	5.3	1	533391 20005
+49	1389131	5.3	1	1360519 28612
+50	587416	5.3	1	572179 15237
+51	788280	5.3	1	769510 18770
+52	417920	5.3	1	405612 12308
+53	1348810	5.3	1	1319774 29036
+54	2292274	5.3	1	2250512 41762
+55	659397	5.3	1	641658 17739
+56	1441261	5.3	1	1405264 35997
+57	3869212	5.3	1	3806537 62675
+58	921325	5.3	1	898189 23136
+59	836080	5.3	1	814866 21214
+60	3586905	5.3	1	3530240 56665
+61	1068403	5.3	1	1046830 21573
+62	352830	5.3	1	340388 12442
+63	2662426	5.3	1	2617402 45024
+64	3522371	5.3	1	3465841 56530
+65	2069714	5.3	1	2034322 35392
+66	1363548	5.3	1	1336837 26711
+67	1134915	5.3	1	1113931 20984
+68	585077	5.3	1	571487 13590
+69	876934	5.3	1	858370 18564
+70	1305456	5.3	1	1282744 22712
+71	590584	5.3	1	576945 13639
+72	421960	5.3	1	411533 10427
+73	470328	5.3	1	459802 10526
+74	538916	5.3	1	526918 11998
+75	665576	5.3	1	650548 15028
+76	905450	5.3	1	885539 19911
+77	967698	5.3	1	946646 21052
+78	1072319	5.3	1	1051112 21207
+79	1102086	5.3	1	1080262 21824
+80	1094508	5.3	1	1072111 22397
+81	1103799	5.3	1	1079926 23873
+82	1072546	5.3	1	1049151 23395
+83	1081915	5.3	1	1059074 22841
+84	1057297	5.3	1	1034603 22694
+85	1068263	5.3	1	1044654 23609
+86	1037185	5.3	1	1015624 21561
+87	1006911	5.3	1	986732 20179
+88	998936	5.3	1	979103 19833
+89	1002968	5.3	1	983371 19597
+90	994903	5.3	1	974929 19974
+91	954731	5.3	1	935876 18855
+92	939555	5.3	1	920609 18946
+93	917797	5.3	1	900405 17392
+94	875297	5.3	1	857847 17450
+95	867314	5.3	1	850436 16878
+96	838973	5.3	1	822562 16411
+97	819043	5.3	1	802921 16122
+98	816358	5.3	1	800531 15827
+99	814261	5.3	1	798612 15649
+100	782622	5.3	1	767741 14881
+101	718624	5.3	1	705607 13017
+102	676750	5.3	1	663433 13317
+103	644394	5.3	1	632306 12088
+104	624133	5.3	1	612510 11623
+105	607523	5.3	1	596261 11262
+106	594495	5.3	1	583396 11099
+107	570040	5.3	1	559102 10938
+108	547944	5.3	1	537336 10608
+109	510099	5.3	1	500863 9236
+110	466011	5.3	1	456993 9018
+111	434814	5.3	1	427007 7807
+112	405730	5.3	1	398023 7707
+113	388055	5.3	1	380863 7192
+114	355182	5.3	1	348443 6739
+115	324740	5.3	1	318708 6032
+116	289341	5.3	1	284073 5268
+117	251055	5.3	1	246238 4817
+118	231214	5.3	1	226795 4419
+119	200299	5.3	1	196428 3871
+120	186506	5.3	1	183185 3321
+121	153327	5.3	1	150424 2903
+122	135675	5.3	1	133127 2548
+123	114826	5.3	1	111743 3083
+124	97586	5.3	1	95675 1911
+125	83955	5.3	1	82241 1714
+126	74036	5.3	1	72555 1481
+127	70791	5.3	1	69479 1312
+128	63083	5.3	1	61977 1106
+129	52855	5.3	1	51873 982
+130	48625	5.3	1	47724 901
+131	50970	5.3	1	50050 920
+132	46870	5.3	1	46002 868
+133	49284	5.3	1	48495 789
+134	45954	5.3	1	45156 798
+135	44015	5.3	1	43236 779
+136	45090	5.3	1	44214 876
+137	49898	5.3	1	48916 982
+138	50489	5.3	1	49192 1297
+139	42629	5.3	1	41325 1304
+140	29931	5.3	1	28805 1126
+141	22048	5.3	1	21042 1006
+142	11842	5.3	1	11021 821
+143	6073	5.3	1	5430 643
+144	5220	5.3	1	4559 661
+145	193271	5.3	1	189491 3780
+146	12437	5.3	1	11423 1014
+147	13042	5.3	1	11393 1649
+148	35609	5.3	1	32575 3034
+149	40383	5.3	1	32925 7458
+150	294447	5.3	1	273232 21215
+151	44243498	5.3	1	43574086 669412
+
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz
+=============================================
+353749887 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files Alex_S230_L002_R1_001_trimmed.fq.gz and Alex_S230_L002_R2_001_trimmed.fq.gz
+file_1: Alex_S230_L002_R1_001_trimmed.fq.gz, file_2: Alex_S230_L002_R2_001_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Alex_S230_L002_R1_001_trimmed.fq.gz and Alex_S230_L002_R2_001_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to Alex_S230_L002_R1_001_val_1.fq.gz
+Writing validated paired-end read 2 reads to Alex_S230_L002_R2_001_val_2.fq.gz
+
+slurmstepd-i21: error: *** JOB 1104917 ON i21 CANCELLED AT 2020-05-06T15:02:40 DUE TO TIME LIMIT ***

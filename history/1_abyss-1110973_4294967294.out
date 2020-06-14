@@ -1,0 +1,1018 @@
+make: Entering directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_101'
+/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin/mpirun -np 60 ABYSS-P -k101 -q3    --coverage-hist=coverage.hist -s Dstr_v1.3_k101-bubbles.fa  -o Dstr_v1.3_k101-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz
+ABySS 2.0.2
+ABYSS-P -k101 -q3 --coverage-hist=coverage.hist -s Dstr_v1.3_k101-bubbles.fa -o Dstr_v1.3_k101-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz
+Running on 60 processors
+15: Running on host i25
+14: Running on host i25
+58: Running on host i32
+51: Running on host i32
+22: Running on host i27
+59: Running on host i32
+6: Running on host i25
+43: Running on host i31
+35: Running on host i30
+38: Running on host i30
+7: Running on host i25
+23: Running on host i27
+47: Running on host i31
+31: Running on host i29
+19: Running on host i27
+39: Running on host i30
+55: Running on host i32
+11: Running on host i25
+27: Running on host i27
+3: Running on host i23
+5: Running on host i23
+21: Running on host i27
+57: Running on host i32
+37: Running on host i30
+13: Running on host i25
+29: Running on host i29
+30: Running on host i29
+45: Running on host i31
+53: Running on host i32
+25: Running on host i27
+41: Running on host i31
+9: Running on host i25
+46: Running on host i31
+17: Running on host i27
+49: Running on host i31
+54: Running on host i32
+42: Running on host i31
+18: Running on host i27
+26: Running on host i27
+34: Running on host i30
+2: Running on host i23
+10: Running on host i25
+50: Running on host i32
+33: Running on host i30
+1: Running on host i22
+4: Running on host i23
+28: Running on host i29
+36: Running on host i30
+20: Running on host i27
+44: Running on host i31
+52: Running on host i32
+12: Running on host i25
+40: Running on host i31
+24: Running on host i27
+8: Running on host i25
+56: Running on host i32
+32: Running on host i30
+16: Running on host i27
+48: Running on host i31
+0: Running on host i22
+0: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz'...
+3: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz'...
+2: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz'...
+4: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz'...
+1: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz'...
+5: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz'...
+`/rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz': discarded 42176626 reads shorter than 101 bases
+warning: `/rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz': contains no usable sequence
+`/rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz': discarded 42412411 reads shorter than 101 bases
+warning: `/rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz': contains no usable sequence
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz': discarded 38431561 reads shorter than 101 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz': discarded 40 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz': discarded 38616272 reads shorter than 101 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz': discarded 4220 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz': discarded 71491558 reads shorter than 101 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz': discarded 5738 reads containing non-ACGT characters
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz': discarded 70841638 reads shorter than 101 bases
+`/rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz': discarded 9535 reads containing non-ACGT characters
+31: Loaded 109553670 k-mer.
+30: Loaded 110286485 k-mer.
+29: Loaded 109359332 k-mer.
+4: Loaded 111487878 k-mer.
+47: Loaded 109907640 k-mer.
+55: Loaded 109735897 k-mer.
+5: Loaded 109483751 k-mer.
+28: Loaded 110172497 k-mer.
+25: Loaded 109392905 k-mer.
+41: Loaded 109575228 k-mer.
+57: Loaded 109462220 k-mer.
+37: Loaded 109645999 k-mer.
+3: Loaded 109918907 k-mer.
+23: Loaded 109683892 k-mer.
+35: Loaded 109836824 k-mer.
+17: Loaded 109514614 k-mer.
+43: Loaded 109698815 k-mer.
+53: Loaded 109531977 k-mer.
+26: Loaded 110096378 k-mer.
+40: Loaded 111003999 k-mer.
+56: Loaded 111373502 k-mer.
+38: Loaded 110118249 k-mer.
+2: Loaded 110442292 k-mer.
+27: Loaded 109845887 k-mer.
+46: Loaded 110300819 k-mer.
+59: Loaded 109866741 k-mer.
+36: Loaded 110828879 k-mer.
+22: Loaded 110277020 k-mer.
+45: Loaded 109425862 k-mer.
+54: Loaded 110167366 k-mer.
+34: Loaded 110172244 k-mer.
+14: Loaded 110205131 k-mer.
+21: Loaded 109421300 k-mer.
+49: Loaded 110229625 k-mer.
+58: Loaded 110117505 k-mer.
+32: Loaded 110378225 k-mer.
+13: Loaded 109384101 k-mer.
+52: Loaded 117290945 k-mer.
+33: Loaded 109429399 k-mer.
+9: Loaded 109361006 k-mer.
+18: Loaded 110207166 k-mer.
+42: Loaded 110077936 k-mer.
+7: Loaded 110024836 k-mer.
+24: Loaded 110326450 k-mer.
+48: Loaded 111703085 k-mer.
+51: Loaded 110339913 k-mer.
+39: Loaded 109718289 k-mer.
+50: Loaded 110424764 k-mer.
+10: Loaded 110187887 k-mer.
+16: Loaded 110463556 k-mer.
+44: Loaded 110825646 k-mer.
+11: Loaded 110307443 k-mer.
+20: Loaded 110635806 k-mer.
+15: Loaded 109786631 k-mer.
+19: Loaded 109778396 k-mer.
+8: Loaded 111591235 k-mer.
+6: Loaded 110166721 k-mer.
+12: Loaded 110326558 k-mer.
+1: Loaded 109745977 k-mer.
+0: Loaded 113548230 k-mer.
+Loaded 6616171531 k-mer. At least 265 GB of RAM is required.
+Minimum k-mer coverage is 260
+Using a coverage threshold of 3...
+The median k-mer coverage is 9
+The reconstruction is 2103171404
+The k-mer coverage threshold is 3
+Setting parameter e (erode) to 3
+Setting parameter E (erodeStrand) to 1
+Setting parameter c (coverage) to 3
+Finding adjacenct k-mer...
+30: Added 218750362 edges.
+14: Added 218588779 edges.
+28: Added 218518077 edges.
+44: Added 219800586 edges.
+38: Added 218421281 edges.
+31: Added 217288300 edges.
+39: Added 217622938 edges.
+4: Added 221155310 edges.
+10: Added 218561374 edges.
+20: Added 219480100 edges.
+46: Added 218780826 edges.
+42: Added 218334845 edges.
+55: Added 217640796 edges.
+36: Added 219822259 edges.
+2: Added 219052120 edges.
+12: Added 218821110 edges.
+19: Added 217738483 edges.
+47: Added 217998748 edges.
+56: Added 220896225 edges.
+34: Added 218519324 edges.
+3: Added 218016355 edges.
+15: Added 217757759 edges.
+18: Added 218587421 edges.
+24: Added 218827495 edges.
+43: Added 217580544 edges.
+58: Added 218415239 edges.
+32: Added 218925784 edges.
+11: Added 218786355 edges.
+23: Added 217549890 edges.
+40: Added 220179015 edges.
+52: Added 232664118 edges.
+35: Added 217866498 edges.
+8: Added 221376552 edges.
+6: Added 218507836 edges.
+26: Added 218369947 edges.
+48: Added 221541076 edges.
+50: Added 219020870 edges.
+51: Added 218853976 edges.
+7: Added 218227085 edges.
+27: Added 217876852 edges.
+16: Added 219098835 edges.
+59: Added 217899638 edges.
+22: Added 218735073 edges.
+54: Added 218514847 edges.
+1: Added 217682403 edges.
+41: Added 217346637 edges.
+29: Added 216909416 edges.
+21: Added 217029491 edges.
+45: Added 217035904 edges.
+13: Added 216958698 edges.
+25: Added 216976237 edges.
+49: Added 218647122 edges.
+57: Added 217115674 edges.
+17: Added 217225916 edges.
+53: Added 217245710 edges.
+33: Added 217047757 edges.
+5: Added 217153353 edges.
+9: Added 216908541 edges.
+37: Added 217472350 edges.
+0: Added 225088595 edges.
+Added 13122814707 edges.
+Eroding tips...
+43: Eroded 75978691 tips.
+45: Eroded 76102306 tips.
+40: Eroded 77898916 tips.
+41: Eroded 76746857 tips.
+17: Eroded 76813738 tips.
+44: Eroded 78133449 tips.
+42: Eroded 77428564 tips.
+47: Eroded 77471477 tips.
+48: Eroded 79482928 tips.
+57: Eroded 77403399 tips.
+46: Eroded 78080811 tips.
+21: Eroded 77454169 tips.
+25: Eroded 77408268 tips.
+50: Eroded 78361349 tips.
+20: Eroded 78747885 tips.
+49: Eroded 78418686 tips.
+54: Eroded 78293805 tips.
+23: Eroded 78027638 tips.
+22: Eroded 78429100 tips.
+53: Eroded 78033777 tips.
+55: Eroded 78353649 tips.
+24: Eroded 78935745 tips.
+59: Eroded 78582805 tips.
+26: Eroded 78752526 tips.
+19: Eroded 78556672 tips.
+58: Eroded 78907097 tips.
+27: Eroded 78795173 tips.
+56: Eroded 80370399 tips.
+18: Eroded 79138307 tips.
+51: Eroded 79492565 tips.
+12: Eroded 79540390 tips.
+13: Eroded 78741417 tips.
+16: Eroded 79749495 tips.
+14: Eroded 79399325 tips.
+9: Eroded 79019108 tips.
+11: Eroded 80105485 tips.
+1: Eroded 79638091 tips.
+33: Eroded 79374201 tips.
+38: Eroded 79896582 tips.
+52: Eroded 86981832 tips.
+10: Eroded 80011039 tips.
+3: Eroded 79861667 tips.
+35: Eroded 79789781 tips.
+28: Eroded 80218245 tips.
+15: Eroded 79847764 tips.
+6: Eroded 80151261 tips.
+5: Eroded 79701715 tips.
+8: Eroded 81659841 tips.
+2: Eroded 80451148 tips.
+4: Eroded 81608742 tips.
+37: Eroded 79916263 tips.
+7: Eroded 80203747 tips.
+39: Eroded 79960839 tips.
+30: Eroded 80476826 tips.
+31: Eroded 79931162 tips.
+0: Eroded 83870081 tips.
+34: Eroded 80439020 tips.
+36: Eroded 81209798 tips.
+29: Eroded 79848323 tips.
+32: Eroded 80794370 tips.
+1: Eroded 622995 tips.
+0: Eroded 135109 tips.
+3: Eroded 480213 tips.
+29: Eroded 54011 tips.
+2: Eroded 288776 tips.
+14: Eroded 1115744 tips.
+31: Eroded 137620 tips.
+47: Eroded 2887561 tips.
+6: Eroded 368126 tips.
+30: Eroded 159126 tips.
+19: Eroded 1665820 tips.
+46: Eroded 2555453 tips.
+4: Eroded 291442 tips.
+18: Eroded 1418279 tips.
+44: Eroded 3116567 tips.
+55: Eroded 1924773 tips.
+37: Eroded 260966 tips.
+5: Eroded 362269 tips.
+11: Eroded 625785 tips.
+28: Eroded 405363 tips.
+15: Eroded 382511 tips.
+23: Eroded 2158739 tips.
+49: Eroded 2320671 tips.
+51: Eroded 1320886 tips.
+34: Eroded 96668 tips.
+16: Eroded 1124913 tips.
+42: Eroded 3044356 tips.
+53: Eroded 2073827 tips.
+39: Eroded 170121 tips.
+13: Eroded 1163518 tips.
+54: Eroded 2200903 tips.
+38: Eroded 574673 tips.
+10: Eroded 546244 tips.
+22: Eroded 2161227 tips.
+45: Eroded 3877837 tips.
+41: Eroded 3327452 tips.
+59: Eroded 1765791 tips.
+35: Eroded 421848 tips.
+7: Eroded 254851 tips.
+17: Eroded 3202142 tips.
+9: Eroded 902411 tips.
+21: Eroded 2526414 tips.
+40: Eroded 3449754 tips.
+52: Eroded 573672 tips.
+36: Eroded 58382 tips.
+8: Eroded 315765 tips.
+20: Eroded 2339584 tips.
+43: Eroded 4169025 tips.
+58: Eroded 1609716 tips.
+32: Eroded 52813 tips.
+12: Eroded 1241656 tips.
+26: Eroded 1735433 tips.
+48: Eroded 2620543 tips.
+56: Eroded 1452935 tips.
+33: Eroded 609714 tips.
+57: Eroded 2566417 tips.
+27: Eroded 1476030 tips.
+50: Eroded 2416674 tips.
+25: Eroded 2504962 tips.
+24: Eroded 1868396 tips.
+Eroded 4842553781 tips.
+Pruning tips shorter than 1 bp...
+17: Pruned 4493 tips.
+20: Pruned 4384 tips.
+57: Pruned 4510 tips.
+25: Pruned 4377 tips.
+24: Pruned 4604 tips.
+50: Pruned 4558 tips.
+26: Pruned 4499 tips.
+56: Pruned 4504 tips.
+53: Pruned 4558 tips.
+23: Pruned 4506 tips.
+54: Pruned 4484 tips.
+59: Pruned 4579 tips.
+16: Pruned 4658 tips.
+18: Pruned 4596 tips.
+52: Pruned 4614 tips.
+43: Pruned 4728 tips.
+45: Pruned 4471 tips.
+40: Pruned 4561 tips.
+55: Pruned 4435 tips.
+44: Pruned 4436 tips.
+42: Pruned 4459 tips.
+47: Pruned 4592 tips.
+27: Pruned 4479 tips.
+58: Pruned 4371 tips.
+51: Pruned 4461 tips.
+48: Pruned 4605 tips.
+46: Pruned 4501 tips.
+41: Pruned 4495 tips.
+49: Pruned 4497 tips.
+12: Pruned 4586 tips.
+8: Pruned 4663 tips.
+28: Pruned 4553 tips.
+35: Pruned 4444 tips.
+33: Pruned 4426 tips.
+3: Pruned 4581 tips.
+19: Pruned 4544 tips.
+21: Pruned 4545 tips.
+1: Pruned 4447 tips.
+6: Pruned 4624 tips.
+37: Pruned 4613 tips.
+39: Pruned 4439 tips.
+14: Pruned 4491 tips.
+32: Pruned 4623 tips.
+4: Pruned 4531 tips.
+9: Pruned 4555 tips.
+0: Pruned 4899 tips.
+29: Pruned 4346 tips.
+30: Pruned 4564 tips.
+2: Pruned 4548 tips.
+22: Pruned 4528 tips.
+15: Pruned 4538 tips.
+31: Pruned 4454 tips.
+13: Pruned 4433 tips.
+10: Pruned 4594 tips.
+38: Pruned 4283 tips.
+5: Pruned 4406 tips.
+11: Pruned 4412 tips.
+34: Pruned 4529 tips.
+7: Pruned 4590 tips.
+36: Pruned 4542 tips.
+Pruned 271346 k-mer in 271346 tips.
+Pruning tips shorter than 2 bp...
+17: Pruned 4026 tips.
+19: Pruned 3988 tips.
+57: Pruned 3911 tips.
+24: Pruned 3994 tips.
+54: Pruned 4079 tips.
+50: Pruned 4070 tips.
+20: Pruned 3933 tips.
+25: Pruned 3952 tips.
+53: Pruned 3999 tips.
+56: Pruned 3960 tips.
+59: Pruned 4175 tips.
+23: Pruned 4098 tips.
+52: Pruned 3954 tips.
+16: Pruned 4085 tips.
+43: Pruned 4031 tips.
+58: Pruned 4012 tips.
+40: Pruned 3968 tips.
+44: Pruned 3962 tips.
+51: Pruned 3891 tips.
+47: Pruned 4032 tips.
+55: Pruned 4090 tips.
+45: Pruned 3874 tips.
+18: Pruned 4050 tips.
+12: Pruned 3953 tips.
+48: Pruned 3908 tips.
+42: Pruned 4110 tips.
+27: Pruned 4002 tips.
+49: Pruned 3943 tips.
+46: Pruned 3986 tips.
+41: Pruned 4003 tips.
+13: Pruned 3901 tips.
+8: Pruned 3985 tips.
+9: Pruned 3943 tips.
+15: Pruned 3955 tips.
+3: Pruned 4073 tips.
+28: Pruned 4008 tips.
+33: Pruned 3900 tips.
+1: Pruned 4036 tips.
+11: Pruned 3990 tips.
+14: Pruned 4005 tips.
+32: Pruned 3985 tips.
+4: Pruned 4070 tips.
+0: Pruned 3962 tips.
+5: Pruned 3950 tips.
+37: Pruned 4025 tips.
+29: Pruned 3921 tips.
+39: Pruned 4064 tips.
+21: Pruned 4057 tips.
+26: Pruned 4011 tips.
+30: Pruned 3980 tips.
+34: Pruned 3883 tips.
+22: Pruned 4022 tips.
+31: Pruned 4068 tips.
+2: Pruned 3953 tips.
+10: Pruned 4036 tips.
+38: Pruned 4040 tips.
+6: Pruned 4046 tips.
+35: Pruned 4025 tips.
+7: Pruned 3963 tips.
+36: Pruned 3979 tips.
+Pruned 393391 k-mer in 239875 tips.
+Pruning tips shorter than 4 bp...
+19: Pruned 6411 tips.
+17: Pruned 6238 tips.
+24: Pruned 6210 tips.
+54: Pruned 6334 tips.
+57: Pruned 6339 tips.
+50: Pruned 6358 tips.
+25: Pruned 6359 tips.
+20: Pruned 6319 tips.
+59: Pruned 6346 tips.
+53: Pruned 6293 tips.
+56: Pruned 6132 tips.
+23: Pruned 6146 tips.
+12: Pruned 6342 tips.
+16: Pruned 6336 tips.
+18: Pruned 6374 tips.
+8: Pruned 6352 tips.
+6: Pruned 6369 tips.
+13: Pruned 6291 tips.
+52: Pruned 6324 tips.
+55: Pruned 6304 tips.
+51: Pruned 6276 tips.
+27: Pruned 6327 tips.
+58: Pruned 6318 tips.
+43: Pruned 6330 tips.
+7: Pruned 6299 tips.
+44: Pruned 6128 tips.
+40: Pruned 6373 tips.
+47: Pruned 6389 tips.
+41: Pruned 6292 tips.
+45: Pruned 6283 tips.
+48: Pruned 6220 tips.
+42: Pruned 6438 tips.
+49: Pruned 6222 tips.
+46: Pruned 6301 tips.
+38: Pruned 6219 tips.
+28: Pruned 6228 tips.
+35: Pruned 6124 tips.
+33: Pruned 6324 tips.
+14: Pruned 6307 tips.
+11: Pruned 6183 tips.
+29: Pruned 6260 tips.
+1: Pruned 6231 tips.
+4: Pruned 6284 tips.
+37: Pruned 6158 tips.
+5: Pruned 6235 tips.
+39: Pruned 6241 tips.
+0: Pruned 6197 tips.
+21: Pruned 6327 tips.
+26: Pruned 6336 tips.
+3: Pruned 6423 tips.
+30: Pruned 6146 tips.
+31: Pruned 6345 tips.
+10: Pruned 6109 tips.
+22: Pruned 6302 tips.
+9: Pruned 6438 tips.
+2: Pruned 6404 tips.
+15: Pruned 6293 tips.
+32: Pruned 6328 tips.
+34: Pruned 6373 tips.
+36: Pruned 6105 tips.
+Pruned 1022968 k-mer in 377293 tips.
+Pruning tips shorter than 8 bp...
+19: Pruned 9560 tips.
+17: Pruned 9705 tips.
+24: Pruned 9526 tips.
+54: Pruned 9402 tips.
+57: Pruned 9514 tips.
+50: Pruned 9730 tips.
+59: Pruned 9698 tips.
+53: Pruned 9572 tips.
+56: Pruned 9503 tips.
+20: Pruned 9688 tips.
+25: Pruned 9497 tips.
+23: Pruned 9595 tips.
+16: Pruned 9376 tips.
+18: Pruned 9662 tips.
+9: Pruned 9731 tips.
+27: Pruned 9452 tips.
+52: Pruned 9402 tips.
+55: Pruned 9538 tips.
+58: Pruned 9628 tips.
+51: Pruned 9596 tips.
+12: Pruned 9545 tips.
+44: Pruned 9422 tips.
+43: Pruned 9538 tips.
+40: Pruned 9702 tips.
+28: Pruned 9517 tips.
+41: Pruned 9633 tips.
+47: Pruned 9560 tips.
+45: Pruned 9532 tips.
+48: Pruned 9617 tips.
+42: Pruned 9516 tips.
+49: Pruned 9526 tips.
+46: Pruned 9773 tips.
+13: Pruned 9510 tips.
+7: Pruned 9596 tips.
+6: Pruned 9463 tips.
+5: Pruned 9461 tips.
+29: Pruned 9440 tips.
+15: Pruned 9652 tips.
+34: Pruned 9603 tips.
+36: Pruned 9607 tips.
+1: Pruned 9687 tips.
+32: Pruned 9433 tips.
+3: Pruned 9519 tips.
+8: Pruned 9462 tips.
+37: Pruned 9493 tips.
+0: Pruned 9695 tips.
+39: Pruned 9416 tips.
+30: Pruned 9534 tips.
+21: Pruned 9541 tips.
+26: Pruned 9455 tips.
+31: Pruned 9481 tips.
+2: Pruned 9589 tips.
+10: Pruned 9443 tips.
+14: Pruned 9619 tips.
+22: Pruned 9477 tips.
+33: Pruned 9603 tips.
+11: Pruned 9546 tips.
+4: Pruned 9505 tips.
+38: Pruned 9686 tips.
+35: Pruned 9547 tips.
+Pruned 2632122 k-mer in 573319 tips.
+Pruning tips shorter than 16 bp...
+19: Pruned 18137 tips.
+17: Pruned 18158 tips.
+24: Pruned 18089 tips.
+54: Pruned 18034 tips.
+57: Pruned 18133 tips.
+50: Pruned 18413 tips.
+56: Pruned 18351 tips.
+53: Pruned 18305 tips.
+59: Pruned 18023 tips.
+20: Pruned 18274 tips.
+25: Pruned 18087 tips.
+23: Pruned 18146 tips.
+16: Pruned 18014 tips.
+18: Pruned 18228 tips.
+55: Pruned 18173 tips.
+27: Pruned 18401 tips.
+51: Pruned 18199 tips.
+52: Pruned 18086 tips.
+58: Pruned 18127 tips.
+38: Pruned 18418 tips.
+12: Pruned 18376 tips.
+28: Pruned 18045 tips.
+44: Pruned 18312 tips.
+43: Pruned 18337 tips.
+40: Pruned 18197 tips.
+41: Pruned 18419 tips.
+47: Pruned 18114 tips.
+48: Pruned 18463 tips.
+45: Pruned 18405 tips.
+39: Pruned 18227 tips.
+42: Pruned 18611 tips.
+49: Pruned 18325 tips.
+6: Pruned 18210 tips.
+35: Pruned 18229 tips.
+46: Pruned 18301 tips.
+5: Pruned 18330 tips.
+13: Pruned 18166 tips.
+29: Pruned 18341 tips.
+3: Pruned 18055 tips.
+2: Pruned 18406 tips.
+7: Pruned 18229 tips.
+1: Pruned 18488 tips.
+37: Pruned 18070 tips.
+10: Pruned 18253 tips.
+32: Pruned 18250 tips.
+0: Pruned 18037 tips.
+30: Pruned 18293 tips.
+31: Pruned 18447 tips.
+11: Pruned 18246 tips.
+21: Pruned 18178 tips.
+14: Pruned 18592 tips.
+26: Pruned 18183 tips.
+4: Pruned 18255 tips.
+9: Pruned 18350 tips.
+15: Pruned 18245 tips.
+22: Pruned 18062 tips.
+8: Pruned 18208 tips.
+33: Pruned 18497 tips.
+34: Pruned 18234 tips.
+36: Pruned 18080 tips.
+Pruned 9261000 k-mer in 1094862 tips.
+Pruning tips shorter than 32 bp...
+20: Pruned 44484 tips.
+17: Pruned 44013 tips.
+16: Pruned 44437 tips.
+24: Pruned 44327 tips.
+54: Pruned 44536 tips.
+57: Pruned 44369 tips.
+50: Pruned 44815 tips.
+56: Pruned 44532 tips.
+53: Pruned 44581 tips.
+59: Pruned 44584 tips.
+25: Pruned 44354 tips.
+27: Pruned 44516 tips.
+23: Pruned 44568 tips.
+55: Pruned 44483 tips.
+58: Pruned 44855 tips.
+52: Pruned 44534 tips.
+51: Pruned 44069 tips.
+38: Pruned 44404 tips.
+12: Pruned 44353 tips.
+28: Pruned 44208 tips.
+32: Pruned 44373 tips.
+44: Pruned 44567 tips.
+40: Pruned 44592 tips.
+43: Pruned 44307 tips.
+41: Pruned 44332 tips.
+48: Pruned 44545 tips.
+47: Pruned 44317 tips.
+45: Pruned 44586 tips.
+42: Pruned 44628 tips.
+49: Pruned 44374 tips.
+33: Pruned 44888 tips.
+29: Pruned 44073 tips.
+46: Pruned 44355 tips.
+10: Pruned 44660 tips.
+7: Pruned 44380 tips.
+8: Pruned 44489 tips.
+2: Pruned 44476 tips.
+11: Pruned 44594 tips.
+1: Pruned 44686 tips.
+14: Pruned 44403 tips.
+3: Pruned 44357 tips.
+9: Pruned 44786 tips.
+39: Pruned 44911 tips.
+0: Pruned 44397 tips.
+30: Pruned 44497 tips.
+15: Pruned 44185 tips.
+5: Pruned 44272 tips.
+31: Pruned 44760 tips.
+13: Pruned 44520 tips.
+21: Pruned 44382 tips.
+36: Pruned 44312 tips.
+4: Pruned 44746 tips.
+22: Pruned 44316 tips.
+6: Pruned 44409 tips.
+19: Pruned 44362 tips.
+35: Pruned 44369 tips.
+34: Pruned 44799 tips.
+37: Pruned 44640 tips.
+26: Pruned 44618 tips.
+18: Pruned 44261 tips.
+Pruned 43475282 k-mer in 2668546 tips.
+Pruning tips shorter than 64 bp...
+16: Pruned 70596 tips.
+54: Pruned 70597 tips.
+57: Pruned 70575 tips.
+50: Pruned 70978 tips.
+56: Pruned 70052 tips.
+53: Pruned 70651 tips.
+17: Pruned 70537 tips.
+59: Pruned 70303 tips.
+26: Pruned 70947 tips.
+58: Pruned 70321 tips.
+52: Pruned 70583 tips.
+38: Pruned 70331 tips.
+20: Pruned 70383 tips.
+55: Pruned 70659 tips.
+51: Pruned 70612 tips.
+28: Pruned 70410 tips.
+12: Pruned 70844 tips.
+8: Pruned 70408 tips.
+13: Pruned 70695 tips.
+23: Pruned 70963 tips.
+24: Pruned 70373 tips.
+34: Pruned 70914 tips.
+35: Pruned 70331 tips.
+15: Pruned 70714 tips.
+40: Pruned 70611 tips.
+43: Pruned 71031 tips.
+44: Pruned 71193 tips.
+49: Pruned 70869 tips.
+48: Pruned 69956 tips.
+41: Pruned 70686 tips.
+47: Pruned 70618 tips.
+45: Pruned 70326 tips.
+7: Pruned 71255 tips.
+42: Pruned 70538 tips.
+29: Pruned 70554 tips.
+46: Pruned 71067 tips.
+4: Pruned 70647 tips.
+1: Pruned 70779 tips.
+3: Pruned 70652 tips.
+39: Pruned 70898 tips.
+0: Pruned 70463 tips.
+2: Pruned 70798 tips.
+30: Pruned 70825 tips.
+14: Pruned 70511 tips.
+31: Pruned 70621 tips.
+11: Pruned 70242 tips.
+36: Pruned 70192 tips.
+25: Pruned 70991 tips.
+19: Pruned 70834 tips.
+27: Pruned 70998 tips.
+21: Pruned 70948 tips.
+5: Pruned 70249 tips.
+9: Pruned 70137 tips.
+10: Pruned 70447 tips.
+18: Pruned 71050 tips.
+37: Pruned 70443 tips.
+33: Pruned 70837 tips.
+22: Pruned 70415 tips.
+32: Pruned 70723 tips.
+6: Pruned 70878 tips.
+Pruned 121618867 k-mer in 4238059 tips.
+Pruning tips shorter than 101 bp...
+16: Pruned 3156 tips.
+18: Pruned 3301 tips.
+54: Pruned 3264 tips.
+21: Pruned 3350 tips.
+57: Pruned 3347 tips.
+50: Pruned 3353 tips.
+53: Pruned 3345 tips.
+56: Pruned 3261 tips.
+59: Pruned 3299 tips.
+20: Pruned 3290 tips.
+27: Pruned 3341 tips.
+23: Pruned 3240 tips.
+58: Pruned 3407 tips.
+22: Pruned 3419 tips.
+52: Pruned 3322 tips.
+28: Pruned 3378 tips.
+51: Pruned 3321 tips.
+55: Pruned 3247 tips.
+37: Pruned 3390 tips.
+34: Pruned 3442 tips.
+38: Pruned 3343 tips.
+7: Pruned 3304 tips.
+44: Pruned 3355 tips.
+40: Pruned 3462 tips.
+43: Pruned 3305 tips.
+49: Pruned 3404 tips.
+41: Pruned 3326 tips.
+29: Pruned 3316 tips.
+48: Pruned 3294 tips.
+45: Pruned 3329 tips.
+42: Pruned 3474 tips.
+47: Pruned 3280 tips.
+46: Pruned 3394 tips.
+6: Pruned 3365 tips.
+14: Pruned 3341 tips.
+1: Pruned 3267 tips.
+2: Pruned 3407 tips.
+0: Pruned 3307 tips.
+3: Pruned 3341 tips.
+10: Pruned 3404 tips.
+30: Pruned 3249 tips.
+4: Pruned 3347 tips.
+8: Pruned 3301 tips.
+31: Pruned 3347 tips.
+13: Pruned 3328 tips.
+11: Pruned 3360 tips.
+9: Pruned 3268 tips.
+26: Pruned 3393 tips.
+5: Pruned 3362 tips.
+39: Pruned 3252 tips.
+12: Pruned 3279 tips.
+15: Pruned 3312 tips.
+19: Pruned 3299 tips.
+36: Pruned 3356 tips.
+33: Pruned 3297 tips.
+25: Pruned 3295 tips.
+17: Pruned 3358 tips.
+35: Pruned 3415 tips.
+24: Pruned 3398 tips.
+32: Pruned 3238 tips.
+Pruned 10503268 k-mer in 199945 tips.
+Pruning tips shorter than 101 bp...
+25: Pruned 8 tips.
+24: Pruned 13 tips.
+18: Pruned 12 tips.
+54: Pruned 7 tips.
+50: Pruned 10 tips.
+57: Pruned 7 tips.
+53: Pruned 8 tips.
+56: Pruned 11 tips.
+59: Pruned 20 tips.
+20: Pruned 12 tips.
+23: Pruned 12 tips.
+26: Pruned 10 tips.
+27: Pruned 11 tips.
+16: Pruned 12 tips.
+58: Pruned 7 tips.
+28: Pruned 10 tips.
+52: Pruned 6 tips.
+22: Pruned 9 tips.
+51: Pruned 7 tips.
+55: Pruned 6 tips.
+35: Pruned 18 tips.
+8: Pruned 13 tips.
+36: Pruned 10 tips.
+12: Pruned 8 tips.
+44: Pruned 11 tips.
+40: Pruned 7 tips.
+48: Pruned 11 tips.
+43: Pruned 4 tips.
+41: Pruned 6 tips.
+49: Pruned 6 tips.
+29: Pruned 8 tips.
+45: Pruned 6 tips.
+47: Pruned 15 tips.
+42: Pruned 9 tips.
+46: Pruned 8 tips.
+37: Pruned 7 tips.
+2: Pruned 6 tips.
+7: Pruned 4 tips.
+38: Pruned 7 tips.
+6: Pruned 5 tips.
+1: Pruned 9 tips.
+33: Pruned 8 tips.
+14: Pruned 7 tips.
+5: Pruned 15 tips.
+9: Pruned 7 tips.
+0: Pruned 8 tips.
+13: Pruned 4 tips.
+30: Pruned 10 tips.
+3: Pruned 10 tips.
+31: Pruned 7 tips.
+4: Pruned 12 tips.
+17: Pruned 5 tips.
+21: Pruned 13 tips.
+19: Pruned 13 tips.
+10: Pruned 10 tips.
+15: Pruned 11 tips.
+39: Pruned 9 tips.
+34: Pruned 11 tips.
+11: Pruned 6 tips.
+32: Pruned 14 tips.
+Pruned 16861 k-mer in 556 tips.
+Pruning tips shorter than 101 bp...
+25: Pruned 0 tips.
+24: Pruned 0 tips.
+18: Pruned 0 tips.
+54: Pruned 0 tips.
+50: Pruned 0 tips.
+57: Pruned 0 tips.
+53: Pruned 0 tips.
+56: Pruned 0 tips.
+59: Pruned 0 tips.
+20: Pruned 0 tips.
+26: Pruned 0 tips.
+27: Pruned 0 tips.
+23: Pruned 0 tips.
+16: Pruned 0 tips.
+58: Pruned 1 tips.
+52: Pruned 0 tips.
+28: Pruned 0 tips.
+14: Pruned 0 tips.
+51: Pruned 0 tips.
+22: Pruned 1 tips.
+55: Pruned 0 tips.
+33: Pruned 0 tips.
+8: Pruned 0 tips.
+10: Pruned 1 tips.
+9: Pruned 0 tips.
+35: Pruned 0 tips.
+37: Pruned 0 tips.
+48: Pruned 0 tips.
+44: Pruned 0 tips.
+7: Pruned 0 tips.
+43: Pruned 0 tips.
+40: Pruned 0 tips.
+49: Pruned 0 tips.
+29: Pruned 0 tips.
+45: Pruned 0 tips.
+41: Pruned 0 tips.
+47: Pruned 0 tips.
+42: Pruned 0 tips.
+46: Pruned 0 tips.
+4: Pruned 0 tips.
+38: Pruned 0 tips.
+3: Pruned 0 tips.
+1: Pruned 0 tips.
+11: Pruned 0 tips.
+34: Pruned 0 tips.
+0: Pruned 0 tips.
+30: Pruned 0 tips.
+15: Pruned 0 tips.
+31: Pruned 0 tips.
+5: Pruned 0 tips.
+2: Pruned 1 tips.
+17: Pruned 0 tips.
+21: Pruned 0 tips.
+19: Pruned 0 tips.
+36: Pruned 0 tips.
+32: Pruned 0 tips.
+12: Pruned 0 tips.
+39: Pruned 0 tips.
+6: Pruned 0 tips.
+13: Pruned 0 tips.
+Pruned 169 k-mer in 4 tips.
+Pruning tips shorter than 101 bp...
+25: Pruned 0 tips.
+24: Pruned 0 tips.
+18: Pruned 0 tips.
+54: Pruned 0 tips.
+50: Pruned 0 tips.
+57: Pruned 0 tips.
+53: Pruned 0 tips.
+56: Pruned 0 tips.
+59: Pruned 0 tips.
+20: Pruned 0 tips.
+26: Pruned 0 tips.
+23: Pruned 0 tips.
+27: Pruned 0 tips.
+58: Pruned 0 tips.
+16: Pruned 0 tips.
+52: Pruned 0 tips.
+28: Pruned 0 tips.
+51: Pruned 0 tips.
+55: Pruned 0 tips.
+22: Pruned 0 tips.
+35: Pruned 0 tips.
+14: Pruned 0 tips.
+4: Pruned 0 tips.
+39: Pruned 0 tips.
+48: Pruned 0 tips.
+44: Pruned 0 tips.
+40: Pruned 0 tips.
+43: Pruned 0 tips.
+49: Pruned 0 tips.
+13: Pruned 0 tips.
+29: Pruned 0 tips.
+45: Pruned 0 tips.
+47: Pruned 0 tips.
+41: Pruned 0 tips.
+42: Pruned 0 tips.
+46: Pruned 0 tips.
+36: Pruned 0 tips.
+6: Pruned 0 tips.
+9: Pruned 0 tips.
+1: Pruned 0 tips.
+0: Pruned 0 tips.
+12: Pruned 0 tips.
+30: Pruned 0 tips.
+8: Pruned 0 tips.
+5: Pruned 0 tips.
+31: Pruned 0 tips.
+7: Pruned 0 tips.
+3: Pruned 0 tips.
+34: Pruned 0 tips.
+32: Pruned 0 tips.
+10: Pruned 0 tips.
+17: Pruned 0 tips.
+2: Pruned 0 tips.
+11: Pruned 0 tips.
+21: Pruned 0 tips.
+33: Pruned 0 tips.
+19: Pruned 0 tips.
+15: Pruned 0 tips.
+38: Pruned 0 tips.
+37: Pruned 0 tips.
+slurmstepd-i22: error: *** JOB 1110973 ON i22 CANCELLED AT 2020-05-07T11:37:36 ***

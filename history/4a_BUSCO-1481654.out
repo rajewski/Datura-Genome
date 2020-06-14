@@ -1,0 +1,120 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 06/05/2020 14:36:25 ******************
+INFO	Configuration loaded from /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /opt/linux/centos/7.x/x86_64/pkgs/busco/3.0.2/scripts/run_BUSCO.py -i /bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.5_Iterative/lordecreads.fa_vs_Dstr_v1.5_n5r1_n4r1_n2.fa_250_0.9_rails.scaffolds.fa -o 20200605_Dstr_v1.5_iterated -l /srv/projects/db/BUSCO/v9/embryophyta_odb9/ -m genome -c 30 -z -sp tomato
+INFO	Mode is: genome
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+WARNING	This is not an uncompleted run that can be restarted
+INFO	Temp directory is ./tmp/
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 1/3, current time: 06/05/2020 14:36:32 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 06/05/2020 14:36:32
+INFO	[makeblastdb]	New DB name:   /bigdata/littlab/arajewski/Datura/4_BUSCO/tmp/20200605_Dstr_v1.5_iterated_1871925584
+INFO	[makeblastdb]	New DB title:  /bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.5_Iterative/lordecreads.fa_vs_Dstr_v1.5_n5r1_n4r1_n2.fa_250_0.9_rails.scaffolds.fa
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep Linkouts: T
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 11784 sequences in 21.3159 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 06/05/2020 14:36:53
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_20200605_Dstr_v1.5_iterated/blast_output/tblastn_20200605_Dstr_v1.5_iterated.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 06/05/2020 14:49:17
+INFO	****** Step 2/3, current time: 06/05/2020 14:49:17 ******
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Running Augustus prediction using tomato as species:
+INFO	[augustus]	Please find all logs related to Augustus errors here: /bigdata/littlab/arajewski/Datura/4_BUSCO/run_20200605_Dstr_v1.5_iterated/augustus_output/augustus.log
+INFO	[augustus]	218 of 2172 task(s) completed at 06/05/2020 14:58:02
+INFO	[augustus]	435 of 2172 task(s) completed at 06/05/2020 15:04:33
+INFO	[augustus]	652 of 2172 task(s) completed at 06/05/2020 15:10:11
+INFO	[augustus]	869 of 2172 task(s) completed at 06/05/2020 15:15:11
+INFO	[augustus]	1086 of 2172 task(s) completed at 06/05/2020 15:19:47
+INFO	[augustus]	1304 of 2172 task(s) completed at 06/05/2020 15:23:54
+INFO	[augustus]	1521 of 2172 task(s) completed at 06/05/2020 15:27:43
+INFO	[augustus]	1738 of 2172 task(s) completed at 06/05/2020 15:30:53
+INFO	[augustus]	1955 of 2172 task(s) completed at 06/05/2020 15:33:44
+INFO	[augustus]	2172 of 2172 task(s) completed at 06/05/2020 15:35:58
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 06/05/2020 15:38:18 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	1519 of 2169 task(s) completed at 06/05/2020 15:38:30
+INFO	[hmmsearch]	2169 of 2169 task(s) completed at 06/05/2020 15:38:35
+INFO	Results:
+INFO	C:84.1%[S:81.0%,D:3.1%],F:1.8%,M:14.1%,n:1440
+INFO	1211 Complete BUSCOs (C)
+INFO	1167 Complete and single-copy BUSCOs (S)
+INFO	44 Complete and duplicated BUSCOs (D)
+INFO	26 Fragmented BUSCOs (F)
+INFO	203 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	****** Phase 2 of 2, predictions using species specific training ******
+INFO	****** Step 1/3, current time: 06/05/2020 15:38:38 ******
+INFO	Extracting missing and fragmented buscos from the ancestral_variants file...
+INFO	Running tblastn, writing output to /bigdata/littlab/arajewski/Datura/4_BUSCO/run_20200605_Dstr_v1.5_iterated/blast_output/tblastn_20200605_Dstr_v1.5_iterated_missing_and_frag_rerun.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 06/05/2020 15:57:43
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	****** Step 2/3, current time: 06/05/2020 15:57:52 ******
+INFO	Training Augustus using Single-Copy Complete BUSCOs:
+INFO	Converting predicted genes to short genbank files at 06/05/2020 15:57:52...
+INFO	All files converted to short genbank files, now running the training scripts at 06/05/2020 16:59:06...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Re-running Augustus with the new metaparameters, number of target BUSCOs: 229
+INFO	[augustus]	34 of 337 task(s) completed at 06/05/2020 16:59:59
+INFO	[augustus]	68 of 337 task(s) completed at 06/05/2020 17:00:29
+INFO	[augustus]	102 of 337 task(s) completed at 06/05/2020 17:00:56
+INFO	[augustus]	135 of 337 task(s) completed at 06/05/2020 17:01:24
+INFO	[augustus]	169 of 337 task(s) completed at 06/05/2020 17:01:51
+INFO	[augustus]	203 of 337 task(s) completed at 06/05/2020 17:02:16
+INFO	[augustus]	236 of 337 task(s) completed at 06/05/2020 17:02:48
+INFO	[augustus]	270 of 337 task(s) completed at 06/05/2020 17:03:11
+INFO	[augustus]	304 of 337 task(s) completed at 06/05/2020 17:03:48
+INFO	[augustus]	337 of 337 task(s) completed at 06/05/2020 17:04:54
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 06/05/2020 17:05:13 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	68 of 337 task(s) completed at 06/05/2020 17:05:14
+INFO	[hmmsearch]	337 of 337 task(s) completed at 06/05/2020 17:05:15
+INFO	Results:
+INFO	C:85.1%[S:82.0%,D:3.1%],F:1.3%,M:13.6%,n:1440
+INFO	1226 Complete BUSCOs (C)
+INFO	1181 Complete and single-copy BUSCOs (S)
+INFO	45 Complete and duplicated BUSCOs (D)
+INFO	19 Fragmented BUSCOs (F)
+INFO	195 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 8966.558921575546 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Datura/4_BUSCO/run_20200605_Dstr_v1.5_iterated/
+
+JobId=1481654 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=342089 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=02:29:29 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2020-06-05T14:36:21 EligibleTime=2020-06-05T14:36:21
+   AccrueTime=2020-06-05T14:36:21
+   StartTime=2020-06-05T14:36:22 EndTime=2020-06-05T23:36:22 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-06-05T14:36:22
+   Partition=batch AllocNode:Sid=i22.ib.hpcc.ucr.edu:155825
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=c04
+   BatchHost=c04
+   NumNodes=1 NumCPUs=30 NumTasks=1 CPUs/Task=30 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=30,mem=150G,node=1,billing=67
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=30 MinMemoryCPU=5G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1481654.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1481654.out
+   Power=
+

@@ -1,0 +1,549 @@
+ModuleCmd_Switch.c(172):ERROR:152: Module 'python/2.7.5' is currently not loaded
+Alex_S85_L002 already trimmed.
+Running Trim Galore on Alex_S230_L002...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 8 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 8 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/1_QCQA/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	460584	AGATCGGAAGAGC	1000000	46.06
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 460584). Second best hit was Nextera (count: 3)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 8
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 8
+Writing final adapter and quality trimmed output to Alex_S230_L002_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+200000000 sequences processed
+210000000 sequences processed
+220000000 sequences processed
+230000000 sequences processed
+240000000 sequences processed
+250000000 sequences processed
+260000000 sequences processed
+270000000 sequences processed
+280000000 sequences processed
+290000000 sequences processed
+300000000 sequences processed
+310000000 sequences processed
+320000000 sequences processed
+330000000 sequences processed
+340000000 sequences processed
+350000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 8 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz
+Processing reads on 8 cores in single-end mode ...
+Finished in 3674.73 s (10 us/read; 5.78 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             353,749,887
+Reads with adapters:               245,291,749 (69.3%)
+Reads written (passing filters):   353,749,887 (100.0%)
+
+Total basepairs processed: 53,416,232,937 bp
+Quality-trimmed:              32,842,559 bp (0.1%)
+Total written (filtered):  38,884,858,820 bp (72.8%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 245291749 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 13.3%
+  C: 21.0%
+  G: 37.4%
+  T: 25.1%
+  none/other: 3.3%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	48211292	88437471.8	0	48211292
+2	12034462	22109367.9	0	12034462
+3	4845115	5527342.0	0	4845115
+4	1914565	1381835.5	0	1914565
+5	1309709	345458.9	0	1309709
+6	1150277	86364.7	0	1150277
+7	1096952	21591.2	0	1096952
+8	1237724	5397.8	0	1237724
+9	1054027	1349.4	0	1047101 6926
+10	1153420	337.4	1	1116675 36745
+11	1171513	84.3	1	1131048 40465
+12	1193762	21.1	1	1155608 38154
+13	1200337	5.3	1	1162632 37705
+14	1195474	5.3	1	1156371 39103
+15	1241969	5.3	1	1202235 39734
+16	1201842	5.3	1	1162076 39766
+17	1304398	5.3	1	1258032 46366
+18	1383183	5.3	1	1341428 41755
+19	1037915	5.3	1	1004427 33488
+20	1234459	5.3	1	1194895 39564
+21	1282221	5.3	1	1240424 41797
+22	1206922	5.3	1	1167467 39455
+23	1449526	5.3	1	1403289 46237
+24	1118156	5.3	1	1079042 39114
+25	1319520	5.3	1	1277656 41864
+26	1253053	5.3	1	1214793 38260
+27	1335466	5.3	1	1291835 43631
+28	1325196	5.3	1	1283978 41218
+29	1305374	5.3	1	1262146 43228
+30	1466500	5.3	1	1422660 43840
+31	1134405	5.3	1	1098941 35464
+32	1349344	5.3	1	1307293 42051
+33	1292656	5.3	1	1251507 41149
+34	1382423	5.3	1	1339615 42808
+35	1351527	5.3	1	1306181 45346
+36	1515924	5.3	1	1470728 45196
+37	1176179	5.3	1	1138655 37524
+38	1402097	5.3	1	1359192 42905
+39	1381929	5.3	1	1336545 45384
+40	1349482	5.3	1	1307751 41731
+41	1518450	5.3	1	1470177 48273
+42	1307690	5.3	1	1264078 43612
+43	1500564	5.3	1	1447275 53289
+44	1277544	5.3	1	1230201 47343
+45	2427306	5.3	1	2363338 63968
+46	440079	5.3	1	417557 22522
+47	1404923	5.3	1	1361629 43294
+48	1505084	5.3	1	1458497 46587
+49	1423996	5.3	1	1380245 43751
+50	1343175	5.3	1	1298474 44701
+51	1431624	5.3	1	1383532 48092
+52	1376527	5.3	1	1333077 43450
+53	1395586	5.3	1	1351803 43783
+54	1418310	5.3	1	1371289 47021
+55	1785229	5.3	1	1733363 51866
+56	1103314	5.3	1	1066010 37304
+57	1554217	5.3	1	1503414 50803
+58	1999132	5.3	1	1942144 56988
+59	972554	5.3	1	936379 36175
+60	1594531	5.3	1	1549254 45277
+61	996175	5.3	1	960320 35855
+62	1523923	5.3	1	1474896 49027
+63	1596067	5.3	1	1546661 49406
+64	1570340	5.3	1	1524072 46268
+65	908747	5.3	1	874217 34530
+66	1636367	5.3	1	1585409 50958
+67	1766043	5.3	1	1708049 57994
+68	2198048	5.3	1	2131052 66996
+69	1818316	5.3	1	1757764 60552
+70	2019606	5.3	1	1959760 59846
+71	129665	5.3	1	120878 8787
+72	242904	5.3	1	229395 13509
+73	1079580	5.3	1	1044705 34875
+74	1244477	5.3	1	1205210 39267
+75	1272703	5.3	1	1232106 40597
+76	1273851	5.3	1	1233205 40646
+77	1266980	5.3	1	1225904 41076
+78	1265439	5.3	1	1224575 40864
+79	1265360	5.3	1	1224178 41182
+80	1235389	5.3	1	1194372 41017
+81	1236676	5.3	1	1196178 40498
+82	1195909	5.3	1	1155422 40487
+83	1155943	5.3	1	1117076 38867
+84	1136532	5.3	1	1097855 38677
+85	1116025	5.3	1	1078039 37986
+86	1115094	5.3	1	1076996 38098
+87	1089708	5.3	1	1052829 36879
+88	1080314	5.3	1	1043329 36985
+89	1062351	5.3	1	1025871 36480
+90	1034486	5.3	1	998904 35582
+91	1007281	5.3	1	972610 34671
+92	976141	5.3	1	941800 34341
+93	945539	5.3	1	912092 33447
+94	927083	5.3	1	894730 32353
+95	906462	5.3	1	874420 32042
+96	876538	5.3	1	845289 31249
+97	856045	5.3	1	825703 30342
+98	829146	5.3	1	799722 29424
+99	805449	5.3	1	777015 28434
+100	775761	5.3	1	748233 27528
+101	745188	5.3	1	718417 26771
+102	716679	5.3	1	691081 25598
+103	685314	5.3	1	660904 24410
+104	666238	5.3	1	642725 23513
+105	631905	5.3	1	609451 22454
+106	612816	5.3	1	591558 21258
+107	579701	5.3	1	558840 20861
+108	553133	5.3	1	533473 19660
+109	530142	5.3	1	511284 18858
+110	492280	5.3	1	474276 18004
+111	465966	5.3	1	449407 16559
+112	424875	5.3	1	409265 15610
+113	399798	5.3	1	385444 14354
+114	363920	5.3	1	350811 13109
+115	331627	5.3	1	319679 11948
+116	300699	5.3	1	289922 10777
+117	267544	5.3	1	257817 9727
+118	242099	5.3	1	233561 8538
+119	208357	5.3	1	201223 7134
+120	192942	5.3	1	186681 6261
+121	155026	5.3	1	149900 5126
+122	138689	5.3	1	134303 4386
+123	115659	5.3	1	111735 3924
+124	100135	5.3	1	96798 3337
+125	84484	5.3	1	81860 2624
+126	73487	5.3	1	71170 2317
+127	63695	5.3	1	61731 1964
+128	57581	5.3	1	55799 1782
+129	51879	5.3	1	50203 1676
+130	47468	5.3	1	45952 1516
+131	45286	5.3	1	43727 1559
+132	44955	5.3	1	43551 1404
+133	46319	5.3	1	44954 1365
+134	45557	5.3	1	44265 1292
+135	43975	5.3	1	42721 1254
+136	43039	5.3	1	41710 1329
+137	49115	5.3	1	47844 1271
+138	49699	5.3	1	48396 1303
+139	40796	5.3	1	39691 1105
+140	27427	5.3	1	26573 854
+141	19945	5.3	1	19193 752
+142	9908	5.3	1	9365 543
+143	4041	5.3	1	3655 386
+144	2301	5.3	1	2035 266
+145	194230	5.3	1	191624 2606
+146	14453	5.3	1	9090 5363
+147	4742	5.3	1	4206 536
+148	13418	5.3	1	12445 973
+149	11776	5.3	1	10165 1611
+150	60492	5.3	1	54056 6436
+151	46432356	5.3	1	44246435 2185921
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R1_001.fastq.gz
+=============================================
+353749887 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 8
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 8
+Writing final adapter and quality trimmed output to Alex_S230_L002_R2_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+200000000 sequences processed
+210000000 sequences processed
+220000000 sequences processed
+230000000 sequences processed
+240000000 sequences processed
+250000000 sequences processed
+260000000 sequences processed
+270000000 sequences processed
+280000000 sequences processed
+290000000 sequences processed
+300000000 sequences processed
+310000000 sequences processed
+320000000 sequences processed
+330000000 sequences processed
+340000000 sequences processed
+350000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 8 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz
+Processing reads on 8 cores in single-end mode ...
+Finished in 3824.00 s (11 us/read; 5.55 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             353,749,887
+Reads with adapters:               240,833,917 (68.1%)
+Reads written (passing filters):   353,749,887 (100.0%)
+
+Total basepairs processed: 53,416,232,937 bp
+Quality-trimmed:             323,210,479 bp (0.6%)
+Total written (filtered):  39,138,772,507 bp (73.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 240833917 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 12.6%
+  C: 20.2%
+  G: 38.4%
+  T: 26.4%
+  none/other: 2.3%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	48641808	88437471.8	0	48641808
+2	11384874	22109367.9	0	11384874
+3	4841810	5527342.0	0	4841810
+4	1948548	1381835.5	0	1948548
+5	1425156	345458.9	0	1425156
+6	1030004	86364.7	0	1030004
+7	1096635	21591.2	0	1096635
+8	1348401	5397.8	0	1348401
+9	942682	1349.4	0	938620 4062
+10	1126052	337.4	1	1093695 32357
+11	1127917	84.3	1	1096067 31850
+12	1172414	21.1	1	1140659 31755
+13	1298348	5.3	1	1263816 34532
+14	1146374	5.3	1	1113732 32642
+15	1116870	5.3	1	1090165 26705
+16	1380047	5.3	1	1342816 37231
+17	1192529	5.3	1	1159912 32617
+18	1075269	5.3	1	1049030 26239
+19	1275341	5.3	1	1239184 36157
+20	1356829	5.3	1	1323938 32891
+21	1035335	5.3	1	1008276 27059
+22	1208396	5.3	1	1177587 30809
+23	1240720	5.3	1	1208025 32695
+24	1306415	5.3	1	1269587 36828
+25	1550780	5.3	1	1512420 38360
+26	1162262	5.3	1	1128763 33499
+27	1115475	5.3	1	1085486 29989
+28	1326329	5.3	1	1295543 30786
+29	1267631	5.3	1	1235640 31991
+30	1281246	5.3	1	1246674 34572
+31	1290588	5.3	1	1254194 36394
+32	1253317	5.3	1	1221695 31622
+33	1469076	5.3	1	1434372 34704
+34	1242608	5.3	1	1207751 34857
+35	1297181	5.3	1	1265161 32020
+36	1852069	5.3	1	1801944 50125
+37	1755379	5.3	1	1716038 39341
+38	1557110	5.3	1	1524869 32241
+39	959400	5.3	1	933760 25640
+40	1827741	5.3	1	1793523 34218
+41	845764	5.3	1	818844 26920
+42	1488196	5.3	1	1454385 33811
+43	1354087	5.3	1	1321203 32884
+44	3250349	5.3	1	3186018 64331
+45	2592500	5.3	1	2542659 49841
+46	691398	5.3	1	667876 23522
+47	1916769	5.3	1	1878174 38595
+48	553396	5.3	1	533391 20005
+49	1389131	5.3	1	1360519 28612
+50	587416	5.3	1	572179 15237
+51	788280	5.3	1	769510 18770
+52	417920	5.3	1	405612 12308
+53	1348810	5.3	1	1319774 29036
+54	2292274	5.3	1	2250512 41762
+55	659397	5.3	1	641658 17739
+56	1441261	5.3	1	1405264 35997
+57	3869212	5.3	1	3806537 62675
+58	921325	5.3	1	898189 23136
+59	836080	5.3	1	814866 21214
+60	3586905	5.3	1	3530240 56665
+61	1068403	5.3	1	1046830 21573
+62	352830	5.3	1	340388 12442
+63	2662426	5.3	1	2617402 45024
+64	3522371	5.3	1	3465841 56530
+65	2069714	5.3	1	2034322 35392
+66	1363548	5.3	1	1336837 26711
+67	1134915	5.3	1	1113931 20984
+68	585077	5.3	1	571487 13590
+69	876934	5.3	1	858370 18564
+70	1305456	5.3	1	1282744 22712
+71	590584	5.3	1	576945 13639
+72	421960	5.3	1	411533 10427
+73	470328	5.3	1	459802 10526
+74	538916	5.3	1	526918 11998
+75	665576	5.3	1	650548 15028
+76	905450	5.3	1	885539 19911
+77	967698	5.3	1	946646 21052
+78	1072319	5.3	1	1051112 21207
+79	1102086	5.3	1	1080262 21824
+80	1094508	5.3	1	1072111 22397
+81	1103799	5.3	1	1079926 23873
+82	1072546	5.3	1	1049151 23395
+83	1081915	5.3	1	1059074 22841
+84	1057297	5.3	1	1034603 22694
+85	1068263	5.3	1	1044654 23609
+86	1037185	5.3	1	1015624 21561
+87	1006911	5.3	1	986732 20179
+88	998936	5.3	1	979103 19833
+89	1002968	5.3	1	983371 19597
+90	994903	5.3	1	974929 19974
+91	954731	5.3	1	935876 18855
+92	939555	5.3	1	920609 18946
+93	917797	5.3	1	900405 17392
+94	875297	5.3	1	857847 17450
+95	867314	5.3	1	850436 16878
+96	838973	5.3	1	822562 16411
+97	819043	5.3	1	802921 16122
+98	816358	5.3	1	800531 15827
+99	814261	5.3	1	798612 15649
+100	782622	5.3	1	767741 14881
+101	718624	5.3	1	705607 13017
+102	676750	5.3	1	663433 13317
+103	644394	5.3	1	632306 12088
+104	624133	5.3	1	612510 11623
+105	607523	5.3	1	596261 11262
+106	594495	5.3	1	583396 11099
+107	570040	5.3	1	559102 10938
+108	547944	5.3	1	537336 10608
+109	510099	5.3	1	500863 9236
+110	466011	5.3	1	456993 9018
+111	434814	5.3	1	427007 7807
+112	405730	5.3	1	398023 7707
+113	388055	5.3	1	380863 7192
+114	355182	5.3	1	348443 6739
+115	324740	5.3	1	318708 6032
+116	289341	5.3	1	284073 5268
+117	251055	5.3	1	246238 4817
+118	231214	5.3	1	226795 4419
+119	200299	5.3	1	196428 3871
+120	186506	5.3	1	183185 3321
+121	153327	5.3	1	150424 2903
+122	135675	5.3	1	133127 2548
+123	114826	5.3	1	111743 3083
+124	97586	5.3	1	95675 1911
+125	83955	5.3	1	82241 1714
+126	74036	5.3	1	72555 1481
+127	70791	5.3	1	69479 1312
+128	63083	5.3	1	61977 1106
+129	52855	5.3	1	51873 982
+130	48625	5.3	1	47724 901
+131	50970	5.3	1	50050 920
+132	46870	5.3	1	46002 868
+133	49284	5.3	1	48495 789
+134	45954	5.3	1	45156 798
+135	44015	5.3	1	43236 779
+136	45090	5.3	1	44214 876
+137	49898	5.3	1	48916 982
+138	50489	5.3	1	49192 1297
+139	42629	5.3	1	41325 1304
+140	29931	5.3	1	28805 1126
+141	22048	5.3	1	21042 1006
+142	11842	5.3	1	11021 821
+143	6073	5.3	1	5430 643
+144	5220	5.3	1	4559 661
+145	193271	5.3	1	189491 3780
+146	12437	5.3	1	11423 1014
+147	13042	5.3	1	11393 1649
+148	35609	5.3	1	32575 3034
+149	40383	5.3	1	32925 7458
+150	294447	5.3	1	273232 21215
+151	44243498	5.3	1	43574086 669412
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S230_L002_R2_001.fastq.gz
+=============================================
+353749887 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files Alex_S230_L002_R1_001_trimmed.fq.gz and Alex_S230_L002_R2_001_trimmed.fq.gz
+file_1: Alex_S230_L002_R1_001_trimmed.fq.gz, file_2: Alex_S230_L002_R2_001_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Alex_S230_L002_R1_001_trimmed.fq.gz and Alex_S230_L002_R2_001_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to Alex_S230_L002_R1_001_val_1.fq.gz
+Writing validated paired-end Read 2 reads to Alex_S230_L002_R2_001_val_2.fq.gz
+
+Total number of sequences analysed: 353749887
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 47774722 (13.51%)
+
+Deleting both intermediate output files Alex_S230_L002_R1_001_trimmed.fq.gz and Alex_S230_L002_R2_001_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on Alex-1_S9...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 8 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 8 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/1_QCQA/
+pigz: skipping: /bigdata/littlab/arajewski/Datura/DNA-seqAlex-1_S9_R1_001.fastq.gz does not exist
+Input file '/bigdata/littlab/arajewski/Datura/DNA-seqAlex-1_S9_R1_001.fastq.gz' seems to be completely empty. Consider respecifying!
+

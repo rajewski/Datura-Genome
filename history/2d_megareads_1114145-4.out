@@ -1,0 +1,3 @@
+compute_psa 73131598 14000494449
+/var/spool/slurmd/job1114149/slurm_script: line 6: 45492 Killed                  /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/create_mega_reads -s 13955661146 -m 15 --psa-min 12 --stretch-cap 10000 -k 41 -u ../guillaumeKUnitigsAtLeast32bases_all.41.fasta -t 30 -B 15 --max-count 5000 -d 0.02 -r ../superReadSequences.named.fasta -p lr.batch$SLURM_ARRAY_TASK_ID -o mr.batch$SLURM_ARRAY_TASK_ID.tmp
+slurmstepd-c19: error: Detected 1 oom-kill event(s) in step 1114149.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
