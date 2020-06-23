@@ -70,60 +70,68 @@ export PATH="/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuR
 save PATH
 export PERL5LIB=/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../lib/perl${PERL5LIB:+:$PERL5LIB}
 save PERL5LIB
-NUM_THREADS=60
+NUM_THREADS=30
 save NUM_THREADS
 log 'Processing pe library reads'
 rm -rf meanAndStdevByPrefix.pe.txt
 echo 't1 400 60' >> meanAndStdevByPrefix.pe.txt
+rename_filter_fastq 't1' <(exec expand_fastq '/bigdata/littlab/arajewski/Datura/DNA-seq/Alex-1_S9_R1_001.fastq.gz' | awk '{if(length($0>250)) print substr($0,1,250); else print $0;}') '' > 't1.renamed.fastq'
+echo 't2 400 60' >> meanAndStdevByPrefix.pe.txt
+rename_filter_fastq 't2' <(exec expand_fastq '/bigdata/littlab/arajewski/Datura/DNA-seq/Alex-2_S10_R1_001.fastq.gz' | awk '{if(length($0>250)) print substr($0,1,250); else print $0;}') '' > 't2.renamed.fastq'
 echo 'n1 400 60' >> meanAndStdevByPrefix.pe.txt
 echo 'n2 400 60' >> meanAndStdevByPrefix.pe.txt
 
-head -q -n 40000  t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq | grep --text -v '^+' | grep --text -v '^@' > pe_data.tmp
+head -q -n 40000  t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq | grep --text -v '^+' | grep --text -v '^@' > pe_data.tmp
 export PE_AVG_READ_LENGTH=`awk '{if(length($1)>31){n+=length($1);m++;}}END{print int(n/m)}' pe_data.tmp`
 save PE_AVG_READ_LENGTH
 log Average PE read length $PE_AVG_READ_LENGTH
-KMER=`for f in t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq;do head -n 80000 $f |tail -n 40000;done | perl -e 'while($line=<STDIN>){$line=<STDIN>;chomp($line);push(@lines,$line);for($i=0;$i<6;$i++){$line=<STDIN>;}}$min_len=100000;$base_count=0;foreach $l(@lines){$base_count+=length($l);push(@lengths,length($l));@f=split("",$l);foreach $base(@f){if(uc($base) eq "G" || uc($base) eq "C"){$gc_count++}}} @lengths =sort {$b <=> $a} @lengths; $min_len=$lengths[int($#lengths*.75)];  $gc_ratio=$gc_count/$base_count;$kmer=0;if($gc_ratio>=0.35 && $gc_ratio<=0.6){$kmer=int($min_len*.66);}else{$kmer=int($min_len*.33);} $kmer++ if($kmer%2==0); $kmer=31 if($kmer<31); $kmer=127 if($kmer>127); print $kmer'`
+KMER=`for f in t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq;do head -n 80000 $f |tail -n 40000;done | perl -e 'while($line=<STDIN>){$line=<STDIN>;chomp($line);push(@lines,$line);for($i=0;$i<6;$i++){$line=<STDIN>;}}$min_len=100000;$base_count=0;foreach $l(@lines){$base_count+=length($l);push(@lengths,length($l));@f=split("",$l);foreach $base(@f){if(uc($base) eq "G" || uc($base) eq "C"){$gc_count++}}} @lengths =sort {$b <=> $a} @lengths; $min_len=$lengths[int($#lengths*.75)];  $gc_ratio=$gc_count/$base_count;$kmer=0;if($gc_ratio>=0.35 && $gc_ratio<=0.6){$kmer=int($min_len*.66);}else{$kmer=int($min_len*.33);} $kmer++ if($kmer%2==0); $kmer=31 if($kmer<31); $kmer=127 if($kmer>127); print $kmer'`
 save KMER
 log Using kmer size of $KMER for the graph
 KMER_J=$KMER
-MIN_Q_CHAR=`cat t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq |head -n 50000 | awk 'BEGIN{flag=0}{if($0 ~ /^\+/){flag=1}else if(flag==1){print $0;flag=0}}'  | perl -ne 'BEGIN{$q0_char="@";}{chomp;@f=split "";foreach $v(@f){if(ord($v)<ord($q0_char)){$q0_char=$v;}}}END{$ans=ord($q0_char);if($ans<64){print "33\n"}else{print "64\n"}}'`
+MIN_Q_CHAR=`cat t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq |head -n 50000 | awk 'BEGIN{flag=0}{if($0 ~ /^\+/){flag=1}else if(flag==1){print $0;flag=0}}'  | perl -ne 'BEGIN{$q0_char="@";}{chomp;@f=split "";foreach $v(@f){if(ord($v)<ord($q0_char)){$q0_char=$v;}}}END{$ans=ord($q0_char);if($ans<64){print "33\n"}else{print "64\n"}}'`
 save MIN_Q_CHAR
 log MIN_Q_CHAR: $MIN_Q_CHAR
 JF_SIZE=`ls -l *.fastq | awk '{n+=$5}END{s=int(n/50); if(s>200000000)printf "%.0f",s;else print "200000000";}'`
 save JF_SIZE
 perl -e '{if(int('$JF_SIZE')>200000000){print "WARNING: JF_SIZE set too low, increasing JF_SIZE to at least '$JF_SIZE', this automatic increase may be not enough!\n"}}'
+log Creating mer database for Quorum
+awk '{print substr($0,1,200)}' t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq | quorum_create_database -t 30 -s $JF_SIZE -b 7 -m 24 -q $((MIN_Q_CHAR + 5)) -o quorum_mer_db.jf.tmp /dev/stdin && mv quorum_mer_db.jf.tmp quorum_mer_db.jf
+if [ 0 != 0 ]; then
+  fail Increase JF_SIZE in config file, the recommendation is to set this to genome_size*coverage/2
+fi
 
 log Error correct PE
 
-quorum_error_correct_reads  -q $(($MIN_Q_CHAR + 40)) --contaminant=/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../share/adapter.jf -m 1 -s 1 -g 1 -a 3 -t 60 -w 10 -e 3 -M  quorum_mer_db.jf t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq --no-discard -o pe.cor.tmp --verbose 1>quorum.err 2>&1 && mv pe.cor.tmp.fa pe.cor.fa || fail Error correction of PE reads failed. Check pe.cor.log.
+quorum_error_correct_reads  -q $(($MIN_Q_CHAR + 40)) --contaminant=/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../share/adapter.jf -m 1 -s 1 -g 1 -a 3 -t 30 -w 10 -e 3 -M  quorum_mer_db.jf t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq --no-discard -o pe.cor.tmp --verbose 1>quorum.err 2>&1 && mv pe.cor.tmp.fa pe.cor.fa || fail Error correction of PE reads failed. Check pe.cor.log.
 
 
 if [ -s ESTIMATED_GENOME_SIZE.txt ];then
 ESTIMATED_GENOME_SIZE=`head -n 1 ESTIMATED_GENOME_SIZE.txt`
 else
 log Estimating genome size
-jellyfish count -m 31 -t 60 -C -s $JF_SIZE -o k_u_hash_0 pe.cor.fa
-export ESTIMATED_GENOME_SIZE=`jellyfish histo -t 60 -h 1 k_u_hash_0 | tail -n 1 |awk '{print $2}'`
+jellyfish count -m 31 -t 30 -C -s $JF_SIZE -o k_u_hash_0 pe.cor.fa
+export ESTIMATED_GENOME_SIZE=`jellyfish histo -t 30 -h 1 k_u_hash_0 | tail -n 1 |awk '{print $2}'`
 echo $ESTIMATED_GENOME_SIZE > ESTIMATED_GENOME_SIZE.txt
 fi
 save ESTIMATED_GENOME_SIZE
 log "Estimated genome size: $ESTIMATED_GENOME_SIZE"
 
 log Creating k-unitigs with k=$KMER
-create_k_unitigs_large_k -c $(($KMER-1)) -t 60 -m $KMER -n $(($ESTIMATED_GENOME_SIZE*2)) -l $KMER -f `perl -e 'print 1/'$KMER'/1e5'` pe.cor.fa  | grep --text -v '^>' | perl -ane '{$seq=$F[0]; $F[0]=~tr/ACTGactg/TGACtgac/;$revseq=reverse($F[0]); $h{($seq ge $revseq)?$seq:$revseq}=1;}END{$n=0;foreach $k(keys %h){print ">",$n++," length:",length($k),"\n$k\n"}}' > guillaumeKUnitigsAtLeast32bases_all.fasta.tmp && mv guillaumeKUnitigsAtLeast32bases_all.fasta.tmp guillaumeKUnitigsAtLeast32bases_all.fasta
+create_k_unitigs_large_k -c $(($KMER-1)) -t 30 -m $KMER -n $(($ESTIMATED_GENOME_SIZE*2)) -l $KMER -f `perl -e 'print 1/'$KMER'/1e5'` pe.cor.fa  | grep --text -v '^>' | perl -ane '{$seq=$F[0]; $F[0]=~tr/ACTGactg/TGACtgac/;$revseq=reverse($F[0]); $h{($seq ge $revseq)?$seq:$revseq}=1;}END{$n=0;foreach $k(keys %h){print ">",$n++," length:",length($k),"\n$k\n"}}' > guillaumeKUnitigsAtLeast32bases_all.fasta.tmp && mv guillaumeKUnitigsAtLeast32bases_all.fasta.tmp guillaumeKUnitigsAtLeast32bases_all.fasta
 if [[ $KMER -eq $KMER_J ]];then
 ln -s guillaumeKUnitigsAtLeast32bases_all.fasta guillaumeKUnitigsAtLeast32bases_all.jump.fasta
 else
 log Creating k-unitigs with k=$KMER_J
-create_k_unitigs_large_k -c $(($KMER_J-1)) -t 60 -m $KMER_J -n $(($ESTIMATED_GENOME_SIZE*2)) -l $KMER_J -f `perl -e 'print 1/'$KMER_J'/1e5'` pe.cor.fa  | grep --text -v '^>' | perl -ane '{$seq=$F[0]; $F[0]=~tr/ACTGactg/TGACtgac/;$revseq=reverse($F[0]); $h{($seq ge $revseq)?$seq:$revseq}=1;}END{$n=0;foreach $k(keys %h){print ">",$n++," length:",length($k),"\n$k\n"}}' > guillaumeKUnitigsAtLeast32bases_all.jump.fasta.tmp && mv guillaumeKUnitigsAtLeast32bases_all.jump.fasta.tmp guillaumeKUnitigsAtLeast32bases_all.jump.fasta 
+create_k_unitigs_large_k -c $(($KMER_J-1)) -t 30 -m $KMER_J -n $(($ESTIMATED_GENOME_SIZE*2)) -l $KMER_J -f `perl -e 'print 1/'$KMER_J'/1e5'` pe.cor.fa  | grep --text -v '^>' | perl -ane '{$seq=$F[0]; $F[0]=~tr/ACTGactg/TGACtgac/;$revseq=reverse($F[0]); $h{($seq ge $revseq)?$seq:$revseq}=1;}END{$n=0;foreach $k(keys %h){print ">",$n++," length:",length($k),"\n$k\n"}}' > guillaumeKUnitigsAtLeast32bases_all.jump.fasta.tmp && mv guillaumeKUnitigsAtLeast32bases_all.jump.fasta.tmp guillaumeKUnitigsAtLeast32bases_all.jump.fasta 
 fi
 
 
 log 'Computing super reads from PE '
 rm -rf work1
 CA_DIR="CA";
-createSuperReadsForDirectory.perl -doSimpleMerge -l $KMER -mean-and-stdev-by-prefix-file meanAndStdevByPrefix.pe.txt -kunitigsfile guillaumeKUnitigsAtLeast32bases_all.fasta -t 60 -mikedebug work1 pe.cor.fa 1> super1.err 2>&1
-/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/mega_reads_assemble_cluster.sh  -F -E SLURM  -Pb 500000000 -q batch -G 1 -C 25 -t 60 -e $ESTIMATED_GENOME_SIZE -m work1 -a /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin -o "   cgwErrorRate=0.15"  -B 15 -D 0.02 -n /bigdata/littlab/arajewski/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz 
+createSuperReadsForDirectory.perl -doSimpleMerge -l $KMER -mean-and-stdev-by-prefix-file meanAndStdevByPrefix.pe.txt -kunitigsfile guillaumeKUnitigsAtLeast32bases_all.fasta -t 30 -mikedebug work1 pe.cor.fa 1> super1.err 2>&1
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/mega_reads_assemble_cluster.sh  -F -E SLURM  -Pb 500000000 -q batch -G 1 -C 25 -t 30 -e $ESTIMATED_GENOME_SIZE -m work1 -a /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin -o "   cgwErrorRate=0.15"  -B 15 -D 0.02 -n /bigdata/littlab/arajewski/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz 
 if [ ! -s flye/assembly.fasta ];then
   fail "Assembly with flye failed, see files under flye/"
 else

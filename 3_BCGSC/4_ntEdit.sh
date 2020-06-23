@@ -2,14 +2,17 @@
 #SBATCH --cpus-per-task=60
 #SBATCH --nodes=1
 #SBATCH --mem-per-cpu=7G
+#SBATCH -p short
 #SBATCH --time=01:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/ntEdit-%A.out
 set -e
-MEMORY=$((SLURM_MEM_PER_CPU/1024))G
-ASSEM=Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_j1_R1_n2_edited.fa
-#ln -s lordecreads.fa_vs_Dstr_v1.5.fa_250_0.9_rails.scaffolds.fa $ASSEM
+
+ASSEM=Dstr_v1.7_Iterative/Dstr_v1.7_l1n2r1n3_l1n3r1n3_l1n3r1n3r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2_l1n2_l1n1_edited.fa
+# unfold the fasta file if necessary
+#awk 'BEGIN {RS=">";FS="\n";OFS=""} NR>1 {print ">"$1; $1=""; print}' /bigdata/littlab/arajewski/Datura/2_MaSuRCA338/flye/assembly.fasta > $ASSEM
+
 kmer=50
 
 #Get env right
@@ -37,7 +40,7 @@ ntedit \
     -f $ASSEM \
     -k $kmer \
     -r Dstr_k$kmer.bf \
-    -b Dstr_v1.5_ntEdit_RAILS/Dstr_v1.5_j1_R1_n3 \
+    -b Dstr_v1.7_Iterative/Dstr_v1.7_l1n2r1n3_l1n3r1n3_l1n3r1n3r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2_l1n2_l1n2 \
     -v 0 \
     -m 1
 

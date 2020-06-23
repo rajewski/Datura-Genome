@@ -1519,3 +1519,5 @@ Flanks inserted into k run = 242843
 1000 gaps closed so far
 1100 gaps closed so far
 1200 gaps closed so far
+1300 gaps closed so far
+slurmstepd-c39: error: *** JOB 1590564 ON c39 CANCELLED AT 2020-06-23T16:36:54 DUE TO TIME LIMIT ***
