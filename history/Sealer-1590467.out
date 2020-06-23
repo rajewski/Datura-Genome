@@ -1,0 +1,66 @@
+Sun Jun 21 13:52:03 PDT 2020: Running Sealer with k=40...
+Finding flanks
+362216 gaps found
+360401 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k40.bloom'...
+Bloom filter FPR: 1.3%
+Starting K run with k = 40
+Flanks inserted into k run = 360401
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1100 gaps closed so far
+1200 gaps closed so far
+1300 gaps closed so far
+1400 gaps closed so far
+1500 gaps closed so far
+1600 gaps closed so far
+1700 gaps closed so far
+1800 gaps closed so far
+1900 gaps closed so far
+2000 gaps closed so far
+2100 gaps closed so far
+2200 gaps closed so far
+2300 gaps closed so far
+2400 gaps closed so far
+2500 gaps closed so far
+2600 gaps closed so far
+2700 gaps closed so far
+2800 gaps closed so far
+2900 gaps closed so far
+3000 gaps closed so far
+3100 gaps closed so far
+3200 gaps closed so far
+3300 gaps closed so far
+3400 gaps closed so far
+3500 gaps closed so far
+3600 gaps closed so far
+3700 gaps closed so far
+3800 gaps closed so far
+3900 gaps closed so far
+4000 gaps closed so far
+4100 gaps closed so far
+4200 gaps closed so far
+4300 gaps closed so far
+4400 gaps closed so far
+4500 gaps closed so far
+4600 gaps closed so far
+4700 gaps closed so far
+4800 gaps closed so far
+4900 gaps closed so far
+5000 gaps closed so far
+5100 gaps closed so far
+5200 gaps closed so far
+5300 gaps closed so far
+5400 gaps closed so far
+5500 gaps closed so far
+5600 gaps closed so far
+slurmstepd-c18: error: *** JOB 1590467 ON c18 CANCELLED AT 2020-06-21T14:16:45 ***

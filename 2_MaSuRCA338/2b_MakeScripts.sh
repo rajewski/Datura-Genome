@@ -16,7 +16,15 @@ module unload miniconda2
 module load miniconda3
 module load MaSuRCA/3.3.8
 
-sbatch --ntasks 60 -p intel,batch --mem 256gb --out ../history/2c_HybAssemble-%A.out --mail-user=araje002@ucr.edu --mail-type=ALL 2c_HybAssemble.sh
+sbatch \
+    --ntasks 1 \
+    --cpus-per-task=60 \
+    -p intel,batch \
+    --mem-per-cpu=7Gb \
+    --out ../history/2c_HybAssemble-%A.out \
+    --mail-user=araje002@ucr.edu \
+    --mail-type=ALL \
+    2c_HybAssemble.sh
 
 #second submission with higher memory
 #sbatch --ntasks 32 -p highmem --mem 512gb --out ../history/2c_HybAssemble-%A.out --mail-user=araje002@ucr.edu --mail-type=ALL 2c_HybAssemble.sh

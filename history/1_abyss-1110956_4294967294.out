@@ -1,0 +1,8 @@
+make: Entering directory `/bigdata/littlab/arajewski/Datura/2_ABySS/k_101'
+/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin/mpirun -np 1 ABYSS-P -k101 -q3    --coverage-hist=coverage.hist -s Dstr_v1.3_k101-bubbles.fa  -o Dstr_v1.3_k101-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz
+ABySS 2.0.2
+ABYSS-P -k101 -q3 --coverage-hist=coverage.hist -s Dstr_v1.3_k101-bubbles.fa -o Dstr_v1.3_k101-1.fa /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE1_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/SE2.fq.gz
+Running on 1 processors
+0: Running on host i20
+0: Reading `/rhome/arajewski/bigdata/Datura/1_QCQA/PE1_1.fq.gz'...
+slurmstepd-i20: error: *** JOB 1110956 ON i20 CANCELLED AT 2020-05-06T21:16:27 ***

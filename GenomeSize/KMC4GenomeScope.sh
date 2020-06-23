@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=30
 #SBATCH --nodes=1
 #SBATCH --mem=300G
 #SBATCH --time=05:00:00
@@ -17,6 +17,6 @@ echo $(date): Running KMC first.
 module load KMC/3.1.1
 mkdir -p tmp
 #counting kmer coverages between 1 and 10000x
-kmc -k17 -t$SLURM_CPUS_PER_TASK -m$((SLURM_MEM_PER_NODE/1024)) -ci1 -cs100000 ../2_MaSuRCA338/n2.renamed.fastq kmer_counts tmp
-kmc_tools transform kmer_counts histogram kmer_k17.hist -cx10000
+kmc -k21 -t$SLURM_CPUS_PER_TASK -m$((SLURM_MEM_PER_NODE/1024)) -ci1 -cs100000 ../ExternalData/AlexIvan.fastq kmer_counts tmp
+kmc_tools transform kmer_counts histogram kmer_AlexIvan_k21.hist -cx10000
 echo $(date): Done with KMC.

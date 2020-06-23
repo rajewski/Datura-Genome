@@ -1,0 +1,81 @@
+-i(scaffolds)=Dstr_v1.7_lnr13.fa -l(longread)=Lordec.fasta -s(platform)=o -t(thread)=48 -c(coverage)=0.8 -a(tolerance)=0.2 -m(max_distance)=600 -n(number)=5 -g(taglen)=300 -v(overstep)=300 -o(output)=Output_1590370
+[M::mm_idx_gen::85.130*1.55] collected minimizers
+[M::mm_idx_gen::103.502*1.81] sorted minimizers
+[M::main::118.879*1.70] loaded/built the index for 3458610 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 3458610
+[M::mm_idx_stat::121.215*1.68] distinct minimizers: 69032635 (48.56% are singletons); average occurrences: 5.737; average spacing: 6.848
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont -d Output_1590370/iteration-1/db/genome Dstr_v1.7_lnr13.fa
+[M::main] Real time: 123.313 sec; CPU: 206.214 sec; Peak RSS: 13.703 GB
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/format_fa.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/change_case_fasta.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/tag_generator.pl": Not a directory
+[M::main::11.658*1.00] loaded/built the index for 3458610 target sequence(s)
+[M::mm_mapopt_update::13.945*1.00] mid_occ = 1669
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 3458610
+[M::mm_idx_stat::15.292*1.00] distinct minimizers: 69032635 (48.56% are singletons); average occurrences: 5.737; average spacing: 6.848
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont -I50g -N 10 -a -t 48 Output_1590370/iteration-1/db/genome Output_1590370/tmp/x00
+[M::main] Real time: 15.669 sec; CPU: 15.615 sec; Peak RSS: 6.569 GB
+[M::main::11.667*0.99] loaded/built the index for 3458610 target sequence(s)
+[M::mm_mapopt_update::13.956*0.99] mid_occ = 1669
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 3458610
+[M::mm_idx_stat::15.281*0.99] distinct minimizers: 69032635 (48.56% are singletons); average occurrences: 5.737; average spacing: 6.848
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont -I50g -N 10 -a -t 48 Output_1590370/iteration-1/db/genome Output_1590370/tmp/x01
+[M::main] Real time: 15.672 sec; CPU: 15.555 sec; Peak RSS: 6.570 GB
+[M::main::12.180*0.99] loaded/built the index for 3458610 target sequence(s)
+[M::mm_mapopt_update::15.007*0.99] mid_occ = 1669
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 3458610
+[M::mm_idx_stat::16.215*0.99] distinct minimizers: 69032635 (48.56% are singletons); average occurrences: 5.737; average spacing: 6.848
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont -I50g -N 10 -a -t 48 Output_1590370/iteration-1/db/genome Output_1590370/tmp/x02
+[M::main] Real time: 16.626 sec; CPU: 16.538 sec; Peak RSS: 6.569 GB
+[M::main::12.289*0.98] loaded/built the index for 3458610 target sequence(s)
+[M::mm_mapopt_update::15.564*0.99] mid_occ = 1669
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 3458610
+[M::mm_idx_stat::16.885*0.99] distinct minimizers: 69032635 (48.56% are singletons); average occurrences: 5.737; average spacing: 6.848
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont -I50g -N 10 -a -t 48 Output_1590370/iteration-1/db/genome Output_1590370/tmp/x03
+[M::main] Real time: 17.304 sec; CPU: 17.110 sec; Peak RSS: 6.570 GB
+[M::main::12.007*0.99] loaded/built the index for 3458610 target sequence(s)
+[M::mm_mapopt_update::14.448*0.99] mid_occ = 1669
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 3458610
+[M::mm_idx_stat::15.774*0.99] distinct minimizers: 69032635 (48.56% are singletons); average occurrences: 5.737; average spacing: 6.848
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont -I50g -N 10 -a -t 48 Output_1590370/iteration-1/db/genome Output_1590370/tmp/x04
+[M::main] Real time: 16.164 sec; CPU: 16.047 sec; Peak RSS: 6.570 GB
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/coverage_calculator.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/coverage_calculator.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/coverage_calculator.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/coverage_calculator.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/coverage_calculator.pl": Not a directory
+cat: Output_1590370/iteration-1/tmp/x*.mem.coverage: No such file or directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/coverage_filter.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/gap_finder.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/tag_alignment_filter.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/retrieve-unique-alignment.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/best-match-LR.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/tag_orientation_corrector.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/block_align.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/remove_wrong3.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/block_align.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/gap_bridging.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/join_LRlength.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/tag_distance_filter_classify.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/complete_substitute_limiter.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/complete_ultimate_elect.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/further_partial_select.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/partial_ultimate_elect.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/last_Drepeat.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/group_partial.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/complete_retriver.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/retriever_backfill.pl": Not a directory
+cat: Output_1590370/iteration-1/tmp/retrieve_ccomplete.out: No such file or directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/info_formatter.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/same_filter.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/info_pacify.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/form_sequence.pl": Not a directory
+Can't open perl script "/bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/LR_Gapcloser_minimap.sh/gap_finder.pl": Not a directory
+rm: cannot remove 'Output_1590370/LR.fasta': No such file or directory
+rm: cannot remove 'Output_1590370/LR_length': No such file or directory

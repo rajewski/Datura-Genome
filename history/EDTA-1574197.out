@@ -1,0 +1,22 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v1.8.3  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Sun Jun 14 11:44:19 PDT 2020	Dependency checking:
+				All passed!
+
+Sun Jun 14 11:45:09 PDT 2020	The longest sequence ID in the genome contains 71 characters, which is longer than the limit (15)
+				Trying to reformat seq IDs...
+				Attempt 1...
+Sun Jun 14 11:45:15 PDT 2020	Seq ID conversion successful!
+
+	A CDS file Dstr_v1.5.cds.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Sun Jun 14 11:45:15 PDT 2020	Obtain raw TE libraries using various structure-based programs: 
+The expected value for the species parameter is Rice or Maize or others!
+ERROR: Raw LTR results not found in Dstr_v1.5.fa.mod.EDTA.raw/Dstr_v1.5.fa.mod.LTR.raw.fa
+	If you believe the program is working properly, this may be caused by the lack of intact LTRs in your genome. Consider to use the --force 1 parameter to overwrite this check

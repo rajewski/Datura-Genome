@@ -1,0 +1,33 @@
+command time > Dstr_v1.5.fa.k32.w300.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 300 -t 4 Dstr_v1.5.fa > Dstr_v1.5.fa.k32.w300.tsv
+
+real	0m9.685s
+user	0m34.786s
+sys	0m2.051s
+command time > Dstr_v1.3.2kb.fa.k32.w300.tsv.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/src/indexlr --pos -k 32 -w 300 -t 4 Dstr_v1.3.2kb.fa > Dstr_v1.3.2kb.fa.k32.w300.tsv
+
+real	0m11.385s
+user	0m37.706s
+sys	0m2.416s
+command time > Dstr_v1.5.fa.fai.time samtools faidx Dstr_v1.5.fa
+
+real	0m3.920s
+user	0m3.584s
+sys	0m0.275s
+command time > Dstr_v1.3.2kb.fa.fai.time samtools faidx Dstr_v1.3.2kb.fa
+
+real	0m4.971s
+user	0m4.507s
+sys	0m0.382s
+command time > out.k32.w300.n1.mx.dot.time /rhome/arajewski/.conda/envs/Datura/bin/share/ntjoin-1.0.1-0/bin/ntjoin_assemble.py -p out.k32.w300.n1 -n 1 -s Dstr_v1.3.2kb.fa.k32.w300.tsv -l 1 \
+-r "2" -k 32 -g 20 -t 1 -m 90 Dstr_v1.5.fa.k32.w300.tsv
+
+real	3m3.921s
+user	2m47.855s
+sys	0m16.308s
+touch Dstr_v1.3.2kb.fa.k32.w300.n1.assigned.scaffolds.fa
+touch Dstr_v1.3.2kb.fa.k32.w300.n1.unassigned.scaffolds.fa
+command time > Dstr_v1.3.2kb.fa.k32.w300.n1.all.scaffolds.fa.time cat Dstr_v1.3.2kb.fa.k32.w300.n1.assigned.scaffolds.fa Dstr_v1.3.2kb.fa.k32.w300.n1.unassigned.scaffolds.fa > Dstr_v1.3.2kb.fa.k32.w300.n1.all.scaffolds.fa
+
+real	0m0.929s
+user	0m0.001s
+sys	0m0.873s

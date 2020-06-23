@@ -1,0 +1,18 @@
+[07-05-2020 10:09:45] bedtools OK!
+[07-05-2020 10:09:45] Rscript OK!
+[07-05-2020 10:09:45] samtools OK!
+[07-05-2020 10:09:45] ALL DEPENDENCIES OK
+
+
+
+USAGE:
+purge_haplotigs  hist  -b aligned.bam  -g genome.fasta  [ -t threads ]
+
+REQUIRED:
+-b / -bam       BAM file of aligned and sorted reads/subreads to the reference
+-g / -genome    Reference FASTA for the BAM file.
+
+OPTIONAL:
+-t / -threads   Number of worker threads to use, DEFAULT = 4, MINIMUM = 2
+-d / -depth     Maximum cutoff for depth. DEFAULT = 200, increase if needed,
+                set much higher than your expected average coverage.

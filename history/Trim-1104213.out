@@ -1,0 +1,304 @@
+miniconda2/4.4.10(23):ERROR:150: Module 'miniconda2/4.4.10' conflicts with the currently loaded module(s) 'python/2.7.5'
+miniconda2/4.4.10(23):ERROR:102: Tcl command execution failed: conflict    python
+
+
+# Trim with Trim_Galore to remove low quality bases and adaptor sequences
+module unload perl
+/usr/bin/modulecmd bash $*
+LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:less-highlight/1.0:iigb_utilities/1:vim/8.1:hisat2/2.1.0:minimap2/2.17:python/2.7.5:trim_galore/0.4.2 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;MODULEPATH=/usr/share/modules/versions:/usr/Modules/\$MODULE_VERSION/modulefiles:/usr/share/Modules/modulefiles:/opt/linux/centos/7.x/x86_64/modules:/opt/linux/centos/7.x/x86_64/profiles ;export MODULEPATH;PATH=/rhome/arajewski/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/hisat2/2.1.0:/opt/linux/centos/7.x/x86_64/modules/minimap2/2.17:/opt/linux/centos/7.x/x86_64/modules/python/2.7.5:/opt/linux/centos/7.x/x86_64/modules/trim_galore/0.4.2 ;export _LMFILES_;unset INSTALL_BASE;unset PERL5LIB;
+module unload miniconda2
+/usr/bin/modulecmd bash $*
+module load trim_galore/0.4.2
+/usr/bin/modulecmd bash $*
+INSTALL_BASE=/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2 ;export INSTALL_BASE;LD_LIBRARY_PATH=/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/lib:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/lib:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/lib:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/lib:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/lib:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/lib64/R/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/lib/openmpi:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/lib ;export LD_LIBRARY_PATH;LOADEDMODULES=slurm/19.05.0:openmpi/4.0.1-slurm-19.05.0:ggobi/2.1.11:texlive/2017:pandoc/2.0:netcdf/4.4.1.1:java/8:geos/3.7.1:gdal/2.1.3:hdf5/1.10.1:R/3.6.0:less-highlight/1.0:iigb_utilities/1:vim/8.1:hisat2/2.1.0:minimap2/2.17:trim_galore/0.4.2:perl/5.20.2:python/2.7.5 ;export LOADEDMODULES;MANPATH=/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/man:/opt/linux/centos/7.x/x86_64/pkgs/minimap2/2.17/share/man:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/man:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/share/man:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/share/man:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/share/man:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/share/man:/usr/share/man:/usr/local/share/man ;export MANPATH;MODULEPATH=/usr/share/Modules:/usr/share/modules/versions:/usr/Modules/\$MODULE_VERSION/modulefiles:/usr/share/Modules/modulefiles:/opt/linux/centos/7.x/x86_64/modules:/opt/linux/centos/7.x/x86_64/profiles ;export MODULEPATH;PATH=/opt/linux/centos/7.x/x86_64/pkgs/trim_galore/0.4.2/:/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/bin:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/bin:/rhome/arajewski/bin:/opt/linux/centos/7.x/x86_64/pkgs/vim/8.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/iigb_utilities/1/bin:/opt/linux/centos/7.x/x86_64/pkgs/hdf5/1.10.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/gdal/2.1.3/bin:/opt/linux/centos/7.x/x86_64/pkgs/geos/3.7.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/java/jdk1.8.0_45/bin:/opt/linux/centos/7.x/x86_64/pkgs/netcdf/4.4.1.1/bin:/opt/linux/centos/7.x/x86_64/pkgs/pandoc/2.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/texlive/2017/bin/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/ggobi/2.1.11/bin:/opt/linux/centos/7.x/x86_64/pkgs/R/3.6.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/openmpi/4.0.1-slurm-19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/bin:/opt/linux/centos/7.x/x86_64/pkgs/slurm/19.05.0/sbin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bin:/usr/lpp/mmfs/bin:/opt/ibutils/bin ;export PATH;PERL5LIB=/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/perl5/x86_64-linux/auto:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/perl5/x86_64-linux:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/perl5:/opt/linux/centos/7.x/x86_64/pkgs/perl/5.20.2/lib/5.20.2 ;export PERL5LIB;PYTHONPATH=/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/lib/python2.7/site-packages:/opt/linux/centos/7.x/x86_64/pkgs/python/2.7.5/lib64/python2.7/site-packages:/usr/lib/python2.7/site-packages:/usr/lib64/python2.7/site-packages ;export PYTHONPATH;_LMFILES_=/opt/linux/centos/7.x/x86_64/modules/slurm/19.05.0:/opt/linux/centos/7.x/x86_64/modules/openmpi/4.0.1-slurm-19.05.0:/opt/linux/centos/7.x/x86_64/modules/ggobi/2.1.11:/opt/linux/centos/7.x/x86_64/modules/texlive/2017:/opt/linux/centos/7.x/x86_64/modules/pandoc/2.0:/opt/linux/centos/7.x/x86_64/modules/netcdf/4.4.1.1:/opt/linux/centos/7.x/x86_64/modules/java/8:/opt/linux/centos/7.x/x86_64/modules/geos/3.7.1:/opt/linux/centos/7.x/x86_64/modules/gdal/2.1.3:/opt/linux/centos/7.x/x86_64/modules/hdf5/1.10.1:/opt/linux/centos/7.x/x86_64/modules/R/3.6.0:/opt/linux/centos/7.x/x86_64/modules/less-highlight/1.0:/opt/linux/centos/7.x/x86_64/modules/iigb_utilities/1:/opt/linux/centos/7.x/x86_64/modules/vim/8.1:/opt/linux/centos/7.x/x86_64/modules/hisat2/2.1.0:/opt/linux/centos/7.x/x86_64/modules/minimap2/2.17:/opt/linux/centos/7.x/x86_64/modules/trim_galore/0.4.2:/opt/linux/centos/7.x/x86_64/modules/perl/5.20.2:/opt/linux/centos/7.x/x86_64/modules/python/2.7.5 ;export _LMFILES_;
+
+#Pass a list of PE vs SE datasets
+PAIRS=( Alex_S85_L002 Alex_S230_L002 )
+SINGLES=(Alex-1_S9 Alex-2_S10 )
+DNAPATH=/bigdata/littlab/arajewski/Datura/DNA-seq
+#Do PE data
+for i in ${!PAIRS[@]}
+do
+if [ ! -e '${PAIRS[i]}_val_2.fq.gz' ]; then
+    echo Running Trim Galore on ${PAIRS[i]}...
+    trim_galore \
+        --paired \
+        -o ./ \
+        --no_report_file \
+        $DNAPATH/${PAIRS[i]}_R1_001.fastq.gz $DNAPATH/${PAIRS[i]}_R1_001.fastq.gz 
+    echo Done.
+else
+    echo ${PAIRS[i]} already trimmed.
+fi
+done
+Running Trim Galore on Alex_S85_L002...
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.14
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	456093	AGATCGGAAGAGC	1000000	45.61
+Nextera	8	CTGTCTCTTATA	1000000	0.00
+smallRNA	5	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 456093). Second best hit was Nextera (count: 8)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to Alex_S85_L002_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+150000000 sequences processed
+160000000 sequences processed
+170000000 sequences processed
+180000000 sequences processed
+190000000 sequences processed
+This is cutadapt 1.14 with Python 2.7.5
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 6302.01 s (33 us/read; 1.83 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             191,783,361
+Reads with adapters:               134,334,223 (70.0%)
+Reads written (passing filters):   191,783,361 (100.0%)
+
+Total basepairs processed: 28,959,287,511 bp
+Quality-trimmed:              16,960,324 bp (0.1%)
+Total written (filtered):  22,192,115,469 bp (76.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 134334223 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 11.2%
+  C: 19.0%
+  G: 34.4%
+  T: 22.8%
+  none/other: 12.6%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	25945049	47945840.2	0	25945049
+2	6582124	11986460.1	0	6582124
+3	2865089	2996615.0	0	2865089
+4	1284982	749153.8	0	1284982
+5	965279	187288.4	0	965279
+6	859427	46822.1	0	859427
+7	824376	11705.5	0	824376
+8	903483	2926.4	0	903483
+9	827987	731.6	0	823140 4847
+10	852436	182.9	1	826242 26194
+11	875586	45.7	1	845119 30467
+12	893177	11.4	1	864332 28845
+13	881564	2.9	1	852448 29116
+14	894079	2.9	1	863979 30100
+15	911326	2.9	1	881114 30212
+16	894620	2.9	1	863536 31084
+17	983274	2.9	1	947960 35314
+18	952810	2.9	1	923071 29739
+19	795440	2.9	1	769379 26061
+20	897753	2.9	1	867951 29802
+21	928877	2.9	1	897346 31531
+22	878000	2.9	1	849441 28559
+23	993784	2.9	1	961389 32395
+24	859799	2.9	1	829326 30473
+25	937514	2.9	1	907178 30336
+26	906354	2.9	1	878314 28040
+27	946731	2.9	1	915028 31703
+28	932169	2.9	1	902297 29872
+29	927461	2.9	1	895404 32057
+30	1007258	2.9	1	976548 30710
+31	812342	2.9	1	786562 25780
+32	928478	2.9	1	898917 29561
+33	906011	2.9	1	876254 29757
+34	954320	2.9	1	924389 29931
+35	913478	2.9	1	881665 31813
+36	1025087	2.9	1	993927 31160
+37	829868	2.9	1	803440 26428
+38	943114	2.9	1	914560 28554
+39	935572	2.9	1	904838 30734
+40	902787	2.9	1	875259 27528
+41	964881	2.9	1	934382 30499
+42	898565	2.9	1	868990 29575
+43	965837	2.9	1	930360 35477
+44	881539	2.9	1	849834 31705
+45	1527324	2.9	1	1487532 39792
+46	331143	2.9	1	315452 15691
+47	926658	2.9	1	898391 28267
+48	924997	2.9	1	896031 28966
+49	959308	2.9	1	930485 28823
+50	832567	2.9	1	804805 27762
+51	912533	2.9	1	882262 30271
+52	860188	2.9	1	833866 26322
+53	873203	2.9	1	845715 27488
+54	890567	2.9	1	860878 29689
+55	1033823	2.9	1	1003217 30606
+56	741183	2.9	1	717014 24169
+57	906360	2.9	1	877200 29160
+58	1132000	2.9	1	1098738 33262
+59	725781	2.9	1	701222 24559
+60	889758	2.9	1	863845 25913
+61	652984	2.9	1	630465 22519
+62	887173	2.9	1	859186 27987
+63	880402	2.9	1	853012 27390
+64	904145	2.9	1	877060 27085
+65	641280	2.9	1	618269 23011
+66	982058	2.9	1	952658 29400
+67	943343	2.9	1	912123 31220
+68	1223776	2.9	1	1186609 37167
+69	1050336	2.9	1	1016472 33864
+70	1133019	2.9	1	1101048 31971
+71	65834	2.9	1	61459 4375
+72	173279	2.9	1	165195 8084
+73	608601	2.9	1	589438 19163
+74	691972	2.9	1	670501 21471
+75	701949	2.9	1	679860 22089
+76	697246	2.9	1	675409 21837
+77	687389	2.9	1	665534 21855
+78	684247	2.9	1	662787 21460
+79	678054	2.9	1	656422 21632
+80	657612	2.9	1	635964 21648
+81	654694	2.9	1	633146 21548
+82	628524	2.9	1	607478 21046
+83	607428	2.9	1	587167 20261
+84	592156	2.9	1	572705 19451
+85	575811	2.9	1	556672 19139
+86	574526	2.9	1	555289 19237
+87	554443	2.9	1	535844 18599
+88	546951	2.9	1	528578 18373
+89	535160	2.9	1	516482 18678
+90	519083	2.9	1	501650 17433
+91	500560	2.9	1	484052 16508
+92	481159	2.9	1	464316 16843
+93	465740	2.9	1	449956 15784
+94	452118	2.9	1	436753 15365
+95	439861	2.9	1	424932 14929
+96	423388	2.9	1	408547 14841
+97	408755	2.9	1	394469 14286
+98	395038	2.9	1	381506 13532
+99	381145	2.9	1	368306 12839
+100	365685	2.9	1	352859 12826
+101	347951	2.9	1	336075 11876
+102	332009	2.9	1	320601 11408
+103	317481	2.9	1	306401 11080
+104	305550	2.9	1	295076 10474
+105	287575	2.9	1	277637 9938
+106	277643	2.9	1	268313 9330
+107	260361	2.9	1	251207 9154
+108	246437	2.9	1	237950 8487
+109	235363	2.9	1	227233 8130
+110	217343	2.9	1	209833 7510
+111	203984	2.9	1	196852 7132
+112	185978	2.9	1	179254 6724
+113	172688	2.9	1	166644 6044
+114	157336	2.9	1	151806 5530
+115	140600	2.9	1	135687 4913
+116	127013	2.9	1	122656 4357
+117	111571	2.9	1	107746 3825
+118	101023	2.9	1	97614 3409
+119	86081	2.9	1	83135 2946
+120	79619	2.9	1	77084 2535
+121	64289	2.9	1	62126 2163
+122	56797	2.9	1	55043 1754
+123	47282	2.9	1	45809 1473
+124	40718	2.9	1	39296 1422
+125	34172	2.9	1	33094 1078
+126	30164	2.9	1	29220 944
+127	25608	2.9	1	24802 806
+128	23480	2.9	1	22788 692
+129	20762	2.9	1	20094 668
+130	18629	2.9	1	18016 613
+131	18196	2.9	1	17540 656
+132	18083	2.9	1	17537 546
+133	18464	2.9	1	17935 529
+134	18214	2.9	1	17690 524
+135	17414	2.9	1	16924 490
+136	16755	2.9	1	16224 531
+137	19146	2.9	1	18689 457
+138	19141	2.9	1	18693 448
+139	15413	2.9	1	15026 387
+140	10517	2.9	1	10181 336
+141	7581	2.9	1	7307 274
+142	3535	2.9	1	3353 182
+143	1307	2.9	1	1182 125
+144	799	2.9	1	714 85
+145	72886	2.9	1	71975 911
+146	4889	2.9	1	2990 1899
+147	1477	2.9	1	1323 154
+148	4320	2.9	1	4053 267
+149	3348	2.9	1	2866 482
+150	16140	2.9	1	14556 1584
+151	16907087	2.9	1	16094260 812827
+
+
+RUN STATISTICS FOR INPUT FILE: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+=============================================
+191783361 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.2
+Cutadapt version: 1.14
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to Alex_S85_L002_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /bigdata/littlab/arajewski/Datura/DNA-seq/Alex_S85_L002_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+slurmstepd-i21: error: *** JOB 1104213 ON i21 CANCELLED AT 2020-05-05T19:01:24 ***

@@ -1,0 +1,31 @@
+[Tue May  5 19:11:53 PDT 2020] Processing pe library reads
+[Tue May  5 19:20:08 PDT 2020] Average PE read length 124
+[Tue May  5 19:20:09 PDT 2020] Using kmer size of 51 for the graph
+[Tue May  5 19:20:09 PDT 2020] MIN_Q_CHAR: 33
+WARNING: JF_SIZE set too low, increasing JF_SIZE to at least 7270405221, this automatic increase may be not enough!
+[Tue May  5 19:20:09 PDT 2020] Creating mer database for Quorum
+[Tue May  5 20:53:46 PDT 2020] Error correct PE
+[Wed May  6 00:24:02 PDT 2020] Estimating genome size
+[Wed May  6 00:51:26 PDT 2020] Estimated genome size: 1743565324
+[Wed May  6 00:51:27 PDT 2020] Creating k-unitigs with k=51
+[Wed May  6 05:28:40 PDT 2020] Computing super reads from PE 
+[Wed May  6 21:46:54 PDT 2020] Using Flye from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin
+[Wed May  6 21:46:55 PDT 2020] Running mega-reads correction/assembly
+[Wed May  6 21:46:55 PDT 2020] Using mer size 15 for mapping, B=15, d=0.02
+[Wed May  6 21:46:55 PDT 2020] Estimated Genome Size 1743565324
+[Wed May  6 21:46:55 PDT 2020] Estimated Ploidy 2
+[Wed May  6 21:46:55 PDT 2020] Using 30 threads
+[Wed May  6 21:46:55 PDT 2020] Output prefix mr.41.15.15.0.02
+[Wed May  6 21:46:55 PDT 2020] Using 25x of the longest ONT reads
+[Wed May  6 21:52:26 PDT 2020] Reducing super-read k-mer size
+[Thu May  7 02:52:28 PDT 2020] Mega-reads pass 1
+[Thu May  7 02:52:28 PDT 2020] Running on the grid in 12 batches
+ 
+To submit SLURM jobs, please run
+ 
+sbatch -D /rhome/arajewski/bigdata/Datura/2_MaSuRCA338/mr_pass1 -J create_mega_reads -a 1-12 -n 30 -p batch -N 1 mr_pass1/create_mega_reads.sh
+ 
+Please re-run assemble.sh when all jobs finish. If you get this message again, it means that some jobs failed, simply re-submit again using the above command.
+ 
+[Thu May  7 02:52:56 PDT 2020] mega-reads pass 1 on the grid exited, please re-run assemble.sh
+[Thu May  7 02:52:56 PDT 2020] Assembly with flye failed, see files under flye/

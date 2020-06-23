@@ -1,0 +1,2 @@
+-i(scaffolds)=Dstr_v1.7_lnr13.fa -l(longread)=Lordec.fasta -s(platform)=o -t(thread)=48 -c(coverage)=0.8 -a(tolerance)=0.2 -m(max_distance)=600 -n(number)=5 -g(taglen)=300 -v(overstep)=300 -o(output)=Output
+The output directory already exists!!! Program stop running !!!

@@ -1,0 +1,3 @@
+abyss-sealer: missing mandatory option `-k'
+abyss-sealer: you must specify a k-mer size (-k) for each Bloom  filter file (-i)
+Try `abyss-sealer --help' for more information.

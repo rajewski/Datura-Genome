@@ -1,0 +1,6 @@
+usage: merge_wrapper.py [-h] [-pre PREFIX] [-hco HCO] [-c C] -l LENGTH_CUTOFF
+                        [--no_nucmer] [--no_delta] [--stop_after_nucmer]
+                        [--stop_after_df] [-ml MERGING_LENGTH_CUTOFF]
+                        [-t THREADS] [-v] [--clean_only]
+                        hybrid_assembly_fasta self_assembly_fasta
+merge_wrapper.py: error: argument -l/--length_cutoff is required

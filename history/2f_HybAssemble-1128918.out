@@ -1,0 +1,36 @@
+[Mon May 11 04:41:11 PDT 2020] Processing pe library reads
+[Mon May 11 04:41:11 PDT 2020] Average PE read length 124
+[Mon May 11 04:41:12 PDT 2020] Using kmer size of 51 for the graph
+[Mon May 11 04:41:12 PDT 2020] MIN_Q_CHAR: 33
+WARNING: JF_SIZE set too low, increasing JF_SIZE to at least 7270405221, this automatic increase may be not enough!
+[Mon May 11 04:41:12 PDT 2020] Estimated genome size: 1743565324
+[Mon May 11 04:41:12 PDT 2020] Computing super reads from PE 
+[Mon May 11 04:41:13 PDT 2020] Using Flye from /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin
+[Mon May 11 04:41:13 PDT 2020] Running mega-reads correction/assembly
+[Mon May 11 04:41:13 PDT 2020] Using mer size 15 for mapping, B=15, d=0.02
+[Mon May 11 04:41:13 PDT 2020] Estimated Genome Size 1743565324
+[Mon May 11 04:41:13 PDT 2020] Estimated Ploidy 2
+[Mon May 11 04:41:13 PDT 2020] Using 30 threads
+[Mon May 11 04:41:13 PDT 2020] Output prefix mr.41.15.15.0.02
+[Mon May 11 04:41:14 PDT 2020] Mega-reads pass 1
+[Mon May 11 04:41:14 PDT 2020] Running on the grid in 12 batches
+Processed 500000 super reads, irreducible 409901, processing 1024 super reads per second
+Processed 1000000 super reads, irreducible 786061, processing 2403 super reads per second
+Processed 1500000 super reads, irreducible 1175576, processing 5617 super reads per second
+Processed 2000000 super reads, irreducible 1591037, processing 14705 super reads per second
+Processed 2500000 super reads, irreducible 1994739, processing 15151 super reads per second
+Processed 3000000 super reads, irreducible 2376681, processing 14705 super reads per second
+[Mon May 11 05:28:04 PDT 2020] Mega-reads pass 2
+[Mon May 11 05:28:04 PDT 2020] Running locally in 1 batch
+[Mon May 11 15:09:09 PDT 2020] Refining alignments
+[Mon May 11 15:23:10 PDT 2020] Computing allowed merges
+[Mon May 11 15:24:56 PDT 2020] Joining
+[Mon May 11 15:27:39 PDT 2020] Gap consensus
+[Mon May 11 15:45:18 PDT 2020] Running assembly with Flye
+[Tue May 12 00:45:45 PDT 2020] All done
+[Tue May 12 00:45:45 PDT 2020] Final stats for flye/assembly.fasta
+N50 107892
+Sequence 806102755
+Average 65718.5
+E-size 154270
+Count 12266

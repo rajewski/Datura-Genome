@@ -1,0 +1,524 @@
+Finding flanks
+232469 gaps found
+232177 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k125.bloom'...
+Bloom filter FPR: 0.982%
+Starting K run with k = 125
+Flanks inserted into k run = 232177
+0 unique gaps closed for k125
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k125 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k120.bloom'...
+Bloom filter FPR: 1.1%
+Starting K run with k = 120
+Flanks inserted into k run = 232177
+0 unique gaps closed for k120
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k120 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k115.bloom'...
+Bloom filter FPR: 1.2%
+Starting K run with k = 115
+Flanks inserted into k run = 232177
+0 unique gaps closed for k115
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k115 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k110.bloom'...
+Bloom filter FPR: 1.28%
+Starting K run with k = 110
+Flanks inserted into k run = 232177
+0 unique gaps closed for k110
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k110 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k105.bloom'...
+Bloom filter FPR: 1.35%
+Starting K run with k = 105
+Flanks inserted into k run = 232177
+0 unique gaps closed for k105
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k105 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k100.bloom'...
+Bloom filter FPR: 1.41%
+Starting K run with k = 100
+Flanks inserted into k run = 232177
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1100 gaps closed so far
+1200 gaps closed so far
+1300 gaps closed so far
+1400 gaps closed so far
+1500 gaps closed so far
+1600 gaps closed so far
+1700 gaps closed so far
+1800 gaps closed so far
+1900 gaps closed so far
+2000 gaps closed so far
+2100 gaps closed so far
+2122 unique gaps closed for k100
+No start/goal kmer: 44507
+No path: 113421
+Unique path: 1647
+Multiple paths: 475
+Too many paths: 6142
+Too many branches: 66233
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+230056 flanks left
+k100 run complete
+Total gaps closed so far = 2122
+
+Loading bloom filter from `Bloomfilters/k95.bloom'...
+Bloom filter FPR: 1.45%
+Starting K run with k = 95
+Flanks inserted into k run = 230056
+2200 gaps closed so far
+2300 gaps closed so far
+2400 gaps closed so far
+2500 gaps closed so far
+406 unique gaps closed for k95
+No start/goal kmer: 23546
+No path: 124129
+Unique path: 299
+Multiple paths: 107
+Too many paths: 6549
+Too many branches: 75660
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 2
+Exceeded mem limit: 0
+Skipped: 0
+229650 flanks left
+k95 run complete
+Total gaps closed so far = 2528
+
+Loading bloom filter from `Bloomfilters/k90.bloom'...
+Bloom filter FPR: 1.49%
+Starting K run with k = 90
+Flanks inserted into k run = 229650
+2600 gaps closed so far
+2700 gaps closed so far
+2800 gaps closed so far
+2900 gaps closed so far
+461 unique gaps closed for k90
+No start/goal kmer: 14875
+No path: 123549
+Unique path: 394
+Multiple paths: 67
+Too many paths: 6619
+Too many branches: 84377
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+229190 flanks left
+k90 run complete
+Total gaps closed so far = 2989
+
+Loading bloom filter from `Bloomfilters/k85.bloom'...
+Bloom filter FPR: 1.52%
+Starting K run with k = 85
+Flanks inserted into k run = 229190
+3000 gaps closed so far
+3100 gaps closed so far
+3200 gaps closed so far
+3300 gaps closed so far
+3400 gaps closed so far
+3500 gaps closed so far
+543 unique gaps closed for k85
+No start/goal kmer: 9527
+No path: 119856
+Unique path: 514
+Multiple paths: 29
+Too many paths: 6439
+Too many branches: 93051
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 2
+Exceeded mem limit: 0
+Skipped: 0
+228647 flanks left
+k85 run complete
+Total gaps closed so far = 3532
+
+Loading bloom filter from `Bloomfilters/k80.bloom'...
+Bloom filter FPR: 1.54%
+Starting K run with k = 80
+Flanks inserted into k run = 228647
+3600 gaps closed so far
+3700 gaps closed so far
+3800 gaps closed so far
+3900 gaps closed so far
+4000 gaps closed so far
+4100 gaps closed so far
+4200 gaps closed so far
+4300 gaps closed so far
+863 unique gaps closed for k80
+No start/goal kmer: 6318
+No path: 113524
+Unique path: 819
+Multiple paths: 44
+Too many paths: 6165
+Too many branches: 102002
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+227784 flanks left
+k80 run complete
+Total gaps closed so far = 4395
+
+Loading bloom filter from `Bloomfilters/k75.bloom'...
+Bloom filter FPR: 1.54%
+Starting K run with k = 75
+Flanks inserted into k run = 227784
+4400 gaps closed so far
+4500 gaps closed so far
+4600 gaps closed so far
+4700 gaps closed so far
+4800 gaps closed so far
+4900 gaps closed so far
+5000 gaps closed so far
+5100 gaps closed so far
+5200 gaps closed so far
+5300 gaps closed so far
+5400 gaps closed so far
+1026 unique gaps closed for k75
+No start/goal kmer: 4360
+No path: 103411
+Unique path: 995
+Multiple paths: 31
+Too many paths: 5499
+Too many branches: 113712
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+226758 flanks left
+k75 run complete
+Total gaps closed so far = 5421
+
+Loading bloom filter from `Bloomfilters/k70.bloom'...
+Bloom filter FPR: 1.54%
+Starting K run with k = 70
+Flanks inserted into k run = 226758
+5500 gaps closed so far
+5600 gaps closed so far
+5700 gaps closed so far
+5800 gaps closed so far
+5900 gaps closed so far
+6000 gaps closed so far
+6100 gaps closed so far
+6200 gaps closed so far
+6300 gaps closed so far
+6400 gaps closed so far
+6500 gaps closed so far
+1116 unique gaps closed for k70
+No start/goal kmer: 3042
+No path: 89249
+Unique path: 1089
+Multiple paths: 27
+Too many paths: 4876
+Too many branches: 128697
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+225642 flanks left
+k70 run complete
+Total gaps closed so far = 6537
+
+Loading bloom filter from `Bloomfilters/k65.bloom'...
+Bloom filter FPR: 1.53%
+Starting K run with k = 65
+Flanks inserted into k run = 225642
+6600 gaps closed so far
+6700 gaps closed so far
+6800 gaps closed so far
+6900 gaps closed so far
+7000 gaps closed so far
+7100 gaps closed so far
+7200 gaps closed so far
+7300 gaps closed so far
+7400 gaps closed so far
+7500 gaps closed so far
+7600 gaps closed so far
+7700 gaps closed so far
+1201 unique gaps closed for k65
+No start/goal kmer: 2115
+No path: 74819
+Unique path: 1173
+Multiple paths: 28
+Too many paths: 4412
+Too many branches: 143316
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+224441 flanks left
+k65 run complete
+Total gaps closed so far = 7738
+
+Loading bloom filter from `Bloomfilters/k60.bloom'...
+Bloom filter FPR: 1.51%
+Starting K run with k = 60
+Flanks inserted into k run = 224441
+7800 gaps closed so far
+7900 gaps closed so far
+8000 gaps closed so far
+8100 gaps closed so far
+8200 gaps closed so far
+8300 gaps closed so far
+8400 gaps closed so far
+8500 gaps closed so far
+8600 gaps closed so far
+8700 gaps closed so far
+8800 gaps closed so far
+8900 gaps closed so far
+1234 unique gaps closed for k60
+No start/goal kmer: 1369
+No path: 61554
+Unique path: 1205
+Multiple paths: 29
+Too many paths: 4051
+Too many branches: 156452
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+223207 flanks left
+k60 run complete
+Total gaps closed so far = 8972
+
+Loading bloom filter from `Bloomfilters/k55.bloom'...
+Bloom filter FPR: 1.48%
+Starting K run with k = 55
+Flanks inserted into k run = 223207
+9000 gaps closed so far
+9100 gaps closed so far
+9200 gaps closed so far
+9300 gaps closed so far
+9400 gaps closed so far
+9500 gaps closed so far
+9600 gaps closed so far
+9700 gaps closed so far
+9800 gaps closed so far
+9900 gaps closed so far
+10000 gaps closed so far
+10100 gaps closed so far
+1184 unique gaps closed for k55
+No start/goal kmer: 659
+No path: 49784
+Unique path: 1145
+Multiple paths: 39
+Too many paths: 3917
+Too many branches: 167882
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+222023 flanks left
+k55 run complete
+Total gaps closed so far = 10156
+
+Loading bloom filter from `Bloomfilters/k50.bloom'...
+Bloom filter FPR: 1.43%
+Starting K run with k = 50
+Flanks inserted into k run = 222023
+10200 gaps closed so far
+10300 gaps closed so far
+10400 gaps closed so far
+10500 gaps closed so far
+10600 gaps closed so far
+10700 gaps closed so far
+10800 gaps closed so far
+10900 gaps closed so far
+11000 gaps closed so far
+11100 gaps closed so far
+1014 unique gaps closed for k50
+No start/goal kmer: 46
+No path: 39443
+Unique path: 979
+Multiple paths: 35
+Too many paths: 3910
+Too many branches: 177829
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+221009 flanks left
+k50 run complete
+Total gaps closed so far = 11170
+
+Loading bloom filter from `Bloomfilters/k45.bloom'...
+Bloom filter FPR: 1.37%
+Starting K run with k = 45
+Flanks inserted into k run = 221009
+11200 gaps closed so far
+11300 gaps closed so far
+11400 gaps closed so far
+11500 gaps closed so far
+11600 gaps closed so far
+11700 gaps closed so far
+11800 gaps closed so far
+11900 gaps closed so far
+12000 gaps closed so far
+862 unique gaps closed for k45
+No start/goal kmer: 19
+No path: 30334
+Unique path: 821
+Multiple paths: 41
+Too many paths: 4025
+Too many branches: 185988
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+220147 flanks left
+k45 run complete
+Total gaps closed so far = 12032
+
+Loading bloom filter from `Bloomfilters/k40.bloom'...
+Bloom filter FPR: 1.3%
+Starting K run with k = 40
+Flanks inserted into k run = 220147
+12100 gaps closed so far
+12200 gaps closed so far
+12300 gaps closed so far
+12400 gaps closed so far
+12500 gaps closed so far
+12600 gaps closed so far
+12700 gaps closed so far
+741 unique gaps closed for k40
+No start/goal kmer: 10
+No path: 22680
+Unique path: 703
+Multiple paths: 38
+Too many paths: 4276
+Too many branches: 192659
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+219406 flanks left
+k40 run complete
+Total gaps closed so far = 12773
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 12773
+5.49%
+
+JobId=1581950 JobName=3_Sealer.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100652 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=1-21:45:45 TimeLimit=7-00:00:00 TimeMin=N/A
+   SubmitTime=2020-06-15T17:58:23 EligibleTime=2020-06-15T17:58:23
+   AccrueTime=2020-06-15T17:58:23
+   StartTime=2020-06-16T04:57:19 EndTime=2020-06-23T04:57:19 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-06-16T04:57:19
+   Partition=batch AllocNode:Sid=parrot.clust.hpcc.ucr.edu:19358
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=c08
+   BatchHost=c08
+   NumNodes=1 NumCPUs=30 NumTasks=1 CPUs/Task=30 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=30,mem=300G,node=1,billing=105
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=30 MinMemoryCPU=10G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/3_BCGSC/3_Sealer.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/3_BCGSC
+   StdErr=/bigdata/littlab/arajewski/Datura/3_BCGSC/../history/Sealer-1581950.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/3_BCGSC/../history/Sealer-1581950.out
+   Power=
+

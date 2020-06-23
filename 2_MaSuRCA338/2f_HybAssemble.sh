@@ -70,23 +70,24 @@ export PATH="/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuR
 save PATH
 export PERL5LIB=/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../lib/perl${PERL5LIB:+:$PERL5LIB}
 save PERL5LIB
-NUM_THREADS=60
+NUM_THREADS=30
 save NUM_THREADS
 log 'Processing pe library reads'
 rm -rf meanAndStdevByPrefix.pe.txt
 echo 't1 400 60' >> meanAndStdevByPrefix.pe.txt
+echo 't2 400 60' >> meanAndStdevByPrefix.pe.txt
 echo 'n1 400 60' >> meanAndStdevByPrefix.pe.txt
 echo 'n2 400 60' >> meanAndStdevByPrefix.pe.txt
 
-head -q -n 40000  t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq | grep --text -v '^+' | grep --text -v '^@' > pe_data.tmp
+head -q -n 40000  t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq | grep --text -v '^+' | grep --text -v '^@' > pe_data.tmp
 export PE_AVG_READ_LENGTH=`awk '{if(length($1)>31){n+=length($1);m++;}}END{print int(n/m)}' pe_data.tmp`
 save PE_AVG_READ_LENGTH
 log Average PE read length $PE_AVG_READ_LENGTH
-KMER=`for f in t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq;do head -n 80000 $f |tail -n 40000;done | perl -e 'while($line=<STDIN>){$line=<STDIN>;chomp($line);push(@lines,$line);for($i=0;$i<6;$i++){$line=<STDIN>;}}$min_len=100000;$base_count=0;foreach $l(@lines){$base_count+=length($l);push(@lengths,length($l));@f=split("",$l);foreach $base(@f){if(uc($base) eq "G" || uc($base) eq "C"){$gc_count++}}} @lengths =sort {$b <=> $a} @lengths; $min_len=$lengths[int($#lengths*.75)];  $gc_ratio=$gc_count/$base_count;$kmer=0;if($gc_ratio>=0.35 && $gc_ratio<=0.6){$kmer=int($min_len*.66);}else{$kmer=int($min_len*.33);} $kmer++ if($kmer%2==0); $kmer=31 if($kmer<31); $kmer=127 if($kmer>127); print $kmer'`
+KMER=`for f in t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq;do head -n 80000 $f |tail -n 40000;done | perl -e 'while($line=<STDIN>){$line=<STDIN>;chomp($line);push(@lines,$line);for($i=0;$i<6;$i++){$line=<STDIN>;}}$min_len=100000;$base_count=0;foreach $l(@lines){$base_count+=length($l);push(@lengths,length($l));@f=split("",$l);foreach $base(@f){if(uc($base) eq "G" || uc($base) eq "C"){$gc_count++}}} @lengths =sort {$b <=> $a} @lengths; $min_len=$lengths[int($#lengths*.75)];  $gc_ratio=$gc_count/$base_count;$kmer=0;if($gc_ratio>=0.35 && $gc_ratio<=0.6){$kmer=int($min_len*.66);}else{$kmer=int($min_len*.33);} $kmer++ if($kmer%2==0); $kmer=31 if($kmer<31); $kmer=127 if($kmer>127); print $kmer'`
 save KMER
 log Using kmer size of $KMER for the graph
 KMER_J=$KMER
-MIN_Q_CHAR=`cat t1.renamed.fastq n1.renamed.fastq n2.renamed.fastq |head -n 50000 | awk 'BEGIN{flag=0}{if($0 ~ /^\+/){flag=1}else if(flag==1){print $0;flag=0}}'  | perl -ne 'BEGIN{$q0_char="@";}{chomp;@f=split "";foreach $v(@f){if(ord($v)<ord($q0_char)){$q0_char=$v;}}}END{$ans=ord($q0_char);if($ans<64){print "33\n"}else{print "64\n"}}'`
+MIN_Q_CHAR=`cat t1.renamed.fastq t2.renamed.fastq n1.renamed.fastq n2.renamed.fastq |head -n 50000 | awk 'BEGIN{flag=0}{if($0 ~ /^\+/){flag=1}else if(flag==1){print $0;flag=0}}'  | perl -ne 'BEGIN{$q0_char="@";}{chomp;@f=split "";foreach $v(@f){if(ord($v)<ord($q0_char)){$q0_char=$v;}}}END{$ans=ord($q0_char);if($ans<64){print "33\n"}else{print "64\n"}}'`
 save MIN_Q_CHAR
 log MIN_Q_CHAR: $MIN_Q_CHAR
 JF_SIZE=`ls -l *.fastq | awk '{n+=$5}END{s=int(n/50); if(s>200000000)printf "%.0f",s;else print "200000000";}'`
@@ -99,7 +100,7 @@ if [ -s ESTIMATED_GENOME_SIZE.txt ];then
 ESTIMATED_GENOME_SIZE=`head -n 1 ESTIMATED_GENOME_SIZE.txt`
 else
 log Estimating genome size
-export ESTIMATED_GENOME_SIZE=`jellyfish histo -t 60 -h 1 k_u_hash_0 | tail -n 1 |awk '{print $2}'`
+export ESTIMATED_GENOME_SIZE=`jellyfish histo -t 30 -h 1 k_u_hash_0 | tail -n 1 |awk '{print $2}'`
 echo $ESTIMATED_GENOME_SIZE > ESTIMATED_GENOME_SIZE.txt
 fi
 save ESTIMATED_GENOME_SIZE
@@ -109,7 +110,7 @@ log "Estimated genome size: $ESTIMATED_GENOME_SIZE"
 
 log 'Computing super reads from PE '
 CA_DIR="CA";
-/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/mega_reads_assemble_cluster.sh  -F -E SLURM  -Pb 500000000 -q batch -G 1 -C 25 -t 60 -e $ESTIMATED_GENOME_SIZE -m work1 -a /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin -o "   cgwErrorRate=0.15"  -B 15 -D 0.02 -n /bigdata/littlab/arajewski/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz 
+/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/mega_reads_assemble_cluster.sh  -F -E SLURM  -Pb 500000000 -q batch -G 1 -C 25 -t 30 -e $ESTIMATED_GENOME_SIZE -m work1 -a /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/MaSuRCA/3.3.8/bin/../Flye/bin -o "   cgwErrorRate=0.15"  -B 15 -D 0.02 -n /bigdata/littlab/arajewski/Datura/1_QCQA/Dstr.filt_q10_l500_crop50.fastq.gz 
 if [ ! -s flye/assembly.fasta ];then
   fail "Assembly with flye failed, see files under flye/"
 else
