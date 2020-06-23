@@ -1,0 +1,16 @@
+-i(scaffolds)=Dstr_v1.7_lnr13.fa -l(longread)=Lordec.fasta -s(platform)=o -t(thread)=48 -c(coverage)=0.8 -a(tolerance)=0.2 -m(max_distance)=600 -n(number)=5 -g(taglen)=300 -v(overstep)=300 -o(output)=Output_1590355
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 3458612.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 3458620.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 3458612.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 3458624.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 3458612.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24317.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24317.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24317.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24329.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24325.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24317.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24317.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24325.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24329.
+Illegal division by zero at /bigdata/littlab/arajewski/Datura/software/LR_Gapcloser/src/coverage_calculator.pl line 67, <FILE> line 24317.

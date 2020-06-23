@@ -1,0 +1,2 @@
+abyss-bloom: ../Common/Kmer.h:49: static void Kmer::setLength(unsigned int): Assertion `length <= 128' failed.
+/var/spool/slurmd/job1580945/slurm_script: line 24: 87955 Aborted                 abyss-bloom build -vv -k$SLURM_ARRAY_TASK_ID -j$SLURM_CPUS_PER_TASK -b40G -l2 Bloomfilters/k$SLURM_ARRAY_TASK_ID.bloom /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_1.fq.gz /rhome/arajewski/bigdata/Datura/1_QCQA/PE2_2.fq.gz

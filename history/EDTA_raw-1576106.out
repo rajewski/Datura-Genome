@@ -1,0 +1,12 @@
+Sun Jun 14 16:13:12 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Sun Jun 14 16:13:20 PDT 2020	Start to find TIR candidates.
+
+Sun Jun 14 16:13:20 PDT 2020	Identify TIR candidates from scratch.
+
+Species: others
+slurmstepd-c23: error: _is_a_lwp: open() /proc/25196/status failed: No such file or directory
+Mon Jun 15 10:32:34 PDT 2020	Finish finding TIR candidates.
+
+Mon Jun 15 10:32:34 PDT 2020	Execution of EDTA_raw.pl is finished!
+

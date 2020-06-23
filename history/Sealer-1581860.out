@@ -1,0 +1,111 @@
+Finding flanks
+232469 gaps found
+232177 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k125.bloom'...
+Bloom filter FPR: 0.982%
+Starting K run with k = 125
+Flanks inserted into k run = 232177
+0 unique gaps closed for k125
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k125 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k120.bloom'...
+Bloom filter FPR: 1.1%
+Starting K run with k = 120
+Flanks inserted into k run = 232177
+0 unique gaps closed for k120
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k120 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k115.bloom'...
+Bloom filter FPR: 1.2%
+Starting K run with k = 115
+Flanks inserted into k run = 232177
+0 unique gaps closed for k115
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k115 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k110.bloom'...
+Bloom filter FPR: 1.28%
+Starting K run with k = 110
+Flanks inserted into k run = 232177
+0 unique gaps closed for k110
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k110 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k105.bloom'...
+Bloom filter FPR: 1.35%
+Starting K run with k = 105
+Flanks inserted into k run = 232177
+0 unique gaps closed for k105
+No start/goal kmer: 232426
+No path: 0
+Unique path: 0
+Multiple paths: 0
+Too many paths: 0
+Too many branches: 0
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+232177 flanks left
+k105 run complete
+Total gaps closed so far = 0
+
+Loading bloom filter from `Bloomfilters/k100.bloom'...
+Bloom filter FPR: 1.41%
+Starting K run with k = 100
+Flanks inserted into k run = 232177
+100 gaps closed so far
+200 gaps closed so far
+slurmstepd-i57: error: *** JOB 1581860 ON i57 CANCELLED AT 2020-06-15T17:23:34 ***

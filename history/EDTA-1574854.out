@@ -1,0 +1,29 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v1.8.3  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Sun Jun 14 14:04:26 PDT 2020	Dependency checking:
+				All passed!
+
+	A CDS file Dstr_v1.5.cds.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Sun Jun 14 14:05:20 PDT 2020	Obtain raw TE libraries using various structure-based programs: 
+Sun Jun 14 14:05:20 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Sun Jun 14 14:05:28 PDT 2020	Start to find LTR candidates.
+
+Sun Jun 14 14:05:28 PDT 2020	Identify LTR retrotransposon candidates from scratch.
+
+slurmstepd-c20: error: _is_a_lwp: open() /proc/51051/status failed: No such file or directory
+Sun Jun 14 17:26:53 PDT 2020	Finish finding LTR candidates.
+
+Sun Jun 14 17:26:53 PDT 2020	Start to find TIR candidates.
+
+Sun Jun 14 17:26:53 PDT 2020	Identify TIR candidates from scratch.
+
+Species: others
+slurmstepd-c20: error: *** JOB 1574854 ON c20 CANCELLED AT 2020-06-14T19:10:33 ***

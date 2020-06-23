@@ -1,0 +1,6 @@
+Finding flanks
+362216 gaps found
+360401 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k.bloom'...
+error: `Bloomfilters/k.bloom': No such file or directory
