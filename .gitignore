@@ -1,5 +1,6 @@
 .Rproj.user
 !**/*.sh
+Alkaloids/
 1_QCQA/Nanopore_Logs/
 2_ABySS/
 3_BCGSC/*
@@ -10,6 +11,7 @@
 !4_EDTA/*.sh
 4_RepeatModeler
 !4_RepeatModeler/1_RepeatModeler.sh
+5_Funannotate/
 augustus_output/
 blast_output/
 DNA-seq/
