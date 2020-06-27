@@ -1,0 +1,12 @@
+Sat Jun 27 10:07:42 PDT 2020: Custom Repeat Library Scripts already present.
+Sat Jun 27 10:07:42 PDT 2020: Transposase database already present.
+Sat Jun 27 10:07:42 PDT 2020: Uniprot database already present
+Sat Jun 27 10:07:42 PDT 2020: ProtExcluder already present.
+Sat Jun 27 10:07:42 PDT 2020: Target assembly Dstr_v1.7_final.fa already present and length filtered.
+Sat Jun 27 10:07:42 PDT 2020: Repeat database already present.
+Sat Jun 27 10:07:42 PDT 2020: RepeatModeler already run.
+Sat Jun 27 10:07:42 PDT 2020: Parsing RepeatModeler output into known and unknown repeats...
+Sat Jun 27 10:07:44 PDT 2020: Done
+Sat Jun 27 10:07:44 PDT 2020: Classifying repeat elements...
+Sat Jun 27 10:08:41 PDT 2020: Done
+Sat Jun 27 10:08:41 PDT 2020: Finding non-TE hits in repeat elements...

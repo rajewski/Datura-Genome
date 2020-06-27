@@ -1,0 +1,25 @@
+Thu Jun 25 13:15:45 PDT 2020: Custom Repeat Library Scripts already present.
+Thu Jun 25 13:15:45 PDT 2020: Transposase database already present.
+Thu Jun 25 13:15:45 PDT 2020: Uniprot database already present
+Thu Jun 25 13:15:45 PDT 2020: ProtExcluder already present.
+Thu Jun 25 13:15:45 PDT 2020: Target assembly Dstr_v1.7_final.fa already present and length filtered.
+Thu Jun 25 13:15:45 PDT 2020: Repeat database already present.
+Thu Jun 25 13:15:45 PDT 2020: Running RepeatModeling on Dstr_v1.7_final with 60 cores...
+RepeatModeler Version open-1.0.11
+================================
+Search Engine = ncbi
+Random Number Seed: 1593116147
+Database = Dstr_v1.7_final ........................
+  - Sequences = 232605
+  - Bases = 2110510646
+
+
+Oops...the RM_79217.ThuJun251008202020 run did not get passed round-1.
+It makes more sense to restart this run from the beginning.
+Remove the -recoverDir option and rerun the program.
+
+Thu Jun 25 13:15:55 PDT 2020: Done.
+/var/spool/slurmd/job1615873/slurm_script: line 96: [: e: binary operator expected
+Thu Jun 25 13:15:55 PDT 2020: RepeatModeler output already parsed.
+Thu Jun 25 13:15:55 PDT 2020: Classifying repeat elements...
+Command line argument error: Argument "query". File is not accessible:  `RepeatModeler_unknowns.fasta'

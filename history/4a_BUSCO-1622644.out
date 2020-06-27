@@ -1,0 +1,29 @@
+WARNING	An augustus species is mentioned in the config file, dataset default species (arabidopsis) will be ignored
+ERROR	Impossible to read /bigdata/littlab/arajewski/Datura/3_BCGSC//bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.4_iterative_l500.fa
+JobId=1622644 JobName=4a_BUSCO.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100000 Nice=0 Account=littlab QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:04 TimeLimit=09:00:00 TimeMin=N/A
+   SubmitTime=2020-06-26T09:12:00 EligibleTime=2020-06-26T09:12:00
+   AccrueTime=2020-06-26T09:12:00
+   StartTime=2020-06-26T09:12:17 EndTime=2020-06-26T18:12:17 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-06-26T09:12:17
+   Partition=batch AllocNode:Sid=pelican.ib.hpcc.ucr.edu:41858
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=c37
+   BatchHost=c37
+   NumNodes=1 NumCPUs=30 NumTasks=1 CPUs/Task=30 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=30,mem=210G,node=1,billing=82
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=30 MinMemoryCPU=7G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/4_BUSCO/4a_BUSCO.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/4_BUSCO
+   StdErr=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1622644.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/4_BUSCO/../history/4a_BUSCO-1622644.out
+   Power=
+

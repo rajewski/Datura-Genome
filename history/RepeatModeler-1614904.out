@@ -1,0 +1,635 @@
+Thu Jun 25 10:07:22 PDT 2020: Custom Repeat Library Scripts already present.
+Thu Jun 25 10:07:22 PDT 2020: Transposase database already present.
+Thu Jun 25 10:07:22 PDT 2020: Uniprot database already present
+Thu Jun 25 10:07:22 PDT 2020: ProtExcluder already present.
+Thu Jun 25 10:07:22 PDT 2020: Renaming assembly and length filtering...
+java -ea -Xms300m -cp /opt/linux/centos/7.x/x86_64/pkgs/BBMap/38.60/current/ jgi.ReformatReads in=/bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.7_Iterative/Dstr_v1.7_lnr13_500bp_Sealer_ntEdit2_edited.fa out=Dstr_v1.7_final.fa minlength=250
+Executing jgi.ReformatReads [in=/bigdata/littlab/arajewski/Datura/3_BCGSC/Dstr_v1.7_Iterative/Dstr_v1.7_lnr13_500bp_Sealer_ntEdit2_edited.fa, out=Dstr_v1.7_final.fa, minlength=250]
+
+Input is being processed as unpaired
+Input:                  	232605 reads          	2110510646 bases
+Short Read Discards:    	0 reads (0.00%) 	0 bases (0.00%)
+Output:                 	232605 reads (100.00%) 	2110510646 bases (100.00%)
+
+Time:                         	6.989 seconds.
+Reads Processed:        232k 	33.28k reads/sec
+Bases Processed:       2110m 	301.96m bases/sec
+Thu Jun 25 10:07:30 PDT 2020: Done
+Thu Jun 25 10:07:30 PDT 2020: Building repeat database of Dstr_v1.7_final.fa...
+Building database Dstr_v1.7_final:
+  Adding Dstr_v1.7_final.fa to database
+Number of sequences (bp) added to database: 232605 ( 2110510646 bp )
+Thu Jun 25 10:08:15 PDT 2020: Done
+Thu Jun 25 10:08:15 PDT 2020: Running RepeatModeling on Dstr_v1.7_final with 60 cores...
+RepeatModeler Version open-1.0.11
+================================
+Search Engine = ncbi
+Random Number Seed: 1593104896
+Database = Dstr_v1.7_final ........................
+  - Sequences = 232605
+  - Bases = 2110510646
+Using output directory = /bigdata/littlab/arajewski/Datura/4_RepeatModeler/Dstr_v1.7_final_Repeats/RM_79217.ThuJun251008202020
+
+
+RepeatModeler Round # 1
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 40000000 bp
+   - Final Sample Size = 52926933 bp ( 40012940 non ambiguous )
+   - Num Contigs Represented = 6523
+ -- Running RepeatScout on the sequences...
+   - RepeatScout: Running build_lmer_table ( l = 14 )..
+0      100000      200000      300000      400000      500000      600000      700000      800000      900000      1000000      1100000      1200000      1300000      1400000      1500000      1600000      1700000      1800000      1900000      2000000      2100000      2200000      2300000      2400000      2500000      2600000      2700000      2800000      2900000      3000000      3100000      3200000      3300000      3400000      3500000      3600000      3700000      3800000      3900000      4000000      4100000      4200000      4300000      4400000      4500000      4600000      4700000      4800000      4900000      5000000      5100000      5200000      5300000      5400000      5500000      5600000      5700000      5800000      5900000      6000000      6100000      6200000      6300000      6400000      6500000      6600000      6700000      6800000      6900000      7000000      7100000      7200000      7300000      7400000      7500000      7600000      7700000      7800000      7900000      8000000      8100000      8200000      8300000      8400000      8500000      8600000      8700000      8800000      8900000      9000000      9100000      9200000      9300000      9400000      9500000      9600000      9700000      9800000      9900000      10000000      10100000      10200000      10300000      10400000      10500000      10600000      10700000      10800000      10900000      11000000      11100000      11200000      11300000      11400000      11500000      11600000      11700000      11800000      11900000      12000000      12100000      12200000      12300000      12400000      12500000      12600000      12700000      12800000      12900000      13000000      13100000      13200000      13300000      13400000      13500000      13600000      13700000      13800000      13900000      14000000      14100000      14200000      14300000      14400000      14500000      14600000      14700000      14800000      14900000      15000000      15100000      15200000      15300000      15400000      15500000      15600000      15700000      15800000      15900000      16000000      16100000      16200000      16300000      16400000      16500000      16600000      16700000      16800000      16900000      17000000      17100000      17200000      17300000      17400000      17500000      17600000      17700000      17800000      17900000      18000000      18100000      18200000      18300000      18400000      18500000      18600000      18700000      18800000      18900000      19000000      19100000      19200000      19300000      19400000      19500000      19600000      19700000      19800000      19900000      20000000      20100000      20200000      20300000      20400000      20500000      20600000      20700000      20800000      20900000      21000000      21100000      21200000      21300000      21400000      21500000      21600000      21700000      21800000      21900000      22000000      22100000      22200000      22300000      22400000      22500000      22600000      22700000      22800000      22900000      23000000      23100000      23200000      23300000      23400000      23500000      23600000      23700000      23800000      23900000      24000000      24100000      24200000      24300000      24400000      24500000      24600000      24700000      24800000      24900000      25000000      25100000      25200000      25300000      25400000      25500000      25600000      25700000      25800000      25900000      26000000      26100000      26200000      26300000      26400000      26500000      26600000      26700000      26800000      26900000      27000000      27100000      27200000      27300000      27400000      27500000      27600000      27700000      27800000      27900000      28000000      28100000      28200000      28300000      28400000      28500000      28600000      28700000      28800000      28900000      29000000      29100000      29200000      29300000      29400000      29500000      29600000      29700000      29800000      29900000      30000000      30100000      30200000      30300000      30400000      30500000      30600000      30700000      30800000      30900000      31000000      31100000      31200000      31300000      31400000      31500000      31600000      31700000      31800000      31900000      32000000      32100000      32200000      32300000      32400000      32500000      32600000      32700000      32800000      32900000      33000000      33100000      33200000      33300000      33400000      33500000      33600000      33700000      33800000      33900000      34000000      34100000      34200000      34300000      34400000      34500000      34600000      34700000      34800000      34900000      35000000      35100000      35200000      35300000      35400000      35500000      35600000      35700000      35800000      35900000      36000000      36100000      36200000      36300000      36400000      36500000      36600000      36700000      36800000      36900000      37000000      37100000      37200000      37300000      37400000      37500000      37600000      37700000      37800000      37900000      38000000      38100000      38200000      38300000      38400000      38500000      38600000      38700000      38800000      38900000      39000000      39100000      39200000      39300000      39400000      39500000      39600000      39700000      39800000      39900000      40000000      40100000      40200000      40300000      40400000      40500000      40600000      40700000      40800000      40900000      41000000      41100000      41200000      41300000      41400000      41500000      41600000      41700000      41800000      41900000      42000000      42100000      42200000      42300000      42400000      42500000      42600000      42700000      42800000      42900000      43000000      43100000      43200000      43300000      43400000      43500000      43600000      43700000      43800000      43900000      44000000      44100000      44200000      44300000      44400000      44500000      44600000      44700000      44800000      44900000      45000000      45100000      45200000      45300000      45400000      45500000      45600000      45700000      45800000      45900000      46000000      46100000      46200000      46300000      46400000      46500000      46600000      46700000      46800000      46900000      47000000      47100000      47200000      47300000      47400000      47500000      47600000      47700000      47800000      47900000      48000000      48100000      48200000      48300000      48400000      48500000      48600000      48700000      48800000      48900000      49000000      49100000      49200000      49300000      49400000      49500000      49600000      49700000      49800000      49900000      50000000      50100000      50200000      50300000      50400000      50500000      50600000      50700000      50800000      50900000      51000000      51100000      51200000      51300000      51400000      51500000      51600000      51700000      51800000      51900000      52000000      52100000      52200000      52300000      52400000      52500000      52600000      52700000      52800000      52900000         - RepeatScout: Running RepeatScout..
+Program duration is 415.0 sec = 6.9 min = 0.1 hr
+   - Collecting repeat instances...
+ -- Refining Family R=7 / 0 ( RS Elements: 2216, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 3058 ( orig = 3052 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:16 Elapsed Time
+Refinement: 00:32:29 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=103 / 1 ( RS Elements: 2200, Using 100 ):
+  - numRounds = 9
+  - Consensus Length = 3712 ( orig = 3712 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:25 Elapsed Time
+Refinement: 00:02:26 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=373 / 2 ( RS Elements: 2116, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 478 ( orig = 479 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:54 Elapsed Time
+Refinement: 00:00:55 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=37 / 3 ( RS Elements: 1954, Using 100 ):
+  - numRounds = 11
+  - Consensus Length = 2810 ( orig = 2815 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:52 Elapsed Time
+Refinement: 00:01:52 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=378 / 4 ( RS Elements: 1940, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 862 ( orig = 862 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:2 Elapsed Time
+Refinement: 00:01:03 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=43 / 5 ( RS Elements: 1886, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 4749 ( orig = 4751 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:3:9 Elapsed Time
+Refinement: 00:03:10 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=21 / 6 ( RS Elements: 1880, Using 100 ):
+  - numRounds = 10
+  - Consensus Length = 1490 ( orig = 1486 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:49 Elapsed Time
+Refinement: 00:01:49 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=2 / 7 ( RS Elements: 1730, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 5353 ( orig = 5350 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:3:16 Elapsed Time
+Refinement: 00:03:17 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=466 / 8 ( RS Elements: 1706, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 693 ( orig = 693 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:2 Elapsed Time
+Refinement: 00:01:03 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=215 / 9 ( RS Elements: 1656, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 701 ( orig = 702 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:58 Elapsed Time
+Refinement: 00:00:59 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=33 / 10 ( RS Elements: 1592, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 2006 ( orig = 1995 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:56 Elapsed Time
+Refinement: 00:01:57 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=101 / 11 ( RS Elements: 1553, Using 100 ):
+  - numRounds = 11
+  - Consensus Length = 1353 ( orig = 1355 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:30 Elapsed Time
+Refinement: 00:01:31 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=616 / 12 ( RS Elements: 1533, Using 100 ):
+  - numRounds = 9
+  - Consensus Length = 275 ( orig = 275 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:30 Elapsed Time
+Refinement: 00:00:31 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=124 / 13 ( RS Elements: 1430, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 427 ( orig = 425 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:43 Elapsed Time
+Refinement: 00:00:44 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=3 / 14 ( RS Elements: 1426, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1248 ( orig = 1253 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:4 Elapsed Time
+Refinement: 00:01:05 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=1304 / 15 ( RS Elements: 1387, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 798 ( orig = 801 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:46 Elapsed Time
+Refinement: 00:00:47 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=423 / 16 ( RS Elements: 1383, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 797 ( orig = 799 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:49 Elapsed Time
+Refinement: 00:00:49 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=529 / 17 ( RS Elements: 1378, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 1024 ( orig = 1024 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:57 Elapsed Time
+Refinement: 00:00:58 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=284 / 18 ( RS Elements: 1376, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1123 ( orig = 1122 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:8 Elapsed Time
+Refinement: 00:01:09 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=112 / 19 ( RS Elements: 1353, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1033 ( orig = 1032 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:59 Elapsed Time
+Refinement: 00:01:00 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=159 / 20 ( RS Elements: 1306, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1587 ( orig = 1587 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:2 Elapsed Time
+Refinement: 00:01:03 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=26 / 21 ( RS Elements: 1259, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 2248 ( orig = 2251 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:3 Elapsed Time
+Refinement: 00:02:03 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=19 / 22 ( RS Elements: 1251, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 688 ( orig = 688 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:49 Elapsed Time
+Refinement: 00:00:50 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=30 / 23 ( RS Elements: 1244, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 3574 ( orig = 3573 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:6 Elapsed Time
+Refinement: 00:02:07 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=186 / 24 ( RS Elements: 1243, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1676 ( orig = 1668 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:5 Elapsed Time
+Refinement: 00:01:05 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=97 / 25 ( RS Elements: 1234, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1683 ( orig = 1683 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:17 Elapsed Time
+Refinement: 00:01:18 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=166 / 26 ( RS Elements: 1189, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 866 ( orig = 867 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:2 Elapsed Time
+Refinement: 00:01:03 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=11 / 27 ( RS Elements: 1178, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1478 ( orig = 1479 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:12 Elapsed Time
+Refinement: 00:01:13 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=533 / 28 ( RS Elements: 1109, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 893 ( orig = 893 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:26 Elapsed Time
+Refinement: 00:00:27 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=17 / 29 ( RS Elements: 1101, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1655 ( orig = 1655 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:17 Elapsed Time
+Refinement: 00:01:18 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=23 / 30 ( RS Elements: 1098, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 2415 ( orig = 2417 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:52 Elapsed Time
+Refinement: 00:01:53 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=24 / 31 ( RS Elements: 1090, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 5057 ( orig = 5056 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:40 Elapsed Time
+Refinement: 00:02:41 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=352 / 32 ( RS Elements: 1085, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1385 ( orig = 1385 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:30 Elapsed Time
+Refinement: 00:00:31 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=8 / 33 ( RS Elements: 1080, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1905 ( orig = 1902 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:27 Elapsed Time
+Refinement: 00:01:28 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=233 / 34 ( RS Elements: 1071, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 769 ( orig = 768 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:38 Elapsed Time
+Refinement: 00:00:39 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=50 / 35 ( RS Elements: 1064, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 1057 ( orig = 1056 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:53 Elapsed Time
+Refinement: 00:00:54 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=184 / 36 ( RS Elements: 1063, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 2312 ( orig = 2307 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:7 Elapsed Time
+Refinement: 00:01:07 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=71 / 37 ( RS Elements: 1050, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1793 ( orig = 1793 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:21 Elapsed Time
+Refinement: 00:01:22 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=183 / 38 ( RS Elements: 1046, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1448 ( orig = 1449 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:51 Elapsed Time
+Refinement: 00:00:52 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=1 / 39 ( RS Elements: 1040, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 4039 ( orig = 4041 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:28 Elapsed Time
+Refinement: 00:02:29 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=220 / 40 ( RS Elements: 1028, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 2983 ( orig = 2980 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:27 Elapsed Time
+Refinement: 00:01:28 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=626 / 41 ( RS Elements: 1016, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1043 ( orig = 1042 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:54 Elapsed Time
+Refinement: 00:00:55 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=329 / 42 ( RS Elements: 1015, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1270 ( orig = 1268 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:52 Elapsed Time
+Refinement: 00:00:53 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=82 / 43 ( RS Elements: 998, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1397 ( orig = 1396 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:9 Elapsed Time
+Refinement: 00:01:10 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=511 / 44 ( RS Elements: 992, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 731 ( orig = 733 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:35 Elapsed Time
+Refinement: 00:00:36 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=86 / 45 ( RS Elements: 987, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1728 ( orig = 1727 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:19 Elapsed Time
+Refinement: 00:01:20 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=78 / 46 ( RS Elements: 974, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 3993 ( orig = 3986 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:2:8 Elapsed Time
+Refinement: 00:02:08 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=676 / 47 ( RS Elements: 960, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 1035 ( orig = 1035 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:45 Elapsed Time
+Refinement: 00:00:46 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=238 / 48 ( RS Elements: 958, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1340 ( orig = 1342 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:36 Elapsed Time
+Refinement: 00:00:36 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=413 / 49 ( RS Elements: 956, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 866 ( orig = 864 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:2 Elapsed Time
+Refinement: 00:01:03 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=236 / 50 ( RS Elements: 945, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1055 ( orig = 1057 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:41 Elapsed Time
+Refinement: 00:00:43 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=202 / 51 ( RS Elements: 942, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1111 ( orig = 1112 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:47 Elapsed Time
+Refinement: 00:00:47 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=554 / 52 ( RS Elements: 937, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 1077 ( orig = 1080 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:40 Elapsed Time
+Refinement: 00:00:41 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=147 / 53 ( RS Elements: 935, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 2304 ( orig = 2304 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:40 Elapsed Time
+Refinement: 00:00:41 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=666 / 54 ( RS Elements: 933, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 336 ( orig = 336 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:23 Elapsed Time
+Refinement: 00:00:24 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=40 / 55 ( RS Elements: 931, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 1210 ( orig = 1208 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:39 Elapsed Time
+Refinement: 00:00:39 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=113 / 56 ( RS Elements: 919, Using 100 ):
+  - numRounds = 10
+  - Consensus Length = 1106 ( orig = 1102 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:56 Elapsed Time
+Refinement: 00:00:57 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=303 / 57 ( RS Elements: 917, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1221 ( orig = 1221 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:54 Elapsed Time
+Refinement: 00:00:55 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=42 / 58 ( RS Elements: 908, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 2065 ( orig = 2064 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:13 Elapsed Time
+Refinement: 00:01:14 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=1100 / 59 ( RS Elements: 893, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 621 ( orig = 621 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:27 Elapsed Time
+Refinement: 00:00:28 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=324 / 60 ( RS Elements: 881, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 441 ( orig = 442 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:22 Elapsed Time
+Refinement: 00:00:23 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=892 / 61 ( RS Elements: 874, Using 100 ):
+  - numRounds = 11
+  - Consensus Length = 1094 ( orig = 1094 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:8 Elapsed Time
+Refinement: 00:01:10 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=904 / 62 ( RS Elements: 869, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 439 ( orig = 440 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:28 Elapsed Time
+Refinement: 00:00:28 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=514 / 63 ( RS Elements: 866, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 414 ( orig = 414 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:28 Elapsed Time
+Refinement: 00:00:29 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=421 / 64 ( RS Elements: 865, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1373 ( orig = 1372 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:30 Elapsed Time
+Refinement: 00:00:32 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=55 / 65 ( RS Elements: 859, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 727 ( orig = 727 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:35 Elapsed Time
+Refinement: 00:00:35 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=62 / 66 ( RS Elements: 853, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1202 ( orig = 1203 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:5 Elapsed Time
+Refinement: 00:01:06 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=618 / 67 ( RS Elements: 846, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 472 ( orig = 481 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:19 Elapsed Time
+Refinement: 00:00:20 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=493 / 68 ( RS Elements: 835, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1033 ( orig = 1033 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:41 Elapsed Time
+Refinement: 00:00:41 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=440 / 69 ( RS Elements: 829, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 532 ( orig = 531 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:24 Elapsed Time
+Refinement: 00:00:24 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=387 / 70 ( RS Elements: 828, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 586 ( orig = 586 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:23 Elapsed Time
+Refinement: 00:00:24 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=435 / 71 ( RS Elements: 819, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 1639 ( orig = 1639 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:58 Elapsed Time
+Refinement: 00:00:59 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=263 / 72 ( RS Elements: 812, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 655 ( orig = 655 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:25 Elapsed Time
+Refinement: 00:00:25 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=504 / 73 ( RS Elements: 809, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 459 ( orig = 459 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:18 Elapsed Time
+Refinement: 00:00:19 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=18 / 74 ( RS Elements: 808, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1521 ( orig = 1526 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:19 Elapsed Time
+Refinement: 00:01:20 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=367 / 75 ( RS Elements: 807, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 655 ( orig = 655 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:27 Elapsed Time
+Refinement: 00:00:28 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=174 / 76 ( RS Elements: 800, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 2408 ( orig = 2408 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:30 Elapsed Time
+Refinement: 00:00:30 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=47 / 77 ( RS Elements: 782, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 2133 ( orig = 2134 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:15 Elapsed Time
+Refinement: 00:01:15 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=1125 / 78 ( RS Elements: 777, Using 100 ):
+  - numRounds = 5
+  - Consensus Length = 286 ( orig = 286 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:13 Elapsed Time
+Refinement: 00:00:14 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=20 / 79 ( RS Elements: 776, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 1868 ( orig = 1876 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:1:17 Elapsed Time
+Refinement: 00:01:19 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=0 / 80 ( RS Elements: 773, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 304 ( orig = 301 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:20 Elapsed Time
+Refinement: 00:00:20 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=714 / 81 ( RS Elements: 762, Using 100 ):
+  - numRounds = 6
+  - Consensus Length = 302 ( orig = 301 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:16 Elapsed Time
+Refinement: 00:00:16 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=251 / 82 ( RS Elements: 755, Using 100 ):
+  - numRounds = 8
+  - Consensus Length = 429 ( orig = 429 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:28 Elapsed Time
+Refinement: 00:00:29 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=1185 / 83 ( RS Elements: 755, Using 100 ):
+  - numRounds = 7
+  - Consensus Length = 248 ( orig = 249 )
+  - Avg Kimura Divergence = 0.00
+  - Unaligned sequences = 0 ( orig = 0 )
+  Build Consensus: 0:0:19 Elapsed Time
+Refinement: 00:00:20 (hh:mm:ss) Elapsed Time
+ -- Refining Family R=295 / 84 ( RS Elements: 754, Using 100 ):
+slurmstepd-i55: error: *** JOB 1614904 ON i55 CANCELLED AT 2020-06-25T12:07:31 DUE TO TIME LIMIT ***

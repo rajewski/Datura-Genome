@@ -1,0 +1,592 @@
+Thu Jun 25 09:14:40 PDT 2020: Running Sealer with k=40...
+Finding flanks
+232469 gaps found
+232177 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k40.bloom'...
+Bloom filter FPR: 1.3%
+Starting K run with k = 40
+Flanks inserted into k run = 232177
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1100 gaps closed so far
+1200 gaps closed so far
+1300 gaps closed so far
+1400 gaps closed so far
+1500 gaps closed so far
+1600 gaps closed so far
+1700 gaps closed so far
+1800 gaps closed so far
+1900 gaps closed so far
+2000 gaps closed so far
+2100 gaps closed so far
+2200 gaps closed so far
+2300 gaps closed so far
+2400 gaps closed so far
+2500 gaps closed so far
+2600 gaps closed so far
+2700 gaps closed so far
+2800 gaps closed so far
+2900 gaps closed so far
+3000 gaps closed so far
+3100 gaps closed so far
+3200 gaps closed so far
+3300 gaps closed so far
+3400 gaps closed so far
+3500 gaps closed so far
+3600 gaps closed so far
+3651 unique gaps closed for k40
+No start/goal kmer: 10
+No path: 22829
+Unique path: 3483
+Multiple paths: 168
+Too many paths: 4744
+Too many branches: 201192
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+228526 flanks left
+k40 run complete
+Total gaps closed so far = 3651
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 3651
+1.57%
+
+Thu Jun 25 10:46:48 PDT 2020: Done with k=40
+Thu Jun 25 10:46:48 PDT 2020: Running Sealer with k=45...
+Finding flanks
+228818 gaps found
+228526 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k45.bloom'...
+Bloom filter FPR: 1.37%
+Starting K run with k = 45
+Flanks inserted into k run = 228526
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1092 unique gaps closed for k45
+No start/goal kmer: 19
+No path: 29849
+Unique path: 1029
+Multiple paths: 63
+Too many paths: 4431
+Too many branches: 193384
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+227434 flanks left
+k45 run complete
+Total gaps closed so far = 1092
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 1092
+0.477%
+
+Thu Jun 25 12:23:13 PDT 2020: Done with k=45
+Thu Jun 25 12:23:13 PDT 2020: Running Sealer with k=50...
+Finding flanks
+227726 gaps found
+227434 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k50.bloom'...
+Bloom filter FPR: 1.43%
+Starting K run with k = 50
+Flanks inserted into k run = 227434
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1074 unique gaps closed for k50
+No start/goal kmer: 45
+No path: 38032
+Unique path: 1018
+Multiple paths: 56
+Too many paths: 4295
+Too many branches: 184237
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+226360 flanks left
+k50 run complete
+Total gaps closed so far = 1074
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 1074
+0.472%
+
+Thu Jun 25 14:09:34 PDT 2020: Done with k=50
+Thu Jun 25 14:09:34 PDT 2020: Running Sealer with k=55...
+Finding flanks
+226652 gaps found
+226360 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k55.bloom'...
+Bloom filter FPR: 1.48%
+Starting K run with k = 55
+Flanks inserted into k run = 226360
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+944 unique gaps closed for k55
+No start/goal kmer: 637
+No path: 47117
+Unique path: 889
+Multiple paths: 55
+Too many paths: 4278
+Too many branches: 173633
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+225416 flanks left
+k55 run complete
+Total gaps closed so far = 944
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 944
+0.416%
+
+Thu Jun 25 16:13:31 PDT 2020: Done with k=55
+Thu Jun 25 16:13:31 PDT 2020: Running Sealer with k=60...
+Finding flanks
+225708 gaps found
+225417 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k60.bloom'...
+Bloom filter FPR: 1.51%
+Starting K run with k = 60
+Flanks inserted into k run = 225417
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+858 unique gaps closed for k60
+No start/goal kmer: 1291
+No path: 57062
+Unique path: 822
+Multiple paths: 36
+Too many paths: 4430
+Too many branches: 162024
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+224559 flanks left
+k60 run complete
+Total gaps closed so far = 858
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 858
+0.38%
+
+Thu Jun 25 18:25:43 PDT 2020: Done with k=60
+Thu Jun 25 18:25:43 PDT 2020: Running Sealer with k=65...
+Finding flanks
+224850 gaps found
+224559 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k65.bloom'...
+Bloom filter FPR: 1.53%
+Starting K run with k = 65
+Flanks inserted into k run = 224559
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+786 unique gaps closed for k65
+No start/goal kmer: 1978
+No path: 67594
+Unique path: 745
+Multiple paths: 41
+Too many paths: 4817
+Too many branches: 149632
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+223773 flanks left
+k65 run complete
+Total gaps closed so far = 786
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 786
+0.35%
+
+Thu Jun 25 20:49:57 PDT 2020: Done with k=65
+Thu Jun 25 20:49:57 PDT 2020: Running Sealer with k=70...
+Finding flanks
+224064 gaps found
+223774 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k70.bloom'...
+Bloom filter FPR: 1.54%
+Starting K run with k = 70
+Flanks inserted into k run = 223774
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+687 unique gaps closed for k70
+No start/goal kmer: 2816
+No path: 79010
+Unique path: 646
+Multiple paths: 41
+Too many paths: 5326
+Too many branches: 136181
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+223087 flanks left
+k70 run complete
+Total gaps closed so far = 687
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 687
+0.307%
+
+Thu Jun 25 23:40:02 PDT 2020: Done with k=70
+Thu Jun 25 23:40:02 PDT 2020: Running Sealer with k=75...
+Finding flanks
+223377 gaps found
+223090 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k75.bloom'...
+Bloom filter FPR: 1.54%
+Starting K run with k = 75
+Flanks inserted into k run = 223090
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+585 unique gaps closed for k75
+No start/goal kmer: 4036
+No path: 91504
+Unique path: 526
+Multiple paths: 59
+Too many paths: 5984
+Too many branches: 121225
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 0
+Exceeded mem limit: 0
+Skipped: 0
+222505 flanks left
+k75 run complete
+Total gaps closed so far = 585
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 585
+0.262%
+
+Fri Jun 26 02:27:37 PDT 2020: Done with k=75
+Fri Jun 26 02:27:37 PDT 2020: Running Sealer with k=80...
+Finding flanks
+222792 gaps found
+222508 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k80.bloom'...
+Bloom filter FPR: 1.54%
+Starting K run with k = 80
+Flanks inserted into k run = 222508
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+443 unique gaps closed for k80
+No start/goal kmer: 5838
+No path: 101079
+Unique path: 362
+Multiple paths: 81
+Too many paths: 6768
+Too many branches: 108619
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 2
+Exceeded mem limit: 0
+Skipped: 0
+222065 flanks left
+k80 run complete
+Total gaps closed so far = 443
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 443
+0.199%
+
+Fri Jun 26 05:29:45 PDT 2020: Done with k=80
+Fri Jun 26 05:29:45 PDT 2020: Running Sealer with k=85...
+Finding flanks
+222349 gaps found
+222068 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k85.bloom'...
+Bloom filter FPR: 1.52%
+Starting K run with k = 85
+Flanks inserted into k run = 222068
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+340 unique gaps closed for k85
+No start/goal kmer: 8841
+No path: 107583
+Unique path: 255
+Multiple paths: 85
+Too many paths: 7092
+Too many branches: 98447
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 4
+Exceeded mem limit: 0
+Skipped: 0
+221728 flanks left
+k85 run complete
+Total gaps closed so far = 340
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 340
+0.153%
+
+Fri Jun 26 08:46:26 PDT 2020: Done with k=85
+Fri Jun 26 08:46:26 PDT 2020: Running Sealer with k=90...
+Finding flanks
+222009 gaps found
+221733 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k90.bloom'...
+Bloom filter FPR: 1.49%
+Starting K run with k = 90
+Flanks inserted into k run = 221733
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+406 unique gaps closed for k90
+No start/goal kmer: 13814
+No path: 111600
+Unique path: 257
+Multiple paths: 149
+Too many paths: 7273
+Too many branches: 88870
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 5
+Exceeded mem limit: 0
+Skipped: 0
+221327 flanks left
+k90 run complete
+Total gaps closed so far = 406
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 406
+0.183%
+
+Fri Jun 26 12:17:53 PDT 2020: Done with k=90
+Fri Jun 26 12:17:53 PDT 2020: Running Sealer with k=95...
+Large value detected for k, increasing flank size to 150bp.
+Finding flanks
+221603 gaps found
+221603 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k95.bloom'...
+Bloom filter FPR: 1.45%
+Starting K run with k = 95
+Flanks inserted into k run = 221603
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+570 unique gaps closed for k95
+No start/goal kmer: 396
+No path: 132124
+Unique path: 373
+Multiple paths: 197
+Too many paths: 7062
+Too many branches: 81449
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 2
+Exceeded mem limit: 0
+Skipped: 0
+221033 flanks left
+k95 run complete
+Total gaps closed so far = 570
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 570
+0.257%
+
+Fri Jun 26 16:22:31 PDT 2020: Done with k=95
+Fri Jun 26 16:22:31 PDT 2020: Running Sealer with k=100...
+Large value detected for k, increasing flank size to 150bp.
+Finding flanks
+221033 gaps found
+221033 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k100.bloom'...
+Bloom filter FPR: 1.41%
+Starting K run with k = 100
+Flanks inserted into k run = 221033
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1077 unique gaps closed for k100
+No start/goal kmer: 921
+No path: 141503
+Unique path: 821
+Multiple paths: 256
+Too many paths: 5935
+Too many branches: 71596
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+219956 flanks left
+k100 run complete
+Total gaps closed so far = 1077
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 1077
+0.487%
+
+Fri Jun 26 20:10:46 PDT 2020: Done with k=100
+Fri Jun 26 20:10:46 PDT 2020: Running Sealer with k=105...
+Large value detected for k, increasing flank size to 150bp.
+Finding flanks
+219956 gaps found
+219956 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k105.bloom'...
+Bloom filter FPR: 1.35%
+Starting K run with k = 105
+Flanks inserted into k run = 219956
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
+500 gaps closed so far
+600 gaps closed so far
+700 gaps closed so far
+800 gaps closed so far
+900 gaps closed so far
+1000 gaps closed so far
+1003 unique gaps closed for k105
+No start/goal kmer: 2596
+No path: 152583
+Unique path: 731
+Multiple paths: 272
+Too many paths: 3671
+Too many branches: 60102
+Too many path/path mismatches: 0
+Too many path/read mismatches: 0
+Contains cycle: 1
+Exceeded mem limit: 0
+Skipped: 0
+218953 flanks left
+k105 run complete
+Total gaps closed so far = 1003
+
+K sweep complete
+Creating new scaffold with gaps closed...
+New scaffold complete
+Gaps closed = 1003
+0.456%
+
+Fri Jun 26 23:56:03 PDT 2020: Done with k=105
+Fri Jun 26 23:56:03 PDT 2020: Running Sealer with k=110...
+Large value detected for k, increasing flank size to 150bp.
+Finding flanks
+218953 gaps found
+218953 flanks extracted
+
+Loading bloom filter from `Bloomfilters/k110.bloom'...
+Bloom filter FPR: 1.28%
+Starting K run with k = 110
+Flanks inserted into k run = 218953
+100 gaps closed so far
+200 gaps closed so far
+300 gaps closed so far
+400 gaps closed so far
