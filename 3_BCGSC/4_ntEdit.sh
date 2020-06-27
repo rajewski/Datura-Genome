@@ -9,7 +9,7 @@
 #SBATCH -o ../history/ntEdit-%A.out
 set -e
 
-ASSEM=Dstr_v1.7_Iterative/Dstr_v1.7_l1n2r1n3_l1n3r1n3_l1n3r1n3r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2_l1n2_l1n1_edited.fa
+ASSEM=Dstr_v1.7_Iterative/Dstr_v1.7_lnr13_500bp_Sealer_ntEdit1_edited.fa
 # unfold the fasta file if necessary
 #awk 'BEGIN {RS=">";FS="\n";OFS=""} NR>1 {print ">"$1; $1=""; print}' /bigdata/littlab/arajewski/Datura/2_MaSuRCA338/flye/assembly.fasta > $ASSEM
 
@@ -40,7 +40,7 @@ ntedit \
     -f $ASSEM \
     -k $kmer \
     -r Dstr_k$kmer.bf \
-    -b Dstr_v1.7_Iterative/Dstr_v1.7_l1n2r1n3_l1n3r1n3_l1n3r1n3r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n2_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2r1n1_l1n2_l1n2_l1n2 \
+    -b Dstr_v1.7_Iterative/Dstr_v1.7_lnr13_500bp_Sealer_ntEdit2 \
     -v 0 \
     -m 1
 

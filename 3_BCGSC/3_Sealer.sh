@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --cpus-per-task=30
 #SBATCH --nodes=1
-#SBATCH --mem-per-cpu=7G
-#SBATCH --time=2-00:00:00
+#SBATCH --mem-per-cpu=13G
+#SBATCH --time=3-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/Sealer-%A.out
@@ -10,8 +10,8 @@ set -e
 
 #Get env right
 module load ABYSS/2.0.2
-ASSEM=Dstr_v1.7_lnr13_500bp.fa
-ASSEMDIR=Dstr_v1.7_Iterative
+ASSEM=Dstr_v1.4_iterative_l500.fa
+ASSEMDIR=Dstr_v1.4_SEALER
 ASSEMBASE=$(echo $ASSEM | sed 's/\.fa//g')
 gaps=(40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125)
 
@@ -40,12 +40,12 @@ do
     abyss-sealer \
 	-v \
 	-j $SLURM_CPUS_PER_TASK \
-	-s 7G \
+	-s $(($SLURM_MEM_PER_CPU/1024))G \
 	-b40G \
 	-L $flank \
 	-k$i \
 	-i Bloomfilters/k$i.bloom \
-	-G 2000 \
+	-G 4000 \
 	-o $ASSEMDIR/${ASSEMBASE}_Sealer_k${i} \
 	-S $ASSEMDIR/$ASSEM
     echo $(date): Done with k=$i

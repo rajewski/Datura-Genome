@@ -2,7 +2,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=30
 #SBATCH --nodes=1
-#SBATCH --mem-per-cpu=5G
+#SBATCH --mem-per-cpu=7G
 #SBATCH --time=09:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
@@ -16,9 +16,9 @@ module load busco/3.0.2
 #We need to downgrade our blast version to make it work
 module swap ncbi-blast ncbi-blast/2.2.30+
 
-ASSEM=merged_out_l500.fasta
-ASSEMPATH=/bigdata/littlab/arajewski/Datura/3_quickmerge/MaSuRCA_Ref/$ASSEM 
-BUSCOOUT=20200605_Dstr_v1.6_MasurcaRef
+ASSEM=Dstr_v1.4_iterative_l500.fa
+ASSEMPATH=/bigdata/littlab/arajewski/Datura/3_BCGSC/$ASSEM
+BUSCOOUT=20200626_Dstr_v1.4_l500
 
 #BUSCO also needs augustus, and because of the cluster environment I have to install it separately
 export PATH="/rhome/arajewski/bigdata/Datura/software/augustus/bin:$PATH"
