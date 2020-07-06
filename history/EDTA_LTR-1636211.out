@@ -1,0 +1,13 @@
+Mon Jun 29 15:18:08 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Mon Jun 29 15:19:07 PDT 2020	Start to find LTR candidates.
+
+Mon Jun 29 15:19:07 PDT 2020	Identify LTR retrotransposon candidates from scratch.
+
+slurmstepd-c08: error: _is_a_lwp: open() /proc/13997/status failed: No such file or directory
+slurmstepd-c08: error: _is_a_lwp: open() /proc/44279/status failed: No such file or directory
+slurmstepd-c08: error: _is_a_lwp: open() /proc/38572/status failed: No such file or directory
+Tue Jun 30 01:30:41 PDT 2020	Finish finding LTR candidates.
+
+Tue Jun 30 01:30:41 PDT 2020	Execution of EDTA_raw.pl is finished!
+

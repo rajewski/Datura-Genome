@@ -1,0 +1,2 @@
+ModuleCmd_Switch.c(172):ERROR:152: Module 'python/2.7.5' is currently not loaded
+slurmstepd-c04: error: *** JOB 1693652 ON c04 CANCELLED AT 2020-07-02T12:23:46 ***

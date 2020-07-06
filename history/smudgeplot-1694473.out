@@ -1,0 +1,108 @@
+Thu Jul 2 14:23:03 PDT 2020: Running KMC first.
+102400 and 100
+***********
+Stage 1: 0%Stage 1: 4%Stage 1: 8%Stage 1: 13%Stage 1: 17%Stage 1: 22%Stage 1: 26%Stage 1: 30%Stage 1: 35%Stage 1: 39%Stage 1: 44%Stage 1: 48%Stage 1: 53%Stage 1: 57%Stage 1: 61%Stage 1: 66%Stage 1: 70%Stage 1: 75%Stage 1: 79%Stage 1: 83%Stage 1: 88%Stage 1: 92%Stage 1: 97%Stage 1: 100%
+Stage 2: 0%Stage 2: 1%Stage 2: 2%Stage 2: 3%Stage 2: 4%Stage 2: 5%Stage 2: 6%Stage 2: 7%Stage 2: 8%Stage 2: 9%Stage 2: 10%Stage 2: 11%Stage 2: 12%Stage 2: 13%Stage 2: 14%Stage 2: 15%Stage 2: 16%Stage 2: 17%Stage 2: 18%Stage 2: 19%Stage 2: 20%Stage 2: 21%Stage 2: 22%Stage 2: 23%Stage 2: 24%Stage 2: 25%Stage 2: 26%Stage 2: 27%Stage 2: 28%Stage 2: 29%Stage 2: 30%Stage 2: 31%Stage 2: 32%Stage 2: 33%Stage 2: 34%Stage 2: 35%Stage 2: 36%Stage 2: 37%Stage 2: 38%Stage 2: 39%Stage 2: 40%Stage 2: 41%Stage 2: 42%Stage 2: 43%Stage 2: 44%Stage 2: 45%Stage 2: 46%Stage 2: 47%Stage 2: 48%Stage 2: 49%Stage 2: 50%Stage 2: 51%Stage 2: 52%Stage 2: 53%Stage 2: 54%Stage 2: 55%Stage 2: 56%Stage 2: 57%Stage 2: 58%Stage 2: 59%Stage 2: 60%Stage 2: 61%Stage 2: 62%Stage 2: 63%Stage 2: 64%Stage 2: 65%Stage 2: 66%Stage 2: 67%Stage 2: 68%Stage 2: 69%Stage 2: 70%Stage 2: 71%Stage 2: 72%Stage 2: 73%Stage 2: 74%Stage 2: 75%Stage 2: 76%Stage 2: 77%Stage 2: 78%Stage 2: 79%Stage 2: 80%Stage 2: 81%Stage 2: 82%Stage 2: 83%Stage 2: 84%Stage 2: 85%Stage 2: 86%Stage 2: 87%Stage 2: 88%Stage 2: 89%Stage 2: 90%Stage 2: 91%Stage 2: 92%Stage 2: 93%Stage 2: 94%Stage 2: 95%Stage 2: 96%Stage 2: 97%Stage 2: 98%Stage 2: 99%Stage 2: 100%
+1st stage: 95.6139s
+2nd stage: 52.105s
+Total    : 147.719s
+Tmp size : 6235MB
+
+Stats:
+   No. of k-mers below min. threshold :            0
+   No. of k-mers above max. threshold :            0
+   No. of unique k-mers               :   1853774028
+   No. of unique counted k-mers       :   1853774028
+   Total no. of k-mers                :   5476484214
+   Total no. of reads                 :    121803698
+   Total no. of super-k-mers          :    547004560
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 14:25:59 PDT 2020: Done with KMC.
+Thu Jul 2 14:25:59 PDT 2020: Running KMC first.
+102400 and 100
+***********
+Stage 1: 0%Stage 1: 5%Stage 1: 10%Stage 1: 15%Stage 1: 21%Stage 1: 26%Stage 1: 31%Stage 1: 37%Stage 1: 42%Stage 1: 47%Stage 1: 53%Stage 1: 58%Stage 1: 63%Stage 1: 69%Stage 1: 74%Stage 1: 79%Stage 1: 85%Stage 1: 90%Stage 1: 95%Stage 1: 96%Stage 1: 100%
+Stage 2: 0%Stage 2: 1%Stage 2: 2%Stage 2: 3%Stage 2: 4%Stage 2: 5%Stage 2: 6%Stage 2: 7%Stage 2: 8%Stage 2: 9%Stage 2: 10%Stage 2: 11%Stage 2: 12%Stage 2: 13%Stage 2: 14%Stage 2: 15%Stage 2: 16%Stage 2: 17%Stage 2: 18%Stage 2: 19%Stage 2: 20%Stage 2: 21%Stage 2: 22%Stage 2: 23%Stage 2: 24%Stage 2: 25%Stage 2: 26%Stage 2: 27%Stage 2: 28%Stage 2: 29%Stage 2: 30%Stage 2: 31%Stage 2: 32%Stage 2: 33%Stage 2: 34%Stage 2: 35%Stage 2: 36%Stage 2: 37%Stage 2: 38%Stage 2: 39%Stage 2: 40%Stage 2: 41%Stage 2: 42%Stage 2: 43%Stage 2: 44%Stage 2: 45%Stage 2: 46%Stage 2: 47%Stage 2: 48%Stage 2: 49%Stage 2: 50%Stage 2: 51%Stage 2: 52%Stage 2: 53%Stage 2: 54%Stage 2: 55%Stage 2: 56%Stage 2: 57%Stage 2: 58%Stage 2: 59%Stage 2: 60%Stage 2: 61%Stage 2: 62%Stage 2: 63%Stage 2: 64%Stage 2: 65%Stage 2: 66%Stage 2: 67%Stage 2: 68%Stage 2: 69%Stage 2: 70%Stage 2: 71%Stage 2: 72%Stage 2: 73%Stage 2: 74%Stage 2: 75%Stage 2: 76%Stage 2: 77%Stage 2: 78%Stage 2: 79%Stage 2: 80%Stage 2: 81%Stage 2: 82%Stage 2: 83%Stage 2: 84%Stage 2: 85%Stage 2: 86%Stage 2: 87%Stage 2: 88%Stage 2: 89%Stage 2: 90%Stage 2: 91%Stage 2: 92%Stage 2: 93%Stage 2: 94%Stage 2: 95%Stage 2: 96%Stage 2: 97%Stage 2: 98%Stage 2: 99%Stage 2: 100%
+1st stage: 81.2408s
+2nd stage: 45.3209s
+Total    : 126.562s
+Tmp size : 5166MB
+
+Stats:
+   No. of k-mers below min. threshold :            0
+   No. of k-mers above max. threshold :            0
+   No. of unique k-mers               :   1666094724
+   No. of unique counted k-mers       :   1666094724
+   Total no. of k-mers                :   4535736387
+   Total no. of reads                 :    100981276
+   Total no. of super-k-mers          :    453314627
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 14:28:32 PDT 2020: Done with KMC.
+Thu Jul 2 14:28:32 PDT 2020: Running KMC first.
+102400 and 100
+***********
+Stage 1: 0%Stage 1: 9%Stage 1: 19%Stage 1: 28%Stage 1: 38%Stage 1: 48%Stage 1: 57%Stage 1: 67%Stage 1: 77%Stage 1: 86%Stage 1: 96%Stage 1: 97%Stage 1: 100%
+Stage 2: 0%Stage 2: 1%Stage 2: 2%Stage 2: 3%Stage 2: 4%Stage 2: 5%Stage 2: 6%Stage 2: 7%Stage 2: 8%Stage 2: 9%Stage 2: 10%Stage 2: 11%Stage 2: 12%Stage 2: 13%Stage 2: 14%Stage 2: 15%Stage 2: 16%Stage 2: 17%Stage 2: 18%Stage 2: 19%Stage 2: 20%Stage 2: 21%Stage 2: 22%Stage 2: 23%Stage 2: 24%Stage 2: 25%Stage 2: 26%Stage 2: 27%Stage 2: 28%Stage 2: 29%Stage 2: 30%Stage 2: 31%Stage 2: 32%Stage 2: 33%Stage 2: 34%Stage 2: 35%Stage 2: 36%Stage 2: 37%Stage 2: 38%Stage 2: 39%Stage 2: 40%Stage 2: 41%Stage 2: 42%Stage 2: 43%Stage 2: 44%Stage 2: 45%Stage 2: 46%Stage 2: 47%Stage 2: 48%Stage 2: 49%Stage 2: 50%Stage 2: 51%Stage 2: 52%Stage 2: 53%Stage 2: 54%Stage 2: 55%Stage 2: 56%Stage 2: 57%Stage 2: 58%Stage 2: 59%Stage 2: 60%Stage 2: 61%Stage 2: 62%Stage 2: 63%Stage 2: 64%Stage 2: 65%Stage 2: 66%Stage 2: 67%Stage 2: 68%Stage 2: 69%Stage 2: 70%Stage 2: 71%Stage 2: 72%Stage 2: 73%Stage 2: 74%Stage 2: 75%Stage 2: 76%Stage 2: 77%Stage 2: 78%Stage 2: 79%Stage 2: 80%Stage 2: 81%Stage 2: 82%Stage 2: 83%Stage 2: 84%Stage 2: 85%Stage 2: 86%Stage 2: 87%Stage 2: 88%Stage 2: 89%Stage 2: 90%Stage 2: 91%Stage 2: 92%Stage 2: 93%Stage 2: 94%Stage 2: 95%Stage 2: 96%Stage 2: 97%Stage 2: 98%Stage 2: 99%Stage 2: 100%
+1st stage: 45.2852s
+2nd stage: 26.138s
+Total    : 71.4232s
+Tmp size : 2878MB
+
+Stats:
+   No. of k-mers below min. threshold :            0
+   No. of k-mers above max. threshold :            0
+   No. of unique k-mers               :   1099750488
+   No. of unique counted k-mers       :   1099750488
+   Total no. of k-mers                :   2523464291
+   Total no. of reads                 :     56481154
+   Total no. of super-k-mers          :    252663591
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 14:30:00 PDT 2020: Done with KMC.
+Thu Jul 2 14:30:00 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+152 120
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 14:34:07 PDT 2020: Done.
+Thu Jul 2 14:34:07 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+142 120
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 14:39:00 PDT 2020: Done.
+Thu Jul 2 14:39:00 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+149 120
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 14:43:07 PDT 2020: Done.
+Thu Jul 2 14:43:07 PDT 2020: Running Smudgeplot
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Traceback (most recent call last):
+  File "/rhome/arajewski/bin/smudgeplot.py", line 309, in <module>
+    main()
+  File "/rhome/arajewski/bin/smudgeplot.py", line 282, in main
+    middle_one_away(args)
+  File "/rhome/arajewski/bin/smudgeplot.py", line 177, in middle_one_away
+    kmer, coverage = dump_file.readline().split()
+ValueError: not enough values to unpack (expected 2, got 0)

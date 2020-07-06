@@ -1,0 +1,1945 @@
+ModuleCmd_Switch.c(172):ERROR:152: Module 'python/2.7.5' is currently not loaded
+Running Trim Galore on WT_1. ...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 60 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 60 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/RNA-seq/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ./WT_1_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+Unable to auto-detect most prominent adapter from the first specified file (count smallRNA: 1, count Nextera: 1, count Illumina: 0)
+Defaulting to Nextera adapter as next best option ( CTGTCTCTTATA ). Specify -a SEQUENCE to avoid this behavior).
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/WT_1_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./WT_1_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera; (assigned because of inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 60
+Writing final adapter and quality trimmed output to WT_1_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./WT_1_R1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./WT_1_R1.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 100.17 s (2 us/read; 33.46 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              55,862,778
+Reads with adapters:                24,467,686 (43.8%)
+Reads written (passing filters):    55,862,778 (100.0%)
+
+Total basepairs processed: 4,213,963,991 bp
+Quality-trimmed:              16,970,732 bp (0.4%)
+Total written (filtered):  4,163,934,720 bp (98.8%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 24467686 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.7%
+  C: 26.0%
+  G: 20.7%
+  T: 29.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	18751222	13965694.5	0	18751222
+2	4155476	3491423.6	0	4155476
+3	1197250	872855.9	0	1197250
+4	251865	218214.0	0	251865
+5	67800	54553.5	0	67800
+6	14752	13638.4	0	14752
+7	5177	3409.6	0	5177
+8	981	852.4	0	981
+9	1129	213.1	0	436 693
+10	1701	53.3	1	25 1676
+11	739	13.3	1	3 736
+12	299	3.3	1	2 297
+13	217	3.3	1	10 207
+14	152	3.3	1	1 151
+15	250	3.3	1	2 248
+16	196	3.3	1	2 194
+17	251	3.3	1	8 243
+18	605	3.3	1	2 603
+19	272	3.3	1	5 267
+20	208	3.3	1	0 208
+21	219	3.3	1	10 209
+22	283	3.3	1	4 279
+23	250	3.3	1	0 250
+24	333	3.3	1	0 333
+25	349	3.3	1	1 348
+26	272	3.3	1	1 271
+27	336	3.3	1	2 334
+28	276	3.3	1	0 276
+29	258	3.3	1	4 254
+30	379	3.3	1	1 378
+31	298	3.3	1	10 288
+32	291	3.3	1	0 291
+33	217	3.3	1	4 213
+34	246	3.3	1	0 246
+35	266	3.3	1	3 263
+36	182	3.3	1	1 181
+37	227	3.3	1	12 215
+38	336	3.3	1	0 336
+39	558	3.3	1	2 556
+40	238	3.3	1	2 236
+41	214	3.3	1	2 212
+42	152	3.3	1	3 149
+43	276	3.3	1	1 275
+44	395	3.3	1	4 391
+45	301	3.3	1	7 294
+46	182	3.3	1	2 180
+47	159	3.3	1	0 159
+48	343	3.3	1	2 341
+49	303	3.3	1	0 303
+50	307	3.3	1	1 306
+51	262	3.3	1	0 262
+52	259	3.3	1	2 257
+53	305	3.3	1	7 298
+54	622	3.3	1	21 601
+55	295	3.3	1	3 292
+56	289	3.3	1	1 288
+57	596	3.3	1	4 592
+58	197	3.3	1	6 191
+59	449	3.3	1	0 449
+60	224	3.3	1	1 223
+61	230	3.3	1	0 230
+62	301	3.3	1	2 299
+63	223	3.3	1	0 223
+64	440	3.3	1	0 440
+65	263	3.3	1	0 263
+66	200	3.3	1	1 199
+67	302	3.3	1	0 302
+68	553	3.3	1	0 553
+69	489	3.3	1	0 489
+70	236	3.3	1	0 236
+71	401	3.3	1	2 399
+72	277	3.3	1	4 273
+73	370	3.3	1	2 368
+74	349	3.3	1	1 348
+75	394	3.3	1	1 393
+76	172	3.3	1	0 172
+
+RUN STATISTICS FOR INPUT FILE: ./WT_1_R1.fastq.gz
+=============================================
+55862778 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/WT_1_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./WT_1_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera; (assigned because of inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 60
+Writing final adapter and quality trimmed output to WT_1_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./WT_1_R2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./WT_1_R2.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 100.67 s (2 us/read; 33.29 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              55,862,778
+Reads with adapters:                22,223,754 (39.8%)
+Reads written (passing filters):    55,862,778 (100.0%)
+
+Total basepairs processed: 4,217,479,803 bp
+Quality-trimmed:              31,279,940 bp (0.7%)
+Total written (filtered):  4,155,598,166 bp (98.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 22223754 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.8%
+  C: 22.7%
+  G: 25.4%
+  T: 28.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	16424821	13965694.5	0	16424821
+2	4116320	3491423.6	0	4116320
+3	1334763	872855.9	0	1334763
+4	256183	218214.0	0	256183
+5	61426	54553.5	0	61426
+6	11513	13638.4	0	11513
+7	4184	3409.6	0	4184
+8	845	852.4	0	845
+9	1041	213.1	0	357 684
+10	1110	53.3	1	5 1105
+11	681	13.3	1	15 666
+12	184	3.3	1	0 184
+13	178	3.3	1	7 171
+14	126	3.3	1	2 124
+15	184	3.3	1	3 181
+16	163	3.3	1	7 156
+17	180	3.3	1	1 179
+18	157	3.3	1	1 156
+19	170	3.3	1	1 169
+20	193	3.3	1	0 193
+21	186	3.3	1	0 186
+22	141	3.3	1	2 139
+23	161	3.3	1	1 160
+24	159	3.3	1	0 159
+25	164	3.3	1	6 158
+26	177	3.3	1	2 175
+27	167	3.3	1	1 166
+28	122	3.3	1	2 120
+29	165	3.3	1	5 160
+30	186	3.3	1	3 183
+31	199	3.3	1	5 194
+32	101	3.3	1	2 99
+33	160	3.3	1	10 150
+34	170	3.3	1	1 169
+35	176	3.3	1	0 176
+36	202	3.3	1	1 201
+37	135	3.3	1	1 134
+38	147	3.3	1	2 145
+39	231	3.3	1	2 229
+40	185	3.3	1	2 183
+41	179	3.3	1	11 168
+42	178	3.3	1	1 177
+43	186	3.3	1	3 183
+44	159	3.3	1	2 157
+45	187	3.3	1	0 187
+46	188	3.3	1	6 182
+47	220	3.3	1	2 218
+48	132	3.3	1	7 125
+49	158	3.3	1	1 157
+50	157	3.3	1	4 153
+51	138	3.3	1	5 133
+52	156	3.3	1	4 152
+53	152	3.3	1	2 150
+54	163	3.3	1	0 163
+55	119	3.3	1	2 117
+56	132	3.3	1	2 130
+57	218	3.3	1	17 201
+58	180	3.3	1	6 174
+59	162	3.3	1	2 160
+60	222	3.3	1	2 220
+61	197	3.3	1	7 190
+62	181	3.3	1	6 175
+63	185	3.3	1	6 179
+64	189	3.3	1	19 170
+65	172	3.3	1	1 171
+66	176	3.3	1	0 176
+67	158	3.3	1	6 152
+68	198	3.3	1	0 198
+69	188	3.3	1	6 182
+70	163	3.3	1	4 159
+71	219	3.3	1	12 207
+72	107	3.3	1	0 107
+73	128	3.3	1	0 128
+74	107	3.3	1	0 107
+75	139	3.3	1	4 135
+76	105	3.3	1	0 105
+
+RUN STATISTICS FOR INPUT FILE: ./WT_1_R2.fastq.gz
+=============================================
+55862778 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files WT_1_R1_trimmed.fq.gz and WT_1_R2_trimmed.fq.gz
+file_1: WT_1_R1_trimmed.fq.gz, file_2: WT_1_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: WT_1_R1_trimmed.fq.gz and WT_1_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to WT_1_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to WT_1_R2_val_2.fq.gz
+
+Total number of sequences analysed: 55862778
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 243187 (0.44%)
+
+Deleting both intermediate output files WT_1_R1_trimmed.fq.gz and WT_1_R2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on WT_2. ...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 60 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 60 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/RNA-seq/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ./WT_2_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	2	CTGTCTCTTATA	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Illumina	1	AGATCGGAAGAGC	1000000	0.00
+Using Nextera adapter for trimming (count: 2). Second best hit was smallRNA (count: 1)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/WT_2_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./WT_2_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 60
+Writing final adapter and quality trimmed output to WT_2_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./WT_2_R1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./WT_2_R1.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 89.66 s (2 us/read; 33.05 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              49,394,764
+Reads with adapters:                21,606,247 (43.7%)
+Reads written (passing filters):    49,394,764 (100.0%)
+
+Total basepairs processed: 3,727,810,101 bp
+Quality-trimmed:              14,101,832 bp (0.4%)
+Total written (filtered):  3,684,340,179 bp (98.8%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 21606247 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.8%
+  C: 25.8%
+  G: 20.7%
+  T: 29.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	16526974	12348691.0	0	16526974
+2	3688530	3087172.8	0	3688530
+3	1065701	771793.2	0	1065701
+4	223293	192948.3	0	223293
+5	57483	48237.1	0	57483
+6	12881	12059.3	0	12881
+7	4553	3014.8	0	4553
+8	983	753.7	0	983
+9	1163	188.4	0	616 547
+10	1858	47.1	1	124 1734
+11	650	11.8	1	12 638
+12	245	2.9	1	0 245
+13	323	2.9	1	6 317
+14	301	2.9	1	2 299
+15	487	2.9	1	2 485
+16	267	2.9	1	2 265
+17	424	2.9	1	9 415
+18	388	2.9	1	2 386
+19	310	2.9	1	3 307
+20	187	2.9	1	0 187
+21	201	2.9	1	2 199
+22	312	2.9	1	11 301
+23	247	2.9	1	1 246
+24	540	2.9	1	1 539
+25	433	2.9	1	1 432
+26	551	2.9	1	0 551
+27	347	2.9	1	0 347
+28	883	2.9	1	0 883
+29	317	2.9	1	2 315
+30	886	2.9	1	11 875
+31	257	2.9	1	5 252
+32	222	2.9	1	0 222
+33	253	2.9	1	8 245
+34	182	2.9	1	0 182
+35	240	2.9	1	8 232
+36	362	2.9	1	2 360
+37	405	2.9	1	0 405
+38	395	2.9	1	0 395
+39	1247	2.9	1	1 1246
+40	255	2.9	1	1 254
+41	281	2.9	1	5 276
+42	168	2.9	1	2 166
+43	263	2.9	1	2 261
+44	240	2.9	1	3 237
+45	242	2.9	1	1 241
+46	269	2.9	1	0 269
+47	208	2.9	1	0 208
+48	251	2.9	1	0 251
+49	535	2.9	1	1 534
+50	602	2.9	1	1 601
+51	489	2.9	1	0 489
+52	315	2.9	1	2 313
+53	381	2.9	1	2 379
+54	394	2.9	1	13 381
+55	188	2.9	1	0 188
+56	204	2.9	1	0 204
+57	397	2.9	1	0 397
+58	229	2.9	1	0 229
+59	394	2.9	1	6 388
+60	263	2.9	1	1 262
+61	279	2.9	1	0 279
+62	286	2.9	1	0 286
+63	302	2.9	1	1 301
+64	328	2.9	1	0 328
+65	231	2.9	1	1 230
+66	212	2.9	1	1 211
+67	188	2.9	1	0 188
+68	387	2.9	1	1 386
+69	352	2.9	1	3 349
+70	293	2.9	1	4 289
+71	302	2.9	1	1 301
+72	243	2.9	1	1 242
+73	243	2.9	1	4 239
+74	296	2.9	1	8 288
+75	276	2.9	1	0 276
+76	180	2.9	1	1 179
+
+RUN STATISTICS FOR INPUT FILE: ./WT_2_R1.fastq.gz
+=============================================
+49394764 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/WT_2_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./WT_2_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 60
+Writing final adapter and quality trimmed output to WT_2_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./WT_2_R2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./WT_2_R2.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 90.33 s (2 us/read; 32.81 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              49,394,764
+Reads with adapters:                19,661,159 (39.8%)
+Reads written (passing filters):    49,394,764 (100.0%)
+
+Total basepairs processed: 3,729,278,930 bp
+Quality-trimmed:              28,619,569 bp (0.8%)
+Total written (filtered):  3,673,627,635 bp (98.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 19661159 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.7%
+  C: 23.2%
+  G: 25.3%
+  T: 27.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	14559268	12348691.0	0	14559268
+2	3624332	3087172.8	0	3624332
+3	1174664	771793.2	0	1174664
+4	221367	192948.3	0	221367
+5	52517	48237.1	0	52517
+6	11627	12059.3	0	11627
+7	4079	3014.8	0	4079
+8	869	753.7	0	869
+9	1194	188.4	0	413 781
+10	1096	47.1	1	2 1094
+11	614	11.8	1	21 593
+12	153	2.9	1	0 153
+13	124	2.9	1	1 123
+14	159	2.9	1	2 157
+15	131	2.9	1	3 128
+16	158	2.9	1	1 157
+17	126	2.9	1	2 124
+18	159	2.9	1	2 157
+19	139	2.9	1	0 139
+20	141	2.9	1	2 139
+21	129	2.9	1	0 129
+22	136	2.9	1	1 135
+23	147	2.9	1	5 142
+24	160	2.9	1	2 158
+25	121	2.9	1	3 118
+26	130	2.9	1	2 128
+27	145	2.9	1	1 144
+28	156	2.9	1	0 156
+29	152	2.9	1	3 149
+30	176	2.9	1	6 170
+31	165	2.9	1	3 162
+32	138	2.9	1	2 136
+33	144	2.9	1	5 139
+34	119	2.9	1	1 118
+35	192	2.9	1	2 190
+36	159	2.9	1	0 159
+37	144	2.9	1	9 135
+38	136	2.9	1	1 135
+39	139	2.9	1	0 139
+40	146	2.9	1	1 145
+41	134	2.9	1	2 132
+42	173	2.9	1	2 171
+43	99	2.9	1	1 98
+44	175	2.9	1	4 171
+45	182	2.9	1	1 181
+46	123	2.9	1	1 122
+47	197	2.9	1	2 195
+48	138	2.9	1	2 136
+49	167	2.9	1	0 167
+50	154	2.9	1	1 153
+51	151	2.9	1	3 148
+52	164	2.9	1	5 159
+53	112	2.9	1	0 112
+54	143	2.9	1	3 140
+55	135	2.9	1	0 135
+56	120	2.9	1	1 119
+57	171	2.9	1	1 170
+58	119	2.9	1	3 116
+59	171	2.9	1	2 169
+60	173	2.9	1	0 173
+61	153	2.9	1	3 150
+62	173	2.9	1	4 169
+63	193	2.9	1	1 192
+64	166	2.9	1	23 143
+65	173	2.9	1	18 155
+66	140	2.9	1	1 139
+67	120	2.9	1	4 116
+68	235	2.9	1	2 233
+69	175	2.9	1	4 171
+70	141	2.9	1	8 133
+71	141	2.9	1	0 141
+72	93	2.9	1	1 92
+73	89	2.9	1	2 87
+74	123	2.9	1	3 120
+75	109	2.9	1	5 104
+76	83	2.9	1	0 83
+
+RUN STATISTICS FOR INPUT FILE: ./WT_2_R2.fastq.gz
+=============================================
+49394764 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files WT_2_R1_trimmed.fq.gz and WT_2_R2_trimmed.fq.gz
+file_1: WT_2_R1_trimmed.fq.gz, file_2: WT_2_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: WT_2_R1_trimmed.fq.gz and WT_2_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to WT_2_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to WT_2_R2_val_2.fq.gz
+
+Total number of sequences analysed: 49394764
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 171914 (0.35%)
+
+Deleting both intermediate output files WT_2_R1_trimmed.fq.gz and WT_2_R2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on WT_3. ...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 60 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 60 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/RNA-seq/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ./WT_3_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+Using Nextera adapter for trimming (count: 3). Second best hit was smallRNA (count: 0)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/WT_3_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./WT_3_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 60
+Writing final adapter and quality trimmed output to WT_3_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./WT_3_R1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./WT_3_R1.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 112.42 s (2 us/read; 33.65 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              63,053,760
+Reads with adapters:                27,748,134 (44.0%)
+Reads written (passing filters):    63,053,760 (100.0%)
+
+Total basepairs processed: 4,760,790,438 bp
+Quality-trimmed:              15,541,825 bp (0.3%)
+Total written (filtered):  4,707,582,886 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 27748134 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.6%
+  C: 26.1%
+  G: 20.7%
+  T: 29.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	21257986	15763440.0	0	21257986
+2	4707020	3940860.0	0	4707020
+3	1362100	985215.0	0	1362100
+4	287588	246303.8	0	287588
+5	78517	61575.9	0	78517
+6	16845	15394.0	0	16845
+7	5756	3848.5	0	5756
+8	1178	962.1	0	1178
+9	1385	240.5	0	656 729
+10	2068	60.1	1	100 1968
+11	879	15.0	1	24 855
+12	318	3.8	1	1 317
+13	300	3.8	1	6 294
+14	333	3.8	1	1 332
+15	515	3.8	1	6 509
+16	196	3.8	1	1 195
+17	457	3.8	1	12 445
+18	558	3.8	1	1 557
+19	349	3.8	1	4 345
+20	240	3.8	1	2 238
+21	288	3.8	1	4 284
+22	369	3.8	1	9 360
+23	341	3.8	1	6 335
+24	569	3.8	1	0 569
+25	457	3.8	1	1 456
+26	579	3.8	1	7 572
+27	412	3.8	1	1 411
+28	734	3.8	1	8 726
+29	384	3.8	1	2 382
+30	825	3.8	1	12 813
+31	377	3.8	1	5 372
+32	312	3.8	1	4 308
+33	292	3.8	1	11 281
+34	235	3.8	1	1 234
+35	359	3.8	1	4 355
+36	387	3.8	1	1 386
+37	436	3.8	1	3 433
+38	474	3.8	1	0 474
+39	1240	3.8	1	0 1240
+40	273	3.8	1	0 273
+41	312	3.8	1	1 311
+42	211	3.8	1	3 208
+43	312	3.8	1	8 304
+44	349	3.8	1	1 348
+45	395	3.8	1	0 395
+46	345	3.8	1	2 343
+47	272	3.8	1	0 272
+48	395	3.8	1	2 393
+49	705	3.8	1	1 704
+50	608	3.8	1	1 607
+51	497	3.8	1	0 497
+52	353	3.8	1	2 351
+53	507	3.8	1	2 505
+54	555	3.8	1	7 548
+55	219	3.8	1	1 218
+56	313	3.8	1	0 313
+57	639	3.8	1	4 635
+58	293	3.8	1	9 284
+59	576	3.8	1	3 573
+60	330	3.8	1	6 324
+61	371	3.8	1	1 370
+62	435	3.8	1	1 434
+63	397	3.8	1	0 397
+64	506	3.8	1	0 506
+65	275	3.8	1	1 274
+66	234	3.8	1	2 232
+67	264	3.8	1	2 262
+68	510	3.8	1	0 510
+69	535	3.8	1	0 535
+70	307	3.8	1	0 307
+71	414	3.8	1	3 411
+72	318	3.8	1	2 316
+73	379	3.8	1	0 379
+74	347	3.8	1	9 338
+75	444	3.8	1	2 442
+76	281	3.8	1	2 279
+
+RUN STATISTICS FOR INPUT FILE: ./WT_3_R1.fastq.gz
+=============================================
+63053760 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/WT_3_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./WT_3_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 60
+Writing final adapter and quality trimmed output to WT_3_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./WT_3_R2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./WT_3_R2.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 114.55 s (2 us/read; 33.03 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              63,053,760
+Reads with adapters:                25,413,126 (40.3%)
+Reads written (passing filters):    63,053,760 (100.0%)
+
+Total basepairs processed: 4,760,717,765 bp
+Quality-trimmed:              30,067,640 bp (0.6%)
+Total written (filtered):  4,695,708,205 bp (98.6%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 25413126 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.5%
+  C: 23.2%
+  G: 25.3%
+  T: 28.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	18797660	15763440.0	0	18797660
+2	4703715	3940860.0	0	4703715
+3	1517160	985215.0	0	1517160
+4	288127	246303.8	0	288127
+5	70722	61575.9	0	70722
+6	13746	15394.0	0	13746
+7	6002	3848.5	0	6002
+8	1023	962.1	0	1023
+9	1210	240.5	0	469 741
+10	1217	60.1	1	8 1209
+11	821	15.0	1	29 792
+12	211	3.8	1	0 211
+13	170	3.8	1	2 168
+14	193	3.8	1	0 193
+15	183	3.8	1	1 182
+16	200	3.8	1	1 199
+17	158	3.8	1	1 157
+18	218	3.8	1	1 217
+19	150	3.8	1	0 150
+20	156	3.8	1	0 156
+21	197	3.8	1	0 197
+22	133	3.8	1	1 132
+23	213	3.8	1	5 208
+24	193	3.8	1	1 192
+25	177	3.8	1	2 175
+26	181	3.8	1	3 178
+27	138	3.8	1	4 134
+28	194	3.8	1	5 189
+29	175	3.8	1	5 170
+30	182	3.8	1	0 182
+31	226	3.8	1	3 223
+32	156	3.8	1	4 152
+33	178	3.8	1	7 171
+34	185	3.8	1	2 183
+35	175	3.8	1	5 170
+36	202	3.8	1	1 201
+37	148	3.8	1	7 141
+38	135	3.8	1	1 134
+39	212	3.8	1	2 210
+40	184	3.8	1	0 184
+41	166	3.8	1	4 162
+42	181	3.8	1	0 181
+43	150	3.8	1	0 150
+44	153	3.8	1	2 151
+45	202	3.8	1	1 201
+46	170	3.8	1	2 168
+47	186	3.8	1	1 185
+48	158	3.8	1	3 155
+49	165	3.8	1	1 164
+50	228	3.8	1	2 226
+51	163	3.8	1	15 148
+52	181	3.8	1	0 181
+53	160	3.8	1	1 159
+54	157	3.8	1	2 155
+55	168	3.8	1	6 162
+56	214	3.8	1	3 211
+57	213	3.8	1	6 207
+58	169	3.8	1	2 167
+59	250	3.8	1	2 248
+60	176	3.8	1	1 175
+61	216	3.8	1	7 209
+62	212	3.8	1	8 204
+63	199	3.8	1	6 193
+64	226	3.8	1	14 212
+65	198	3.8	1	22 176
+66	158	3.8	1	1 157
+67	176	3.8	1	9 167
+68	289	3.8	1	0 289
+69	197	3.8	1	7 190
+70	189	3.8	1	3 186
+71	183	3.8	1	6 177
+72	83	3.8	1	0 83
+73	133	3.8	1	4 129
+74	170	3.8	1	4 166
+75	164	3.8	1	7 157
+76	97	3.8	1	4 93
+
+RUN STATISTICS FOR INPUT FILE: ./WT_3_R2.fastq.gz
+=============================================
+63053760 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files WT_3_R1_trimmed.fq.gz and WT_3_R2_trimmed.fq.gz
+file_1: WT_3_R1_trimmed.fq.gz, file_2: WT_3_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: WT_3_R1_trimmed.fq.gz and WT_3_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to WT_3_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to WT_3_R2_val_2.fq.gz
+
+Total number of sequences analysed: 63053760
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 148056 (0.23%)
+
+Deleting both intermediate output files WT_3_R1_trimmed.fq.gz and WT_3_R2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on GFP_1. ...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 60 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 60 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/RNA-seq/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ./GFP_1_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+Illumina	1	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 3). Second best hit was Illumina (count: 1)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/GFP_1_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./GFP_1_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 60
+Writing final adapter and quality trimmed output to GFP_1_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./GFP_1_R1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./GFP_1_R1.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 70.28 s (2 us/read; 32.90 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              38,538,393
+Reads with adapters:                16,502,597 (42.8%)
+Reads written (passing filters):    38,538,393 (100.0%)
+
+Total basepairs processed: 2,889,900,028 bp
+Quality-trimmed:              26,999,226 bp (0.9%)
+Total written (filtered):  2,840,540,910 bp (98.3%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 16502597 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 24.3%
+  C: 25.1%
+  G: 20.8%
+  T: 29.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	12544350	9634598.2	0	12544350
+2	2869533	2408649.6	0	2869533
+3	840550	602162.4	0	840550
+4	175792	150540.6	0	175792
+5	43684	37635.1	0	43684
+6	10177	9408.8	0	10177
+7	3701	2352.2	0	3701
+8	829	588.0	0	829
+9	751	147.0	0	318 433
+10	1147	36.8	1	27 1120
+11	526	9.2	1	5 521
+12	206	2.3	1	1 205
+13	174	2.3	1	1 173
+14	153	2.3	1	2 151
+15	182	2.3	1	2 180
+16	121	2.3	1	1 120
+17	178	2.3	1	9 169
+18	226	2.3	1	4 222
+19	179	2.3	1	10 169
+20	149	2.3	1	0 149
+21	147	2.3	1	3 144
+22	190	2.3	1	9 181
+23	167	2.3	1	7 160
+24	138	2.3	1	0 138
+25	227	2.3	1	1 226
+26	188	2.3	1	2 186
+27	193	2.3	1	0 193
+28	154	2.3	1	0 154
+29	160	2.3	1	7 153
+30	189	2.3	1	7 182
+31	181	2.3	1	3 178
+32	147	2.3	1	1 146
+33	158	2.3	1	7 151
+34	113	2.3	1	3 110
+35	164	2.3	1	9 155
+36	157	2.3	1	4 153
+37	162	2.3	1	1 161
+38	195	2.3	1	0 195
+39	243	2.3	1	1 242
+40	188	2.3	1	2 186
+41	150	2.3	1	3 147
+42	94	2.3	1	1 93
+43	158	2.3	1	2 156
+44	269	2.3	1	3 266
+45	142	2.3	1	0 142
+46	151	2.3	1	0 151
+47	161	2.3	1	0 161
+48	183	2.3	1	4 179
+49	225	2.3	1	0 225
+50	207	2.3	1	0 207
+51	198	2.3	1	1 197
+52	125	2.3	1	0 125
+53	175	2.3	1	1 174
+54	207	2.3	1	3 204
+55	162	2.3	1	3 159
+56	155	2.3	1	0 155
+57	227	2.3	1	1 226
+58	170	2.3	1	8 162
+59	237	2.3	1	0 237
+60	108	2.3	1	3 105
+61	173	2.3	1	2 171
+62	189	2.3	1	0 189
+63	175	2.3	1	0 175
+64	225	2.3	1	1 224
+65	168	2.3	1	2 166
+66	146	2.3	1	4 142
+67	122	2.3	1	0 122
+68	259	2.3	1	3 256
+69	287	2.3	1	0 287
+70	179	2.3	1	0 179
+71	272	2.3	1	3 269
+72	154	2.3	1	0 154
+73	201	2.3	1	1 200
+74	177	2.3	1	2 175
+75	182	2.3	1	2 180
+76	115	2.3	1	4 111
+
+RUN STATISTICS FOR INPUT FILE: ./GFP_1_R1.fastq.gz
+=============================================
+38538393 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/GFP_1_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./GFP_1_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 60
+Writing final adapter and quality trimmed output to GFP_1_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./GFP_1_R2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./GFP_1_R2.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 70.80 s (2 us/read; 32.66 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              38,538,393
+Reads with adapters:                14,345,820 (37.2%)
+Reads written (passing filters):    38,538,393 (100.0%)
+
+Total basepairs processed: 2,908,876,773 bp
+Quality-trimmed:              36,214,428 bp (1.2%)
+Total written (filtered):  2,852,580,232 bp (98.1%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 14345820 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.8%
+  C: 22.2%
+  G: 25.6%
+  T: 28.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	10492809	9634598.2	0	10492809
+2	2664064	2408649.6	0	2664064
+3	951032	602162.4	0	951032
+4	174832	150540.6	0	174832
+5	39807	37635.1	0	39807
+6	8221	9408.8	0	8221
+7	2483	2352.2	0	2483
+8	565	588.0	0	565
+9	713	147.0	0	215 498
+10	1116	36.8	1	21 1095
+11	732	9.2	1	22 710
+12	140	2.3	1	1 139
+13	113	2.3	1	0 113
+14	130	2.3	1	3 127
+15	151	2.3	1	3 148
+16	130	2.3	1	1 129
+17	132	2.3	1	2 130
+18	189	2.3	1	3 186
+19	141	2.3	1	0 141
+20	121	2.3	1	0 121
+21	146	2.3	1	0 146
+22	129	2.3	1	0 129
+23	147	2.3	1	5 142
+24	166	2.3	1	0 166
+25	135	2.3	1	3 132
+26	194	2.3	1	2 192
+27	178	2.3	1	2 176
+28	184	2.3	1	0 184
+29	147	2.3	1	2 145
+30	183	2.3	1	1 182
+31	192	2.3	1	2 190
+32	149	2.3	1	2 147
+33	135	2.3	1	6 129
+34	127	2.3	1	2 125
+35	146	2.3	1	0 146
+36	167	2.3	1	0 167
+37	129	2.3	1	2 127
+38	127	2.3	1	1 126
+39	155	2.3	1	0 155
+40	143	2.3	1	1 142
+41	122	2.3	1	3 119
+42	156	2.3	1	0 156
+43	110	2.3	1	0 110
+44	152	2.3	1	0 152
+45	157	2.3	1	0 157
+46	163	2.3	1	1 162
+47	136	2.3	1	1 135
+48	120	2.3	1	3 117
+49	128	2.3	1	0 128
+50	142	2.3	1	1 141
+51	97	2.3	1	4 93
+52	145	2.3	1	0 145
+53	151	2.3	1	3 148
+54	136	2.3	1	4 132
+55	119	2.3	1	0 119
+56	102	2.3	1	4 98
+57	195	2.3	1	4 191
+58	178	2.3	1	2 176
+59	174	2.3	1	3 171
+60	176	2.3	1	0 176
+61	120	2.3	1	3 117
+62	130	2.3	1	0 130
+63	140	2.3	1	4 136
+64	126	2.3	1	6 120
+65	217	2.3	1	4 213
+66	156	2.3	1	3 153
+67	135	2.3	1	3 132
+68	177	2.3	1	3 174
+69	191	2.3	1	6 185
+70	173	2.3	1	3 170
+71	153	2.3	1	1 152
+72	91	2.3	1	0 91
+73	125	2.3	1	7 118
+74	155	2.3	1	1 154
+75	108	2.3	1	5 103
+76	64	2.3	1	2 62
+
+RUN STATISTICS FOR INPUT FILE: ./GFP_1_R2.fastq.gz
+=============================================
+38538393 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files GFP_1_R1_trimmed.fq.gz and GFP_1_R2_trimmed.fq.gz
+file_1: GFP_1_R1_trimmed.fq.gz, file_2: GFP_1_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: GFP_1_R1_trimmed.fq.gz and GFP_1_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to GFP_1_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to GFP_1_R2_val_2.fq.gz
+
+Total number of sequences analysed: 38538393
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 570234 (1.48%)
+
+Deleting both intermediate output files GFP_1_R1_trimmed.fq.gz and GFP_1_R2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on GFP_2. ...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 60 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 60 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/RNA-seq/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ./GFP_2_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+smallRNA	3	TGGAATTCTCGG	1000000	0.00
+Nextera	2	CTGTCTCTTATA	1000000	0.00
+Illumina	1	AGATCGGAAGAGC	1000000	0.00
+Using smallRNA adapter for trimming (count: 3). Second best hit was Nextera (count: 2)
+
+Reducing length cutoff to 18bp for small RNA-Seq reads because a cutoff of 20bp may remove some short species of small RNAs if they had been trimmed by 1,2 or 3bp
+Setting the Illumina smallRNA 5' adapter as adapter 2: 'GATCGTCGGACT'
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/GFP_2_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./GFP_2_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'TGGAATTCTCGG' (Illumina small RNA adapter; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Optional adapter 2 sequence (only used for read 2 of paired-end files): 'GATCGTCGGACT'
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 18 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 60
+Writing final adapter and quality trimmed output to GFP_2_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'TGGAATTCTCGG' from file ./GFP_2_R1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a TGGAATTCTCGG ./GFP_2_R1.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 98.31 s (2 us/read; 33.40 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              54,718,339
+Reads with adapters:                24,603,272 (45.0%)
+Reads written (passing filters):    54,718,339 (100.0%)
+
+Total basepairs processed: 4,121,218,795 bp
+Quality-trimmed:              21,788,753 bp (0.5%)
+Total written (filtered):  4,065,967,627 bp (98.7%)
+
+=== Adapter 1 ===
+
+Sequence: TGGAATTCTCGG; Type: regular 3'; Length: 12; Trimmed: 24603272 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 26.3%
+  C: 23.3%
+  G: 17.2%
+  T: 33.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	18411122	13679584.8	0	18411122
+2	4841856	3419896.2	0	4841856
+3	1140005	854974.0	0	1140005
+4	114393	213743.5	0	114393
+5	27872	53435.9	0	27872
+6	28125	13359.0	0	28125
+7	7980	3339.7	0	7980
+8	1586	834.9	0	1586
+9	2998	208.7	0	358 2640
+10	4150	52.2	1	94 4056
+11	937	13.0	1	0 937
+12	244	3.3	1	2 242
+13	162	3.3	1	3 159
+14	139	3.3	1	1 138
+15	156	3.3	1	0 156
+16	162	3.3	1	2 160
+17	367	3.3	1	4 363
+18	103	3.3	1	0 103
+19	471	3.3	1	5 466
+20	248	3.3	1	1 247
+21	262	3.3	1	1 261
+22	312	3.3	1	0 312
+23	287	3.3	1	4 283
+24	162	3.3	1	0 162
+25	265	3.3	1	0 265
+26	282	3.3	1	0 282
+27	317	3.3	1	0 317
+28	183	3.3	1	0 183
+29	179	3.3	1	2 177
+30	209	3.3	1	0 209
+31	462	3.3	1	8 454
+32	301	3.3	1	2 299
+33	166	3.3	1	12 154
+34	279	3.3	1	25 254
+35	187	3.3	1	0 187
+36	189	3.3	1	2 187
+37	476	3.3	1	3 473
+38	167	3.3	1	1 166
+39	199	3.3	1	1 198
+40	285	3.3	1	3 282
+41	1495	3.3	1	10 1485
+42	209	3.3	1	10 199
+43	265	3.3	1	54 211
+44	263	3.3	1	0 263
+45	251	3.3	1	1 250
+46	172	3.3	1	0 172
+47	279	3.3	1	2 277
+48	517	3.3	1	2 515
+49	1948	3.3	1	12 1936
+50	144	3.3	1	0 144
+51	170	3.3	1	2 168
+52	853	3.3	1	3 850
+53	640	3.3	1	1 639
+54	165	3.3	1	0 165
+55	401	3.3	1	1 400
+56	364	3.3	1	0 364
+57	489	3.3	1	0 489
+58	857	3.3	1	1 856
+59	236	3.3	1	0 236
+60	322	3.3	1	6 316
+61	152	3.3	1	0 152
+62	190	3.3	1	0 190
+63	408	3.3	1	0 408
+64	588	3.3	1	1 587
+65	350	3.3	1	0 350
+66	218	3.3	1	0 218
+67	636	3.3	1	0 636
+68	592	3.3	1	1 591
+69	99	3.3	1	0 99
+70	88	3.3	1	0 88
+71	60	3.3	1	0 60
+72	66	3.3	1	0 66
+73	282	3.3	1	0 282
+74	382	3.3	1	2 380
+75	482	3.3	1	4 478
+76	394	3.3	1	2 392
+
+RUN STATISTICS FOR INPUT FILE: ./GFP_2_R1.fastq.gz
+=============================================
+54718339 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/GFP_2_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./GFP_2_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'TGGAATTCTCGG' (Illumina small RNA adapter; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Optional adapter 2 sequence (only used for read 2 of paired-end files): 'GATCGTCGGACT'
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 18 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 60
+Writing final adapter and quality trimmed output to GFP_2_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'GATCGTCGGACT' from file ./GFP_2_R2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a GATCGTCGGACT ./GFP_2_R2.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 98.91 s (2 us/read; 33.19 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              54,718,339
+Reads with adapters:                17,187,214 (31.4%)
+Reads written (passing filters):    54,718,339 (100.0%)
+
+Total basepairs processed: 4,129,951,686 bp
+Quality-trimmed:              36,435,288 bp (0.9%)
+Total written (filtered):  4,070,795,946 bp (98.6%)
+
+=== Adapter 1 ===
+
+Sequence: GATCGTCGGACT; Type: regular 3'; Length: 12; Trimmed: 17187214 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 12.0%
+  C: 11.9%
+  G: 33.9%
+  T: 42.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	13563056	13679584.8	0	13563056
+2	2232367	3419896.2	0	2232367
+3	1102649	854974.0	0	1102649
+4	239905	213743.5	0	239905
+5	29898	53435.9	0	29898
+6	8940	13359.0	0	8940
+7	3241	3339.7	0	3241
+8	522	834.9	0	522
+9	1119	208.7	0	175 944
+10	767	52.2	1	25 742
+11	203	13.0	1	4 199
+12	68	3.3	1	1 67
+13	103	3.3	1	0 103
+14	79	3.3	1	1 78
+15	147	3.3	1	0 147
+16	171	3.3	1	3 168
+17	180	3.3	1	2 178
+18	75	3.3	1	0 75
+19	88	3.3	1	0 88
+20	78	3.3	1	0 78
+21	101	3.3	1	6 95
+22	94	3.3	1	0 94
+23	58	3.3	1	0 58
+24	72	3.3	1	0 72
+25	43	3.3	1	0 43
+26	49	3.3	1	6 43
+27	146	3.3	1	13 133
+28	107	3.3	1	8 99
+29	115	3.3	1	1 114
+30	137	3.3	1	6 131
+31	74	3.3	1	0 74
+32	108	3.3	1	0 108
+33	92	3.3	1	0 92
+34	76	3.3	1	1 75
+35	65	3.3	1	0 65
+36	117	3.3	1	0 117
+37	81	3.3	1	0 81
+38	43	3.3	1	0 43
+39	89	3.3	1	0 89
+40	39	3.3	1	0 39
+41	44	3.3	1	1 43
+42	62	3.3	1	4 58
+43	74	3.3	1	24 50
+44	44	3.3	1	0 44
+45	38	3.3	1	0 38
+46	70	3.3	1	23 47
+47	20	3.3	1	0 20
+48	39	3.3	1	0 39
+49	50	3.3	1	0 50
+50	117	3.3	1	0 117
+51	31	3.3	1	0 31
+52	58	3.3	1	0 58
+53	16	3.3	1	0 16
+54	34	3.3	1	2 32
+55	51	3.3	1	2 49
+56	66	3.3	1	11 55
+57	44	3.3	1	4 40
+58	28	3.3	1	16 12
+59	77	3.3	1	2 75
+60	35	3.3	1	0 35
+61	53	3.3	1	4 49
+62	96	3.3	1	26 70
+63	44	3.3	1	1 43
+64	48	3.3	1	1 47
+65	36	3.3	1	0 36
+66	114	3.3	1	0 114
+67	31	3.3	1	0 31
+68	82	3.3	1	0 82
+69	41	3.3	1	0 41
+70	73	3.3	1	1 72
+71	56	3.3	1	0 56
+72	80	3.3	1	2 78
+73	27	3.3	1	0 27
+74	22	3.3	1	0 22
+75	39	3.3	1	0 39
+76	12	3.3	1	0 12
+
+RUN STATISTICS FOR INPUT FILE: ./GFP_2_R2.fastq.gz
+=============================================
+54718339 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files GFP_2_R1_trimmed.fq.gz and GFP_2_R2_trimmed.fq.gz
+file_1: GFP_2_R1_trimmed.fq.gz, file_2: GFP_2_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: GFP_2_R1_trimmed.fq.gz and GFP_2_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to GFP_2_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to GFP_2_R2_val_2.fq.gz
+
+Total number of sequences analysed: 54718339
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (18 bp): 397350 (0.73%)
+
+Deleting both intermediate output files GFP_2_R1_trimmed.fq.gz and GFP_2_R2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.
+Running Trim Galore on GFP_3. ...
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 60 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 2.10
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 60 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /bigdata/littlab/arajewski/Datura/RNA-seq/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> ./GFP_3_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+smallRNA	2	TGGAATTCTCGG	1000000	0.00
+Nextera	2	CTGTCTCTTATA	1000000	0.00
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+Unable to auto-detect most prominent adapter from the first specified file (count smallRNA: 2, count Nextera: 2, count Illumina: 0)
+Defaulting to Nextera adapter as next best option ( CTGTCTCTTATA ). Specify -a SEQUENCE to avoid this behavior).
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/GFP_3_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./GFP_3_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera; (assigned because of inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j 60
+Writing final adapter and quality trimmed output to GFP_3_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./GFP_3_R1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./GFP_3_R1.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 107.75 s (2 us/read; 32.96 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              59,190,310
+Reads with adapters:                26,077,008 (44.1%)
+Reads written (passing filters):    59,190,310 (100.0%)
+
+Total basepairs processed: 4,467,934,432 bp
+Quality-trimmed:              15,966,916 bp (0.4%)
+Total written (filtered):  4,416,820,758 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 26077008 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.4%
+  C: 26.7%
+  G: 20.8%
+  T: 29.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	20134613	14797577.5	0	20134613
+2	4322600	3699394.4	0	4322600
+3	1240637	924848.6	0	1240637
+4	257718	231212.1	0	257718
+5	75003	57803.0	0	75003
+6	14410	14450.8	0	14410
+7	4702	3612.7	0	4702
+8	905	903.2	0	905
+9	1027	225.8	0	412 615
+10	1426	56.4	1	27 1399
+11	789	14.1	1	10 779
+12	266	3.5	1	2 264
+13	156	3.5	1	2 154
+14	161	3.5	1	1 160
+15	189	3.5	1	7 182
+16	167	3.5	1	0 167
+17	291	3.5	1	9 282
+18	768	3.5	1	3 765
+19	200	3.5	1	7 193
+20	204	3.5	1	1 203
+21	213	3.5	1	3 210
+22	356	3.5	1	4 352
+23	226	3.5	1	0 226
+24	310	3.5	1	2 308
+25	460	3.5	1	0 460
+26	301	3.5	1	0 301
+27	331	3.5	1	1 330
+28	335	3.5	1	1 334
+29	290	3.5	1	5 285
+30	459	3.5	1	4 455
+31	404	3.5	1	4 400
+32	327	3.5	1	0 327
+33	212	3.5	1	3 209
+34	271	3.5	1	2 269
+35	339	3.5	1	4 335
+36	229	3.5	1	10 219
+37	263	3.5	1	1 262
+38	297	3.5	1	0 297
+39	757	3.5	1	0 757
+40	259	3.5	1	0 259
+41	227	3.5	1	2 225
+42	202	3.5	1	3 199
+43	254	3.5	1	2 252
+44	422	3.5	1	1 421
+45	373	3.5	1	1 372
+46	235	3.5	1	0 235
+47	256	3.5	1	0 256
+48	400	3.5	1	3 397
+49	587	3.5	1	3 584
+50	478	3.5	1	1 477
+51	277	3.5	1	4 273
+52	314	3.5	1	0 314
+53	503	3.5	1	0 503
+54	800	3.5	1	8 792
+55	248	3.5	1	3 245
+56	357	3.5	1	1 356
+57	820	3.5	1	1 819
+58	235	3.5	1	6 229
+59	608	3.5	1	1 607
+60	313	3.5	1	7 306
+61	296	3.5	1	0 296
+62	331	3.5	1	1 330
+63	250	3.5	1	1 249
+64	502	3.5	1	2 500
+65	321	3.5	1	0 321
+66	226	3.5	1	2 224
+67	358	3.5	1	1 357
+68	694	3.5	1	1 693
+69	726	3.5	1	0 726
+70	244	3.5	1	1 243
+71	420	3.5	1	0 420
+72	280	3.5	1	1 279
+73	487	3.5	1	8 479
+74	342	3.5	1	1 341
+75	497	3.5	1	0 497
+76	254	3.5	1	0 254
+
+RUN STATISTICS FOR INPUT FILE: ./GFP_3_R1.fastq.gz
+=============================================
+59190310 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/bigdata/littlab/arajewski/Datura/RNA-seq/GFP_3_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ./GFP_3_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 60
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera; (assigned because of inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 2.10). Setting -j -j 60
+Writing final adapter and quality trimmed output to GFP_3_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file ./GFP_3_R2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 60 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA ./GFP_3_R2.fastq.gz
+Processing reads on 60 cores in single-end mode ...
+Finished in 107.33 s (2 us/read; 33.09 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              59,190,310
+Reads with adapters:                24,343,318 (41.1%)
+Reads written (passing filters):    59,190,310 (100.0%)
+
+Total basepairs processed: 4,469,424,284 bp
+Quality-trimmed:              29,188,197 bp (0.7%)
+Total written (filtered):  4,406,945,042 bp (98.6%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 24343318 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.4%
+  C: 23.6%
+  G: 25.6%
+  T: 27.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	18080548	14797577.5	0	18080548
+2	4454437	3699394.4	0	4454437
+3	1443051	924848.6	0	1443051
+4	265782	231212.1	0	265782
+5	68138	57803.0	0	68138
+6	11958	14450.8	0	11958
+7	5939	3612.7	0	5939
+8	828	903.2	0	828
+9	1040	225.8	0	410 630
+10	1217	56.4	1	2 1215
+11	883	14.1	1	23 860
+12	184	3.5	1	0 184
+13	152	3.5	1	1 151
+14	150	3.5	1	6 144
+15	144	3.5	1	6 138
+16	121	3.5	1	1 120
+17	147	3.5	1	0 147
+18	183	3.5	1	3 180
+19	129	3.5	1	0 129
+20	137	3.5	1	0 137
+21	141	3.5	1	3 138
+22	129	3.5	1	1 128
+23	142	3.5	1	2 140
+24	156	3.5	1	0 156
+25	135	3.5	1	2 133
+26	143	3.5	1	2 141
+27	133	3.5	1	1 132
+28	139	3.5	1	3 136
+29	163	3.5	1	6 157
+30	178	3.5	1	1 177
+31	147	3.5	1	0 147
+32	135	3.5	1	2 133
+33	119	3.5	1	4 115
+34	109	3.5	1	0 109
+35	169	3.5	1	7 162
+36	202	3.5	1	1 201
+37	156	3.5	1	6 150
+38	135	3.5	1	3 132
+39	140	3.5	1	0 140
+40	131	3.5	1	0 131
+41	136	3.5	1	4 132
+42	158	3.5	1	1 157
+43	93	3.5	1	1 92
+44	135	3.5	1	0 135
+45	182	3.5	1	1 181
+46	112	3.5	1	2 110
+47	161	3.5	1	1 160
+48	145	3.5	1	2 143
+49	170	3.5	1	1 169
+50	164	3.5	1	1 163
+51	124	3.5	1	6 118
+52	150	3.5	1	1 149
+53	116	3.5	1	3 113
+54	112	3.5	1	3 109
+55	152	3.5	1	3 149
+56	109	3.5	1	6 103
+57	150	3.5	1	3 147
+58	158	3.5	1	1 157
+59	170	3.5	1	3 167
+60	166	3.5	1	2 164
+61	132	3.5	1	0 132
+62	164	3.5	1	2 162
+63	165	3.5	1	6 159
+64	154	3.5	1	26 128
+65	195	3.5	1	19 176
+66	125	3.5	1	1 124
+67	148	3.5	1	5 143
+68	235	3.5	1	2 233
+69	161	3.5	1	5 156
+70	163	3.5	1	4 159
+71	147	3.5	1	2 145
+72	103	3.5	1	1 102
+73	134	3.5	1	7 127
+74	140	3.5	1	4 136
+75	139	3.5	1	1 138
+76	80	3.5	1	1 79
+
+RUN STATISTICS FOR INPUT FILE: ./GFP_3_R2.fastq.gz
+=============================================
+59190310 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files GFP_3_R1_trimmed.fq.gz and GFP_3_R2_trimmed.fq.gz
+file_1: GFP_3_R1_trimmed.fq.gz, file_2: GFP_3_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: GFP_3_R1_trimmed.fq.gz and GFP_3_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to GFP_3_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to GFP_3_R2_val_2.fq.gz
+
+Total number of sequences analysed: 59190310
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 176028 (0.30%)
+
+Deleting both intermediate output files GFP_3_R1_trimmed.fq.gz and GFP_3_R2_trimmed.fq.gz
+
+====================================================================================================
+
+Done.

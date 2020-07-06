@@ -1,0 +1,183 @@
+Thu Jul 2 22:48:49 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 22:48:49 PDT 2020: Running KMC first.
+102400 and 100
+***********
+Stage 1: 0%Stage 1: 5%Stage 1: 10%Stage 1: 15%Stage 1: 21%Stage 1: 26%Stage 1: 31%Stage 1: 37%Stage 1: 42%Stage 1: 47%Stage 1: 53%Stage 1: 58%Stage 1: 63%Stage 1: 69%Stage 1: 74%Stage 1: 79%Stage 1: 85%Stage 1: 90%Stage 1: 95%Stage 1: 96%Stage 1: 100%
+Stage 2: 0%Stage 2: 3%Stage 2: 4%Stage 2: 5%Stage 2: 6%Stage 2: 7%Stage 2: 8%Stage 2: 9%Stage 2: 10%Stage 2: 11%Stage 2: 12%Stage 2: 13%Stage 2: 14%Stage 2: 15%Stage 2: 16%Stage 2: 17%Stage 2: 18%Stage 2: 19%Stage 2: 20%Stage 2: 21%Stage 2: 22%Stage 2: 23%Stage 2: 24%Stage 2: 25%Stage 2: 26%Stage 2: 27%Stage 2: 28%Stage 2: 29%Stage 2: 30%Stage 2: 31%Stage 2: 32%Stage 2: 33%Stage 2: 34%Stage 2: 35%Stage 2: 36%Stage 2: 37%Stage 2: 38%Stage 2: 39%Stage 2: 40%Stage 2: 41%Stage 2: 42%Stage 2: 43%Stage 2: 44%Stage 2: 45%Stage 2: 46%Stage 2: 47%Stage 2: 48%Stage 2: 49%Stage 2: 50%Stage 2: 51%Stage 2: 52%Stage 2: 53%Stage 2: 54%Stage 2: 55%Stage 2: 56%Stage 2: 57%Stage 2: 58%Stage 2: 59%Stage 2: 60%Stage 2: 61%Stage 2: 62%Stage 2: 63%Stage 2: 64%Stage 2: 65%Stage 2: 66%Stage 2: 67%Stage 2: 68%Stage 2: 69%Stage 2: 70%Stage 2: 71%Stage 2: 72%Stage 2: 73%Stage 2: 74%Stage 2: 75%Stage 2: 76%Stage 2: 77%Stage 2: 78%Stage 2: 79%Stage 2: 80%Stage 2: 81%Stage 2: 82%Stage 2: 83%Stage 2: 84%Stage 2: 85%Stage 2: 86%Stage 2: 87%Stage 2: 88%Stage 2: 89%Stage 2: 90%Stage 2: 91%Stage 2: 92%Stage 2: 93%Stage 2: 94%Stage 2: 95%Stage 2: 96%Stage 2: 97%Stage 2: 98%Stage 2: 99%Stage 2: 100%
+1st stage: 62.3618s
+2nd stage: 50.2272s
+Total    : 112.589s
+Tmp size : 9498MB
+
+Stats:
+   No. of k-mers below min. threshold :            0
+   No. of k-mers above max. threshold :            0
+   No. of unique k-mers               :    339364868
+   No. of unique counted k-mers       :    339364868
+   Total no. of k-mers                :   6151149879
+   Total no. of reads                 :    100981276
+   Total no. of super-k-mers          :   1619981024
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 22:50:46 PDT 2020: Done with KMC.
+Thu Jul 2 22:50:46 PDT 2020: Running KMC first.
+102400 and 100
+***********
+Stage 1: 0%Stage 1: 9%Stage 1: 19%Stage 1: 28%Stage 1: 38%Stage 1: 48%Stage 1: 57%Stage 1: 67%Stage 1: 77%Stage 1: 86%Stage 1: 96%Stage 1: 97%Stage 1: 100%
+Stage 2: 0%Stage 2: 3%Stage 2: 4%Stage 2: 5%Stage 2: 6%Stage 2: 7%Stage 2: 8%Stage 2: 9%Stage 2: 10%Stage 2: 11%Stage 2: 12%Stage 2: 13%Stage 2: 14%Stage 2: 15%Stage 2: 16%Stage 2: 17%Stage 2: 18%Stage 2: 19%Stage 2: 20%Stage 2: 21%Stage 2: 22%Stage 2: 23%Stage 2: 24%Stage 2: 25%Stage 2: 26%Stage 2: 27%Stage 2: 28%Stage 2: 29%Stage 2: 30%Stage 2: 31%Stage 2: 32%Stage 2: 33%Stage 2: 34%Stage 2: 35%Stage 2: 36%Stage 2: 37%Stage 2: 38%Stage 2: 39%Stage 2: 40%Stage 2: 41%Stage 2: 42%Stage 2: 43%Stage 2: 44%Stage 2: 45%Stage 2: 46%Stage 2: 47%Stage 2: 48%Stage 2: 49%Stage 2: 50%Stage 2: 51%Stage 2: 52%Stage 2: 53%Stage 2: 54%Stage 2: 55%Stage 2: 56%Stage 2: 57%Stage 2: 58%Stage 2: 59%Stage 2: 60%Stage 2: 61%Stage 2: 62%Stage 2: 63%Stage 2: 64%Stage 2: 65%Stage 2: 66%Stage 2: 67%Stage 2: 68%Stage 2: 69%Stage 2: 70%Stage 2: 71%Stage 2: 72%Stage 2: 73%Stage 2: 74%Stage 2: 75%Stage 2: 76%Stage 2: 77%Stage 2: 78%Stage 2: 79%Stage 2: 80%Stage 2: 81%Stage 2: 82%Stage 2: 83%Stage 2: 84%Stage 2: 85%Stage 2: 86%Stage 2: 87%Stage 2: 88%Stage 2: 89%Stage 2: 90%Stage 2: 91%Stage 2: 92%Stage 2: 93%Stage 2: 94%Stage 2: 95%Stage 2: 96%Stage 2: 97%Stage 2: 98%Stage 2: 99%Stage 2: 100%
+1st stage: 37.8617s
+2nd stage: 25.2332s
+Total    : 63.0948s
+Tmp size : 5290MB
+
+Stats:
+   No. of k-mers below min. threshold :            0
+   No. of k-mers above max. threshold :            0
+   No. of unique k-mers               :    283027336
+   No. of unique counted k-mers       :    283027336
+   Total no. of k-mers                :   3426943414
+   Total no. of reads                 :     56481154
+   Total no. of super-k-mers          :    902208447
+in1: 0% in1: 1% in1: 2% in1: 3% in1: 4% in1: 5% in1: 6% in1: 7% in1: 8% in1: 9% in1: 10% in1: 11% in1: 12% in1: 13% in1: 14% in1: 15% in1: 16% in1: 17% in1: 18% in1: 19% in1: 20% in1: 21% in1: 22% in1: 23% in1: 24% in1: 25% in1: 26% in1: 27% in1: 28% in1: 29% in1: 30% in1: 31% in1: 32% in1: 33% in1: 34% in1: 35% in1: 36% in1: 37% in1: 38% in1: 39% in1: 40% in1: 41% in1: 42% in1: 43% in1: 44% in1: 45% in1: 46% in1: 47% in1: 48% in1: 49% in1: 50% in1: 51% in1: 52% in1: 53% in1: 54% in1: 55% in1: 56% in1: 57% in1: 58% in1: 59% in1: 60% in1: 61% in1: 62% in1: 63% in1: 64% in1: 65% in1: 66% in1: 67% in1: 68% in1: 69% in1: 70% in1: 71% in1: 72% in1: 73% in1: 74% in1: 75% in1: 76% in1: 77% in1: 78% in1: 79% in1: 80% in1: 81% in1: 82% in1: 83% in1: 84% in1: 85% in1: 86% in1: 87% in1: 88% in1: 89% in1: 90% in1: 91% in1: 92% in1: 93% in1: 94% in1: 95% in1: 96% in1: 97% in1: 98% in1: 99% in1: 100% 
+Thu Jul 2 22:51:53 PDT 2020: Done with KMC.
+Thu Jul 2 22:51:53 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+206 1200
+in1: 0% in1: 100% 
+Thu Jul 2 22:51:58 PDT 2020: Done.
+Thu Jul 2 22:51:58 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+194 1100
+in1: 0% in1: 100% 
+Thu Jul 2 22:52:01 PDT 2020: Done.
+Thu Jul 2 22:52:01 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+169 790
+in1: 0% in1: 100% 
+Thu Jul 2 22:52:05 PDT 2020: Done.
+Thu Jul 2 22:52:05 PDT 2020: Smudgeplot hetkmers already completed.
+Thu Jul 2 22:52:05 PDT 2020: Running Smudgeplot
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Saving GFP_2_k15_pairs_coverages.tsv and GFP_2_k15_pairs_sequences.tsv files.
+
+Done!
+Thu Jul 2 22:52:10 PDT 2020: Done.
+Thu Jul 2 22:52:10 PDT 2020: Running Smudgeplot
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Saving GFP_3_k15_pairs_coverages.tsv and GFP_3_k15_pairs_sequences.tsv files.
+
+Done!
+Thu Jul 2 22:52:13 PDT 2020: Done.
+Thu Jul 2 22:52:13 PDT 2020: Smudgeplot already made.
+Thu Jul 2 22:52:13 PDT 2020: Making smudgeplot itself.
+
+######################
+## INPUT PROCESSING ##
+######################
+
+#############
+## SUMMARY ##
+#############
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	35
+!! Careful, your coverage filter on the lower end (L = 	194	) is higher than half of the 1n coverage estimate ( 1n / 2 = 	87.58
+If the real 1n coverage is half of your estimate you would not picked it up due to the filtering.
+Consider reruning the analysis with lover L as well (something like (1n / 2) - 5 should do the job)
+Another good way for verificaiton would be to compare it to GenomeScope estimate of haploid coverage
+
+##########
+## PLOT ##
+##########
+null device 
+          1 
+null device 
+          1 
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_2_k15_pairs_coverages.tsv" -o "GFP_2_15" -k 15
+
+Done!
+Thu Jul 2 22:52:19 PDT 2020: Done
+Thu Jul 2 22:52:19 PDT 2020: Making smudgeplot itself.
+
+######################
+## INPUT PROCESSING ##
+######################
+
+#############
+## SUMMARY ##
+#############
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	35
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	30
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	25
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	20
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	18
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	16
+!! Careful, your coverage filter on the lower end (L = 	169	) is higher than half of the 1n coverage estimate ( 1n / 2 = 	94.28
+If the real 1n coverage is half of your estimate you would not picked it up due to the filtering.
+Consider reruning the analysis with lover L as well (something like (1n / 2) - 5 should do the job)
+Another good way for verificaiton would be to compare it to GenomeScope estimate of haploid coverage
+
+##########
+## PLOT ##
+##########
+null device 
+          1 
+null device 
+          1 
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_3_k15_pairs_coverages.tsv" -o "GFP_3_15" -k 15
+
+Done!
+Thu Jul 2 22:52:25 PDT 2020: Done
+JobId=1704229 JobName=GFP_smudgeplot.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100652 Nice=0 Account=littlab QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:03:47 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2020-07-02T22:48:17 EligibleTime=2020-07-02T22:48:17
+   AccrueTime=2020-07-02T22:48:17
+   StartTime=2020-07-02T22:48:48 EndTime=2020-07-03T00:48:48 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-07-02T22:48:48
+   Partition=short AllocNode:Sid=parrot.ib.hpcc.ucr.edu:57740
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i07
+   BatchHost=i07
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/GenomeSize/GFP_smudgeplot.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/GenomeSize
+   StdErr=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-1704229.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-1704229.out
+   Power=
+

@@ -1,0 +1,134 @@
+Thu Jul 2 15:37:13 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 15:37:13 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 15:37:13 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 15:37:13 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+184 430
+in1: 0% in1: 100% 
+Thu Jul 2 15:37:39 PDT 2020: Done.
+Thu Jul 2 15:37:39 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+156 390
+in1: 0% in1: 100% 
+Thu Jul 2 15:37:54 PDT 2020: Done.
+Thu Jul 2 15:37:54 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+128 340
+in1: 0% in1: 100% 
+Thu Jul 2 15:38:03 PDT 2020: Done.
+Thu Jul 2 15:38:03 PDT 2020: Smudgeplot hetkmers already completed.
+Thu Jul 2 15:38:03 PDT 2020: Smudgeplot hetkmers already completed.
+Thu Jul 2 15:38:03 PDT 2020: Smudgeplot hetkmers already completed.
+Thu Jul 2 15:38:03 PDT 2020: Smudgeplot already made.
+Thu Jul 2 15:38:03 PDT 2020: Making smudgeplot itself.
+
+######################
+## INPUT PROCESSING ##
+######################
+
+#############
+## SUMMARY ##
+#############
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	35
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	30
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	25
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	20
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	18
+!! Careful, your coverage filter on the lower end (L = 	156	) is higher than half of the 1n coverage estimate ( 1n / 2 = 	86.59
+If the real 1n coverage is half of your estimate you would not picked it up due to the filtering.
+Consider reruning the analysis with lover L as well (something like (1n / 2) - 5 should do the job)
+Another good way for verificaiton would be to compare it to GenomeScope estimate of haploid coverage
+
+##########
+## PLOT ##
+##########
+null device 
+          1 
+null device 
+          1 
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_2_k17_pairs_coverages.tsv" -o "GFP_2_17" -k 17
+
+Done!
+Thu Jul 2 15:38:14 PDT 2020: Done
+Thu Jul 2 15:38:14 PDT 2020: Making smudgeplot itself.
+
+######################
+## INPUT PROCESSING ##
+######################
+
+#############
+## SUMMARY ##
+#############
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	35
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	30
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	25
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	20
+detecting two smudges at the same positions, not enough data for this number of bins lowering number of bins to 	18
+!! Careful, your coverage filter on the lower end (L = 	128	) is higher than half of the 1n coverage estimate ( 1n / 2 = 	72.23
+If the real 1n coverage is half of your estimate you would not picked it up due to the filtering.
+Consider reruning the analysis with lover L as well (something like (1n / 2) - 5 should do the job)
+Another good way for verificaiton would be to compare it to GenomeScope estimate of haploid coverage
+
+##########
+## PLOT ##
+##########
+null device 
+          1 
+null device 
+          1 
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_3_k17_pairs_coverages.tsv" -o "GFP_3_17" -k 17
+
+Done!
+Thu Jul 2 15:38:20 PDT 2020: Done
+JobId=1694964 JobName=GFP_smudgeplot.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100323 Nice=0 Account=littlab QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:01:32 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2020-07-02T15:36:45 EligibleTime=2020-07-02T15:36:45
+   AccrueTime=2020-07-02T15:36:45
+   StartTime=2020-07-02T15:36:48 EndTime=2020-07-02T17:36:48 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-07-02T15:36:48
+   Partition=short AllocNode:Sid=pelican.ib.hpcc.ucr.edu:56884
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i06
+   BatchHost=i06
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/GenomeSize/GFP_smudgeplot.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/GenomeSize
+   StdErr=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-1694964.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-1694964.out
+   Power=
+

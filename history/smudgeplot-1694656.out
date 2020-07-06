@@ -1,0 +1,123 @@
+Thu Jul 2 14:50:20 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 14:50:20 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 14:50:20 PDT 2020: KMC has already been run, proceeding to smudgplot
+Thu Jul 2 14:50:20 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+184 430
+in1: 0% in1: 100% 
+Thu Jul 2 14:50:28 PDT 2020: Done.
+Thu Jul 2 14:50:28 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+156 390
+in1: 0% in1: 100% 
+Thu Jul 2 14:50:38 PDT 2020: Done.
+Thu Jul 2 14:50:38 PDT 2020: Creating kmer dump file.
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+Running smudgeplot v0.2.1
+Task: cutoff
+
+Done!
+128 340
+in1: 0% in1: 100% 
+Thu Jul 2 14:50:48 PDT 2020: Done.
+Thu Jul 2 14:50:48 PDT 2020: Running Smudgeplot
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Saving GFP_1_k17_pairs_coverages.tsv and GFP_1_k17_pairs_sequences.tsv files.
+
+Done!
+/var/spool/slurmd/job1694656/slurm_script: line 55: dte: command not found
+: Done.
+Thu Jul 2 14:50:52 PDT 2020: Running Smudgeplot
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Saving GFP_2_k17_pairs_coverages.tsv and GFP_2_k17_pairs_sequences.tsv files.
+
+Done!
+/var/spool/slurmd/job1694656/slurm_script: line 55: dte: command not found
+: Done.
+Thu Jul 2 14:50:55 PDT 2020: Running Smudgeplot
+Running smudgeplot v0.2.1
+Task: hetkmers
+Extracting kmer pairs that differ in the middle nt
+Saving GFP_3_k17_pairs_coverages.tsv and GFP_3_k17_pairs_sequences.tsv files.
+
+Done!
+/var/spool/slurmd/job1694656/slurm_script: line 55: dte: command not found
+: Done.
+Thu Jul 2 14:50:57 PDT 2020: Making smudgeplot itself.
+Error in library("argparse") : there is no package called 'argparse'
+Calls: suppressPackageStartupMessages -> withCallingHandlers -> library
+Execution halted
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_1_k17_pairs_coverages.tsv" -o "GFP_1_17" -k 17
+
+Done!
+Thu Jul 2 14:50:59 PDT 2020: Done
+Thu Jul 2 14:50:59 PDT 2020: Making smudgeplot itself.
+Error in library("argparse") : there is no package called 'argparse'
+Calls: suppressPackageStartupMessages -> withCallingHandlers -> library
+Execution halted
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_2_k17_pairs_coverages.tsv" -o "GFP_2_17" -k 17
+
+Done!
+Thu Jul 2 14:51:00 PDT 2020: Done
+Thu Jul 2 14:51:00 PDT 2020: Making smudgeplot itself.
+Error in library("argparse") : there is no package called 'argparse'
+Calls: suppressPackageStartupMessages -> withCallingHandlers -> library
+Execution halted
+Running smudgeplot v0.2.1
+Task: plot
+Calling: smudgeplot_plot.R -i "GFP_3_k17_pairs_coverages.tsv" -o "GFP_3_17" -k 17
+
+Done!
+Thu Jul 2 14:51:01 PDT 2020: Done
+JobId=1694656 JobName=GFP_smudgeplot.sh
+   UserId=arajewski(3080) GroupId=littlab(1144) MCS_label=N/A
+   Priority=100293 Nice=0 Account=littlab QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:43 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2020-07-02T14:50:11 EligibleTime=2020-07-02T14:50:11
+   AccrueTime=2020-07-02T14:50:11
+   StartTime=2020-07-02T14:50:19 EndTime=2020-07-02T16:50:19 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2020-07-02T14:50:19
+   Partition=short AllocNode:Sid=pelican.ib.hpcc.ucr.edu:56884
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=i07
+   BatchHost=i07
+   NumNodes=1 NumCPUs=16 NumTasks=16 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=16,mem=100G,node=1,billing=41
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=100G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/bigdata/littlab/arajewski/Datura/GenomeSize/GFP_smudgeplot.sh
+   WorkDir=/bigdata/littlab/arajewski/Datura/GenomeSize
+   StdErr=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-1694656.out
+   StdIn=/dev/null
+   StdOut=/bigdata/littlab/arajewski/Datura/GenomeSize/../history/smudgeplot-1694656.out
+   Power=
+
