@@ -1,0 +1,134 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ../DNA-seq/GFP_3_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 16
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 6). Second best hit was Nextera (count: 3)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 2.10 with Python 3.7.6
+Command line parameters: -j 16 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ../DNA-seq/GFP_3_R2.fastq.gz
+Processing reads on 16 cores in single-end mode ...
+Finished in 147.40 s (5 us/read; 11.54 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              28,360,416
+Reads with adapters:                 4,781,953 (16.9%)
+Reads written (passing filters):    28,360,416 (100.0%)
+
+Total basepairs processed: 2,131,914,995 bp
+Quality-trimmed:              17,183,851 bp (0.8%)
+Total written (filtered):  2,108,381,897 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 4781953 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 37.6%
+  C: 21.6%
+  G: 16.0%
+  T: 24.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	3944029	7090104.0	0	3944029
+2	454066	1772526.0	0	454066
+3	283409	443131.5	0	283409
+4	73535	110782.9	0	73535
+5	14657	27695.7	0	14657
+6	1886	6923.9	0	1886
+7	272	1731.0	0	272
+8	108	432.7	0	108
+9	103	108.2	0	50 53
+10	364	27.0	1	40 324
+11	332	6.8	1	55 277
+12	188	1.7	1	29 159
+13	167	0.4	1	18 149
+14	232	0.4	1	23 209
+15	289	0.4	1	23 266
+16	324	0.4	1	41 283
+17	333	0.4	1	66 267
+18	344	0.4	1	46 298
+19	390	0.4	1	76 314
+20	259	0.4	1	53 206
+21	253	0.4	1	65 188
+22	143	0.4	1	31 112
+23	353	0.4	1	87 266
+24	657	0.4	1	185 472
+25	299	0.4	1	72 227
+26	579	0.4	1	214 365
+27	580	0.4	1	232 348
+28	176	0.4	1	54 122
+29	301	0.4	1	101 200
+30	141	0.4	1	48 93
+31	339	0.4	1	117 222
+32	364	0.4	1	134 230
+33	500	0.4	1	184 316
+34	155	0.4	1	55 100
+35	143	0.4	1	49 94
+36	146	0.4	1	49 97
+37	152	0.4	1	47 105
+38	110	0.4	1	32 78
+39	136	0.4	1	48 88
+40	108	0.4	1	37 71
+41	70	0.4	1	21 49
+42	95	0.4	1	30 65
+43	86	0.4	1	27 59
+44	64	0.4	1	18 46
+45	85	0.4	1	28 57
+46	70	0.4	1	19 51
+47	19	0.4	1	2 17
+48	24	0.4	1	2 22
+49	30	0.4	1	7 23
+50	26	0.4	1	5 21
+51	22	0.4	1	2 20
+52	28	0.4	1	1 27
+53	21	0.4	1	3 18
+54	26	0.4	1	6 20
+55	24	0.4	1	3 21
+56	12	0.4	1	1 11
+57	22	0.4	1	3 19
+58	28	0.4	1	4 24
+59	29	0.4	1	4 25
+60	21	0.4	1	4 17
+61	23	0.4	1	5 18
+62	25	0.4	1	4 21
+63	21	0.4	1	3 18
+64	22	0.4	1	8 14
+65	25	0.4	1	3 22
+66	13	0.4	1	1 12
+67	14	0.4	1	1 13
+68	8	0.4	1	1 7
+69	5	0.4	1	0 5
+70	13	0.4	1	0 13
+71	17	0.4	1	0 17
+72	11	0.4	1	0 11
+73	10	0.4	1	1 9
+74	6	0.4	1	0 6
+75	7	0.4	1	1 6
+76	9	0.4	1	1 8
+
+RUN STATISTICS FOR INPUT FILE: ../DNA-seq/GFP_3_R2.fastq.gz
+=============================================
+28360416 sequences processed in total
+
+Total number of sequences analysed for the sequence pair length validation: 28360416
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 119839 (0.42%)

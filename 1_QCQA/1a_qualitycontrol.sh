@@ -17,25 +17,26 @@ conda activate cutadaptenv
 export PATH=/bigdata/littlab/arajewski/Datura/software/TrimGalore-0.6.5:$PATH
 
 #Pass a list of PE vs SE datasets
-PAIRS=( Alex_S85_L002 Alex_S230_L002 )
-SINGLES=( Alex-1_S9 Alex-2_S10 )
+PAIRS=( GFP_1 GFP_2 GFP_3 )
+#SINGLES=( Alex-1_S9 Alex-2_S10 )
 DNAPATH=/bigdata/littlab/arajewski/Datura/DNA-seq
 #Do PE data
 for i in ${!PAIRS[@]}
 do
-if [ ! -e ${PAIRS[i]}_R2_001_val_2.fq.gz ]; then
+if [ ! -e ${PAIRS[i]}_R2_val_2.fastqq.gz ]; then
     echo Running Trim Galore on ${PAIRS[i]}...
     trim_galore \
         --paired \
 	-j $SLURM_CPUS_PER_TASK \
         -o ./ \
-        --no_report_file \
-        $DNAPATH/${PAIRS[i]}_R1_001.fastq.gz $DNAPATH/${PAIRS[i]}_R2_001.fastq.gz 
+        $DNAPATH/${PAIRS[i]}_R1.fastq.gz $DNAPATH/${PAIRS[i]}_R2.fastq.gz 
     echo Done.
 else
     echo ${PAIRS[i]} already trimmed.
 fi
 done
+ 
+exit 0
 
 # Do SE data
 for i in ${!SINGLES[@]}
