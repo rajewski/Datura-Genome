@@ -10,3 +10,13 @@ Sat Jun 27 10:07:44 PDT 2020: Done
 Sat Jun 27 10:07:44 PDT 2020: Classifying repeat elements...
 Sat Jun 27 10:08:41 PDT 2020: Done
 Sat Jun 27 10:08:41 PDT 2020: Finding non-TE hits in repeat elements...
+Sat Jun 27 10:12:38 PDT 2020: Done
+Sat Jun 27 10:12:38 PDT 2020: Running ProtExcluder to remove non-TE hits...
+Sat Jun 27 10:12:39 PDT 2020: Done
+Sat Jun 27 10:12:39 PDT 2020: Querying repeat database to get all repeats
+queryRepeatDatabase
+===================
+RepeatMasker Database: RepeatMaskerLib.embl
+Version: RepeatMasker Combined Database: Dfam_Consensus-20170127, RepBase-20170127
+Species: all ( root )
+Sat Jun 27 10:13:15 PDT 2020: Done

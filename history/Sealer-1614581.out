@@ -590,3 +590,4 @@ Flanks inserted into k run = 218953
 200 gaps closed so far
 300 gaps closed so far
 400 gaps closed so far
+slurmstepd-h05: error: *** JOB 1614581 ON h05 CANCELLED AT 2020-06-28T09:14:45 DUE TO TIME LIMIT ***
