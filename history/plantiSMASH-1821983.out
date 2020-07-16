@@ -1,0 +1,17 @@
+/rhome/arajewski/.conda/envs/plantismash/lib/python2.7/site-packages/Bio/Seq.py:2071: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning)
+Ignored unknown character X (seen 1 times)
+ERROR: Running diamond failed: returned 1, stderr: 'diamond v0.9.24.125 | by Benjamin Buchfink <buchfink@gmail.com>\nLicensed under the GNU GPL <https://www.gnu.org/licenses/gpl.txt>\nCheck http://github.com/bbuchfink/diamond for updates.\n\n#CPU threads: 16\nScoring parameters: (Matrix=BLOSUM62 Lambda=0.267 K=0.041 Penalties=11/1)\nTemporary directory: /tmp/tmpBmPWRc\nOpening the database...  [0.110395s]\nError: Database was built with a different version of Diamond and is incompatible.\n', stdout: ''
+ERROR: Converting daa failed: returned 1, stderr: 'diamond v0.9.24.125 | by Benjamin Buchfink <buchfink@gmail.com>\nLicensed under the GNU GPL <https://www.gnu.org/licenses/gpl.txt>\nCheck http://github.com/bbuchfink/diamond for updates.\n\n#CPU threads: 64\nLoading subject IDs... No such file or directory\n [0.000293s]\nError: Error opening file /tmp/tmpBmPWRc/matches.daa\n', stdout: ''
+Traceback (most recent call last):
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 1829, in <module>
+    main()
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 797, in main
+    run_analyses(seq_record, options, plugins)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 976, in run_analyses
+    clusterblast.run_clusterblast(seq_record, options)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/antismash/generic_modules/clusterblast/__init__.py", line 64, in run_clusterblast
+    perform_clusterblast(options, seq_record, clusters, proteinlocations, proteinstrands, proteinannotations, proteintags)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/antismash/generic_modules/clusterblast/clusterblast.py", line 696, in perform_clusterblast
+    with open("input.out", 'r') as fh:
+IOError: [Errno 2] No such file or directory: 'input.out'

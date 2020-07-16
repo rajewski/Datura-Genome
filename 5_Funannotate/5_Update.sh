@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
+#SBATCH --cpus-per-task=30
 #SBATCH --mem-per-cpu=7G
 #SBATCH --time 5-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
@@ -8,7 +8,7 @@
 #SBATCH -o ../history/FA_Update-%A.out
 set -e
 
-WORKDIR=predict
+WORKDIR=Dstr_v1.7_Annotation
 
 module load funannotate/1.6.0
 #change PASA directory becuase the flag below doesnt work
@@ -16,4 +16,6 @@ PASAHOME=/opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/
 
 funannotate update \
     -i $WORKDIR \
-    --cpus $SLURM_CPUS_PER_TASK
+    --cpus $SLURM_CPUS_PER_TASK \
+    --sbt template.sbt \
+    --SeqCenter "University of California"
