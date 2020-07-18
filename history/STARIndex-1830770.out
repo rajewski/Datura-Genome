@@ -1,0 +1,8 @@
+Making STAR index for D. stramonium...
+Jul 17 13:44:24 ..... started STAR run
+Jul 17 13:44:24 ... starting to generate Genome files
+
+EXITING because of FATAL PARAMETER ERROR: limitGenomeGenerateRAM=31000000000is too small for your genome
+SOLUTION: please specify --limitGenomeGenerateRAM not less than 44151892010 and make that much RAM available 
+
+Jul 17 13:45:37 ...... FATAL ERROR, exiting

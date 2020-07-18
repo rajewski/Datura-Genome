@@ -1,0 +1,8 @@
+Making STAR index for D. stramonium...
+Jul 17 13:42:37 ..... started STAR run
+Jul 17 13:42:37 ... starting to generate Genome files
+
+genomeGenerate.cpp:167:genomeGenerate: exiting because of *OUTPUT FILE* error: could not create output file /rhome/arajewski/bigdata/Datura/6_DEGs/Index//chrName.txt
+Solution: check that the path exists and you have write permission for this file
+
+Jul 17 13:43:49 ...... FATAL ERROR, exiting
