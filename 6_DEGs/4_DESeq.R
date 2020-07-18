@@ -23,13 +23,17 @@ metadata <- read.table("DESeq/metadata.tsv", header=T)
 DstrBamList <- BamFileList(as.character(metadata$Path), yieldSize=2000000)
 
 # Count Reads
+register(MulticoreParam(workers=16)) # or however many
+register(SerialParam()) 
 Expt_Dstr <- tryCatch(readRDS("DESeq/Expt_Dstr.rds"),
          error=function(e){
            Expt_Dstr <- summarizeOverlaps(features=DstrGenes,
                                   reads=DstrBamList,
                                   mode="Union",
                                   singleEnd=FALSE,
-                                  ignore.strand=TRUE)
+                                  ignore.strand=TRUE,
+				  fragments=TRUE,
+				  BPPARAM=SerialParam())
   colData(Expt_Dstr) <- DataFrame(metadata)
   saveRDS(Expt_Dstr, "DESeq/Expt_Dstr.rds")
   return(Expt_Dstr)
@@ -38,13 +42,21 @@ Expt_Dstr <- tryCatch(readRDS("DESeq/Expt_Dstr.rds"),
 # Make DDS and Call DEGS
 DDS_Dstr <- tryCatch(readRDS("DESeq/DDS_Dstr.rds"),
 	 error=function(e){
-	 DESeqDataSetFromMatrix(countData = assays(Expt_Dstr)$counts,
+	 DDS_Dstr <- DESeqDataSetFromMatrix(countData = assays(Expt_Dstr)$counts,
                                     colData = colData(Expt_Dstr),
                                     design = ~ Genotype)
 	 DDS_Dstr <- estimateSizeFactors(DDS_Dstr)
 	 DDS_Dstr <- DESeq(DDS_Dstr, test="LRT", reduced = ~ 1)
+	 saveRDS(DDS_Dstr, "DESeq/DDS_Dstr.rds")
 	 return(DDS_Dstr)
 	 })
+
+# Filter significant DEGs
+Results_Dstr <- results(DDS_Dstr)
+ResultsSig_Dstr <- subset(Results_Dstr, padj < 0.05)
+write.table(ResultsSig_Dstr, "DESeq/Result_DEGs.tsv", quote=F, row.names=T, sep="\t")
+
+
 
 # to hone in on the proximal TE genes, consider making a new txdb object with only certain classes of genes, OR try to pull out rows of the Assay(counts), maybe add the proximinallnes to the design matrix somehow??
 

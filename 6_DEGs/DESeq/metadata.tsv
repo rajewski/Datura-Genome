@@ -1,0 +1,7 @@
+Accession Genotype Replicate Path
+WT_1 WT 1 STAR/WT_1.Aligned.sortedByCoord.out.bam
+WT_2 WT 2 STAR/WT_2.Aligned.sortedByCoord.out.bam
+WT_3 WT 3 STAR/WT_3.Aligned.sortedByCoord.out.bam
+GFP_1 GFP 1 STAR/GFP_1.Aligned.sortedByCoord.out.bam
+GFP_2 GFP 2 STAR/GFP_2.Aligned.sortedByCoord.out.bam
+GFP_3 GFP 3 STAR/GFP_3.Aligned.sortedByCoord.out.bam
