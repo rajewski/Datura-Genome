@@ -10,6 +10,7 @@
 set -e
 
 DstrDIR=/rhome/arajewski/bigdata/Datura/6_DEGs/Index
+mkdir -p $DstrDIR
 
 module load STAR/2.5.3a
 # Make index files for Nobt
@@ -20,11 +21,12 @@ if [ ! -e $DstrDIR/SAindex ]; then
         --runMode genomeGenerate \
         --genomeDir $DstrDIR/ \
         --genomeFastaFiles ../5_Funannotate/Dstr_v1.7_Annotation/Dstr_v1.7.sorted.fa \
-???        --sjdbGTFfile ../5_Funannotate/Dstr_v1.7_Annotation/..........something else \
+        --sjdbGTFfile ../5_Funannotate/Dstr_v1.7_Annotation/predict_results/Datura_stramonium.gff3 \
         --sjdbOverhang 100 \
-???        --sjdbGTFtagExonParentTranscript Parent \
+        --sjdbGTFtagExonParentTranscript Parent \
 	--genomeChrBinNbits 16 \
-	--limitSjdbInsertNsj 150000
+	--limitSjdbInsertNsj 150000 \
+	--limitGenomeGenerateRAM  75000000000
     #Add limitSjdbInsertNsj because of error (https://groups.google.com/forum/#!msg/rna-star/ddhJDgvZfNA/ULUGGYb0BgAJ)
     #Change genomeChrBinNbits because the genome is highly fragmented
     echo Done.
