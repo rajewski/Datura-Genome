@@ -1,0 +1,17 @@
+/rhome/arajewski/.conda/envs/plantismash/lib/python2.7/site-packages/Bio/Seq.py:2071: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning)
+Ignored unknown character X (seen 1 times)
+ERROR: Running diamond failed: returned 1, stderr: 'Error: Incompatible database version\n', stdout: ''
+ERROR: Converting daa failed: returned 1, stderr: 'Error: function Input_stream::Input_stream(const string&, bool) line 75. Error opening file /tmp/tmpcrrAWP/matches.daa\n', stdout: ''
+Traceback (most recent call last):
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 1829, in <module>
+    main()
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 797, in main
+    run_analyses(seq_record, options, plugins)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 976, in run_analyses
+    clusterblast.run_clusterblast(seq_record, options)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/antismash/generic_modules/clusterblast/__init__.py", line 64, in run_clusterblast
+    perform_clusterblast(options, seq_record, clusters, proteinlocations, proteinstrands, proteinannotations, proteintags)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/antismash/generic_modules/clusterblast/clusterblast.py", line 696, in perform_clusterblast
+    with open("input.out", 'r') as fh:
+IOError: [Errno 2] No such file or directory: 'input.out'

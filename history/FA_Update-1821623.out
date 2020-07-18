@@ -15,3 +15,5 @@
 [02:08 PM]: Existing BAM alignments found: Dstr_v1.7_Annotation/update_misc/trinity.alignments.bam, Dstr_v1.7_Annotation/update_misc/transcript.alignments.bam
 [02:08 PM]: PASA database is SQLite: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.7_Annotation/training/pasa/Datura_stramonium
 [02:08 PM]: Running PASA annotation comparison step 1
+[07:10 AM]: Running PASA annotation comparison step 2
+slurmstepd-h06: error: _is_a_lwp: 1 read() attempts on /proc/48903/status failed: No such process
