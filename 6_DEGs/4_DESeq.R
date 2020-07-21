@@ -55,6 +55,16 @@ DDS_Dstr <- tryCatch(readRDS("DESeq/DDS_Dstr.rds"),
 Results_Dstr <- results(DDS_Dstr)
 ResultsSig_Dstr <- subset(Results_Dstr, padj < 0.05)
 write.table(ResultsSig_Dstr, "DESeq/Result_DEGs.tsv", quote=F, row.names=T, sep="\t")
+write.table(rownames(ResultsSig_Dstr[ResultsSig_Dstr$log2FoldChange>0,]),
+            file="DESeq/Result_Up.tsv",
+            quote=F,
+            row.names = F,
+            col.names = F)
+write.table(rownames(ResultsSig_Dstr[ResultsSig_Dstr$log2FoldChange<0,]),
+            file="DESeq/Result_Down.tsv",
+            quote=F,
+            row.names = F,
+            col.names = F)
 
 
 
