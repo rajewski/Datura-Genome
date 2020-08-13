@@ -1,0 +1,8 @@
+Length filtering the genome to speed TIR-learner
+java -ea -Xms300m -cp /opt/linux/centos/7.x/x86_64/pkgs/BBMap/38.86/current/ jgi.ReformatReads in=Dstr_v1.7.fa out=Dstr_v1.7.1000.fa minlength=1000
+Executing jgi.ReformatReads [in=Dstr_v1.7.fa, out=Dstr_v1.7.1000.fa, minlength=1000]
+
+Exception in thread "main" java.lang.AssertionError: File Dstr_v1.7.1000.fa exists and overwrite=false
+	at shared.Tools.testOutputFiles(Tools.java:1257)
+	at jgi.ReformatReads.<init>(ReformatReads.java:393)
+	at jgi.ReformatReads.main(ReformatReads.java:51)

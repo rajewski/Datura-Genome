@@ -1,0 +1,4 @@
+Fri Aug 7 10:57:11 PDT 2020: Running IPR Scan on chunk 1...
+07/08/2020 10:57:15:249 Welcome to InterProScan-5.45-80.0
+07/08/2020 10:57:15:255 Running InterProScan v5 in STANDALONE mode... on Linux
+The options --output-file-base (-b), --outfile (-o) and --output-dir (-d) are mutually exclusive.

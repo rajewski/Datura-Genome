@@ -1,0 +1,25 @@
+Running Funannotate fix on Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk
+[01:48 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[01:48 PM]: Running funannotate v1.6.0-98d4d3f
+[01:55 PM]: Extracting genome sequence and parsing meta information
+[02:01 PM]: 232,605 contigs containing 58,793 protein coding genes and 1,454 tRNA genes
+[02:07 PM]: Found pre-existing funannotate files, archiving to Dstr_v1.7_Annotation/update_results/archive_7796
+[02:07 PM]: Converting to GenBank format
+-------------------------------------------------------
+[02:56 PM]: Generating output files.
+[02:59 PM]: There are 13 gene models that need to be fixed.
+[02:59 PM]: Manually edit the tbl file Dstr_v1.7_Annotation/update_results/Datura_stramonium.tbl, then run:
+
+funannotate fix -i Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk -t Dstr_v1.7_Annotation/update_results/Datura_stramonium.tbl
+
+-------------------------------------------------------
+HAX54_001567	14 internal stops. Genetic code [1]
+HAX54_006052	Feature begins or ends in gap starting at 189209
+HAX54_007171	14 internal stops. Genetic code [1]
+HAX54_011268	20 internal stops. Genetic code [1]
+HAX54_017977	Feature begins or ends in gap starting at 220052
+HAX54_021008	Feature begins or ends in gap starting at 445481
+HAX54_026005	Feature begins or ends in gap starting at 43025
+HAX54_034968	Feature begins or ends in gap starting at 24922
+HAX54_049292	Feature begins or ends in gap starting at 51500
+HAX54_053276	Feature begins or ends in gap starting at 218012

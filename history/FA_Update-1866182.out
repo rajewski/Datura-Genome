@@ -1,0 +1,315 @@
+[11:22 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[11:22 AM]: Running funannotate v1.6.0-98d4d3f
+[11:22 AM]: Found relevent files in Dstr_v1.7_Annotation/training, will re-use them:
+	Forward reads: Dstr_v1.7_Annotation/training/left.fq.gz
+	Reverse reads: Dstr_v1.7_Annotation/training/right.fq.gz
+	Forward normalized reads: Dstr_v1.7_Annotation/training/normalize/left.norm.fq
+	Reverse normalized reads: Dstr_v1.7_Annotation/training/normalize/right.norm.fq
+	Trinity results: Dstr_v1.7_Annotation/training/funannotate_train.trinity-GG.fasta
+	PASA config file: Dstr_v1.7_Annotation/training/pasa/alignAssembly.txt
+	BAM alignments: Dstr_v1.7_Annotation/training/funannotate_train.coordSorted.bam
+	StringTie GTF: Dstr_v1.7_Annotation/training/funannotate_train.stringtie.gtf
+[11:26 AM]: Reannotating Datura stramonium, NCBI accession: None
+[11:26 AM]: Previous annotation consists of: 55,559 protein coding gene models and 1,468 non-coding gene models
+[11:26 AM]: Trimmomatic will be skipped
+[11:29 AM]: Converting transcript alignments to GFF3 format
+[11:30 AM]: Converting Trinity transcript alignments to GFF3 format
+[11:30 AM]: PASA database is SQLite: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.7_Annotation/training/pasa/Datura_stramonium
+[11:30 AM]: Running PASA annotation comparison step 1
+[09:43 PM]: Running PASA annotation comparison step 2
+[08:31 PM]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[08:31 PM]: Building Kallisto index
+[08:36 PM]: Mapping reads using pseudoalignment in Kallisto
+[08:52 PM]: Parsing Kallisto results. Keeping alt-splicing transcipts if expressed at least 10.0% of highest transcript per locus.
+[08:52 PM]: Wrote 58,793 transcripts derived from 55,893 protein coding loci.
+[08:54 PM]: Validating gene models (renaming, checking translations, filtering, etc)
+[08:54 PM]: Writing 57,346 loci to TBL format: dropped 0 overlapping, 6 too short, and 0 frameshift gene models
+[08:54 PM]: Converting to Genbank format
+-------------------------------------------------------
+[09:04 PM]: Collecting final annotation files
+[09:06 PM]: Parsing GenBank files...comparing annotation
+[09:41 PM]: Updated annotation complete:
+-------------------------------------------------------
+Total Gene Models:	57,346
+Total transcripts:	60,247
+New Gene Models:	477
+No Change:		36,436
+Update UTRs:		20,305
+Exons Changed:		109
+Exons/CDS Changed:	19
+Dropped Models:		0
+CDS AED:		0.005
+mRNA AED:		0.053
+-------------------------------------------------------
+[09:41 PM]: Funannotate update is finished, output files are in the Dstr_v1.7_Annotation//update_results folder
+[09:41 PM]: There are 258 gene models that need to be fixed.
+-------------------------------------------------------
+HAX54_000190	Feature begins or ends in gap starting at 150238
+HAX54_000536	Feature begins or ends in gap starting at 26837
+HAX54_001357	Feature begins or ends in gap starting at 34378
+HAX54_001567	Feature begins or ends in gap starting at 219524
+HAX54_001758	Feature begins or ends in gap starting at 12771
+HAX54_002124	Feature begins or ends in gap starting at 102405
+HAX54_002504	Feature begins or ends in gap starting at 16675
+HAX54_003403	Feature begins or ends in gap starting at 96048
+HAX54_003660	Feature begins or ends in gap starting at 136500
+HAX54_003738	Feature begins or ends in gap starting at 633042
+HAX54_003854	Feature begins or ends in gap starting at 28978
+HAX54_003916	Feature begins or ends in gap starting at 123101
+HAX54_003967	Feature begins or ends in gap starting at 2942
+HAX54_003973	Feature begins or ends in gap starting at 67199
+HAX54_004261	Feature begins or ends in gap starting at 129340
+HAX54_004793	Feature begins or ends in gap starting at 95229
+HAX54_004876	Feature begins or ends in gap starting at 7838
+HAX54_005091	Feature begins or ends in gap starting at 125856
+HAX54_005202	Feature begins or ends in gap starting at 185257
+HAX54_005585	Feature begins or ends in gap starting at 165510
+HAX54_005592	Feature begins or ends in gap starting at 252032
+HAX54_006052	Feature begins or ends in gap starting at 189209
+HAX54_006437	Feature begins or ends in gap starting at 153954
+HAX54_006597	Feature begins or ends in gap starting at 20169
+HAX54_006991	Feature begins or ends in gap starting at 544121
+HAX54_007171	Feature begins or ends in gap starting at 156404
+HAX54_007701	Feature begins or ends in gap starting at 160334
+HAX54_007812	Feature begins or ends in gap starting at 8120
+HAX54_007838	Feature begins or ends in gap starting at 172469
+HAX54_007870	Feature begins or ends in gap starting at 129909
+HAX54_007874	Feature begins or ends in gap starting at 12359
+HAX54_008010	Feature begins or ends in gap starting at 168306
+HAX54_008222	Feature begins or ends in gap starting at 64538
+HAX54_008425	Feature begins or ends in gap starting at 9688
+HAX54_008546	Feature begins or ends in gap starting at 88113
+HAX54_008595	Feature begins or ends in gap starting at 71327
+HAX54_008897	Feature begins or ends in gap starting at 192898
+HAX54_008965	Feature begins or ends in gap starting at 70976
+HAX54_009222	Feature begins or ends in gap starting at 269222
+HAX54_009355	Feature begins or ends in gap starting at 34380
+HAX54_009541	Feature begins or ends in gap starting at 275214
+HAX54_009675	Feature begins or ends in gap starting at 150395
+HAX54_010155	Feature begins or ends in gap starting at 165184
+HAX54_010377	Feature begins or ends in gap starting at 176480
+HAX54_010457	Feature begins or ends in gap starting at 533142
+HAX54_010557	Feature begins or ends in gap starting at 131818
+HAX54_010659	Feature begins or ends in gap starting at 182420
+HAX54_010685	Feature begins or ends in gap starting at 152002
+HAX54_010834	Feature begins or ends in gap starting at 222829
+HAX54_011107	Feature begins or ends in gap starting at 10867
+HAX54_011151	Feature begins or ends in gap starting at 95236
+HAX54_011258	Feature begins or ends in gap starting at 99743
+HAX54_011268	Feature begins or ends in gap starting at 7306
+HAX54_011455	Feature begins or ends in gap starting at 107276
+HAX54_011501	Feature begins or ends in gap starting at 196353
+HAX54_011511	Feature begins or ends in gap starting at 18946
+HAX54_011541	Feature begins or ends in gap starting at 613253
+HAX54_012340	Feature begins or ends in gap starting at 5950
+HAX54_012460	Feature begins or ends in gap starting at 147039
+HAX54_012507	Feature begins or ends in gap starting at 67721
+HAX54_012687	Feature begins or ends in gap starting at 339140
+HAX54_012706	Feature begins or ends in gap starting at 177652
+HAX54_012976	Feature begins or ends in gap starting at 847340
+HAX54_013159	Feature begins or ends in gap starting at 221042
+HAX54_013273	Feature begins or ends in gap starting at 318652
+HAX54_013718	Feature begins or ends in gap starting at 163606
+HAX54_013758	Feature begins or ends in gap starting at 115769
+HAX54_013803	Feature begins or ends in gap starting at 553937
+HAX54_013870	Feature begins or ends in gap starting at 261436
+HAX54_014418	Feature begins or ends in gap starting at 133787
+HAX54_014530	Feature begins or ends in gap starting at 96128
+HAX54_014637	Feature begins or ends in gap starting at 210993
+HAX54_014779	Feature begins or ends in gap starting at 22620
+HAX54_014811	Feature begins or ends in gap starting at 51720
+HAX54_015176	Feature begins or ends in gap starting at 64764
+HAX54_015201	Feature begins or ends in gap starting at 566275
+HAX54_015299	Feature begins or ends in gap starting at 176275
+HAX54_015591	Feature begins or ends in gap starting at 93082
+HAX54_016348	Feature begins or ends in gap starting at 6997
+HAX54_016368	Feature begins or ends in gap starting at 102893
+HAX54_016798	Feature begins or ends in gap starting at 86027
+HAX54_017147	Feature begins or ends in gap starting at 34528
+HAX54_017452	Feature begins or ends in gap starting at 437383
+HAX54_017977	Feature begins or ends in gap starting at 220052
+HAX54_018177	Feature begins or ends in gap starting at 155104
+HAX54_018363	Feature begins or ends in gap starting at 151787
+HAX54_018381	Feature begins or ends in gap starting at 130594
+HAX54_018542	Feature begins or ends in gap starting at 117221
+HAX54_018618	Feature begins or ends in gap starting at 45078
+HAX54_019079	Feature begins or ends in gap starting at 557340
+HAX54_019249	Feature begins or ends in gap starting at 478647
+HAX54_019978	Feature begins or ends in gap starting at 146224
+HAX54_020743	Feature begins or ends in gap starting at 164090
+HAX54_020969	Feature begins or ends in gap starting at 36801
+HAX54_021008	Feature begins or ends in gap starting at 445481
+HAX54_021356	Feature begins or ends in gap starting at 169031
+HAX54_021371	Feature begins or ends in gap starting at 39779
+HAX54_021472	Feature begins or ends in gap starting at 88816
+HAX54_021658	Feature begins or ends in gap starting at 190340
+HAX54_021746	Feature begins or ends in gap starting at 222843
+HAX54_021750	Feature begins or ends in gap starting at 270488
+HAX54_021921	Feature begins or ends in gap starting at 119493
+HAX54_022170	Feature begins or ends in gap starting at 44565
+HAX54_022360	Feature begins or ends in gap starting at 205067
+HAX54_022392	Feature begins or ends in gap starting at 174488
+HAX54_022407	Feature begins or ends in gap starting at 180920
+HAX54_022994	Feature begins or ends in gap starting at 223485
+HAX54_023049	Feature begins or ends in gap starting at 105133
+HAX54_023107	Feature begins or ends in gap starting at 238645
+HAX54_023690	Feature begins or ends in gap starting at 221543
+HAX54_024039	Feature begins or ends in gap starting at 20407
+HAX54_024098	Feature begins or ends in gap starting at 164503
+HAX54_024337	Feature begins or ends in gap starting at 139037
+HAX54_024535	Feature begins or ends in gap starting at 71172
+HAX54_024630	Feature begins or ends in gap starting at 130810
+HAX54_024847	Feature begins or ends in gap starting at 151793
+HAX54_024963	Feature begins or ends in gap starting at 101889
+HAX54_025067	Feature begins or ends in gap starting at 45707
+HAX54_025092	Feature begins or ends in gap starting at 46865
+HAX54_025109	Feature begins or ends in gap starting at 82217
+HAX54_025506	Feature begins or ends in gap starting at 230762
+HAX54_026005	Feature begins or ends in gap starting at 43025
+HAX54_026286	Feature begins or ends in gap starting at 793172
+HAX54_026399	Feature begins or ends in gap starting at 179510
+HAX54_026437	Feature begins or ends in gap starting at 318584
+HAX54_026622	Feature begins or ends in gap starting at 40018
+HAX54_026833	Feature begins or ends in gap starting at 89947
+HAX54_026838	Feature begins or ends in gap starting at 125620
+HAX54_027018	Feature begins or ends in gap starting at 300405
+HAX54_027128	Feature begins or ends in gap starting at 28243
+HAX54_027831	Feature begins or ends in gap starting at 100659
+HAX54_028140	Feature begins or ends in gap starting at 332548
+HAX54_0[09:41 PM]: Manually edit the tbl file Dstr_v1.7_Annotation/update_results/Datura_stramonium.tbl, then run:
+
+funannotate fix -i Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk -t Dstr_v1.7_Annotation/update_results/Datura_stramonium.tbl
+
+[09:41 PM]: After the problematic gene models are fixed, you can proceed with functional annotation.
+[09:41 PM]: Your next step might be functional annotation, suggested commands:
+-------------------------------------------------------
+Run InterProScan (Docker required): 
+funannotate iprscan -i Dstr_v1.7_Annotation/ -m docker -c 10
+
+Run antiSMASH: 
+funannotate remote -i Dstr_v1.7_Annotation/ -m antismash -e youremail@server.edu
+
+Annotate Genome: 
+funannotate annotate -i Dstr_v1.7_Annotation/ --cpus 10 --sbt yourSBTfile.txt
+-------------------------------------------------------
+            
+28557	Feature begins or ends in gap starting at 136854
+HAX54_028709	Feature begins or ends in gap starting at 152945
+HAX54_028890	Feature begins or ends in gap starting at 36832
+HAX54_029239	Feature begins or ends in gap starting at 206302
+HAX54_029425	Feature begins or ends in gap starting at 163592
+HAX54_029527	Feature begins or ends in gap starting at 166343
+HAX54_030261	Feature begins or ends in gap starting at 152957
+HAX54_030272	Feature begins or ends in gap starting at 29569
+HAX54_030574	Feature begins or ends in gap starting at 245189
+HAX54_030809	Feature begins or ends in gap starting at 112419
+HAX54_031098	Feature begins or ends in gap starting at 130360
+HAX54_031145	Feature begins or ends in gap starting at 41094
+HAX54_031159	Feature begins or ends in gap starting at 458944
+HAX54_031435	Feature begins or ends in gap starting at 77566
+HAX54_031608	Feature begins or ends in gap starting at 86962
+HAX54_031629	Feature begins or ends in gap starting at 102971
+HAX54_031671	Feature begins or ends in gap starting at 533579
+HAX54_031836	Feature begins or ends in gap starting at 135935
+HAX54_031854	Feature begins or ends in gap starting at 26975
+HAX54_032009	Feature begins or ends in gap starting at 182564
+HAX54_032298	Feature begins or ends in gap starting at 78463
+HAX54_032438	Feature begins or ends in gap starting at 87258
+HAX54_032737	Feature begins or ends in gap starting at 45531
+HAX54_032800	Feature begins or ends in gap starting at 5944
+HAX54_032892	Feature begins or ends in gap starting at 147669
+HAX54_032948	Feature begins or ends in gap starting at 403636
+HAX54_033189	Feature begins or ends in gap starting at 16051
+HAX54_033207	Feature begins or ends in gap starting at 86099
+HAX54_033443	Feature begins or ends in gap starting at 71477
+HAX54_033498	Feature begins or ends in gap starting at 120979
+HAX54_033546	Feature begins or ends in gap starting at 132679
+HAX54_033715	Feature begins or ends in gap starting at 94941
+HAX54_034658	Feature begins or ends in gap starting at 115953
+HAX54_034968	Feature begins or ends in gap starting at 24922
+HAX54_035152	Feature begins or ends in gap starting at 542
+HAX54_035664	Feature begins or ends in gap starting at 573549
+HAX54_035807	Feature begins or ends in gap starting at 50650
+HAX54_035808	Feature begins or ends in gap starting at 57612
+HAX54_035942	Feature begins or ends in gap starting at 62589
+HAX54_036839	Feature begins or ends in gap starting at 247433
+HAX54_037317	Feature begins or ends in gap starting at 235707
+HAX54_037713	Feature begins or ends in gap starting at 362603
+HAX54_037872	Feature begins or ends in gap starting at 39357
+HAX54_037962	Feature begins or ends in gap starting at 338528
+HAX54_038293	Feature begins or ends in gap starting at 109364
+HAX54_039351	Feature begins or ends in gap starting at 50790
+HAX54_039550	Feature begins or ends in gap starting at 6011
+HAX54_040031	Feature begins or ends in gap starting at 86470
+HAX54_040300	Feature begins or ends in gap starting at 349568
+HAX54_040678	Feature begins or ends in gap starting at 110386
+HAX54_040707	Feature begins or ends in gap starting at 25216
+HAX54_040923	Feature begins or ends in gap starting at 20718
+HAX54_041279	Feature begins or ends in gap starting at 194227
+HAX54_041383	Feature begins or ends in gap starting at 180279
+HAX54_042067	Feature begins or ends in gap starting at 535337
+HAX54_042533	Feature begins or ends in gap starting at 312091
+HAX54_042683	Feature begins or ends in gap starting at 66112
+HAX54_042973	Feature begins or ends in gap starting at 528202
+HAX54_043039	Feature begins or ends in gap starting at 68788
+HAX54_043069	Feature begins or ends in gap starting at 90359
+HAX54_043168	Feature begins or ends in gap starting at 28178
+HAX54_043302	Feature begins or ends in gap starting at 326974
+HAX54_043928	Feature begins or ends in gap starting at 341908
+HAX54_044454	Feature begins or ends in gap starting at 75523
+HAX54_044696	Feature begins or ends in gap starting at 18916
+HAX54_044718	Feature begins or ends in gap starting at 281433
+HAX54_044828	Feature begins or ends in gap starting at 13667
+HAX54_044942	Feature begins or ends in gap starting at 533035
+HAX54_045082	Feature begins or ends in gap starting at 25828
+HAX54_045462	Feature begins or ends in gap starting at 78546
+HAX54_045636	Feature begins or ends in gap starting at 99192
+HAX54_045840	Feature begins or ends in gap starting at 72924
+HAX54_046045	Feature begins or ends in gap starting at 145594
+HAX54_046144	Feature begins or ends in gap starting at 21316
+HAX54_046254	Feature begins or ends in gap starting at 16514
+HAX54_046625	Feature begins or ends in gap starting at 29119
+HAX54_046964	Feature begins or ends in gap starting at 376830
+HAX54_047720	Feature begins or ends in gap starting at 306493
+HAX54_047889	Feature begins or ends in gap starting at 98600
+HAX54_048116	Feature begins or ends in gap starting at 541247
+HAX54_048853	Feature begins or ends in gap starting at 90320
+HAX54_049007	Feature begins or ends in gap starting at 197812
+HAX54_049053	Feature begins or ends in gap starting at 322253
+HAX54_049129	Feature begins or ends in gap starting at 15561
+HAX54_049197	Feature begins or ends in gap starting at 303947
+HAX54_049255	Feature begins or ends in gap starting at 68825
+HAX54_049292	Feature begins or ends in gap starting at 51500
+HAX54_049363	Feature begins or ends in gap starting at 5627
+HAX54_049606	Feature begins or ends in gap starting at 6321
+HAX54_050334	Feature begins or ends in gap starting at 69988
+HAX54_051045	Feature begins or ends in gap starting at 7868
+HAX54_051256	Feature begins or ends in gap starting at 8971
+HAX54_051601	Feature begins or ends in gap starting at 196449
+HAX54_052043	Feature begins or ends in gap starting at 93040
+HAX54_052118	Feature begins or ends in gap starting at 142423
+HAX54_052361	Feature begins or ends in gap starting at 36021
+HAX54_052523	Feature begins or ends in gap starting at 125886
+HAX54_052818	Feature begins or ends in gap starting at 316173
+HAX54_053065	Feature begins or ends in gap starting at 43414
+HAX54_053181	Feature begins or ends in gap starting at 54726
+HAX54_053262	Feature begins or ends in gap starting at 130356
+HAX54_053276	Feature begins or ends in gap starting at 218012
+HAX54_053648	Feature begins or ends in gap starting at 197479
+HAX54_053755	Feature begins or ends in gap starting at 9312
+HAX54_053906	Feature begins or ends in gap starting at 143105
+HAX54_054087	Feature begins or ends in gap starting at 144468
+HAX54_054266	Feature begins or ends in gap starting at 61405
+HAX54_054574	Feature begins or ends in gap starting at 444505
+HAX54_054827	Feature begins or ends in gap starting at 42434
+HAX54_055207	Feature begins or ends in gap starting at 52153
+HAX54_055401	Feature begins or ends in gap starting at 274544
+HAX54_055416	Feature begins or ends in gap starting at 27110
+HAX54_056334	Feature begins or ends in gap starting at 115818
+HAX54_056351	Feature begins or ends in gap starting at 219185
+HAX54_056667	Feature begins or ends in gap starting at 106985
+HAX54_056699	Feature begins or ends in gap starting at 326444
+HAX54_056999	Feature begins or ends in gap starting at 301043
+HAX54_057297	Feature begins or ends in gap starting at 20517
+HAX54_057465	Feature begins or ends in gap starting at 178933
+-------------------------------------------------------

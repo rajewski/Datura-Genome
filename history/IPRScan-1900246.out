@@ -1,0 +1,661 @@
+Thu Aug 6 10:52:46 PDT 2020: Running IPR Scan on chunk 1...
+06/08/2020 10:52:53:732 Welcome to InterProScan-5.45-80.0
+06/08/2020 10:52:53:737 Running InterProScan v5 in STANDALONE mode... on Linux
+06/08/2020 10:53:10:150 Loading file /rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.7_Annotation/update_results/Datura_stramonium.proteins.fa.1
+06/08/2020 10:53:10:158 Running the following analyses:
+[CDD-3.17,Coils-2.2.1,Gene3D-4.2.0,Hamap-2020_01,MobiDBLite-2.0,PANTHER-14.1,Pfam-33.1,Phobius-1.01,PIRSF-3.10,PRINTS-42.0,ProSitePatterns-2019_11,ProSiteProfiles-2019_11,SFLD-4,SignalP_EUK-4.1,SignalP_GRAM_NEGATIVE-4.1,SignalP_GRAM_POSITIVE-4.1,SMART-7.1,SUPERFAMILY-1.75,TIGRFAM-15.0,TMHMM-2.0c]
+Available matches will be retrieved from the pre-calculated match lookup service.
+
+Matches for any sequences that are not represented in the lookup service will be calculated locally.
+2020-08-06 10:55:34,692 [amqEmbeddedWorkerJmsContainer-25] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 10:55:34,715 [amqEmbeddedWorkerJmsContainer-25] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 10:55:34,717 [amqEmbeddedWorkerJmsContainer-25] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 10:55:34,718 [amqEmbeddedWorkerJmsContainer-25] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 10:55:34,826 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 626 is being re-run following a failure.
+2020-08-06 10:55:40,298 [amqEmbeddedWorkerJmsContainer-1] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 10:55:40,300 [amqEmbeddedWorkerJmsContainer-1] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 10:55:40,302 [amqEmbeddedWorkerJmsContainer-1] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 10:55:40,302 [amqEmbeddedWorkerJmsContainer-1] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 10:55:40,380 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 568 is being re-run following a failure.
+2020-08-06 11:19:23,750 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 11:19:23,808 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 11:19:23,815 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 11:19:23,815 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 11:19:23,888 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 368 is being re-run following a failure.
+06/08/2020 11:28:42:335 25% completed
+2020-08-06 11:30:11,322 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 11:30:11,338 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 11:30:11,345 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 11:30:11,346 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 11:30:11,435 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 358 is being re-run following a failure.
+2020-08-06 11:30:21,583 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 11:30:21,598 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 11:30:21,600 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 11:30:21,600 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 11:30:21,805 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 579 is being re-run following a failure.
+2020-08-06 11:30:26,706 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 11:30:26,724 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 11:30:26,730 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 11:30:26,730 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 11:30:26,883 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 358 is being re-run following a failure.
+2020-08-06 11:30:36,782 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 11:30:36,793 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 11:30:36,796 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 11:30:36,796 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 11:30:37,005 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 99 is being re-run following a failure.
+2020-08-06 11:30:41,943 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-06 11:30:41,962 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-06 11:30:41,967 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-06 11:30:41,967 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-06 11:30:42,196 [main] [uk.ac.ebi.interpro.scan.jms.activemq.NonZeroExitOnUnrecoverableError:25] FATAL - Analysis step 358 : Run mobi-db Binary for selected proteins for proteins 6001 to 7000 has failed irretrievably.  Available StackTraces follow.
+2020-08-06 11:30:42,196 [main] [uk.ac.ebi.interpro.scan.jms.activemq.NonZeroExitOnUnrecoverableError:42] FATAL - The JVM will now exit with a non-zero exit status.
+2020-08-06 11:30:42,196 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:331] ERROR - Exception thrown by StandaloneBlackBoxMaster: 
+java.lang.IllegalStateException: InterProScan exiting with non-zero status, see logs for further information.
+	at uk.ac.ebi.interpro.scan.jms.activemq.NonZeroExitOnUnrecoverableError.failed(NonZeroExitOnUnrecoverableError.java:43) ~[interproscan-5.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster.run(StandaloneBlackBoxMaster.java:156) [interproscan-5.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.main.Run.main(Run.java:475) [interproscan-5.jar:?]
+java.lang.IllegalStateException: InterProScan exiting with non-zero status, see logs for further information.
+	at uk.ac.ebi.interpro.scan.jms.activemq.NonZeroExitOnUnrecoverableError.failed(NonZeroExitOnUnrecoverableError.java:43)
+	at uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster.run(StandaloneBlackBoxMaster.java:156)
+	at uk.ac.ebi.interpro.scan.jms.main.Run.main(Run.java:475)
+InterProScan analysis failed. Exception thrown by StandaloneBlackBoxMaster. Check the log file for details

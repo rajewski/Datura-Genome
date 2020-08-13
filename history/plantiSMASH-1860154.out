@@ -1,0 +1,15 @@
+INFO: starting antiSMASH 3.0.5-f27eb4b, called with /bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py -c 30 --limit -1 --taxon plants --eukaryotic -v --logfile Dstr_v1.7_Annotation/plantismash/plantismash_1860154.log --outputfolder Dstr_v1.7_Annotation/plantismash --genefinding none Datura_stramonium.gbk
+INFO: Number of clusters = 10
+INFO: Loading detection modules
+INFO: Parsing input sequences ['Datura_stramonium.gbk']
+INFO: Running genefinding on 221336 Contigs without annotations..
+Traceback (most recent call last):
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 1829, in <module>
+    main()
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 631, in main
+    seq_records = parse_input_sequences(options)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 1543, in parse_input_sequences
+    genefinding.find_genes(concat_seq, options)
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/antismash/generic_modules/genefinding/__init__.py", line 44, in find_genes
+    raise ValueError("Called find_genes, but genefinding disabled")
+ValueError: Called find_genes, but genefinding disabled

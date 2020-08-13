@@ -1,0 +1,18 @@
+[02:05 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[02:05 PM]: Running funannotate v1.6.0-98d4d3f
+[02:05 PM]: Found relevent files in Dstr_v1.7_Annotation/training, will re-use them:
+	Forward reads: Dstr_v1.7_Annotation/training/left.fq.gz
+	Reverse reads: Dstr_v1.7_Annotation/training/right.fq.gz
+	Forward normalized reads: Dstr_v1.7_Annotation/training/normalize/left.norm.fq
+	Reverse normalized reads: Dstr_v1.7_Annotation/training/normalize/right.norm.fq
+	Trinity results: Dstr_v1.7_Annotation/training/funannotate_train.trinity-GG.fasta
+	PASA config file: Dstr_v1.7_Annotation/training/pasa/alignAssembly.txt
+	BAM alignments: Dstr_v1.7_Annotation/training/funannotate_train.coordSorted.bam
+	StringTie GTF: Dstr_v1.7_Annotation/training/funannotate_train.stringtie.gtf
+[02:13 PM]: Reannotating Datura stramonium, NCBI accession: None
+[02:13 PM]: Previous annotation consists of: 55,559 protein coding gene models and 1,468 non-coding gene models
+[02:13 PM]: Trimmomatic will be skipped
+[02:13 PM]: Existing BAM alignments found: Dstr_v1.7_Annotation/update_misc/trinity.alignments.bam, Dstr_v1.7_Annotation/update_misc/transcript.alignments.bam
+[02:13 PM]: PASA database is SQLite: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.7_Annotation/training/pasa/Datura_stramonium
+[02:13 PM]: Running PASA annotation comparison step 1
+slurmstepd-c05: error: *** JOB 1847514 ON c05 CANCELLED AT 2020-07-24T11:17:44 ***

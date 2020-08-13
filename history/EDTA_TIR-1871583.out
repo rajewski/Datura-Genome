@@ -1,0 +1,9 @@
+Actually running EDTA
+Sat Jul 25 16:29:59 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Sat Jul 25 16:30:28 PDT 2020	Start to find TIR candidates.
+
+Sat Jul 25 16:30:28 PDT 2020	Identify TIR candidates from scratch.
+
+Species: others
+slurmstepd-i55: error: *** JOB 1871583 ON i55 CANCELLED AT 2020-07-25T18:30:12 DUE TO TIME LIMIT ***

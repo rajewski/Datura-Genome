@@ -1,0 +1,16 @@
+Running Funannotate fix on Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk
+[07:17 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[07:17 PM]: Running funannotate v1.6.0-98d4d3f
+[07:21 PM]: Extracting genome sequence and parsing meta information
+[07:24 PM]: 232,605 contigs containing 58,793 protein coding genes and 1,454 tRNA genes
+[07:27 PM]: Found pre-existing funannotate files, archiving to Dstr_v1.7_Annotation/update_results/archive_81824
+[07:27 PM]: Converting to GenBank format
+-------------------------------------------------------
+[08:07 PM]: Generating output files.
+[08:08 PM]: There are 2 gene models that need to be fixed.
+[08:08 PM]: Manually edit the tbl file Dstr_v1.7_Annotation/update_results/Datura_stramonium.tbl, then run:
+
+funannotate fix -i Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk -t Dstr_v1.7_Annotation/update_results/Datura_stramonium.tbl
+
+-------------------------------------------------------
+HAX54_001567	14 internal stops. Genetic code [1]

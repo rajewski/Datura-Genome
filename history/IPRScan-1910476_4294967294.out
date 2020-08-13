@@ -1,0 +1,16 @@
+Fri Aug 7 10:55:38 PDT 2020: Running IPR Scan on chunk ...
+2020-08-07 10:55:47,877 [main] [uk.ac.ebi.interpro.scan.jms.main.Run:497] FATAL - Exception thrown when parsing command line arguments.  Error message: Missing argument for option: appl
+usage: java -XX:+UseParallelGC -XX:ParallelGCThreads=2 -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -Xms128M
+            -Xmx2048M -jar interproscan-5.jar
+
+
+Please give us your feedback by sending an email to
+
+interhelp@ebi.ac.uk
+
+
+Copyright ? EMBL European Bioinformatics Institute, Hinxton, Cambridge, UK. (http://www.ebi.ac.uk) The InterProScan
+software itself is provided under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html).
+Third party components (e.g. member database binaries and models) are subject to separate licensing - please see the
+individual member database websites for details.
+

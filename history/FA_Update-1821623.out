@@ -17,3 +17,4 @@
 [02:08 PM]: Running PASA annotation comparison step 1
 [07:10 AM]: Running PASA annotation comparison step 2
 slurmstepd-h06: error: _is_a_lwp: 1 read() attempts on /proc/48903/status failed: No such process
+slurmstepd-h06: error: *** JOB 1821623 ON h06 CANCELLED AT 2020-07-20T14:03:32 DUE TO TIME LIMIT ***

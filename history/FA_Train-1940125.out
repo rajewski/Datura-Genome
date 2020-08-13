@@ -1,0 +1,19 @@
+[09:41 AM]: OS: linux2, 32 cores, ~ 1057 GB RAM. Python: 2.7.15
+[09:41 AM]: Running 1.7.1
+[09:41 AM]: Trimmomatic will be skipped
+[09:41 AM]: 126,574 existing Trinity results found: Dstr_v1.7_Annotation_largeIntrons/training/trinity.fasta
+[09:41 AM]: Removing poly-A sequences from trinity transcripts using seqclean
+[09:41 AM]: Existing SeqClean output found: Dstr_v1.7_Annotation_largeIntrons/training/Dstr_v1.7_Annotation_largeIntrons/training/trinity.fasta.clean
+[09:41 AM]: Existing BAM alignments found: Dstr_v1.7_Annotation_largeIntrons/training/trinity.alignments.bam, Dstr_v1.7_Annotation_largeIntrons/training/transcript.alignments.bam
+[09:41 AM]: Running PASA alignment step using 126,574 transcripts
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/bin/funannotate", line 657, in <module>
+    main()
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/bin/funannotate", line 647, in main
+    mod.main(arguments)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/funannotate/train.py", line 1053, in main
+    pasa_db=args.pasa_db, pasa_alignment_overlap=args.pasa_alignment_overlap, aligners=args.aligners)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/funannotate/train.py", line 336, in runPASAtrain
+    with open(os.path.join(folder, pasaDBname+'.pasa_assemblies_described.txt'), 'r') as description:
+IOError: [Errno 2] No such file or directory: 'Dstr_v1.7_Annotation_largeIntrons/training/pasa/Datura_stramonium.pasa_assemblies_described.txt'

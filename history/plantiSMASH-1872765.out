@@ -1,0 +1,6 @@
+ModuleCmd_Load.c(213):ERROR:105: Unable to locate a modulefile for 'minconda3'
+/usr/share/Modules/init/bash: line 2: activate: No such file or directory
+  File "/bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py", line 90
+    print "\nInput error:", e, "\n"
+                         ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("\nInput error:", e, "\n")?

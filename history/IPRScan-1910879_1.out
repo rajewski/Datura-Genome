@@ -1,0 +1,1261 @@
+Fri Aug 7 11:50:45 PDT 2020: Running IPR Scan on chunk 1...
+07/08/2020 11:50:48:057 Welcome to InterProScan-5.45-80.0
+07/08/2020 11:50:48:065 Running InterProScan v5 in STANDALONE mode... on Linux
+07/08/2020 11:51:13:718 Loading file /rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.7_Annotation/update_results/Datura_stramonium.proteins.fa.1
+07/08/2020 11:51:13:728 Running the following analyses:
+[CDD-3.17,Coils-2.2.1,Gene3D-4.2.0,MobiDBLite-2.0,PANTHER-14.1,Pfam-33.1,Phobius-1.01,PIRSF-3.10,PRINTS-42.0,ProSiteProfiles-2019_11,SFLD-4,SignalP_EUK-4.1,SMART-7.1,SUPERFAMILY-1.75,TIGRFAM-15.0,TMHMM-2.0c]
+Available matches will be retrieved from the pre-calculated match lookup service.
+
+Matches for any sequences that are not represented in the lookup service will be calculated locally.
+2020-08-07 11:53:53,435 [amqEmbeddedWorkerJmsContainer-5] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-07 11:53:53,466 [amqEmbeddedWorkerJmsContainer-5] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-07 11:53:53,471 [amqEmbeddedWorkerJmsContainer-5] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-07 11:53:53,472 [amqEmbeddedWorkerJmsContainer-5] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-07 11:53:53,712 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 559 is being re-run following a failure.
+2020-08-07 11:53:57,597 [amqEmbeddedWorkerJmsContainer-22] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-07 11:53:57,603 [amqEmbeddedWorkerJmsContainer-22] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-07 11:53:57,606 [amqEmbeddedWorkerJmsContainer-22] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-07 11:53:57,606 [amqEmbeddedWorkerJmsContainer-22] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-07 11:53:57,877 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 537 is being re-run following a failure.
+2020-08-07 12:02:18,658 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000004001_000000005000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000004001_000000005000//ps249586-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:18,662 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000004001_000000005000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000004001_000000005000//ps249586-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:18,664 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000004001_000000005000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000004001_000000005000//ps249586-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:18,668 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000004001_000000005000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000004001_000000005000//ps249586-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:18,668 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPrositeProfilesRunBinary
+2020-08-07 12:02:18,832 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000000001_000000001000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000000001_000000001000//ps889910-279.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:18,833 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000000001_000000001000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000000001_000000001000//ps889910-279.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:18,835 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000000001_000000001000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000000001_000000001000//ps889910-279.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:18,836 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000000001_000000001000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000000001_000000001000//ps889910-279.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:18,837 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPrositeProfilesRunBinary
+2020-08-07 12:02:18,965 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 363 is being re-run following a failure.
+2020-08-07 12:02:18,971 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 238 is being re-run following a failure.
+2020-08-07 12:02:19,078 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000006001_000000007000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000006001_000000007000//ps610073-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:19,079 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000006001_000000007000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000006001_000000007000//ps610073-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:19,080 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000006001_000000007000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000006001_000000007000//ps610073-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:19,082 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000006001_000000007000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000006001_000000007000//ps610073-112.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:19,082 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPrositeProfilesRunBinary
+2020-08-07 12:02:19,225 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 303 is being re-run following a failure.
+2020-08-07 12:02:19,428 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000005001_000000006000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000005001_000000006000//ps557080-110.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:19,429 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000005001_000000006000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000005001_000000006000//ps557080-110.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:19,430 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000005001_000000006000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000005001_000000006000//ps557080-110.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:19,431 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000005001_000000006000.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000005001_000000006000//ps557080-110.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:19,432 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPrositeProfilesRunBinary
+2020-08-07 12:02:19,627 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 4488 --cut_tc --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.raw.out data/tigrfam/15.0/TIGRFAMs_HMM.LIB /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta for reading
+
+
+2020-08-07 12:02:19,628 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 4488 --cut_tc --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.raw.out data/tigrfam/15.0/TIGRFAMs_HMM.LIB /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:19,629 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 4488 --cut_tc --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.raw.out data/tigrfam/15.0/TIGRFAMs_HMM.LIB /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:19,631 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 4488 --cut_tc --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.raw.out data/tigrfam/15.0/TIGRFAMs_HMM.LIB /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobTIGRFAM/000000004001_000000008000.fasta for reading
+
+
+2020-08-07 12:02:19,631 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepTIGRFAMRunHmmer3
+2020-08-07 12:02:19,724 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000009001_000000009668.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000009001_000000009668//ps737781-406.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:19,725 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000009001_000000009668.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000009001_000000009668//ps737781-406.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:19,726 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000009001_000000009668.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000009001_000000009668//ps737781-406.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:19,727 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000009001_000000009668.fasta 
+Error output from binary:
+Cannot open /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000009001_000000009668//ps737781-406.tmp: No such file or directory at bin/prosite/ps_scan.pl line 1962.
+
+2020-08-07 12:02:19,727 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPrositeProfilesRunBinary
+2020-08-07 12:02:19,763 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 318 is being re-run following a failure.
+2020-08-07 12:02:19,772 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 60 is being re-run following a failure.
+2020-08-07 12:02:20,019 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 459 is being re-run following a failure.
+2020-08-07 12:02:23,769 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmscan -E 10 -Z 15438 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.raw.out data/superfamily/1.75/hmmlib_1.75 /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta for reading
+
+
+2020-08-07 12:02:23,770 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmscan -E 10 -Z 15438 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.raw.out data/superfamily/1.75/hmmlib_1.75 /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:23,772 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmscan -E 10 -Z 15438 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.raw.out data/superfamily/1.75/hmmlib_1.75 /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:23,773 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmscan -E 10 -Z 15438 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.raw.out data/superfamily/1.75/hmmlib_1.75 /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSuperFamily-1.75/000000000001_000000002000.fasta for reading
+
+
+2020-08-07 12:02:23,774 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepSuperFamilyRunHmmer3-1.75
+2020-08-07 12:02:23,870 [Thread-96] [uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler:460] ERROR - IOException thrown when attempting to read InputStream from external process.
+java.io.FileNotFoundException: /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr/jobSMART/000000008001_000000008500.raw.out (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler.outputToFile(CommandLineConversationImpl.java:445) [interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler.run(CommandLineConversationImpl.java:403) [interproscan-io-5.45-80.0.jar:?]
+2020-08-07 12:02:23,923 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 427 is being re-run following a failure.
+2020-08-07 12:02:23,976 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.FileNotFoundException: /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr/jobSMART/000000008001_000000008500.raw.out (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler.outputToFile(CommandLineConversationImpl.java:445) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler.run(CommandLineConversationImpl.java:403) ~[interproscan-io-5.45-80.0.jar:?]
+2020-08-07 12:02:23,987 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.FileNotFoundException: /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr/jobSMART/000000008001_000000008500.raw.out (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler.outputToFile(CommandLineConversationImpl.java:445)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl$StreamGobbler.run(CommandLineConversationImpl.java:403)
+2020-08-07 12:02:23,994 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-07 12:02:23,994 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepSMARTRunBinary
+2020-08-07 12:02:24,215 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 227 is being re-run following a failure.
+2020-08-07 12:02:24,553 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta for reading
+
+
+2020-08-07 12:02:24,554 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:24,556 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:24,558 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000007001_000000007500.fasta for reading
+
+
+2020-08-07 12:02:24,558 [amqEmbeddedWorkerJmsContainer-16] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPantherRunHmmer3
+2020-08-07 12:02:24,748 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta for reading
+
+
+2020-08-07 12:02:24,749 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:24,750 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:24,751 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.1b1/hmmsearch -Z 123151 -E 0.001 --domE 0.00000001 --incdomE 0.00000001 --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.out --domtblout /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.raw.domtblout.out data/panther/14.1/panther.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPanther/000000001001_000000001500.fasta for reading
+
+
+2020-08-07 12:02:24,752 [amqEmbeddedWorkerJmsContainer-12] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPantherRunHmmer3
+2020-08-07 12:02:24,765 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 132 is being re-run following a failure.
+2020-08-07 12:02:24,796 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.3/hmmsearch -Z 17929 --cut_ga --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.raw.out data/pfam/33.1/pfam_a.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta for reading
+
+
+2020-08-07 12:02:24,797 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.3/hmmsearch -Z 17929 --cut_ga --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.raw.out data/pfam/33.1/pfam_a.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:24,798 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.3/hmmsearch -Z 17929 --cut_ga --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.raw.out data/pfam/33.1/pfam_a.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta for reading
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:24,799 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer3/3.3/hmmsearch -Z 17929 --cut_ga --cpu 1 -o /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.raw.out data/pfam/33.1/pfam_a.hmm /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta 
+Error output from binary:
+
+Error: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPfam/000000008001_000000009668.fasta for reading
+
+
+2020-08-07 12:02:24,800 [amqEmbeddedWorkerJmsContainer-4] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPfamRunHmmer3
+2020-08-07 12:02:25,021 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 309 is being re-run following a failure.
+2020-08-07 12:02:25,027 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 135 is being re-run following a failure.
+2020-08-07 12:02:25,616 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta 
+Error output from binary:
+ Error: Unable to open sequence file '
+ /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta
+ '.
+Could not execute bin/prosite/pfsearch  -lxz data/prosite/2019_11/prosite_models/PS01031.prf /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta C=6.5 > /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000003001_000000004000//ps330051-1.tmp at bin/prosite/ps_scan.pl line 1960.
+
+2020-08-07 12:02:25,617 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta 
+Error output from binary:
+ Error: Unable to open sequence file '
+ /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta
+ '.
+Could not execute bin/prosite/pfsearch  -lxz data/prosite/2019_11/prosite_models/PS01031.prf /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta C=6.5 > /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000003001_000000004000//ps330051-1.tmp at bin/prosite/ps_scan.pl line 1960.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:25,618 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta 
+Error output from binary:
+ Error: Unable to open sequence file '
+ /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta
+ '.
+Could not execute bin/prosite/pfsearch  -lxz data/prosite/2019_11/prosite_models/PS01031.prf /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta C=6.5 > /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000003001_000000004000//ps330051-1.tmp at bin/prosite/ps_scan.pl line 1960.
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:25,619 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 2
+Command: bin/prosite/ps_scan.pl -d data/prosite/2019_11/prosite.dat -w bin/prosite/pfsearch -s -m -o gff -y data/prosite/2019_11/prosite_models /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta 
+Error output from binary:
+ Error: Unable to open sequence file '
+ /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta
+ '.
+Could not execute bin/prosite/pfsearch  -lxz data/prosite/2019_11/prosite_models/PS01031.prf /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles/000000003001_000000004000.fasta C=6.5 > /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobPrositeProfiles//c12/tmpdir_000000003001_000000004000//ps330051-1.tmp at bin/prosite/ps_scan.pl line 1960.
+
+2020-08-07 12:02:25,619 [amqEmbeddedWorkerJmsContainer-6] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepPrositeProfilesRunBinary
+2020-08-07 12:02:25,801 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 219 is being re-run following a failure.
+2020-08-07 12:02:28,818 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1128) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.ProcessImpl.forkAndExec(Native Method) ~[?:?]
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:340) ~[?:?]
+	at java.lang.ProcessImpl.start(ProcessImpl.java:271) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1107) ~[?:?]
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1071) ~[?:?]
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147) ~[interproscan-io-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181) ~[interproscan-management-5.45-80.0.jar:?]
+	... 22 more
+2020-08-07 12:02:28,824 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: IOException thrown when attempting to run binary
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:183)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "python3": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at uk.ac.ebi.interpro.scan.io.cli.CommandLineConversationImpl.runCommand(CommandLineConversationImpl.java:147)
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:181)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 25 more
+2020-08-07 12:02:28,826 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: IOException thrown when attempting to run binary
+2020-08-07 12:02:28,826 [amqEmbeddedWorkerJmsContainer-28] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepMobiDBRunBinary
+2020-08-07 12:02:29,093 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 559 is being re-run following a failure.
+2020-08-07 12:02:29,122 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep:199] ERROR - Command line failed with exit code: 1
+Command: bin/hmmer/hmmer2/2.3.2/hmmpfam --acc -A 0 --cpu 1 -E 0.01 -Z 350000 data/smart/7.1/smart.HMMs.bin /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta 
+Error output from binary:
+
+FATAL: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta
+Usage: hmmpfam [-options] <hmm database> <sequence file or database>
+  Available options are:
+   -h        : help; print brief help on version and usage
+   -n        : nucleic acid models/sequence (default protein)
+   -A <n>    : sets alignment output limit to <n> best domain alignments
+   -E <x>    : sets E value cutoff (globE) to <x>; default 10
+   -T <x>    : sets T bit threshold (globT) to <x>; no threshold by default
+   -Z <n>    : sets Z (# models) for E-value calculation
+
+
+
+2020-08-07 12:02:29,123 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:213] ERROR - Execution thrown when attempting to executeInTransaction the StepExecution.  All database activity rolled back.
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer2/2.3.2/hmmpfam --acc -A 0 --cpu 1 -E 0.01 -Z 350000 data/smart/7.1/smart.HMMs.bin /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta 
+Error output from binary:
+
+FATAL: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta
+Usage: hmmpfam [-options] <hmm database> <sequence file or database>
+  Available options are:
+   -h        : help; print brief help on version and usage
+   -n        : nucleic acid models/sequence (default protein)
+   -A <n>    : sets alignment output limit to <n> best domain alignments
+   -E <x>    : sets E value cutoff (globE) to <x>; default 10
+   -T <x>    : sets T bit threshold (globT) to <x>; no threshold by default
+   -Z <n>    : sets Z (# models) for E-value calculation
+
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201) ~[interproscan-management-5.45-80.0.jar:?]
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87) ~[interproscan-5.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source) ~[?:?]
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197) [interproscan-5.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076) [spring-jms-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-08-07 12:02:29,124 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:215] ERROR - The exception is :
+java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer2/2.3.2/hmmpfam --acc -A 0 --cpu 1 -E 0.01 -Z 350000 data/smart/7.1/smart.HMMs.bin /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta 
+Error output from binary:
+
+FATAL: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta
+Usage: hmmpfam [-options] <hmm database> <sequence file or database>
+  Available options are:
+   -h        : help; print brief help on version and usage
+   -n        : nucleic acid models/sequence (default protein)
+   -A <n>    : sets alignment output limit to <n> best domain alignments
+   -E <x>    : sets E value cutoff (globE) to <x>; default 10
+   -T <x>    : sets T bit threshold (globT) to <x>; no threshold by default
+   -Z <n>    : sets Z (# models) for E-value calculation
+
+
+
+	at uk.ac.ebi.interpro.scan.management.model.implementations.RunBinaryStep.execute(RunBinaryStep.java:201)
+	at uk.ac.ebi.interpro.scan.jms.activemq.StepExecutionTransactionImpl.executeInTransaction(StepExecutionTransactionImpl.java:87)
+	at jdk.internal.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.executeInTransaction(Unknown Source)
+	at uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener.onMessage(LocalJobQueueListener.java:197)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:761)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:699)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1189)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1179)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1076)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-08-07 12:02:29,125 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:218] ERROR - 2. The exception is :java.lang.IllegalStateException: Command line failed with exit code: 1
+Command: bin/hmmer/hmmer2/2.3.2/hmmpfam --acc -A 0 --cpu 1 -E 0.01 -Z 350000 data/smart/7.1/smart.HMMs.bin /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta 
+Error output from binary:
+
+FATAL: Failed to open sequence file /rhome/arajewski/bigdata/Datura/5_Funannotate/temp/c12_20200807_115057630_6akr//jobSMART/000000009001_000000009500.fasta
+Usage: hmmpfam [-options] <hmm database> <sequence file or database>
+  Available options are:
+   -h        : help; print brief help on version and usage
+   -n        : nucleic acid models/sequence (default protein)
+   -A <n>    : sets alignment output limit to <n> best domain alignments
+   -E <x>    : sets E value cutoff (globE) to <x>; default 10
+   -T <x>    : sets T bit threshold (globT) to <x>; no threshold by default
+   -Z <n>    : sets Z (# models) for E-value calculation
+
+
+
+2020-08-07 12:02:29,126 [amqEmbeddedWorkerJmsContainer-10] [uk.ac.ebi.interpro.scan.jms.worker.LocalJobQueueListener:219] ERROR - StepExecution with errors - stepName: stepSMARTRunBinary
+2020-08-07 12:02:29,380 [main] [uk.ac.ebi.interpro.scan.jms.master.StandaloneBlackBoxMaster:165] WARN - StepInstance 14 is being re-run following a failure.
+slurmstepd-c12: error: *** JOB 1910879 ON c12 CANCELLED AT 2020-08-07T12:02:29 ***

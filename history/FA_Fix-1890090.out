@@ -1,0 +1,23 @@
+Running Funannotate fix on Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk
+[06:17 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[06:17 PM]: Running funannotate v1.6.0-98d4d3f
+[06:20 PM]: Extracting genome sequence and parsing meta information
+[06:22 PM]: 232,605 contigs containing 58,793 protein coding genes and 1,454 tRNA genes
+[06:25 PM]: Found pre-existing funannotate files, archiving to Dstr_v1.7_Annotation/update_results/archive_58923
+[06:25 PM]: Converting to GenBank format
+-------------------------------------------------------
+[06:58 PM]: Generating output files.
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/updateGBK.py", line 120, in <module>
+    lib.tbl2allout(final_tbl, os.path.join(basedir, 'tbl2asn', 'genome.fsa'), final_gff, final_proteins, final_transcripts, final_cds_transcripts, final_fasta)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 1955, in tbl2allout
+    dict2gff3(Genes, GFF)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 3540, in dict2gff3
+    sGenes = natsorted(input.iteritems(), key=_sortDict)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/natsort/natsort.py", line 267, in natsorted
+    return sorted(seq, reverse=reverse, key=key)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/lib/python2.7/site-packages/natsort/utils.py", line 231, in natsort_key
+    val = key(val)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/lib/library.py", line 3538, in _sortDict
+    return (d[1]['contig'], d[1]['location'][0])
+TypeError: 'NoneType' object has no attribute '__getitem__'

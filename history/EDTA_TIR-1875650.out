@@ -1,0 +1,26 @@
+Length filtering the genome to speed TIR-learner
+java -ea -Xms300m -cp /opt/linux/centos/7.x/x86_64/pkgs/BBMap/38.86/current/ jgi.ReformatReads in=Dstr_v1.7.fa out=Dstr_v1.7.100000.fa minlength=100000
+Executing jgi.ReformatReads [in=Dstr_v1.7.fa, out=Dstr_v1.7.100000.fa, minlength=100000]
+
+Input is being processed as unpaired
+Input:                  	232605 reads          	2110510646 bases
+Short Read Discards:    	226675 reads (97.45%) 	742990785 bases (35.20%)
+Output:                 	5930 reads (2.55%) 	1367519861 bases (64.80%)
+
+Time:                         	15.851 seconds.
+Reads Processed:        232k 	14.67k reads/sec
+Bases Processed:       2110m 	133.15m bases/sec
+Done.
+Actually running EDTA
+Mon Jul 27 16:45:07 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Mon Jul 27 16:45:46 PDT 2020	Start to find TIR candidates.
+
+Mon Jul 27 16:45:46 PDT 2020	Identify TIR candidates from scratch.
+
+Species: others
+Tue Jul 28 09:47:01 PDT 2020	Finish finding TIR candidates.
+
+Tue Jul 28 09:47:01 PDT 2020	Execution of EDTA_raw.pl is finished!
+
+Done.

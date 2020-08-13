@@ -1,0 +1,997 @@
+Actually running EDTA
+Tue Jul 21 15:54:01 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Tue Jul 21 15:54:58 PDT 2020	Start to find TIR candidates.
+
+Tue Jul 21 15:54:58 PDT 2020	Identify TIR candidates from scratch.
+
+Species: others
+slurmstepd-c40: error: _is_a_lwp: open() /proc/63703/status failed: No such file or directory
+slurmstepd-c40: error: _is_a_lwp: open() /proc/13067/status failed: No such file or directory
+/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/TIR-Learner2.4.sh: line 281: 30951 Bus error               python3 $path/Module3_New/getDataset.py -g $genomeFile -name $genomeName -p $path -t $t -d $dir"/Module3_New"
+cat: *-+-DTA.fa: No such file or directory
+cat: *-+-DTC.fa: No such file or directory
+cat: *-+-DTH.fa: No such file or directory
+cat: *-+-DTM.fa: No such file or directory
+cat: *-+-DTT.fa: No such file or directory
+cat: *-+-NonTIR.fa: No such file or directory
+cat: *-+-*-+-*.gff3: No such file or directory
+rm: cannot remove '*-+-*-+-*.gff3': No such file or directory
+Process ForkPoolWorker-84:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3_New/CombineAll.py", line 75, in <module>
+    f_m3=removeDupinSingle("%s.gff3"%(genome_Name+spliter+"Module3"))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3_New/CombineAll.py", line 57, in removeDupinSingle
+    f=pd.read_csv(file,header=None,sep="\t") #shujun
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 532, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3/GetAllSeq.py", line 32, in GetListFromFile
+    f=open(file,"r+")
+FileNotFoundError: [Errno 2] No such file or directory: 'TIR-Learner_FinalAnn.gff3'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3/GetAllSeq.py", line 63, in <module>
+    pool.map(GetListFromFile,fileList) #shujun
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 266, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 644, in get
+    raise self._value
+FileNotFoundError: [Errno 2] No such file or directory: 'TIR-Learner_FinalAnn.gff3'
+mv: cannot stat 'TIR-Learner/*FinalAnn*.gff3': No such file or directory
+mv: cannot stat 'TIR-Learner/*FinalAnn*.fa': No such file or directory
+Process ForkPoolWorker-82:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-83:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-88:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-90:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-78:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-85:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-76:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-73:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-68:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-62:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-71:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-63:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-80:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-72:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-67:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-69:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-74:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-70:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-75:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-65:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-61:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-66:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-64:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-81:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-79:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-89:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-87:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-86:
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/queues.py", line 347, in put
+    self._writer.send_bytes(obj)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Can't open ./TIR-Learner-Result/TIR-Learner_FinalAnn.fa: No such file or directory at /rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/util/rename_tirlearner.pl line 18.
+Warning: LOC list Dstr_v1.7.1000.fa.mod.TIR.ext30.list is empty.
+
+Error: Error while loading sequenceCan't open ./TIR-Learner-Result/TIR-Learner_FinalAnn.gff3: No such file or directory.
+Warning: The TIR result file has 0 bp!
+
+Thu Jul 23 17:37:15 PDT 2020	Execution of EDTA_raw.pl is finished!
+
+Done.

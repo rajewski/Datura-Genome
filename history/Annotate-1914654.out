@@ -1,0 +1,6 @@
+ModuleCmd_Load.c(213):ERROR:105: Unable to locate a modulefile for 'funannoate/1.6.0'
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+/var/spool/slurmd/job1914654/slurm_script: line 24: funannotate: command not found

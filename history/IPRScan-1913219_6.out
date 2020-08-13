@@ -1,0 +1,18 @@
+Fri Aug 7 16:27:25 PDT 2020: Running IPR Scan on chunk 6...
+07/08/2020 16:27:34:077 Welcome to InterProScan-5.45-80.0
+07/08/2020 16:27:34:084 Running InterProScan v5 in STANDALONE mode... on Linux
+07/08/2020 16:27:53:544 Loading file /rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.7_Annotation/update_results/Datura_stramonium.proteins.fa.6
+07/08/2020 16:27:53:548 Running the following analyses:
+[CDD-3.17,Coils-2.2.1,Gene3D-4.2.0,MobiDBLite-2.0,PANTHER-14.1,Pfam-33.1,Phobius-1.01,PIRSF-3.10,PRINTS-42.0,ProSiteProfiles-2019_11,SFLD-4,SignalP_EUK-4.1,SMART-7.1,SUPERFAMILY-1.75,TIGRFAM-15.0,TMHMM-2.0c]
+Available matches will be retrieved from the pre-calculated match lookup service.
+
+Matches for any sequences that are not represented in the lookup service will be calculated locally.
+slurmstepd-h05: error: _is_a_lwp: open() /proc/2331/status failed: No such file or directory
+07/08/2020 17:07:26:537 25% completed
+07/08/2020 17:26:32:194 50% completed
+07/08/2020 17:46:27:848 75% completed
+07/08/2020 18:05:11:631 90% completed
+07/08/2020 18:25:46:257 100% done:  InterProScan analyses completed 
+
+Fri Aug 7 18:25:46 PDT 2020: Done.
+Fri Aug 7 18:25:46 PDT 2020: Combining IPR scan outputs into one file...

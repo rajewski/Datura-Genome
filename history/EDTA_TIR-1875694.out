@@ -1,0 +1,4 @@
+Actually running EDTA
+Mon Jul 27 17:10:22 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+slurmstepd-c42: error: *** JOB 1875694 ON c42 CANCELLED AT 2020-07-27T17:10:33 ***

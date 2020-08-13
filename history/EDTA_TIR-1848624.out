@@ -1,0 +1,89 @@
+Mon Jul 20 18:25:21 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Mon Jul 20 18:25:45 PDT 2020	Start to find TIR candidates.
+
+Mon Jul 20 18:25:45 PDT 2020	Identify TIR candidates from scratch.
+
+Species: others
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3_New/getDataset.py", line 113, in Predict
+    predicted_labels = model.predict(np.stack(prefeature))
+  File "<__array_function__ internals>", line 6, in stack
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/numpy/core/shape_base.py", line 422, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3_New/getDataset.py", line 134, in <module>
+    d = pool.map(Predict,files)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 266, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 644, in get
+    raise self._value
+ValueError: need at least one array to stack
+cat: *-+-DTA.fa: No such file or directory
+cat: *-+-DTC.fa: No such file or directory
+cat: *-+-DTH.fa: No such file or directory
+cat: *-+-DTM.fa: No such file or directory
+cat: *-+-DTT.fa: No such file or directory
+cat: *-+-NonTIR.fa: No such file or directory
+cat: *-+-*-+-*.gff3: No such file or directory
+rm: cannot remove '*-+-*-+-*.gff3': No such file or directory
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3_New/CombineAll.py", line 75, in <module>
+    f_m3=removeDupinSingle("%s.gff3"%(genome_Name+spliter+"Module3"))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3_New/CombineAll.py", line 57, in removeDupinSingle
+    f=pd.read_csv(file,header=None,sep="\t") #shujun
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 532, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3/GetAllSeq.py", line 32, in GetListFromFile
+    f=open(file,"r+")
+FileNotFoundError: [Errno 2] No such file or directory: 'TIR-Learner_FinalAnn.gff3'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/bin/TIR-Learner2.4/Module3/GetAllSeq.py", line 63, in <module>
+    pool.map(GetListFromFile,fileList) #shujun
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 266, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/rhome/arajewski/.conda/envs/EDTAenv/lib/python3.6/multiprocessing/pool.py", line 644, in get
+    raise self._value
+FileNotFoundError: [Errno 2] No such file or directory: 'TIR-Learner_FinalAnn.gff3'
+mv: cannot stat 'TIR-Learner/*FinalAnn*.gff3': No such file or directory
+mv: cannot stat 'TIR-Learner/*FinalAnn*.fa': No such file or directory
+Can't open ./TIR-Learner-Result/TIR-Learner_FinalAnn.fa: No such file or directory at /rhome/arajewski/.conda/envs/EDTAenv/share/EDTA/util/rename_tirlearner.pl line 18.
+Warning: LOC list Dstr_v1.7.fa.mod.TIR.ext30.list is empty.
+
+Error: Error while loading sequenceCan't open ./TIR-Learner-Result/TIR-Learner_FinalAnn.gff3: No such file or directory.
+Warning: The TIR result file has 0 bp!
+
+Tue Jul 21 10:13:25 PDT 2020	Execution of EDTA_raw.pl is finished!
+

@@ -1,0 +1,6 @@
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+usage: funannotate-functional.py [options] -i folder --eggnog emapper.annotations --iprscan proteins.xml --cpus 12
+funannotate-functional.py: error: argument --cpus: expected one argument

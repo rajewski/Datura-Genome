@@ -1,0 +1,6 @@
+INFO: starting antiSMASH 3.0.5-f27eb4b, called with /bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py -c 30 --limit -1 --taxon plants --eukaryotic --clusterblast --subclusterblast --knownclusterblast --smcogs --outputfolder Dstr_v1.7_Annotation/plantismash -v --logfile Dstr_v1.7_Annotation/plantismash/plantismash_1860077.log --statusfile Dstr_v1.7_Annotation/plantismash/plantismash_status_1860077.log Dstr_v1.7_Annotation/predict_results/Datura_stramonium.gbk
+INFO: Number of clusters = 10
+INFO: Loading detection modules
+INFO: Parsing input sequences ['Dstr_v1.7_Annotation/predict_results/Datura_stramonium.gbk']
+INFO: Running genefinding on 221336 Contigs without annotations..
+slurmstepd-i55: error: *** JOB 1860077 ON i55 CANCELLED AT 2020-07-23T10:12:26 ***

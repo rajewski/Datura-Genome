@@ -1,0 +1,268 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v1.8.5  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Sat Aug  1 11:01:24 PDT 2020	Dependency checking:
+				All passed!
+
+	A CDS file Dstr_v1.7.cds.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Sat Aug  1 11:03:04 PDT 2020	Obtain raw TE libraries using various structure-based programs: 
+Sat Aug  1 11:03:04 PDT 2020	EDTA_raw: Check dependencies, prepare working directories.
+
+Sat Aug  1 11:03:29 PDT 2020	Start to find LTR candidates.
+
+Sat Aug  1 11:03:29 PDT 2020	Existing result file Dstr_v1.7.fa.mod.LTR.raw.fa found! Will keep this file without rerunning this module.
+	Please specify --overwrite 1 if you want to rerun this module.
+
+Sat Aug  1 11:03:29 PDT 2020	Finish finding LTR candidates.
+
+Sat Aug  1 11:03:29 PDT 2020	Start to find TIR candidates.
+
+Sat Aug  1 11:03:29 PDT 2020	Existing result file Dstr_v1.7.fa.mod.TIR.raw.fa found! Will keep this file without rerunning this module.
+	Please specify -overwrite 1 if you want to rerun this module.
+
+Sat Aug  1 11:03:29 PDT 2020	Finish finding TIR candidates.
+
+Sat Aug  1 11:03:29 PDT 2020	Start to find Helitron candidates.
+
+Sat Aug  1 11:03:29 PDT 2020	Existing result file Dstr_v1.7.fa.mod.Helitron.raw.fa found! Will keep this file without rerunning this module.
+	Please specify -overwrite 1 if you want to rerun this module.
+
+Sat Aug  1 11:03:29 PDT 2020	Finish finding Helitron candidates.
+
+Sat Aug  1 11:03:29 PDT 2020	Execution of EDTA_raw.pl is finished!
+
+Sat Aug  1 11:03:30 PDT 2020	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Dstr_v1.7.fa.mod.EDTA.intact.fa
+					Dstr_v1.7.fa.mod.EDTA.intact.gff
+
+Sat Aug  1 11:03:30 PDT 2020	Perform EDTA advcance filtering for raw TE candidates and generate the stage 1 library: 
+
+Sat Aug  1 11:21:56 PDT 2020	EDTA advcance filtering finished.
+
+Sat Aug  1 11:21:56 PDT 2020	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+slurmstepd-c15: error: _is_a_lwp: open() /proc/755/status failed: No such file or directory
+slurmstepd-c15: error: _is_a_lwp: open() /proc/35637/status failed: No such file or directory
+2020-08-07 02:12:36,343 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2020-08-07 02:12:36,344 -INFO- No DRMAA, Switching to local/cluster mode.
+2020-08-07 02:12:36,388 -INFO- VARS: {'sequence': 'Dstr_v1.7.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Dstr_v1.7.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 48, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2020-08-07 02:12:36,389 -INFO- checking dependencies:
+2020-08-07 02:12:36,479 -INFO- hmmer	3.3	OK
+2020-08-07 02:12:37,349 -INFO- blastn	2.9.0+	OK
+2020-08-07 02:12:37,351 -INFO- check database rexdb
+2020-08-07 02:12:37,351 -INFO- db path: /rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database
+2020-08-07 02:12:37,351 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2020-08-07 02:12:37,352 -INFO- db REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm not yet ready, building db!
+2020-08-07 02:12:38,312 -INFO- Working...    done.
+Pressed and indexed 233 HMMs (233 names).
+Models pressed into binary file:   /rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm.h3m
+SSI index for binary model file:   /rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm.h3i
+Profiles (MSV part) pressed into:  /rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm.h3f
+Profiles (remainder) pressed into: /rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm.h3p
+
+2020-08-07 02:12:38,321 -INFO- Start classifying pipeline
+2020-08-07 02:12:38,599 -INFO- total 4037 sequences
+2020-08-07 02:12:38,599 -INFO- translating `Dstr_v1.7.fa.mod.RM.consensi.fa` in six frames
+/rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/Bio/Seq.py:2742: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2020-08-07 02:12:51,180 -INFO- HMM scanning against `/rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2020-08-07 02:12:51,966 -INFO- Creating server instance (pp-1.6.4.4)
+2020-08-07 02:12:51,966 -INFO- Running on Python 3.6.11 linux
+2020-08-07 02:12:58,812 -INFO- pp local server started with 48 workers
+2020-08-07 02:12:58,985 -INFO- Task 0 started
+2020-08-07 02:12:58,986 -INFO- Task 1 started
+2020-08-07 02:12:58,987 -INFO- Task 2 started
+2020-08-07 02:12:58,988 -INFO- Task 3 started
+2020-08-07 02:12:58,989 -INFO- Task 4 started
+2020-08-07 02:12:58,990 -INFO- Task 5 started
+2020-08-07 02:12:58,991 -INFO- Task 6 started
+2020-08-07 02:12:58,993 -INFO- Task 7 started
+2020-08-07 02:12:58,994 -INFO- Task 8 started
+2020-08-07 02:12:58,996 -INFO- Task 9 started
+2020-08-07 02:12:58,997 -INFO- Task 10 started
+2020-08-07 02:12:58,998 -INFO- Task 11 started
+2020-08-07 02:12:58,999 -INFO- Task 12 started
+2020-08-07 02:12:59,000 -INFO- Task 13 started
+2020-08-07 02:12:59,001 -INFO- Task 14 started
+2020-08-07 02:12:59,002 -INFO- Task 15 started
+2020-08-07 02:12:59,004 -INFO- Task 16 started
+2020-08-07 02:12:59,006 -INFO- Task 17 started
+2020-08-07 02:12:59,007 -INFO- Task 18 started
+2020-08-07 02:12:59,008 -INFO- Task 19 started
+2020-08-07 02:12:59,010 -INFO- Task 20 started
+2020-08-07 02:12:59,011 -INFO- Task 21 started
+2020-08-07 02:12:59,012 -INFO- Task 22 started
+2020-08-07 02:12:59,013 -INFO- Task 23 started
+2020-08-07 02:12:59,014 -INFO- Task 24 started
+2020-08-07 02:12:59,016 -INFO- Task 25 started
+2020-08-07 02:12:59,017 -INFO- Task 26 started
+2020-08-07 02:12:59,019 -INFO- Task 27 started
+2020-08-07 02:12:59,020 -INFO- Task 28 started
+2020-08-07 02:12:59,023 -INFO- Task 29 started
+2020-08-07 02:12:59,024 -INFO- Task 30 started
+2020-08-07 02:12:59,026 -INFO- Task 31 started
+2020-08-07 02:12:59,027 -INFO- Task 32 started
+2020-08-07 02:12:59,029 -INFO- Task 33 started
+2020-08-07 02:12:59,030 -INFO- Task 34 started
+2020-08-07 02:12:59,031 -INFO- Task 35 started
+2020-08-07 02:12:59,033 -INFO- Task 36 started
+2020-08-07 02:12:59,034 -INFO- Task 37 started
+2020-08-07 02:12:59,035 -INFO- Task 38 started
+2020-08-07 02:12:59,037 -INFO- Task 39 started
+2020-08-07 02:12:59,038 -INFO- Task 40 started
+2020-08-07 02:12:59,039 -INFO- Task 41 started
+2020-08-07 02:12:59,040 -INFO- Task 42 started
+2020-08-07 02:12:59,041 -INFO- Task 43 started
+2020-08-07 02:12:59,042 -INFO- Task 44 started
+2020-08-07 02:12:59,043 -INFO- Task 45 started
+2020-08-07 02:12:59,045 -INFO- Task 46 started
+2020-08-07 02:12:59,046 -INFO- Task 47 started
+2020-08-07 02:22:22,247 -INFO- generating gene anntations
+2020-08-07 02:22:23,017 -INFO- 250 sequences classified by HMM
+2020-08-07 02:22:23,017 -INFO- see protein domain sequences in `Dstr_v1.7.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `Dstr_v1.7.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2020-08-07 02:22:23,017 -INFO- classifying the unclassified sequences by searching against the classified ones
+2020-08-07 02:22:23,377 -INFO- using the 80-80-80 rule
+2020-08-07 02:22:23,377 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2020-08-07 02:22:24,493 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 48`
+2020-08-07 02:22:26,905 -INFO- 10 sequences classified in pass 2
+2020-08-07 02:22:26,906 -INFO- total 260 sequences classified.
+2020-08-07 02:22:26,906 -INFO- see classified sequences in `Dstr_v1.7.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2020-08-07 02:22:26,906 -INFO- writing library for RepeatMasker in `Dstr_v1.7.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2020-08-07 02:22:27,206 -INFO- writing classified protein domains in `Dstr_v1.7.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2020-08-07 02:22:27,228 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Copia                        77             73              9              0
+LTR             Gypsy                        90             83              8              0
+pararetrovirus  unknown                      12              0              0              0
+LINE            unknown                      49              0              0              0
+TIR             EnSpm_CACTA                   5              0              0              0
+TIR             MuDR_Mutator                 10              0              0              0
+TIR             PIF_Harbinger                 4              0              0              0
+TIR             Tc1_Mariner                   1              0              0              0
+TIR             hAT                           4              0              0              0
+Helitron        unknown                       5              0              0              0
+Maverick        unknown                       3              0              0              0
+2020-08-07 02:22:27,229 -INFO- Pipeline done.
+2020-08-07 02:22:27,229 -INFO- cleaning the temporary directory ./tmp
+Fri Aug  7 02:30:52 PDT 2020	Clean up TE-related sequences in the CDS file with TEsorter:
+
+2020-08-07 02:30:54,354 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2020-08-07 02:30:54,355 -INFO- No DRMAA, Switching to local/cluster mode.
+2020-08-07 02:30:54,368 -INFO- VARS: {'sequence': 'Datura_stramonium.cds-transcripts.fa.mod', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Datura_stramonium.cds-transcripts.fa.mod.rexdb', 'force_write_hmmscan': False, 'processors': 48, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2020-08-07 02:30:54,369 -INFO- checking dependencies:
+2020-08-07 02:30:54,446 -INFO- hmmer	3.3	OK
+2020-08-07 02:30:54,785 -INFO- blastn	2.9.0+	OK
+2020-08-07 02:30:54,787 -INFO- check database rexdb
+2020-08-07 02:30:54,787 -INFO- db path: /rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database
+2020-08-07 02:30:54,787 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2020-08-07 02:30:54,788 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2020-08-07 02:30:54,788 -INFO- Start classifying pipeline
+2020-08-07 02:30:56,107 -INFO- total 55559 sequences
+2020-08-07 02:30:56,107 -INFO- translating `Datura_stramonium.cds-transcripts.fa.mod` in six frames
+/rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/Bio/Seq.py:2742: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2020-08-07 02:33:41,543 -INFO- HMM scanning against `/rhome/arajewski/.conda/envs/EDTA/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2020-08-07 02:33:51,724 -INFO- Creating server instance (pp-1.6.4.4)
+2020-08-07 02:33:51,724 -INFO- Running on Python 3.6.11 linux
+2020-08-07 02:33:58,904 -INFO- pp local server started with 48 workers
+2020-08-07 02:33:59,039 -INFO- Task 0 started
+2020-08-07 02:33:59,041 -INFO- Task 1 started
+2020-08-07 02:33:59,041 -INFO- Task 2 started
+2020-08-07 02:33:59,043 -INFO- Task 3 started
+2020-08-07 02:33:59,044 -INFO- Task 4 started
+2020-08-07 02:33:59,046 -INFO- Task 5 started
+2020-08-07 02:33:59,046 -INFO- Task 6 started
+2020-08-07 02:33:59,048 -INFO- Task 7 started
+2020-08-07 02:33:59,049 -INFO- Task 8 started
+2020-08-07 02:33:59,050 -INFO- Task 9 started
+2020-08-07 02:33:59,052 -INFO- Task 10 started
+2020-08-07 02:33:59,053 -INFO- Task 11 started
+2020-08-07 02:33:59,054 -INFO- Task 12 started
+2020-08-07 02:33:59,055 -INFO- Task 13 started
+2020-08-07 02:33:59,057 -INFO- Task 14 started
+2020-08-07 02:33:59,058 -INFO- Task 15 started
+2020-08-07 02:33:59,059 -INFO- Task 16 started
+2020-08-07 02:33:59,060 -INFO- Task 17 started
+2020-08-07 02:33:59,061 -INFO- Task 18 started
+2020-08-07 02:33:59,062 -INFO- Task 19 started
+2020-08-07 02:33:59,064 -INFO- Task 20 started
+2020-08-07 02:33:59,065 -INFO- Task 21 started
+2020-08-07 02:33:59,067 -INFO- Task 22 started
+2020-08-07 02:33:59,068 -INFO- Task 23 started
+2020-08-07 02:33:59,069 -INFO- Task 24 started
+2020-08-07 02:33:59,070 -INFO- Task 25 started
+2020-08-07 02:33:59,072 -INFO- Task 26 started
+2020-08-07 02:33:59,073 -INFO- Task 27 started
+2020-08-07 02:33:59,074 -INFO- Task 28 started
+2020-08-07 02:33:59,075 -INFO- Task 29 started
+2020-08-07 02:33:59,077 -INFO- Task 30 started
+2020-08-07 02:33:59,078 -INFO- Task 31 started
+2020-08-07 02:33:59,080 -INFO- Task 32 started
+2020-08-07 02:33:59,081 -INFO- Task 33 started
+2020-08-07 02:33:59,082 -INFO- Task 34 started
+2020-08-07 02:33:59,084 -INFO- Task 35 started
+2020-08-07 02:33:59,085 -INFO- Task 36 started
+2020-08-07 02:33:59,086 -INFO- Task 37 started
+2020-08-07 02:33:59,088 -INFO- Task 38 started
+2020-08-07 02:33:59,089 -INFO- Task 39 started
+2020-08-07 02:33:59,091 -INFO- Task 40 started
+2020-08-07 02:33:59,092 -INFO- Task 41 started
+2020-08-07 02:33:59,094 -INFO- Task 42 started
+2020-08-07 02:33:59,095 -INFO- Task 43 started
+2020-08-07 02:33:59,096 -INFO- Task 44 started
+2020-08-07 02:33:59,097 -INFO- Task 45 started
+2020-08-07 02:33:59,098 -INFO- Task 46 started
+2020-08-07 02:33:59,099 -INFO- Task 47 started
+2020-08-07 04:44:37,377 -INFO- generating gene anntations
+2020-08-07 04:44:46,101 -INFO- 631 sequences classified by HMM
+2020-08-07 04:44:46,102 -INFO- see protein domain sequences in `Datura_stramonium.cds-transcripts.fa.mod.rexdb.dom.faa` and annotation gff3 file in `Datura_stramonium.cds-transcripts.fa.mod.rexdb.dom.gff3`
+2020-08-07 04:44:46,102 -INFO- classifying the unclassified sequences by searching against the classified ones
+2020-08-07 04:44:50,650 -INFO- using the 80-80-80 rule
+2020-08-07 04:44:50,650 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2020-08-07 04:44:51,571 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 48`
+2020-08-07 04:45:13,328 -INFO- 216 sequences classified in pass 2
+2020-08-07 04:45:13,329 -INFO- total 847 sequences classified.
+2020-08-07 04:45:13,329 -INFO- see classified sequences in `Datura_stramonium.cds-transcripts.fa.mod.rexdb.cls.tsv`
+2020-08-07 04:45:13,329 -INFO- writing library for RepeatMasker in `Datura_stramonium.cds-transcripts.fa.mod.rexdb.cls.lib`
+2020-08-07 04:45:16,626 -INFO- writing classified protein domains in `Datura_stramonium.cds-transcripts.fa.mod.rexdb.cls.pep`
+2020-08-07 04:45:16,667 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                      10              0              0              0
+LTR             Copia                       162            104             14              0
+LTR             Gypsy                       333            223             15              0
+LTR             Retrovirus                    4              0              0              0
+pararetrovirus  unknown                       3              0              0              0
+DIRS            unknown                       1              0              0              0
+Penelope        unknown                       2              0              0              0
+LINE            unknown                     161              0              0              0
+TIR             MuDR_Mutator                 18              0              0              0
+TIR             Novosib                       4              0              0              0
+TIR             PIF_Harbinger                 2              0              0              0
+TIR             Tc1_Mariner                   1              0              0              0
+TIR             hAT                           1              0              0              0
+Maverick        unknown                     144              0              0              0
+mixture         mixture                       1              0              0              0
+2020-08-07 04:45:16,668 -INFO- Pipeline done.
+2020-08-07 04:45:16,688 -INFO- cleaning the temporary directory ./tmp
+				Remove CDS-related sequences in the EDTA library:
+
+Fri Aug  7 04:58:18 PDT 2020	EDTA final stage finished! You may check out:
+				The final EDTA TE library: Dstr_v1.7.fa.mod.EDTA.TElib.fa
+Fri Aug  7 04:58:18 PDT 2020	Perform post-EDTA analysis for whole-genome annotation:
+
+Fri Aug  7 04:58:18 PDT 2020	Homology-based annotation of TEs using Dstr_v1.7.fa.mod.EDTA.TElib.fa from scratch.
+
+Fri Aug  7 13:23:44 PDT 2020	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 61.56%): Dstr_v1.7.fa.mod.EDTA.TEanno.gff
+				Whole-genome TE annotation summary: Dstr_v1.7.fa.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 44.29%): Dstr_v1.7.fa.mod.MAKER.masked
+

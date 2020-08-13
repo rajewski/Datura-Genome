@@ -1,0 +1,13 @@
+[01:21 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[01:21 PM]: Running funannotate v1.6.0-98d4d3f
+[01:22 PM]: Found relevent files in 20200426_Dstr_v1.5/training, will re-use them:
+	Forward reads: 20200426_Dstr_v1.5/training/left.fq.gz
+	Reverse reads: 20200426_Dstr_v1.5/training/right.fq.gz
+	Trinity results: 20200426_Dstr_v1.5/training/funannotate_train.trinity-GG.fasta
+	PASA config file: 20200426_Dstr_v1.5/training/pasa/alignAssembly.txt
+	BAM alignments: 20200426_Dstr_v1.5/training/funannotate_train.coordSorted.bam
+	StringTie GTF: 20200426_Dstr_v1.5/training/funannotate_train.stringtie.gtf
+[01:23 PM]: Reannotating Datura stramonium, NCBI accession: None
+[01:23 PM]: Previous annotation consists of: 34,905 protein coding gene models and 1,126 non-coding gene models
+[01:23 PM]: Adapter and Quality trimming PE reads with Trimmomatic
+slurmstepd-i55: error: *** JOB 1847433 ON i55 CANCELLED AT 2020-07-20T13:23:51 ***

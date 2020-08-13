@@ -1,0 +1,3 @@
+/rhome/arajewski/.conda/envs/plantiSMASH/lib/python2.7/site-packages/Bio/Seq.py:2071: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning)
+ERROR: Input does not contain contigs larger than minimum size of 1000 bp.

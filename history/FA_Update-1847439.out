@@ -1,0 +1,24 @@
+[01:24 PM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[01:24 PM]: Running funannotate v1.6.0-98d4d3f
+[01:24 PM]: Found relevent files in 20200426_Dstr_v1.5/training, will re-use them:
+	Forward reads: 20200426_Dstr_v1.5/training/left.fq.gz
+	Reverse reads: 20200426_Dstr_v1.5/training/right.fq.gz
+	Trinity results: 20200426_Dstr_v1.5/training/funannotate_train.trinity-GG.fasta
+	PASA config file: 20200426_Dstr_v1.5/training/pasa/alignAssembly.txt
+	BAM alignments: 20200426_Dstr_v1.5/training/funannotate_train.coordSorted.bam
+	StringTie GTF: 20200426_Dstr_v1.5/training/funannotate_train.stringtie.gtf
+[01:25 PM]: Reannotating Datura stramonium, NCBI accession: None
+[01:25 PM]: Previous annotation consists of: 34,905 protein coding gene models and 1,126 non-coding gene models
+[01:25 PM]: Trimmomatic will be skipped
+[01:25 PM]: Read normalization will be skipped
+[01:26 PM]: Converting transcript alignments to GFF3 format
+[01:27 PM]: Converting Trinity transcript alignments to GFF3 format
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-update.py", line 1926, in <module>
+    runPASA(fastaout, trinity_transcripts, cleanTranscripts, os.path.abspath(trinityGFF3), stringtieGTF, args.stranded, args.max_intronlen, args.cpus, gffout, organism_name, PASA_gff, pasaConfigFile)
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-update.py", line 616, in runPASA
+    if not getPASAinformation(DataBaseName, folder, genome):
+  File "/bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-update.py", line 545, in getPASAinformation
+    with open(os.path.join(PASA, 'pasa_conf', 'conf.txt'), 'rU') as pasaconf:
+IOError: [Errno 2] No such file or directory: '/opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/pasa_conf/conf.txt'

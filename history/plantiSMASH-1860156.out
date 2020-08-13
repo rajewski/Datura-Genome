@@ -1,0 +1,5 @@
+INFO: starting antiSMASH 3.0.5-f27eb4b, called with /bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py -c 30 --limit -1 --taxon plants --eukaryotic -v --logfile Dstr_v1.7_Annotation/plantismash/plantismash_1860156.log --outputfolder Dstr_v1.7_Annotation/plantismash --genefinding none --gff3 Datura_stramonium.gff3
+INFO: Number of clusters = 10
+INFO: Loading detection modules
+usage: run_antismash.py [-h] [options ..] [sequence [sequence ..]]
+run_antismash.py: error: Please specify at least one sequence file

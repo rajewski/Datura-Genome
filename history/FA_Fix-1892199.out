@@ -1,0 +1,10 @@
+Running Funannotate fix on Dstr_v1.7_Annotation/update_results/Datura_stramonium.gbk
+[10:33 AM]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.15
+[10:33 AM]: Running funannotate v1.6.0-98d4d3f
+[10:37 AM]: Extracting genome sequence and parsing meta information
+[10:40 AM]: 232,605 contigs containing 58,792 protein coding genes and 1,454 tRNA genes
+[10:43 AM]: Found pre-existing funannotate files, archiving to Dstr_v1.7_Annotation/update_results/archive_28480
+[10:43 AM]: Converting to GenBank format
+-------------------------------------------------------
+[11:26 AM]: Generating output files.
+[11:30 AM]: Output genome consists of: 232,605 contigs containing 58,791 protein coding genes and 1,454 tRNA genes

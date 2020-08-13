@@ -1,0 +1,25 @@
+[07:05 AM]: OS: CentOS Linux 7, 32 cores, ~ 1057 GB RAM. Python: 3.8.5
+[07:05 AM]: Running 1.8.0
+[07:05 AM]: Trimmomatic will be skipped
+[07:05 AM]: 138,157 existing Trinity results found: Dstr_v1.7_Annotation_largeIntrons/training/trinity.fasta
+[07:05 AM]: Removing poly-A sequences from trinity transcripts using seqclean
+[07:05 AM]: Existing SeqClean output found: Dstr_v1.7_Annotation_largeIntrons/training/Dstr_v1.7_Annotation_largeIntrons/training/trinity.fasta.clean
+[07:05 AM]: Existing BAM alignments found: Dstr_v1.7_Annotation_largeIntrons/training/trinity.alignments.bam, Dstr_v1.7_Annotation_largeIntrons/training/transcript.alignments.bam
+[07:05 AM]: Running PASA alignment step using 138,157 transcripts
+slurmstepd-h04: error: _is_a_lwp: open() /proc/20189/status failed: No such file or directory
+[12:55 PM]: PASA assigned 132,506 transcripts to 84,847 loci (genes)
+[12:55 PM]: Getting PASA models for training with TransDecoder
+[01:26 PM]: PASA finished. PASAweb accessible via: localhost:port/cgi-bin/index.cgi?db=Datura_stramonium
+[01:26 PM]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[01:26 PM]: Building Kallisto index
+[01:32 PM]: Mapping reads using pseudoalignment in Kallisto
+[01:47 PM]: Parsing expression value results. Keeping best transcript at each locus.
+[01:53 PM]: Wrote 25,922 PASA gene models
+[01:54 PM]: PASA database name: Datura_stramonium
+[01:54 PM]: Trinity/PASA has completed, you are now ready to run funanotate predict, for example:
+
+  funannotate predict -i Dstr_v1.7_Annotation/Dstr_v1.7.masked.fa \
+            -o Dstr_v1.7_Annotation_largeIntrons -s "Datura stramonium" --cpus 30
+
+-------------------------------------------------------
+-------------------------------------------------------
