@@ -6,7 +6,7 @@
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/plantiSMASH-%A.out
-set -e
+
 
 
 OUTDIR=Dstr_v1.7_Annotation
@@ -25,6 +25,7 @@ module load muscle/3.8.425 #3.8.31 tested
 module load prodigal/2.6.2 #2.6.1 tested
 module load ncbi-blast/2.2.31+
 module load cd-hit/4.6.4 #4.6.6. tested
+module unload miniconda3 
 
 export PATH=/bigdata/littlab/arajewski/Datura/software/plantismash-1.0:$PATH
 
@@ -33,10 +34,7 @@ run_antismash.py \
     --limit -1 \
     --taxon plants \
     --eukaryotic \
-    --clusterblast \
-    --subclusterblast \
-    --knownclusterblast \
-    -v \
+    -v\
     --outputfolder $OUTDIR/plantismash \
     --genefinding none \
     --gff3 $ASSEM.gff3 \
