@@ -8,11 +8,13 @@
 #SBATCH -o ../history/EDTA-%A.out
 set -e
 
-# Create the conda environment if necessary
-# conda create -n EDTAenv
-# conda activate EDTAenv
-# conda install -c bioconda -c conda-forge edta
-conda activate EDTAenv
+# Create an alternative conda env to get this working right
+#conda create -n EDTA
+conda activate EDTA
+#conda install -n EDTA -y cd-hit repeatmodeler muscle mdust blast openjdk perl perl-text-soundex multiprocess regex tensorflow=1.14.0 keras=2.2.4 scikit-learn=0.19.0 biopython pandas glob2 python=3.6 tesorter genericrepeatfinder genometools-genometools ltr_retriever ltr_finder numpy=1.16.4
+#git clone https://github.com/oushujun/EDTA
+export PATH=/bigdata/littlab/arajewski/Datura/software/EDTA/:$PATH
+
 # Reload RepeatMasker to fix a problem with RMblast in the conda env
 module load RepeatMasker/4-0-6 
 module unload perl

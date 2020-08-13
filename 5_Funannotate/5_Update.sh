@@ -1,14 +1,14 @@
 #!/bin/bash -l
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=30
+#SBATCH --cpus-per-task=10
 #SBATCH --mem-per-cpu=7G
-#SBATCH --time 5-00:00:00
+#SBATCH --time 12-00:00:00
 #SBATCH --mail-user=araje002@ucr.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/FA_Update-%A.out
 set -e
 
-WORKDIR=Dstr_v1.7_Annotation
+WORKDIR=Dstr_v1.7_Annotation/
 
 module load funannotate/1.6.0
 #change PASA directory becuase the flag below doesnt work
