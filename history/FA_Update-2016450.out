@@ -1,0 +1,18 @@
+[07:39 PM]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[07:39 PM]: Running 1.8.0
+[07:39 PM]: Found relevant files in Dstr_v1.7_Annotation_largeIntrons_174/training, will re-use them:
+	Forward reads: Dstr_v1.7_Annotation_largeIntrons_174/training/left.fq.gz
+	Reverse reads: Dstr_v1.7_Annotation_largeIntrons_174/training/right.fq.gz
+	Forward normalized reads: Dstr_v1.7_Annotation_largeIntrons_174/training/normalize/left.norm.fq
+	Reverse normalized reads: Dstr_v1.7_Annotation_largeIntrons_174/training/normalize/right.norm.fq
+	Trinity results: Dstr_v1.7_Annotation_largeIntrons_174/training/funannotate_train.trinity-GG.fasta
+	PASA config file: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/pasa.CONFIG.template
+	BAM alignments: Dstr_v1.7_Annotation_largeIntrons_174/training/funannotate_train.coordSorted.bam
+	StringTie GTF: Dstr_v1.7_Annotation_largeIntrons_174/training/funannotate_train.stringtie.gtf
+[07:45 PM]: Reannotating Datura stramonium, NCBI accession: None
+[07:45 PM]: Previous annotation consists of: 52,149 protein coding gene models and 1,392 non-coding gene models
+[07:45 PM]: Trimmomatic will be skipped
+[07:45 PM]: Existing BAM alignments found: Dstr_v1.7_Annotation_largeIntrons_174/update_misc/trinity.alignments.bam, Dstr_v1.7_Annotation_largeIntrons_174/update_misc/transcript.alignments.bam
+[07:46 PM]: CMD ERROR: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/scripts/pasa_asmbl_genes_to_GFF3.dbi -M Datura_stramonium:c27:3390 -p arajewski:stramonium
+[07:46 PM]: (None, b"-connecting to MySQL db: Datura_stramonium\nDBI connect('database=Datura_stramonium;host=c27','arajewski',...) failed: Can't connect to MySQL server on 'c27' (111) at /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3//PerlLib/DB_connect.pm line 72.\nCannot connect to Datura_stramonium: Can't connect to MySQL server on 'c27' (111) at /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/scripts/pasa_asmbl_genes_to_GFF3.dbi line 68.\n")
+-------------------------------------------------------

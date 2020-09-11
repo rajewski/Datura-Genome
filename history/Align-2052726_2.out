@@ -1,0 +1,11 @@
+Sourcing executables from speedseq.config ...
+Aligning...
+samblaster: Version 0.1.22
+samblaster: Inputting from stdin
+samblaster: Outputting to stdout
+samblaster: Opening GFP3.RVHQx8v2Qq8d/disc_pipe for write.
+samblaster: Opening GFP3.RVHQx8v2Qq8d/spl_pipe for write.
+samblaster: Missing header on input sam file.  Exiting.
+
+Done
+slurmstepd-i02: error: Detected 1 oom-kill event(s) in step 2052726.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

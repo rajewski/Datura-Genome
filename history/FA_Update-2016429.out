@@ -1,0 +1,29 @@
+[07:14 PM]: OS: linux2, 32 cores, ~ 1024 GB RAM. Python: 2.7.15
+[07:14 PM]: Running 1.7.4
+[07:15 PM]: Found relevant files in Dstr_v1.7_Annotation_largeIntrons_174/training, will re-use them:
+	Forward reads: Dstr_v1.7_Annotation_largeIntrons_174/training/left.fq.gz
+	Reverse reads: Dstr_v1.7_Annotation_largeIntrons_174/training/right.fq.gz
+	Forward normalized reads: Dstr_v1.7_Annotation_largeIntrons_174/training/normalize/left.norm.fq
+	Reverse normalized reads: Dstr_v1.7_Annotation_largeIntrons_174/training/normalize/right.norm.fq
+	Trinity results: Dstr_v1.7_Annotation_largeIntrons_174/training/funannotate_train.trinity-GG.fasta
+	PASA config file: /bigdata/littlab/arajewski/Datura/5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/pasa.CONFIG.template
+	BAM alignments: Dstr_v1.7_Annotation_largeIntrons_174/training/funannotate_train.coordSorted.bam
+	StringTie GTF: Dstr_v1.7_Annotation_largeIntrons_174/training/funannotate_train.stringtie.gtf
+[07:19 PM]: Reannotating Datura stramonium, NCBI accession: None
+[07:19 PM]: Previous annotation consists of: 52,149 protein coding gene models and 1,392 non-coding gene models
+[07:19 PM]: Trimmomatic will be skipped
+[07:21 PM]: Converting transcript alignments to GFF3 format
+[07:22 PM]: Converting Trinity transcript alignments to GFF3 format
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/envs/funannotate/bin/funannotate", line 660, in <module>
+    main()
+  File "/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/envs/funannotate/bin/funannotate", line 650, in main
+    mod.main(arguments)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/envs/funannotate/lib/python2.7/site-packages/funannotate/update.py", line 2120, in main
+    aligners=args.aligners)
+  File "/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/envs/funannotate/lib/python2.7/site-packages/funannotate/update.py", line 544, in runPASA
+    if not getPASAinformation(DataBaseName, folder, genome):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/envs/funannotate/lib/python2.7/site-packages/funannotate/update.py", line 466, in getPASAinformation
+    with open(os.path.join(PASA, 'pasa_conf', 'conf.txt'), 'r') as pasaconf:
+IOError: [Errno 2] No such file or directory: '/opt/linux/centos/7.x/x86_64/pkgs/PASA/2.3.3/pasa_conf/conf.txt'

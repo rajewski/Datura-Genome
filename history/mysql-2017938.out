@@ -1,0 +1,4 @@
+3390
+200830 13:18:20 mysqld_safe Logging to syslog.
+200830 13:18:20 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+slurmstepd-i22: error: *** JOB 2017938 ON i22 CANCELLED AT 2020-08-30T14:42:29 ***

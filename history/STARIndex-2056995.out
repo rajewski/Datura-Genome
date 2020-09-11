@@ -1,0 +1,16 @@
+Making STAR index for D. stramonium...
+Sep 10 15:26:34 ..... started STAR run
+Sep 10 15:26:34 ... starting to generate Genome files
+Sep 10 15:28:33 ... starting to sort Suffix Array. This may take a long time...
+Sep 10 15:29:19 ... sorting Suffix Array chunks and saving them to disk...
+Sep 10 15:55:50 ... loading chunks from disk, packing SA...
+Sep 10 15:56:43 ... finished generating suffix array
+Sep 10 15:56:43 ... generating Suffix Array index
+Sep 10 15:59:46 ... completed Suffix Array index
+Sep 10 15:59:46 ..... processing annotations GTF
+
+Fatal LIMIT error: the number of junctions to be inserted on the fly =151556 is larger than the limitSjdbInsertNsj=150000
+Fatal LIMIT error: the number of junctions to be inserted on the fly =151556 is larger than the limitSjdbInsertNsj=150000
+SOLUTION: re-run with at least --limitSjdbInsertNsj 151556
+
+Sep 10 15:59:57 ...... FATAL ERROR, exiting

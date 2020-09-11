@@ -1,0 +1,33 @@
+Running IPRScan on Datura_stramonium.proteins.fa...
+10/09/2020 20:23:18:514 Welcome to InterProScan-5.45-80.0
+10/09/2020 20:23:18:519 Running InterProScan v5 in STANDALONE mode... on Linux
+10/09/2020 20:23:35:657 Loading file /rhome/arajewski/bigdata/Datura/6_DEGs/DESeq/../../5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/annotate_results/Datura_stramonium.proteins.fa
+10/09/2020 20:23:35:660 Running the following analyses:
+[Pfam-33.1,PRINTS-42.0,ProSiteProfiles-2019_11,TIGRFAM-15.0]
+Available matches will be retrieved from the pre-calculated match lookup service.
+
+Matches for any sequences that are not represented in the lookup service will be calculated locally.
+10/09/2020 20:23:49:630 Uploaded 52104 unique sequences for analysis
+2020-09-10 20:23:54,737 [Thread-7] [uk.ac.ebi.interpro.scan.business.sequence.BerkeleyPrecalculatedProteinLookup:734] WARN - 
+
+The version of InterProScan you are using is 5.45-80.0
+The version of the lookup service you are using is 5.46-81.0
+As the data in these versions is not the same, you cannot use this match lookup service.
+InterProScan will now run locally
+If you would like to use the match lookup service, you have the following options:
+i) Download the newest version of InterProScan5 from our FTP site by following the instructions on:
+   https://www.ebi.ac.uk/interpro/interproscan.html
+ii) Download the match lookup service for your version of InterProScan from our FTP site and install it locally.
+    You will then need to edit the following property in your configuration file to point to your local installation:
+    precalculated.match.lookup.service.url=
+
+In the meantime, the analysis will continue to run locally.
+
+
+10/09/2020 20:41:59:241 25% completed
+10/09/2020 20:47:24:769 50% completed
+10/09/2020 21:25:59:271 75% completed
+10/09/2020 21:48:26:284 90% completed
+10/09/2020 21:53:13:152 100% done:  InterProScan analyses completed 
+
+Done.

@@ -1,0 +1,4 @@
+Running Funannotate predict on Dstr_v1.7_Annotation/Dstr_v1.7.masked.fa
+Could not find conda environment: funannotate-1.8
+You can list all discoverable environments with `conda info --envs`.
+

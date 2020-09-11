@@ -1,0 +1,5 @@
+INFO: starting antiSMASH 3.0.5-00a05e7, called with /bigdata/littlab/arajewski/Datura/software/plantismash-1.0/run_antismash.py -c 30 --limit -1 --taxon plants --eukaryotic -v --outputfolder Dstr_v1.7_Annotation_largeIntrons_174/plantismash --genefinding none --gff3 Dstr_v1.7_Annotation_largeIntrons_174/predict_results/Datura_stramonium.gff3 Datura_stramonium.genicScaffolds.fa
+INFO: Number of clusters = 10
+INFO: Loading detection modules
+INFO: Parsing input sequences ['Datura_stramonium.genicScaffolds.fa']
+ERROR: No sequence file found at 'Datura_stramonium.genicScaffolds.fa'

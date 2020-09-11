@@ -1,0 +1,40 @@
+Running Funannotate predict on Dstr_v1.7_Annotation/Dstr_v1.7.masked.fa
+/opt/linux/centos/7.x/x86_64/pkgs/diamond/2.0.2/diamond
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/perl
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+/opt/linux/centos/7.x/x86_64/pkgs/funannotate/1.8.0/DB is the database path
+-------------------------------------------------------
+[10:52 PM]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[10:52 PM]: Running funannotate v1.8.0
+[10:52 PM]: Found training files, will re-use these files:
+  --rna_bam Dstr_v1.7_Annotation_largeIntrons/training/funannotate_train.coordSorted.bam
+  --pasa_gff Dstr_v1.7_Annotation_largeIntrons/training/funannotate_train.pasa.gff3
+  --stringtie Dstr_v1.7_Annotation_largeIntrons/training/funannotate_train.stringtie.gtf
+  --transcript_alignments Dstr_v1.7_Annotation_largeIntrons/training/funannotate_train.transcripts.gff3
+[10:52 PM]: Skipping CodingQuarry as $QUARRY_PATH not found as ENV
+[10:52 PM]: Parsed training data, run ab-initio gene predictors as follows:
+[11:03 PM]: Loading genome assembly and parsing soft-masked repetitive sequences
+  [4mProgram      Training-Method[0m
+  augustus     pasa           
+  genemark     selftraining   
+  glimmerhmm   pasa           
+  snap         pasa           
+[11:43 PM]: Genome loaded: 232,605 scaffolds; 2,110,510,646 bp; 81.00% repeats masked
+[11:43 PM]: Parsed 98,816 transcript alignments from: Dstr_v1.7_Annotation_largeIntrons/training/funannotate_train.transcripts.gff3
+[11:43 PM]: Creating transcript EVM alignments and Augustus transcripts hintsfile
+[11:44 PM]: Existing RNA-seq BAM hints found: Dstr_v1.7_Annotation_largeIntrons/predict_misc/hints.BAM.gff
+[11:44 PM]: Existing protein alignments found: Dstr_v1.7_Annotation_largeIntrons/predict_misc/protein_alignments.gff3
+[11:45 PM]: Existing GeneMark annotation found: Dstr_v1.7_Annotation_largeIntrons/predict_misc/genemark.gff
+[11:46 PM]: 180,748 predictions from GeneMark
+[11:46 PM]: Existing Augustus annotations found: Dstr_v1.7_Annotation_largeIntrons/predict_misc/augustus.gff3
+[11:46 PM]: Pulling out high quality Augustus predictions
+[11:46 PM]: Found 13,639 high quality predictions from Augustus (>90% exon evidence)
+[11:46 PM]: Skipping snap prediction as weight set to 0
+[11:46 PM]: Skipping GlimmerHMM prediction as weight set to 0
+[11:46 PM]: Summary of gene models passed to EVM (weights):
+[11:50 PM]: EVM: partitioning input to ~ 35 genes per partition
+slurmstepd-c46: error: _is_a_lwp: open() /proc/3564/status failed: No such file or directory
+slurmstepd-c46: error: *** JOB 1976822 ON c46 CANCELLED AT 2020-08-29T22:52:28 DUE TO TIME LIMIT ***

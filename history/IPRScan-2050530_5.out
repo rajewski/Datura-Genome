@@ -1,0 +1,51 @@
+Wed Sep 9 11:12:36 PDT 2020: Protein fasta already split.
+Wed Sep 9 11:12:36 PDT 2020: 6 IPR result files not yet present.
+Wed Sep 9 11:12:36 PDT 2020: Running IPR Scan on chunk 5 of 6...
+09/09/2020 11:12:41:515 Welcome to InterProScan-5.45-80.0
+09/09/2020 11:12:41:521 Running InterProScan v5 in STANDALONE mode... on Linux
+09/09/2020 11:13:04:991 Loading file /rhome/arajewski/bigdata/Datura/5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/predict_results/Datura_stramonium.proteins.fa.5
+09/09/2020 11:13:04:995 Running the following analyses:
+[CDD-3.17,Coils-2.2.1,Gene3D-4.2.0,MobiDBLite-2.0,PANTHER-14.1,Pfam-33.1,Phobius-1.01,PIRSF-3.10,PRINTS-42.0,ProSiteProfiles-2019_11,SFLD-4,SignalP_EUK-4.1,SMART-7.1,SUPERFAMILY-1.75,TIGRFAM-15.0,TMHMM-2.0c]
+Available matches will be retrieved from the pre-calculated match lookup service.
+
+Matches for any sequences that are not represented in the lookup service will be calculated locally.
+2020-09-09 11:13:14,167 [Thread-6] [uk.ac.ebi.interpro.scan.business.sequence.BerkeleyPrecalculatedProteinLookup:734] WARN - 
+
+The version of InterProScan you are using is 5.45-80.0
+The version of the lookup service you are using is 5.46-81.0
+As the data in these versions is not the same, you cannot use this match lookup service.
+InterProScan will now run locally
+If you would like to use the match lookup service, you have the following options:
+i) Download the newest version of InterProScan5 from our FTP site by following the instructions on:
+   https://www.ebi.ac.uk/interpro/interproscan.html
+ii) Download the match lookup service for your version of InterProScan from our FTP site and install it locally.
+    You will then need to edit the following property in your configuration file to point to your local installation:
+    precalculated.match.lookup.service.url=
+
+In the meantime, the analysis will continue to run locally.
+
+
+2020-09-09 11:13:14,167 [Thread-7] [uk.ac.ebi.interpro.scan.business.sequence.BerkeleyPrecalculatedProteinLookup:734] WARN - 
+
+The version of InterProScan you are using is 5.45-80.0
+The version of the lookup service you are using is 5.46-81.0
+As the data in these versions is not the same, you cannot use this match lookup service.
+InterProScan will now run locally
+If you would like to use the match lookup service, you have the following options:
+i) Download the newest version of InterProScan5 from our FTP site by following the instructions on:
+   https://www.ebi.ac.uk/interpro/interproscan.html
+ii) Download the match lookup service for your version of InterProScan from our FTP site and install it locally.
+    You will then need to edit the following property in your configuration file to point to your local installation:
+    precalculated.match.lookup.service.url=
+
+In the meantime, the analysis will continue to run locally.
+
+
+09/09/2020 12:04:18:274 25% completed
+09/09/2020 12:33:50:435 50% completed
+09/09/2020 13:06:31:071 75% completed
+09/09/2020 13:11:57:883 90% completed
+09/09/2020 13:40:05:759 100% done:  InterProScan analyses completed 
+
+Wed Sep 9 13:40:06 PDT 2020: Done.
+Wed Sep 9 13:40:06 PDT 2020: Please re-run without an array ID once all jobs have finished to combine results.

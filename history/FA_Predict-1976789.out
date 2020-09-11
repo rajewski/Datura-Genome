@@ -1,0 +1,2 @@
+Running Funannotate predict on Dstr_v1.7_Annotation/Dstr_v1.7.masked.fa
+slurmstepd-c22: error: *** JOB 1976789 ON c22 CANCELLED AT 2020-08-18T13:49:35 ***

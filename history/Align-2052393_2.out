@@ -1,0 +1,10 @@
+Sourcing executables from speedseq.config ...
+Aligning...
+samblaster: Version 0.1.22
+samblaster: Inputting from stdin
+samblaster: Outputting to stdout
+samblaster: Opening GFP_3.TQRxs7E3ce3L/disc_pipe for write.
+samblaster: Opening GFP_3.TQRxs7E3ce3L/spl_pipe for write.
+samblaster: Missing header on input sam file.  Exiting.
+
+Done

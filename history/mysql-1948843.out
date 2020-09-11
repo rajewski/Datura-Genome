@@ -1,3 +1,4 @@
 3390
 200812 07:04:40 mysqld_safe Logging to syslog.
 200812 07:04:41 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+slurmstepd-c36: error: *** JOB 1948843 ON c36 CANCELLED AT 2020-08-17T07:05:07 DUE TO TIME LIMIT ***

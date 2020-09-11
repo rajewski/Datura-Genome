@@ -1,0 +1,10 @@
+/opt/linux/centos/7.x/x86_64/pkgs/diamond/0.9.34/diamond
+/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/envs/funannotate/bin/perl
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+[05:45 PM]: OS: linux2, 32 cores, ~ 1024 GB RAM. Python: 2.7.15
+[05:45 PM]: Running 1.7.4
+[05:45 PM]: Database files not found in /opt/linux/centos/7.x/x86_64/pkgs/funannotate/1.8.0/DB, run funannotate database and/or funannotate setup
+-------------------------------------------------------

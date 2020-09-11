@@ -1,0 +1,4 @@
+3390
+200829 19:06:53 mysqld_safe Logging to syslog.
+200829 19:06:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+slurmstepd-c27: error: *** JOB 2016424 ON c27 CANCELLED AT 2020-08-29T19:09:56 ***

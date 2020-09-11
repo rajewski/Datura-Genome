@@ -1,0 +1,5 @@
+funannotate(3):ERROR:105: Unable to locate a modulefile for 'funannotate/1.80'
+[07:31 PM]: OS: CentOS Linux 7, 32 cores, ~ 1024 GB RAM. Python: 3.8.5
+[07:31 PM]: Running 1.8.0
+[07:31 PM]: Missing Dependencies: fasta, minimap2, tbl2asn, hisat2, hisat2-build, kallisto, Trinity, bedtools, trimmomatic, minimap2, blat.  Please install missing dependencies and re-run script
+-------------------------------------------------------

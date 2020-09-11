@@ -1,0 +1,12 @@
+Running Funannotate predict on Dstr_v1.7_Annotation/Dstr_v1.7.masked.fa
+/opt/linux/centos/7.x/x86_64/pkgs/diamond/2.0.2/diamond
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/perl
+Setting AUGUSTUS path to local directories
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/scripts is the scripts path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/bin is the binaries path
+/bigdata/littlab/arajewski/Datura/5_Funannotate/augustus/config is the config path
+/opt/linux/centos/7.x/x86_64/pkgs/funannotate/1.8.0/DB is the database path
+-------------------------------------------------------
+[01:50 PM]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[01:50 PM]: Running funannotate v1.8.0
+[01:50 PM]: Can't find Repeat Database at /opt/linux/centos/7.x/x86_64/pkgs/funannotate/1.8.0/DB/repeats.dmnd, you may need to re-run funannotate setup

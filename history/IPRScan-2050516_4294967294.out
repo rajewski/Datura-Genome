@@ -1,0 +1,4 @@
+Wed Sep 9 11:07:41 PDT 2020: Protein fasta file not split.
+Wed Sep 9 11:07:41 PDT 2020: Splitting protein fasta file into 6 chunks...
+Wed Sep 9 11:07:41 PDT 2020: Done.
+Wed Sep 9 11:07:41 PDT 2020: Exiting. Please re-submit the job with array IDs = 6 to run IPR Scan.

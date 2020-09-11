@@ -1,0 +1,4 @@
+3390
+200909 09:24:08 mysqld_safe Logging to syslog.
+200909 09:24:08 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+slurmstepd-c04: error: *** JOB 2050052 ON c04 CANCELLED AT 2020-09-09T09:26:11 ***
