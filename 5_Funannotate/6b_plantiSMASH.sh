@@ -7,11 +7,9 @@
 #SBATCH --mail-type=ALL
 #SBATCH -o ../history/plantiSMASH-%A.out
 
-
-
-OUTDIR=Dstr_v1.7_Annotation
+OUTDIR=Dstr_v1.7_Annotation_largeIntrons_174
 ASSEM=$OUTDIR/predict_results/Datura_stramonium
-FILTERED=Datura_stramonium.genicScaffolds.fa #filtered for only gene-contianing contigs
+FILTERED=$OUTDIR/predict_results/Datura_stramonium.genicScaffolds.fa #filtered for only gene-containing contigs
 
 # Load the needed software
 conda activate plantiSMASH
@@ -38,4 +36,4 @@ run_antismash.py \
     --outputfolder $OUTDIR/plantismash \
     --genefinding none \
     --gff3 $ASSEM.gff3 \
-    Datura_stramonium.genicScaffolds.fa
+    $FILTERED

@@ -13,7 +13,7 @@ set -e
 # This analysis is adapted from the Supplemental Text S1 of https://doi.org/10.1104/pp.108.132985
 
 # Make a variable to store all the protein fasta files
-PEPs=../5_Funannotate/Dstr_v1.7_Annotation/predict_results/Datura_stramonium.proteins.fa
+PEPs=../../5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/annotate_results/Datura_stramonium.proteins.fa
 #Run an interpro scan on the protein fasta to get a list of PFAM domains for each protein
 cd DESeq
 
@@ -33,7 +33,7 @@ fi
 
 # Clean up the Interpro output files
 # Get a list of all proteins' names
-grep ">" ../../5_Funannotate/Dstr_v1.7_Annotation/predict_results/Datura_stramonium.proteins.fa | sed 's/\S*\(HAX\S*\)\s.*/\1/' | sort > Dstr.protein.names.txt
+grep ">" ../../5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/annotate_results/Datura_stramonium.proteins.fa | sed 's/\S*\(HAX\S*\)\s.*/\1/' | sort > Dstr.protein.names.txt
 
 # Make an associative array to aid with renaming of the outputs
 PFAMs=$(basename ${PEPs}).tsv

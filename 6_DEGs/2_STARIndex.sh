@@ -20,12 +20,12 @@ if [ ! -e $DstrDIR/SAindex ]; then
         --runThreadN $SLURM_CPUS_PER_TASK \
         --runMode genomeGenerate \
         --genomeDir $DstrDIR/ \
-        --genomeFastaFiles ../5_Funannotate/Dstr_v1.7_Annotation/Dstr_v1.7.sorted.fa \
-        --sjdbGTFfile ../5_Funannotate/Dstr_v1.7_Annotation/predict_results/Datura_stramonium.gff3 \
+        --genomeFastaFiles ../5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/predict_results/Datura_stramonium.scaffolds.fa \
+        --sjdbGTFfile ../5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/predict_results/Datura_stramonium.gff3  \
         --sjdbOverhang 100 \
         --sjdbGTFtagExonParentTranscript Parent \
 	--genomeChrBinNbits 16 \
-	--limitSjdbInsertNsj 150000 \
+	--limitSjdbInsertNsj 300000 \
 	--limitGenomeGenerateRAM  75000000000
     #Add limitSjdbInsertNsj because of error (https://groups.google.com/forum/#!msg/rna-star/ddhJDgvZfNA/ULUGGYb0BgAJ)
     #Change genomeChrBinNbits because the genome is highly fragmented

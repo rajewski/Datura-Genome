@@ -1,12 +1,2 @@
-../1_QCQA/Dstr1Trim_1P.fq.gz
-../1_QCQA/Dstr1Trim_1U.fq.gz
-../1_QCQA/Dstr1Trim_2P.fq.gz
-../1_QCQA/Dstr1Trim_2U.fq.gz
-../1_QCQA/Dstr2Trim_1P.fq.gz
-../1_QCQA/Dstr2Trim_1U.fq.gz
-../1_QCQA/Dstr2Trim_2P.fq.gz
-../1_QCQA/Dstr2Trim_2U.fq.gz
-../1_QCQA/Dstr3Trim_1P.fq.gz
-../1_QCQA/Dstr3Trim_1U.fq.gz
-../1_QCQA/Dstr3Trim_2P.fq.gz
-../1_QCQA/Dstr3Trim_2U.fq.gz
+../1_QCQA/GFP_3_R1_val_1.fq.gz
+../1_QCQA/GFP_3_R2_val_2.fq.gz
