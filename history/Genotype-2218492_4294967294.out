@@ -1,0 +1,20 @@
+Sourcing executables from ./speedseq.config ...
+
+Checking for required python modules (python)...
+
+Program: speedseq
+Version: 0.1.0
+Author: Colby Chiang (cc2qe@virginia.edu)
+
+usage:   speedseq <command> [options]
+
+command: align    align FASTQ files with BWA-MEM
+         var      call SNV and indel variants with FreeBayes
+         somatic  call somatic SNV and indel variants in a tumor/normal pair with FreeBayes
+         sv       call SVs with LUMPY
+         realign  realign from a coordinate sorted BAM file
+
+options: -h       show this message
+
+Error: pysam is not installed for python
+

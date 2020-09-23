@@ -1,0 +1,18 @@
+Fri Sep 11 14:30:45 PDT 2020: BWA index of Datura_stramonium.scaffolds.5kb.fa found.
+Fri Sep 11 14:30:45 PDT 2020: Aligning reads for GFP_2...
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[E::main_mem] fail to open file `../DNA-seq/GFP_2_Trim/GFP_2_R1_val_1.fq'.
+Fri Sep 11 14:30:47 PDT 2020: Done.
+Fri Sep 11 14:30:47 PDT 2020: Deduplicating then finding split or discordant reads...
+samblaster: Version 0.1.26
+samblaster: Opening results/GFP_2.sam for read.
+samblaster: Opening results/GFP_2.dedup.sam for write.
+samblaster: Opening results/GFP_2.dedup.disc.sam for write.
+samblaster: Opening results/GFP_2.dedup.split.sam for write.
+samblaster: Input file is empty. Exiting.
+samblaster: Premature exit (return code 1).
+Fri Sep 11 14:30:47 PDT 2020: Compressing and cleaning up SAM files...
+[main_samview] fail to read the header from "results/GFP_2.dedup.sam".
+[main_samview] fail to read the header from "results/GFP_2.dedup.disc.sam".
+[main_samview] fail to read the header from "results/GFP_2.dedup.split.sam".
+Fri Sep 11 14:30:47 PDT 2020: Done.

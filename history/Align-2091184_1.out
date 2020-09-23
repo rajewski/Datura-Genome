@@ -1,0 +1,17 @@
+Fri Sep 11 14:33:02 PDT 2020: BWA index of Datura_stramonium.scaffolds.5kb.fa found.
+Fri Sep 11 14:33:02 PDT 2020: Aligning reads for GFP_2...
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 4265820 sequences (320000023 bp)...
+/var/spool/slurmd/job2091184/slurm_script: line 39: 119462 Killed                  bwa mem -t $SLURM_CPUS_PER_TASK Indices/$ASSEM -M -R "@RG\tID:id\tSM:${GFP[$SLURM_ARRAY_TASK_ID]}\tLB:lib" ../DNA-seq/${GFPFiles[$SLURM_ARRAY_TASK_ID]}_Trim/${GFPFiles[$SLURM_ARRAY_TASK_ID]}_R1_val_1.fq.gz ../DNA-seq/${GFPFiles[$SLURM_ARRAY_TASK_ID]}_Trim/${GFPFiles[$SLURM_ARRAY_TASK_ID]}_R2_val_2.fq.gz > results/${GFPFiles[$SLURM_ARRAY_TASK_ID]}.sam
+Fri Sep 11 14:33:40 PDT 2020: Done.
+Fri Sep 11 14:33:40 PDT 2020: Deduplicating then finding split or discordant reads...
+samblaster: Version 0.1.26
+samblaster: Opening results/GFP_2.sam for read.
+samblaster: Opening results/GFP_2.dedup.sam for write.
+samblaster: Opening results/GFP_2.dedup.disc.sam for write.
+samblaster: Opening results/GFP_2.dedup.split.sam for write.
+samblaster: Loaded 24664 header sequence entries.
+/var/spool/slurmd/job2091184/slurm_script: line 75: 119577 Segmentation fault      samblaster -i results/${GFPFiles[$SLURM_ARRAY_TASK_ID]}.sam -e -M -o results/${GFPFiles[$SLURM_ARRAY_TASK_ID]}.dedup.sam -d results/${GFPFiles[$SLURM_ARRAY_TASK_ID]}.dedup.disc.sam -s results/${GFPFiles[$SLURM_ARRAY_TASK_ID]}.dedup.split.sam
+Fri Sep 11 14:33:41 PDT 2020: Compressing and cleaning up SAM files...
+Fri Sep 11 14:33:41 PDT 2020: Done.
+slurmstepd-i14: error: Detected 1 oom-kill event(s) in step 2091184.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
