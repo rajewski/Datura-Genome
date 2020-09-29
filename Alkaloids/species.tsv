@@ -1,0 +1,14 @@
+Slyc	../ExternalData/Slyc/ITAG4.0_proteins.fasta
+Cann	../ExternalData/Cann/Pepper.v.1.55.proteins.annotated.fasta
+Dstr    ../../5_Funannotate/Dstr_v1.7_Annotation_largeIntrons_174/annotate_results/Datura_stramonium.proteins.fa
+Paxi	../ExternalData/Paxi/Petunia_axillaris_v1.6.2_proteins.fasta
+Natt	../ExternalData/Natt_NADH/NIATT_r2.0.aa
+Hann	../ExternalData/Hann/Hannuus_494_r1.2.protein_primaryTranscriptOnly.fa
+Lsat	../ExternalData/Lsat/Lsativa_467_v5.protein_primaryTranscriptOnly.fa
+Vvin	../ExternalData/Vvin/Vvinifera_457_v2.1.protein_primaryTranscriptOnly.fa
+Atha	../ExternalData/Atha/Athaliana_167_TAIR10.protein_primaryTranscriptOnly.fa
+Gmax	../ExternalData/Gmax/GmaxLee_510_v1.1.protein_primaryTranscriptOnly.fa
+Zmay	../ExternalData/Zmay/Zmays_493_RefGen_V4.protein_primaryTranscriptOnly.fa
+Osat	../ExternalData/Osat/Osativa_204_v7.0.protein_primaryTranscriptOnly.fa
+Aoff	../ExternalData/Aoff/Aofficinalis_498_V1.1.protein_primaryTranscriptOnly.fa
+Acoe	../ExternalData/Acoe/Acoerulea_322_v3.1.protein_primaryTranscriptOnly.fa
