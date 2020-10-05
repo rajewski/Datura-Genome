@@ -9,9 +9,9 @@ rownames(assembly) <- assembly$V1
 assembly <- assembly[-1,-1]
 assembly <- as.data.frame(t(assembly))
 rownames(assembly) <- c("Short-Read Assembly", "Scaffolding and Gap Filling", "Length Filtering", "Gap Filling and Polishing")
-assembly[,c(1,2,8,9)] <- apply(assembly[,c(1,2,8,9)], 2, as.integer)
+assembly[,c(1,2)] <- apply(assembly[,c(1,2)], 2, as.integer)
 assembly[1,5] <- "0"
-assembly[,3:7] <- apply(assembly[,3:7], 2, as.numeric)
+assembly[,3:10] <- apply(assembly[,3:10], 2, as.numeric)
 
 assembly %>%
   gt(
@@ -23,6 +23,9 @@ assembly %>%
     columns = vars(`Contigs (n)`, `Scaffolds (n)`, `Largest Contig (kbp)`, `Largest Scaffold (kbp)`),
     decimals=0,
     sep_mark = ",") %>%
+  fmt_number(
+    columns =vars(`BUSCO Complete Genes (%)`),
+    decimals=1) %>%
   cols_align(
     align="right",
     ) %>%
@@ -35,8 +38,8 @@ assembly %>%
     `Contig N50 (kbp)` = md("**Contig N50**<br/>(kbp)"),
     `Scaffold N50 (kbp)` = md("**Scaffold N50**<br/>(kbp)"),
     `Largest Contig (kbp)` = md("**Largest Contig**<br/>(kbp)"),
-    `Largest Scaffold (kbp)` = md("**Largest Scaffold**<br/>(kbp)")) %>%
-  
+    `Largest Scaffold (kbp)` = md("**Largest Scaffold**<br/>(kbp)"),
+    `BUSCO Complete Genes (%)` = md("**BUSCO</br>Complete&nbsp;Genes**</br> (%)")) %>%
   tab_footnote(
     footnote="With ONT long reads",
     locations = cells_stub(
@@ -49,4 +52,4 @@ assembly %>%
     footnote="With Illumina short reads",
     locations = cells_stub(
       rows = 4)) %>%
-  gtsave(filename = "Manuscript/GenomeStats.png")
+  gtsave(filename = "Manuscript/GenomeStats.pdf")
