@@ -1,0 +1,8 @@
+Mapping SRR9888534_Trimmed_...
+Oct 13 09:13:48 ..... started STAR run
+gzip: ../RNA-seq/SRR9888534_Trimmed__*P.fastq.gz: No such file or directory
+Oct 13 09:13:48 ..... loading genome
+Oct 13 09:14:04 ..... started mapping
+Oct 13 09:14:06 ..... started sorting BAM
+Oct 13 09:14:06 ..... finished successfully
+Done.

@@ -1,0 +1,9 @@
+2020-10-07 11:32:40: WARNING	dir wgd_dmd exists!
+2020-10-07 11:32:55: WARNING	dir wgd_dmd exists!
+2020-10-07 11:33:06: WARNING	dir wgd_dmd exists!
+2020-10-07 11:33:16: INFO	Multiple CDS files: will compute RBH orthologs
+2020-10-07 11:33:16: INFO	Datura_stramonium.cds-transcripts.fa vs. ITAG4.0_CDS.fasta
+2020-10-07 11:33:31: INFO	Datura_stramonium.cds-transcripts.fa vs. Vvinifera_457_v2.1.cds_primaryTranscriptOnly.fa
+2020-10-07 11:33:47: INFO	ITAG4.0_CDS.fasta vs. Vvinifera_457_v2.1.cds_primaryTranscriptOnly.fa
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/lib/python3.6/site-packages/Bio/Seq.py:2859: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,

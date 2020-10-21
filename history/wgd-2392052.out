@@ -1,0 +1,4 @@
+Usage: wgd dmd [OPTIONS] [SEQUENCES]...
+Try "wgd dmd -h" for help.
+
+Error: Invalid value for "[SEQUENCES]...": Path "ExternalData/Vvin/Vvinifera_457_v2.1.cds_primaryTranscriptOnly.fa/Vvinifera_457_v2.1.cds_primaryTranscriptOnly.fa" does not exist.
