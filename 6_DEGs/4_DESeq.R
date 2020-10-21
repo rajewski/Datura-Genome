@@ -26,9 +26,12 @@ DstrGenes <- tryCatch(readRDS("DESeq/DstrGenes.rds"),
 
 # Read in metadata
 metadata <- read.table("DESeq/metadata.tsv", header=T)
+ExtraMetadata <- as.data.frame(rbind(c("Medplant", "Medplant", 1, "STAR/MedPlantTrimmed.Aligned.sortedByCoo> .out.bam"),c("SRR9888534", "SRR9888534", 1, "STAR/SRR9888534_Trimmed.Aligned.sortedByCoord.out.bam")))
+names(ExtraMetadata) <- names(colData(Expt_Dstr))
 
 # Produce list of files
 DstrBamList <- BamFileList(as.character(metadata$Path), yieldSize=2000000)
+ExtraBamList <- BamFileList(c("STAR/MedPlantTrimmed.Aligned.sortedByCoord.out.bam", "STAR/SRR9888534_Trimmed.Aligned.sortedByCoord.out.bam"), yieldSize=2000000)
 
 # Count Reads
 register(MulticoreParam(workers=16)) # or however many
@@ -46,6 +49,22 @@ Expt_Dstr <- tryCatch(readRDS("DESeq/Expt_Dstr.rds"),
   saveRDS(Expt_Dstr, "DESeq/Expt_Dstr.rds")
   return(Expt_Dstr)
 })
+
+ExtraExpt <- summarizeOverlaps(features=DstrGenes,
+                                  reads=ExtraBamList,
+                                  mode="Union",
+                                  singleEnd=FALSE,
+                                  ignore.strand=TRUE,
+                                  fragments=TRUE,
+                                  BPPARAM=SerialParam())
+colData(ExtraExpt) <- DataFrame(ExtraMetadata)
+saveRDS(ExtraExpt, "DESeq/Expt_Extra_NonDE.rds")
+
+# Check for rnaseq support of transcripts
+Expt_Both <- do.call(cbind, list(ExtraExpt, Expt_Dstr))
+AllCounts <- apply(assays(Expt_Both)$counts, 1, sum)
+1-(length(AllCounts[AllCounts==0])/length(AllCounts))
+
 
 # Make DDS and Call DEGS
 DDS_Dstr <- tryCatch(readRDS("DESeq/DDS_Dstr.rds"),

@@ -7,6 +7,22 @@
 #SBATCH -o /rhome/arajewski/bigdata/Datura/history/GetGenomes-%A.out
 set -e
 
+# Assume that the GFF, GBK, and/or FASTA files are already present, unzipped, and named in the species.tsv file
+while read ABBREV FASTA GFF
+do
+        echo "Name     : $ABBREV"
+        echo "Sequence: $FASTA"
+        echo "Annotations  : $GFF"
+done < ./species.tsv
+
+
+SpeciesList=./species.tsv
+SpeciesData=(awk "NR==$SLURM_ARRAY_TASK_ID" $SpeciesList) #this file has a header so start arrays at 1
+ABBREV=$(echo $SpeciesData | cut -f 1)
+
+
+
+
 #Index Genomes
 #Make an associateve array to hold genomes and paths
 declare -A GENOMES
