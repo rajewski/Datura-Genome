@@ -86,7 +86,8 @@ plotCounts(DDS_Dstr,
            intgroup = "Genotype") #-lfc = lower in GFP
 write.table(ResultsSig_Dstr, "DESeq/Result_DEGs.tsv", quote=F, row.names=T, sep="\t")
 #Write supplemental table for Manuscript
-write.table(cbind(GeneName=strtrim(rownames(ResultsSig_Dstr),12), data.frame(ResultsSig_Dstr, row.names=NULL)), "../Manuscript/SupplmentalData_DEGs.tsv",
+write.csv(cbind(GeneName=strtrim(rownames(ResultsSig_Dstr),12), data.frame(ResultsSig_Dstr, row.names=NULL)),
+          "../Manuscript/SupplmentalData_DEGs.csv",
           quote=F,
           row.names = F)
 write.table(rownames(ResultsSig_Dstr[ResultsSig_Dstr$log2FoldChange>0,]),
@@ -139,7 +140,7 @@ TEDist$V9 <- gsub(";.*","",gsub("ID=","",TEDist$V9))
 TEDist$AbsDis <- abs(TEDist$V19)
 names(TEDist) <- c("GeneName", "TEAbbrev", "Start", "Stop", "ID", "Distance", "Method", "AbsDis")
 # Output list of genes for manuscript
-write.table(TEDist, file = "../Manuscript/SupplementalData_GenesVsTEs.tsv",
+write.csv(TEDist, file = "../Manuscript/SupplementalData_GenesVsTEs.csv",
             quote=F,
             row.names = F)
 # Add the TE data to the DEG data frame
