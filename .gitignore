@@ -13,6 +13,8 @@ Alkaloids/
 4_RepeatModeler
 !4_RepeatModeler/1_RepeatModeler.sh
 5_Funannotate/
+6_DEGs/Index/*
+./6_SNP_SV/*
 augustus_output/
 blast_output/
 DNA-seq/
