@@ -93,10 +93,10 @@ p2 <- ggplot(gene_stats_slyc_plotting[gene_stats_slyc_plotting$value <= max_num,
 
 
 # Orthogroup Plots ----------------------------------------------
-of_species <- read.newick("Orthologies/OrthoFinder/Results_Sep28/Gene_Duplication_Events/SpeciesTree_Gene_Duplications_0.5_Support.txt")
-of_species <- reroot(of_species, interactive = T) # im tired and its easier for a figure
-plotTree(of_species, node.numbers=T)
+of_species <- read.tree("Orthologies/OrthoFinder/Results_Sep28/Species_Tree/SpeciesTree_rooted.txt")
+of_species <- reroot(of_species, 4, position=0.1)
 of_species <- rotateNodes(of_species, nodes=c(15,18,21))
+plotTree(of_species, node.numbers=T, tip.numbers=T)
 of_species$tip.label <- c(expression(paste(italic("A. coerulea"))),
                           expression(paste(italic("A. officinalis"))),
                           expression(paste(italic("O. sativa"))),
@@ -111,11 +111,18 @@ of_species$tip.label <- c(expression(paste(italic("A. coerulea"))),
                           expression(paste(italic("C. annuum"))),
                           expression(paste(italic("S. lycopersicum"))),
                           expression(paste(italic("D. stramonium"))))
-
+# Pretty up the support values
+#of_species$node.label[1] <- ""
+of_species$node.label <- as.numeric(of_species$node.label)*100
+of_species$node.label <- round(as.numeric(of_species$node.label),0)
 t1 <- ggtree(of_species) + 
   geom_tiplab(label=of_species$tip.label,
               size=10) +
   ggplot2::xlim(0,0.8) +
+  geom_text2(aes(subset = !isTip & !is.na(label),
+                 label=label, 
+                 vjust=-0.5,
+                 hjust=1.1)) +
   geom_cladelabel(node=23, label="Solanoideae", align=TRUE, hjust=0.5, 
                   extend=0.5, fontsize = 5, offset.text = 0.005,
                   angle=90, barsize = 1.5, offset = .14, color='black') +
@@ -263,37 +270,44 @@ t3 <- ggtree(of_TRII) +
                                   size=25)) +
   ggtitle("Tropinone Reductase II")
 
-rm_tropinone <- read.newick("TR/TR.aligned.fasta.raxml.support.converted")
-plotTree(rm_tropinone, node.numbers=T)
-rm_tropinone <- rotateNodes(rm_tropinone, nodes=22)
+#rm_tropinone <- read.tree("TR/TR.aligned.fasta.raxml.support.converted")
+rm_tropinone <- read.tree("TR/TR.aligned.fasta.raxml.support")
+plotTree(rm_tropinone, node.numbers=F)
+rm_tropinone <- rotateNodes(rm_tropinone, nodes=20)
+rm_tropinone <- reroot(rm_tropinone, 20, position=0.1)
 
 rm_tropinone$tip.label <- c(expression(paste(italic("HAX54_047488"))),
                             expression(paste(italic("HAX54_008481"))),
                             expression(paste(italic("CA10g18210"), " (TRI)")),
                             expression(paste(italic("Solyc10g081560"), " (TRI)")),
                             expression(paste(italic("NIATv7_g04127"))),
+                            expression(paste(italic("NIATv7_g05545"))),
+                            expression(paste(italic("NIATv7_g64838"))),
                             expression(paste(italic("CA05g12020"), " (TRII)")),
                             expression(paste(italic("Solyc04g007400"), " (TRII)")),
                             expression(paste(italic("HAX54_027976"))),
                             expression(paste(italic("Peaxi162Scf00564g00516"))),
-                            expression(paste(italic("NIATv7_g05545"))),
-                            expression(paste(italic("NIATv7_g64838"))),
                             expression(paste(italic("Aqcoe4G241800"), " (TRII-like)")),
                             expression(paste(italic("Aqcoe4G010900"), " (TRI-like)")))
+
+rm_tropinone$node.label <- round(as.numeric(rm_tropinone$node.label),0)
 t4 <- ggtree(rm_tropinone) +
   geom_tiplab(label=rm_tropinone$tip.label,
               size=8) +
   ggplot2::xlim(0,1.5)  +
+  geom_text2(aes(subset = !isTip & !is.na(label),
+                 label=label, 
+                 vjust=-0.5,
+                 hjust=1.1)) +
   theme(plot.title = element_text(hjust = 0.5,
                                   face="bold",
                                   size=25)) +
   ggtitle("Tropinone Reductase")
 
-rm_h6h <- read.newick("H6H/H6H.Curated.align.fasta.raxml.support.converted")
+rm_h6h <- read.newick("H6H/H6H.Curated.align.fasta.raxml.support")
 plotTree(rm_h6h, node.numbers=T)
 rm_h6h <- rotateNodes(rm_h6h, nodes=15)
-rm_h6h$tip.label <- c(expression(paste(italic("Aqcoe4G163300"))),
-                      expression(paste(italic("Peaxi162Scf00141g00025"))),
+rm_h6h$tip.label <- c(expression(paste(italic("Peaxi162Scf00141g00025"))),
                       expression(paste(italic("Peaxi162Scf00075g01545"), " (C-Term)")),
                       expression(paste(italic("Peaxi162Scf00075g01545"), " (N-Term)")),
                       expression(paste(italic("HAX54_051520"))),
@@ -302,12 +316,20 @@ rm_h6h$tip.label <- c(expression(paste(italic("Aqcoe4G163300"))),
                       expression(paste(italic("Solyc11g072200"))),
                       expression(paste(italic("CA11g14590"))),
                       expression(paste(italic("CA11g16030"))),
-                      expression(paste(italic("AT5G24530"))))
+                      expression(paste(italic("AT5G24530"))),
+                      expression(paste(italic("Aqcoe4G163300"))))
+
+#rm_h6h <- as.polytomy(rm_h6h, feature='node.label', fun=function(x) as.numeric(x) < 70)
+rm_h6h$node.label[2] <- "100" #this gets dropped somehow
 
 t5 <- flip(ggtree(rm_h6h),16, 17) +
   geom_tiplab(label=rm_h6h$tip.label,
               size=8) +
   ggplot2::xlim(0,3.3)  +
+  geom_text2(aes(subset = !isTip & !is.na(label),
+                 label=label, 
+                 vjust=-0.5,
+                 hjust=1.1)) +
   theme(plot.title = element_text(hjust = 0.5,
                                   face="bold",
                                   size=25)) +
