@@ -115,6 +115,20 @@ of_species$tip.label <- c(expression(paste(italic("A. coerulea"))),
 #of_species$node.label[1] <- ""
 of_species$node.label <- as.numeric(of_species$node.label)*100
 of_species$node.label <- round(as.numeric(of_species$node.label),0)
+of_species$tip.label <- c(expression(paste(italic("A. coerulea"))),
+                          expression(paste(italic("A. officinalis"))),
+                          expression(paste(italic("O. sativa"))),
+                          expression(paste(italic("Z. mays"))),
+                          expression(paste(italic("A. thaliana"))),
+                          expression(paste(italic("G. max"))),
+                          expression(paste(italic("V. vinifera"))),
+                          expression(paste(italic("L. sativa"))),
+                          expression(paste(italic("H. annuus"))),
+                          expression(paste(italic("P. axillaris"))),
+                          expression(paste(italic("N. attenuata"))),
+                          expression(paste(italic("C. annuum"))),
+                          expression(paste(italic("S. lycopersicum"))),
+                          expression(paste(italic("D. stramonium"))))
 t1 <- ggtree(of_species) + 
   geom_tiplab(label=of_species$tip.label,
               size=10) +
@@ -126,6 +140,42 @@ t1 <- ggtree(of_species) +
   geom_cladelabel(node=23, label="Solanoideae", align=TRUE, hjust=0.5, 
                   extend=0.5, fontsize = 5, offset.text = 0.005,
                   angle=90, barsize = 1.5, offset = .14, color='black') +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  face="bold",
+                                  size=25)) +
+  ggtitle("OrthoFinder2 Species Tree")
+
+# Tree without Soybeans
+of_species2 <- read.tree("Orthologies/OrthoFinder/Results_Sep28/WorkingDirectory/OrthoFinder/Results_Oct26_2/Species_Tree/SpeciesTree_rooted.txt")
+of_species2 <- reroot(of_species2, 4, position=0.1)
+plotTree(of_species2, node.numbers=T, tip.numbers=T)
+of_species2$tip.label <- c(expression(paste(italic("A. officinalis"))),
+                           expression(paste(italic("Z. mays"))),
+                           expression(paste(italic("O. sativa"))),
+                           expression(paste(italic("A. coerulea"))),
+                           expression(paste(italic("A. thaliana"))),
+                           expression(paste(italic("V. vinifera"))),
+                           expression(paste(italic("H. annuus"))),
+                           expression(paste(italic("L. sativa"))),
+                           expression(paste(italic("N. attenuata"))),
+                           expression(paste(italic("C. annuum"))),
+                           expression(paste(italic("S. lycopersicum"))),
+                           expression(paste(italic("D. stramonium"))),
+                           expression(paste(italic("P. axillaris"))))
+# Get support
+of_species2$node.label <- as.numeric(of_species2$node.label)*100
+of_species2$node.label <- round(as.numeric(of_species2$node.label),0)
+t6 <- ggtree(of_species2) + 
+  geom_tiplab(label=of_species2$tip.label,
+              size=10) +
+  ggplot2::xlim(0,0.9) +
+  geom_text2(aes(subset = !isTip & !is.na(label),
+                 label=label, 
+                 vjust=-0.5,
+                 hjust=1.1)) +
+  geom_cladelabel(node=23, label="Solanoideae", align=TRUE, hjust=0.5, 
+                  extend=0.5, fontsize = 5, offset.text = 0.005,
+                  angle=90, barsize = 1.5, offset = .2, color='black') +
   theme(plot.title = element_text(hjust = 0.5,
                                   face="bold",
                                   size=25)) +
@@ -202,7 +252,78 @@ ortho_table %>%
     `Number of genes in species-specific orthogroups` = md("Lineage-specific"),
     `Duplications..50..support.` = md("Lineage-specific</br>Gene Duplication Events") 
   ) %>%
-  gtsave("../Manuscript/Orthofinder.pdf")
+  gtsave("../Manuscript/Orthofinder.html")
+
+# Orthogroup table (No Soy) -----------------------------------------------------
+LSDE_2 <- read.table("../Alkaloids/Orthologies/OrthoFinder/Results_Sep28/WorkingDirectory/OrthoFinder/Results_Oct26_2/Comparative_Genomics_Statistics/Duplications_per_Species_Tree_Node.tsv",
+                   header=T,
+                   sep="\t")
+ortho_table_2 <- read.table("../Alkaloids/Orthologies/OrthoFinder/Results_Sep28/WorkingDirectory/OrthoFinder/Results_Oct26_2/Comparative_Genomics_Statistics/Statistics_PerSpecies.tsv",
+                          header = T,
+                          nrows = 10,
+                          sep="\t")
+ortho_table_2 <- as.data.frame(t(ortho_table_2))
+names(ortho_table_2) <- ortho_table_2[1,]
+ortho_table_2 <- ortho_table_2[-1,-c(6:8)]
+ortho_table_2[,c(1:3,6)] <- apply(ortho_table_2[,c(1:3,6)], 2, as.integer)  
+ortho_table_2[,c(4,5,7)] <- apply(ortho_table_2[,c(4,5,7)], 2, as.numeric)
+LSDE_2 <- LSDE_2[LSDE_2$Species.Tree.Node %in% row.names(ortho_table_2),]
+ortho_table_2 <- merge(LSDE_2, ortho_table_2, by.x="Species.Tree.Node", by.y=0)[,c(4,3,5:10)]
+row.names(ortho_table_2)<- c("A. coerulea",
+                           "A. officinalis",
+                           "A. thaliana",
+                           "C. annuum",
+                           "D. stramonium",
+                           "H. annuus",
+                           "L. sativa",
+                           "N. attenuata",
+                           "O. sativa",
+                           "P. axillaris",
+                           "S. lycopersicum",
+                           "V. vinifera",
+                           "Z. mays")
+
+ortho_table_2 %>%
+  gt(
+    rownames_to_stub = T
+  ) %>%
+  tab_style(
+    location = cells_stub(),
+    style = list(
+      cell_text(style="italic"))
+  ) %>%
+  fmt_number(
+    columns = vars(`Number of genes`, `Number of genes in orthogroups`, `Number of unassigned genes`, `Number of genes in species-specific orthogroups`, `Duplications..50..support.`),
+    decimals=0,
+    sep_mark = ","
+  ) %>%
+  cols_merge(
+    columns = vars(`Number of genes in orthogroups`, `Percentage of genes in orthogroups`),
+    hide_columns = vars(`Percentage of genes in orthogroups`),
+    pattern = "{1}</br>({2}%)"
+  ) %>%
+  cols_merge(
+    columns = vars(`Number of unassigned genes`, `Percentage of unassigned genes`),
+    hide_columns = vars(`Percentage of unassigned genes`),
+    pattern = "{1}</br>({2}%)"
+  ) %>%
+  cols_merge(
+    columns = vars(`Number of genes in species-specific orthogroups`, `Percentage of genes in species-specific orthogroups`),
+    hide_columns = vars(`Percentage of genes in species-specific orthogroups`),
+    pattern = "{1}</br>({2}%)"
+  ) %>%
+  tab_spanner(
+    label=md("**Orthofinder Genes**"),
+    columns = vars(`Number of genes in orthogroups`, `Number of unassigned genes`, `Number of genes in species-specific orthogroups`)
+  )  %>%
+  cols_label(
+    `Number of genes in orthogroups` = md("Assigned</br>Orthogroup"),
+    `Number of unassigned genes` = md("Unassigned"),
+    `Number of genes in species-specific orthogroups` = md("Lineage-specific"),
+    `Duplications..50..support.` = md("Lineage-specific</br>Gene Duplication Events") 
+  ) %>%
+  #gtsave("../Manuscript/Orthofinder_NoSoy.pdf")
+gtsave("../Manuscript/Orthofinder_NoSoy.png")
 
 # GO Plots ----------------------------------------------------------------
 duplications <- read.table("Orthologies/OrthoFinder/Results_Sep28/Gene_Duplication_Events/Duplications.tsv", header=T, sep="\t")
@@ -441,4 +562,9 @@ ggsave2("../Manuscript/AnnotationConfirmation.png", height = 10, width=24)
   plot_annotation(tag_levels = "A")
 ggsave2("../Manuscript/Trees.pdf", height=15, width=20)
 ggsave2("../Manuscript/Trees.png", height=15, width=20)
+
+(t6 | (t4 / t5)) +
+  plot_annotation(tag_levels = "A")
+ggsave2("../Manuscript/Trees_NoSoy.pdf", height=15, width=20)
+ggsave2("../Manuscript/Trees_NoSoy.png", height=15, width=20)
 

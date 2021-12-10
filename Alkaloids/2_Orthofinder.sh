@@ -11,15 +11,24 @@ set -e
 
 # Make symlinks for all the protein fasta files
 mkdir -p Orthologies
+
+echo $(date): Making symlinks
 while read ABBREV LOCATION
 do
     ln -sf $LOCATION ./Orthologies/$ABBREV.fasta
 done < ./species.tsv
+echo $(date): Done
 
+echo $(date): loading modules...
 module load orthofinder/2.4.0
 module load mafft/7.427
 module load IQ-TREE/1.6.12
+echo$(date): Done.
+
+echo $(date): actually running Orthofinder...
 
 orthofinder \
-    -t $SLURM_CPUS_PER_TASK \
-    -f ./Orthologies
+   -t $SLURM_CPUS_PER_TASK \
+   -f ./Orthologies
+
+echo $(date): Done.

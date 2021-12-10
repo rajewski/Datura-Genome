@@ -5,7 +5,7 @@ system("PATH=/bigdata/littlab/arajewski/Datura/software/phantomjs-2.1.1-linux-x8
 setwd("/bigdata/littlab/arajewski/Datura/")
 snpEff_Region <- read.csv2("6_SNP_SV/results/Summary/snpEff_Region.csv", sep=",")
 #snpEff_Type <- read.csv2("6_SNP_SV/results/Summary/snpEff_Type.csv", sep=",")
-
+16152+7146
 #Clean up the rows
 snpEff_Region$Type <- str_to_title(gsub("_", " ",snpEff_Region$Type))
 snpEff_Region$Percent <- as.numeric(snpEff_Region$Percent)

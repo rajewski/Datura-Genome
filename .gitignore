@@ -11,10 +11,12 @@ Alkaloids/
 4_EDTA/
 !4_EDTA/*.sh
 4_RepeatModeler
+4_RepeatModeler/Custom-Repeat-Library
 !4_RepeatModeler/1_RepeatModeler.sh
 5_Funannotate/
 6_DEGs/Index/*
-./6_SNP_SV/*
+6_DEGs/STAR/*
+6_SNP_SV/*
 augustus_output/
 blast_output/
 DNA-seq/
