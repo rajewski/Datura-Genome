@@ -1,0 +1,4 @@
+Fri Oct 23 15:35:11 PDT 2020: loading modules...
+binutils/2.32-GCCcore-8.3.0(22):ERROR:150: Module 'binutils/2.32-GCCcore-8.3.0' conflicts with the currently loaded module(s) 'binutils/2.31.1-GCCcore-7.4.0'
+binutils/2.32-GCCcore-8.3.0(22):ERROR:102: Tcl command execution failed: conflict binutils
+
