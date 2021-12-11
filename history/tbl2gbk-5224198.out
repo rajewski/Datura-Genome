@@ -1,0 +1,16 @@
+Loading funannotate/1.8
+  Unloading conflict: miniconda2/4.4.10
+  Loading requirement: miniconda3/4.3.31 jellyfish/2.3.0 lp_solve/5.5
+    EVM/1.1.1-live genemarkESET/4.62_lic bamtools/2.4.0 hmmer/3 gmap/2019-03-04
+    bedtools/2.29.2 tbl2asn/25.8 boost/1.68.0 augustus/3.3.3 diamond/2.0.8
+    exonerate/2.2.0 ncbi-blast/2.2.31+ cdbfasta/06272015 htslib/1.11
+    samtools/1.11 braker/2.1.4 mummer/4.0 RAxML/8.2.12 mafft/7.427 trimal/1.4.1
+    java/13.0.1 trimmomatic/0.36 exonerate/2.4.1 blat/35 tRNAscan/1.3.1
+    proteinortho/6.0.20 kent/318 signalp/5.0b fasta/36.3.8h bowtie2/2.4.1
+    salmon/1.0.0 java/13 trinity-rnaseq/2.11.0 hisat2/2.2.1 kallisto/0.46.2
+    gmap/2017-11-15 PASA/2.4.1 minimap2/2.20 htslib/1.12 samtools/1.12
+    stringtie/2.1.1 CodingQuarry/2.0
+There are 3 gene models that need to be fixed.
+-------------------------------------------------------
+HAX54_003744	Apparent EC number in protein title
+HAX54_028629	Feature begins or ends in gap starting at 62663
